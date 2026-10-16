@@ -1,0 +1,243 @@
+{
+  "row_boundaries": [
+    0,
+    270,
+    512,
+    774,
+    1024
+  ],
+  "column_boundaries": [
+    0,
+    384,
+    768,
+    1152,
+    1536
+  ],
+  "uniform_scale": 0.6808510638297872,
+  "frames": [
+    {
+      "path": "Assets\\Art\\VFX\\Fern\\01.png",
+      "size": [
+        256,
+        256
+      ],
+      "alpha_bounds": [
+        79,
+        89,
+        176,
+        167
+      ],
+      "sha256": "1c3f73c1ef00177f32ab130d0369e1aad1c726783af946755bf1eeaec5f66521"
+    },
+    {
+      "path": "Assets\\Art\\VFX\\Fern\\02.png",
+      "size": [
+        256,
+        256
+      ],
+      "alpha_bounds": [
+        28,
+        62,
+        227,
+        193
+      ],
+      "sha256": "cae0fde8d8285b97410a3da80c9e3bbd30af4ee598d5a0c1ef67934da46cbe28"
+    },
+    {
+      "path": "Assets\\Art\\VFX\\Fern\\03.png",
+      "size": [
+        256,
+        256
+      ],
+      "alpha_bounds": [
+        21,
+        51,
+        235,
+        204
+      ],
+      "sha256": "fd40532d039a1c12c7fa029af52b4f1481b23b34d530416b7be7b94b850e9b6c"
+    },
+    {
+      "path": "Assets\\Art\\VFX\\Fern\\04.png",
+      "size": [
+        256,
+        256
+      ],
+      "alpha_bounds": [
+        19,
+        51,
+        236,
+        205
+      ],
+      "sha256": "b86da410ba73d234c2ca03d01b7b82514e53a080e6c9ecee21c773d2a50da509"
+    },
+    {
+      "path": "Assets\\Art\\VFX\\Fern\\05.png",
+      "size": [
+        256,
+        256
+      ],
+      "alpha_bounds": [
+        26,
+        57,
+        230,
+        198
+      ],
+      "sha256": "ff7373b0a724b1476c83099bb68cbb8ffec079aac89d25eb4f9434e97c33efdf"
+    },
+    {
+      "path": "Assets\\Art\\VFX\\Fern\\06.png",
+      "size": [
+        256,
+        256
+      ],
+      "alpha_bounds": [
+        22,
+        69,
+        233,
+        186
+      ],
+      "sha256": "91047183805c3c5a52e5d029620a1241c3429bf4fa7e06124aedaaa6faa72373"
+    },
+    {
+      "path": "Assets\\Art\\VFX\\Fern\\07.png",
+      "size": [
+        256,
+        256
+      ],
+      "alpha_bounds": [
+        30,
+        72,
+        226,
+        184
+      ],
+      "sha256": "e90e2c1b0d2e4f6eae337d27aa811e8d7ef5be5e8f299e7534f4f601c3ead7b9"
+    },
+    {
+      "path": "Assets\\Art\\VFX\\Fern\\08.png",
+      "size": [
+        256,
+        256
+      ],
+      "alpha_bounds": [
+        60,
+        92,
+        196,
+        164
+      ],
+      "sha256": "01f67b953903c242c3938721d3459bc335bde7097a26448ddefc00844eb22c84"
+    },
+    {
+      "path": "Assets\\Art\\VFX\\Ember\\01.png",
+      "size": [
+        256,
+        256
+      ],
+      "alpha_bounds": [
+        83,
+        88,
+        172,
+        168
+      ],
+      "sha256": "c4f30d794481455022ad5287330319530930b1ee811fbc0cbfeef1124d8ecab1"
+    },
+    {
+      "path": "Assets\\Art\\VFX\\Ember\\02.png",
+      "size": [
+        256,
+        256
+      ],
+      "alpha_bounds": [
+        21,
+        55,
+        235,
+        201
+      ],
+      "sha256": "76e8a5bc2727a94b1cc088c10cc650462d6ef01fbb7b9038d3e61b75b0f94ab8"
+    },
+    {
+      "path": "Assets\\Art\\VFX\\Ember\\03.png",
+      "size": [
+        256,
+        256
+      ],
+      "alpha_bounds": [
+        16,
+        50,
+        240,
+        206
+      ],
+      "sha256": "586457caf29f432ff281dd650c8be3a34a81c455731149c623630f2ba8eb8a7d"
+    },
+    {
+      "path": "Assets\\Art\\VFX\\Ember\\04.png",
+      "size": [
+        256,
+        256
+      ],
+      "alpha_bounds": [
+        22,
+        43,
+        233,
+        213
+      ],
+      "sha256": "9ce6a0bb3e402c9b5ccfcd770ab245f288c4db14f9249fca4d0d1c203f9bb5f5"
+    },
+    {
+      "path": "Assets\\Art\\VFX\\Ember\\05.png",
+      "size": [
+        256,
+        256
+      ],
+      "alpha_bounds": [
+        37,
+        55,
+        219,
+        200
+      ],
+      "sha256": "29e3d32d0bfbeec8bac17893a52459ec6674b957d2d06e044864970ecb63f099"
+    },
+    {
+      "path": "Assets\\Art\\VFX\\Ember\\06.png",
+      "size": [
+        256,
+        256
+      ],
+      "alpha_bounds": [
+        21,
+        69,
+        234,
+        187
+      ],
+      "sha256": "5e5c6b5aec0f4053e80eb056e2e74083b52278f808319b0f69e36443f665fa6c"
+    },
+    {
+      "path": "Assets\\Art\\VFX\\Ember\\07.png",
+      "size": [
+        256,
+        256
+      ],
+      "alpha_bounds": [
+        25,
+        68,
+        231,
+        187
+      ],
+      "sha256": "0929a507decb9ae3a9947739210c9d2cebd93613f0c50332fc57d3efba1756bf"
+    },
+    {
+      "path": "Assets\\Art\\VFX\\Ember\\08.png",
+      "size": [
+        256,
+        256
+      ],
+      "alpha_bounds": [
+        48,
+        65,
+        207,
+        191
+      ],
+      "sha256": "a513d559cbb29268569c56ceca8e2cd5ed83a43d8be4e90d22c846cfe89a325c"
+    }
+  ]
+}

@@ -3,6 +3,7 @@ using UnityEditor;
 using UnityEditor.Animations;
 using UnityEditor.SceneManagement;
 using UnityEngine.Rendering;
+using UnityEngine.Rendering.Universal;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem.UI;
@@ -24,9 +25,17 @@ public static class GameSetup
         AssetDatabase.Refresh(ImportAssetOptions.ForceSynchronousImport);
         foreach (var file in Directory.GetFiles("Assets/Resources/Art", "*.png")) ImportSprite(file, 100);
         foreach (var file in Directory.GetFiles("Assets/Art/Characters", "*.png", SearchOption.AllDirectories)) ImportSprite(file.Replace('\\', '/'), 160, new Vector2(.5f, 24f / 256));
+        foreach (var file in Directory.GetFiles("Assets/Art/VFX", "*.png", SearchOption.AllDirectories)) ImportSprite(file.Replace('\\','/'),256);
         foreach (var file in Directory.GetFiles("Assets/Art/Arena", "*.png")) ImportSprite(file, 100);
         ImportSprite("Assets/Art/UI/WoodlandPanel.png", 100, null, new Vector4(12, 12, 12, 12));
         ImportSprite("Assets/Art/UI/Solid.png", 100);
+        string shadePath="Assets/Art/UI/HeaderShade.png";
+        if(!File.Exists(shadePath)) {
+            var shade=new Texture2D(2,64,TextureFormat.RGBA32,false);
+            for(int y=0;y<64;y++)for(int x=0;x<2;x++)shade.SetPixel(x,y,new Color(.015f,.035f,.045f,Mathf.Pow(y/63f,1.6f)*.88f));
+            shade.Apply();File.WriteAllBytes(shadePath,shade.EncodeToPNG());Object.DestroyImmediate(shade);AssetDatabase.Refresh();
+        }
+        ImportSprite(shadePath,100);var shadeImporter=(TextureImporter)AssetImporter.GetAtPath(shadePath);shadeImporter.filterMode=FilterMode.Bilinear;shadeImporter.SaveAndReimport();
         font = AssetDatabase.LoadAssetAtPath<Font>("Assets/Fonts/PressStart2P-Regular.ttf");
         panelSprite = SpriteAt("Assets/Art/UI/WoodlandPanel.png");
         GraphicsSettings.defaultRenderPipeline = AssetDatabase.LoadAssetAtPath<RenderPipelineAsset>("Assets/Settings/UniversalRP.asset");
@@ -37,12 +46,24 @@ public static class GameSetup
         var scene = EditorSceneManager.NewScene(NewSceneSetup.EmptyScene, NewSceneMode.Single);
         var camera = new GameObject("Main Camera").AddComponent<Camera>();
         camera.tag = "MainCamera";
-        camera.orthographic = true; camera.orthographicSize = 5.6f;
+        camera.orthographic = true; camera.orthographicSize = 4.5f; camera.allowHDR = true;
         camera.transform.position = new Vector3(0, 1, -10);
         camera.backgroundColor = new Color(.035f, .10f, .12f);
         camera.gameObject.AddComponent<AudioListener>();
+        camera.gameObject.AddComponent<UniversalAdditionalCameraData>().renderPostProcessing = true;
+        string bloomPath = "Assets/Settings/CombatBloom.asset";
+        var bloomProfile = AssetDatabase.LoadAssetAtPath<VolumeProfile>(bloomPath);
+        if (!bloomProfile) { bloomProfile=ScriptableObject.CreateInstance<VolumeProfile>();AssetDatabase.CreateAsset(bloomProfile,bloomPath); }
+        if (!bloomProfile.TryGet<Bloom>(out var bloom)) { bloom=bloomProfile.Add<Bloom>(true);AssetDatabase.AddObjectToAsset(bloom,bloomProfile); }
+        bloom.intensity.Override(.48f);bloom.threshold.Override(1.15f);bloom.scatter.Override(.65f);EditorUtility.SetDirty(bloom);EditorUtility.SetDirty(bloomProfile);
+        var volume = new GameObject("Elemental Bloom - Subtle HDR Light").AddComponent<Volume>();volume.isGlobal=true;volume.sharedProfile=bloomProfile;
         var game = new GameObject("Woodland Game - Match Rules").AddComponent<WoodlandGame>();
-        new GameObject("Effects - Trails and Splashes").AddComponent<WoodlandEffects>();
+        var effects = new GameObject("Effects - Trails and Splashes").AddComponent<WoodlandEffects>();
+        string[] cues={"swing","hit_light","hit_heavy","jump","double_jump","dash","land","block","parry","guard_break","knockout","victory","ui_click"};
+        effects.fernSlash=Enumerable.Range(1,8).Select(i=>SpriteAt("Assets/Art/VFX/Fern/"+i.ToString("00")+".png")).ToArray();
+        effects.emberSlash=Enumerable.Range(1,8).Select(i=>SpriteAt("Assets/Art/VFX/Ember/"+i.ToString("00")+".png")).ToArray();
+        effects.soundBank=cues.Select(cue=>AssetDatabase.LoadAssetAtPath<AudioClip>("Assets/Audio/Combat/"+cue+".ogg")).ToArray();
+        if(effects.soundBank.Any(clip=>!clip))throw new System.Exception("Missing action sound effect");
         var environment = new GameObject("Environment - Edit These Objects").transform;
         var bg = Visual("Golden Woodland Background", SpriteAt("Assets/Resources/Art/Forest.png"), new Vector2(0, 1), -20, environment);
         Fit(bg, 22, 12.5f);
@@ -159,12 +180,12 @@ public static class GameSetup
                 : state == "Combo2" ? (fern ? set.punch : set.push)
                 : state == "Combo3" ? (fern ? set.push.Reverse().ToArray() : set.punch.Reverse().ToArray())
                 : (fern ? set.push : set.punch);
-            float rate = state == "DoubleJump" ? 22 : state == "Smash" ? 18 : 12;
+            float rate = state == "DoubleJump" ? 22 : state == "Smash" ? 18 : state == "Dash" || state == "Combo2" || state == "Combo3" ? 20 : 12;
             var clip = MakeClip(dir + "/" + state + ".anim", poses, rate, state == "Charge");
             float length = poses.Length / rate;
             // Leaf scout flips; fire scout tucks and kicks. Pivot stays fixed at the feet.
             float spin = state == "DoubleJump" ? (fern ? -14 : 18) : state == "Block" ? (fern ? 8 : -8) : state == "Charge" ? (fern ? -9 : -14) : state == "Smash" ? (fern ? 18 : -22) : (fern ? -14 : -20);
-            var rotation = state == "DoubleJump" ? new AnimationCurve(new Keyframe(0,0),new Keyframe(length*.45f,spin),new Keyframe(length,0)) : AnimationCurve.EaseInOut(0,0,length,spin);
+            var rotation = state == "DoubleJump" || state == "Charge" ? new AnimationCurve(new Keyframe(0,0),new Keyframe(length*.45f,spin),new Keyframe(length,0)) : AnimationCurve.EaseInOut(0,0,length,spin);
             clip.SetCurve("", typeof(Transform), "localEulerAnglesRaw.z", rotation);
             var node = controller.layers[0].stateMachine.AddState(state); node.motion = clip;
         }
@@ -182,46 +203,68 @@ public static class GameSetup
     }
     static void CreateHUD(WoodlandGame game)
     {
-        var root = new GameObject("HUD - Edit Text and Woodland Panels", typeof(RectTransform), typeof(Canvas), typeof(CanvasScaler), typeof(GraphicRaycaster));
-        var canvas = root.GetComponent<Canvas>();canvas.renderMode = RenderMode.ScreenSpaceOverlay;
-        var scaler = root.GetComponent<CanvasScaler>();scaler.uiScaleMode = CanvasScaler.ScaleMode.ScaleWithScreenSize;scaler.referenceResolution = new Vector2(1280, 720);scaler.matchWidthOrHeight = .5f;
-        var hud = root.AddComponent<WoodlandHUD>();hud.game = game;game.hud = hud;
-        var title = Panel("Title - Moss and Brass", root.transform, new Vector2(.5f, 1), new Vector2(0, -18), new Vector2(414, 94));
-        Label("Game Title", title, "WOODLAND TUMBLE", new Rect(16, 16, 382, 30), 23, cream, TextAnchor.MiddleCenter);
-        Label("Match Rules", title, "BALANCE / BRAWL / BEST OF FIVE", new Rect(16, 56, 382, 16), 10, gold, TextAnchor.MiddleCenter);
-        for (int i = 0; i < 2; i++) {
-            Color accent = i == 0 ? hud.fernColor : hud.emberColor;
-            var panel = Panel(i == 0 ? "Fern Player Panel" : "Ember Player Panel", root.transform, new Vector2(i, 1), new Vector2(i == 0 ? 24 : -24, -18), new Vector2(360, 184));
-            panel.pivot = new Vector2(i, 1);
-            hud.names[i] = Label("Player Name", panel, i == 0 ? "P1  FERN" : "P2  EMBER", new Rect(18, 15, 224, 22), 18, accent);
-            for (int p = 0; p < 3; p++) { var pip = Flat("Round " + (p + 1), panel, new Rect(282 + p * 20, 20, 10, 10), accent);pip.rectTransform.localRotation = Quaternion.Euler(0, 0, 45);hud.roundPips[i * 3 + p] = pip; }
-            Flat("Health Bar Track", panel, new Rect(18, 47, 324, 14), new Color(.15f, .20f, .15f));
-            hud.healthFill[i] = Flat("Health Fill", panel, new Rect(20, 49, 320, 10), accent);hud.healthFill[i].type = Image.Type.Filled;hud.healthFill[i].fillMethod = Image.FillMethod.Horizontal;
-            hud.healthText[i] = Label("Health", panel, "100 / 100 HP", new Rect(18, 69, 165, 16), 11, cream);
-            hud.damageText[i] = Label("Knockback Buildup", panel, "KNOCKBACK +0%", new Rect(180, 69, 164, 16), 10, gold, TextAnchor.MiddleRight);
-            hud.statusText[i] = Label("Combat Status", panel, "HOLD YOUR GROUND", new Rect(18, 93, 324, 16), 11, cream);
-            Flat("Ward Track", panel, new Rect(18, 118, 324, 6), new Color(.15f,.2f,.15f));
-            hud.shieldFill[i] = Flat("Ward Energy", panel, new Rect(18, 118, 324, 6), accent); hud.shieldFill[i].type = Image.Type.Filled; hud.shieldFill[i].fillMethod = Image.FillMethod.Horizontal;
-            hud.shieldText[i] = Label("Ward and Dash", panel, "WARD 100 / DASH READY", new Rect(18, 130, 324, 14), 9, cream);
-            Label("Push Caption", panel, "PUSH", new Rect(18, 157, 44, 13), 9, gold);
-            Label("Punch Caption", panel, "PUNCH", new Rect(182, 157, 53, 13), 9, gold);
-            Flat("Push Cooldown Track", panel, new Rect(66, 158, 94, 8), new Color(.15f, .20f, .15f));
-            Flat("Punch Cooldown Track", panel, new Rect(241, 158, 101, 8), new Color(.15f, .20f, .15f));
-            hud.pushFill[i] = Flat("Push Ready", panel, new Rect(66, 158, 94, 8), accent);hud.pushFill[i].type = Image.Type.Filled;hud.pushFill[i].fillMethod = Image.FillMethod.Horizontal;
-            hud.punchFill[i] = Flat("Punch Ready", panel, new Rect(241, 158, 101, 8), gold);hud.punchFill[i].type = Image.Type.Filled;hud.punchFill[i].fillMethod = Image.FillMethod.Horizontal;
-            var controls = Panel(i == 0 ? "Fern Controls" : "Ember Controls", root.transform, new Vector2(i, 0), new Vector2(i == 0 ? 24 : -24, 24), new Vector2(592, 104));controls.pivot = new Vector2(i, 0);
-            Label("Control Heading", controls, i == 0 ? "FERN / PLAYER ONE" : "EMBER / PLAYER TWO", new Rect(18, 13, 556, 17), 12, accent);
-            Label("Movement Keys", controls, i == 0 ? "A D  MOVE     W  DOUBLE JUMP" : "ARROWS MOVE   UP DOUBLE JUMP", new Rect(18, 37, 556, 15), 11, cream);
-            Label("Combat Keys", controls, i == 0 ? "F SHOVE  G PUNCH  H CHARGE" : "K SHOVE  L PUNCH  J CHARGE", new Rect(18, 58, 556, 14), 10, gold);
-            Label("Defense Keys", controls, i == 0 ? "S GUARD / PARRY   LSHIFT DASH" : "DOWN GUARD / PARRY   RSHIFT DASH", new Rect(18, 79, 556, 14), 10, cream);
+        var root = new GameObject("HUD - Arena Broadcast", typeof(RectTransform), typeof(Canvas), typeof(CanvasScaler), typeof(GraphicRaycaster));
+        root.GetComponent<Canvas>().renderMode = RenderMode.ScreenSpaceOverlay;
+        var scaler = root.GetComponent<CanvasScaler>(); scaler.uiScaleMode = CanvasScaler.ScaleMode.ScaleWithScreenSize; scaler.referenceResolution = new Vector2(1280,720); scaler.matchWidthOrHeight = .5f;
+        var hud = root.AddComponent<WoodlandHUD>(); hud.game = game; game.hud = hud;
+        var pixel = font; var body = Resources.GetBuiltinResource<Font>("LegacyRuntime.ttf");
+        Color ink = new Color(.025f,.055f,.065f,1), track = new Color(.12f,.19f,.2f), white = new Color(.92f,.96f,.91f);
+        var header=Flat("Header Contrast Fade",root.transform,new Rect(0,0,1280,110),Color.white);header.sprite=SpriteAt("Assets/Art/UI/HeaderShade.png");
+        header.rectTransform.anchorMin=new Vector2(0,1);header.rectTransform.anchorMax=new Vector2(1,1);header.rectTransform.pivot=new Vector2(.5f,1);header.rectTransform.anchoredPosition=Vector2.zero;header.rectTransform.sizeDelta=new Vector2(0,110);
+        font = pixel;
+        LabelAnchored("Wordmark",root.transform,"WOODLAND TUMBLE",new Vector2(.5f,1),new Vector2(0,-28),new Vector2(650,30),18,white);
+        font = body;
+        hud.arenaText = Label("Arena",root.transform,"SUNLIT HOLLOW  /  TAB SWITCH",new Rect(0,0,600,22),14,new Color(.7f,.78f,.72f),TextAnchor.MiddleCenter);
+        var ar = hud.arenaText.rectTransform; ar.anchorMin = ar.anchorMax = new Vector2(.5f,1); ar.pivot = new Vector2(.5f,1); ar.anchoredPosition = new Vector2(0,-48);
+        for(int i=0;i<2;i++) {
+            Color accent = i==0 ? hud.fernColor : hud.emberColor;
+            var plate = new GameObject(i==0?"Fern Fighter Plate":"Ember Fighter Plate",typeof(RectTransform)).GetComponent<RectTransform>();
+            plate.SetParent(root.transform,false); plate.anchorMin = plate.anchorMax = new Vector2(i,0); plate.pivot = new Vector2(i,0); plate.anchoredPosition = new Vector2(i==0?24:-24,26); plate.sizeDelta = new Vector2(410,122);
+            hud.fighterPlates[i] = plate;
+            Flat("Plate",plate,new Rect(0,0,410,122),ink);
+            Flat("Accent Rule",plate,new Rect(12,0,386,1),accent);
+            Flat("Portrait Well",plate,new Rect(12,12,96,98),new Color(accent.r*.17f,accent.g*.17f,accent.b*.17f,.8f));
+            var portraitMask=Box("Portrait Crop",plate,new Rect(12,12,96,98));portraitMask.gameObject.AddComponent<RectMask2D>();
+            var portrait=Flat("Scout Portrait",portraitMask,new Rect(-40,-16,176,176),Color.white); portrait.sprite = SpriteAt("Assets/Art/Characters/"+(i==0?"Fern":"Ember")+"/Walk/01.png"); portrait.preserveAspect=true;
+            hud.names[i]=Label("Player Name",plate,i==0?"P1  FERN":"P2  EMBER",new Rect(122,9,178,22),18,accent);
+            for(int j=0;j<3;j++){hud.roundPips[i*3+j]=Flat("Round "+(j+1),plate,new Rect(342+j*19,17,9,9),accent);hud.roundPips[i*3+j].rectTransform.localRotation=Quaternion.Euler(0,0,45);}
+            hud.healthText[i]=Label("Health Number",plate,"100",new Rect(122,28,95,48),39,white);hud.healthText[i].fontStyle=FontStyle.Bold;
+            Label("HP Caption",plate,"HP",new Rect(213,45,28,19),12,new Color(.57f,.66f,.65f));
+            hud.damageText[i]=Label("Knockback",plate,"+0%",new Rect(270,45,122,22),17,new Color(.79f,.7f,.48f),TextAnchor.MiddleRight);
+            Flat("Health Track",plate,new Rect(122,78,270,6),track);
+            hud.damageGhost[i]=Flat("Damage Echo",plate,new Rect(122,78,270,6),new Color(1,.86f,.63f)); hud.damageGhost[i].type=Image.Type.Filled;hud.damageGhost[i].fillMethod=Image.FillMethod.Horizontal;
+            hud.healthFill[i]=Flat("Health Fill",plate,new Rect(122,78,270,6),accent);hud.healthFill[i].type=Image.Type.Filled;hud.healthFill[i].fillMethod=Image.FillMethod.Horizontal;
+            Flat("Ward Track",plate,new Rect(122,88,270,3),track);
+            hud.shieldFill[i]=Flat("Ward",plate,new Rect(122,88,270,3),new Color(.5f,.79f,.95f));hud.shieldFill[i].type=Image.Type.Filled;hud.shieldFill[i].fillMethod=Image.FillMethod.Horizontal;
+            hud.shieldText[i]=Label("Ward Caption",plate,"WARD",new Rect(122,96,50,15),11,new Color(.57f,.7f,.76f));
+            Label("Push Caption",plate,"PUSH",new Rect(188,96,35,15),11,new Color(.65f,.72f,.69f));
+            Label("Punch Caption",plate,"PUNCH",new Rect(292,96,43,15),11,new Color(.65f,.72f,.69f));
+            Flat("Push Track",plate,new Rect(231,102,44,3),track);Flat("Punch Track",plate,new Rect(346,102,46,3),track);
+            hud.pushFill[i]=Flat("Push Ready",plate,new Rect(231,102,44,3),accent);hud.pushFill[i].type=Image.Type.Filled;hud.pushFill[i].fillMethod=Image.FillMethod.Horizontal;
+            hud.punchFill[i]=Flat("Punch Ready",plate,new Rect(346,102,46,3),accent);hud.punchFill[i].type=Image.Type.Filled;hud.punchFill[i].fillMethod=Image.FillMethod.Horizontal;
+            hud.statusText[i]=Label("Fighter Combo Popup",root.transform,"",new Rect(0,0,280,45),25,accent,TextAnchor.MiddleCenter);
+            hud.statusText[i].rectTransform.pivot=Vector2.one*.5f;
+            var comboOutline=hud.statusText[i].gameObject.AddComponent<Outline>();comboOutline.effectColor=new Color(.015f,.035f,.04f,1);comboOutline.effectDistance=new Vector2(1,-1);
         }
-        hud.arenaText = Label("Arena Selection", root.transform, "SUNLIT HOLLOW   TAB CHANGE ARENA", new Rect(0,0,450,20), 9, cream, TextAnchor.MiddleCenter);
-        var arenaRect = hud.arenaText.rectTransform; arenaRect.anchorMin = arenaRect.anchorMax = new Vector2(.5f,1); arenaRect.pivot = new Vector2(.5f,1); arenaRect.anchoredPosition = new Vector2(0,-120);
-        LabelAnchored("Pause and Restart Hint", root.transform, "ESC  PAUSE     R  RESTART", new Vector2(.5f, 0), new Vector2(0, 10), new Vector2(440, 12), 9, gold);
-        var banner = Panel("Round Banner", root.transform, Vector2.one * .5f, new Vector2(0, 104), new Vector2(640, 110));banner.pivot = Vector2.one * .5f;
-        hud.bannerPanel = banner.gameObject;
-        hud.bannerText = Label("Round Announcement", banner, "GET READY", new Rect(18, 18, 604, 74), 23, cream, TextAnchor.MiddleCenter);
-        banner.gameObject.SetActive(false);
+        var footer=Flat("Quiet Controls Strip",root.transform,new Rect(0,0,390,30),ink);footer.rectTransform.anchorMin=footer.rectTransform.anchorMax=new Vector2(.5f,0);footer.rectTransform.pivot=new Vector2(.5f,0);footer.rectTransform.anchoredPosition=new Vector2(0,7);
+        hud.helpHint=Label("Help Hint",root.transform,"F1 CONTROLS    ESC PAUSE    R REMATCH",new Rect(0,0,390,22),14,new Color(.82f,.87f,.82f),TextAnchor.MiddleCenter);
+        var hintRect=hud.helpHint.rectTransform;hintRect.anchorMin=hintRect.anchorMax=new Vector2(.5f,0);hintRect.pivot=Vector2.one*.5f;hintRect.anchoredPosition=new Vector2(0,23);
+        var banner = new GameObject("Round Announcement",typeof(RectTransform)).GetComponent<RectTransform>();banner.SetParent(root.transform,false);banner.anchorMin=banner.anchorMax=Vector2.one*.5f;banner.pivot=Vector2.one*.5f;banner.sizeDelta=new Vector2(520,100);banner.anchoredPosition=new Vector2(0,130);
+        Flat("Announcement Backing",banner,new Rect(0,0,520,100),new Color(.025f,.055f,.065f,.90f));Flat("Announcement Rule",banner,new Rect(160,0,200,2),gold);
+        hud.bannerPanel=banner.gameObject;hud.bannerText=Label("Announcement",banner,"GET READY",new Rect(10,8,500,84),30,white,TextAnchor.MiddleCenter);banner.gameObject.SetActive(false);
+        var help = new GameObject("F1 Controls Overlay",typeof(RectTransform)).GetComponent<RectTransform>();help.SetParent(root.transform,false);help.anchorMin=help.anchorMax=Vector2.one*.5f;help.pivot=Vector2.one*.5f;help.sizeDelta=new Vector2(800,370);
+        Flat("Help Backing",help,new Rect(0,0,800,370),new Color(.02f,.045f,.055f,.98f));Flat("Help Rule",help,new Rect(28,26,744,2),gold);
+        Label("Help Heading",help,"THE FIELD GUIDE",new Rect(30,40,740,34),26,white,TextAnchor.MiddleCenter);
+        for(int i=0;i<2;i++){
+            float x=36+i*395;Color c=i==0?hud.fernColor:hud.emberColor;
+            Label("Player",help,i==0?"P1  FERN":"P2  EMBER",new Rect(x,100,330,25),22,c);
+            Label("Keys",help,i==0?"A / D    Move\nW    Jump / double jump\nS    Guard / timed parry\nF    Shove   G    Punch\nH    Hold to charge smash\nLeft Shift    Dash":"Left / Right    Move\nUp    Jump / double jump\nDown    Guard / timed parry\nK    Shove   L    Punch\nJ    Hold to charge smash\nRight Shift    Dash",new Rect(x,136,340,165),18,white);
+        }
+        Label("System Keys",help,"TAB arena    R rematch    ESC pause    M mute    - / + volume    F1 close",new Rect(24,322,752,24),16,new Color(.71f,.77f,.7f),TextAnchor.MiddleCenter);
+        hud.helpPanel=help.gameObject; help.gameObject.SetActive(false);
+        hud.soundText=Label("Sound Feedback",root.transform,"",new Rect(0,0,330,24),16,white,TextAnchor.MiddleCenter);
+        var soundRect=hud.soundText.rectTransform;soundRect.anchorMin=soundRect.anchorMax=new Vector2(.5f,0);soundRect.pivot=Vector2.one*.5f;soundRect.anchoredPosition=new Vector2(0,23);
+        font=pixel;
     }
     static RectTransform Panel(string name, Transform parent, Vector2 anchor, Vector2 position, Vector2 size)
     {
@@ -236,7 +279,6 @@ public static class GameSetup
     static Text Label(string name, Transform parent, string value, Rect bounds, int size, Color color, TextAnchor alignment = TextAnchor.MiddleLeft)
     {
         var rect = Box(name, parent, bounds);var text = rect.gameObject.AddComponent<Text>();text.font = font;text.text = value;text.fontSize = size;text.color = color;text.alignment = alignment;text.raycastTarget = false;text.horizontalOverflow = HorizontalWrapMode.Wrap;text.verticalOverflow = VerticalWrapMode.Truncate;
-        var shadow = rect.gameObject.AddComponent<Shadow>();shadow.effectColor = new Color(.025f, .07f, .06f, .95f);shadow.effectDistance = new Vector2(2, -2);
         return text;
     }
     static void LabelAnchored(string name, Transform parent, string value, Vector2 anchor, Vector2 position, Vector2 size, int fontSize, Color color)

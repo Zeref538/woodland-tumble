@@ -18,7 +18,8 @@ public class WoodlandGame : MonoBehaviour
     public void SelectArena(int index)
     {
         if (index < 0 || index >= backgrounds.Length || !backgrounds[index] || !planks[index] || !spheres[index]) return;
-        ArenaIndex = index;
+        bool changed=ArenaIndex!=index;ArenaIndex = index;
+        if(changed)WoodlandEffects.Instance?.PlayCue(12,.18f);
         backgroundArt.sprite = backgrounds[index]; plankArt.sprite = planks[index]; sphereArt.sprite = spheres[index];
         // All plank and sphere canvases share dimensions, keeping the physical surface unchanged.
         float scale = Mathf.Max(22 / backgroundArt.sprite.bounds.size.x, 12.5f / backgroundArt.sprite.bounds.size.y);

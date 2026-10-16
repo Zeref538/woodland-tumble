@@ -258,7 +258,7 @@ public class Scout : MonoBehaviour
         var game = WoodlandGame.Instance;
         var other = game.players[1-id]; Vector2 delta = other.Body.position - Body.position;
         if (game.playing && !KnockedOut && delta.x * direction > 0 && Mathf.Abs(delta.x) < 1.9f && Mathf.Abs(delta.y) < 1.3f)
-            other.ReceiveHit(this, direction, true, 1.1f + power * .9f);
+            if(other.ReceiveHit(this, direction, true, 1.1f + power * .9f)) WoodlandEffects.Instance?.HeavyImpact(other.Body.position,direction,Element,power);
         yield return new WaitForSeconds(.4f); action = 0;
     }
     public bool TryAttack(bool punch)
@@ -285,7 +285,7 @@ public class Scout : MonoBehaviour
         PlayState(actionAnimation);
         WoodlandEffects.Instance?.Windup(Body.position + new Vector2(direction * .55f, 0), direction, id == 0 ? new Color(.4f, .85f, .4f) : new Color(1, .55f, .2f));
         yield return new WaitForSeconds(.18f);
-        WoodlandEffects.Instance?.Swipe(Body.position, direction, punch);
+        WoodlandEffects.Instance?.Swipe(Body.position, direction, punch,id);
         var game = WoodlandGame.Instance;
         Scout other = game.players[1 - id];
         Vector2 delta = other.Body.position - Body.position;
@@ -294,7 +294,7 @@ public class Scout : MonoBehaviour
             if (other.ReceiveHit(this, direction, punch, finisher ? 1.4f : 1)) {
                 comboCount++; comboUntil = Time.time + 1.05f;
                 WoodlandEffects.Instance?.ElementHit(other.Body.position, direction, Element, comboCount, id);
-                WoodlandEffects.Instance?.Impact(other.Body.position, direction, punch);
+                WoodlandEffects.Instance?.Impact(other.Body.position, direction, punch, finisher);
             } else { comboCount = 0; comboUntil = 0; }
 
         }

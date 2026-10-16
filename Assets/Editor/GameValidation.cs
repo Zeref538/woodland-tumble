@@ -14,12 +14,18 @@ public static class GameValidation
     static Keyboard testKeyboard;
     static Key heldKey;
     static InputSettings originalInputSettings, validationInputSettings;
-    const string Active = "Woodland.ValidateV2";
+    const string Active = "Woodland.ValidateV4";
     static GameValidation() { EditorApplication.update += Tick; }
     [Serializable] public class Report { public bool success; public string status; public string[] checks; }
+    public static void InspectHUD()
+    {
+        EditorSceneManager.OpenScene("Assets/Scenes/WoodlandTumble.unity");Canvas.ForceUpdateCanvases();
+        var hud=UnityEngine.Object.FindAnyObjectByType<WoodlandHUD>();
+        foreach(var text in hud.healthText)Debug.Log("HUD_METRICS: "+text.name+" text="+text.text+" preferred="+text.preferredWidth+"x"+text.preferredHeight+" rect="+text.rectTransform.rect.size+" font="+text.font.name+" size="+text.fontSize);
+    }
     [MenuItem("Woodland/Validate Editable Game")]
     public static void RunInEditor() => Begin(false);
-    public static void Run() { GameSetup.Prepare(); Begin(true); }
+    public static void Run() { AudioListener.volume=0; GameSetup.Prepare(); Begin(true); }
     static void Begin(bool exit)
     {
         if (EditorApplication.isPlaying) { EditorApplication.isPlaying = false; EditorApplication.delayCall += () => Begin(exit); return; }
@@ -52,20 +58,32 @@ public static class GameValidation
                 Check(Camera.main != null && game.plank != null && game.hud != null, "Saved camera, platform and HUD references work");
                 Check(a.transform.position.x < -2 && b.transform.position.x > 2, "Players spawn at separate editable spawn points");
                 Check(a.transform.position.y > -2 && b.transform.position.y > -2, "Players land on the plank");
-                foreach (var scout in game.players) foreach (string state in new[] { "Walk", "Jump", "Hurt", "Push", "Punch", "Knockout", "Block", "DoubleJump", "Block", "Dash", "DoubleJump", "Charge", "Smash", "Combo2", "Combo3" }) {
+                foreach (var scout in game.players) foreach (string state in new[] { "Walk", "Jump", "Hurt", "Push", "Punch", "Knockout", "Block", "DoubleJump" }) {
                     var frames = scout.animations.Get(state);
                     Check(frames.Length == 10 && frames.All(f => f != null && f.rect.width == 256 && f.rect.height == 256), scout.displayName + "/" + state + ": ten independent 256px sprites");
                     Check(scout.animator.HasState(0, Animator.StringToHash("Base Layer." + state)), scout.displayName + "/" + state + ": editable Animator state exists");
                 }
+                foreach (var scout in game.players) foreach (string state in new[] { "Dash", "Charge", "Smash", "Combo2", "Combo3" }) {
+                    var controller = scout.animator.runtimeAnimatorController as UnityEditor.Animations.AnimatorController;
+                    Check(controller != null && scout.animator.HasState(0, Animator.StringToHash("Base Layer." + state)), scout.displayName + "/" + state + ": real Animator state exists");
+                    var node = controller.layers[0].stateMachine.states.FirstOrDefault(entry => entry.state.name == state).state;
+                    var clip = node == null ? null : node.motion as AnimationClip;
+                    Check(clip != null && AnimationUtility.GetObjectReferenceCurveBindings(clip).Any(binding => binding.type == typeof(SpriteRenderer) && binding.propertyName == "m_Sprite" && AnimationUtility.GetObjectReferenceCurve(clip, binding).Any(key => key.value is Sprite)), scout.displayName + "/" + state + ": assigned clip contains real sprite keyframes");
+                }
                 Check(game.hud.healthFill.All(i => i.sprite != null && i.type == Image.Type.Filled), "HUD health fills and panel sprites are serialized");
-                Capture("Documentation/GamePreview-v3.png");
+                Check(game.hud.helpPanel != null && game.hud.damageGhost.Length == 2 && game.hud.damageGhost.All(image => image != null) && game.hud.fighterPlates.Length == 2 && game.hud.fighterPlates.All(plate => plate != null), "Presentation HUD has wired help panel, two damage ghosts and two fighter plates");
+                foreach(var label in game.hud.healthText)Check(label.preferredHeight<=label.rectTransform.rect.height,"HP digits fit their text rectangle without clipping");
+                Check(WoodlandEffects.Instance.fernSlash.Length==8 && WoodlandEffects.Instance.emberSlash.Length==8 && WoodlandEffects.Instance.fernSlash.All(frame=>frame!=null) && WoodlandEffects.Instance.emberSlash.All(frame=>frame!=null),"Both elemental attack animations contain eight loaded VFX frames");
+                if(System.Array.IndexOf(System.Environment.GetCommandLineArgs(),"-silent-test")>=0)Check(AudioListener.volume==0,"Silent test mode keeps speaker output muted");
+                ValidateAudio(game);
+                Capture("Documentation/GamePreview-v4.png");
                 var originalCollider = game.plank.GetComponent<BoxCollider2D>().size;
                 var originalScale = game.plank.transform.localScale;
                 for (int arena = 0; arena < 3; arena++) {
                     game.SelectArena(arena);
                     Check(game.ArenaIndex == arena && game.backgroundArt.sprite == game.backgrounds[arena] && game.plankArt.sprite == game.planks[arena] && game.sphereArt.sprite == game.spheres[arena], "Arena " + arena + ": matching background, plank and sphere switch together");
                     Check(game.plank.GetComponent<BoxCollider2D>().size == originalCollider && game.plank.transform.localScale == originalScale, "Arena " + arena + ": visual changes preserve collider proportions");
-                    Capture("Documentation/arena-" + arena + "-1280.png");
+                    Capture("Documentation/arena-" + arena + "-1280-v4.png");
                 }
                 game.SelectArena(1);
                 game.fallBoundary = -100;
@@ -78,7 +96,7 @@ public static class GameValidation
                 Check(Mathf.Approximately(b.Health, b.maxHealth - a.punchDamage), "Punch applies reduced damage (" + a.punchDamage + ")");
                 Check(b.Body.linearVelocity.x > a.punchKnockback && b.Body.linearVelocity.x < 6, "Punch applies moderated knockback");
                 Check(WoodlandEffects.Instance.ActiveMotes > 0 && WoodlandEffects.Instance.ActiveMotes <= 320, "Pooled attack VFX are active within capacity");
-                Capture("Documentation/VFXPreview-v3.png");
+                Capture("Documentation/VFXPreview-v4.png");
                 a.ResetScout();b.ResetScout();Arrange(game);
                 Check(a.TryAttack(false), "Push action starts");
                 Check(a.AnimationState == "Push", "Push uses its own animation");
@@ -101,7 +119,7 @@ public static class GameValidation
             } else if (stage == 3 && SimElapsed > .8f) {
                 // Place the collapsed sprite on the board for a clear animation preview.
                 b.Body.linearVelocity = Vector2.zero;b.Body.position = new Vector2(1.5f, .12f);b.transform.position = b.Body.position;
-                Capture("Documentation/KnockoutPreview-v3.png");
+                Capture("Documentation/KnockoutPreview-v4.png");
                 SetStage(4);
             } else if (stage == 4 && SimElapsed > .65f) {
                 Check(game.score[0] == 1, "Knockout awards the opponent a round");
@@ -132,6 +150,7 @@ public static class GameValidation
             } else if (stage == 7 && SimElapsed > 1.2f) {
                 Check(a.Grounded && Mathf.Abs(a.Body.linearVelocity.y) < .5f, "Player lands and settles on the plank");
                 heldKey = Key.None;
+                b.ResetScout();b.Body.simulated=true;b.Body.gravityScale=0;b.Body.position=new Vector2(2.2f,.15f);b.transform.position=b.Body.position;
                 a.inputEnabled = false;
                 Check(a.TryJump() && a.AirJumpsRemaining == 1, "Ground jump preserves the one aerial jump budget");
                 Check(a.TryJump() && a.AirJumpsRemaining == 0, "Double jump consumes exactly one aerial jump");
@@ -140,6 +159,7 @@ public static class GameValidation
                 SetStage(20);
             } else if (stage == 20 && SimElapsed > .18f) {
                 Check(WoodlandEffects.Instance.ActiveMotes > 0, "Double jump produces visible pooled effects");
+                Capture("Documentation/combat-doublejump-1280-v4.png");
                 a.ResetScout();b.ResetScout();Arrange(game);
                 Check(a.TryDash(), "Dash starts when ready");
                 Check(a.AnimationState == "Dash" && a.Body.linearVelocity.x >= a.dashSpeed * .99f, "Dash uses its animation and intended launch speed");
@@ -157,7 +177,7 @@ public static class GameValidation
                 float shield = b.Shield;
                 Check(!b.ReceiveHit(a, 1, true), "A frontal hit is absorbed after the parry window");
                 Check(Mathf.Approximately(b.Health, b.maxHealth) && b.Shield < shield - a.punchDamage * 2, "Normal guard drains shield instead of health");
-                Capture("Documentation/combat-guard-1280.png");
+                Capture("Documentation/combat-guard-1280-v4.png");
                 a.Body.position = b.Body.position + Vector2.right;
                 a.transform.position = a.Body.position;Physics2D.SyncTransforms();
                 Check(b.ReceiveHit(a, -1, true) && b.Health < b.maxHealth, "A rear hit bypasses the directional guard");
@@ -165,7 +185,7 @@ public static class GameValidation
                 Check(!b.ReceiveHit(a, 1, true), "A freshly raised guard parries a frontal hit");
                 Check(a.Status == "STAGGERED" && !a.TryAttack(true) && !a.TryDash(), "Parry staggers the attacker and blocks immediate retaliation");
                 Check(Mathf.Approximately(b.Health, b.maxHealth), "Parry preserves defender health");
-                Capture("Documentation/combat-parry-1280.png");
+                Capture("Documentation/combat-parry-1280-v4.png");
                 SetStage(24);
             } else if (stage == 24 && SimElapsed > .45f) {
                 Check(a.Status != "STAGGERED" && a.TryDash(), "Parry stagger expires and allows actions again");
@@ -191,7 +211,7 @@ public static class GameValidation
                 SetStage(29);
             } else if (stage == 29 && SimElapsed > .2f) {
                 Check(b.maxHealth - b.Health > a.punchDamage * 1.5f, "Charged smash deals substantially more damage than one punch");
-                Capture("Documentation/combat-smash-1280.png");
+                Capture("Documentation/combat-smash-1280-v4.png");
                 a.ResetScout();b.ResetScout();
                 foreach (var scout in game.players) {
                     Check(scout.Health == scout.maxHealth && scout.Shield == scout.shieldCapacity, scout.displayName + ": reset restores health and shield");
@@ -213,14 +233,89 @@ public static class GameValidation
                 SetStage(32);
             } else if (stage == 32 && SimElapsed > .5f) {
                 Check(a.ComboCount == 3 && Mathf.Approximately(b.Health, b.maxHealth - 3.4f * a.punchDamage), "Three-hit combo connects with a stronger final hit");
-                Capture("Documentation/combat-combo-1280.png");
+                Capture("Documentation/combat-combo-1280-v4.png");
                 SetStage(33);
             } else if (stage == 33 && SimElapsed > 1.1f) {
                 Check(a.ComboCount == 0, "Combo counter expires when attacks stop connecting");
                 a.ResetScout();b.ResetScout();
-                Complete(true, "COMBAT_VFX_AND_EDGE_PHYSICS_VALIDATED");
+                SessionState.SetBool("Woodland.HelpWasVisible", game.hud.helpPanel.activeSelf);
+                SessionState.SetBool("Woodland.WasPaused", game.Paused);
+                heldKey = Key.F1;DriveTestInput();
+                SetStage(34);
+            } else if (stage == 34 && SimElapsed > .1f) {
+                Check(game.hud.helpPanel.activeSelf != SessionState.GetBool("Woodland.HelpWasVisible", false), "F1 opens or closes the wired controls overlay");
+                Check(game.Paused == SessionState.GetBool("Woodland.WasPaused", false), "Controls overlay does not change game pause state");
+                Capture("Documentation/controls-1280-v4.png");
+                heldKey = Key.None;DriveTestInput();SetStage(35);
+            } else if (stage == 35 && SimElapsed > .1f) {
+                heldKey = Key.F1;DriveTestInput();SetStage(36);
+            } else if (stage == 36 && SimElapsed > .1f) {
+                Check(game.hud.helpPanel.activeSelf == SessionState.GetBool("Woodland.HelpWasVisible", false), "A second F1 press restores the original overlay state");
+                Check(game.Paused == SessionState.GetBool("Woodland.WasPaused", false), "Closing controls still leaves pause state unchanged");
+                heldKey = Key.None;
+                a.ResetScout();b.ResetScout();Arrange(game);
+                Check(b.Facing < 0 && b.TryAttack(true), "Player two starts a left-facing punch");
+                var effects = WoodlandEffects.Instance;
+                SessionState.SetBool("Woodland.RestoreAudioKeys", true);
+                SessionState.SetBool("Woodland.AudioKeysMuted", effects.Muted);
+                SessionState.SetFloat("Woodland.AudioKeysVolume", effects.SfxVolume);
+                effects.SetVolume(.5f, false);
+                heldKey = Key.M;DriveTestInput();SetStage(37);
+            } else if (stage == 37 && SimElapsed > .25f) {
+                var effects = WoodlandEffects.Instance;
+                Check(Mathf.Approximately(a.Health, a.maxHealth - b.punchDamage), "Player two left-facing punch damages player one");
+                Check(effects.GetComponentsInChildren<SpriteRenderer>().Any(renderer => renderer.enabled && effects.emberSlash.Contains(renderer.sprite)), "Player two attack displays its own active Ember slash sprite");
+                Capture("Documentation/combat-ember-1280-v4.png");
+                Check(effects.Muted != SessionState.GetBool("Woodland.AudioKeysMuted", false), "Keyboard M toggles mute");
+                heldKey = Key.Equals;DriveTestInput();SetStage(38);
+            } else if (stage == 38 && SimElapsed > .1f) {
+                Check(Mathf.Approximately(WoodlandEffects.Instance.SfxVolume, .6f), "Keyboard equals increases effect volume by one step");
+                heldKey = Key.Minus;DriveTestInput();SetStage(39);
+            } else if (stage == 39 && SimElapsed > .1f) {
+                Check(Mathf.Approximately(WoodlandEffects.Instance.SfxVolume, .5f), "Keyboard minus decreases effect volume by one step");
+                heldKey = Key.M;DriveTestInput();SetStage(40);
+            } else if (stage == 40 && SimElapsed > .1f) {
+                Check(WoodlandEffects.Instance.Muted == SessionState.GetBool("Woodland.AudioKeysMuted", false), "A second keyboard M press restores the original mute state");
+                heldKey = Key.None;a.ResetScout();b.ResetScout();Arrange(game);
+                Check(b.TryDash() && b.Body.linearVelocity.x <= -b.dashSpeed * .99f, "Player two dash launches left with its intended speed");
+                Complete(true, "PRESENTATION_AUDIO_COMBAT_AND_EDGE_PHYSICS_VALIDATED");
             }
         } catch (Exception error) { Complete(false, error.ToString()); }
+    }
+    static void ValidateAudio(WoodlandGame game)
+    {
+        var effects = WoodlandEffects.Instance;
+        Check(effects != null && effects.soundBank != null && effects.soundBank.Length == 13, "Thirteen action sound clips are wired into the effects bank");
+        float volume = effects.SfxVolume;bool muted = effects.Muted;bool paused = game.Paused;
+        try {
+            if (paused) game.TogglePause();
+            if (effects.Muted) effects.ToggleMute();
+            effects.SetVolume(-1);Check(effects.SfxVolume == 0, "Sound volume clamps negative input to zero");
+            Check(!effects.PlayCue(0), "Zero volume denies playback");
+            effects.SetVolume(2);Check(effects.SfxVolume == 1, "Sound volume clamps excessive input to one");
+            int sounds = effects.SoundsPlayed;
+            for (int i = 0; i < effects.soundBank.Length; i++) {
+                var clip = effects.soundBank[i];
+                Check(clip != null && clip.loadState == AudioDataLoadState.Loaded && clip.length > .01f && clip.samples > 0 && clip.channels > 0, "Sound " + i + ": clip is loaded with positive duration and sample count");
+                var samples = new float[Mathf.Min(clip.samples * clip.channels, 8192)];
+                Check(clip.GetData(samples, 0) && samples.Sum(sample => (double)sample * sample) / samples.Length > 1e-10, "Sound " + i + ": decoded waveform contains audible data");
+                Check(effects.PlayCue(i,.02f), "Sound " + i + ": playback accepts its valid cue");
+            }
+            Check(effects.SoundsPlayed == sounds + 13, "Accepted sound cues increment the actual playback counter thirteen times");
+            var sources = effects.GetComponents<AudioSource>();
+            Check(sources.Length == 8 && sources.Any(source => source.clip != null && source.isPlaying), "Eight pooled audio sources exist and at least one cue is playing");
+            Check(!effects.PlayCue(-1) && !effects.PlayCue(13), "Invalid sound indices are rejected");
+            effects.ToggleMute();sounds = effects.SoundsPlayed;
+            Check(effects.Muted && !effects.PlayCue(0) && effects.SoundsPlayed == sounds, "Mute denies playback without advancing the sound counter");
+            effects.ToggleMute();game.TogglePause();
+            Check(!effects.PlayCue(0) && effects.SoundsPlayed == sounds, "Pause denies new sound cues");
+            game.TogglePause();
+            Check(effects.PlayCue(0) && effects.SoundsPlayed == sounds + 1, "Resuming permits sound playback again");
+        } finally {
+            if (game.Paused != paused) game.TogglePause();
+            if (effects.Muted != muted) effects.ToggleMute();
+            effects.SetVolume(volume,false);
+        }
     }
     static void DriveTestInput()
     {
@@ -293,11 +388,17 @@ public static class GameValidation
     static void Complete(bool success, string status)
     {
         SessionState.SetBool(Active, false);
+        if (SessionState.GetBool("Woodland.RestoreAudioKeys", false) && WoodlandEffects.Instance != null) {
+            var effects = WoodlandEffects.Instance;
+            if (effects.Muted != SessionState.GetBool("Woodland.AudioKeysMuted", false)) effects.ToggleMute();
+            effects.SetVolume(SessionState.GetFloat("Woodland.AudioKeysVolume", .5f), false);
+            SessionState.SetBool("Woodland.RestoreAudioKeys", false);
+        }
         InputSystem.onBeforeUpdate -= DriveTestInput;
         if (testKeyboard != null) { InputSystem.RemoveDevice(testKeyboard);testKeyboard = null; }
         if (originalInputSettings != null) { InputSystem.settings = originalInputSettings;UnityEngine.Object.DestroyImmediate(validationInputSettings);originalInputSettings = null; }
         var report = new Report { success = success, status = status, checks = SessionState.GetString("Woodland.Checks", "").Split('\n').Where(s => s.Length > 0).ToArray() };
-        File.WriteAllText("Documentation/PLAYMODE-VALIDATION-v3.json", JsonUtility.ToJson(report, true));
+        File.WriteAllText("Documentation/PLAYMODE-VALIDATION-v4.json", JsonUtility.ToJson(report, true));
         if (success) Debug.Log(status);else Debug.LogError(status);
         EditorApplication.isPlaying = false;
         if (SessionState.GetBool("Woodland.ValidationExit", false)) EditorApplication.delayCall += () => EditorApplication.Exit(success ? 0 : 1);
