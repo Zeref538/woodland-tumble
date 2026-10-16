@@ -9,6 +9,22 @@ public class WoodlandGame : MonoBehaviour
     public Scout[] players = new Scout[2];
     public Rigidbody2D plank;
     public WoodlandHUD hud;
+    [Header("Arena wardrobe")]
+    public SpriteRenderer backgroundArt, plankArt, sphereArt;
+    public Sprite[] backgrounds = new Sprite[3], planks = new Sprite[3], spheres = new Sprite[3];
+    public string[] arenaNames = { "SUNLIT HOLLOW", "MOONLIT LAKE", "EMBER GROVE" };
+    public int ArenaIndex { get; private set; }
+    public string ArenaName => arenaNames[ArenaIndex];
+    public void SelectArena(int index)
+    {
+        if (index < 0 || index >= backgrounds.Length || !backgrounds[index] || !planks[index] || !spheres[index]) return;
+        ArenaIndex = index;
+        backgroundArt.sprite = backgrounds[index]; plankArt.sprite = planks[index]; sphereArt.sprite = spheres[index];
+        // All plank and sphere canvases share dimensions, keeping the physical surface unchanged.
+        float scale = Mathf.Max(22 / backgroundArt.sprite.bounds.size.x, 12.5f / backgroundArt.sprite.bounds.size.y);
+        backgroundArt.transform.localScale = Vector3.one * scale;
+        if (WoodlandEffects.Instance) WoodlandEffects.Instance.ambientTint = index == 1 ? new Color(.3f,1,.85f) : index == 2 ? new Color(1,.4f,.12f) : new Color(1,.86f,.42f);
+    }
     [Header("Match rules")]
     [Min(1)] public int roundsToWin = 3;
     public float fallBoundary = -4.6f;
@@ -27,6 +43,7 @@ public class WoodlandGame : MonoBehaviour
     void Start()
     {
         Application.targetFrameRate = 60;
+        SelectArena(0);
         Physics2D.gravity = new Vector2(0, -20);
         plankHome = plank.position;
         plankAngle = plank.rotation;
@@ -91,6 +108,10 @@ public class WoodlandGame : MonoBehaviour
     {
         var keyboard = Keyboard.current;
         if (keyboard == null) return;
+        if (keyboard.tabKey.wasPressedThisFrame) SelectArena((ArenaIndex + 1) % 3);
+        if (keyboard.digit1Key.wasPressedThisFrame) SelectArena(0);
+        if (keyboard.digit2Key.wasPressedThisFrame) SelectArena(1);
+        if (keyboard.digit3Key.wasPressedThisFrame) SelectArena(2);
         if (keyboard.rKey.wasPressedThisFrame) RestartMatch();
         if (keyboard.escapeKey.wasPressedThisFrame) TogglePause();
     }

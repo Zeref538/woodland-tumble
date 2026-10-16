@@ -1,0 +1,78 @@
+[
+  {
+    "name": "MoonlitPlank",
+    "source_crop": [
+      55,
+      191,
+      1388,
+      373
+    ],
+    "canvas": [
+      824,
+      164
+    ],
+    "alpha_bounds": [
+      12,
+      51,
+      812,
+      160
+    ]
+  },
+  {
+    "name": "MoonstoneSphere",
+    "source_crop": [
+      17,
+      82,
+      315,
+      381
+    ],
+    "canvas": [
+      280,
+      262
+    ],
+    "alpha_bounds": [
+      17,
+      8,
+      262,
+      254
+    ]
+  },
+  {
+    "name": "EmberPlank",
+    "source_crop": [
+      55,
+      163,
+      1388,
+      332
+    ],
+    "canvas": [
+      824,
+      164
+    ],
+    "alpha_bounds": [
+      12,
+      52,
+      812,
+      153
+    ]
+  },
+  {
+    "name": "ObsidianSphere",
+    "source_crop": [
+      17,
+      63,
+      315,
+      362
+    ],
+    "canvas": [
+      280,
+      262
+    ],
+    "alpha_bounds": [
+      17,
+      8,
+      262,
+      254
+    ]
+  }
+]

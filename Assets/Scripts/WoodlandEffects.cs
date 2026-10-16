@@ -17,6 +17,7 @@ public class WoodlandEffects : MonoBehaviour
     public float particleGravity = 7;
     [Range(.25f, 2)] public float effectIntensity = 1;
     public bool ambientFireflies = true;
+    public Color ambientTint = new Color(1,.86f,.42f);
     public bool cameraShake = true;
     public float footstepInterval = .16f;
     const int Capacity = 320;
@@ -128,6 +129,60 @@ public class WoodlandEffects : MonoBehaviour
         }
         shake=Mathf.Max(shake,punch?punchShake:pushShake);
     }
+    public void ElementHit(Vector2 point, float facing, Color tint, int combo, int player)
+    {
+        Pulse(point, tint, .9f + combo * .35f, .24f);
+        for (int i=0;i<Count(8+combo*4);i++) {
+            Vector2 velocity = new Vector2(facing*Random.Range(1f,4f),Random.Range(-2f,3f));
+            Emit(player == 0 ? leaf : star, point, velocity, tint, .3f+combo*.07f,
+                Vector2.one*Random.Range(.09f,.18f), Vector2.zero, player==0?3:0, 10, Random.Range(0,360), player==0?240:-160);
+        }
+        if (combo == 3) { Pulse(point, Color.white, 2.1f,.18f); shake=Mathf.Max(shake,.11f); }
+    }
+    public void Ward(Vector2 point, float facing, Color tint, float strength)
+    {
+        // A forward crescent leaves the back exposed and makes guard direction visible.
+        Emit(slash, point + Vector2.right * facing * .4f, Vector2.zero,
+            new Color(tint.r, tint.g, tint.b, .45f + strength * .35f), .1f,
+            new Vector2(.85f, 1.5f), new Vector2(.9f, 1.5f), 0, 7, facing < 0 ? 180 : 0);
+    }
+    public void AirJump(Vector2 feet, Color tint, int player)
+    {
+        Pulse(feet, tint, 1.7f, .32f, true);
+        Pulse(feet + Vector2.up * .15f, Color.white, .9f, .2f, true);
+        for (int i = 0; i < Count(16); i++) {
+            float angle = i * Mathf.PI * 2 / Count(16);
+            Vector2 direction = new Vector2(Mathf.Cos(angle), Mathf.Sin(angle) * .35f);
+            Emit(player == 0 ? leaf : star, feet, direction * 2.4f, tint, .4f,
+                Vector2.one * .12f, Vector2.zero, 2, 8, angle * Mathf.Rad2Deg, player == 0 ? 220 : -180);
+        }
+    }
+    public void Dash(Vector2 point, float facing, Color tint)
+    {
+        Burst(point, Vector2.left * facing, 14, tint, 2.5f);
+        for (int i=0;i<7;i++) Emit(streak, point + new Vector2(-facing * .3f, (i-3)*.14f),
+            Vector2.left*facing*3, tint, .22f, new Vector2(1.4f,.6f), Vector2.zero, 0, 7);
+    }
+    public void GuardImpact(Vector2 point, float facing, Color tint, bool parry, bool broken)
+    {
+        var color = parry ? Color.white : broken ? new Color(1,.25f,.2f) : tint;
+        Pulse(point, color, broken ? 2.3f : 1.5f, .3f);
+        Burst(point, Vector2.right * facing, broken ? 26 : 14, color, 3.5f);
+        for(int i=0;i<8;i++) {
+            float a=i*45; Vector2 d=new Vector2(Mathf.Cos(a*Mathf.Deg2Rad),Mathf.Sin(a*Mathf.Deg2Rad));
+            Emit(parry ? star : streak, point, d*3, color, .25f, Vector2.one*.22f, Vector2.zero, 0, 11, a, 180);
+        }
+        shake = Mathf.Max(shake, parry ? .06f : .04f);
+    }
+    public void Smash(Vector2 point, float facing, Color tint, float charge)
+    {
+        float size = 1 + charge;
+        Emit(slash, point + Vector2.right*facing*.6f, Vector2.right*facing*2, tint, .24f,
+            new Vector2(.65f, 1.3f)*size, new Vector2(1.5f,1.6f)*size, 0, 10, facing<0?180:0, -facing*140);
+        Pulse(point + Vector2.right*facing*.8f, tint, 1.6f+charge, .28f);
+        Burst(point, new Vector2(facing,.25f), 24, tint, 3+charge*2);
+        shake=Mathf.Max(shake,.05f+charge*.07f);
+    }
     public void Knockout(Vector2 point, Color tint)
     {
         Pulse(point,Gold,2.7f,.45f);Pulse(point,tint,1.9f,.32f);
@@ -148,7 +203,7 @@ public class WoodlandEffects : MonoBehaviour
         float dt=Time.deltaTime;if(dt<=0)return;
         if(ambientFireflies && Time.time>=nextAmbient) {
             nextAmbient=Time.time+.35f;
-            Emit(star,new Vector2(Random.Range(-8.5f,8.5f),Random.Range(-2.5f,4.8f)),new Vector2(Random.Range(-.12f,.12f),.18f),new Color(1,.86f,.42f,.45f),Random.Range(2,4),Vector2.one*.045f,Vector2.one*.015f,0,-8,45,20);
+            Emit(star,new Vector2(Random.Range(-8.5f,8.5f),Random.Range(-2.5f,4.8f)),new Vector2(Random.Range(-.12f,.12f),.18f),new Color(ambientTint.r,ambientTint.g,ambientTint.b,.45f),Random.Range(2,4),Vector2.one*.045f,Vector2.one*.015f,0,-8,45,20);
         }
         for(int i=0;i<Capacity;i++) {
             if(pool[i].life<=0)continue;

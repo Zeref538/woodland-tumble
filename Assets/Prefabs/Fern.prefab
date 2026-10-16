@@ -122,6 +122,12 @@ MonoBehaviour:
   jumpSpeed: 8.7
   acceleration: 28
   airAcceleration: 8
+  shieldCapacity: 100
+  shieldDrain: 14
+  shieldRecovery: 25
+  parryWindow: 0.12
+  dashCooldown: 0.85
+  dashSpeed: 10
   maxHealth: 100
   pushDamage: 12
   punchDamage: 16

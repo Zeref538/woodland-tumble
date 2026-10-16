@@ -22,7 +22,7 @@ public static class GameSetup
     {
         if (EditorApplication.isPlaying) throw new System.Exception("Stop Play Mode before rebuilding the scene.");
         AssetDatabase.Refresh(ImportAssetOptions.ForceSynchronousImport);
-        ImportSprite("Assets/Resources/Art/Forest.png", 100);
+        foreach (var file in Directory.GetFiles("Assets/Resources/Art", "*.png")) ImportSprite(file, 100);
         foreach (var file in Directory.GetFiles("Assets/Art/Characters", "*.png", SearchOption.AllDirectories)) ImportSprite(file.Replace('\\', '/'), 160, new Vector2(.5f, 24f / 256));
         foreach (var file in Directory.GetFiles("Assets/Art/Arena", "*.png")) ImportSprite(file, 100);
         ImportSprite("Assets/Art/UI/WoodlandPanel.png", 100, null, new Vector4(12, 12, 12, 12));
@@ -61,6 +61,10 @@ public static class GameSetup
         box.edgeRadius = .04f / beam.transform.localScale.x;
         var hinge = beam.AddComponent<HingeJoint2D>();hinge.autoConfigureConnectedAnchor = false;hinge.connectedAnchor = beam.transform.position;hinge.useLimits = true;hinge.limits = new JointAngleLimits2D { min = -25, max = 25 };
         game.plank = rb;
+        game.backgroundArt = bg.GetComponent<SpriteRenderer>(); game.plankArt = beam.GetComponent<SpriteRenderer>(); game.sphereArt = ball.GetComponent<SpriteRenderer>();
+        game.backgrounds = new[] { SpriteAt("Assets/Resources/Art/Forest.png"), SpriteAt("Assets/Resources/Art/MoonlitLake.png"), SpriteAt("Assets/Resources/Art/EmberGrove.png") };
+        game.planks = new[] { SpriteAt("Assets/Art/Arena/MossboundPlank.png"), SpriteAt("Assets/Art/Arena/MoonlitPlank.png"), SpriteAt("Assets/Art/Arena/EmberPlank.png") };
+        game.spheres = new[] { SpriteAt("Assets/Art/Arena/RunewoodSphere.png"), SpriteAt("Assets/Art/Arena/MoonstoneSphere.png"), SpriteAt("Assets/Art/Arena/ObsidianSphere.png") };
         var actors = new GameObject("Players - Editable Prefab Instances").transform;
         var spawns = new GameObject("Spawn Points - Move These To Change Starting Positions").transform;
         for (int p = 0; p < 2; p++) {
@@ -92,7 +96,7 @@ public static class GameSetup
         AssetDatabase.SaveAssets();
         Selection.activeGameObject = beam;
         SceneView.RepaintAll();
-        Debug.Log("WOODLAND_EDITABLE_READY: scene, 120 PNG frames, animation clips, prefabs and HUD saved.");
+        Debug.Log("WOODLAND_EDITABLE_READY: scene, 160 PNG frames, animation clips, prefabs and HUD saved.");
     }
     static void ImportSprite(string path, float ppu, Vector2? pivot = null, Vector4? border = null)
     {
@@ -135,10 +139,35 @@ public static class GameSetup
             var clip = MakeClip(dir + "/" + state + ".anim", sprites, rate, state == "Walk");
             var node = controller.layers[0].stateMachine.AddState(state);node.motion = clip;
         }
+        MakeCombatClips(name, dir, set, controller);
         var idleClip = MakeClip(dir + "/Idle.anim", new[] { set.walk[0] }, 1, true);
         var idle = controller.layers[0].stateMachine.AddState("Idle");idle.motion = idleClip;controller.layers[0].stateMachine.defaultState = idle;
         EditorUtility.SetDirty(set);EditorUtility.SetDirty(controller);
         return set;
+    }
+    static void MakeCombatClips(string name, string dir, ScoutAnimations set, AnimatorController controller)
+    {
+        bool fern = name == "Fern";
+        set.block = Enumerable.Range(1,10).Select(i => SpriteAt("Assets/Art/Characters/" + name + "/Block/" + i.ToString("00") + ".png")).ToArray();
+        set.doubleJump = Enumerable.Range(1,10).Select(i => SpriteAt("Assets/Art/Characters/" + name + "/DoubleJump/" + i.ToString("00") + ".png")).ToArray();
+        if (set.block.Any(s => !s) || set.doubleJump.Any(s => !s)) throw new System.Exception("Missing dedicated combat frames for " + name);
+        foreach (string state in new[] { "Block", "DoubleJump", "Dash", "Charge", "Smash", "Combo2", "Combo3" }) {
+            Sprite[] poses = state == "Block" ? set.block.Take(7).ToArray()
+                : state == "Charge" ? new[] { set.punch[0], set.punch[1], set.punch[0] }
+                : state == "DoubleJump" ? set.doubleJump
+                : state == "Dash" ? new[] { set.walk[3], set.walk[4], set.walk[5] }
+                : state == "Combo2" ? (fern ? set.punch : set.push)
+                : state == "Combo3" ? (fern ? set.push.Reverse().ToArray() : set.punch.Reverse().ToArray())
+                : (fern ? set.push : set.punch);
+            float rate = state == "DoubleJump" ? 22 : state == "Smash" ? 18 : 12;
+            var clip = MakeClip(dir + "/" + state + ".anim", poses, rate, state == "Charge");
+            float length = poses.Length / rate;
+            // Leaf scout flips; fire scout tucks and kicks. Pivot stays fixed at the feet.
+            float spin = state == "DoubleJump" ? (fern ? -14 : 18) : state == "Block" ? (fern ? 8 : -8) : state == "Charge" ? (fern ? -9 : -14) : state == "Smash" ? (fern ? 18 : -22) : (fern ? -14 : -20);
+            var rotation = state == "DoubleJump" ? new AnimationCurve(new Keyframe(0,0),new Keyframe(length*.45f,spin),new Keyframe(length,0)) : AnimationCurve.EaseInOut(0,0,length,spin);
+            clip.SetCurve("", typeof(Transform), "localEulerAnglesRaw.z", rotation);
+            var node = controller.layers[0].stateMachine.AddState(state); node.motion = clip;
+        }
     }
     static AnimationClip MakeClip(string path, Sprite[] sprites, float rate, bool loop)
     {
@@ -162,7 +191,7 @@ public static class GameSetup
         Label("Match Rules", title, "BALANCE / BRAWL / BEST OF FIVE", new Rect(16, 56, 382, 16), 10, gold, TextAnchor.MiddleCenter);
         for (int i = 0; i < 2; i++) {
             Color accent = i == 0 ? hud.fernColor : hud.emberColor;
-            var panel = Panel(i == 0 ? "Fern Player Panel" : "Ember Player Panel", root.transform, new Vector2(i, 1), new Vector2(i == 0 ? 24 : -24, -18), new Vector2(360, 154));
+            var panel = Panel(i == 0 ? "Fern Player Panel" : "Ember Player Panel", root.transform, new Vector2(i, 1), new Vector2(i == 0 ? 24 : -24, -18), new Vector2(360, 184));
             panel.pivot = new Vector2(i, 1);
             hud.names[i] = Label("Player Name", panel, i == 0 ? "P1  FERN" : "P2  EMBER", new Rect(18, 15, 224, 22), 18, accent);
             for (int p = 0; p < 3; p++) { var pip = Flat("Round " + (p + 1), panel, new Rect(282 + p * 20, 20, 10, 10), accent);pip.rectTransform.localRotation = Quaternion.Euler(0, 0, 45);hud.roundPips[i * 3 + p] = pip; }
@@ -171,17 +200,23 @@ public static class GameSetup
             hud.healthText[i] = Label("Health", panel, "100 / 100 HP", new Rect(18, 69, 165, 16), 11, cream);
             hud.damageText[i] = Label("Knockback Buildup", panel, "KNOCKBACK +0%", new Rect(180, 69, 164, 16), 10, gold, TextAnchor.MiddleRight);
             hud.statusText[i] = Label("Combat Status", panel, "HOLD YOUR GROUND", new Rect(18, 93, 324, 16), 11, cream);
-            Label("Push Caption", panel, "PUSH", new Rect(18, 122, 44, 13), 9, gold);
-            Label("Punch Caption", panel, "PUNCH", new Rect(182, 122, 53, 13), 9, gold);
-            Flat("Push Cooldown Track", panel, new Rect(66, 123, 94, 8), new Color(.15f, .20f, .15f));
-            Flat("Punch Cooldown Track", panel, new Rect(241, 123, 101, 8), new Color(.15f, .20f, .15f));
-            hud.pushFill[i] = Flat("Push Ready", panel, new Rect(66, 123, 94, 8), accent);hud.pushFill[i].type = Image.Type.Filled;hud.pushFill[i].fillMethod = Image.FillMethod.Horizontal;
-            hud.punchFill[i] = Flat("Punch Ready", panel, new Rect(241, 123, 101, 8), gold);hud.punchFill[i].type = Image.Type.Filled;hud.punchFill[i].fillMethod = Image.FillMethod.Horizontal;
-            var controls = Panel(i == 0 ? "Fern Controls" : "Ember Controls", root.transform, new Vector2(i, 0), new Vector2(i == 0 ? 24 : -24, 24), new Vector2(592, 82));controls.pivot = new Vector2(i, 0);
+            Flat("Ward Track", panel, new Rect(18, 118, 324, 6), new Color(.15f,.2f,.15f));
+            hud.shieldFill[i] = Flat("Ward Energy", panel, new Rect(18, 118, 324, 6), accent); hud.shieldFill[i].type = Image.Type.Filled; hud.shieldFill[i].fillMethod = Image.FillMethod.Horizontal;
+            hud.shieldText[i] = Label("Ward and Dash", panel, "WARD 100 / DASH READY", new Rect(18, 130, 324, 14), 9, cream);
+            Label("Push Caption", panel, "PUSH", new Rect(18, 157, 44, 13), 9, gold);
+            Label("Punch Caption", panel, "PUNCH", new Rect(182, 157, 53, 13), 9, gold);
+            Flat("Push Cooldown Track", panel, new Rect(66, 158, 94, 8), new Color(.15f, .20f, .15f));
+            Flat("Punch Cooldown Track", panel, new Rect(241, 158, 101, 8), new Color(.15f, .20f, .15f));
+            hud.pushFill[i] = Flat("Push Ready", panel, new Rect(66, 158, 94, 8), accent);hud.pushFill[i].type = Image.Type.Filled;hud.pushFill[i].fillMethod = Image.FillMethod.Horizontal;
+            hud.punchFill[i] = Flat("Punch Ready", panel, new Rect(241, 158, 101, 8), gold);hud.punchFill[i].type = Image.Type.Filled;hud.punchFill[i].fillMethod = Image.FillMethod.Horizontal;
+            var controls = Panel(i == 0 ? "Fern Controls" : "Ember Controls", root.transform, new Vector2(i, 0), new Vector2(i == 0 ? 24 : -24, 24), new Vector2(592, 104));controls.pivot = new Vector2(i, 0);
             Label("Control Heading", controls, i == 0 ? "FERN / PLAYER ONE" : "EMBER / PLAYER TWO", new Rect(18, 13, 556, 17), 12, accent);
-            Label("Movement Keys", controls, i == 0 ? "A D  MOVE     W  JUMP" : "ARROWS  MOVE     UP  JUMP", new Rect(18, 37, 556, 15), 11, cream);
-            Label("Combat Keys", controls, i == 0 ? "F  SHOVE     G  PUNCH" : "K  SHOVE     L  PUNCH", new Rect(18, 58, 556, 14), 10, gold);
+            Label("Movement Keys", controls, i == 0 ? "A D  MOVE     W  DOUBLE JUMP" : "ARROWS MOVE   UP DOUBLE JUMP", new Rect(18, 37, 556, 15), 11, cream);
+            Label("Combat Keys", controls, i == 0 ? "F SHOVE  G PUNCH  H CHARGE" : "K SHOVE  L PUNCH  J CHARGE", new Rect(18, 58, 556, 14), 10, gold);
+            Label("Defense Keys", controls, i == 0 ? "S GUARD / PARRY   LSHIFT DASH" : "DOWN GUARD / PARRY   RSHIFT DASH", new Rect(18, 79, 556, 14), 10, cream);
         }
+        hud.arenaText = Label("Arena Selection", root.transform, "SUNLIT HOLLOW   TAB CHANGE ARENA", new Rect(0,0,450,20), 9, cream, TextAnchor.MiddleCenter);
+        var arenaRect = hud.arenaText.rectTransform; arenaRect.anchorMin = arenaRect.anchorMax = new Vector2(.5f,1); arenaRect.pivot = new Vector2(.5f,1); arenaRect.anchoredPosition = new Vector2(0,-120);
         LabelAnchored("Pause and Restart Hint", root.transform, "ESC  PAUSE     R  RESTART", new Vector2(.5f, 0), new Vector2(0, 10), new Vector2(440, 12), 9, gold);
         var banner = Panel("Round Banner", root.transform, Vector2.one * .5f, new Vector2(0, 104), new Vector2(640, 110));banner.pivot = Vector2.one * .5f;
         hud.bannerPanel = banner.gameObject;
@@ -251,6 +286,11 @@ public static class GameSetup
         AssetDatabase.ImportAsset("Assets/Art/UI/WoodlandPanel.png", ImportAssetOptions.ForceUpdate);
         EditorSceneManager.SaveScene(EditorSceneManager.GetActiveScene());
         AssetDatabase.SaveAssets();
+    }
+    public static void BuildWindows()
+    {
+        var report = BuildPipeline.BuildPlayer(EditorBuildSettings.scenes, "Build/Windows/WoodlandTumble.exe", BuildTarget.StandaloneWindows64, BuildOptions.None);
+        if (report.summary.result != UnityEditor.Build.Reporting.BuildResult.Succeeded) throw new System.Exception("Windows build failed");
     }
     public static void Build()
     {

@@ -1,0 +1,21 @@
+{
+  "editor": "6000.5.10f1",
+  "target": "StandaloneWindows64",
+  "playmode_checks": 170,
+  "playmode_success": true,
+  "build_result": "Succeeded",
+  "standalone_render": [
+    1920,
+    1080
+  ],
+  "physical_keyboard_standalone": "unverified: automation keys had no observable effect",
+  "executable_sha256": "6cd16edfbe85284eb69cd2efe1170aa1cffdf0dbdb309c3269e2f8454811adab",
+  "scripts": {
+    "Assets\\Scripts\\Scout.cs": "fede98b399c044a416cf6f9e4b360005e8f78597ff25eee4628fdec007c1ace6",
+    "Assets\\Scripts\\ScoutAnimations.cs": "671c6568cad461c4915a8e16f42890e5d887c7be94e38289342010c4839a4836",
+    "Assets\\Scripts\\SpawnMarker.cs": "8ab42983df1f09b2032abcdc8c624bfdfd4934f87ba17e4b11d437f1d5b5d9ee",
+    "Assets\\Scripts\\WoodlandEffects.cs": "bc4865632788ffbfe44fc742cb4b7891fef740ef47e312044b1808111b7c7707",
+    "Assets\\Scripts\\WoodlandGame.cs": "6711cad40ae412a9c05c5b3fa22c5df14ad011644e5748e0b23058faa90413f3",
+    "Assets\\Scripts\\WoodlandHUD.cs": "a8688f5cba1ce3fcb1fd108ce3905a0093ae67409acc44a89b9310ae31126605"
+  }
+}

@@ -12,6 +12,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc993057dd9454331aeafdde154a4149, type: 3}
   m_Name: Frames
   m_EditorClassIdentifier: Assembly-CSharp::ScoutAnimations
+  block:
+  - {fileID: 21300000, guid: 23819d14753a1014fb4523eb3a820483, type: 3}
+  - {fileID: 21300000, guid: 149b58ee9800a6440a93101625897725, type: 3}
+  - {fileID: 21300000, guid: e86172d9cad22974098254d37eebb54a, type: 3}
+  - {fileID: 21300000, guid: 3e63d717bea25d847822bca3f7b66595, type: 3}
+  - {fileID: 21300000, guid: 69cf2ee2d47438645bf8cd6123ac61e1, type: 3}
+  - {fileID: 21300000, guid: c295072ea06414d468de2940f231ed69, type: 3}
+  - {fileID: 21300000, guid: 5d3289c5d77432c439ed822144b1fd8c, type: 3}
+  - {fileID: 21300000, guid: bcc991575cd61b343a143af7c9aa5896, type: 3}
+  - {fileID: 21300000, guid: 67b4dc306c3953842a72cfdd807ff763, type: 3}
+  - {fileID: 21300000, guid: 6e2fb56ff0957c9468197e9943acfed2, type: 3}
+  doubleJump:
+  - {fileID: 21300000, guid: c83757a421346b849a42102c1a60f2d6, type: 3}
+  - {fileID: 21300000, guid: 5baab714f9dd948428d9f9a7cb49654b, type: 3}
+  - {fileID: 21300000, guid: 7a6e5a38e155b8d4f98060831fbaa733, type: 3}
+  - {fileID: 21300000, guid: 8595a4094444fdb41b70a4914b87020d, type: 3}
+  - {fileID: 21300000, guid: 72be0fcf3b86ae04487480c0390feb0f, type: 3}
+  - {fileID: 21300000, guid: 7203e0eb30005cd448df036155246f65, type: 3}
+  - {fileID: 21300000, guid: bd1b1703cd48cab4caa7838a5d337ce8, type: 3}
+  - {fileID: 21300000, guid: da1ca54126f42284589a3c880415f761, type: 3}
+  - {fileID: 21300000, guid: fc8e06839725acd4394d59a088953432, type: 3}
+  - {fileID: 21300000, guid: dc5c12a6da25deb4692b56676b5d29e3, type: 3}
   walk:
   - {fileID: 21300000, guid: 9776aed5d9e8d439496f25d51b778da4, type: 3}
   - {fileID: 21300000, guid: 6313df0b7b1124ae69a9bdab8d71050c, type: 3}

@@ -1,0 +1,562 @@
+[
+  {
+    "path": "Assets\\Art\\Characters\\Fern\\Block\\01.png",
+    "size": [
+      256,
+      256
+    ],
+    "bounds": [
+      32,
+      32,
+      200,
+      232
+    ],
+    "sha256": "56d928c424ae3c25261a3f26e75aaab54467fbdcad9f5fca7fec9b3cbbcdc5d5"
+  },
+  {
+    "path": "Assets\\Art\\Characters\\Fern\\Block\\02.png",
+    "size": [
+      256,
+      256
+    ],
+    "bounds": [
+      29,
+      33,
+      195,
+      232
+    ],
+    "sha256": "e80a02cc2f960b48df32a17dd823d7f75a8f671a34e56e645788b2d36d253c95"
+  },
+  {
+    "path": "Assets\\Art\\Characters\\Fern\\Block\\03.png",
+    "size": [
+      256,
+      256
+    ],
+    "bounds": [
+      49,
+      41,
+      217,
+      232
+    ],
+    "sha256": "d95a5ea8b7bab1c57a15f14a46b0ab2de98f9bb40efdf6d8b8b5df2a2501318a"
+  },
+  {
+    "path": "Assets\\Art\\Characters\\Fern\\Block\\04.png",
+    "size": [
+      256,
+      256
+    ],
+    "bounds": [
+      52,
+      41,
+      234,
+      232
+    ],
+    "sha256": "e76bca0bf467b45c717861d538daa1f7b4a83f8b4868fbe33a499e8089d18247"
+  },
+  {
+    "path": "Assets\\Art\\Characters\\Fern\\Block\\05.png",
+    "size": [
+      256,
+      256
+    ],
+    "bounds": [
+      24,
+      41,
+      220,
+      232
+    ],
+    "sha256": "952b4d4f0ba0de3d0a32de6947a2abe1babc7517c760e1cea39e3ba8f629b43a"
+  },
+  {
+    "path": "Assets\\Art\\Characters\\Fern\\Block\\06.png",
+    "size": [
+      256,
+      256
+    ],
+    "bounds": [
+      26,
+      40,
+      224,
+      232
+    ],
+    "sha256": "07dd33e9db045701945c02f24d327af8a548b654b37fb657509afc3b5c546a0b"
+  },
+  {
+    "path": "Assets\\Art\\Characters\\Fern\\Block\\07.png",
+    "size": [
+      256,
+      256
+    ],
+    "bounds": [
+      23,
+      40,
+      221,
+      232
+    ],
+    "sha256": "582bc855193c808f960045aa515751e942704446decbc706035c6c14a971bf7e"
+  },
+  {
+    "path": "Assets\\Art\\Characters\\Fern\\Block\\08.png",
+    "size": [
+      256,
+      256
+    ],
+    "bounds": [
+      33,
+      40,
+      224,
+      232
+    ],
+    "sha256": "ff1702cc5b338963a639151cfec8f97812689b7d88f319dadb7e9548ef0c7294"
+  },
+  {
+    "path": "Assets\\Art\\Characters\\Fern\\Block\\09.png",
+    "size": [
+      256,
+      256
+    ],
+    "bounds": [
+      36,
+      42,
+      217,
+      232
+    ],
+    "sha256": "1f9e1de21a14647b7b29d5b268a195fac579789d86e2213fd7ea9e22fae03367"
+  },
+  {
+    "path": "Assets\\Art\\Characters\\Fern\\Block\\10.png",
+    "size": [
+      256,
+      256
+    ],
+    "bounds": [
+      34,
+      37,
+      203,
+      232
+    ],
+    "sha256": "62b45b44eb9142ad768eb50ad6034dd8c0d90403908b6584b6d082d6c1496bfc"
+  },
+  {
+    "path": "Assets\\Art\\Characters\\Ember\\Block\\01.png",
+    "size": [
+      256,
+      256
+    ],
+    "bounds": [
+      42,
+      32,
+      206,
+      232
+    ],
+    "sha256": "5a5dd8d658689dc85ff7536c45ad4ea5a0b43ba55861ee2de29143f1928a8446"
+  },
+  {
+    "path": "Assets\\Art\\Characters\\Ember\\Block\\02.png",
+    "size": [
+      256,
+      256
+    ],
+    "bounds": [
+      41,
+      32,
+      211,
+      232
+    ],
+    "sha256": "445e0d46b7abccd4717ede7a29f7ad5d9e902f225bbd17b4b1d055e598d92bb3"
+  },
+  {
+    "path": "Assets\\Art\\Characters\\Ember\\Block\\03.png",
+    "size": [
+      256,
+      256
+    ],
+    "bounds": [
+      43,
+      33,
+      231,
+      232
+    ],
+    "sha256": "94f5d39c4ff5d3c92945c8125f06f0f2ddeed18a876c067a30645639a9643d59"
+  },
+  {
+    "path": "Assets\\Art\\Characters\\Ember\\Block\\04.png",
+    "size": [
+      256,
+      256
+    ],
+    "bounds": [
+      40,
+      33,
+      248,
+      232
+    ],
+    "sha256": "bf8a36758626dd61a99c8880bed55d28b06a10911dec575354f069ba6f31457f"
+  },
+  {
+    "path": "Assets\\Art\\Characters\\Ember\\Block\\05.png",
+    "size": [
+      256,
+      256
+    ],
+    "bounds": [
+      42,
+      34,
+      248,
+      232
+    ],
+    "sha256": "cf006c6814d7f09e4bf13d9eb1b21e288596ee1604476e16b8e3cbb8903e2c00"
+  },
+  {
+    "path": "Assets\\Art\\Characters\\Ember\\Block\\06.png",
+    "size": [
+      256,
+      256
+    ],
+    "bounds": [
+      40,
+      35,
+      248,
+      232
+    ],
+    "sha256": "143a170d5be64dfb2d8a00eab88084b69b36437d23615119861e33b324efef73"
+  },
+  {
+    "path": "Assets\\Art\\Characters\\Ember\\Block\\07.png",
+    "size": [
+      256,
+      256
+    ],
+    "bounds": [
+      37,
+      35,
+      248,
+      232
+    ],
+    "sha256": "63d9a36646f8a8e8b5b3513a6d1a037dd798b0f4b883f643c747cff90d7a930e"
+  },
+  {
+    "path": "Assets\\Art\\Characters\\Ember\\Block\\08.png",
+    "size": [
+      256,
+      256
+    ],
+    "bounds": [
+      44,
+      35,
+      232,
+      232
+    ],
+    "sha256": "3cf623e34b61bb249e8b1e7c17a24aa0d7cb6a73ce8a51cf9f201d26705a44b2"
+  },
+  {
+    "path": "Assets\\Art\\Characters\\Ember\\Block\\09.png",
+    "size": [
+      256,
+      256
+    ],
+    "bounds": [
+      42,
+      35,
+      228,
+      232
+    ],
+    "sha256": "f29c0d58552b8a275f405ed5c60ad7f6f43eeaafb104bd67880de7a7c2de0c10"
+  },
+  {
+    "path": "Assets\\Art\\Characters\\Ember\\Block\\10.png",
+    "size": [
+      256,
+      256
+    ],
+    "bounds": [
+      38,
+      35,
+      196,
+      232
+    ],
+    "sha256": "38385ca25075483e324e0a706f7aeaa7068bf327949f00af1f5d82b226e0f969"
+  },
+  {
+    "path": "Assets\\Art\\Characters\\Fern\\DoubleJump\\01.png",
+    "size": [
+      256,
+      256
+    ],
+    "bounds": [
+      56,
+      52,
+      215,
+      232
+    ],
+    "sha256": "cd01f4ce662199af2c10606a15201f334dcc4c824761065894989713b3be95a3"
+  },
+  {
+    "path": "Assets\\Art\\Characters\\Fern\\DoubleJump\\02.png",
+    "size": [
+      256,
+      256
+    ],
+    "bounds": [
+      40,
+      47,
+      195,
+      232
+    ],
+    "sha256": "5cd1ca237da466c6cf1f0899ea20f6d57f503b2a0654c9b690a98d942c2ca856"
+  },
+  {
+    "path": "Assets\\Art\\Characters\\Fern\\DoubleJump\\03.png",
+    "size": [
+      256,
+      256
+    ],
+    "bounds": [
+      37,
+      24,
+      199,
+      232
+    ],
+    "sha256": "ccd97e14e1f0dc9779ea6b45458094ae4cf81d90ac754849b256926b7b2b1d5f"
+  },
+  {
+    "path": "Assets\\Art\\Characters\\Fern\\DoubleJump\\04.png",
+    "size": [
+      256,
+      256
+    ],
+    "bounds": [
+      34,
+      39,
+      217,
+      232
+    ],
+    "sha256": "c4d706343e9baa59b0bf3b675aabae1c58bc653fc38902f949866e74c234ad10"
+  },
+  {
+    "path": "Assets\\Art\\Characters\\Fern\\DoubleJump\\05.png",
+    "size": [
+      256,
+      256
+    ],
+    "bounds": [
+      46,
+      41,
+      210,
+      232
+    ],
+    "sha256": "868e0501c730000cc52995690187fa2e4a678a678dc27562b39212cc75d60927"
+  },
+  {
+    "path": "Assets\\Art\\Characters\\Fern\\DoubleJump\\06.png",
+    "size": [
+      256,
+      256
+    ],
+    "bounds": [
+      54,
+      43,
+      223,
+      232
+    ],
+    "sha256": "a49b1a246779dcbffab7056ccfdfc7a66e31c27d00b13e2e37a57994e8a542d1"
+  },
+  {
+    "path": "Assets\\Art\\Characters\\Fern\\DoubleJump\\07.png",
+    "size": [
+      256,
+      256
+    ],
+    "bounds": [
+      52,
+      55,
+      217,
+      232
+    ],
+    "sha256": "87754315462dd3476cc694a6767dc427ba835685498c296c42a29c02ee956bc6"
+  },
+  {
+    "path": "Assets\\Art\\Characters\\Fern\\DoubleJump\\08.png",
+    "size": [
+      256,
+      256
+    ],
+    "bounds": [
+      72,
+      62,
+      231,
+      232
+    ],
+    "sha256": "f7d852ea62b059bb97be37c40fec1aad0bc5a6ffd02aa9f2e9e3b9d76357776e"
+  },
+  {
+    "path": "Assets\\Art\\Characters\\Fern\\DoubleJump\\09.png",
+    "size": [
+      256,
+      256
+    ],
+    "bounds": [
+      70,
+      56,
+      225,
+      232
+    ],
+    "sha256": "79303057b17a13053011648fc13c86275b84be214e676475d403d6dfc996b260"
+  },
+  {
+    "path": "Assets\\Art\\Characters\\Fern\\DoubleJump\\10.png",
+    "size": [
+      256,
+      256
+    ],
+    "bounds": [
+      54,
+      53,
+      209,
+      232
+    ],
+    "sha256": "e75a9363f241aa871bd1c203c5a44b157d3c67ae0f4bca77db0a8816ee437698"
+  },
+  {
+    "path": "Assets\\Art\\Characters\\Ember\\DoubleJump\\01.png",
+    "size": [
+      256,
+      256
+    ],
+    "bounds": [
+      48,
+      52,
+      209,
+      232
+    ],
+    "sha256": "7706cf6a67b5cd3246764858f717a98b2d67885fb0243bc8500043d2072e543b"
+  },
+  {
+    "path": "Assets\\Art\\Characters\\Ember\\DoubleJump\\02.png",
+    "size": [
+      256,
+      256
+    ],
+    "bounds": [
+      42,
+      44,
+      196,
+      232
+    ],
+    "sha256": "5cfb29cfb220c280b7cbaf10aa5762327babb8496930a0e0eb0fc0d8dfc97696"
+  },
+  {
+    "path": "Assets\\Art\\Characters\\Ember\\DoubleJump\\03.png",
+    "size": [
+      256,
+      256
+    ],
+    "bounds": [
+      30,
+      24,
+      204,
+      232
+    ],
+    "sha256": "21298b4b60eafce53e0ddda6526ec5f37c6980dba4ad0076ebbaf2d613ee8e00"
+  },
+  {
+    "path": "Assets\\Art\\Characters\\Ember\\DoubleJump\\04.png",
+    "size": [
+      256,
+      256
+    ],
+    "bounds": [
+      52,
+      29,
+      242,
+      232
+    ],
+    "sha256": "ad50514bb104eb6852eb9b083c9bba209974b031f1a0a50b0158818f32ef392a"
+  },
+  {
+    "path": "Assets\\Art\\Characters\\Ember\\DoubleJump\\05.png",
+    "size": [
+      256,
+      256
+    ],
+    "bounds": [
+      30,
+      44,
+      207,
+      232
+    ],
+    "sha256": "b2aa9cd9d3e4d92072df53f293450b629467c2f23efd41a56a74d5abccb0ed1b"
+  },
+  {
+    "path": "Assets\\Art\\Characters\\Ember\\DoubleJump\\06.png",
+    "size": [
+      256,
+      256
+    ],
+    "bounds": [
+      62,
+      37,
+      223,
+      232
+    ],
+    "sha256": "c34e4986d7316054978f913387415d7039a955ec1c1b114af33a33cd6a423aec"
+  },
+  {
+    "path": "Assets\\Art\\Characters\\Ember\\DoubleJump\\07.png",
+    "size": [
+      256,
+      256
+    ],
+    "bounds": [
+      34,
+      48,
+      204,
+      232
+    ],
+    "sha256": "e53291cc93b95746590e48fbc42904fe2116fca865db96b96d47c7beb390e336"
+  },
+  {
+    "path": "Assets\\Art\\Characters\\Ember\\DoubleJump\\08.png",
+    "size": [
+      256,
+      256
+    ],
+    "bounds": [
+      38,
+      59,
+      208,
+      232
+    ],
+    "sha256": "c91459d3556de06f2645ee07ac860fafb28f9c36db72c1a79ac9b6be256abc0d"
+  },
+  {
+    "path": "Assets\\Art\\Characters\\Ember\\DoubleJump\\09.png",
+    "size": [
+      256,
+      256
+    ],
+    "bounds": [
+      52,
+      60,
+      200,
+      232
+    ],
+    "sha256": "b33b3952a7bf863cf9414cb35e0647fba39d0d470888a1817983ac144ef1afd2"
+  },
+  {
+    "path": "Assets\\Art\\Characters\\Ember\\DoubleJump\\10.png",
+    "size": [
+      256,
+      256
+    ],
+    "bounds": [
+      50,
+      55,
+      197,
+      232
+    ],
+    "sha256": "44d473ba61f84bab316664723d0190f20b99ea2522fae2d9a4ac3550b79cbcbb"
+  }
+]
