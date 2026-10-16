@@ -8,8 +8,8 @@
 - [x] Verify elemental VFX and combat HUD in Play Mode.
 - [x] Run old edge-physics checks and new combat checks.
 - [x] Publish artwork separately with clone/update instructions.
-- [ ] Update source README and publish verified rework.
-- [ ] Show screenshots of the updated running game.
+- [x] Update source README and publish verified rework.
+- [x] Show screenshots of the updated running game.
 
 # Zeref Tasks
 

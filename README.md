@@ -30,6 +30,12 @@ Damage makes later knockback stronger. Empty health or falling off the plank los
 
 Use **Tab** or **1 / 2 / 3** to change between **Sunlit Hollow**, **Moonlit Lake** and **Ember Grove**. Each has a different background, ball and plank appearance. They share the same collision layout and balance physics.
 
+## Download
+
+[Unity source ZIP](https://github.com/Zeref538/woodland-tumble/releases/download/v3.0.0/Woodland-Tumble-Unity-v3.zip) contains the full editable project. Extract it, then add the woodland-tumble folder through Unity Hub. It does not include Library or build output.
+
+[Artwork-only ZIP](https://github.com/Zeref538/Woodland-Scouts/releases/download/tumble-art-v3.0.0/Woodland-Tumble-art-v3.zip) is about 16.3 MB and contains the individual frames plus arena images.
+
 ## Clone and update
 
 Install Git and Unity **6000.5.10f1** through Unity Hub. Clone once, then add the downloaded project folder in Unity Hub and open `Assets/Scenes/WoodlandTumble.unity`.
