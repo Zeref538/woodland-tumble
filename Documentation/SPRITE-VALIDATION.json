@@ -1,0 +1,2504 @@
+{
+  "frames": [
+    {
+      "path": "Assets/Art/Characters/Fern/Walk/01.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        44,
+        32,
+        212,
+        232
+      ],
+      "sha256": "f6b513ec080a4d9c1d952a20077c9fb85dae3adf4113bb37953f8c1ec9f98bfe"
+    },
+    {
+      "path": "Assets/Art/Characters/Fern/Walk/02.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        44,
+        33,
+        212,
+        232
+      ],
+      "sha256": "e32aae42f3a0cc19df9d19dadac51117348405951169fbed79635ba06748a369"
+    },
+    {
+      "path": "Assets/Art/Characters/Fern/Walk/03.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        44,
+        35,
+        212,
+        232
+      ],
+      "sha256": "f0039cf8b36b7b14807310a482bc0dc435d210534eb09f7b13c88357e182783f"
+    },
+    {
+      "path": "Assets/Art/Characters/Fern/Walk/04.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        41,
+        35,
+        214,
+        232
+      ],
+      "sha256": "9764475f826324a00434fe5d32b4ebfe596e4622fd619104d038ff04b5590a2f"
+    },
+    {
+      "path": "Assets/Art/Characters/Fern/Walk/05.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        44,
+        33,
+        212,
+        232
+      ],
+      "sha256": "48f0f44c473de85b0485cbb764c6e5b78cf716a4308e6e39526b2215e6576781"
+    },
+    {
+      "path": "Assets/Art/Characters/Fern/Walk/06.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        42,
+        40,
+        213,
+        232
+      ],
+      "sha256": "c9db09f236bb8b839cf0bebdda5bcf736d520c49aa0e68919c93dd3f695a7782"
+    },
+    {
+      "path": "Assets/Art/Characters/Fern/Walk/07.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        41,
+        40,
+        215,
+        232
+      ],
+      "sha256": "2f0c40d2a79a2577dacd342cd8770c89467d88d9dacf712e7fc62ebb6890be4e"
+    },
+    {
+      "path": "Assets/Art/Characters/Fern/Walk/08.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        44,
+        39,
+        211,
+        232
+      ],
+      "sha256": "d1a4a62f25c2ab3000e5e37a6ac1e40b284117009d8752778fb9751c92413a24"
+    },
+    {
+      "path": "Assets/Art/Characters/Fern/Walk/09.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        42,
+        29,
+        214,
+        232
+      ],
+      "sha256": "0f9b26a85ceafdef8c3b9b7af74c7febe127e7da0df5719893d5731303cb680d"
+    },
+    {
+      "path": "Assets/Art/Characters/Fern/Walk/10.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        43,
+        35,
+        212,
+        232
+      ],
+      "sha256": "93062f8df4d292c1e1710e76305f389ab491330d056094ddddbd8924eb1331df"
+    },
+    {
+      "path": "Assets/Art/Characters/Ember/Walk/01.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        45,
+        32,
+        210,
+        232
+      ],
+      "sha256": "374a2a13b2867b0222c043c918d39d22ebe8cf4a855d5719bbdb50a3c5f8978a"
+    },
+    {
+      "path": "Assets/Art/Characters/Ember/Walk/02.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        40,
+        33,
+        216,
+        232
+      ],
+      "sha256": "12f99621b0bed490aa6c6dc3a70e1277ce083e93a4fa91d4a7555fed2e364f43"
+    },
+    {
+      "path": "Assets/Art/Characters/Ember/Walk/03.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        39,
+        34,
+        217,
+        232
+      ],
+      "sha256": "204e902050854a934d5ef82a8b45a4103d3246ee559876579027dfb776f34e7c"
+    },
+    {
+      "path": "Assets/Art/Characters/Ember/Walk/04.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        39,
+        31,
+        216,
+        232
+      ],
+      "sha256": "e93d1698e60bb67d9755e8be21c9fd6f7c4710ab5e0acc87ae47e1f148da48f1"
+    },
+    {
+      "path": "Assets/Art/Characters/Ember/Walk/05.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        42,
+        32,
+        213,
+        232
+      ],
+      "sha256": "d2dc668d62a009e7d66aa98efcad4484788ce037e056dbc962cadfccac9d7111"
+    },
+    {
+      "path": "Assets/Art/Characters/Ember/Walk/06.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        44,
+        35,
+        212,
+        232
+      ],
+      "sha256": "d9c76c3c2b700d6ffb8148b068be68f787a47e9de05701e6a02500d5f0a0fd4c"
+    },
+    {
+      "path": "Assets/Art/Characters/Ember/Walk/07.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        45,
+        33,
+        211,
+        232
+      ],
+      "sha256": "b6f6c59d4fb8d64e2a29524573a2f3f93b00228459caac93051d3530f4bec769"
+    },
+    {
+      "path": "Assets/Art/Characters/Ember/Walk/08.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        42,
+        38,
+        213,
+        232
+      ],
+      "sha256": "37498a7d59a165aeea60e87e73d935848d64d8f9e136a063080911dc145a3754"
+    },
+    {
+      "path": "Assets/Art/Characters/Ember/Walk/09.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        45,
+        34,
+        211,
+        232
+      ],
+      "sha256": "f03b60cfd3e7f9c783e768fed3aaa67698c48bce5556a83dc943761eadef6467"
+    },
+    {
+      "path": "Assets/Art/Characters/Ember/Walk/10.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        43,
+        35,
+        212,
+        232
+      ],
+      "sha256": "0ebbfd7cea3fe236038882e4bb73663c62b6b370c113ae2dc80d4f98bce8b979"
+    },
+    {
+      "path": "Assets/Art/Characters/Fern/Jump/01.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        48,
+        44,
+        207,
+        232
+      ],
+      "sha256": "d17f428882a9a5981981f845b7ef7c1e704deed57f1f6aa14440f209b465bd41"
+    },
+    {
+      "path": "Assets/Art/Characters/Fern/Jump/02.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        43,
+        67,
+        213,
+        232
+      ],
+      "sha256": "9cd3d4b4b59b985afc5dda02838b69ef0cdea118d6cbaf64baebe2113504e41f"
+    },
+    {
+      "path": "Assets/Art/Characters/Fern/Jump/03.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        44,
+        50,
+        211,
+        232
+      ],
+      "sha256": "f9b7986719f1077c653d47f5e6af27d6a1db79f67068dc8befa367ab592923a5"
+    },
+    {
+      "path": "Assets/Art/Characters/Fern/Jump/04.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        45,
+        39,
+        210,
+        232
+      ],
+      "sha256": "41a0c5a7a1a42ee354508e34fe43e1b625443de57a516817963fd8153f6e6b6c"
+    },
+    {
+      "path": "Assets/Art/Characters/Fern/Jump/05.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        48,
+        38,
+        207,
+        232
+      ],
+      "sha256": "85f443540a34545d85c034a72c9df60243888dd1d38810185f675d3d39d093b3"
+    },
+    {
+      "path": "Assets/Art/Characters/Fern/Jump/06.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        47,
+        36,
+        209,
+        232
+      ],
+      "sha256": "a6d2083d16efb44956bfbac4840c11094a3cdd4a4ece4a9bc3b817d764a80358"
+    },
+    {
+      "path": "Assets/Art/Characters/Fern/Jump/07.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        42,
+        60,
+        214,
+        232
+      ],
+      "sha256": "6bf2c51f321acd1d66b6504d55d929bc1c65e5f96d280ce110d39b9ffa783b0b"
+    },
+    {
+      "path": "Assets/Art/Characters/Fern/Jump/08.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        43,
+        82,
+        213,
+        232
+      ],
+      "sha256": "b04bb06241c8955ad47ddb6ab0f3fc282fdb35381cbbf13052166eb8731455da"
+    },
+    {
+      "path": "Assets/Art/Characters/Fern/Jump/09.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        42,
+        49,
+        213,
+        232
+      ],
+      "sha256": "efba29d40f6139f9cc0f9155d13fb7df20c70eedd95c0f0ea3a970a9f8c58a29"
+    },
+    {
+      "path": "Assets/Art/Characters/Fern/Jump/10.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        46,
+        24,
+        210,
+        232
+      ],
+      "sha256": "3ec73ad981fb7f942828106d007f315f6bb1cf4e9f18c7a638499a84b57c01a8"
+    },
+    {
+      "path": "Assets/Art/Characters/Ember/Jump/01.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        49,
+        37,
+        206,
+        232
+      ],
+      "sha256": "907eb84b9e5806db172544281079d916ca8dc8acc6387e5e4dae7c2292f89387"
+    },
+    {
+      "path": "Assets/Art/Characters/Ember/Jump/02.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        36,
+        64,
+        220,
+        232
+      ],
+      "sha256": "be6f637c7b8565668091af3c494e152e462c2a07d840a83fff881fcd65ecc396"
+    },
+    {
+      "path": "Assets/Art/Characters/Ember/Jump/03.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        34,
+        43,
+        221,
+        232
+      ],
+      "sha256": "075b236bb9f6d49302e98437fdc6de2c8151d1ce275bbc1b751ca8361403c4ff"
+    },
+    {
+      "path": "Assets/Art/Characters/Ember/Jump/04.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        35,
+        46,
+        221,
+        232
+      ],
+      "sha256": "c69727545947b1f457fe2c85bee7a33a22b26c218464919a74a661a4b52bb4fa"
+    },
+    {
+      "path": "Assets/Art/Characters/Ember/Jump/05.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        38,
+        32,
+        217,
+        232
+      ],
+      "sha256": "f5d5f003febfc3c2a628047d596a82bdd36c6ac3d51f4069f0db1284ce444cf6"
+    },
+    {
+      "path": "Assets/Art/Characters/Ember/Jump/06.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        39,
+        28,
+        216,
+        232
+      ],
+      "sha256": "1047b77f73b010176b23bbfcb9c1a82d0b18b6858c181508c68ec00233154216"
+    },
+    {
+      "path": "Assets/Art/Characters/Ember/Jump/07.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        38,
+        57,
+        217,
+        232
+      ],
+      "sha256": "d408998df435e1cac6f0a7fb80dab05fc7a0045a8c1384c96a566872e67217d4"
+    },
+    {
+      "path": "Assets/Art/Characters/Ember/Jump/08.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        37,
+        74,
+        219,
+        232
+      ],
+      "sha256": "86ba0190a62db797bdef35f941ad7b23d449a8a619515c1449ee4a362664e4f5"
+    },
+    {
+      "path": "Assets/Art/Characters/Ember/Jump/09.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        35,
+        45,
+        220,
+        232
+      ],
+      "sha256": "6e3f465bf2ae480d236610b55b381c67b1ea1aba1394d0abb4f70200221f9d63"
+    },
+    {
+      "path": "Assets/Art/Characters/Ember/Jump/10.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        51,
+        24,
+        204,
+        232
+      ],
+      "sha256": "97f72ea8e87af4f8a94aac9a5dfc0b00fe7fda7754eeba44e3a8fd31669b95ef"
+    },
+    {
+      "path": "Assets/Art/Characters/Fern/Hurt/01.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        41,
+        32,
+        214,
+        232
+      ],
+      "sha256": "a2edfadb48e76c48168a9e41347652ab158b19a58369937a0d52688e4331cc9b"
+    },
+    {
+      "path": "Assets/Art/Characters/Fern/Hurt/02.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        40,
+        49,
+        215,
+        232
+      ],
+      "sha256": "cb00d1b78762faa83c5685520f3ede3615869798ea92e5f12d63b547d33ffa4c"
+    },
+    {
+      "path": "Assets/Art/Characters/Fern/Hurt/03.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        33,
+        45,
+        223,
+        232
+      ],
+      "sha256": "5b3066348e395e5a565831acbc7ef036a7432c256c10e41ae3bea29a3519b61c"
+    },
+    {
+      "path": "Assets/Art/Characters/Fern/Hurt/04.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        42,
+        51,
+        213,
+        232
+      ],
+      "sha256": "ce5490a03d7bc5ea064fff3f55d3f752889456fcfc1871690ef621fd64b4b9c3"
+    },
+    {
+      "path": "Assets/Art/Characters/Fern/Hurt/05.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        42,
+        48,
+        213,
+        232
+      ],
+      "sha256": "04b4cdf4ec279d7ad965c6c601bcb6837b4adad55189d974c8ae1ddd85ffd91e"
+    },
+    {
+      "path": "Assets/Art/Characters/Fern/Hurt/06.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        41,
+        45,
+        214,
+        232
+      ],
+      "sha256": "ecb6603344c867f097dab0ae7655e628587408e9b625f72b8060c29856d26491"
+    },
+    {
+      "path": "Assets/Art/Characters/Fern/Hurt/07.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        42,
+        65,
+        213,
+        232
+      ],
+      "sha256": "3709195928704ee8d0f6c0c134482b55a10e3b0840e33007ade36a807fc28952"
+    },
+    {
+      "path": "Assets/Art/Characters/Fern/Hurt/08.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        43,
+        42,
+        213,
+        232
+      ],
+      "sha256": "22ad57e4f3db2c96145a5b35b533a3002f3b46adbd85606a1bf367b4afe0ad2e"
+    },
+    {
+      "path": "Assets/Art/Characters/Fern/Hurt/09.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        42,
+        35,
+        214,
+        232
+      ],
+      "sha256": "0401b860bb8c8e33908b2a1853c94f6dc2b088b881777bc929a02ecd761fb8da"
+    },
+    {
+      "path": "Assets/Art/Characters/Fern/Hurt/10.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        43,
+        35,
+        213,
+        232
+      ],
+      "sha256": "c23fee094d8ecabae35082c4c6cf78b0c884eeb58f6b9688abebfe087a066dc3"
+    },
+    {
+      "path": "Assets/Art/Characters/Ember/Hurt/01.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        43,
+        32,
+        213,
+        232
+      ],
+      "sha256": "b5067a55120c3be0f2fc100f474ebbc77cc2b7db425c48a820618bff3e5995ba"
+    },
+    {
+      "path": "Assets/Art/Characters/Ember/Hurt/02.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        41,
+        44,
+        215,
+        232
+      ],
+      "sha256": "efb97f4fbd5c757bf65185d95d1cdb0c818825e598458d26a2a36804e2f49b25"
+    },
+    {
+      "path": "Assets/Art/Characters/Ember/Hurt/03.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        30,
+        32,
+        225,
+        232
+      ],
+      "sha256": "1240f4f2755a1b95b33b79ed30b063fd3d55adb5772e1c3e4c034a57df17ca44"
+    },
+    {
+      "path": "Assets/Art/Characters/Ember/Hurt/04.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        42,
+        39,
+        214,
+        232
+      ],
+      "sha256": "753aeeb8c79743f18cc23cbb173a8e2a27aabd6624d62ba764226bdac3d32df4"
+    },
+    {
+      "path": "Assets/Art/Characters/Ember/Hurt/05.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        41,
+        37,
+        214,
+        232
+      ],
+      "sha256": "e79f71b2c88f37559c076943681478541f5b1abffb23995dc8c6abc06ff4ea60"
+    },
+    {
+      "path": "Assets/Art/Characters/Ember/Hurt/06.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        35,
+        45,
+        221,
+        232
+      ],
+      "sha256": "cc17064b5f09553aedf6357cd603d4df68289bd18e9177e4e0d66ac2ac778e1c"
+    },
+    {
+      "path": "Assets/Art/Characters/Ember/Hurt/07.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        36,
+        54,
+        219,
+        232
+      ],
+      "sha256": "b99eaa3a6eeec9117f56d557580b6f68aeec08b43e3d2fffd0f28e05fb649d23"
+    },
+    {
+      "path": "Assets/Art/Characters/Ember/Hurt/08.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        42,
+        40,
+        213,
+        232
+      ],
+      "sha256": "0cef7f6e2864948b5829fcf9443321fc4f55c51b28759873db00310838eda60e"
+    },
+    {
+      "path": "Assets/Art/Characters/Ember/Hurt/09.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        44,
+        40,
+        212,
+        232
+      ],
+      "sha256": "42de4a6e7affd6e905adbbb1fdde0b4a8ef23282743a1a637c1916bdcb2c8baf"
+    },
+    {
+      "path": "Assets/Art/Characters/Ember/Hurt/10.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        44,
+        37,
+        212,
+        232
+      ],
+      "sha256": "b84aa65b7a4fe528c479177b1225be5ae8ef803e035dea027635b5931221b582"
+    },
+    {
+      "path": "Assets/Art/Characters/Fern/Push/01.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        42,
+        32,
+        213,
+        232
+      ],
+      "sha256": "e4451b64206817281b3cdfd28100a30a64dd84d1f269c6476aba651cc87eecbf"
+    },
+    {
+      "path": "Assets/Art/Characters/Fern/Push/02.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        31,
+        30,
+        224,
+        232
+      ],
+      "sha256": "edbda410049adf2349b2d2e74057509a3e0c6758d71f62aa4e12d1c429e88827"
+    },
+    {
+      "path": "Assets/Art/Characters/Fern/Push/03.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        42,
+        37,
+        214,
+        232
+      ],
+      "sha256": "6584d59d18e2d44564a20231c464d80a4c6723b116070fb89233e5342aab9b46"
+    },
+    {
+      "path": "Assets/Art/Characters/Fern/Push/04.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        35,
+        38,
+        221,
+        232
+      ],
+      "sha256": "b196cb93f9eaa3160f377e7dd5eec2bd11ea45801ad18c3c4f8de15d1e0eb77e"
+    },
+    {
+      "path": "Assets/Art/Characters/Fern/Push/05.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        23,
+        39,
+        233,
+        232
+      ],
+      "sha256": "3d86483db0af62bfa48ba253de6e3dce67d225a82d24fb988d8e6e868afea9e8"
+    },
+    {
+      "path": "Assets/Art/Characters/Fern/Push/06.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        33,
+        37,
+        223,
+        232
+      ],
+      "sha256": "c8c6ee43fb170fbb69cd428fdd06f875e2e257ecf31d108d30c83e3a9569ddd1"
+    },
+    {
+      "path": "Assets/Art/Characters/Fern/Push/07.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        35,
+        35,
+        220,
+        232
+      ],
+      "sha256": "90c35d98b1bcda82dd2d68056ca9c80f08ce1b1f60fa16687c6db9afc949b2d5"
+    },
+    {
+      "path": "Assets/Art/Characters/Fern/Push/08.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        39,
+        42,
+        216,
+        232
+      ],
+      "sha256": "b24e9b72b5d427896b0ae43069cafd13c34f1a97feb930354bd2ac9328cf554d"
+    },
+    {
+      "path": "Assets/Art/Characters/Fern/Push/09.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        40,
+        34,
+        215,
+        232
+      ],
+      "sha256": "1f0451c4919b68cea7e8b22fa240237853972175d874a84da3c874cd439dd568"
+    },
+    {
+      "path": "Assets/Art/Characters/Fern/Push/10.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        42,
+        32,
+        214,
+        232
+      ],
+      "sha256": "ba02f1a458d4a63d923444afbdb8dfaf276e7b0c74796416dd8e340abce54516"
+    },
+    {
+      "path": "Assets/Art/Characters/Ember/Push/01.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        49,
+        32,
+        207,
+        232
+      ],
+      "sha256": "3417b47705c6f9f6eaac83d588bd071787b1d2fe97e65c48ef3174705b11a6ff"
+    },
+    {
+      "path": "Assets/Art/Characters/Ember/Push/02.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        41,
+        32,
+        215,
+        232
+      ],
+      "sha256": "9df63fb0722651a3780d95729fb2fd9553c1a45abb30e3de55485a41244f8ca1"
+    },
+    {
+      "path": "Assets/Art/Characters/Ember/Push/03.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        39,
+        36,
+        217,
+        232
+      ],
+      "sha256": "3d548803ad3ad46e38ac3d2fb7d63cc612e03007314ceae307c1bf9644c38d49"
+    },
+    {
+      "path": "Assets/Art/Characters/Ember/Push/04.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        33,
+        39,
+        222,
+        232
+      ],
+      "sha256": "1427d442ddbea3bf3979ce86f1e9acd6974f9fc1797d75d6c26e34849efde6de"
+    },
+    {
+      "path": "Assets/Art/Characters/Ember/Push/05.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        24,
+        38,
+        232,
+        232
+      ],
+      "sha256": "8dd1fe516fde408d84ed1431ea53dfa6a6a4ec081c873b2290c2f883d1b08d9e"
+    },
+    {
+      "path": "Assets/Art/Characters/Ember/Push/06.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        36,
+        35,
+        219,
+        232
+      ],
+      "sha256": "250955a824b4a4e73db5270c6dc6a8a8ee8093d5c70d8c752976c6c0c73e83a8"
+    },
+    {
+      "path": "Assets/Art/Characters/Ember/Push/07.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        38,
+        35,
+        218,
+        232
+      ],
+      "sha256": "d291017362e8a7634a56bf15e78a6590a5170acd9bcbe7b9e5f2deec51e271f1"
+    },
+    {
+      "path": "Assets/Art/Characters/Ember/Push/08.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        44,
+        41,
+        211,
+        232
+      ],
+      "sha256": "13e350ea158bdd732d588182262b9dc50382329315be6067b9547f54e7bb4e6a"
+    },
+    {
+      "path": "Assets/Art/Characters/Ember/Push/09.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        48,
+        40,
+        207,
+        232
+      ],
+      "sha256": "ae0a6ebde1b5f432123698846d929f72d128ebe49e76c53b0b6b48ceab0d8a0e"
+    },
+    {
+      "path": "Assets/Art/Characters/Ember/Push/10.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        48,
+        37,
+        207,
+        232
+      ],
+      "sha256": "fad12fc9e99c438ade55b8b80353c2f4354da749af7f974fd96758684ea14b96"
+    },
+    {
+      "path": "Assets/Art/Characters/Fern/Punch/01.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        55,
+        32,
+        201,
+        232
+      ],
+      "sha256": "fd8023a70cc7dc249a11a90e5cd6ed2b4deb1c1a7908d61022e3d9b4d119a36a"
+    },
+    {
+      "path": "Assets/Art/Characters/Fern/Punch/02.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        49,
+        36,
+        206,
+        232
+      ],
+      "sha256": "545e92863992b3e21268bcb05177f8975849c8d106969070b4432353a42e7d8f"
+    },
+    {
+      "path": "Assets/Art/Characters/Fern/Punch/03.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        38,
+        36,
+        218,
+        232
+      ],
+      "sha256": "771a6fa48c59202a552c84a9008a46a3b3566eed3ef6b01612a20206db343361"
+    },
+    {
+      "path": "Assets/Art/Characters/Fern/Punch/04.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        38,
+        41,
+        217,
+        232
+      ],
+      "sha256": "7c55a33975e156d1aa59406b8b9561591478555f4c172df3383faf3af535a360"
+    },
+    {
+      "path": "Assets/Art/Characters/Fern/Punch/05.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        53,
+        34,
+        202,
+        232
+      ],
+      "sha256": "94a5769bb698e412ba79a8e0b1b7113f6eb7abbe37952aa7a06e1a5b150617e6"
+    },
+    {
+      "path": "Assets/Art/Characters/Fern/Punch/06.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        55,
+        36,
+        201,
+        232
+      ],
+      "sha256": "8ddfc0b1179095bba91915e88d7a66bbe62f5f1c1a3893072cf7b74cd28a6819"
+    },
+    {
+      "path": "Assets/Art/Characters/Fern/Punch/07.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        47,
+        35,
+        208,
+        232
+      ],
+      "sha256": "34df8d202ad35803f8f0acc590dda0f86076584d42432d35d6897060a4d066bc"
+    },
+    {
+      "path": "Assets/Art/Characters/Fern/Punch/08.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        35,
+        36,
+        220,
+        232
+      ],
+      "sha256": "00e072f89a8e9e257a7a6149ec1767b323d1727590b38f377786f7b80914ccd3"
+    },
+    {
+      "path": "Assets/Art/Characters/Fern/Punch/09.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        38,
+        38,
+        217,
+        232
+      ],
+      "sha256": "3e6b9691d2e5a90196ed250c9691239c1242222869a163641e02214dbca34076"
+    },
+    {
+      "path": "Assets/Art/Characters/Fern/Punch/10.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        53,
+        35,
+        203,
+        232
+      ],
+      "sha256": "c097349abedf2c56493d4f25d4388c36aec09e4fbf0c6860740e11a1709cc107"
+    },
+    {
+      "path": "Assets/Art/Characters/Ember/Punch/01.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        56,
+        32,
+        200,
+        232
+      ],
+      "sha256": "1862e69b8f93dd05e93a980c8a6506bdc81bc2e71fa080c60f33af997be89e2f"
+    },
+    {
+      "path": "Assets/Art/Characters/Ember/Punch/02.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        45,
+        37,
+        211,
+        232
+      ],
+      "sha256": "cfc8944a8a69ce09bfd8a8bb5bf978fae47a64adf26a655936bd7e97959b9372"
+    },
+    {
+      "path": "Assets/Art/Characters/Ember/Punch/03.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        30,
+        37,
+        225,
+        232
+      ],
+      "sha256": "3380ac02083f2338a36ae68f488f26923ae5da2fc9dd080ecefa692209bd8fa8"
+    },
+    {
+      "path": "Assets/Art/Characters/Ember/Punch/04.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        40,
+        40,
+        216,
+        232
+      ],
+      "sha256": "ec72c2541e436a3789ac965ba38c7eb3adf12b1990b24b0db0e2308f02acadb5"
+    },
+    {
+      "path": "Assets/Art/Characters/Ember/Punch/05.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        54,
+        31,
+        201,
+        232
+      ],
+      "sha256": "df3826bada05b3ddcf5f5165550e7b0c15b36656207e7c1666aedbe2d13a7909"
+    },
+    {
+      "path": "Assets/Art/Characters/Ember/Punch/06.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        56,
+        35,
+        200,
+        232
+      ],
+      "sha256": "855b5465ba34d9137cb1d38bb54568d17bf597e619ee071ae669b71b2e3b2692"
+    },
+    {
+      "path": "Assets/Art/Characters/Ember/Punch/07.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        42,
+        38,
+        213,
+        232
+      ],
+      "sha256": "ab699f1340103cabf019c6aa8eedc74b9736b1cc810558a902168821a5c01302"
+    },
+    {
+      "path": "Assets/Art/Characters/Ember/Punch/08.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        28,
+        36,
+        228,
+        232
+      ],
+      "sha256": "a4ecb591175e9c92e670c00b5fa112a006b83544a759b1f2919c57ed4f4efee0"
+    },
+    {
+      "path": "Assets/Art/Characters/Ember/Punch/09.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        38,
+        42,
+        217,
+        232
+      ],
+      "sha256": "19dbb81066c65e0a41d52f80b7a6f4d98e5b6f592efc5825a098735f513f4f30"
+    },
+    {
+      "path": "Assets/Art/Characters/Ember/Punch/10.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        54,
+        35,
+        202,
+        232
+      ],
+      "sha256": "cd248da875f7b9184a4f2b8510c05d11bedf4b42b4e89b26fb9423f29c2d8cdf"
+    },
+    {
+      "path": "Assets/Art/Characters/Fern/Knockout/01.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        52,
+        32,
+        203,
+        232
+      ],
+      "sha256": "3993b5e2ea367bdae1a3e6bedb280be043bc63123bde3977563cf5bc1e02ac5e"
+    },
+    {
+      "path": "Assets/Art/Characters/Fern/Knockout/02.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        36,
+        32,
+        219,
+        232
+      ],
+      "sha256": "ecb4700f37d281621547df2f9b8f5cbe2e3034e7dcb51afc31bc161c8acef584"
+    },
+    {
+      "path": "Assets/Art/Characters/Fern/Knockout/03.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        51,
+        45,
+        205,
+        232
+      ],
+      "sha256": "2404cce93aac46b9ff2c08dac38dcaa667bd39689f8b6adefa2cf1949ea0ed27"
+    },
+    {
+      "path": "Assets/Art/Characters/Fern/Knockout/04.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        38,
+        81,
+        218,
+        232
+      ],
+      "sha256": "cc66a581bfd039acd8a144a26abd4a12a05e85b0063dff2aee5257d8ea4a2d03"
+    },
+    {
+      "path": "Assets/Art/Characters/Fern/Knockout/05.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        26,
+        116,
+        230,
+        232
+      ],
+      "sha256": "f11a9e7ec3cfb97e5fe01680c4e630df8b9f64ed0adf69a2d8e5571d9cb8302e"
+    },
+    {
+      "path": "Assets/Art/Characters/Fern/Knockout/06.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        17,
+        126,
+        238,
+        232
+      ],
+      "sha256": "c16535b0efe6ab5cdad9d68648dec4a3ce97d45d4ceb8b94402c3612ce4d1559"
+    },
+    {
+      "path": "Assets/Art/Characters/Fern/Knockout/07.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        16,
+        126,
+        239,
+        232
+      ],
+      "sha256": "07057b60adab54d525bc4810ce71bef4fb95540045e40e6062220c056ee9a6b5"
+    },
+    {
+      "path": "Assets/Art/Characters/Fern/Knockout/08.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        16,
+        126,
+        239,
+        232
+      ],
+      "sha256": "f340a0b93b8c68869fefac698f85dc30a1dd2030d53cd27329be04b5978bc22d"
+    },
+    {
+      "path": "Assets/Art/Characters/Fern/Knockout/09.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        16,
+        126,
+        239,
+        232
+      ],
+      "sha256": "1ee8718e5689bebbfa589feec4be87e18016006105304ebafca04f4ec6e5dbd4"
+    },
+    {
+      "path": "Assets/Art/Characters/Fern/Knockout/10.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        17,
+        126,
+        239,
+        232
+      ],
+      "sha256": "90538542d7de2e44786ef74392a615c86348eee3b8b11ef53d7e717e5a031fb1"
+    },
+    {
+      "path": "Assets/Art/Characters/Ember/Knockout/01.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        57,
+        32,
+        199,
+        232
+      ],
+      "sha256": "4596e1a84c76e2d852cba5c04aa8931983d2ebc50f3f91f7f6b5691b00aaabac"
+    },
+    {
+      "path": "Assets/Art/Characters/Ember/Knockout/02.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        38,
+        33,
+        218,
+        232
+      ],
+      "sha256": "8ff75bc7f20398c58cbea7c3f93c3a93b072358a7085459548a7c2659f12a760"
+    },
+    {
+      "path": "Assets/Art/Characters/Ember/Knockout/03.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        51,
+        41,
+        205,
+        232
+      ],
+      "sha256": "5ab2f9360b6ba865aabcb621b9a6446fdac93b499896f6860b0a8e2633fc61be"
+    },
+    {
+      "path": "Assets/Art/Characters/Ember/Knockout/04.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        41,
+        80,
+        215,
+        232
+      ],
+      "sha256": "cf171ef733ba227b011426155ec51ee3997eabb7fd972a82c43b47cba5acd445"
+    },
+    {
+      "path": "Assets/Art/Characters/Ember/Knockout/05.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        29,
+        116,
+        226,
+        232
+      ],
+      "sha256": "b45fe3f4c6ba64af719104d66fa7870c4fc5ecaf4d828b47b8d9e7399a8143dc"
+    },
+    {
+      "path": "Assets/Art/Characters/Ember/Knockout/06.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        26,
+        122,
+        230,
+        232
+      ],
+      "sha256": "b07abf576c3cb3ab8cc9978b87fbe336b1872d049a5028e2d061cefb33bb1cfe"
+    },
+    {
+      "path": "Assets/Art/Characters/Ember/Knockout/07.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        24,
+        122,
+        232,
+        232
+      ],
+      "sha256": "cf31f2c953c706d00fa9bd1cc9f5f23cac23413f74aa2b4e6059d012a53fc0e1"
+    },
+    {
+      "path": "Assets/Art/Characters/Ember/Knockout/08.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        23,
+        122,
+        233,
+        232
+      ],
+      "sha256": "37642ddd01a9d93d956305bd8b3579c701635ff05cdf716d9e6cb8543fc0bb09"
+    },
+    {
+      "path": "Assets/Art/Characters/Ember/Knockout/09.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        24,
+        122,
+        232,
+        232
+      ],
+      "sha256": "2202c311f18467e7b581f0f2533bb94ab5a0cbad4d547a5006b1708ce45d6dd1"
+    },
+    {
+      "path": "Assets/Art/Characters/Ember/Knockout/10.png",
+      "size": [
+        256,
+        256
+      ],
+      "bounds": [
+        23,
+        122,
+        232,
+        232
+      ],
+      "sha256": "0fef54d35f0ff49df4500805777a331975a410f7360ac34a12fa6e61ff1bda00"
+    }
+  ],
+  "sources": {
+    "Walk": {
+      "size": [
+        1402,
+        1122
+      ],
+      "detected_row_bounds": [
+        [
+          [
+            46,
+            67,
+            244,
+            301
+          ],
+          [
+            314,
+            67,
+            512,
+            302
+          ],
+          [
+            592,
+            70,
+            789,
+            301
+          ],
+          [
+            874,
+            71,
+            1077,
+            303
+          ],
+          [
+            1159,
+            67,
+            1356,
+            301
+          ]
+        ],
+        [
+          [
+            50,
+            344,
+            252,
+            569
+          ],
+          [
+            314,
+            344,
+            519,
+            570
+          ],
+          [
+            598,
+            340,
+            795,
+            567
+          ],
+          [
+            872,
+            335,
+            1074,
+            573
+          ],
+          [
+            1160,
+            341,
+            1359,
+            573
+          ]
+        ],
+        [
+          [
+            50,
+            597,
+            240,
+            828
+          ],
+          [
+            311,
+            600,
+            514,
+            828
+          ],
+          [
+            586,
+            600,
+            791,
+            828
+          ],
+          [
+            867,
+            600,
+            1071,
+            831
+          ],
+          [
+            1153,
+            598,
+            1348,
+            828
+          ]
+        ],
+        [
+          [
+            46,
+            854,
+            240,
+            1081
+          ],
+          [
+            324,
+            853,
+            516,
+            1083
+          ],
+          [
+            587,
+            857,
+            785,
+            1081
+          ],
+          [
+            874,
+            852,
+            1066,
+            1081
+          ],
+          [
+            1154,
+            854,
+            1348,
+            1082
+          ]
+        ]
+      ]
+    },
+    "Jump": {
+      "size": [
+        1536,
+        1024
+      ],
+      "detected_row_bounds": [
+        [
+          [
+            75,
+            64,
+            246,
+            267
+          ],
+          [
+            387,
+            89,
+            569,
+            267
+          ],
+          [
+            684,
+            71,
+            864,
+            267
+          ],
+          [
+            983,
+            40,
+            1160,
+            247
+          ],
+          [
+            1274,
+            12,
+            1445,
+            221
+          ]
+        ],
+        [
+          [
+            75,
+            291,
+            250,
+            501
+          ],
+          [
+            366,
+            321,
+            550,
+            505
+          ],
+          [
+            671,
+            344,
+            853,
+            505
+          ],
+          [
+            976,
+            309,
+            1159,
+            506
+          ],
+          [
+            1279,
+            282,
+            1455,
+            506
+          ]
+        ],
+        [
+          [
+            67,
+            543,
+            234,
+            751
+          ],
+          [
+            367,
+            573,
+            563,
+            751
+          ],
+          [
+            661,
+            549,
+            860,
+            751
+          ],
+          [
+            963,
+            535,
+            1160,
+            733
+          ],
+          [
+            1266,
+            522,
+            1457,
+            735
+          ]
+        ],
+        [
+          [
+            64,
+            770,
+            253,
+            986
+          ],
+          [
+            363,
+            803,
+            554,
+            990
+          ],
+          [
+            665,
+            821,
+            858,
+            990
+          ],
+          [
+            970,
+            790,
+            1167,
+            990
+          ],
+          [
+            1285,
+            768,
+            1446,
+            990
+          ]
+        ]
+      ]
+    },
+    "Hurt": {
+      "size": [
+        1536,
+        1024
+      ],
+      "detected_row_bounds": [
+        [
+          [
+            87,
+            50,
+            284,
+            280
+          ],
+          [
+            376,
+            71,
+            576,
+            280
+          ],
+          [
+            643,
+            66,
+            861,
+            280
+          ],
+          [
+            944,
+            70,
+            1141,
+            278
+          ],
+          [
+            1230,
+            69,
+            1426,
+            280
+          ]
+        ],
+        [
+          [
+            90,
+            318,
+            289,
+            532
+          ],
+          [
+            384,
+            342,
+            581,
+            532
+          ],
+          [
+            663,
+            314,
+            856,
+            533
+          ],
+          [
+            953,
+            307,
+            1151,
+            533
+          ],
+          [
+            1233,
+            306,
+            1429,
+            533
+          ]
+        ],
+        [
+          [
+            86,
+            563,
+            272,
+            782
+          ],
+          [
+            384,
+            577,
+            572,
+            782
+          ],
+          [
+            647,
+            563,
+            861,
+            782
+          ],
+          [
+            948,
+            571,
+            1136,
+            782
+          ],
+          [
+            1241,
+            569,
+            1429,
+            782
+          ]
+        ],
+        [
+          [
+            86,
+            807,
+            288,
+            1011
+          ],
+          [
+            377,
+            817,
+            577,
+            1011
+          ],
+          [
+            666,
+            803,
+            853,
+            1012
+          ],
+          [
+            954,
+            803,
+            1136,
+            1012
+          ],
+          [
+            1244,
+            800,
+            1427,
+            1012
+          ]
+        ]
+      ]
+    },
+    "Push": {
+      "size": [
+        1536,
+        1024
+      ],
+      "detected_row_bounds": [
+        [
+          [
+            72,
+            60,
+            258,
+            278
+          ],
+          [
+            342,
+            58,
+            550,
+            278
+          ],
+          [
+            657,
+            65,
+            843,
+            278
+          ],
+          [
+            949,
+            68,
+            1151,
+            278
+          ],
+          [
+            1242,
+            68,
+            1470,
+            278
+          ]
+        ],
+        [
+          [
+            81,
+            310,
+            287,
+            522
+          ],
+          [
+            380,
+            307,
+            580,
+            521
+          ],
+          [
+            679,
+            315,
+            871,
+            522
+          ],
+          [
+            969,
+            306,
+            1159,
+            522
+          ],
+          [
+            1262,
+            307,
+            1449,
+            524
+          ]
+        ],
+        [
+          [
+            78,
+            545,
+            252,
+            767
+          ],
+          [
+            367,
+            545,
+            560,
+            767
+          ],
+          [
+            653,
+            550,
+            851,
+            767
+          ],
+          [
+            950,
+            554,
+            1159,
+            767
+          ],
+          [
+            1244,
+            554,
+            1475,
+            767
+          ]
+        ],
+        [
+          [
+            86,
+            786,
+            289,
+            1005
+          ],
+          [
+            386,
+            786,
+            584,
+            1005
+          ],
+          [
+            678,
+            793,
+            863,
+            1005
+          ],
+          [
+            974,
+            792,
+            1149,
+            1005
+          ],
+          [
+            1263,
+            792,
+            1439,
+            1007
+          ]
+        ]
+      ]
+    },
+    "Punch": {
+      "size": [
+        1254,
+        1254
+      ],
+      "detected_row_bounds": [
+        [
+          [
+            63,
+            118,
+            210,
+            319
+          ],
+          [
+            308,
+            122,
+            466,
+            319
+          ],
+          [
+            548,
+            122,
+            729,
+            319
+          ],
+          [
+            790,
+            127,
+            969,
+            319
+          ],
+          [
+            1051,
+            120,
+            1200,
+            319
+          ]
+        ],
+        [
+          [
+            64,
+            396,
+            210,
+            593
+          ],
+          [
+            307,
+            397,
+            468,
+            594
+          ],
+          [
+            547,
+            397,
+            733,
+            594
+          ],
+          [
+            784,
+            399,
+            964,
+            594
+          ],
+          [
+            1050,
+            396,
+            1200,
+            594
+          ]
+        ],
+        [
+          [
+            64,
+            664,
+            209,
+            866
+          ],
+          [
+            296,
+            670,
+            464,
+            868
+          ],
+          [
+            533,
+            670,
+            731,
+            868
+          ],
+          [
+            785,
+            673,
+            962,
+            868
+          ],
+          [
+            1048,
+            664,
+            1195,
+            868
+          ]
+        ],
+        [
+          [
+            64,
+            942,
+            209,
+            1141
+          ],
+          [
+            290,
+            944,
+            464,
+            1141
+          ],
+          [
+            531,
+            942,
+            734,
+            1141
+          ],
+          [
+            782,
+            949,
+            963,
+            1141
+          ],
+          [
+            1045,
+            941,
+            1194,
+            1141
+          ]
+        ]
+      ]
+    },
+    "Knockout": {
+      "size": [
+        1536,
+        1024
+      ],
+      "detected_row_bounds": [
+        [
+          [
+            45,
+            66,
+            219,
+            297
+          ],
+          [
+            344,
+            67,
+            555,
+            297
+          ],
+          [
+            693,
+            82,
+            870,
+            297
+          ],
+          [
+            985,
+            123,
+            1193,
+            297
+          ],
+          [
+            1268,
+            163,
+            1503,
+            297
+          ]
+        ],
+        [
+          [
+            31,
+            375,
+            286,
+            497
+          ],
+          [
+            333,
+            375,
+            590,
+            497
+          ],
+          [
+            638,
+            375,
+            894,
+            497
+          ],
+          [
+            941,
+            375,
+            1198,
+            497
+          ],
+          [
+            1246,
+            375,
+            1502,
+            497
+          ]
+        ],
+        [
+          [
+            53,
+            555,
+            222,
+            793
+          ],
+          [
+            352,
+            554,
+            568,
+            793
+          ],
+          [
+            688,
+            564,
+            872,
+            793
+          ],
+          [
+            985,
+            612,
+            1193,
+            793
+          ],
+          [
+            1268,
+            655,
+            1503,
+            793
+          ]
+        ],
+        [
+          [
+            41,
+            858,
+            286,
+            989
+          ],
+          [
+            343,
+            858,
+            591,
+            990
+          ],
+          [
+            646,
+            859,
+            896,
+            990
+          ],
+          [
+            950,
+            859,
+            1199,
+            990
+          ],
+          [
+            1251,
+            858,
+            1502,
+            990
+          ]
+        ]
+      ]
+    }
+  },
+  "normalization": "Uniform scaling per character/action, 256-square canvas, feet at y=232; nearest-neighbor only.",
+  "total": 120
+}

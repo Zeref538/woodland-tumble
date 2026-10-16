@@ -1,0 +1,17 @@
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Ll]ogs/
+UserSettings/
+Build/
+.DS_Store
+*.csproj
+*.sln
+Tools/Staging/
+Tools/editor-command.txt
+Tools/editor-report.txt
+.vscode/
+.vs/
+*.slnx
+MemoryCaptures/
+Recordings/
