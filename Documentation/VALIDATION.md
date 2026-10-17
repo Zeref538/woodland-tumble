@@ -1,3 +1,9 @@
+# Tilt Rivals v6.2 character-cover validation
+
+The current scene passed 526 Play Mode checks. The new coverage switches all four characters through both player slots and verifies all 32 action-cover assignments plus 32 unchanged input badges. All sixteen catalog sprites load from separate assets. The exported files also have sixteen distinct decoded RGBA hashes and transparent edge margins.
+
+All sixteen images were visually inspected on Character-Action-Covers-v6.2.png. Four actual game captures, character-hud-{fern,ember,luna,bram}-v6.2.png, were inspected with both HUDs visible. They show Fern/Ember, Ember/Luna, Luna/Bram and Bram/Fern pairs. These exercise the current native scene and selected character objects, not mockup screens. BUILD-v6.2.json records the successful Windows build and current script hashes.
+
 # Tilt Rivals v6.1 validation
 
 The updated scene passed 460 Play Mode checks in Unity 6000.5.10f1. New presentation checks verify matching compact panel heights, circular covers at equal diamond endpoints, mirrored outside-edge portraits, generated VS artwork and absence of the sound-percentage popup. All existing combat and controller checks remain in the same passing run. BUILD-v6.1.json records the successful Windows build and current runtime script hashes.

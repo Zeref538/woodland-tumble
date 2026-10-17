@@ -1,0 +1,369 @@
+{
+  "title": "Tilt Rivals",
+  "layout": [
+    "Punch",
+    "Kick",
+    "Block",
+    "Special"
+  ],
+  "files": [
+    {
+      "character": "Fern",
+      "action": "Punch",
+      "path": "Assets/Art/UI/Actions/Fern/Punch.png",
+      "sourceCell": [
+        0,
+        0,
+        627,
+        627
+      ],
+      "sourceAlphaBounds": [
+        34,
+        46,
+        578,
+        591
+      ],
+      "canvas": [
+        256,
+        256
+      ],
+      "rgbaSha256": "e75e87bb59e23ab550d4bfceb512b6280f87605b8a5461207cadeda0eb29d046"
+    },
+    {
+      "character": "Fern",
+      "action": "Kick",
+      "path": "Assets/Art/UI/Actions/Fern/Kick.png",
+      "sourceCell": [
+        627,
+        0,
+        1254,
+        627
+      ],
+      "sourceAlphaBounds": [
+        49,
+        46,
+        594,
+        591
+      ],
+      "canvas": [
+        256,
+        256
+      ],
+      "rgbaSha256": "45c902a3ff0c11c432e1e7cbd3dc61f737edcd1490018b429f83c9e90adfeefa"
+    },
+    {
+      "character": "Fern",
+      "action": "Block",
+      "path": "Assets/Art/UI/Actions/Fern/Block.png",
+      "sourceCell": [
+        0,
+        627,
+        627,
+        1254
+      ],
+      "sourceAlphaBounds": [
+        34,
+        30,
+        580,
+        570
+      ],
+      "canvas": [
+        256,
+        256
+      ],
+      "rgbaSha256": "2b2240fe20d16383371f44313f39418bcc6d4c71cfdfb24e1964e6864ac336a2"
+    },
+    {
+      "character": "Fern",
+      "action": "Special",
+      "path": "Assets/Art/UI/Actions/Fern/Special.png",
+      "sourceCell": [
+        627,
+        627,
+        1254,
+        1254
+      ],
+      "sourceAlphaBounds": [
+        47,
+        31,
+        593,
+        570
+      ],
+      "canvas": [
+        256,
+        256
+      ],
+      "rgbaSha256": "e07530b68cb0a7c243acab1ed0c59ef23aa20bb7cf476e833158f20c5f9b87fd"
+    },
+    {
+      "character": "Ember",
+      "action": "Punch",
+      "path": "Assets/Art/UI/Actions/Ember/Punch.png",
+      "sourceCell": [
+        0,
+        0,
+        627,
+        627
+      ],
+      "sourceAlphaBounds": [
+        35,
+        48,
+        578,
+        590
+      ],
+      "canvas": [
+        256,
+        256
+      ],
+      "rgbaSha256": "74339480474159d2e1c6dac47dca28f9841336bd56bbc7bc7d9e49373c4cec92"
+    },
+    {
+      "character": "Ember",
+      "action": "Kick",
+      "path": "Assets/Art/UI/Actions/Ember/Kick.png",
+      "sourceCell": [
+        627,
+        0,
+        1254,
+        627
+      ],
+      "sourceAlphaBounds": [
+        49,
+        48,
+        592,
+        590
+      ],
+      "canvas": [
+        256,
+        256
+      ],
+      "rgbaSha256": "f75201e85a737070dcb8f6673d48ca23dcd37bd790bf6ef54fd50727dea010ba"
+    },
+    {
+      "character": "Ember",
+      "action": "Block",
+      "path": "Assets/Art/UI/Actions/Ember/Block.png",
+      "sourceCell": [
+        0,
+        627,
+        627,
+        1254
+      ],
+      "sourceAlphaBounds": [
+        35,
+        34,
+        578,
+        573
+      ],
+      "canvas": [
+        256,
+        256
+      ],
+      "rgbaSha256": "29441e522fdfb2415b767c04d501e3c76ef0f4fa9bf2e5c93c15463c37f46827"
+    },
+    {
+      "character": "Ember",
+      "action": "Special",
+      "path": "Assets/Art/UI/Actions/Ember/Special.png",
+      "sourceCell": [
+        627,
+        627,
+        1254,
+        1254
+      ],
+      "sourceAlphaBounds": [
+        48,
+        35,
+        592,
+        573
+      ],
+      "canvas": [
+        256,
+        256
+      ],
+      "rgbaSha256": "8feaf50e0c00ca196bd82a3e3094c86869df0f06f3149c6fece3e7e987704059"
+    },
+    {
+      "character": "Luna",
+      "action": "Punch",
+      "path": "Assets/Art/UI/Actions/Luna/Punch.png",
+      "sourceCell": [
+        0,
+        0,
+        627,
+        627
+      ],
+      "sourceAlphaBounds": [
+        35,
+        47,
+        579,
+        591
+      ],
+      "canvas": [
+        256,
+        256
+      ],
+      "rgbaSha256": "24e52142c0d521b90975c55558844d02be6e6e9ae527861e263e511da2fb97b3"
+    },
+    {
+      "character": "Luna",
+      "action": "Kick",
+      "path": "Assets/Art/UI/Actions/Luna/Kick.png",
+      "sourceCell": [
+        627,
+        0,
+        1254,
+        627
+      ],
+      "sourceAlphaBounds": [
+        48,
+        47,
+        593,
+        591
+      ],
+      "canvas": [
+        256,
+        256
+      ],
+      "rgbaSha256": "f68f0a439faa31714e8e951bc6a5db9e4114b05b95acab689e3bad868d8b78b1"
+    },
+    {
+      "character": "Luna",
+      "action": "Block",
+      "path": "Assets/Art/UI/Actions/Luna/Block.png",
+      "sourceCell": [
+        0,
+        627,
+        627,
+        1254
+      ],
+      "sourceAlphaBounds": [
+        34,
+        35,
+        579,
+        574
+      ],
+      "canvas": [
+        256,
+        256
+      ],
+      "rgbaSha256": "45fdedf85ef293ec6c07275d65b8e9af6e92bc73de7885864b128751c22056cb"
+    },
+    {
+      "character": "Luna",
+      "action": "Special",
+      "path": "Assets/Art/UI/Actions/Luna/Special.png",
+      "sourceCell": [
+        627,
+        627,
+        1254,
+        1254
+      ],
+      "sourceAlphaBounds": [
+        48,
+        34,
+        593,
+        574
+      ],
+      "canvas": [
+        256,
+        256
+      ],
+      "rgbaSha256": "9d0c3d12560e3656a7e6c9afdf533eda7cf70fe40fa5cdb4c5081a2b93dd97e2"
+    },
+    {
+      "character": "Bram",
+      "action": "Punch",
+      "path": "Assets/Art/UI/Actions/Bram/Punch.png",
+      "sourceCell": [
+        0,
+        0,
+        627,
+        627
+      ],
+      "sourceAlphaBounds": [
+        36,
+        47,
+        577,
+        588
+      ],
+      "canvas": [
+        256,
+        256
+      ],
+      "rgbaSha256": "f12f74a8db3e4ba82f1d95b9172215ed7819bd4a3d1b3da2b458f2ce7564bc70"
+    },
+    {
+      "character": "Bram",
+      "action": "Kick",
+      "path": "Assets/Art/UI/Actions/Bram/Kick.png",
+      "sourceCell": [
+        627,
+        0,
+        1254,
+        627
+      ],
+      "sourceAlphaBounds": [
+        50,
+        47,
+        592,
+        588
+      ],
+      "canvas": [
+        256,
+        256
+      ],
+      "rgbaSha256": "0033a103587f2008374a73b43ffaa87a30fe3acba37cfd38a58bfe4e0eaf0583"
+    },
+    {
+      "character": "Bram",
+      "action": "Block",
+      "path": "Assets/Art/UI/Actions/Bram/Block.png",
+      "sourceCell": [
+        0,
+        627,
+        627,
+        1254
+      ],
+      "sourceAlphaBounds": [
+        36,
+        36,
+        578,
+        570
+      ],
+      "canvas": [
+        256,
+        256
+      ],
+      "rgbaSha256": "bf0d85c4d6720f54ed29d23efdee73b6109c891e6ba231e49c6add1a3621bd98"
+    },
+    {
+      "character": "Bram",
+      "action": "Special",
+      "path": "Assets/Art/UI/Actions/Bram/Special.png",
+      "sourceCell": [
+        627,
+        627,
+        1254,
+        1254
+      ],
+      "sourceAlphaBounds": [
+        49,
+        36,
+        592,
+        570
+      ],
+      "canvas": [
+        256,
+        256
+      ],
+      "rgbaSha256": "730e33bb82a3e16c5cf4bc16c2bc063dffb38554dcf225ae8cb785c08ae4b6e2"
+    }
+  ],
+  "sources": {
+    "Fern-Action-Covers-v6.2-source.png": "ddfee535c9093f89dd71f6bce0bb43022b54d206575f868fd15306b7475a921c",
+    "Ember-Action-Covers-v6.2-source.png": "efb053ea018eb303e08a0e62e2d9b8bd79e382f6ba577185659aa80cf4e19a5e",
+    "Luna-Action-Covers-v6.2-source.png": "110ffc11cb10caf9ce018c249ce0c64cb998e03ea769329a0d9814d09625a50b",
+    "Bram-Action-Covers-v6.2-source.png": "3614ff2107b8162481012cfa31c897a03d006ca783d7663fd3207c29e752e48f"
+  }
+}

@@ -17,6 +17,7 @@ public class WoodlandHUD : MonoBehaviour
     public Image[] actionIcons = new Image[8];
     public Text[] actionGlyphs = new Text[8];
     public Image[] actionCovers = new Image[8];
+    public Sprite[] characterActionCovers = new Sprite[16];
     public Sprite[] playstationIcons = new Sprite[4];
     public Sprite[] neutralIcons = new Sprite[4];
     public Text arenaText;
@@ -183,6 +184,8 @@ public class WoodlandHUD : MonoBehaviour
         string[] letters=pad==null?(player==0?new[]{"S","G","F","H"}:new[]{"↓","L","K","J"}):style=="XBOX"?new[]{"A","X","B","Y"}:new[]{"S","W","E","N"};
         for(int a=0;a<4;a++){
             int slot=player*4+a;
+            int coverIndex=Mathf.Clamp(scout.CharacterIndex,0,3)*4+a;
+            if(actionCovers[slot] && coverIndex<characterActionCovers.Length && characterActionCovers[coverIndex])actionCovers[slot].sprite=characterActionCovers[coverIndex];
             if(actionIcons[slot]){actionIcons[slot].enabled=!cpu&&ps;actionIcons[slot].sprite=playstationIcons[a];actionIcons[slot].color=Color.white;}
             if(actionGlyphs[slot]){actionGlyphs[slot].text=cpu?"AI":ps?"":letters[a];actionGlyphs[slot].fontSize=cpu?10:13;actionGlyphs[slot].color=pad==null?new Color(.91f,.95f,.86f):a==0?new Color(.51f,.89f,.53f):a==1?new Color(.44f,.71f,1):a==2?new Color(1,.48f,.43f):new Color(1,.82f,.35f);}
             bool pressed=false;

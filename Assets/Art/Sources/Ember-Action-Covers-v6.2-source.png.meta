@@ -1,0 +1,1339 @@
+fileFormatVersion: 2
+guid: ee194e88aa0ba2048ac3aa2cd4cdbf3e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1353318275106450675
+    second: Ember-Action-Covers-v6.2-source_0
+  - first:
+      213: -3989422808869388050
+    second: Ember-Action-Covers-v6.2-source_1
+  - first:
+      213: 3227062690752998767
+    second: Ember-Action-Covers-v6.2-source_2
+  - first:
+      213: 3821457184558469798
+    second: Ember-Action-Covers-v6.2-source_3
+  - first:
+      213: 132860221787119996
+    second: Ember-Action-Covers-v6.2-source_4
+  - first:
+      213: -3198994711362818275
+    second: Ember-Action-Covers-v6.2-source_5
+  - first:
+      213: -6444597578449967564
+    second: Ember-Action-Covers-v6.2-source_6
+  - first:
+      213: 2201137714134940669
+    second: Ember-Action-Covers-v6.2-source_7
+  - first:
+      213: -593206874634000682
+    second: Ember-Action-Covers-v6.2-source_8
+  - first:
+      213: 8829508496210048518
+    second: Ember-Action-Covers-v6.2-source_9
+  - first:
+      213: -6129336883783247347
+    second: Ember-Action-Covers-v6.2-source_10
+  - first:
+      213: 5718859016940165758
+    second: Ember-Action-Covers-v6.2-source_11
+  - first:
+      213: -6686451240941524416
+    second: Ember-Action-Covers-v6.2-source_12
+  - first:
+      213: -3531196587512873858
+    second: Ember-Action-Covers-v6.2-source_13
+  - first:
+      213: 1035221620755027053
+    second: Ember-Action-Covers-v6.2-source_14
+  - first:
+      213: 2342287260447635024
+    second: Ember-Action-Covers-v6.2-source_15
+  - first:
+      213: -4698370537653117063
+    second: Ember-Action-Covers-v6.2-source_16
+  - first:
+      213: -3306772191016140561
+    second: Ember-Action-Covers-v6.2-source_17
+  - first:
+      213: 1417613622187660469
+    second: Ember-Action-Covers-v6.2-source_18
+  - first:
+      213: -999095170728987110
+    second: Ember-Action-Covers-v6.2-source_19
+  - first:
+      213: -5033608685392382790
+    second: Ember-Action-Covers-v6.2-source_20
+  - first:
+      213: -4065828791395503877
+    second: Ember-Action-Covers-v6.2-source_21
+  - first:
+      213: -6877776463161502327
+    second: Ember-Action-Covers-v6.2-source_22
+  - first:
+      213: -334363561058549886
+    second: Ember-Action-Covers-v6.2-source_23
+  - first:
+      213: 1777365831012650852
+    second: Ember-Action-Covers-v6.2-source_24
+  - first:
+      213: 463430742866505561
+    second: Ember-Action-Covers-v6.2-source_25
+  - first:
+      213: -8147555682216939864
+    second: Ember-Action-Covers-v6.2-source_26
+  - first:
+      213: 6942651188961855269
+    second: Ember-Action-Covers-v6.2-source_27
+  - first:
+      213: -5279119055538626100
+    second: Ember-Action-Covers-v6.2-source_28
+  - first:
+      213: -4039444885924123528
+    second: Ember-Action-Covers-v6.2-source_29
+  - first:
+      213: 875079415660694350
+    second: Ember-Action-Covers-v6.2-source_30
+  - first:
+      213: 2692228189572666807
+    second: Ember-Action-Covers-v6.2-source_31
+  - first:
+      213: 4693949293088796607
+    second: Ember-Action-Covers-v6.2-source_32
+  - first:
+      213: -7331340461870166791
+    second: Ember-Action-Covers-v6.2-source_33
+  - first:
+      213: -4413087540540242947
+    second: Ember-Action-Covers-v6.2-source_34
+  - first:
+      213: 9139481664595437630
+    second: Ember-Action-Covers-v6.2-source_35
+  - first:
+      213: -2102221745175277709
+    second: Ember-Action-Covers-v6.2-source_36
+  - first:
+      213: 8853346652085531512
+    second: Ember-Action-Covers-v6.2-source_37
+  - first:
+      213: 1003489111923483602
+    second: Ember-Action-Covers-v6.2-source_38
+  - first:
+      213: -1723177869438337556
+    second: Ember-Action-Covers-v6.2-source_39
+  - first:
+      213: 1281056187939033933
+    second: Ember-Action-Covers-v6.2-source_40
+  - first:
+      213: -6244672645901954562
+    second: Ember-Action-Covers-v6.2-source_41
+  - first:
+      213: 7635219479649737123
+    second: Ember-Action-Covers-v6.2-source_42
+  - first:
+      213: -8415557882208412022
+    second: Ember-Action-Covers-v6.2-source_43
+  - first:
+      213: 2234147289244283357
+    second: Ember-Action-Covers-v6.2-source_44
+  - first:
+      213: 1689582533304088687
+    second: Ember-Action-Covers-v6.2-source_45
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Ember-Action-Covers-v6.2-source_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 597
+        width: 610
+        height: 649
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3fca3cf0dc3f7c210800000000000000
+      internalID: 1353318275106450675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Action-Covers-v6.2-source_1
+      rect:
+        serializedVersion: 2
+        x: 607
+        y: 580
+        width: 632
+        height: 666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee0cf7a9719b2a8c0800000000000000
+      internalID: -3989422808869388050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Action-Covers-v6.2-source_2
+      rect:
+        serializedVersion: 2
+        x: 762
+        y: 1223
+        width: 9
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6daf366b64d8cc20800000000000000
+      internalID: 3227062690752998767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Action-Covers-v6.2-source_3
+      rect:
+        serializedVersion: 2
+        x: 1147
+        y: 1213
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a2d8f9ff0b880530800000000000000
+      internalID: 3821457184558469798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Action-Covers-v6.2-source_4
+      rect:
+        serializedVersion: 2
+        x: 643
+        y: 803
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c71a664faa308d100800000000000000
+      internalID: 132860221787119996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Action-Covers-v6.2-source_5
+      rect:
+        serializedVersion: 2
+        x: 579
+        y: 722
+        width: 19
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1fadde4243ea93d0800000000000000
+      internalID: -3198994711362818275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Action-Covers-v6.2-source_6
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 642
+        width: 9
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 436a528b5a03096a0800000000000000
+      internalID: -6444597578449967564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Action-Covers-v6.2-source_7
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 650
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dfb7ab0c6130c8e10800000000000000
+      internalID: 2201137714134940669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Action-Covers-v6.2-source_8
+      rect:
+        serializedVersion: 2
+        x: 617
+        y: 657
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d6ee1f8d7184c7f0800000000000000
+      internalID: -593206874634000682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Action-Covers-v6.2-source_9
+      rect:
+        serializedVersion: 2
+        x: 739
+        y: 626
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 606b4e15237b88a70800000000000000
+      internalID: 8829508496210048518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Action-Covers-v6.2-source_10
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 612
+        width: 29
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0a566d249830faa0800000000000000
+      internalID: -6129336883783247347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Action-Covers-v6.2-source_11
+      rect:
+        serializedVersion: 2
+        x: 1125
+        y: 634
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7a1241e9f77d5f40800000000000000
+      internalID: 5718859016940165758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Action-Covers-v6.2-source_12
+      rect:
+        serializedVersion: 2
+        x: 1131
+        y: 596
+        width: 36
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04ae5bfc504f433a0800000000000000
+      internalID: -6686451240941524416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Action-Covers-v6.2-source_13
+      rect:
+        serializedVersion: 2
+        x: 1131
+        y: 631
+        width: 7
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7c3939a96baefec0800000000000000
+      internalID: -3531196587512873858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Action-Covers-v6.2-source_14
+      rect:
+        serializedVersion: 2
+        x: 1147
+        y: 640
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6458e84498dd5e00800000000000000
+      internalID: 1035221620755027053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Action-Covers-v6.2-source_15
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 610
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05677e87ad9718020800000000000000
+      internalID: 2342287260447635024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Action-Covers-v6.2-source_16
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 612
+        width: 36
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97f560893e80cceb0800000000000000
+      internalID: -4698370537653117063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Action-Covers-v6.2-source_17
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 614
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe0c759563cfb12d0800000000000000
+      internalID: -3306772191016140561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Action-Covers-v6.2-source_18
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 612
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b4104b14106ca310800000000000000
+      internalID: 1417613622187660469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Action-Covers-v6.2-source_19
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 616
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a16f3e35c308222f0800000000000000
+      internalID: -999095170728987110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Action-Covers-v6.2-source_20
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 618
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab4bdd0e197052ab0800000000000000
+      internalID: -5033608685392382790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Action-Covers-v6.2-source_21
+      rect:
+        serializedVersion: 2
+        x: 508
+        y: 596
+        width: 20
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf0b05381464397c0800000000000000
+      internalID: -4065828791395503877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Action-Covers-v6.2-source_22
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 628
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98557bc2fba3d80a0800000000000000
+      internalID: -6877776463161502327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Action-Covers-v6.2-source_23
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 604
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28f354ddc1a1c5bf0800000000000000
+      internalID: -334363561058549886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Action-Covers-v6.2-source_24
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 594
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46f0d617ec87aa810800000000000000
+      internalID: 1777365831012650852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Action-Covers-v6.2-source_25
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 600
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95fad862ecf6e6600800000000000000
+      internalID: 463430742866505561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Action-Covers-v6.2-source_26
+      rect:
+        serializedVersion: 2
+        x: 745
+        y: 607
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ae6ebd46411eee80800000000000000
+      internalID: -8147555682216939864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Action-Covers-v6.2-source_27
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 231
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 527c38df870495060800000000000000
+      internalID: 6942651188961855269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Action-Covers-v6.2-source_28
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 0
+        width: 606
+        height: 599
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc1ef9f503dccb6b0800000000000000
+      internalID: -5279119055538626100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Action-Covers-v6.2-source_29
+      rect:
+        serializedVersion: 2
+        x: 619
+        y: 192
+        width: 27
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87c69b4374201f7c0800000000000000
+      internalID: -4039444885924123528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Action-Covers-v6.2-source_30
+      rect:
+        serializedVersion: 2
+        x: 569
+        y: 109
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4b46b89718e42c00800000000000000
+      internalID: 875079415660694350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Action-Covers-v6.2-source_31
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 43
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b595cd3647bc5520800000000000000
+      internalID: 2692228189572666807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Action-Covers-v6.2-source_32
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 36
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbfe0403302442140800000000000000
+      internalID: 4693949293088796607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Action-Covers-v6.2-source_33
+      rect:
+        serializedVersion: 2
+        x: 611
+        y: 47
+        width: 7
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9fcc7ca61b8d14a90800000000000000
+      internalID: -7331340461870166791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Action-Covers-v6.2-source_34
+      rect:
+        serializedVersion: 2
+        x: 681
+        y: 39
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df3856f634091c2c0800000000000000
+      internalID: -4413087540540242947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Action-Covers-v6.2-source_35
+      rect:
+        serializedVersion: 2
+        x: 711
+        y: 31
+        width: 12
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e382861a626f5de70800000000000000
+      internalID: 9139481664595437630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Action-Covers-v6.2-source_36
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 30
+        width: 19
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37fc9b7f57863d2e0800000000000000
+      internalID: -2102221745175277709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Action-Covers-v6.2-source_37
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 15
+        width: 14
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 873b3fe7fd76dda70800000000000000
+      internalID: 8853346652085531512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Action-Covers-v6.2-source_38
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 27
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d3eb24d70c1ded00800000000000000
+      internalID: 1003489111923483602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Action-Covers-v6.2-source_39
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 23
+        width: 20
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ced30578bda0618e0800000000000000
+      internalID: -1723177869438337556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Action-Covers-v6.2-source_40
+      rect:
+        serializedVersion: 2
+        x: 749
+        y: 33
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d431c6bc0d937c110800000000000000
+      internalID: 1281056187939033933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Action-Covers-v6.2-source_41
+      rect:
+        serializedVersion: 2
+        x: 1125
+        y: 33
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef15a6270577659a0800000000000000
+      internalID: -6244672645901954562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Action-Covers-v6.2-source_42
+      rect:
+        serializedVersion: 2
+        x: 1131
+        y: 33
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a95aa2e9afb5f960800000000000000
+      internalID: 7635219479649737123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Action-Covers-v6.2-source_43
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 13
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8e9a3491bee53b80800000000000000
+      internalID: -8415557882208412022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Action-Covers-v6.2-source_44
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 15
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd1be4f5f19410f10800000000000000
+      internalID: 2234147289244283357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Action-Covers-v6.2-source_45
+      rect:
+        serializedVersion: 2
+        x: 794
+        y: 0
+        width: 30
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f687b4cbc5a927710800000000000000
+      internalID: 1689582533304088687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Ember-Action-Covers-v6.2-source_0: 1353318275106450675
+      Ember-Action-Covers-v6.2-source_1: -3989422808869388050
+      Ember-Action-Covers-v6.2-source_10: -6129336883783247347
+      Ember-Action-Covers-v6.2-source_11: 5718859016940165758
+      Ember-Action-Covers-v6.2-source_12: -6686451240941524416
+      Ember-Action-Covers-v6.2-source_13: -3531196587512873858
+      Ember-Action-Covers-v6.2-source_14: 1035221620755027053
+      Ember-Action-Covers-v6.2-source_15: 2342287260447635024
+      Ember-Action-Covers-v6.2-source_16: -4698370537653117063
+      Ember-Action-Covers-v6.2-source_17: -3306772191016140561
+      Ember-Action-Covers-v6.2-source_18: 1417613622187660469
+      Ember-Action-Covers-v6.2-source_19: -999095170728987110
+      Ember-Action-Covers-v6.2-source_2: 3227062690752998767
+      Ember-Action-Covers-v6.2-source_20: -5033608685392382790
+      Ember-Action-Covers-v6.2-source_21: -4065828791395503877
+      Ember-Action-Covers-v6.2-source_22: -6877776463161502327
+      Ember-Action-Covers-v6.2-source_23: -334363561058549886
+      Ember-Action-Covers-v6.2-source_24: 1777365831012650852
+      Ember-Action-Covers-v6.2-source_25: 463430742866505561
+      Ember-Action-Covers-v6.2-source_26: -8147555682216939864
+      Ember-Action-Covers-v6.2-source_27: 6942651188961855269
+      Ember-Action-Covers-v6.2-source_28: -5279119055538626100
+      Ember-Action-Covers-v6.2-source_29: -4039444885924123528
+      Ember-Action-Covers-v6.2-source_3: 3821457184558469798
+      Ember-Action-Covers-v6.2-source_30: 875079415660694350
+      Ember-Action-Covers-v6.2-source_31: 2692228189572666807
+      Ember-Action-Covers-v6.2-source_32: 4693949293088796607
+      Ember-Action-Covers-v6.2-source_33: -7331340461870166791
+      Ember-Action-Covers-v6.2-source_34: -4413087540540242947
+      Ember-Action-Covers-v6.2-source_35: 9139481664595437630
+      Ember-Action-Covers-v6.2-source_36: -2102221745175277709
+      Ember-Action-Covers-v6.2-source_37: 8853346652085531512
+      Ember-Action-Covers-v6.2-source_38: 1003489111923483602
+      Ember-Action-Covers-v6.2-source_39: -1723177869438337556
+      Ember-Action-Covers-v6.2-source_4: 132860221787119996
+      Ember-Action-Covers-v6.2-source_40: 1281056187939033933
+      Ember-Action-Covers-v6.2-source_41: -6244672645901954562
+      Ember-Action-Covers-v6.2-source_42: 7635219479649737123
+      Ember-Action-Covers-v6.2-source_43: -8415557882208412022
+      Ember-Action-Covers-v6.2-source_44: 2234147289244283357
+      Ember-Action-Covers-v6.2-source_45: 1689582533304088687
+      Ember-Action-Covers-v6.2-source_5: -3198994711362818275
+      Ember-Action-Covers-v6.2-source_6: -6444597578449967564
+      Ember-Action-Covers-v6.2-source_7: 2201137714134940669
+      Ember-Action-Covers-v6.2-source_8: -593206874634000682
+      Ember-Action-Covers-v6.2-source_9: 8829508496210048518
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

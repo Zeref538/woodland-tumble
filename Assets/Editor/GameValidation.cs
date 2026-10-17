@@ -94,6 +94,7 @@ public static class GameValidation
                 Check(game.hud.deviceText != null && game.hud.deviceText.Length == 2 && game.hud.deviceText.All(text => text != null) && game.hud.controlsText != null && game.hud.controlsText.Length == 2 && game.hud.controlsText.All(text => text != null), "Both player device labels and help control texts are wired");
                 ValidateHudCorners(game);
                 ValidateHudMeters(game);
+                ValidateCharacterActionCovers(game);
                 foreach(var label in game.hud.healthText)Check(label.preferredHeight<=label.rectTransform.rect.height,"HP digits fit their text rectangle without clipping");
                 Check(WoodlandEffects.Instance.fernSlash.Length==8 && WoodlandEffects.Instance.emberSlash.Length==8 && WoodlandEffects.Instance.fernSlash.All(frame=>frame!=null) && WoodlandEffects.Instance.emberSlash.All(frame=>frame!=null),"Both elemental attack animations contain eight loaded VFX frames");
                 if(System.Array.IndexOf(System.Environment.GetCommandLineArgs(),"-silent-test")>=0)Check(AudioListener.volume==0,"Silent test mode keeps speaker output muted");
@@ -643,6 +644,37 @@ public static class GameValidation
             var portrait=game.hud.fighterPortraits[i].rectTransform;var name=game.hud.names[i].rectTransform;
             Vector3 portraitCenter=portrait.TransformPoint(portrait.rect.center);
             Check((i==0?portraitCenter.x<health.TransformPoint(health.rect.center).x:portraitCenter.x>health.TransformPoint(health.rect.center).x) && name.TransformPoint(name.rect.center).y<portraitCenter.y,"Player "+(i+1)+": portrait mirrors toward its outside screen edge with its name below");
+        }
+    }
+    static void ValidateCharacterActionCovers(WoodlandGame game)
+    {
+        var hud=game.hud;
+        Check(hud.characterActionCovers.Length==16 && hud.characterActionCovers.All(sprite=>sprite!=null),"All sixteen character-specific action covers are loaded");
+        Check(hud.characterActionCovers.Select(sprite=>AssetDatabase.GetAssetPath(sprite)).Distinct().Count()==16,"Each character/action pair references a separate artwork asset");
+        int[] previous=(int[])game.CharacterChoices.Clone();
+        string[] badges=hud.actionGlyphs.Select(label=>label.text).ToArray();
+        string[] actions={"Block","Punch","Kick","Special"};
+        try {
+            for(int character=0;character<4;character++) {
+                for(int player=0;player<2;player++) {
+                    int selected=(character+player)%4;game.CharacterChoices[player]=selected;
+                    game.players[player].SetCharacter(selected,game.CharacterNames[selected],game.CharacterAnimationSets[selected],game.CharacterControllers[selected],game.CharacterColors[selected]);
+                }
+                hud.Refresh();Canvas.ForceUpdateCanvases();
+                for(int player=0;player<2;player++)for(int action=0;action<4;action++) {
+                    int selected=game.players[player].CharacterIndex;int slot=player*4+action;
+                    string expected="Assets/Art/UI/Actions/"+game.CharacterNames[selected]+"/"+actions[action]+".png";
+                    Check(AssetDatabase.GetAssetPath(hud.actionCovers[slot].sprite)==expected,"P"+(player+1)+" "+game.CharacterNames[selected]+" "+actions[action]+": live HUD shows its own artwork");
+                    Check(hud.actionGlyphs[slot].text==badges[slot],"P"+(player+1)+" "+game.CharacterNames[selected]+" "+actions[action]+": changing character preserves its input badge");
+                }
+                Capture("Documentation/character-hud-"+game.CharacterNames[character].ToLowerInvariant()+"-v6.2.png");
+            }
+        } finally {
+            for(int player=0;player<2;player++) {
+                int selected=previous[player];game.CharacterChoices[player]=selected;
+                game.players[player].SetCharacter(selected,game.CharacterNames[selected],game.CharacterAnimationSets[selected],game.CharacterControllers[selected],game.CharacterColors[selected]);
+            }
+            hud.Refresh();
         }
     }
     static void PrepareSpecialCase(WoodlandGame game,int skill,float separation)

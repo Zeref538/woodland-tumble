@@ -33,7 +33,7 @@ public static class GameSetup
         CreateFighterPlate();
         CreateActionGlyphs();
         ImportSprite("Assets/Art/UI/Versus.png",100);
-        foreach(var file in Directory.GetFiles("Assets/Art/UI/Actions","*.png")) {
+        foreach(var file in Directory.GetFiles("Assets/Art/UI/Actions","*.png",SearchOption.AllDirectories)) {
             ImportSprite(file.Replace('\\','/'),256);
             var actionImporter=(TextureImporter)AssetImporter.GetAtPath(file.Replace('\\','/'));actionImporter.filterMode=FilterMode.Point;actionImporter.SaveAndReimport();
         }
@@ -136,7 +136,7 @@ public static class GameSetup
         uiInput.move=null;uiInput.submit=null;uiInput.cancel=null;
         EditorSceneManager.SaveScene(scene, path);
         EditorBuildSettings.scenes = new[] { new EditorBuildSettingsScene(path, true) };
-        PlayerSettings.companyName = "Woodland Games";PlayerSettings.productName = "Tilt Rivals";PlayerSettings.bundleVersion="6.1.0";
+        PlayerSettings.companyName = "Woodland Games";PlayerSettings.productName = "Tilt Rivals";PlayerSettings.bundleVersion="6.2.0";
         PlayerSettings.defaultScreenWidth = 1280;PlayerSettings.defaultScreenHeight = 720;PlayerSettings.runInBackground = true;
         AssetDatabase.SaveAssets();
         Selection.activeGameObject = beam;
@@ -247,6 +247,12 @@ public static class GameSetup
         var ar = hud.arenaText.rectTransform; ar.anchorMin = ar.anchorMax = new Vector2(.5f,1); ar.pivot = new Vector2(.5f,1); ar.anchoredPosition = new Vector2(0,-83);
         var versus=Flat("Versus Emblem",match,new Rect(0,0,94,52),Color.white);versus.sprite=SpriteAt("Assets/Art/UI/Versus.png");versus.preserveAspect=true;var vsRect=versus.rectTransform;vsRect.anchorMin=vsRect.anchorMax=new Vector2(.5f,1);vsRect.pivot=new Vector2(.5f,1);vsRect.anchoredPosition=new Vector2(0,-24);
         for(int a=0;a<4;a++){hud.playstationIcons[a]=SpriteAt("Assets/Art/UI/PSAction"+a+".png");hud.neutralIcons[a]=SpriteAt("Assets/Art/UI/CPUAction"+a+".png");}
+        string[] actionNames={"Block","Punch","Kick","Special"};
+        for(int character=0;character<4;character++)for(int action=0;action<4;action++) {
+            var cover=SpriteAt("Assets/Art/UI/Actions/"+game.CharacterNames[character]+"/"+actionNames[action]+".png");
+            if(!cover)throw new System.Exception("Missing character action cover: "+game.CharacterNames[character]+"/"+actionNames[action]);
+            hud.characterActionCovers[character*4+action]=cover;
+        }
         for(int i=0;i<2;i++) {
             Color accent = i==0 ? hud.fernColor : hud.emberColor;
             var plate = new GameObject(i==0?"Fern Fighter Plate":"Ember Fighter Plate",typeof(RectTransform)).GetComponent<RectTransform>();
@@ -284,7 +290,7 @@ public static class GameSetup
             for(int a=0;a<4;a++){
                 int slot=i*4+a;var position=buttonPositions[a];
                 var disc=Flat("Face Button "+captions[a],diamond,new Rect(position.x,position.y,44,44),Color.white);disc.sprite=SpriteAt("Assets/Art/UI/ControlDisc.png");hud.actionDiscs[slot]=disc;
-                hud.actionCovers[slot]=Flat("Illustrated "+captions[a],disc.transform,new Rect(0,0,44,44),Color.white);hud.actionCovers[slot].sprite=SpriteAt("Assets/Art/UI/Actions/"+captions[a]+".png");hud.actionCovers[slot].preserveAspect=true;
+                hud.actionCovers[slot]=Flat("Illustrated "+captions[a],disc.transform,new Rect(0,0,44,44),Color.white);hud.actionCovers[slot].sprite=hud.characterActionCovers[i*4+a];hud.actionCovers[slot].preserveAspect=true;
                 var badge=Flat("Input Badge",disc.transform,new Rect(25,-3,22,22),new Color(.95f,.97f,.95f));badge.sprite=SpriteAt("Assets/Art/UI/ControlDisc.png");
                 hud.actionIcons[slot]=Flat("Device Shape",badge.transform,new Rect(1,1,20,20),Color.white);hud.actionIcons[slot].sprite=hud.playstationIcons[a];hud.actionIcons[slot].preserveAspect=true;
                 hud.actionGlyphs[slot]=Label("Device Letter",badge.transform,"",new Rect(0,0,22,22),13,white,TextAnchor.MiddleCenter);hud.actionGlyphs[slot].fontStyle=FontStyle.Bold;

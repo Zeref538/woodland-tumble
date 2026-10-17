@@ -1,0 +1,26 @@
+{
+  "editor": "6000.5.10f1",
+  "product": "Tilt Rivals",
+  "version": "6.2.0",
+  "target": "StandaloneWindows64",
+  "playmode_checks": 526,
+  "playmode_success": true,
+  "character_cover_assignments_checked": 32,
+  "input_badges_preserved_checks": 32,
+  "distinct_decoded_cover_images": 16,
+  "build_result": "Success",
+  "build_evidence": "Build Finished, Result: Success. in tilt-rivals-windows-v62.log",
+  "visual_review": "All sixteen exported covers and four real Play Mode HUD captures inspected",
+  "controller_transport": "virtual devices validated; physical USB/Bluetooth remains unverified",
+  "audio_testing": "silent listener",
+  "assembly_sha256": "aa2667bad58d30f807df5f6f510fb6e7c68e1fdb0a5755bbfd4b054e5e3afac0",
+  "source_hash_normalization": "File bytes with CRLF converted to LF",
+  "scripts": {
+    "Scout.cs": "90f8b382d82aff759c1dc409383d12030a422b797b099f9055f218fe25ea82e4",
+    "ScoutAnimations.cs": "05d2cf092b1182186d83b31be217854a15848b58f70a77bd6423a78c7b8ee67a",
+    "SpawnMarker.cs": "678414abd6028ca57f40f084c3f664ef2cbf663ea2d956523bd78c35ac2f02ff",
+    "WoodlandEffects.cs": "f0f1d72fbad3420bc1bc2618e8c79fe999ad681039c1faab9c7721c1ffbe7dac",
+    "WoodlandGame.cs": "48ea5bb9de7d48fc931e13c0233f8ce74536d58b310f3dd983e61113512af54e",
+    "WoodlandHUD.cs": "7c8f5e833cd42e53fda352038f5bfaf5a1b6d9909a36506b55fb12b3ca9df5e7"
+  }
+}

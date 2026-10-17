@@ -1,5 +1,9 @@
 # Agent Tasks
 
+- [x] Create sixteen distinct pixel-art action covers, four for each character.
+- [x] Bind covers to the selected character and verify both player slots in the running game.
+- [ ] Inspect all four HUDs, build and publish the character-art update.
+
 - [x] Align action diamonds with fighter HUD height, add illustrated action covers and button badges.
 - [x] Rename the game Tilt Rivals and verify the updated scene.
 - [x] Publish the HUD update and separate action artwork.
