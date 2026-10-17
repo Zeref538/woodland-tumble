@@ -39,7 +39,8 @@ public class Scout : MonoBehaviour
     public float Facing => face;
     public Color Element => id == 0 ? new Color(.38f, 1, .68f) : new Color(1, .48f, .18f);
     float nextParry, shieldStarted, shieldBrokenUntil, nextWard, nextDash, dashUntil, chargeStart, doubleJumpUntil;
-    bool blockHeld, dashRequested, chargePressed, chargeReleased;
+    bool blockHeld, dashRequested, chargePressed, chargeReleased, chargeHeld;
+    Gamepad previousGamepad;
     [Header("Damage and knockout")]
     public float maxHealth = 100;
     public float pushDamage = 12;
@@ -88,7 +89,7 @@ public class Scout : MonoBehaviour
         Body.angularVelocity = 0;
         face = id == 0 ? 1 : -1;
         Health = maxHealth;
-        Shield = shieldCapacity; Blocking = Charging = blockHeld = false;
+        Shield = shieldCapacity; Blocking = Charging = blockHeld = chargeHeld = false;
         nextParry = 0; shieldStarted = -10; shieldBrokenUntil = nextWard = nextDash = dashUntil = doubleJumpUntil = 0;
         AirJumpsRemaining = 1; comboCount = bufferedAttack = 0; comboUntil = bufferedUntil = 0;
         KnockedOut = false;
@@ -108,17 +109,39 @@ public class Scout : MonoBehaviour
         var game = WoodlandGame.Instance;
         if (game == null || game.Paused) return;
         var keys = Keyboard.current;
-        if (inputEnabled && game.playing && !KnockedOut && keys != null) {
-            axis = id == 0 ? (keys.dKey.isPressed ? 1 : 0) - (keys.aKey.isPressed ? 1 : 0)
+        if (inputEnabled && game.playing && !KnockedOut) {
+            axis = keys == null ? 0 : id == 0 ? (keys.dKey.isPressed ? 1 : 0) - (keys.aKey.isPressed ? 1 : 0)
                            : (keys.rightArrowKey.isPressed ? 1 : 0) - (keys.leftArrowKey.isPressed ? 1 : 0);
-            jumpRequested |= id == 0 ? keys.wKey.wasPressedThisFrame : keys.upArrowKey.wasPressedThisFrame;
-            pushRequested |= id == 0 ? keys.fKey.wasPressedThisFrame : keys.kKey.wasPressedThisFrame;
-            punchRequested |= id == 0 ? keys.gKey.wasPressedThisFrame : keys.lKey.wasPressedThisFrame;
-            blockHeld = id == 0 ? keys.sKey.isPressed : keys.downArrowKey.isPressed;
-            dashRequested |= id == 0 ? keys.leftShiftKey.wasPressedThisFrame : keys.rightShiftKey.wasPressedThisFrame;
-            chargePressed |= id == 0 ? keys.hKey.wasPressedThisFrame : keys.jKey.wasPressedThisFrame;
-            chargeReleased |= id == 0 ? keys.hKey.wasReleasedThisFrame : keys.jKey.wasReleasedThisFrame;
-        } else { axis = 0; blockHeld = false; }
+            bool held = false;
+            blockHeld = false;
+            if (keys != null) {
+                jumpRequested |= id == 0 ? keys.wKey.wasPressedThisFrame : keys.upArrowKey.wasPressedThisFrame;
+                pushRequested |= id == 0 ? keys.fKey.wasPressedThisFrame : keys.kKey.wasPressedThisFrame;
+                punchRequested |= id == 0 ? keys.gKey.wasPressedThisFrame : keys.lKey.wasPressedThisFrame;
+                blockHeld = id == 0 ? keys.sKey.isPressed : keys.downArrowKey.isPressed;
+                dashRequested |= id == 0 ? keys.leftShiftKey.wasPressedThisFrame : keys.rightShiftKey.wasPressedThisFrame;
+                held = id == 0 ? keys.hKey.isPressed : keys.jKey.isPressed;
+            }
+            var pad = game.GetGamepad(id);
+            // Losing a held trigger cancels its charge rather than firing an unintended smash.
+            if (pad != previousGamepad && chargeHeld && !held) { Charging = false; chargeHeld = false; }
+            previousGamepad = pad;
+            if (WoodlandGame.PadMenuChord(pad) && !held) { Charging = false; chargeHeld = false; }
+            if (pad != null && !WoodlandGame.PadMenuChord(pad)) {
+                float padAxis = pad.dpad.x.ReadValue();
+                if (Mathf.Abs(padAxis) < .5f) padAxis = pad.leftStick.x.ReadValue();
+                if (Mathf.Abs(padAxis) > .15f) axis = padAxis;
+                jumpRequested |= pad.buttonSouth.wasPressedThisFrame;
+                punchRequested |= pad.buttonWest.wasPressedThisFrame;
+                pushRequested |= pad.buttonEast.wasPressedThisFrame;
+                blockHeld |= pad.leftTrigger.isPressed || pad.leftShoulder.isPressed;
+                dashRequested |= pad.rightShoulder.wasPressedThisFrame;
+                held |= pad.rightTrigger.isPressed || pad.buttonNorth.isPressed;
+            }
+            chargePressed |= held && !chargeHeld;
+            chargeReleased |= !held && chargeHeld;
+            chargeHeld = held;
+        } else { axis = 0; blockHeld = chargeHeld = false; }
         if (game.playing && transform.position.y < game.fallBoundary) KnockOut();
         SetBlock(blockHeld && game.playing);
         if (Blocking) {

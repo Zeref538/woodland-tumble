@@ -29,6 +29,7 @@ public static class GameSetup
         foreach (var file in Directory.GetFiles("Assets/Art/Arena", "*.png")) ImportSprite(file, 100);
         ImportSprite("Assets/Art/UI/WoodlandPanel.png", 100, null, new Vector4(12, 12, 12, 12));
         ImportSprite("Assets/Art/UI/Solid.png", 100);
+        CreateFighterPlate();
         string shadePath="Assets/Art/UI/HeaderShade.png";
         if(!File.Exists(shadePath)) {
             var shade=new Texture2D(2,64,TextureFormat.RGBA32,false);
@@ -219,29 +220,34 @@ public static class GameSetup
         for(int i=0;i<2;i++) {
             Color accent = i==0 ? hud.fernColor : hud.emberColor;
             var plate = new GameObject(i==0?"Fern Fighter Plate":"Ember Fighter Plate",typeof(RectTransform)).GetComponent<RectTransform>();
-            plate.SetParent(root.transform,false); plate.anchorMin = plate.anchorMax = new Vector2(i,0); plate.pivot = new Vector2(i,0); plate.anchoredPosition = new Vector2(i==0?24:-24,26); plate.sizeDelta = new Vector2(410,122);
+            plate.SetParent(root.transform,false); plate.anchorMin = plate.anchorMax = new Vector2(i,0); plate.pivot = new Vector2(i,0); plate.anchoredPosition = new Vector2(i==0?24:-24,26); plate.sizeDelta = new Vector2(410,146);
             hud.fighterPlates[i] = plate;
-            Flat("Plate",plate,new Rect(0,0,410,122),ink);
-            Flat("Accent Rule",plate,new Rect(12,0,386,1),accent);
-            Flat("Portrait Well",plate,new Rect(12,12,96,98),new Color(accent.r*.17f,accent.g*.17f,accent.b*.17f,.8f));
+            var plateArt=Flat("Chamfered Scout Plate",plate,new Rect(0,0,410,146),Color.white);plateArt.sprite=SpriteAt("Assets/Art/UI/ScoutPlate.png");
+            Flat("Accent Rule",plate,new Rect(16,4,378,2),accent);
+            Flat("Portrait Well",plate,new Rect(12,12,96,98),new Color(accent.r*.14f,accent.g*.14f,accent.b*.14f,1));
             var portraitMask=Box("Portrait Crop",plate,new Rect(12,12,96,98));portraitMask.gameObject.AddComponent<RectMask2D>();
             var portrait=Flat("Scout Portrait",portraitMask,new Rect(-40,-16,176,176),Color.white); portrait.sprite = SpriteAt("Assets/Art/Characters/"+(i==0?"Fern":"Ember")+"/Walk/01.png"); portrait.preserveAspect=true;
-            hud.names[i]=Label("Player Name",plate,i==0?"P1  FERN":"P2  EMBER",new Rect(122,9,178,22),18,accent);
+            Flat("Portrait Foot Rule",plate,new Rect(12,110,96,1),accent);
+            hud.names[i]=Label("Player Name",plate,i==0?"P1  FERN":"P2  EMBER",new Rect(122,10,178,22),18,accent);
             for(int j=0;j<3;j++){hud.roundPips[i*3+j]=Flat("Round "+(j+1),plate,new Rect(342+j*19,17,9,9),accent);hud.roundPips[i*3+j].rectTransform.localRotation=Quaternion.Euler(0,0,45);}
             hud.healthText[i]=Label("Health Number",plate,"100",new Rect(122,28,95,48),39,white);hud.healthText[i].fontStyle=FontStyle.Bold;
             Label("HP Caption",plate,"HP",new Rect(213,45,28,19),12,new Color(.57f,.66f,.65f));
             hud.damageText[i]=Label("Knockback",plate,"+0%",new Rect(270,45,122,22),17,new Color(.79f,.7f,.48f),TextAnchor.MiddleRight);
-            Flat("Health Track",plate,new Rect(122,78,270,6),track);
-            hud.damageGhost[i]=Flat("Damage Echo",plate,new Rect(122,78,270,6),new Color(1,.86f,.63f)); hud.damageGhost[i].type=Image.Type.Filled;hud.damageGhost[i].fillMethod=Image.FillMethod.Horizontal;
-            hud.healthFill[i]=Flat("Health Fill",plate,new Rect(122,78,270,6),accent);hud.healthFill[i].type=Image.Type.Filled;hud.healthFill[i].fillMethod=Image.FillMethod.Horizontal;
-            Flat("Ward Track",plate,new Rect(122,88,270,3),track);
-            hud.shieldFill[i]=Flat("Ward",plate,new Rect(122,88,270,3),new Color(.5f,.79f,.95f));hud.shieldFill[i].type=Image.Type.Filled;hud.shieldFill[i].fillMethod=Image.FillMethod.Horizontal;
+            Flat("Health Track",plate,new Rect(122,78,270,8),track);
+            hud.damageGhost[i]=Flat("Damage Echo",plate,new Rect(122,78,270,8),new Color(1,.86f,.63f)); hud.damageGhost[i].type=Image.Type.Filled;hud.damageGhost[i].fillMethod=Image.FillMethod.Horizontal;
+            hud.healthFill[i]=Flat("Health Fill",plate,new Rect(122,78,270,8),accent);hud.healthFill[i].type=Image.Type.Filled;hud.healthFill[i].fillMethod=Image.FillMethod.Horizontal;
+            for(int tick=1;tick<4;tick++)Flat("Health Quarter "+tick,plate,new Rect(122+tick*67.5f,78,1,8),new Color(.03f,.06f,.07f,.65f));
+            Flat("Ward Track",plate,new Rect(122,90,270,3),track);
+            hud.shieldFill[i]=Flat("Ward",plate,new Rect(122,90,270,3),new Color(.5f,.79f,.95f));hud.shieldFill[i].type=Image.Type.Filled;hud.shieldFill[i].fillMethod=Image.FillMethod.Horizontal;
             hud.shieldText[i]=Label("Ward Caption",plate,"WARD",new Rect(122,96,50,15),11,new Color(.57f,.7f,.76f));
             Label("Push Caption",plate,"PUSH",new Rect(188,96,35,15),11,new Color(.65f,.72f,.69f));
             Label("Punch Caption",plate,"PUNCH",new Rect(292,96,43,15),11,new Color(.65f,.72f,.69f));
             Flat("Push Track",plate,new Rect(231,102,44,3),track);Flat("Punch Track",plate,new Rect(346,102,46,3),track);
             hud.pushFill[i]=Flat("Push Ready",plate,new Rect(231,102,44,3),accent);hud.pushFill[i].type=Image.Type.Filled;hud.pushFill[i].fillMethod=Image.FillMethod.Horizontal;
             hud.punchFill[i]=Flat("Punch Ready",plate,new Rect(346,102,46,3),accent);hud.punchFill[i].type=Image.Type.Filled;hud.punchFill[i].fillMethod=Image.FillMethod.Horizontal;
+            Flat("Device Divider",plate,new Rect(122,115,270,1),new Color(.27f,.35f,.34f));
+            hud.deviceText[i]=Label("Input Device",plate,"KEYBOARD",new Rect(122,120,270,18),12,new Color(.7f,.8f,.77f));
+            Label("Scout Role",plate,i==0?"LEAF SCOUT":"EMBER SCOUT",new Rect(12,120,99,18),10,accent,TextAnchor.MiddleCenter);
             hud.statusText[i]=Label("Fighter Combo Popup",root.transform,"",new Rect(0,0,280,45),25,accent,TextAnchor.MiddleCenter);
             hud.statusText[i].rectTransform.pivot=Vector2.one*.5f;
             var comboOutline=hud.statusText[i].gameObject.AddComponent<Outline>();comboOutline.effectColor=new Color(.015f,.035f,.04f,1);comboOutline.effectDistance=new Vector2(1,-1);
@@ -252,19 +258,37 @@ public static class GameSetup
         var banner = new GameObject("Round Announcement",typeof(RectTransform)).GetComponent<RectTransform>();banner.SetParent(root.transform,false);banner.anchorMin=banner.anchorMax=Vector2.one*.5f;banner.pivot=Vector2.one*.5f;banner.sizeDelta=new Vector2(520,100);banner.anchoredPosition=new Vector2(0,130);
         Flat("Announcement Backing",banner,new Rect(0,0,520,100),new Color(.025f,.055f,.065f,.90f));Flat("Announcement Rule",banner,new Rect(160,0,200,2),gold);
         hud.bannerPanel=banner.gameObject;hud.bannerText=Label("Announcement",banner,"GET READY",new Rect(10,8,500,84),30,white,TextAnchor.MiddleCenter);banner.gameObject.SetActive(false);
-        var help = new GameObject("F1 Controls Overlay",typeof(RectTransform)).GetComponent<RectTransform>();help.SetParent(root.transform,false);help.anchorMin=help.anchorMax=Vector2.one*.5f;help.pivot=Vector2.one*.5f;help.sizeDelta=new Vector2(800,370);
-        Flat("Help Backing",help,new Rect(0,0,800,370),new Color(.02f,.045f,.055f,.98f));Flat("Help Rule",help,new Rect(28,26,744,2),gold);
-        Label("Help Heading",help,"THE FIELD GUIDE",new Rect(30,40,740,34),26,white,TextAnchor.MiddleCenter);
+        var help = new GameObject("F1 Controls Overlay",typeof(RectTransform)).GetComponent<RectTransform>();help.SetParent(root.transform,false);help.anchorMin=help.anchorMax=Vector2.one*.5f;help.pivot=Vector2.one*.5f;help.sizeDelta=new Vector2(880,396);
+        Flat("Help Backing",help,new Rect(0,0,880,396),new Color(.02f,.045f,.055f,.98f));Flat("Help Rule",help,new Rect(28,26,824,1),gold);
+        Label("Help Heading",help,"THE FIELD GUIDE",new Rect(30,40,820,34),26,white,TextAnchor.MiddleCenter);
+        Flat("Guide Column Divider",help,new Rect(440,104,1,176),new Color(.22f,.32f,.32f));
         for(int i=0;i<2;i++){
-            float x=36+i*395;Color c=i==0?hud.fernColor:hud.emberColor;
+            float x=36+i*440;Color c=i==0?hud.fernColor:hud.emberColor;
             Label("Player",help,i==0?"P1  FERN":"P2  EMBER",new Rect(x,100,330,25),22,c);
-            Label("Keys",help,i==0?"A / D    Move\nW    Jump / double jump\nS    Guard / timed parry\nF    Shove   G    Punch\nH    Hold to charge smash\nLeft Shift    Dash":"Left / Right    Move\nUp    Jump / double jump\nDown    Guard / timed parry\nK    Shove   L    Punch\nJ    Hold to charge smash\nRight Shift    Dash",new Rect(x,136,340,165),18,white);
+            hud.controlsText[i]=Label("Keys",help,"",new Rect(x,142,370,144),18,white);
         }
-        Label("System Keys",help,"TAB arena    R rematch    ESC pause    M mute    - / + volume    F1 close",new Rect(24,322,752,24),16,new Color(.71f,.77f,.7f),TextAnchor.MiddleCenter);
+        Label("Pad System Keys",help,"START pause   /   SHARE or VIEW controls\nHold SHARE / VIEW + A or CROSS: rematch   /   + LB or RB: arena",new Rect(24,290,832,52),16,new Color(.8f,.85f,.79f),TextAnchor.MiddleCenter);
+        Label("System Keys",help,"TAB arena    R rematch    ESC pause    M mute    - / + volume    F1 close",new Rect(24,354,832,24),15,new Color(.71f,.77f,.7f),TextAnchor.MiddleCenter);
         hud.helpPanel=help.gameObject; help.gameObject.SetActive(false);
         hud.soundText=Label("Sound Feedback",root.transform,"",new Rect(0,0,330,24),16,white,TextAnchor.MiddleCenter);
         var soundRect=hud.soundText.rectTransform;soundRect.anchorMin=soundRect.anchorMax=new Vector2(.5f,0);soundRect.pivot=Vector2.one*.5f;soundRect.anchoredPosition=new Vector2(0,23);
         font=pixel;
+    }
+    static void CreateFighterPlate()
+    {
+        const string path="Assets/Art/UI/ScoutPlate.png";
+        var texture=new Texture2D(410,146,TextureFormat.RGBA32,false);
+        for(int y=0;y<146;y++)for(int x=0;x<410;x++) {
+            int edge=Mathf.Min(Mathf.Min(x,409-x),Mathf.Min(y,145-y));
+            int corner=Mathf.Min(x,409-x)+Mathf.Min(y,145-y);
+            bool visible=corner>=12;
+            Color surface=Color.Lerp(new Color(.025f,.055f,.065f),new Color(.065f,.115f,.125f),y/145f);
+            if(edge==0||corner==12)surface=new Color(.38f,.46f,.43f);
+            if(edge==2||corner==16)surface=new Color(.12f,.2f,.21f);
+            texture.SetPixel(x,y,visible?surface:Color.clear);
+        }
+        texture.Apply();File.WriteAllBytes(path,texture.EncodeToPNG());Object.DestroyImmediate(texture);
+        AssetDatabase.ImportAsset(path,ImportAssetOptions.ForceSynchronousImport);ImportSprite(path,100);
     }
     static RectTransform Panel(string name, Transform parent, Vector2 anchor, Vector2 position, Vector2 size)
     {

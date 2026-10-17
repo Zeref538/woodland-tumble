@@ -1,15 +1,15 @@
-# Presentation and combat validation
+# Controller and combat validation
 
-Unity 6000.5.10f1 passed 228 Play Mode checks. PLAYMODE-VALIDATION-v4.json contains every assertion. Earlier reports remain as historical records.
+Unity 6000.5.10f1 passed 265 Play Mode checks. PLAYMODE-VALIDATION-v5.json records each assertion. Earlier reports remain historical evidence.
 
-The fixture exercises 160 character sprites and their native Animator clips, 16 elemental slash frames, three matching arena sets, damage, knockback, scoring, jump and landing, double jump, dash, frontal and rear guard, parry, guard break, charged smash, buffered combos and reset. Player two has an independent left-facing attack, Ember slash and dash check.
+The controller fixture uses two independent virtual Gamepads. It verifies assignment, simultaneous opposite movement, unplugged input release, replacement binding, punches, shoves, trigger guard, dash, jump and double jump, charge/release, pause/resume, help, arena cycling and rematch. Menu chords suppress their gameplay buttons. Holding a charge before unplug or menu entry verifies cancellation without an accidental smash.
 
-Six movement cases cover both flat edges, downhill edges at 22 degrees and inward pressure against either side face. Controlled placement isolates collision behavior; normal gameplay retains the dynamic hinged plank.
+Temporary DualShock HID and XInput layouts verify family names and the actual PlayStation/Xbox guide text. The fixture captures controller-help-1280-v5.png with those assigned devices. It removes virtual devices and re-enables previously enabled physical pads on success or failure. These checks do not validate physical USB/Bluetooth transport or two-person controller hardware.
 
-Presentation checks verify saved HUD references, health text fitting its rectangle, the F1 overlay and keyboard sound controls. Thirteen clips load, decode nonzero waveforms and start on eight pooled AudioSources. Invalid indices, volume clamping, mute, pause and resume are checked. All tests set AudioListener.volume to zero before playback; subjective sound balance is unverified.
+Existing checks cover 160 character sprites, native Animator clips, 16 slash frames, three matching arena sets, damage, knockback, scoring, six edge-collision cases, guard/parry, charged smash, combos and reset. HUD references and health text fit are checked. All 13 sounds load, decode nonzero samples and start on eight pooled AudioSources, with the listener muted throughout testing.
 
-Screenshots ending in -v4.png are actual 1280x720 Unity Play Mode renders. They are not concept images. The Windows build result and script hashes are in BUILD-v4.json. Physical-keyboard standalone play still needs a local check because earlier desktop-injected keys produced no observable game actions.
+Images ending in -v5.png are actual 1280x720 Play Mode renders. BUILD-v5.json records the successful Windows build and runtime script hashes. Physical keyboard play and subjective headphone balance remain unverified.
 
-Unity logs an internal QuickSearch indexing exception at startup. It does not prevent the completed game assertions or Windows build.
+Unity logs an internal QuickSearch startup indexing exception separately from the completed game assertions. The first batch attempt was blocked because the project was already open. A separate test copy was started, then stopped after the main editor closed; the completed checks ran against the local project.
 
-The editor menu Woodland > Validate Editable Game tests the current editable scene. Batch execution uses -silent-test -executeMethod GameValidation.Run. That entry point rebuilds the demo scene before testing; use a clean copy when preserving custom scene edits.
+Woodland > Validate Editable Game tests the current scene. Batch execution uses -silent-test -executeMethod GameValidation.Run and rebuilds the demo first. Preserve custom scene edits before using that rebuilding entry point.

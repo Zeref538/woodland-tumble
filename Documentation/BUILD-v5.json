@@ -1,0 +1,19 @@
+{
+  "editor": "6000.5.10f1",
+  "target": "StandaloneWindows64",
+  "playmode_checks": 265,
+  "playmode_success": true,
+  "build_result": "Success",
+  "build_evidence": "Build Finished, Result: Success. in tumble-windows-v5.log",
+  "controller_transport": "unverified physical USB/Bluetooth; virtual devices validated",
+  "audio_testing": "silent listener, subjective listening unverified",
+  "assembly_sha256": "7df9aafafe12953054e13f2dc8b3c352c540b180169ad1b2780a2f588c1c141d",
+  "scripts": {
+    "Scout.cs": "5e20372a4154cf8c02ced789f8836f1467a356b98c3a7eadeb5b550913006fd7",
+    "ScoutAnimations.cs": "671c6568cad461c4915a8e16f42890e5d887c7be94e38289342010c4839a4836",
+    "SpawnMarker.cs": "8ab42983df1f09b2032abcdc8c624bfdfd4934f87ba17e4b11d437f1d5b5d9ee",
+    "WoodlandEffects.cs": "9b43663b68f85d84107d730090a84f7b4219f7e2e297b131e86e00636d08050f",
+    "WoodlandGame.cs": "d57271cd290ad1f465a89e839c6d5abef09d2e467f121316876d0396187703a8",
+    "WoodlandHUD.cs": "983fc2cb7a05632bc85706a940b9a70ce75f7d245c6d70140acca46822631e05"
+  }
+}

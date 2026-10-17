@@ -4,6 +4,30 @@ A local two-player woodland balance brawler for **Unity 6000.5.10f1, Universal 2
 
 Open `Assets/Scenes/WoodlandTumble.unity`. The camera, arena, player prefab instances and HUD are saved in this scene and are visible and editable outside Play Mode. If you already had the old scene open during the update, refresh the project and reopen the scene once.
 
+## Open in Unity
+
+Use Unity Hub's Add project from disk option and choose the folder containing Assets, Packages and ProjectSettings. Select Unity **6000.5.10f1**, open `Assets/Scenes/WoodlandTumble.unity`, press Play and click inside the Game view to give it input focus. On the development PC the folder is already updated; no pull is needed there.
+
+## Controllers
+
+PlayStation DualShock 4, Xbox One and other devices recognized as Unity Gamepads use the same physical button positions. This is controller support for the desktop Unity game, not a console executable. Connect the first pad for Fern and a second for Ember. Either player can still use their keyboard controls. Disconnecting a pad releases its input and preserves the other player's slot; a replacement fills the empty slot.
+
+| Action | Xbox | PlayStation |
+|---|---|---|
+| Move | Left stick / D-pad | Left stick / D-pad |
+| Jump / double jump | A | Cross |
+| Punch / combo | X | Square |
+| Shove / combo | B | Circle |
+| Guard / parry | LT or LB | L2 or L1 |
+| Dash | RB | R1 |
+| Hold / release smash | RT or Y | R2 or Triangle |
+| Pause / resume | Menu / Start | Options |
+| Show / hide controls | Release View | Release Share |
+| Restart match | Hold View + A | Hold Share + Cross |
+| Previous / next arena | Hold View + LB / RB | Hold Share + L1 / R1 |
+
+The field guide and device labels update for each assigned pad. Menu shortcuts suppress the corresponding gameplay button. Unplugging while charging cancels the charge. The ordinary HID joystick fallback has no guaranteed button mapping; see [Unity's supported gamepad layouts](https://docs.unity3d.com/Packages/com.unity.inputsystem@1.19/manual/Gamepad.html). Physical USB/Bluetooth behavior still needs a check with your own controller.
+
 ## Play
 
 | Action | Fern / Player 1 | Ember / Player 2 |
@@ -34,9 +58,9 @@ Use **Tab** or **1 / 2 / 3** to change between **Sunlit Hollow**, **Moonlit Lake
 
 ## Download
 
-[Unity source ZIP](https://github.com/Zeref538/woodland-tumble/releases/download/v4.0.0/Woodland-Tumble-Unity-v4.zip) contains the full editable project. Extract it, then add the woodland-tumble folder through Unity Hub. It does not include Library or build output.
+[Unity source ZIP](https://github.com/Zeref538/woodland-tumble/releases/download/v5.0.0/Woodland-Tumble-Unity-v5.zip) contains the full editable project. Extract it, then add the woodland-tumble folder through Unity Hub. It does not include Library or build output.
 
-[Artwork-only ZIP](https://github.com/Zeref538/Woodland-Scouts/releases/download/tumble-art-v4.0.0/Woodland-Tumble-art-v4.zip) is about 17 MB and contains the individual frames plus arena images.
+[Artwork-only ZIP](https://github.com/Zeref538/Woodland-Scouts/releases/download/tumble-art-v5.0.0/Woodland-Tumble-art-v5.zip) is about 17 MB and contains the individual frames plus arena images.
 
 ## Clone and update
 
@@ -82,7 +106,7 @@ Reopen the project after the update. If Git reports local changes or a merge con
 - **Animation:** select the Character child and open Unity's Animation window. Choose the action clip to edit its sprite keyframes. Block, DoubleJump, Dash, Charge, Smash, Combo2 and Combo3 are separate editable states alongside Walk, Jump, Hurt, Push, Punch and Knockout. Clips and controllers are in `Assets/Animations/Fern` and `Ember`. The original actions contain ten separate frame sprites; special-action clips use the two scouts' distinct sprite sets. Knockout holds its final collapsed pose. Idle uses the first standing frame. The Frames asset is a catalog of source sprites; playback comes from the animation clips.
 - **Sprites:** `Assets/Art/Characters/<Fern or Ember>/<Action>/01.png` through `10.png`. Each PNG imports as a **Single** sprite, **Full Rect**, 160 pixels per unit, Point filtering, no compression or mipmaps. All canvases are 256×256 with a common foot pivot (128, 24 pixels from the bottom). The complete outlines are extracted before alignment; the runtime does not cut a grid from a large sheet.
 - **Combat tuning:** select a player's root and edit max health, push/punch damage, knockback, range and cooldown on Scout. Select Woodland Game to edit rounds to win, fall boundary and plank restoring force.
-- **Text and panel design:** expand `HUD - Edit Text and Woodland Panels`. The compact fighter plates, cropped portraits, health numbers, ward strips and control overlay are editable UI objects. F1 opens the full controls without pausing. The footer shows sound changes; M and minus/equals also work while paused. Health fills ease toward their values, with delayed damage trails. The nine-slice panel sprite is `Assets/Art/UI/WoodlandPanel.png`. The HUD component's Fern Color and Ember Color control the live player panel accents. Health, cooldowns, names and scores update from game state. The Press Start 2P font and OFL license are in `Assets/Fonts`.
+- **Text and panel design:** expand `HUD - Arena Broadcast`. The compact fighter plates, cropped portraits, health numbers, ward strips and control overlay are editable UI objects. F1 opens the full controls without pausing. The footer shows sound changes; M and minus/equals also work while paused. Health fills ease toward their values, with delayed damage trails. The shaped fighter plate is `Assets/Art/UI/ScoutPlate.png`; its corner cuts and fine rim are authored in GameSetup. The portrait, device row and quarter-marked health fill remain separate editable objects. The HUD component's Fern Color and Ember Color control the live player panel accents. Health, cooldowns, names and scores update from game state. The Press Start 2P font and OFL license are in `Assets/Fonts`.
 - **Effects:** select `Effects - Trails and Splashes` to tune intensity, trail duration, shake, footsteps and particle gravity, or toggle ambient fireflies and camera shake. Effects include elemental hit bursts, guard impacts, parry flashes, aerial-jump rings, dash trails, charged smash bursts, attack arcs, jump/landing dust, footstep leaves, knockout stars and victory bursts. Sixteen transparent slash frames animate mint leaves for Fern and amber flames for Ember. White impact cores, restrained bloom, tapered afterimages and damped camera impulses reinforce contact. Brief hit pauses emphasize confirmed attacks. A shared 320-sprite pool bounds active effects; pausing freezes their animation. Thirteen licensed action sounds use eight pooled voices with a saved master volume and mute setting. See [audio sources and event mapping](Documentation/AUDIO.md).
 
 `Woodland > Rebuild Editable Demo Scene` restores the supplied demo layout, clips and prefabs; it overwrites custom demo edits, so use it only when you want to reset. Backups of the previous scene are under `Documentation/Backups`. `Woodland > Validate Editable Game` runs a temporary Play Mode check and returns to edit mode; it saves its report and previews under Documentation.
@@ -95,17 +119,17 @@ Players use the zero-friction PlayerSlide physics material, and the plank has sl
 
 Character frames use transparent, aligned canvases. The game plays native editable Unity animation clips rather than cutting a sheet during gameplay. Original artwork sources remain under `Assets/Art/Sources`.
 
-The presentation rework passed **228 Play Mode checks in Unity 6000.5.10f1**. Tests exercise combat, six edge-collision cases, animation bindings, both players' attacks, elemental VFX, HUD text fit, F1 controls and keyboard audio controls. All 13 sound files decode to nonzero waveforms and playback starts on pooled AudioSources. The fixture uses controlled placement and a virtual keyboard, so it does not replace two-person playtesting.
+The controller and presentation update passed **265 Play Mode checks in Unity 6000.5.10f1**. Tests cover combat, six edge-collision cases, animations, both players' actions, VFX, text fit and audio. Virtual controllers exercise separate player slots, movement, attacks, jump, guard, dash, charge, unplug/reconnect, pause, help, arena changes and rematch. Additional checks verify that unplugging or entering the menu cancels a held charge without firing. The field guide is captured with virtual PlayStation and Xbox layouts and their actual labels.
 
-The v4 Windows build succeeded. Physical-keyboard standalone play and subjective headphone balance remain unverified. Tests run with the audio listener muted; no speaker listening claim is made.
+The v5 Windows build succeeded. Physical controller USB/Bluetooth behavior, physical keyboard play and subjective headphone balance still need a local check. All automated sound tests stay silent. The virtual-device fixture is controlled testing, not two-person hardware playtesting.
 
-Full results: [Play Mode report](Documentation/PLAYMODE-VALIDATION-v4.json) and [validation notes](Documentation/VALIDATION.md). Unity logs its existing internal QuickSearch indexing exception separately from the game checks.
+Full results: [Play Mode report](Documentation/PLAYMODE-VALIDATION-v5.json), [build record](Documentation/BUILD-v5.json) and [validation notes](Documentation/VALIDATION.md). Unity still logs its internal QuickSearch startup exception separately from the completed game checks.
 
-![Moonlit Lake arena](Documentation/arena-1-1280-v4.png)
+![Updated combat HUD](Documentation/controller-combat-1280-v5.png)
 
-![Fern charged attack](Documentation/combat-smash-1280-v4.png)
+![PlayStation and Xbox field guide](Documentation/controller-help-1280-v5.png)
 
-[Ember attack](Documentation/combat-ember-1280-v4.png) | [Guard](Documentation/combat-guard-1280-v4.png) | [Combo](Documentation/combat-combo-1280-v4.png) | [Controls](Documentation/controls-1280-v4.png)
+[Moonlit Lake](Documentation/arena-1-1280-v5.png) | [Guard](Documentation/combat-guard-1280-v5.png) | [Combo](Documentation/combat-combo-1280-v5.png)
 
 Artwork is also available separately in [Woodland-Scouts/tumble](https://github.com/Zeref538/Woodland-Scouts/tree/main/tumble). It includes 160 individual character frames, three backgrounds, three planks, three spheres and 16 elemental slash frames. The new Block and DoubleJump animations add 40 distinct sprites; the other special actions use dedicated native clips based on each character's existing poses.
 

@@ -39,6 +39,30 @@ public class WoodlandGame : MonoBehaviour
     Vector2 plankHome;
     float plankAngle;
     Coroutine roundRoutine;
+    readonly Gamepad[] gamepads = new Gamepad[2];
+
+    public void RefreshGamepads()
+    {
+        for (int i = 0; i < gamepads.Length; i++)
+            if (gamepads[i] != null && (!gamepads[i].added || !gamepads[i].enabled)) gamepads[i] = null;
+        foreach (var pad in Gamepad.all) {
+            if (!pad.enabled || pad == gamepads[0] || pad == gamepads[1]) continue;
+            for (int i = 0; i < gamepads.Length; i++)
+                if (gamepads[i] == null) { gamepads[i] = pad; break; }
+        }
+    }
+    public Gamepad GetGamepad(int slot)
+    {
+        RefreshGamepads();
+        return slot >= 0 && slot < gamepads.Length ? gamepads[slot] : null;
+    }
+    public static string GamepadStyle(Gamepad pad)
+    {
+        if (pad is UnityEngine.InputSystem.DualShock.DualShockGamepad) return "PLAYSTATION";
+        if (pad is UnityEngine.InputSystem.XInput.XInputController) return "XBOX";
+        return pad == null ? "KEYBOARD" : "GAMEPAD";
+    }
+    public static bool PadMenuChord(Gamepad pad) => pad != null && pad.selectButton.isPressed;
 
     void Awake() { Instance = this; }
     void Start()
@@ -107,14 +131,26 @@ public class WoodlandGame : MonoBehaviour
     public void TogglePause() { Paused = !Paused; Time.timeScale = Paused ? 0 : 1; }
     void Update()
     {
+        RefreshGamepads();
         var keyboard = Keyboard.current;
-        if (keyboard == null) return;
-        if (keyboard.tabKey.wasPressedThisFrame) SelectArena((ArenaIndex + 1) % 3);
-        if (keyboard.digit1Key.wasPressedThisFrame) SelectArena(0);
-        if (keyboard.digit2Key.wasPressedThisFrame) SelectArena(1);
-        if (keyboard.digit3Key.wasPressedThisFrame) SelectArena(2);
-        if (keyboard.rKey.wasPressedThisFrame) RestartMatch();
-        if (keyboard.escapeKey.wasPressedThisFrame) TogglePause();
+        bool pause = keyboard != null && keyboard.escapeKey.wasPressedThisFrame;
+        bool restart = keyboard != null && keyboard.rKey.wasPressedThisFrame;
+        if (keyboard != null) {
+            if (keyboard.tabKey.wasPressedThisFrame) SelectArena((ArenaIndex + 1) % backgrounds.Length);
+            if (keyboard.digit1Key.wasPressedThisFrame) SelectArena(0);
+            if (keyboard.digit2Key.wasPressedThisFrame) SelectArena(1);
+            if (keyboard.digit3Key.wasPressedThisFrame) SelectArena(2);
+        }
+        foreach (var pad in gamepads) {
+            if (pad == null) continue;
+            pause |= pad.startButton.wasPressedThisFrame;
+            if (!PadMenuChord(pad)) continue;
+            restart |= pad.buttonSouth.wasPressedThisFrame;
+            if (pad.rightShoulder.wasPressedThisFrame) SelectArena((ArenaIndex + 1) % backgrounds.Length);
+            if (pad.leftShoulder.wasPressedThisFrame) SelectArena((ArenaIndex + backgrounds.Length - 1) % backgrounds.Length);
+        }
+        if (restart) RestartMatch();
+        else if (pause) TogglePause();
     }
     void FixedUpdate()
     {
