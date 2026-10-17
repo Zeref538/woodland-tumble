@@ -2,7 +2,7 @@
 
 - [x] Align action diamonds with fighter HUD height, add illustrated action covers and button badges.
 - [x] Rename the game Tilt Rivals and verify the updated scene.
-- [ ] Publish the HUD update and separate action artwork.
+- [x] Publish the HUD update and separate action artwork.
 
 - [x] Generate and integrate illustrated menu and map-selection artwork.
 - [x] Add Solo versus AI and local multiplayer menu flows.
