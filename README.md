@@ -107,6 +107,6 @@ The final scene passed **454 Play Mode checks** in Unity 6000.5.10f1. The same 4
 
 ![Arena PVP](Documentation/arena-pvp-1280-v6.png)
 
-Artwork downloads are separate in [Woodland-Scouts/tumble](https://github.com/Zeref538/Woodland-Scouts/tree/main/tumble), useful for the lab's slow Wi-Fi.
+[Smaller runtime artwork ZIP](https://github.com/Zeref538/Woodland-Scouts/releases/download/tumble-art-v6.0.0/Wildwood-Rivals-runtime-art-v6.zip) omits the original source sheets. Artwork downloads are separate in [Woodland-Scouts/tumble](https://github.com/Zeref538/Woodland-Scouts/tree/main/tumble), useful for the lab's slow Wi-Fi.
 
 Public repository: [Zeref538/woodland-tumble](https://github.com/Zeref538/woodland-tumble).

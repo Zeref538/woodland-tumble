@@ -3,7 +3,7 @@
 - [x] Generate and integrate illustrated menu and map-selection artwork.
 - [x] Add Solo versus AI and local multiplayer menu flows.
 - [x] Move fighter HUDs to the top corners.
-- [ ] Validate menus, AI and existing combat; build and publish the project.
+- [x] Validate menus, AI and existing combat; build and publish the project.
 - [x] Add four distinct character catalogs, portraits and elemental specials.
 - [x] Add Arena PVP platforms and retain the Balance ruleset.
 - [x] Add Skyward Ruins as the fourth illustrated map.
