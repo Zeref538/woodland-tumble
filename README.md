@@ -1,4 +1,4 @@
-# Wildwood Rivals
+# Tilt Rivals
 
 A fantasy pixel-art fighting game for **Unity 6000.5.10f1, Universal 2D / URP 2D**. The existing repository and scene retain their woodland-tumble names.
 
@@ -97,16 +97,18 @@ There are **360 individual character frames**. Most canvases are 256 x 256. Spec
 
 ## Download and verification
 
-The final scene passed **454 Play Mode checks** in Unity 6000.5.10f1. The same 454 checks passed again after the crystal-prop crop correction. The [Play Mode report](Documentation/PLAYMODE-VALIDATION-v6.json) records each assertion. The Windows build succeeded. Physical controller USB/Bluetooth play and subjective headphone balance still require a local check. Automated tests remain silent.
+The current scene passed **460 Play Mode checks** in Unity 6000.5.10f1, including compact HUD geometry, mirrored portraits and the illustrated action covers. The [Play Mode report](Documentation/PLAYMODE-VALIDATION-v6.json) records each assertion. The Windows build succeeded. Physical controller USB/Bluetooth play and subjective headphone balance still require a local check. Automated tests remain silent.
 
-[Full Unity source ZIP](https://github.com/Zeref538/woodland-tumble/releases/download/v6.0.0/Wildwood-Rivals-Unity-v6.zip) includes Assets, Packages and ProjectSettings without Library or executable output.
+[Full Unity source ZIP](https://github.com/Zeref538/woodland-tumble/releases/download/v6.1.0/Tilt-Rivals-Unity-v6.1.zip) includes Assets, Packages and ProjectSettings without Library or executable output.
 
-![Controller HUD](Documentation/controller-diamond-1280-v6.png)
+![Compact diamond HUD](Documentation/TiltRivals-HUD-v6.1.png)
 
 ![Four scouts](Documentation/roster-menu-1280-v6.png)
 
 ![Arena PVP](Documentation/arena-pvp-1280-v6.png)
 
-[Smaller runtime artwork ZIP](https://github.com/Zeref538/Woodland-Scouts/releases/download/tumble-art-v6.0.0/Wildwood-Rivals-runtime-art-v6.zip) omits the original source sheets. Artwork downloads are separate in [Woodland-Scouts/tumble](https://github.com/Zeref538/Woodland-Scouts/tree/main/tumble), useful for the lab's slow Wi-Fi.
+[Smaller runtime artwork ZIP](https://github.com/Zeref538/Woodland-Scouts/releases/download/tumble-art-v6.1.0/Tilt-Rivals-runtime-art-v6.1.zip) omits the original source sheets. Artwork downloads are separate in [Woodland-Scouts/tumble](https://github.com/Zeref538/Woodland-Scouts/tree/main/tumble), useful for the lab's slow Wi-Fi.
 
 Public repository: [Zeref538/woodland-tumble](https://github.com/Zeref538/woodland-tumble).
+
+The compact combat HUD uses matching 117-pixel-high groups at 1280x720. Player two mirrors its portrait and names to the right. Pixel-art action covers sit at the four points of a diamond, with only the current input badge overlaid. Shoulder actions remain in F1 Controls. The center uses an illustrated VS mark; the sound-percentage popup is removed.

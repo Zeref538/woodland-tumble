@@ -16,4 +16,6 @@ The illustrated title screen leaves a quiet left reading area over a moonlit for
 
 The v6 HUD follows the supplied portrait-left reference: health values centered in the larger bar, stamina values centered in the thinner bar, and the selected name below. Face-button diamonds sit beside each top-corner plate. Only health and stamina have meters.
 
-Four independently drawn scouts use mint, amber, ice blue and stone gold identities. Native roster cards show their own art and skill descriptions before four map previews. Arena PVP uses fixed ledges; Balance keeps the moving plank and sphere. Wildwood Rivals is the new title; repository paths remain stable.
+Four independently drawn scouts use mint, amber, ice blue and stone gold identities. Native roster cards show their own art and skill descriptions before four map previews. Arena PVP uses fixed ledges; Balance keeps the moving plank and sphere. Tilt Rivals is the new title; repository paths remain stable.
+
+The compact HUD pass scales fighter plates and action diamonds equally to 80 percent. Player two mirrors its portrait and side-aligned labels. Replace rectangular action panels with a true diamond connector, four pixel-art medallions and small overlaid input badges. Press feedback eases to a 94 percent button scale. The new pixel-art VS emblem is centered above the arena label.

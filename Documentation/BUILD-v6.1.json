@@ -1,0 +1,21 @@
+{
+  "editor": "6000.5.10f1",
+  "product": "Tilt Rivals",
+  "version": "6.1.0",
+  "target": "StandaloneWindows64",
+  "playmode_checks": 460,
+  "playmode_success": true,
+  "build_result": "Success",
+  "build_evidence": "Build Finished, Result: Success. in tilt-rivals-windows-v61.log",
+  "controller_transport": "virtual devices validated; physical USB/Bluetooth still unverified",
+  "audio_testing": "silent listener; sound-percentage display removed, audio controls retained",
+  "assembly_sha256": "3829becef878d483fdb9387f7881231ff493372d70fabee91b669609734d050b",
+  "scripts": {
+    "Scout.cs": "af2bc4c26ab326b12a218bc71e9e407ee7cb75c8100ecde3d4b78002c5cc2413",
+    "ScoutAnimations.cs": "580f8888e46170f475439904c829951439d1971ef655172d8a69e07537f105b4",
+    "SpawnMarker.cs": "8ab42983df1f09b2032abcdc8c624bfdfd4934f87ba17e4b11d437f1d5b5d9ee",
+    "WoodlandEffects.cs": "eab11a085f6963c2dd6e5c392617659103bebe71dfb7ecb9f00e8da982534f60",
+    "WoodlandGame.cs": "b27d6013d531fee4732bb5c5b9d5937dd671aa59572fa183646da68cbf1123ce",
+    "WoodlandHUD.cs": "0b9b19b05a7f3b213f2b3ed1461197566ffcad84fb1394932786539da9d90a3c"
+  }
+}

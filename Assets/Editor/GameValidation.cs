@@ -89,7 +89,7 @@ public static class GameValidation
                 ValidateRosterAssets();
                 Check(game.hud.healthFill.All(i => i.sprite != null && i.type == Image.Type.Filled), "HUD health fills and panel sprites are serialized");
                 Check(game.hud.shieldFill.Length == 2 && game.hud.shieldFill.All(image => image != null && image.type == Image.Type.Filled), "Both real stamina meters have wired filled images");
-                Check(game.hud.actionDiscs.Length == 8 && game.hud.actionDiscs.All(image => image != null) && game.hud.actionIcons.Length == 8 && game.hud.actionIcons.All(image => image != null) && game.hud.actionGlyphs.Length == 8 && game.hud.actionGlyphs.All(text => text != null) && game.hud.actionLabels.Length == 8 && game.hud.actionLabels.All(text => text != null), "Both four-button action diamonds have complete disc, icon, glyph and action label references");
+                Check(game.hud.actionDiscs.Length == 8 && game.hud.actionDiscs.All(image => image != null) && game.hud.actionIcons.Length == 8 && game.hud.actionIcons.All(image => image != null) && game.hud.actionGlyphs.Length == 8 && game.hud.actionGlyphs.All(text => text != null) && game.hud.actionCovers.Length == 8 && game.hud.actionCovers.All(image => image != null && image.sprite != null), "Both four-button action diamonds have complete discs, controller badges and illustrated action covers");
                 Check(game.hud.helpPanel != null && game.hud.damageGhost.Length == 2 && game.hud.damageGhost.All(image => image != null) && game.hud.fighterPlates.Length == 2 && game.hud.fighterPlates.All(plate => plate != null), "Presentation HUD has wired help panel, two damage ghosts and two fighter plates");
                 Check(game.hud.deviceText != null && game.hud.deviceText.Length == 2 && game.hud.deviceText.All(text => text != null) && game.hud.controlsText != null && game.hud.controlsText.Length == 2 && game.hud.controlsText.All(text => text != null), "Both player device labels and help control texts are wired");
                 ValidateHudCorners(game);
@@ -625,6 +625,14 @@ public static class GameValidation
     static void ValidateHudMeters(WoodlandGame game)
     {
         game.hud.Refresh();Canvas.ForceUpdateCanvases();
+        Check(game.hud.soundText==null,"No sound-percentage popup is created on the combat HUD");
+        Check(game.hud.transform.Find("Match HUD/Versus Emblem")!=null,"Generated VS artwork is present between the two HUDs");
+        for(int player=0;player<2;player++){
+            var diamond=(RectTransform)game.hud.actionDiscs[player*4].transform.parent;
+            Check(Mathf.Approximately(diamond.rect.height*diamond.lossyScale.y,game.hud.fighterPlates[player].rect.height*game.hud.fighterPlates[player].lossyScale.y),"Player "+(player+1)+": action diamond matches the compact fighter panel height");
+            var centers=Enumerable.Range(0,4).Select(n=>{var r=game.hud.actionDiscs[player*4+n].rectTransform;return r.anchoredPosition+new Vector2(r.rect.width*.5f,-r.rect.height*.5f);}).ToArray();
+            Check(Mathf.Approximately(centers[0].x,centers[3].x)&&Mathf.Approximately(centers[1].y,centers[2].y)&&Mathf.Approximately(Vector2.Distance(centers[0],centers[3]),Vector2.Distance(centers[1],centers[2])),"Player "+(player+1)+": four circles occupy the equal diagonal endpoints of a diamond");
+        }
         Check(game.hud.fighterPortraits.Length==2 && game.hud.fighterPortraits.All(image=>image!=null && image.sprite!=null),"Both fighter portraits are wired with real character sprites");
         for(int i=0;i<2;i++){
             var health=game.hud.healthFill[i].rectTransform;var stamina=game.hud.shieldFill[i].rectTransform;
@@ -634,7 +642,7 @@ public static class GameValidation
             Check(health.rect.height>stamina.rect.height,"Player "+(i+1)+": health meter is visually larger than the stamina meter");
             var portrait=game.hud.fighterPortraits[i].rectTransform;var name=game.hud.names[i].rectTransform;
             Vector3 portraitCenter=portrait.TransformPoint(portrait.rect.center);
-            Check(portraitCenter.x<health.TransformPoint(health.rect.center).x && name.TransformPoint(name.rect.center).y<portraitCenter.y,"Player "+(i+1)+": portrait sits left of the meters with its name below");
+            Check((i==0?portraitCenter.x<health.TransformPoint(health.rect.center).x:portraitCenter.x>health.TransformPoint(health.rect.center).x) && name.TransformPoint(name.rect.center).y<portraitCenter.y,"Player "+(i+1)+": portrait mirrors toward its outside screen edge with its name below");
         }
     }
     static void PrepareSpecialCase(WoodlandGame game,int skill,float separation)

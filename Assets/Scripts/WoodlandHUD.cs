@@ -4,6 +4,7 @@ using UnityEngine.InputSystem;
 
 public class WoodlandHUD : MonoBehaviour
 {
+    public const float FighterHudScale=.8f;
     public WoodlandGame game;
     public Text[] names = new Text[2];
     public Text[] healthText = new Text[2];
@@ -15,8 +16,7 @@ public class WoodlandHUD : MonoBehaviour
     public Image[] actionDiscs = new Image[8];
     public Image[] actionIcons = new Image[8];
     public Text[] actionGlyphs = new Text[8];
-    public Text[] actionLabels = new Text[8];
-    public Text[] defenseHints = new Text[2];
+    public Image[] actionCovers = new Image[8];
     public Sprite[] playstationIcons = new Sprite[4];
     public Sprite[] neutralIcons = new Sprite[4];
     public Text arenaText;
@@ -138,7 +138,7 @@ public class WoodlandHUD : MonoBehaviour
                 else if(ghostDelay[i]<=0) damageGhost[i].fillAmount=Mathf.MoveTowards(damageGhost[i].fillAmount,ratio,dt*.38f);
             }
             punch[i] = Mathf.MoveTowards(punch[i],0,dt*5);
-            if(fighterPlates[i]) fighterPlates[i].localScale=Vector3.one*(1+.035f*punch[i]);
+            if(fighterPlates[i]) fighterPlates[i].localScale=Vector3.one*(FighterHudScale*(1+.035f*punch[i]));
             if(damageText[i]) damageText[i].text="+"+Mathf.RoundToInt((1-ratio)*scout.damageKnockbackMultiplier*100)+"% KB";
             if(shieldText[i]) {shieldText[i].text=Mathf.CeilToInt(scout.Stamina)+" / "+Mathf.RoundToInt(scout.StaminaCapacity);shieldText[i].color=scout.Stamina<20?new Color(1,.75f,.57f):new Color(.96f,.97f,.88f);}
             if(shieldFill[i]) shieldFill[i].fillAmount=Mathf.Lerp(shieldFill[i].fillAmount,scout.Stamina/Mathf.Max(1,scout.StaminaCapacity),1-Mathf.Exp(-14*dt));
@@ -180,18 +180,19 @@ public class WoodlandHUD : MonoBehaviour
     {
         bool cpu=player==1 && game.SoloMode;
         bool ps=pad!=null && style=="PLAYSTATION";
-        string[] letters=pad==null?(player==0?new[]{"S","G","F","H"}:new[]{"DOWN","L","K","J"}):style=="XBOX"?new[]{"A","X","B","Y"}:new[]{"S","W","E","N"};
+        string[] letters=pad==null?(player==0?new[]{"S","G","F","H"}:new[]{"↓","L","K","J"}):style=="XBOX"?new[]{"A","X","B","Y"}:new[]{"S","W","E","N"};
         for(int a=0;a<4;a++){
             int slot=player*4+a;
-            if(actionIcons[slot]){actionIcons[slot].enabled=cpu||ps;actionIcons[slot].sprite=cpu?neutralIcons[a]:playstationIcons[a];actionIcons[slot].color=cpu?(player==0?fernColor:emberColor):Color.white;}
-            if(actionGlyphs[slot]){actionGlyphs[slot].text=cpu||ps?"":letters[a];actionGlyphs[slot].fontSize=letters[a].Length>2?10:17;actionGlyphs[slot].color=pad==null?new Color(.91f,.95f,.86f):a==0?new Color(.51f,.89f,.53f):a==1?new Color(.44f,.71f,1):a==2?new Color(1,.48f,.43f):new Color(1,.82f,.35f);}
+            if(actionIcons[slot]){actionIcons[slot].enabled=!cpu&&ps;actionIcons[slot].sprite=playstationIcons[a];actionIcons[slot].color=Color.white;}
+            if(actionGlyphs[slot]){actionGlyphs[slot].text=cpu?"AI":ps?"":letters[a];actionGlyphs[slot].fontSize=cpu?10:13;actionGlyphs[slot].color=pad==null?new Color(.91f,.95f,.86f):a==0?new Color(.51f,.89f,.53f):a==1?new Color(.44f,.71f,1):a==2?new Color(1,.48f,.43f):new Color(1,.82f,.35f);}
             bool pressed=false;
             if(cpu)pressed=a==0?scout.Blocking:a==1?scout.Status.Contains("PUNCH"):a==2?scout.Status.Contains("KICK"):scout.Charging || scout.Status.Contains("SMASH");
             else if(pad!=null)pressed=a==0?pad.buttonSouth.isPressed:a==1?pad.buttonWest.isPressed:a==2?pad.buttonEast.isPressed:pad.buttonNorth.isPressed;
             else if(Keyboard.current!=null){var keys=Keyboard.current;pressed=player==0?(a==0?keys.sKey.isPressed:a==1?keys.gKey.isPressed:a==2?keys.fKey.isPressed:keys.hKey.isPressed):(a==0?keys.downArrowKey.isPressed:a==1?keys.lKey.isPressed:a==2?keys.kKey.isPressed:keys.jKey.isPressed);}
-            if(actionDiscs[slot]){actionDiscs[slot].color=pressed?Color.Lerp(Color.white,player==0?fernColor:emberColor,.55f):Color.white;actionDiscs[slot].rectTransform.localScale=Vector3.one*(pressed?.91f:1);}
+            float ease=1-Mathf.Exp(-22*Time.unscaledDeltaTime);
+            if(actionDiscs[slot])actionDiscs[slot].rectTransform.localScale=Vector3.Lerp(actionDiscs[slot].rectTransform.localScale,Vector3.one*(pressed?.94f:1),ease);
+            if(actionCovers[slot])actionCovers[slot].color=Color.Lerp(actionCovers[slot].color,pressed?Color.Lerp(Color.white,scout.Element,.22f):Color.white,ease);
         }
-        if(defenseHints[player])defenseHints[player].text=cpu?"RIVAL AI":pad==null?(player==0?"W JUMP / Q BACK\nSHIFT DASH / E GRAB":"UP JUMP / U BACK\nRSHIFT DASH / O GRAB"):ps?"L1 JUMP / L2 BACK\nR1 DASH / R2 GRAB":"LB JUMP / LT BACK\nRB DASH / RT GRAB";
     }
     static readonly string[] mapDescriptions={"Warm light. Old roots. A friendly rivalry.","Moonstone, falling water and a silver edge.","Glowing embers. A battle under red leaves.","Ancient sky ruins. A fight above the clouds."};
     public void RefreshMenu()

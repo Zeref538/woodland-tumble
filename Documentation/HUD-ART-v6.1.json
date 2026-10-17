@@ -1,0 +1,62 @@
+{
+  "title": "Tilt Rivals",
+  "art_style": "pixel art",
+  "mechanical_extraction": "2x2 alpha-bounded crops, uniform nearest-neighbor resize; no width/height stretching",
+  "hud_scale": 0.8,
+  "logical_panel_height": 146,
+  "display_panel_height_at_1280x720": 116.8,
+  "files": [
+    {
+      "path": "Assets/Art/UI/Actions/Block.png",
+      "size": [
+        256,
+        256
+      ],
+      "sha256": "a32b30eabca10e0ebde7d7670e6bbc23f5508fd1c27a345d8d8b4b6d2a094046"
+    },
+    {
+      "path": "Assets/Art/UI/Actions/Kick.png",
+      "size": [
+        256,
+        256
+      ],
+      "sha256": "a8815bbb0475f80f323a7deeff253d940ae923026c03ce063dcd09ed4da86f85"
+    },
+    {
+      "path": "Assets/Art/UI/Actions/Punch.png",
+      "size": [
+        256,
+        256
+      ],
+      "sha256": "72b563c1d790c645dd82b65ce44b9797264a78ce027e0236a5ce4f69d03790ed"
+    },
+    {
+      "path": "Assets/Art/UI/Actions/Special.png",
+      "size": [
+        256,
+        256
+      ],
+      "sha256": "2f62941bfbb53e285e716e17ec1b12027e07c2ab737370138aa413a23689974a"
+    },
+    {
+      "path": "Assets/Art/UI/Versus.png",
+      "size": [
+        256,
+        126
+      ],
+      "sha256": "33c1617a9280b5ea673610942654847b01a7de046ff84480c28bcafd2ac78705"
+    },
+    {
+      "path": "Assets/Art/UI/ActionDiamond.png",
+      "size": [
+        146,
+        146
+      ],
+      "sha256": "a71037bc5387c16447c8e72741d9b3b051811d6cbd2fdc9256463a3e3b345681"
+    }
+  ],
+  "sources": {
+    "Action-Medallions-Pixel-v6.1-source.png": "6483f8b98396245e3a95fbd74181e798d6e6077f9966ffbbb49204d815c908e3",
+    "Versus-Pixel-v6.1-source.png": "e33089177435fb8c232a55ca27be15919158377c48eea010bca5c7fd87dbfdd2"
+  }
+}

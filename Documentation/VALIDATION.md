@@ -1,4 +1,10 @@
-# Wildwood Rivals v6 validation
+# Tilt Rivals v6.1 validation
+
+The updated scene passed 460 Play Mode checks in Unity 6000.5.10f1. New presentation checks verify matching compact panel heights, circular covers at equal diamond endpoints, mirrored outside-edge portraits, generated VS artwork and absence of the sound-percentage popup. All existing combat and controller checks remain in the same passing run. BUILD-v6.1.json records the successful Windows build and current runtime script hashes.
+
+The final HUD render is TiltRivals-HUD-v6.1.png. The controller family badges are native UI over separate pixel-art action covers. Text labels and shoulder hints have been removed from the action diamond; the full field guide retains the action names and shoulder mappings. No audio playback was heard during validation because the listener stayed muted.
+
+## Earlier v6 baseline
 
 Unity 6000.5.10f1 passed 454 Play Mode checks against the rebuilt scene, then passed the same 454 checks against the saved scene after the crystal-prop crop correction. PLAYMODE-VALIDATION-v6.json records the final assertions. Older version reports remain historical evidence.
 

@@ -1,0 +1,637 @@
+fileFormatVersion: 2
+guid: acf1caee1a5a39c4f924bdddde2751be
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6995587783028567355
+    second: Versus-Pixel-v6.1-source_0
+  - first:
+      213: 1091444765003388524
+    second: Versus-Pixel-v6.1-source_1
+  - first:
+      213: 7499474553810891524
+    second: Versus-Pixel-v6.1-source_2
+  - first:
+      213: -5538279450746816540
+    second: Versus-Pixel-v6.1-source_3
+  - first:
+      213: -2197348927499140612
+    second: Versus-Pixel-v6.1-source_4
+  - first:
+      213: 4761622921987500210
+    second: Versus-Pixel-v6.1-source_5
+  - first:
+      213: 3684635236655638320
+    second: Versus-Pixel-v6.1-source_6
+  - first:
+      213: 4823474004328197539
+    second: Versus-Pixel-v6.1-source_7
+  - first:
+      213: -2222170181697928343
+    second: Versus-Pixel-v6.1-source_8
+  - first:
+      213: -5636352257129602216
+    second: Versus-Pixel-v6.1-source_9
+  - first:
+      213: -2621543893564744455
+    second: Versus-Pixel-v6.1-source_10
+  - first:
+      213: -2419402925361161107
+    second: Versus-Pixel-v6.1-source_11
+  - first:
+      213: 606348111732777210
+    second: Versus-Pixel-v6.1-source_12
+  - first:
+      213: -4291210100069019410
+    second: Versus-Pixel-v6.1-source_13
+  - first:
+      213: 8639968516713515722
+    second: Versus-Pixel-v6.1-source_14
+  - first:
+      213: -5756307909138852434
+    second: Versus-Pixel-v6.1-source_15
+  - first:
+      213: -8850886756244530759
+    second: Versus-Pixel-v6.1-source_16
+  - first:
+      213: -7844906672456788539
+    second: Versus-Pixel-v6.1-source_17
+  - first:
+      213: 8898583717874229824
+    second: Versus-Pixel-v6.1-source_18
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Versus-Pixel-v6.1-source_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 41
+        width: 1517
+        height: 915
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c2158db9fdaaee90800000000000000
+      internalID: -6995587783028567355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Versus-Pixel-v6.1-source_1
+      rect:
+        serializedVersion: 2
+        x: 1185
+        y: 921
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c669cf52b37952f00800000000000000
+      internalID: 1091444765003388524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Versus-Pixel-v6.1-source_2
+      rect:
+        serializedVersion: 2
+        x: 1191
+        y: 918
+        width: 110
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 403bafd6f5c731860800000000000000
+      internalID: 7499474553810891524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Versus-Pixel-v6.1-source_3
+      rect:
+        serializedVersion: 2
+        x: 1159
+        y: 833
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e7f36fbe241423b0800000000000000
+      internalID: -5538279450746816540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Versus-Pixel-v6.1-source_4
+      rect:
+        serializedVersion: 2
+        x: 1376
+        y: 845
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf104d0eac27181e0800000000000000
+      internalID: -2197348927499140612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Versus-Pixel-v6.1-source_5
+      rect:
+        serializedVersion: 2
+        x: 1113
+        y: 801
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b82c63c1dea41240800000000000000
+      internalID: 4761622921987500210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Versus-Pixel-v6.1-source_6
+      rect:
+        serializedVersion: 2
+        x: 1131
+        y: 793
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0372fb7c934722330800000000000000
+      internalID: 3684635236655638320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Versus-Pixel-v6.1-source_7
+      rect:
+        serializedVersion: 2
+        x: 1151
+        y: 797
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ad20531d0c60f240800000000000000
+      internalID: 4823474004328197539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Versus-Pixel-v6.1-source_8
+      rect:
+        serializedVersion: 2
+        x: 1456
+        y: 759
+        width: 29
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9630e694ef34921e0800000000000000
+      internalID: -2222170181697928343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Versus-Pixel-v6.1-source_9
+      rect:
+        serializedVersion: 2
+        x: 1482
+        y: 725
+        width: 57
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 853a1dc1c77a7c1b0800000000000000
+      internalID: -5636352257129602216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Versus-Pixel-v6.1-source_10
+      rect:
+        serializedVersion: 2
+        x: 1506
+        y: 439
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9fc9af4e7b76e9bd0800000000000000
+      internalID: -2621543893564744455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Versus-Pixel-v6.1-source_11
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 134
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6c9e41abdd8c6ed0800000000000000
+      internalID: -2419402925361161107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Versus-Pixel-v6.1-source_12
+      rect:
+        serializedVersion: 2
+        x: 815
+        y: 124
+        width: 17
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af0af02256e2a6800800000000000000
+      internalID: 606348111732777210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Versus-Pixel-v6.1-source_13
+      rect:
+        serializedVersion: 2
+        x: 1282
+        y: 127
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee051d8562f8274c0800000000000000
+      internalID: -4291210100069019410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Versus-Pixel-v6.1-source_14
+      rect:
+        serializedVersion: 2
+        x: 695
+        y: 113
+        width: 15
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aca8445e69557e770800000000000000
+      internalID: 8639968516713515722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Versus-Pixel-v6.1-source_15
+      rect:
+        serializedVersion: 2
+        x: 801
+        y: 109
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea5d102747c7d10b0800000000000000
+      internalID: -5756307909138852434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Versus-Pixel-v6.1-source_16
+      rect:
+        serializedVersion: 2
+        x: 625
+        y: 70
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b9d5d2a3655b2580800000000000000
+      internalID: -8850886756244530759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Versus-Pixel-v6.1-source_17
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 57
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c51f1c02fa412390800000000000000
+      internalID: -7844906672456788539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Versus-Pixel-v6.1-source_18
+      rect:
+        serializedVersion: 2
+        x: 599
+        y: 53
+        width: 9
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 042e7f3aebe1e7b70800000000000000
+      internalID: 8898583717874229824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Versus-Pixel-v6.1-source_0: -6995587783028567355
+      Versus-Pixel-v6.1-source_1: 1091444765003388524
+      Versus-Pixel-v6.1-source_10: -2621543893564744455
+      Versus-Pixel-v6.1-source_11: -2419402925361161107
+      Versus-Pixel-v6.1-source_12: 606348111732777210
+      Versus-Pixel-v6.1-source_13: -4291210100069019410
+      Versus-Pixel-v6.1-source_14: 8639968516713515722
+      Versus-Pixel-v6.1-source_15: -5756307909138852434
+      Versus-Pixel-v6.1-source_16: -8850886756244530759
+      Versus-Pixel-v6.1-source_17: -7844906672456788539
+      Versus-Pixel-v6.1-source_18: 8898583717874229824
+      Versus-Pixel-v6.1-source_2: 7499474553810891524
+      Versus-Pixel-v6.1-source_3: -5538279450746816540
+      Versus-Pixel-v6.1-source_4: -2197348927499140612
+      Versus-Pixel-v6.1-source_5: 4761622921987500210
+      Versus-Pixel-v6.1-source_6: 3684635236655638320
+      Versus-Pixel-v6.1-source_7: 4823474004328197539
+      Versus-Pixel-v6.1-source_8: -2222170181697928343
+      Versus-Pixel-v6.1-source_9: -5636352257129602216
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
