@@ -114,6 +114,7 @@ MonoBehaviour:
   id: 0
   displayName: Fern
   inputEnabled: 1
+  aiControlled: 0
   art: {fileID: 4697976862626804864}
   animator: {fileID: 1945593596417772642}
   animations: {fileID: 11400000, guid: a7a5c0387187142c89afd15678e8cad6, type: 2}

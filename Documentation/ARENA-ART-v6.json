@@ -1,0 +1,34 @@
+{
+  "source": "Assets/Art/Sources/Skyward-Props-v6-source.png",
+  "source_sha256": "f96e7637b9acce78d9612f38f8c1e991dcf6297e15f7fa6401855027c581ffa8",
+  "crop_alpha_threshold": 64,
+  "resize": "uniform nearest neighbor, centered in existing arena canvases",
+  "props": {
+    "SkywardPlank": {
+      "canvas": [
+        824,
+        164
+      ],
+      "visible_bounds_alpha64": [
+        4,
+        16,
+        820,
+        148
+      ],
+      "sha256": "5d2070e92e5cd2b3f38df648c8f5f42c59ca21c9e87a9c7b68138667800e92b9"
+    },
+    "CrystalSphere": {
+      "canvas": [
+        280,
+        262
+      ],
+      "visible_bounds_alpha64": [
+        11,
+        4,
+        269,
+        258
+      ],
+      "sha256": "bcc4855cf0fbb1803cc8db3efbb3445c855c61a439811aa68c5cc641c9f34d47"
+    }
+  }
+}

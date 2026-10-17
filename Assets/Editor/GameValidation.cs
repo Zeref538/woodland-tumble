@@ -17,7 +17,7 @@ public static class GameValidation
     static GamepadState[] padStates = new GamepadState[2];
     static Gamepad[] disabledPads = new Gamepad[0];
     static InputSettings originalInputSettings, validationInputSettings;
-    const string Active = "Woodland.ValidateV5";
+    const string Active = "Woodland.ValidateV6";
     static GameValidation() { EditorApplication.update += Tick; }
     [Serializable] public class Report { public bool success; public string status; public string[] checks; }
     public static void InspectHUD()
@@ -39,7 +39,8 @@ public static class GameValidation
         SessionState.SetBool(Active, true);
         SessionState.SetInt("Woodland.PushCount", 0);
         SessionState.SetFloat("Woodland.LastForce", 0);
-        SetStage(0);
+        SessionState.SetBool("Woodland.RosterCaptured",false);
+        SetStage(-1);
         EditorApplication.isPlaying = true;
     }
     static void Check(bool ok, string message)
@@ -58,59 +59,77 @@ public static class GameValidation
             var game = WoodlandGame.Instance;if (game == null) return;
             int stage = SessionState.GetInt("Woodland.Stage", 0);
             var a = game.players[0];var b = game.players[1];
-            if (stage == 0 && game.playing && Time.timeSinceLevelLoad > 3) {
+            if (stage == -1 && Elapsed > .25f) {
+                Check(game.Screen == WoodlandGame.MenuScreen.Title && !game.playing && !game.Paused, "Boot opens the title menu without starting or pausing a match");
+                Check(!game.plank.simulated && game.players.All(scout => !scout.Body.simulated), "Title menu freezes the plank and both players");
+                Check(game.hud.menuRoot && game.hud.titleMenu && game.hud.mapMenu && game.hud.matchHud && game.hud.startButton && game.hud.backButton && game.hud.modeText && game.hud.mapDescription, "Menu roots, navigation buttons and descriptive labels are wired");
+                Check(game.hud.modeButtons != null && game.hud.modeButtons.Length == 4 && game.hud.modeButtons.All(button => button != null) && game.hud.mapButtons != null && game.hud.mapButtons.Length == 4 && game.hud.mapButtons.All(button => button != null), "All four main menu buttons and four map buttons are wired");
+                game.hud.RefreshMenu();Capture("Documentation/main-menu-1280-v6.png");
+                Check(game.hud.ruleButtons.Length == 2 && game.hud.ruleButtons.All(button => button != null) && game.hud.characterButtons.Length == 4 && game.hud.characterButtons.All(button => button != null) && game.hud.confirmCharacterButton && game.hud.ruleBackButton && game.hud.characterBackButton && game.hud.settingsBackButton, "Rules, four-character roster and settings navigation are wired");
+                SelectMenuRoster(game, false, true, 0);
+                game.hud.startButton.onClick.Invoke();
+                Check(game.Screen == WoodlandGame.MenuScreen.Match && !game.SoloMode, "Map start button enters the selected local match");
+                SetStage(0);
+            } else if (stage == 0 && game.playing && Time.timeSinceLevelLoad > 3) {
                 Check(Camera.main != null && game.plank != null && game.hud != null, "Saved camera, platform and HUD references work");
                 Check(a.transform.position.x < -2 && b.transform.position.x > 2, "Players spawn at separate editable spawn points");
                 Check(a.transform.position.y > -2 && b.transform.position.y > -2, "Players land on the plank");
-                foreach (var scout in game.players) foreach (string state in new[] { "Walk", "Jump", "Hurt", "Push", "Punch", "Knockout", "Block", "DoubleJump" }) {
+                foreach (var scout in game.players) foreach (string state in new[] { "Walk", "Jump", "Hurt", "Push", "Punch", "Knockout", "Block", "DoubleJump", "Kick" }) {
                     var frames = scout.animations.Get(state);
                     Check(frames.Length == 10 && frames.All(f => f != null && f.rect.width == 256 && f.rect.height == 256), scout.displayName + "/" + state + ": ten independent 256px sprites");
                     Check(scout.animator.HasState(0, Animator.StringToHash("Base Layer." + state)), scout.displayName + "/" + state + ": editable Animator state exists");
                 }
-                foreach (var scout in game.players) foreach (string state in new[] { "Dash", "Charge", "Smash", "Combo2", "Combo3" }) {
+                foreach (var scout in game.players) foreach (string state in new[] { "Dash", "Charge", "Smash", "Combo2", "Combo3", "Backstep", "Grab" }) {
                     var controller = scout.animator.runtimeAnimatorController as UnityEditor.Animations.AnimatorController;
                     Check(controller != null && scout.animator.HasState(0, Animator.StringToHash("Base Layer." + state)), scout.displayName + "/" + state + ": real Animator state exists");
                     var node = controller.layers[0].stateMachine.states.FirstOrDefault(entry => entry.state.name == state).state;
                     var clip = node == null ? null : node.motion as AnimationClip;
                     Check(clip != null && AnimationUtility.GetObjectReferenceCurveBindings(clip).Any(binding => binding.type == typeof(SpriteRenderer) && binding.propertyName == "m_Sprite" && AnimationUtility.GetObjectReferenceCurve(clip, binding).Any(key => key.value is Sprite)), scout.displayName + "/" + state + ": assigned clip contains real sprite keyframes");
                 }
+                ValidateRosterAssets();
                 Check(game.hud.healthFill.All(i => i.sprite != null && i.type == Image.Type.Filled), "HUD health fills and panel sprites are serialized");
+                Check(game.hud.shieldFill.Length == 2 && game.hud.shieldFill.All(image => image != null && image.type == Image.Type.Filled), "Both real stamina meters have wired filled images");
+                Check(game.hud.actionDiscs.Length == 8 && game.hud.actionDiscs.All(image => image != null) && game.hud.actionIcons.Length == 8 && game.hud.actionIcons.All(image => image != null) && game.hud.actionGlyphs.Length == 8 && game.hud.actionGlyphs.All(text => text != null) && game.hud.actionLabels.Length == 8 && game.hud.actionLabels.All(text => text != null), "Both four-button action diamonds have complete disc, icon, glyph and action label references");
                 Check(game.hud.helpPanel != null && game.hud.damageGhost.Length == 2 && game.hud.damageGhost.All(image => image != null) && game.hud.fighterPlates.Length == 2 && game.hud.fighterPlates.All(plate => plate != null), "Presentation HUD has wired help panel, two damage ghosts and two fighter plates");
                 Check(game.hud.deviceText != null && game.hud.deviceText.Length == 2 && game.hud.deviceText.All(text => text != null) && game.hud.controlsText != null && game.hud.controlsText.Length == 2 && game.hud.controlsText.All(text => text != null), "Both player device labels and help control texts are wired");
+                ValidateHudCorners(game);
+                ValidateHudMeters(game);
                 foreach(var label in game.hud.healthText)Check(label.preferredHeight<=label.rectTransform.rect.height,"HP digits fit their text rectangle without clipping");
                 Check(WoodlandEffects.Instance.fernSlash.Length==8 && WoodlandEffects.Instance.emberSlash.Length==8 && WoodlandEffects.Instance.fernSlash.All(frame=>frame!=null) && WoodlandEffects.Instance.emberSlash.All(frame=>frame!=null),"Both elemental attack animations contain eight loaded VFX frames");
                 if(System.Array.IndexOf(System.Environment.GetCommandLineArgs(),"-silent-test")>=0)Check(AudioListener.volume==0,"Silent test mode keeps speaker output muted");
                 ValidateAudio(game);
-                Capture("Documentation/GamePreview-v5.png");
+                Capture("Documentation/GamePreview-v6.png");
                 var originalCollider = game.plank.GetComponent<BoxCollider2D>().size;
                 var originalScale = game.plank.transform.localScale;
-                for (int arena = 0; arena < 3; arena++) {
+                for (int arena = 0; arena < 4; arena++) {
                     game.SelectArena(arena);
                     Check(game.ArenaIndex == arena && game.backgroundArt.sprite == game.backgrounds[arena] && game.plankArt.sprite == game.planks[arena] && game.sphereArt.sprite == game.spheres[arena], "Arena " + arena + ": matching background, plank and sphere switch together");
                     Check(game.plank.GetComponent<BoxCollider2D>().size == originalCollider && game.plank.transform.localScale == originalScale, "Arena " + arena + ": visual changes preserve collider proportions");
-                    Capture("Documentation/arena-" + arena + "-1280-v5.png");
+                    Capture("Documentation/arena-" + arena + "-1280-v6.png");
                 }
                 game.SelectArena(1);
                 game.fallBoundary = -100;
                 game.plank.bodyType = RigidbodyType2D.Kinematic;
                 Arrange(game);
                 Check(a.TryAttack(true), "Punch action starts");
+                Check(Mathf.Approximately(a.Stamina, a.StaminaCapacity - 8), "Accepted punch spends eight real stamina");
                 Check(a.AnimationState == "Punch", "Punch uses its own animation");
                 SetStage(10);
             } else if (stage == 10 && SimElapsed > .25f) {
                 Check(Mathf.Approximately(b.Health, b.maxHealth - a.punchDamage), "Punch applies reduced damage (" + a.punchDamage + ")");
                 Check(b.Body.linearVelocity.x > a.punchKnockback && b.Body.linearVelocity.x < 6, "Punch applies moderated knockback");
                 Check(WoodlandEffects.Instance.ActiveMotes > 0 && WoodlandEffects.Instance.ActiveMotes <= 320, "Pooled attack VFX are active within capacity");
-                Capture("Documentation/VFXPreview-v5.png");
+                Capture("Documentation/VFXPreview-v6.png");
                 a.ResetScout();b.ResetScout();Arrange(game);
-                Check(a.TryAttack(false), "Push action starts");
-                Check(a.AnimationState == "Push", "Push uses its own animation");
+                Check(a.TryAttack(false), "Kick action starts");
+                Check(Mathf.Approximately(a.Stamina, a.StaminaCapacity - 6), "Accepted kick spends six real stamina");
+                Check(a.AnimationState == "Kick", "Kick uses its own animation");
                 SetStage(1);
             } else if (stage == 1 && SimElapsed > .25f) {
                 int count = SessionState.GetInt("Woodland.PushCount", 0);
-                Check(Mathf.Approximately(b.Health, Mathf.Max(0, b.maxHealth - (count + 1) * a.pushDamage)), "Push " + (count + 1) + " applies reduced damage (" + a.pushDamage + ")");
+                Check(Mathf.Approximately(b.Health, Mathf.Max(0, b.maxHealth - (count + 1) * a.pushDamage)), "Kick " + (count + 1) + " applies reduced damage (" + a.pushDamage + ")");
                 float force = b.Body.linearVelocity.x;
-                Check(force > SessionState.GetFloat("Woodland.LastForce", 0), "Push knockback grows as health drops (" + force.ToString("F2") + ")");
+                Check(force > SessionState.GetFloat("Woodland.LastForce", 0), "Kick knockback grows as health drops (" + force.ToString("F2") + ")");
                 SessionState.SetFloat("Woodland.LastForce", force);
                 SessionState.SetInt("Woodland.PushCount", count + 1);
                 if (b.Health <= 0) {
@@ -119,12 +138,12 @@ public static class GameValidation
                 } else SetStage(2);
             } else if (stage == 2 && SimElapsed > 1.1f) {
                 Arrange(game);
-                Check(a.TryAttack(false), "Push recovers after cooldown");
+                Check(a.TryAttack(false), "Kick recovers after cooldown");
                 SetStage(1);
             } else if (stage == 3 && SimElapsed > .8f) {
                 // Place the collapsed sprite on the board for a clear animation preview.
                 b.Body.linearVelocity = Vector2.zero;b.Body.position = new Vector2(1.5f, .12f);b.transform.position = b.Body.position;
-                Capture("Documentation/KnockoutPreview-v5.png");
+                Capture("Documentation/KnockoutPreview-v6.png");
                 SetStage(4);
             } else if (stage == 4 && SimElapsed > .65f) {
                 Check(game.score[0] == 1, "Knockout awards the opponent a round");
@@ -157,18 +176,24 @@ public static class GameValidation
                 heldKey = Key.None;
                 b.ResetScout();b.Body.simulated=true;b.Body.gravityScale=0;b.Body.position=new Vector2(2.2f,.15f);b.transform.position=b.Body.position;
                 a.inputEnabled = false;
+                float jumpStamina = a.Stamina;
                 Check(a.TryJump() && a.AirJumpsRemaining == 1, "Ground jump preserves the one aerial jump budget");
+                Check(Mathf.Approximately(a.Stamina, jumpStamina - 4), "Ground jump spends four stamina");
                 Check(a.TryJump() && a.AirJumpsRemaining == 0, "Double jump consumes exactly one aerial jump");
+                Check(Mathf.Approximately(a.Stamina, jumpStamina - 10), "Aerial jump spends another six stamina");
                 Check(!a.TryJump(), "Third jump is denied before landing");
+                Check(Mathf.Approximately(a.Stamina, jumpStamina - 10), "Denied third jump spends no additional stamina");
                 Check(a.AnimationState == "DoubleJump", "Aerial jump selects its dedicated animation");
                 SetStage(20);
             } else if (stage == 20 && SimElapsed > .18f) {
                 Check(WoodlandEffects.Instance.ActiveMotes > 0, "Double jump produces visible pooled effects");
-                Capture("Documentation/combat-doublejump-1280-v5.png");
+                Capture("Documentation/combat-doublejump-1280-v6.png");
                 a.ResetScout();b.ResetScout();Arrange(game);
                 Check(a.TryDash(), "Dash starts when ready");
+                Check(Mathf.Approximately(a.Stamina, a.StaminaCapacity - 10), "Accepted dash spends ten stamina");
                 Check(a.AnimationState == "Dash" && a.Body.linearVelocity.x >= a.dashSpeed * .99f, "Dash uses its animation and intended launch speed");
                 Check(!a.TryDash() && !a.TryAttack(true), "Dash denies a second dash and attacks during its burst");
+                Check(Mathf.Approximately(a.Stamina, a.StaminaCapacity - 10), "Denied actions during a dash spend no stamina");
                 SetStage(21);
             } else if (stage == 21 && SimElapsed > .22f) {
                 Check(!a.TryDash() && a.DashReady < 1, "Dash remains unavailable after its burst until cooldown ends");
@@ -182,7 +207,7 @@ public static class GameValidation
                 float shield = b.Shield;
                 Check(!b.ReceiveHit(a, 1, true), "A frontal hit is absorbed after the parry window");
                 Check(Mathf.Approximately(b.Health, b.maxHealth) && b.Shield < shield - a.punchDamage * 2, "Normal guard drains shield instead of health");
-                Capture("Documentation/combat-guard-1280-v5.png");
+                Capture("Documentation/combat-guard-1280-v6.png");
                 a.Body.position = b.Body.position + Vector2.right;
                 a.transform.position = a.Body.position;Physics2D.SyncTransforms();
                 Check(b.ReceiveHit(a, -1, true) && b.Health < b.maxHealth, "A rear hit bypasses the directional guard");
@@ -190,7 +215,7 @@ public static class GameValidation
                 Check(!b.ReceiveHit(a, 1, true), "A freshly raised guard parries a frontal hit");
                 Check(a.Status == "STAGGERED" && !a.TryAttack(true) && !a.TryDash(), "Parry staggers the attacker and blocks immediate retaliation");
                 Check(Mathf.Approximately(b.Health, b.maxHealth), "Parry preserves defender health");
-                Capture("Documentation/combat-parry-1280-v5.png");
+                Capture("Documentation/combat-parry-1280-v6.png");
                 SetStage(24);
             } else if (stage == 24 && SimElapsed > .45f) {
                 Check(a.Status != "STAGGERED" && a.TryDash(), "Parry stagger expires and allows actions again");
@@ -211,12 +236,14 @@ public static class GameValidation
                 Check(!a.TryAttack(true) && !a.TryDash(), "Charging prevents ordinary attacks and dashes");
                 SetStage(28);
             } else if (stage == 28 && SimElapsed > .55f) {
+                float smashStamina = a.Stamina;
                 Check(a.Charge > .5f && a.ReleaseSmash(), "Holding smash builds charge before release");
+                Check(Mathf.Approximately(a.Stamina, smashStamina - 14), "Releasing a charged special spends fourteen stamina");
                 Check(!a.Charging && a.AnimationState == "Smash", "Release changes from charge to smash animation");
                 SetStage(29);
             } else if (stage == 29 && SimElapsed > .2f) {
                 Check(b.maxHealth - b.Health > a.punchDamage * 1.5f, "Charged smash deals substantially more damage than one punch");
-                Capture("Documentation/combat-smash-1280-v5.png");
+                Capture("Documentation/combat-smash-1280-v6.png");
                 a.ResetScout();b.ResetScout();
                 foreach (var scout in game.players) {
                     Check(scout.Health == scout.maxHealth && scout.Shield == scout.shieldCapacity, scout.displayName + ": reset restores health and shield");
@@ -238,7 +265,7 @@ public static class GameValidation
                 SetStage(32);
             } else if (stage == 32 && SimElapsed > .5f) {
                 Check(a.ComboCount == 3 && Mathf.Approximately(b.Health, b.maxHealth - 3.4f * a.punchDamage), "Three-hit combo connects with a stronger final hit");
-                Capture("Documentation/combat-combo-1280-v5.png");
+                Capture("Documentation/combat-combo-1280-v6.png");
                 SetStage(33);
             } else if (stage == 33 && SimElapsed > 1.1f) {
                 Check(a.ComboCount == 0, "Combo counter expires when attacks stop connecting");
@@ -250,7 +277,7 @@ public static class GameValidation
             } else if (stage == 34 && SimElapsed > .1f) {
                 Check(game.hud.helpPanel.activeSelf != SessionState.GetBool("Woodland.HelpWasVisible", false), "F1 opens or closes the wired controls overlay");
                 Check(game.Paused == SessionState.GetBool("Woodland.WasPaused", false), "Controls overlay does not change game pause state");
-                Capture("Documentation/controls-1280-v5.png");
+                Capture("Documentation/controls-1280-v6.png");
                 heldKey = Key.None;DriveTestInput();SetStage(35);
             } else if (stage == 35 && SimElapsed > .1f) {
                 heldKey = Key.F1;DriveTestInput();SetStage(36);
@@ -270,7 +297,7 @@ public static class GameValidation
                 var effects = WoodlandEffects.Instance;
                 Check(Mathf.Approximately(a.Health, a.maxHealth - b.punchDamage), "Player two left-facing punch damages player one");
                 Check(effects.GetComponentsInChildren<SpriteRenderer>().Any(renderer => renderer.enabled && effects.emberSlash.Contains(renderer.sprite)), "Player two attack displays its own active Ember slash sprite");
-                Capture("Documentation/combat-ember-1280-v5.png");
+                Capture("Documentation/combat-ember-1280-v6.png");
                 Check(effects.Muted != SessionState.GetBool("Woodland.AudioKeysMuted", false), "Keyboard M toggles mute");
                 heldKey = Key.Equals;DriveTestInput();SetStage(38);
             } else if (stage == 38 && SimElapsed > .1f) {
@@ -287,16 +314,16 @@ public static class GameValidation
             } else if (stage == 41 && SimElapsed > .12f) {
                 Check(game.GetGamepad(0) == testPads[0] && game.GetGamepad(1) == testPads[1], "Two connected controllers occupy separate player slots");
                 Check(a.MovementInput > .5f && Mathf.Abs(b.MovementInput) < .01f, "Player one stick moves only player one");
-                padStates[0] = new GamepadState { leftStick = Vector2.right * .8f, rightTrigger = 1 };
+                padStates[0] = new GamepadState { leftStick = Vector2.right * .8f }.WithButton(GamepadButton.North);
                 padStates[1] = new GamepadState().WithButton(GamepadButton.DpadLeft);SetStage(42);
             } else if (stage == 42 && SimElapsed > .12f) {
                 Check(b.MovementInput < -.9f && a.MovementInput > .5f, "Two controllers simultaneously move their own players in opposite directions");
-                Check(a.Charging, "Held player one right trigger starts a charge before disconnect");
+                Check(a.Charging, "Held player one north button starts a special charge before disconnect");
                 InputSystem.RemoveDevice(testPads[0]);testPads[0] = null;game.RefreshGamepads();SetStage(43);
             } else if (stage == 43 && SimElapsed > .12f) {
                 Check(game.GetGamepad(0) == null && game.GetGamepad(1) == testPads[1], "Unplugging player one leaves player two in its original slot");
                 Check(Mathf.Abs(a.MovementInput) < .01f && b.MovementInput < -.9f, "Disconnected controller releases movement while the other controller still works");
-                Check(!a.Charging && a.AnimationState != "Smash" && b.Health == b.maxHealth, "Disconnecting a held trigger cancels charge without an accidental smash");
+                Check(!a.Charging && a.AnimationState != "Smash" && b.Health == b.maxHealth, "Disconnecting a held special button cancels charge without an accidental smash");
                 testPads[0] = InputSystem.AddDevice<Gamepad>();game.RefreshGamepads();
                 Check(game.GetGamepad(0) == testPads[0] && game.GetGamepad(1) == testPads[1], "A replacement controller fills the empty slot without stealing player two");
                 PreparePadCombat(game);padStates[0] = new GamepadState().WithButton(GamepadButton.West);SetStage(44);
@@ -304,10 +331,10 @@ public static class GameValidation
                 Check(Mathf.Approximately(b.Health, b.maxHealth - a.punchDamage), "Player one west face button punches player two");
                 PreparePadCombat(game);padStates[1] = new GamepadState().WithButton(GamepadButton.East);SetStage(45);
             } else if (stage == 45 && SimElapsed > .25f) {
-                Check(Mathf.Approximately(a.Health, a.maxHealth - b.pushDamage), "Player two east face button pushes player one");
-                PreparePadCombat(game);padStates[1] = new GamepadState { leftTrigger = 1 };SetStage(46);
+                Check(Mathf.Approximately(a.Health, a.maxHealth - b.pushDamage), "Player two east face button kicks player one");
+                PreparePadCombat(game);padStates[1] = new GamepadState().WithButton(GamepadButton.South);SetStage(46);
             } else if (stage == 46 && SimElapsed > .2f) {
-                Check(b.Blocking && !a.Blocking && b.Shield < b.shieldCapacity, "Player two left trigger holds and drains its own guard");
+                Check(b.Blocking && !a.Blocking && b.Shield < b.shieldCapacity, "Player two south face button holds and drains its own guard");
                 PreparePadCombat(game);b.Body.simulated = false;padStates[0] = new GamepadState().WithButton(GamepadButton.RightShoulder);SetStage(47);
             } else if (stage == 47 && SimElapsed > .08f) {
                 Check(a.DashReady < 1 && a.Body.linearVelocity.x > 7, "Player one right shoulder launches a right-facing dash");
@@ -316,20 +343,20 @@ public static class GameValidation
                 Check(b.Charging && b.Charge > .3f && !a.Charging, "Player two north face button charges its own smash");
                 padStates[1] = new GamepadState();SetStage(49);
             } else if (stage == 49 && SimElapsed > .23f) {
-                Check(!b.Charging && a.maxHealth - a.Health > b.punchDamage, "Releasing player two charge button executes a stronger left-facing smash");
-                Capture("Documentation/controller-combat-1280-v5.png");
+                Check(!b.Charging && a.Health < a.maxHealth, "Releasing player two special button executes its first left-facing flame-rush contact");
+                Capture("Documentation/controller-combat-1280-v6.png");
                 PreparePadCombat(game);StartJumpCase(game, false);SetStage(50);
             } else if (stage == 50 && SimElapsed > .2f) {
                 Check(a.Grounded, "Controller jump test begins on the walking surface");
                 SessionState.SetFloat("Woodland.PadJumpY", a.Body.position.y);
-                padStates[0] = new GamepadState().WithButton(GamepadButton.South);SetStage(51);
+                padStates[0] = new GamepadState().WithButton(GamepadButton.LeftShoulder);SetStage(51);
             } else if (stage == 51 && SimElapsed > .12f) {
-                Check(a.Body.position.y > SessionState.GetFloat("Woodland.PadJumpY", 0) + .3f && a.AirJumpsRemaining == 1, "South face button jumps while preserving the extra aerial jump");
+                Check(a.Body.position.y > SessionState.GetFloat("Woodland.PadJumpY", 0) + .3f && a.AirJumpsRemaining == 1, "Left shoulder jumps while preserving the extra aerial jump");
                 padStates[0] = new GamepadState();SetStage(52);
             } else if (stage == 52 && SimElapsed > .06f) {
-                padStates[0] = new GamepadState().WithButton(GamepadButton.South);SetStage(53);
+                padStates[0] = new GamepadState().WithButton(GamepadButton.LeftShoulder);SetStage(53);
             } else if (stage == 53 && SimElapsed > .1f) {
-                Check(a.AirJumpsRemaining == 0 && a.AnimationState == "DoubleJump", "A second south press performs the dedicated aerial jump");
+                Check(a.AirJumpsRemaining == 0 && a.AnimationState == "DoubleJump", "A second left shoulder press performs the dedicated aerial jump");
                 PreparePadCombat(game);padStates[0] = new GamepadState().WithButton(GamepadButton.Start);SetStage(54);
             } else if (stage == 54 && Elapsed > .12f) {
                 Check(game.Paused, "Controller start pauses the game");
@@ -339,13 +366,13 @@ public static class GameValidation
             } else if (stage == 56 && Elapsed > .12f) {
                 Check(!game.Paused, "A second controller start press resumes the game");
                 SessionState.SetBool("Woodland.PadHelp", game.hud.helpPanel.activeSelf);
-                padStates[0] = new GamepadState { rightTrigger = 1 };SetStage(62);
+                padStates[0] = new GamepadState().WithButton(GamepadButton.North);SetStage(62);
             } else if (stage == 62 && SimElapsed > .2f) {
-                Check(a.Charging, "Controller trigger begins charging before entering the menu chord");
+                Check(a.Charging, "Controller north special button begins charging before entering the menu chord");
                 SessionState.SetFloat("Woodland.MenuChargeHealth", b.Health);
-                padStates[0] = new GamepadState { rightTrigger = 1 }.WithButton(GamepadButton.Select);SetStage(63);
+                padStates[0] = new GamepadState().WithButton(GamepadButton.North).WithButton(GamepadButton.Select);SetStage(63);
             } else if (stage == 63 && SimElapsed > .25f) {
-                Check(!a.Charging && a.AnimationState != "Smash" && b.Health == SessionState.GetFloat("Woodland.MenuChargeHealth", 0), "Select cancels an existing held-trigger charge without releasing a smash");
+                Check(!a.Charging && a.AnimationState != "Smash" && b.Health == SessionState.GetFloat("Woodland.MenuChargeHealth", 0), "Select cancels an existing held-special charge without releasing a smash");
                 padStates[0] = new GamepadState().WithButton(GamepadButton.Select);SetStage(57);
             } else if (stage == 57 && SimElapsed > .12f) {
                 padStates[0] = new GamepadState();SetStage(58);
@@ -355,7 +382,7 @@ public static class GameValidation
                 SessionState.SetInt("Woodland.PadArena", game.ArenaIndex);
                 padStates[0] = new GamepadState().WithButton(GamepadButton.Select).WithButton(GamepadButton.RightShoulder);SetStage(59);
             } else if (stage == 59 && SimElapsed > .12f) {
-                Check(game.ArenaIndex == (SessionState.GetInt("Woodland.PadArena", 0) + 1) % 3, "Select plus right shoulder cycles to the next arena");
+                Check(game.ArenaIndex == (SessionState.GetInt("Woodland.PadArena", 0) + 1) % 4, "Select plus right shoulder cycles to the next arena");
                 Check(a.DashReady == 1, "Arena shortcut suppresses the shoulder dash action");
                 Check(game.hud.helpPanel.activeSelf != SessionState.GetBool("Woodland.PadHelp", false), "Arena shortcut does not also toggle help");
                 padStates[0] = new GamepadState();SetStage(60);
@@ -365,9 +392,187 @@ public static class GameValidation
                 padStates[0] = new GamepadState().WithButton(GamepadButton.Select).WithButton(GamepadButton.South);SetStage(61);
             } else if (stage == 61 && SimElapsed > .12f) {
                 Check(game.score[0] == 0 && game.score[1] == 0 && !game.playing, "Select plus south restarts the match into its countdown");
-                Check(a.AirJumpsRemaining == 1 && a.Body.linearVelocity == Vector2.zero, "Rematch shortcut does not also jump the player");
+                Check(a.AirJumpsRemaining == 1 && !a.Blocking && a.Body.linearVelocity == Vector2.zero, "Rematch shortcut does not also block or move the player");
                 game.hud.helpPanel.SetActive(SessionState.GetBool("Woodland.PadHelp", false));
-                Complete(true, "PRESENTATION_AUDIO_COMBAT_CONTROLLERS_AND_EDGE_PHYSICS_VALIDATED");
+                heldKey = Key.None;padStates[0] = padStates[1] = new GamepadState();
+                game.ReturnToMenu();SetStage(70);
+            } else if (stage == 70 && SimElapsed > .15f) {
+                Check(game.Screen == WoodlandGame.MenuScreen.Title && !game.playing && !game.Paused && !game.plank.simulated && game.players.All(scout => !scout.Body.simulated), "Returning to title freezes gameplay and clears pause");
+                Check(!a.TryAttack(true) && !a.TryJump() && !a.TryDash() && !a.BeginSmash(), "Title menu denies combat and movement actions");
+                SelectMenuRoster(game, true, true, 0);
+                Check(game.SoloMode && game.Screen == WoodlandGame.MenuScreen.Maps && !game.playing, "Solo rules and roster selection reach map selection without starting gameplay");
+                for (int arena = 0; arena < 4; arena++) {
+                    game.hud.mapButtons[arena].onClick.Invoke();
+                    Check(game.PendingArena == arena && game.ArenaIndex == arena && !game.playing && !game.plank.simulated, "Map button " + arena + ": previews the matching arena without starting physics");
+                }
+                game.hud.backButton.onClick.Invoke();
+                Check(game.Screen == WoodlandGame.MenuScreen.Characters && !game.playing, "Map Back button returns to character selection without starting a match");
+                game.hud.characterBackButton.onClick.Invoke();
+                Check(game.Screen == WoodlandGame.MenuScreen.Rules, "Character Back button returns to rule selection");
+                game.hud.ruleBackButton.onClick.Invoke();
+                Check(game.Screen == WoodlandGame.MenuScreen.Title, "Rules Back button returns to title");
+                SelectMenuRoster(game, true, true, 2);
+                game.hud.RefreshMenu();Capture("Documentation/map-menu-1280-v6.png");
+                game.hud.startButton.onClick.Invoke();
+                Check(game.Screen == WoodlandGame.MenuScreen.Match && game.SoloMode && game.BalanceMode && game.PendingArena == 2 && game.ArenaIndex == 2, "Start button preserves the chosen solo balance arena into the match");
+                SetStage(71);
+            } else if (stage == 71 && game.playing && SimElapsed > 2) {
+                Check(!a.aiControlled && b.aiControlled, "Solo mode enables AI only for player two");
+                PrepareAiCase(game, 4);
+                SessionState.SetInt("Woodland.AIDecisions", b.AIDecisions);
+                SessionState.SetFloat("Woodland.AIStartX", b.Body.position.x);
+                padStates[1] = new GamepadState { leftStick = Vector2.right };
+                SetStage(72);
+            } else if (stage == 72 && SimElapsed > .65f) {
+                Check(b.AIDecisions > SessionState.GetInt("Woodland.AIDecisions", 0), "Solo rival makes autonomous decisions without attack inputs");
+                Check(Mathf.Abs(a.MovementInput) < .01f && b.Body.position.x < SessionState.GetFloat("Woodland.AIStartX", 0) - .2f, "Solo rival approaches the opponent instead of following its assigned pad's opposing stick");
+                padStates[1] = new GamepadState();PrepareAiCase(game, 1.25f);
+                SessionState.SetInt("Woodland.AIActions", b.AIActionRequests);SetStage(73);
+            } else if (stage == 73 && SimElapsed > 2.2f) {
+                Check(b.AIActionRequests > SessionState.GetInt("Woodland.AIActions", 0) && a.Health < a.maxHealth, "Autonomous rival performs real combat actions and damages the nearby opponent");
+                Capture("Documentation/solo-combat-1280-v6.png");
+                SessionState.SetInt("Woodland.AIDecisions", b.AIDecisions);
+                SessionState.SetInt("Woodland.AIActions", b.AIActionRequests);
+                SessionState.SetFloat("Woodland.AIFrozenX", b.Body.position.x);
+                SessionState.SetFloat("Woodland.AIFrozenY", b.Body.position.y);
+                game.TogglePause();SetStage(74);
+            } else if (stage == 74 && Elapsed > .3f) {
+                Check(game.Paused && b.AIDecisions == SessionState.GetInt("Woodland.AIDecisions", 0) && b.AIActionRequests == SessionState.GetInt("Woodland.AIActions", 0), "Pause freezes autonomous decisions and action counts");
+                Check(Vector2.Distance(b.Body.position, new Vector2(SessionState.GetFloat("Woodland.AIFrozenX", 0), SessionState.GetFloat("Woodland.AIFrozenY", 0))) < .001f, "Pause freezes the solo rival's physical position");
+                game.ReturnToMenu();
+                SessionState.SetInt("Woodland.AIDecisions", b.AIDecisions);SessionState.SetInt("Woodland.AIActions", b.AIActionRequests);SetStage(75);
+            } else if (stage == 75 && Elapsed > .3f) {
+                Check(game.Screen == WoodlandGame.MenuScreen.Title && !game.Paused && !b.Body.simulated && b.AIDecisions == SessionState.GetInt("Woodland.AIDecisions", 0) && b.AIActionRequests == SessionState.GetInt("Woodland.AIActions", 0), "Returning from paused solo gameplay freezes AI and restores title navigation");
+                heldKey = Key.RightArrow;DriveTestInput();SetStage(77);
+            } else if (stage == 77 && SimElapsed > .12f) {
+                heldKey = Key.Enter;DriveTestInput();SetStage(78);
+            } else if (stage == 78 && SimElapsed > .12f) {
+                Check(game.Screen == WoodlandGame.MenuScreen.Rules && !game.SoloMode && !game.playing, "Keyboard direction and Enter choose local mode and open rules");
+                heldKey = Key.Escape;DriveTestInput();SetStage(79);
+            } else if (stage == 79 && SimElapsed > .12f) {
+                Check(game.Screen == WoodlandGame.MenuScreen.Title, "Keyboard Escape backs out of rule selection");
+                heldKey = Key.None;padStates[0] = new GamepadState().WithButton(GamepadButton.DpadDown);SetStage(80);
+            } else if (stage == 80 && SimElapsed > .12f) {
+                padStates[0] = new GamepadState().WithButton(GamepadButton.South);SetStage(81);
+            } else if (stage == 81 && SimElapsed > .12f) {
+                Check(game.Screen == WoodlandGame.MenuScreen.Rules && !game.SoloMode && !game.playing, "Controller directional pad and south button open local rule selection");
+                padStates[0] = new GamepadState().WithButton(GamepadButton.East);SetStage(82);
+            } else if (stage == 82 && SimElapsed > .12f) {
+                Check(game.Screen == WoodlandGame.MenuScreen.Title, "Controller east button backs out of rule selection");
+                padStates[0] = new GamepadState();SelectMenuRoster(game, false, true, 1);
+                heldKey = Key.RightArrow;DriveTestInput();SetStage(83);
+            } else if (stage == 83 && SimElapsed > .12f) {
+                Check(game.PendingArena == 2 && !game.playing, "Keyboard map navigation previews the next of four maps without starting");
+                heldKey=Key.None;padStates[0]=new GamepadState().WithButton(GamepadButton.DpadRight);SetStage(84);
+            } else if (stage == 84 && SimElapsed > .12f) {
+                Check(game.PendingArena == 3 && !game.playing, "Controller map navigation reaches the fourth map without starting");
+                padStates[0]=new GamepadState();game.hud.mapButtons[1].onClick.Invoke();game.hud.startButton.onClick.Invoke();SetStage(76);
+            } else if (stage == 76 && game.playing && SimElapsed > 2) {
+                Check(!game.SoloMode && !a.aiControlled && !b.aiControlled && game.ArenaIndex == 1, "Starting local mode after solo restores two human-controlled players on the chosen map");
+                PreparePadCombat(game);
+                SessionState.SetFloat("Woodland.TestCapacity", a.shieldCapacity);a.shieldCapacity = 8;a.ResetScout();Arrange(game);
+                Check(a.TryAttack(true) && a.Stamina == 0, "An accepted punch can exhaust a small test stamina pool exactly");SetStage(90);
+            } else if (stage == 90 && SimElapsed > .55f) {
+                Check(a.Stamina == 0, "Spent stamina stays empty during its regeneration delay");
+                Check(!a.TryAttack(false) && !a.TryJump() && !a.TryDash() && !a.TryBackstep() && !a.TryGrab() && !a.BeginSmash(), "Exhausted stamina denies kick, jump, dash, backstep, grab and special");
+                Check(a.Stamina == 0, "Rejected exhausted actions do not create or spend stamina");SetStage(91);
+            } else if (stage == 91 && SimElapsed > .2f) {
+                Check(a.Stamina > 0 && a.Stamina <= 8, "Stamina begins regenerating after the spend delay and stays within capacity");
+                a.shieldCapacity = SessionState.GetFloat("Woodland.TestCapacity", 100);PreparePadCombat(game);
+                Check(a.TryBackstep() && a.Body.linearVelocity.x <= -6.9f && a.Stamina == a.StaminaCapacity - 12, "Backstep moves opposite facing and spends twelve stamina");
+                float energy = a.Stamina;
+                Check(!a.TryBackstep() && a.Stamina == energy, "Backstep cooldown rejection spends no additional stamina");
+                Check(!a.TryDash() && a.Stamina == energy, "A forward dash cannot interrupt backstep or spend stamina during its burst");
+                Check(!a.ReceiveHit(b, -1, true) && a.Health == a.maxHealth, "Backstep invulnerability rejects an immediate incoming hit");SetStage(92);
+            } else if (stage == 92 && SimElapsed > .24f) {
+                Check(a.ReceiveHit(b, -1, true) && a.Health < a.maxHealth, "Backstep invulnerability expires after its short evade window");SetStage(93);
+            } else if (stage == 93 && SimElapsed > .8f) {
+                Check(a.BackstepReady >= .999f && a.TryBackstep(), "Backstep becomes available again after its cooldown");
+                PreparePadCombat(game);
+                for (int i = 0; i < 2; i++) { var scout=game.players[i];scout.Body.position=new Vector2(i==0?-.45f:.45f,.15f);scout.transform.position=scout.Body.position; }
+                Physics2D.SyncTransforms();padStates[1] = new GamepadState().WithButton(GamepadButton.South);SetStage(94);
+            } else if (stage == 94 && SimElapsed > .2f) {
+                Check(b.Blocking, "Grab test defender holds the south-button guard");
+                padStates[0] = new GamepadState { rightTrigger = 1 };SetStage(95);
+            } else if (stage == 95 && SimElapsed > .3f) {
+                Check(Mathf.Approximately(a.Stamina, a.StaminaCapacity - 18) && a.GrabReady < 1, "Controller right trigger starts grab and spends eighteen stamina");
+                Check(Mathf.Approximately(b.Health, b.maxHealth - a.pushDamage * .5f), "Close grab bypasses the held guard and damages the defender");
+                Capture("Documentation/grab-toss-1280-v6.png");
+                PreparePadCombat(game);a.Body.position=new Vector2(-2,.15f);b.Body.position=new Vector2(2,.15f);a.transform.position=a.Body.position;b.transform.position=b.Body.position;Physics2D.SyncTransforms();
+                Check(a.TryGrab(), "Grab can start outside contact range");SetStage(96);
+            } else if (stage == 96 && SimElapsed > .3f) {
+                Check(b.Health == b.maxHealth && a.Stamina == a.StaminaCapacity - 18, "A missed out-of-range grab still costs stamina but deals no damage");
+                float energy=a.Stamina;Check(!a.TryGrab() && a.Stamina == energy, "Grab recovery rejection spends no additional stamina");
+                Capture("Documentation/health-stamina-1280-v6.png");
+                PreparePadCombat(game);b.Body.simulated=false;
+                SessionState.SetFloat("Woodland.BackstepStartX",a.Body.position.x);
+                padStates[0]=new GamepadState { leftTrigger=1 };SetStage(97);
+            } else if (stage == 97 && SimElapsed > .08f) {
+                string diagnostic="elapsed="+SimElapsed.ToString("F3")+", evadeAge="+(.9f*a.BackstepReady).ToString("F3")+", ready="+a.BackstepReady.ToString("F3")+", stamina="+a.Stamina.ToString("F3")+"/"+a.StaminaCapacity+", velocity="+a.Body.linearVelocity+", displacement="+(a.Body.position.x-SessionState.GetFloat("Woodland.BackstepStartX",0)).ToString("F3")+", facing="+a.Facing+", grounded="+a.Grounded+", state="+a.AnimationState+", inputEnabled="+a.inputEnabled+", trigger="+testPads[0].leftTrigger.ReadValue()+", plank="+game.plank.bodyType+", angle="+game.plank.rotation.ToString("F2");
+                Debug.Log("CONTROLLER_BACKSTEP_DIAGNOSTIC: "+diagnostic);
+                Check(a.BackstepReady < 1,"Controller left trigger starts backstep cooldown ("+diagnostic+")");
+                Check(a.Stamina == a.StaminaCapacity - 12,"Controller left trigger spends exactly twelve stamina ("+diagnostic+")");
+                Check(a.Body.linearVelocity.x < -6,"Controller left trigger launches backward at its intended speed ("+diagnostic+")");
+                padStates[0]=new GamepadState();
+                Check(game.hud.pauseButtons.Length == 4 && game.hud.pauseButtons.All(button => button != null), "All four pause menu buttons are wired");
+                game.TogglePause();game.hud.RefreshMenu();
+                Check(game.hud.pauseMenu.activeSelf, "Pausing displays the interactive pause menu");
+                game.hud.pauseButtons[0].onClick.Invoke();
+                Check(!game.Paused && game.Screen == WoodlandGame.MenuScreen.Match, "Pause Resume button restores gameplay");
+                game.TogglePause();game.hud.pauseButtons[2].onClick.Invoke();
+                Check(!game.Paused && !game.playing && game.Screen != WoodlandGame.MenuScreen.Match, "Pause Change Game button safely leaves combat for configuration");
+                game.ReturnToMenu();game.hud.modeButtons[2].onClick.Invoke();
+                Check(game.Screen == WoodlandGame.MenuScreen.Settings && !game.playing, "Settings main menu button opens settings without starting gameplay");
+                ValidateSettings(game);game.hud.settingsBackButton.onClick.Invoke();
+                Check(game.Screen == WoodlandGame.MenuScreen.Title, "Settings Back button returns to title");
+                SelectMenuRoster(game, false, false, 3);game.hud.startButton.onClick.Invoke();SetStage(100);
+            } else if (stage == 100 && game.playing && SimElapsed > 2) {
+                Check(!game.BalanceMode && game.ArenaIndex == 3 && game.arenaPlatforms.Length == 3 && game.arenaPlatforms.All(platform => platform != null && platform.gameObject.activeInHierarchy), "Arena PvP starts the fourth map with all three fixed platforms active");
+                Check(game.plank.bodyType == RigidbodyType2D.Kinematic && !game.plank.GetComponent<HingeJoint2D>().enabled && !game.sphereArt.gameObject.activeInHierarchy, "Arena PvP disables the balancing hinge and hides its central ball");
+                Check(game.arenaPlatforms.All(platform => game.IsGroundBody(platform)), "All Arena PvP platforms are accepted by player ground detection");
+                var platform = game.arenaPlatforms[0];var box = platform.GetComponent<BoxCollider2D>();
+                Check(box != null, "Arena PvP base platform has an editable walking collider");
+                a.ResetScout();b.ResetScout();b.Body.simulated=false;a.inputEnabled=false;
+                float top=platform.transform.TransformPoint(box.offset+Vector2.up*box.size.y*.5f).y;
+                Vector2 point=new Vector2(platform.position.x,top+.625f);a.Body.position=point;a.transform.position=point;a.Body.gravityScale=1;a.Body.simulated=true;Physics2D.SyncTransforms();SetStage(101);
+            } else if (stage == 101 && SimElapsed > .25f) {
+                Check(a.Grounded, "Player settles on the Arena PvP platform as valid ground");
+                SessionState.SetFloat("Woodland.PvpJumpY",a.Body.position.y);
+                Check(a.TryJump() && a.AirJumpsRemaining==1, "Arena PvP ground jump preserves its aerial jump budget");SetStage(102);
+            } else if (stage == 102 && SimElapsed > .12f) {
+                Check(a.Body.position.y>SessionState.GetFloat("Woodland.PvpJumpY",0)+.3f, "Arena PvP ground jump launches above its fixed platform");
+                Capture("Documentation/arena-pvp-1280-v6.png");
+                PrepareSpecialCase(game,0,1.2f);
+                Check(a.SkillName=="VINE BIND" && a.BeginSmash() && a.ReleaseSmash(),"Fern starts its own vine-binding special");SetStage(103);
+            } else if (stage == 103 && SimElapsed > .2f) {
+                Check(b.Health<b.maxHealth && b.Rooted && b.Slowed,"Fern contact deals damage and applies both root and slow");
+                float stamina=b.Stamina;Check(!b.TryDash() && b.Stamina==stamina,"A vine-bound rival cannot dash or spend stamina on the denied dash");
+                Capture("Documentation/special-fern-1280-v6.png");
+                PrepareSpecialCase(game,1,1.2f);
+                Check(a.SkillName=="FLAME RUSH" && a.BeginSmash() && a.ReleaseSmash(),"Ember starts its own two-contact flame rush");SetStage(104);
+            } else if (stage == 104 && SimElapsed > .2f) {
+                Check(Mathf.Approximately(b.Health,b.maxHealth-a.punchDamage*.65f),"Ember flame rush applies its first independent contact");
+                PositionSpecialPair(game,1.2f,-.2f);SetStage(105);
+            } else if (stage == 105 && SimElapsed > .3f) {
+                Check(Mathf.Approximately(b.Health,b.maxHealth-a.punchDamage*1.3f),"Ember flame rush connects a second hit after normal hit invulnerability expires");
+                Capture("Documentation/special-ember-1280-v6.png");
+                PrepareSpecialCase(game,2,3.4f);
+                Check(a.SkillName=="FROST WAVE" && a.BeginSmash() && a.ReleaseSmash(),"Luna starts its own travelling frost wave");SetStage(106);
+            } else if (stage == 106 && SimElapsed > .65f) {
+                Check(Mathf.Approximately(b.Health,b.maxHealth-a.punchDamage*.85f) && b.Slowed && !b.Rooted,"Luna wave reaches beyond melee range, hits once and slows without rooting");
+                Capture("Documentation/special-luna-1280-v6.png");
+                PrepareSpecialCase(game,3,1.2f);Check(!a.BeginSmash(),"Bram cannot start its ground quake while airborne");
+                var platform=game.arenaPlatforms[0];var box=platform.GetComponent<BoxCollider2D>();float top=platform.transform.TransformPoint(box.offset+Vector2.up*box.size.y*.5f).y;
+                a.Body.position=new Vector2(platform.position.x,top+.625f);b.Body.position=new Vector2(platform.position.x-1.2f,top+.625f);
+                foreach(var scout in game.players){scout.transform.position=scout.Body.position;scout.Body.gravityScale=1;scout.Body.linearVelocity=Vector2.zero;}
+                Physics2D.SyncTransforms();SetStage(107);
+            } else if (stage == 107 && SimElapsed > .25f) {
+                Check(a.Grounded && a.Facing>0 && b.Body.position.x<a.Body.position.x,"Bram quake test is grounded with the rival behind its facing direction");
+                Check(a.SkillName=="STONE QUAKE" && a.BeginSmash() && a.ReleaseSmash(),"Grounded Bram starts its radial stone quake");SetStage(108);
+            } else if (stage == 108 && SimElapsed > .2f) {
+                Check(Mathf.Approximately(b.Health,b.maxHealth-a.punchDamage) && b.Body.linearVelocity.y>4,"Bram quake damages a rival behind him and adds its distinct upward launch");
+                Capture("Documentation/special-bram-1280-v6.png");
+                Complete(true, "FOUR_ROSTER_FOUR_MAPS_RULES_SETTINGS_SOLO_AI_COMBAT_AND_CONTROLLERS_VALIDATED");
             }
         } catch (Exception error) { Complete(false, error.ToString()); }
     }
@@ -406,6 +611,122 @@ public static class GameValidation
             effects.SetVolume(volume,false);
         }
     }
+    static void ValidateHudCorners(WoodlandGame game)
+    {
+        Canvas.ForceUpdateCanvases();
+        var canvas = (RectTransform)game.hud.transform;
+        for (int i = 0; i < game.hud.fighterPlates.Length; i++) {
+            var corners = new Vector3[4];game.hud.fighterPlates[i].GetWorldCorners(corners);
+            var points = corners.Select(point => (Vector2)canvas.InverseTransformPoint(point)).ToArray();
+            Check(points.All(point => point.x >= canvas.rect.xMin - 1 && point.x <= canvas.rect.xMax + 1 && point.y >= canvas.rect.yMin - 1 && point.y <= canvas.rect.yMax + 1), "Player " + (i + 1) + ": entire HUD plate fits inside the canvas");
+            Check(canvas.rect.yMax - points.Max(point => point.y) < 90 && (i == 0 ? points.Min(point => point.x) - canvas.rect.xMin : canvas.rect.xMax - points.Max(point => point.x)) < 90, "Player " + (i + 1) + ": HUD plate sits near its top screen corner");
+        }
+    }
+    static void ValidateHudMeters(WoodlandGame game)
+    {
+        game.hud.Refresh();Canvas.ForceUpdateCanvases();
+        Check(game.hud.fighterPortraits.Length==2 && game.hud.fighterPortraits.All(image=>image!=null && image.sprite!=null),"Both fighter portraits are wired with real character sprites");
+        for(int i=0;i<2;i++){
+            var health=game.hud.healthFill[i].rectTransform;var stamina=game.hud.shieldFill[i].rectTransform;
+            var healthNumber=game.hud.healthText[i].rectTransform;var staminaNumber=game.hud.shieldText[i].rectTransform;
+            Check(game.hud.healthText[i].text.Replace(" ","")=="100/100" && game.hud.shieldText[i].text.Replace(" ","")=="100/100","Player "+(i+1)+": health and stamina show readable whole-number current/max values");
+            Check(health.rect.Contains(health.InverseTransformPoint(healthNumber.TransformPoint(healthNumber.rect.center))) && stamina.rect.Contains(stamina.InverseTransformPoint(staminaNumber.TransformPoint(staminaNumber.rect.center))),"Player "+(i+1)+": each numeric value is centered inside its own meter");
+            Check(health.rect.height>stamina.rect.height,"Player "+(i+1)+": health meter is visually larger than the stamina meter");
+            var portrait=game.hud.fighterPortraits[i].rectTransform;var name=game.hud.names[i].rectTransform;
+            Vector3 portraitCenter=portrait.TransformPoint(portrait.rect.center);
+            Check(portraitCenter.x<health.TransformPoint(health.rect.center).x && name.TransformPoint(name.rect.center).y<portraitCenter.y,"Player "+(i+1)+": portrait sits left of the meters with its name below");
+        }
+    }
+    static void PrepareSpecialCase(WoodlandGame game,int skill,float separation)
+    {
+        heldKey=Key.None;padStates[0]=padStates[1]=new GamepadState();
+        int[] choices={skill,skill==0?1:0};
+        for(int i=0;i<2;i++){
+            var scout=game.players[i];int index=choices[i];
+            scout.SetCharacter(index,game.CharacterNames[index],game.CharacterAnimationSets[index],game.CharacterControllers[index],game.CharacterColors[index]);
+            scout.ResetScout();scout.inputEnabled=false;scout.aiControlled=false;scout.Body.gravityScale=0;scout.Body.simulated=true;
+        }
+        PositionSpecialPair(game,separation,-.2f);
+    }
+    static void PositionSpecialPair(WoodlandGame game,float separation,float height)
+    {
+        for(int i=0;i<2;i++){
+            var scout=game.players[i];scout.Body.position=new Vector2((i==0?-1:1)*separation*.5f,height);scout.transform.position=scout.Body.position;scout.Body.linearVelocity=Vector2.zero;
+        }
+        Physics2D.SyncTransforms();
+    }
+    static void SelectMenuRoster(WoodlandGame game, bool solo, bool balance, int arena)
+    {
+        game.hud.modeButtons[solo ? 0 : 1].onClick.Invoke();
+        Check(game.Screen == WoodlandGame.MenuScreen.Rules && game.SoloMode == solo && !game.playing, "Mode button opens the rules screen with the selected player mode");
+        game.hud.ruleButtons[balance ? 1 : 0].onClick.Invoke();
+        Check(game.Screen == WoodlandGame.MenuScreen.Characters && game.BalanceMode == balance, "Rule button opens character selection with the selected arena rules");
+        if(!SessionState.GetBool("Woodland.RosterCaptured",false)){game.hud.RefreshMenu();Capture("Documentation/roster-menu-1280-v6.png");SessionState.SetBool("Woodland.RosterCaptured",true);}
+        game.hud.characterButtons[0].onClick.Invoke();game.hud.confirmCharacterButton.onClick.Invoke();
+        if (!solo) {
+            Check(game.Screen == WoodlandGame.MenuScreen.Characters && game.ChoosingPlayer == 1, "Local roster confirms player one before choosing player two");
+            game.hud.characterButtons[1].onClick.Invoke();game.hud.confirmCharacterButton.onClick.Invoke();
+        }
+        Check(game.Screen == WoodlandGame.MenuScreen.Maps && game.CharacterChoices[0] == 0 && game.CharacterChoices[1] == 1, "Roster selection reaches maps with distinct Fern and Ember choices");
+        game.hud.mapButtons[arena].onClick.Invoke();
+    }
+    static void ValidateRosterAssets()
+    {
+        var previous = new System.Collections.Generic.HashSet<string>();
+        foreach (string name in new[] { "Fern", "Ember", "Luna", "Bram" }) {
+            string directory = "Assets/Animations/" + name + "/";
+            var catalog = AssetDatabase.LoadAssetAtPath<ScoutAnimations>(directory + "Frames.asset");
+            var controller = AssetDatabase.LoadAssetAtPath<RuntimeAnimatorController>(directory + name + ".controller");
+            Check(catalog != null && controller != null && controller.animationClips.Length > 0, name + ": independent sprite catalog and editable controller exist");
+            var own = new System.Collections.Generic.HashSet<string>();
+            foreach (string state in new[] { "Walk", "Jump", "Hurt", "Punch", "Knockout", "Block", "DoubleJump", "Kick" }) {
+                var frames = catalog.Get(state);
+                Check(frames.Length == 10 && frames.All(frame => frame != null && frame.rect.width == 256 && frame.rect.height == 256 && AssetDatabase.GetAssetPath(frame).StartsWith("Assets/Art/Characters/" + name + "/", StringComparison.Ordinal)), name + "/" + state + ": ten aligned sprites belong exclusively to this character");
+                foreach (var frame in frames) own.Add(AssetDatabase.AssetPathToGUID(AssetDatabase.GetAssetPath(frame)));
+            }
+            var special = catalog.Get("Special");
+            Check(special.Length == 10 && special.All(frame => frame != null && frame.rect.height == 256 && (frame.rect.width == 256 || frame.rect.width == 384) && AssetDatabase.GetAssetPath(frame).StartsWith("Assets/Art/Characters/" + name + "/", StringComparison.Ordinal)), name + "/Special: ten own sprites preserve supported full-body proportions");
+            foreach (var frame in special) own.Add(AssetDatabase.AssetPathToGUID(AssetDatabase.GetAssetPath(frame)));
+            Check(!own.Overlaps(previous), name + ": source sprite GUIDs are not reused from another roster character");
+            Check(controller.animationClips.All(clip => AssetDatabase.GetAssetPath(clip).StartsWith(directory, StringComparison.Ordinal)), name + ": all controller clips belong to its own animation folder");
+            Check(controller.animationClips.All(clip => AnimationUtility.GetObjectReferenceCurveBindings(clip).Where(binding => binding.type == typeof(SpriteRenderer)).SelectMany(binding => AnimationUtility.GetObjectReferenceCurve(clip, binding)).Select(key => key.value as Sprite).Where(sprite => sprite != null).All(sprite => AssetDatabase.GetAssetPath(sprite).StartsWith("Assets/Art/Characters/" + name + "/", StringComparison.Ordinal))), name + ": native animation clips never reference another character's sprites");
+            previous.UnionWith(own);
+        }
+    }
+    static void ValidateSettings(WoodlandGame game)
+    {
+        var effects=WoodlandEffects.Instance;float volume=effects.SfxVolume;bool shake=effects.cameraShake;string quality=game.EffectsQualityName;
+        try {
+            effects.SetVolume(.5f,false);game.StepVolume(-.1f);
+            Check(game.SettingsVolume<.5f && game.SettingsVolume>=0,"Settings volume down updates the real bounded audio level");
+            float lower=game.SettingsVolume;game.StepVolume(.1f);
+            Check(game.SettingsVolume>lower && game.SettingsVolume<=1,"Settings volume up updates the real bounded audio level");
+            game.ToggleCameraShake();Check(effects.cameraShake!=shake,"Settings camera shake toggle changes the live effect setting");
+            game.ToggleCameraShake();Check(effects.cameraShake==shake,"A second shake toggle restores the original setting");
+            game.CycleEffectsQuality();Check(game.EffectsQualityName!=quality,"Settings effect quality cycles to a different preset");
+            for(int i=0;i<4 && game.EffectsQualityName!=quality;i++)game.CycleEffectsQuality();
+            Check(game.EffectsQualityName==quality,"Effect quality cycling can return to the original preset");
+            Capture("Documentation/settings-1280-v6.png");
+        } finally {
+            effects.SetVolume(volume,false);
+            if(effects.cameraShake!=shake)game.ToggleCameraShake();
+            for(int i=0;i<4 && game.EffectsQualityName!=quality;i++)game.CycleEffectsQuality();
+        }
+    }
+    static void PrepareAiCase(WoodlandGame game, float separation)
+    {
+        game.plank.rotation = 0;game.plank.transform.rotation = Quaternion.identity;
+        game.plank.bodyType = RigidbodyType2D.Kinematic;game.plank.simulated = true;
+        var box = game.plank.GetComponent<BoxCollider2D>();
+        float top = game.plank.transform.TransformPoint(box.offset + Vector2.up * box.size.y * .5f).y + box.edgeRadius * game.plank.transform.lossyScale.x;
+        for (int i = 0; i < 2; i++) {
+            var scout = game.players[i];scout.ResetScout();
+            Vector2 point = new Vector2((i == 0 ? -1 : 1) * separation * .5f, top + .625f);
+            scout.transform.position = point;scout.Body.position = point;scout.Body.linearVelocity = Vector2.zero;
+            scout.Body.gravityScale = 1;scout.Body.simulated = true;scout.inputEnabled = i == 1;
+        }
+        Physics2D.SyncTransforms();
+    }
     static void BeginGamepadCases(WoodlandGame game)
     {
         disabledPads = Gamepad.all.Where(pad => pad.enabled).ToArray();
@@ -420,10 +741,12 @@ public static class GameValidation
                 labelPads[i] = InputSystem.AddDevice(layouts[i]) as Gamepad;
                 Check(labelPads[i] != null && WoodlandGame.GamepadStyle(labelPads[i]) == (i == 0 ? "PLAYSTATION" : "XBOX"), layouts[i] + ": controller family maps to its expected button labels");
             }
-            game.RefreshGamepads();game.hud.helpPanel.SetActive(true);game.hud.Refresh();
+            game.RefreshGamepads();game.hud.helpPanel.SetActive(false);game.hud.Refresh();
+            Capture("Documentation/controller-diamond-1280-v6.png");
+            game.hud.helpPanel.SetActive(true);game.hud.Refresh();
             Check(game.hud.deviceText[0].text.Contains("PLAYSTATION") && game.hud.deviceText[1].text.Contains("XBOX"), "Assigned PlayStation and Xbox layouts appear on their own player panels");
-            Check(game.hud.controlsText[0].text.Contains("CROSS") && game.hud.controlsText[0].text.Contains("SQUARE") && game.hud.controlsText[1].text.Contains("A   Jump") && game.hud.controlsText[1].text.Contains("RB"), "Help displays real PlayStation and Xbox button names for the assigned virtual layouts");
-            Capture("Documentation/controller-help-1280-v5.png");
+            Check(game.hud.controlsText[0].text.Contains("CROSS") && game.hud.controlsText[0].text.Contains("SQUARE") && game.hud.controlsText[1].text.ToUpperInvariant().Contains("BLOCK") && game.hud.controlsText[1].text.Contains("RB"), "Help displays real PlayStation and Xbox button names for the assigned virtual layouts");
+            Capture("Documentation/controller-help-1280-v6.png");
         } finally {
             game.hud.helpPanel.SetActive(helpWasVisible);
             foreach (var pad in labelPads) if (pad != null && pad.added) InputSystem.RemoveDevice(pad);
@@ -525,7 +848,7 @@ public static class GameValidation
         if (testKeyboard != null) { InputSystem.RemoveDevice(testKeyboard);testKeyboard = null; }
         if (originalInputSettings != null) { InputSystem.settings = originalInputSettings;UnityEngine.Object.DestroyImmediate(validationInputSettings);originalInputSettings = null; }
         var report = new Report { success = success, status = status, checks = SessionState.GetString("Woodland.Checks", "").Split('\n').Where(s => s.Length > 0).ToArray() };
-        File.WriteAllText("Documentation/PLAYMODE-VALIDATION-v5.json", JsonUtility.ToJson(report, true));
+        File.WriteAllText("Documentation/PLAYMODE-VALIDATION-v6.json", JsonUtility.ToJson(report, true));
         if (success) Debug.Log(status);else Debug.LogError(status);
         EditorApplication.isPlaying = false;
         if (SessionState.GetBool("Woodland.ValidationExit", false)) EditorApplication.delayCall += () => EditorApplication.Exit(success ? 0 : 1);

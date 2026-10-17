@@ -1,0 +1,23 @@
+{
+  "editor": "6000.5.10f1",
+  "product": "Wildwood Rivals",
+  "version": "6.0.0",
+  "target": "StandaloneWindows64",
+  "playmode_checks": 454,
+  "playmode_success": true,
+  "complete_passing_runs": 2,
+  "build_result": "Success",
+  "build_evidence": "Build Finished, Result: Success. in tumble-windows-v6-final.log",
+  "controller_transport": "physical USB/Bluetooth unverified; two virtual devices validated",
+  "audio_testing": "silent listener; subjective headphone balance unverified",
+  "assembly_sha256": "80aa999229a8a518637d995cfd8344a65381eb368866baf97272aa6dc4105a67",
+  "scripts": {
+    "Scout.cs": "af2bc4c26ab326b12a218bc71e9e407ee7cb75c8100ecde3d4b78002c5cc2413",
+    "ScoutAnimations.cs": "580f8888e46170f475439904c829951439d1971ef655172d8a69e07537f105b4",
+    "SpawnMarker.cs": "8ab42983df1f09b2032abcdc8c624bfdfd4934f87ba17e4b11d437f1d5b5d9ee",
+    "WoodlandEffects.cs": "eab11a085f6963c2dd6e5c392617659103bebe71dfb7ecb9f00e8da982534f60",
+    "WoodlandGame.cs": "b27d6013d531fee4732bb5c5b9d5937dd671aa59572fa183646da68cbf1123ce",
+    "WoodlandHUD.cs": "4b430914a455a8695a746bd3b4402cef626ef6b4c3d9960243ca20763b7cf084"
+  },
+  "standalone_smoke": "Windows player launched in silent headless mode; no logged game exceptions; graphical play verified by the editor fixture"
+}

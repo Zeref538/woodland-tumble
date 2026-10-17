@@ -39,6 +39,13 @@ public class WoodlandEffects : MonoBehaviour
     Coroutine hitPause;
     Vector2 cameraOffset, cameraVelocity;
     float cameraZoom;
+    public void SetArenaCamera(float size,Vector3 position)
+    {
+        if(!cam)cam=Camera.main;
+        if(!cam)return;
+        cameraHome=position;cameraZoom=size;cameraOffset=cameraVelocity=Vector2.zero;
+        cam.transform.position=position;cam.orthographicSize=size;
+    }
     const int Capacity = 320;
     readonly Mote[] pool = new Mote[Capacity];
     int cursor;

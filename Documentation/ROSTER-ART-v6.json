@@ -1,0 +1,9459 @@
+{
+  "canvas": [
+    256,
+    256
+  ],
+  "canvasExceptions": {
+    "Special": [
+      384,
+      256
+    ]
+  },
+  "sourceCalibration": "Fern Special uses source standing pose 02 height243; Ember Special uses recovery pose10 height240. Other source references use standing Walk or first neutral pose. Combat/Walk Luna share one calibration.",
+  "feetPivotUnityPixels": [
+    128,
+    24
+  ],
+  "alphaThreshold": 32,
+  "minimumComponentPixels": 12,
+  "method": "Transparent row gutters, independent connected silhouettes, nearest-body detached effects; per-source canonical resolution normalization and one uniform scale per character. No per-frame stretching.",
+  "sources": [
+    {
+      "name": "Fern-Ember-Kick-v6",
+      "size": [
+        1402,
+        1122
+      ],
+      "sha256": "a3cce43d782ace0d616f3c33ed231a9f424e3faaaa89f5013320f044ff431dc6",
+      "bands": [
+        [
+          36,
+          278
+        ],
+        [
+          305,
+          548
+        ],
+        [
+          570,
+          808
+        ],
+        [
+          830,
+          1074
+        ]
+      ],
+      "poses": 20
+    },
+    {
+      "name": "Luna-Movement-v6",
+      "size": [
+        992,
+        1586
+      ],
+      "sha256": "327bc8330b61f5066880e6b0de6adb19b1832135fe58cfc29aff8963e474eb1c",
+      "bands": [
+        [
+          13,
+          195
+        ],
+        [
+          210,
+          394
+        ],
+        [
+          409,
+          614
+        ],
+        [
+          629,
+          815
+        ],
+        [
+          828,
+          1013
+        ],
+        [
+          1024,
+          1215
+        ],
+        [
+          1224,
+          1415
+        ],
+        [
+          1464,
+          1560
+        ]
+      ],
+      "poses": 40
+    },
+    {
+      "name": "Luna-Combat-v6",
+      "size": [
+        992,
+        1585
+      ],
+      "sha256": "84be877d485dd614d5ea79edddbb7cc645b7651ddfb75b7a429f7756ce57b096",
+      "bands": [
+        [
+          23,
+          199
+        ],
+        [
+          218,
+          398
+        ],
+        [
+          414,
+          603
+        ],
+        [
+          615,
+          798
+        ],
+        [
+          816,
+          1001
+        ],
+        [
+          1019,
+          1200
+        ],
+        [
+          1218,
+          1395
+        ],
+        [
+          1412,
+          1575
+        ]
+      ],
+      "poses": 40
+    },
+    {
+      "name": "Bram-Movement-v6",
+      "size": [
+        1774,
+        887
+      ],
+      "sha256": "ed6c37b7e08b0c18fc7ac63bb4a800ccee5096b2c6866e16c19a1f3cff189012",
+      "bands": [
+        [
+          40,
+          244
+        ],
+        [
+          252,
+          484
+        ],
+        [
+          492,
+          703
+        ],
+        [
+          708,
+          874
+        ]
+      ],
+      "poses": 38
+    },
+    {
+      "name": "Bram-Movement-Extra-v6",
+      "size": [
+        992,
+        1586
+      ],
+      "sha256": "b0907c9ee514b37c85d6b9ebf49ce2527516caa75a60d6ad77ae512df6b12277",
+      "bands": [
+        [
+          23,
+          222
+        ],
+        [
+          246,
+          450
+        ],
+        [
+          459,
+          921
+        ],
+        [
+          938,
+          1137
+        ],
+        [
+          1148,
+          1367
+        ],
+        [
+          1369,
+          1554
+        ]
+      ],
+      "poses": 3
+    },
+    {
+      "name": "Bram-Combat-v6",
+      "size": [
+        1774,
+        887
+      ],
+      "sha256": "14d4ade5302f580b88a8d0760462ea9e1799e2a43c4765162f88d8cdbff8c007",
+      "bands": [
+        [
+          40,
+          242
+        ],
+        [
+          257,
+          465
+        ],
+        [
+          481,
+          683
+        ],
+        [
+          684,
+          883
+        ]
+      ],
+      "poses": 39
+    },
+    {
+      "name": "Fern-Ember-Special-v6",
+      "size": [
+        1402,
+        1122
+      ],
+      "sha256": "e149d154360b3a14a3d3251bd7b454a9070c447f3ae8262d8d76ff58a99ae2ef",
+      "bands": [
+        [
+          31,
+          285
+        ],
+        [
+          303,
+          563
+        ],
+        [
+          590,
+          835
+        ],
+        [
+          851,
+          1093
+        ]
+      ],
+      "poses": 20
+    }
+  ],
+  "characterOutputScales": {
+    "Fern": 1,
+    "Ember": 1,
+    "Luna": 1,
+    "Bram": 1
+  },
+  "frames": [
+    {
+      "rowBox": [
+        67,
+        0,
+        269,
+        240
+      ],
+      "bodyBox": [
+        67,
+        0,
+        269,
+        240
+      ],
+      "footX": 101.0,
+      "bodyHeight": 240,
+      "character": "Fern",
+      "action": "Kick",
+      "source": "Assets/Art/Sources/Fern-Ember-Kick-v6-source.png",
+      "sourceRow": 0,
+      "sourcePose": 0,
+      "sourceRect": [
+        67,
+        36,
+        269,
+        276
+      ],
+      "sourceNormalization": 0.8333333333333334,
+      "output": "Assets/Art/Characters/Fern/Kick/01.png",
+      "outputScale": 0.8333333333333334,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        44,
+        32,
+        212,
+        232
+      ],
+      "minimumEdge": 24,
+      "sha256": "1a9264115a92a1529501af21bda0fde7ca100ac09bd8106e445a4ceee7999322"
+    },
+    {
+      "rowBox": [
+        341,
+        19,
+        543,
+        241
+      ],
+      "bodyBox": [
+        341,
+        19,
+        543,
+        241
+      ],
+      "footX": 101,
+      "bodyHeight": 222,
+      "character": "Fern",
+      "action": "Kick",
+      "source": "Assets/Art/Sources/Fern-Ember-Kick-v6-source.png",
+      "sourceRow": 0,
+      "sourcePose": 1,
+      "sourceRect": [
+        341,
+        55,
+        543,
+        277
+      ],
+      "sourceNormalization": 0.8333333333333334,
+      "output": "Assets/Art/Characters/Fern/Kick/02.png",
+      "outputScale": 0.8333333333333334,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        44,
+        47,
+        212,
+        232
+      ],
+      "minimumEdge": 24,
+      "sha256": "b36cc5deb9978aff27d75255f3ce7c0f8ae62dae9445e447c04dee03e304f9b6"
+    },
+    {
+      "rowBox": [
+        611,
+        4,
+        814,
+        242
+      ],
+      "bodyBox": [
+        611,
+        4,
+        814,
+        242
+      ],
+      "footX": 94.0,
+      "bodyHeight": 238,
+      "character": "Fern",
+      "action": "Kick",
+      "source": "Assets/Art/Sources/Fern-Ember-Kick-v6-source.png",
+      "sourceRow": 0,
+      "sourcePose": 2,
+      "sourceRect": [
+        611,
+        40,
+        814,
+        278
+      ],
+      "sourceNormalization": 0.8333333333333334,
+      "output": "Assets/Art/Characters/Fern/Kick/03.png",
+      "outputScale": 0.8333333333333334,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        50,
+        34,
+        219,
+        232
+      ],
+      "minimumEdge": 24,
+      "sha256": "b454ff3eef677dd638c17789d1ee9c75e3353291abfb329f0bf5fccfe3fe4c9c"
+    },
+    {
+      "rowBox": [
+        862,
+        12,
+        1085,
+        242
+      ],
+      "bodyBox": [
+        862,
+        12,
+        1085,
+        242
+      ],
+      "footX": 118.0,
+      "bodyHeight": 230,
+      "character": "Fern",
+      "action": "Kick",
+      "source": "Assets/Art/Sources/Fern-Ember-Kick-v6-source.png",
+      "sourceRow": 0,
+      "sourcePose": 3,
+      "sourceRect": [
+        862,
+        48,
+        1085,
+        278
+      ],
+      "sourceNormalization": 0.8333333333333334,
+      "output": "Assets/Art/Characters/Fern/Kick/04.png",
+      "outputScale": 0.8333333333333334,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        30,
+        40,
+        216,
+        232
+      ],
+      "minimumEdge": 24,
+      "sha256": "59f6ec309a92fb39940360fe6a5617bfd943e65ff4cec0962cb365f56c5b18de"
+    },
+    {
+      "rowBox": [
+        1151,
+        9,
+        1367,
+        242
+      ],
+      "bodyBox": [
+        1151,
+        9,
+        1367,
+        242
+      ],
+      "footX": 100,
+      "bodyHeight": 233,
+      "character": "Fern",
+      "action": "Kick",
+      "source": "Assets/Art/Sources/Fern-Ember-Kick-v6-source.png",
+      "sourceRow": 0,
+      "sourcePose": 4,
+      "sourceRect": [
+        1151,
+        45,
+        1367,
+        278
+      ],
+      "sourceNormalization": 0.8333333333333334,
+      "output": "Assets/Art/Characters/Fern/Kick/05.png",
+      "outputScale": 0.8333333333333334,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        45,
+        38,
+        225,
+        232
+      ],
+      "minimumEdge": 24,
+      "sha256": "a5df36f943805b48f6258223cbf0c8a97cc4913a4a45c96bea1f4d781d38fd03"
+    },
+    {
+      "rowBox": [
+        64,
+        7,
+        290,
+        239
+      ],
+      "bodyBox": [
+        64,
+        7,
+        290,
+        239
+      ],
+      "footX": 86.0,
+      "bodyHeight": 232,
+      "character": "Fern",
+      "action": "Kick",
+      "source": "Assets/Art/Sources/Fern-Ember-Kick-v6-source.png",
+      "sourceRow": 1,
+      "sourcePose": 0,
+      "sourceRect": [
+        64,
+        312,
+        290,
+        544
+      ],
+      "sourceNormalization": 0.8333333333333334,
+      "output": "Assets/Art/Characters/Fern/Kick/06.png",
+      "outputScale": 0.8333333333333334,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        56,
+        39,
+        244,
+        232
+      ],
+      "minimumEdge": 12,
+      "sha256": "b1d03d90f15b28827e734be7652a4e11c4001c456920d3eb1f6c4ef5853f813e"
+    },
+    {
+      "rowBox": [
+        337,
+        7,
+        540,
+        243
+      ],
+      "bodyBox": [
+        337,
+        7,
+        540,
+        243
+      ],
+      "footX": 104,
+      "bodyHeight": 236,
+      "character": "Fern",
+      "action": "Kick",
+      "source": "Assets/Art/Sources/Fern-Ember-Kick-v6-source.png",
+      "sourceRow": 1,
+      "sourcePose": 1,
+      "sourceRect": [
+        337,
+        312,
+        540,
+        548
+      ],
+      "sourceNormalization": 0.8333333333333334,
+      "output": "Assets/Art/Characters/Fern/Kick/07.png",
+      "outputScale": 0.8333333333333334,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        41,
+        35,
+        210,
+        232
+      ],
+      "minimumEdge": 24,
+      "sha256": "efb3acb8a70aaec8d909de807465e61c2c82f4d4c21c68cd76b39c9d43030fcd"
+    },
+    {
+      "rowBox": [
+        618,
+        0,
+        821,
+        242
+      ],
+      "bodyBox": [
+        618,
+        0,
+        821,
+        242
+      ],
+      "footX": 95.0,
+      "bodyHeight": 242,
+      "character": "Fern",
+      "action": "Kick",
+      "source": "Assets/Art/Sources/Fern-Ember-Kick-v6-source.png",
+      "sourceRow": 1,
+      "sourcePose": 2,
+      "sourceRect": [
+        618,
+        305,
+        821,
+        547
+      ],
+      "sourceNormalization": 0.8333333333333334,
+      "output": "Assets/Art/Characters/Fern/Kick/08.png",
+      "outputScale": 0.8333333333333334,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        49,
+        30,
+        218,
+        232
+      ],
+      "minimumEdge": 24,
+      "sha256": "697784e67a7798595b28fee83920590d24dc4d51501f837acf6c9eb038d8e643"
+    },
+    {
+      "rowBox": [
+        892,
+        7,
+        1098,
+        242
+      ],
+      "bodyBox": [
+        892,
+        7,
+        1098,
+        242
+      ],
+      "footX": 104.0,
+      "bodyHeight": 235,
+      "character": "Fern",
+      "action": "Kick",
+      "source": "Assets/Art/Sources/Fern-Ember-Kick-v6-source.png",
+      "sourceRow": 1,
+      "sourcePose": 3,
+      "sourceRect": [
+        892,
+        312,
+        1098,
+        547
+      ],
+      "sourceNormalization": 0.8333333333333334,
+      "output": "Assets/Art/Characters/Fern/Kick/09.png",
+      "outputScale": 0.8333333333333334,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        41,
+        36,
+        213,
+        232
+      ],
+      "minimumEdge": 24,
+      "sha256": "c2dc09f623557b5499738434cfb844381885164088c097c961a07826ec487ddd"
+    },
+    {
+      "rowBox": [
+        1157,
+        2,
+        1362,
+        242
+      ],
+      "bodyBox": [
+        1157,
+        2,
+        1362,
+        242
+      ],
+      "footX": 111.0,
+      "bodyHeight": 240,
+      "character": "Fern",
+      "action": "Kick",
+      "source": "Assets/Art/Sources/Fern-Ember-Kick-v6-source.png",
+      "sourceRow": 1,
+      "sourcePose": 4,
+      "sourceRect": [
+        1157,
+        307,
+        1362,
+        547
+      ],
+      "sourceNormalization": 0.8333333333333334,
+      "output": "Assets/Art/Characters/Fern/Kick/10.png",
+      "outputScale": 0.8333333333333334,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        36,
+        32,
+        207,
+        232
+      ],
+      "minimumEdge": 24,
+      "sha256": "65ac79a25192e87bffbcf0bd8476d1534bc3c7d9987046873bbafaf53712a6a8"
+    },
+    {
+      "rowBox": [
+        48,
+        0,
+        252,
+        238
+      ],
+      "bodyBox": [
+        48,
+        0,
+        252,
+        238
+      ],
+      "footX": 110,
+      "bodyHeight": 238,
+      "character": "Ember",
+      "action": "Kick",
+      "source": "Assets/Art/Sources/Fern-Ember-Kick-v6-source.png",
+      "sourceRow": 2,
+      "sourcePose": 0,
+      "sourceRect": [
+        48,
+        570,
+        252,
+        808
+      ],
+      "sourceNormalization": 0.8403361344537815,
+      "output": "Assets/Art/Characters/Ember/Kick/01.png",
+      "outputScale": 0.8403361344537815,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        36,
+        32,
+        207,
+        232
+      ],
+      "minimumEdge": 24,
+      "sha256": "490e7735c32cfc128e54fdc81697d2f1c7ef612a2380562c27f87e68cba508a4"
+    },
+    {
+      "rowBox": [
+        336,
+        13,
+        545,
+        238
+      ],
+      "bodyBox": [
+        336,
+        13,
+        545,
+        238
+      ],
+      "footX": 110.0,
+      "bodyHeight": 225,
+      "character": "Ember",
+      "action": "Kick",
+      "source": "Assets/Art/Sources/Fern-Ember-Kick-v6-source.png",
+      "sourceRow": 2,
+      "sourcePose": 1,
+      "sourceRect": [
+        336,
+        583,
+        545,
+        808
+      ],
+      "sourceNormalization": 0.8403361344537815,
+      "output": "Assets/Art/Characters/Ember/Kick/02.png",
+      "outputScale": 0.8403361344537815,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        36,
+        43,
+        212,
+        232
+      ],
+      "minimumEdge": 24,
+      "sha256": "ef9a9f32503420f1c400379a3884b8ab3170487328c79b70ac4f1e3d2225a5a3"
+    },
+    {
+      "rowBox": [
+        613,
+        0,
+        819,
+        238
+      ],
+      "bodyBox": [
+        613,
+        0,
+        819,
+        238
+      ],
+      "footX": 99.0,
+      "bodyHeight": 238,
+      "character": "Ember",
+      "action": "Kick",
+      "source": "Assets/Art/Sources/Fern-Ember-Kick-v6-source.png",
+      "sourceRow": 2,
+      "sourcePose": 2,
+      "sourceRect": [
+        613,
+        570,
+        819,
+        808
+      ],
+      "sourceNormalization": 0.8403361344537815,
+      "output": "Assets/Art/Characters/Ember/Kick/03.png",
+      "outputScale": 0.8403361344537815,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        45,
+        32,
+        218,
+        232
+      ],
+      "minimumEdge": 24,
+      "sha256": "75f803ed2f95fd5b9de52bafde7be2b64f657ac16bb323dcf7c739de9d06cfd5"
+    },
+    {
+      "rowBox": [
+        881,
+        3,
+        1094,
+        238
+      ],
+      "bodyBox": [
+        881,
+        3,
+        1094,
+        238
+      ],
+      "footX": 107.0,
+      "bodyHeight": 235,
+      "character": "Ember",
+      "action": "Kick",
+      "source": "Assets/Art/Sources/Fern-Ember-Kick-v6-source.png",
+      "sourceRow": 2,
+      "sourcePose": 3,
+      "sourceRect": [
+        881,
+        573,
+        1094,
+        808
+      ],
+      "sourceNormalization": 0.8403361344537815,
+      "output": "Assets/Art/Characters/Ember/Kick/04.png",
+      "outputScale": 0.8403361344537815,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        38,
+        35,
+        217,
+        232
+      ],
+      "minimumEdge": 24,
+      "sha256": "f48b1877460fc2564cbd92cb9513e8abe4d9072d501fa6a1985a216d3bb4485d"
+    },
+    {
+      "rowBox": [
+        1163,
+        1,
+        1368,
+        238
+      ],
+      "bodyBox": [
+        1163,
+        1,
+        1368,
+        238
+      ],
+      "footX": 98.0,
+      "bodyHeight": 237,
+      "character": "Ember",
+      "action": "Kick",
+      "source": "Assets/Art/Sources/Fern-Ember-Kick-v6-source.png",
+      "sourceRow": 2,
+      "sourcePose": 4,
+      "sourceRect": [
+        1163,
+        571,
+        1368,
+        808
+      ],
+      "sourceNormalization": 0.8403361344537815,
+      "output": "Assets/Art/Characters/Ember/Kick/05.png",
+      "outputScale": 0.8403361344537815,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        46,
+        33,
+        218,
+        232
+      ],
+      "minimumEdge": 24,
+      "sha256": "ddd569e8824ecfb04bbfa1096f1d30fa91c13b98a6241f3f63786c81651b9500"
+    },
+    {
+      "rowBox": [
+        47,
+        4,
+        280,
+        244
+      ],
+      "bodyBox": [
+        47,
+        4,
+        280,
+        244
+      ],
+      "footX": 106,
+      "bodyHeight": 240,
+      "character": "Ember",
+      "action": "Kick",
+      "source": "Assets/Art/Sources/Fern-Ember-Kick-v6-source.png",
+      "sourceRow": 3,
+      "sourcePose": 0,
+      "sourceRect": [
+        47,
+        834,
+        280,
+        1074
+      ],
+      "sourceNormalization": 0.8403361344537815,
+      "output": "Assets/Art/Characters/Ember/Kick/06.png",
+      "outputScale": 0.8403361344537815,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        39,
+        30,
+        235,
+        232
+      ],
+      "minimumEdge": 21,
+      "sha256": "32c835dec3b6cefd05b982ea8e854ba752539bb3eae3559316223af4383cb13c"
+    },
+    {
+      "rowBox": [
+        338,
+        2,
+        546,
+        244
+      ],
+      "bodyBox": [
+        338,
+        2,
+        546,
+        244
+      ],
+      "footX": 103,
+      "bodyHeight": 242,
+      "character": "Ember",
+      "action": "Kick",
+      "source": "Assets/Art/Sources/Fern-Ember-Kick-v6-source.png",
+      "sourceRow": 3,
+      "sourcePose": 1,
+      "sourceRect": [
+        338,
+        832,
+        546,
+        1074
+      ],
+      "sourceNormalization": 0.8403361344537815,
+      "output": "Assets/Art/Characters/Ember/Kick/07.png",
+      "outputScale": 0.8403361344537815,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        41,
+        29,
+        216,
+        232
+      ],
+      "minimumEdge": 24,
+      "sha256": "31e0f7cada61db42773699aa3cc075bedd2424302d0951827051274f5e20bbe5"
+    },
+    {
+      "rowBox": [
+        613,
+        0,
+        815,
+        244
+      ],
+      "bodyBox": [
+        613,
+        0,
+        815,
+        244
+      ],
+      "footX": 97.0,
+      "bodyHeight": 244,
+      "character": "Ember",
+      "action": "Kick",
+      "source": "Assets/Art/Sources/Fern-Ember-Kick-v6-source.png",
+      "sourceRow": 3,
+      "sourcePose": 2,
+      "sourceRect": [
+        613,
+        830,
+        815,
+        1074
+      ],
+      "sourceNormalization": 0.8403361344537815,
+      "output": "Assets/Art/Characters/Ember/Kick/08.png",
+      "outputScale": 0.8403361344537815,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        46,
+        27,
+        216,
+        232
+      ],
+      "minimumEdge": 24,
+      "sha256": "bf4c99e9235e07833c8d06d2379ed49b61f6aacb7e4b5ccb32314c1c980082a7"
+    },
+    {
+      "rowBox": [
+        888,
+        5,
+        1094,
+        244
+      ],
+      "bodyBox": [
+        888,
+        5,
+        1094,
+        244
+      ],
+      "footX": 112.0,
+      "bodyHeight": 239,
+      "character": "Ember",
+      "action": "Kick",
+      "source": "Assets/Art/Sources/Fern-Ember-Kick-v6-source.png",
+      "sourceRow": 3,
+      "sourcePose": 3,
+      "sourceRect": [
+        888,
+        835,
+        1094,
+        1074
+      ],
+      "sourceNormalization": 0.8403361344537815,
+      "output": "Assets/Art/Characters/Ember/Kick/09.png",
+      "outputScale": 0.8403361344537815,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        34,
+        31,
+        207,
+        232
+      ],
+      "minimumEdge": 24,
+      "sha256": "5d23d5396cb8795a4b0ac5d7e6bd7fe8fdae02611b715b0492b0b49322af8ab8"
+    },
+    {
+      "rowBox": [
+        1158,
+        5,
+        1363,
+        244
+      ],
+      "bodyBox": [
+        1158,
+        5,
+        1363,
+        244
+      ],
+      "footX": 118,
+      "bodyHeight": 239,
+      "character": "Ember",
+      "action": "Kick",
+      "source": "Assets/Art/Sources/Fern-Ember-Kick-v6-source.png",
+      "sourceRow": 3,
+      "sourcePose": 4,
+      "sourceRect": [
+        1158,
+        835,
+        1363,
+        1074
+      ],
+      "sourceNormalization": 0.8403361344537815,
+      "output": "Assets/Art/Characters/Ember/Kick/10.png",
+      "outputScale": 0.8403361344537815,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        29,
+        31,
+        201,
+        232
+      ],
+      "minimumEdge": 24,
+      "sha256": "da5466ca6631f5833aa551060f7941a10fcf3a8fdf6030fa135ddc9553dd483c"
+    },
+    {
+      "rowBox": [
+        26,
+        2,
+        190,
+        182
+      ],
+      "bodyBox": [
+        26,
+        2,
+        190,
+        182
+      ],
+      "footX": 120,
+      "bodyHeight": 180,
+      "character": "Luna",
+      "action": "Walk",
+      "source": "Assets/Art/Sources/Luna-Movement-v6-source.png",
+      "sourceRow": 0,
+      "sourcePose": 0,
+      "sourceRect": [
+        26,
+        15,
+        190,
+        195
+      ],
+      "sourceNormalization": 1.1049723756906078,
+      "output": "Assets/Art/Characters/Luna/Walk/01.png",
+      "outputScale": 1.1049723756906078,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        4,
+        33,
+        185,
+        232
+      ],
+      "minimumEdge": 4,
+      "sha256": "dfd6a3eeb6b2e114d6b8e9003f1527a704174694cd60326d858fc331b4ed4e31"
+    },
+    {
+      "rowBox": [
+        222,
+        1,
+        385,
+        182
+      ],
+      "bodyBox": [
+        222,
+        1,
+        385,
+        182
+      ],
+      "footX": 120,
+      "bodyHeight": 181,
+      "character": "Luna",
+      "action": "Walk",
+      "source": "Assets/Art/Sources/Luna-Movement-v6-source.png",
+      "sourceRow": 0,
+      "sourcePose": 1,
+      "sourceRect": [
+        222,
+        14,
+        385,
+        195
+      ],
+      "sourceNormalization": 1.1049723756906078,
+      "output": "Assets/Art/Characters/Luna/Walk/02.png",
+      "outputScale": 1.1049723756906078,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        4,
+        32,
+        184,
+        232
+      ],
+      "minimumEdge": 4,
+      "sha256": "1dfe52509f71f964a379af245291beebc7b731c71ca08f64af65998875c60777"
+    },
+    {
+      "rowBox": [
+        421,
+        1,
+        582,
+        182
+      ],
+      "bodyBox": [
+        421,
+        1,
+        582,
+        182
+      ],
+      "footX": 107,
+      "bodyHeight": 181,
+      "character": "Luna",
+      "action": "Walk",
+      "source": "Assets/Art/Sources/Luna-Movement-v6-source.png",
+      "sourceRow": 0,
+      "sourcePose": 2,
+      "sourceRect": [
+        421,
+        14,
+        582,
+        195
+      ],
+      "sourceNormalization": 1.1049723756906078,
+      "output": "Assets/Art/Characters/Luna/Walk/03.png",
+      "outputScale": 1.1049723756906078,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        10,
+        32,
+        188,
+        232
+      ],
+      "minimumEdge": 10,
+      "sha256": "b2d43bcbef20581d80f89d4eb65b6573429a5e7c0f62066f747ddaad41c47172"
+    },
+    {
+      "rowBox": [
+        613,
+        3,
+        770,
+        182
+      ],
+      "bodyBox": [
+        613,
+        3,
+        770,
+        182
+      ],
+      "footX": 117.0,
+      "bodyHeight": 179,
+      "character": "Luna",
+      "action": "Walk",
+      "source": "Assets/Art/Sources/Luna-Movement-v6-source.png",
+      "sourceRow": 0,
+      "sourcePose": 3,
+      "sourceRect": [
+        613,
+        16,
+        770,
+        195
+      ],
+      "sourceNormalization": 1.1049723756906078,
+      "output": "Assets/Art/Characters/Luna/Walk/04.png",
+      "outputScale": 1.1049723756906078,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        4,
+        34,
+        177,
+        232
+      ],
+      "minimumEdge": 4,
+      "sha256": "03ef7c771963dba0150fbfb09d54d55039a164b5aa599a5cc53a2bda325a1568"
+    },
+    {
+      "rowBox": [
+        814,
+        0,
+        971,
+        182
+      ],
+      "bodyBox": [
+        814,
+        0,
+        971,
+        182
+      ],
+      "footX": 102,
+      "bodyHeight": 182,
+      "character": "Luna",
+      "action": "Walk",
+      "source": "Assets/Art/Sources/Luna-Movement-v6-source.png",
+      "sourceRow": 0,
+      "sourcePose": 4,
+      "sourceRect": [
+        814,
+        13,
+        971,
+        195
+      ],
+      "sourceNormalization": 1.1049723756906078,
+      "output": "Assets/Art/Characters/Luna/Walk/05.png",
+      "outputScale": 1.1049723756906078,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        15,
+        31,
+        188,
+        232
+      ],
+      "minimumEdge": 15,
+      "sha256": "044aa0e2b36ff34da91c34b8d9cf5fa38ac7d8ce625897a7e31e4ccdfad55079"
+    },
+    {
+      "rowBox": [
+        28,
+        4,
+        189,
+        184
+      ],
+      "bodyBox": [
+        28,
+        4,
+        189,
+        184
+      ],
+      "footX": 111.5,
+      "bodyHeight": 180,
+      "character": "Luna",
+      "action": "Walk",
+      "source": "Assets/Art/Sources/Luna-Movement-v6-source.png",
+      "sourceRow": 1,
+      "sourcePose": 0,
+      "sourceRect": [
+        28,
+        214,
+        189,
+        394
+      ],
+      "sourceNormalization": 1.1049723756906078,
+      "output": "Assets/Art/Characters/Luna/Walk/06.png",
+      "outputScale": 1.1049723756906078,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        5,
+        33,
+        183,
+        232
+      ],
+      "minimumEdge": 5,
+      "sha256": "d36624b7d029515dca4c01be2bc19340c60909032ff3ff86f345129a93d867b8"
+    },
+    {
+      "rowBox": [
+        219,
+        2,
+        384,
+        183
+      ],
+      "bodyBox": [
+        219,
+        2,
+        384,
+        183
+      ],
+      "footX": 119.0,
+      "bodyHeight": 181,
+      "character": "Luna",
+      "action": "Walk",
+      "source": "Assets/Art/Sources/Luna-Movement-v6-source.png",
+      "sourceRow": 1,
+      "sourcePose": 1,
+      "sourceRect": [
+        219,
+        212,
+        384,
+        393
+      ],
+      "sourceNormalization": 1.1049723756906078,
+      "output": "Assets/Art/Characters/Luna/Walk/07.png",
+      "outputScale": 1.1049723756906078,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        4,
+        32,
+        186,
+        232
+      ],
+      "minimumEdge": 4,
+      "sha256": "b7ac9575e485fffa9ffc532d8f359609577f7b87518520db20c54a2643be8432"
+    },
+    {
+      "rowBox": [
+        413,
+        0,
+        579,
+        183
+      ],
+      "bodyBox": [
+        413,
+        0,
+        579,
+        183
+      ],
+      "footX": 113.0,
+      "bodyHeight": 183,
+      "character": "Luna",
+      "action": "Walk",
+      "source": "Assets/Art/Sources/Luna-Movement-v6-source.png",
+      "sourceRow": 1,
+      "sourcePose": 2,
+      "sourceRect": [
+        413,
+        210,
+        579,
+        393
+      ],
+      "sourceNormalization": 1.1049723756906078,
+      "output": "Assets/Art/Characters/Luna/Walk/08.png",
+      "outputScale": 1.1049723756906078,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        4,
+        30,
+        187,
+        232
+      ],
+      "minimumEdge": 4,
+      "sha256": "b758fe40022af2dfe01026838f56771ce78f0d444fd01c84c616847bba70dfe5"
+    },
+    {
+      "rowBox": [
+        610,
+        5,
+        773,
+        181
+      ],
+      "bodyBox": [
+        610,
+        5,
+        773,
+        181
+      ],
+      "footX": 117.0,
+      "bodyHeight": 176,
+      "character": "Luna",
+      "action": "Walk",
+      "source": "Assets/Art/Sources/Luna-Movement-v6-source.png",
+      "sourceRow": 1,
+      "sourcePose": 3,
+      "sourceRect": [
+        610,
+        215,
+        773,
+        391
+      ],
+      "sourceNormalization": 1.1049723756906078,
+      "output": "Assets/Art/Characters/Luna/Walk/09.png",
+      "outputScale": 1.1049723756906078,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        4,
+        38,
+        184,
+        232
+      ],
+      "minimumEdge": 4,
+      "sha256": "c05236a7d2f5af6972f1b218a370d8ed79713d0d5357d73975512422d42a776f"
+    },
+    {
+      "rowBox": [
+        805,
+        2,
+        970,
+        183
+      ],
+      "bodyBox": [
+        805,
+        2,
+        970,
+        183
+      ],
+      "footX": 118.0,
+      "bodyHeight": 181,
+      "character": "Luna",
+      "action": "Walk",
+      "source": "Assets/Art/Sources/Luna-Movement-v6-source.png",
+      "sourceRow": 1,
+      "sourcePose": 4,
+      "sourceRect": [
+        805,
+        212,
+        970,
+        393
+      ],
+      "sourceNormalization": 1.1049723756906078,
+      "output": "Assets/Art/Characters/Luna/Walk/10.png",
+      "outputScale": 1.1049723756906078,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        4,
+        32,
+        186,
+        232
+      ],
+      "minimumEdge": 4,
+      "sha256": "5c53794bb7c02efb95e83dbea2bf387394f8b9169271bec61902025051839045"
+    },
+    {
+      "rowBox": [
+        19,
+        48,
+        195,
+        205
+      ],
+      "bodyBox": [
+        19,
+        48,
+        195,
+        205
+      ],
+      "footX": 93.0,
+      "bodyHeight": 157,
+      "character": "Luna",
+      "action": "Jump",
+      "source": "Assets/Art/Sources/Luna-Movement-v6-source.png",
+      "sourceRow": 2,
+      "sourcePose": 0,
+      "sourceRect": [
+        19,
+        457,
+        195,
+        614
+      ],
+      "sourceNormalization": 1.1049723756906078,
+      "output": "Assets/Art/Characters/Luna/Jump/01.png",
+      "outputScale": 1.1049723756906078,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        25,
+        59,
+        219,
+        232
+      ],
+      "minimumEdge": 24,
+      "sha256": "9b2ad4a95ebde299f9eb550eef1b7d939b0a3aaaf13aa8e45a073b9b8e9ff54f"
+    },
+    {
+      "rowBox": [
+        213,
+        27,
+        388,
+        203
+      ],
+      "bodyBox": [
+        213,
+        27,
+        388,
+        203
+      ],
+      "footX": 74,
+      "bodyHeight": 176,
+      "character": "Luna",
+      "action": "Jump",
+      "source": "Assets/Art/Sources/Luna-Movement-v6-source.png",
+      "sourceRow": 2,
+      "sourcePose": 1,
+      "sourceRect": [
+        213,
+        436,
+        388,
+        612
+      ],
+      "sourceNormalization": 1.1049723756906078,
+      "output": "Assets/Art/Characters/Luna/Jump/02.png",
+      "outputScale": 1.1049723756906078,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        46,
+        38,
+        239,
+        232
+      ],
+      "minimumEdge": 17,
+      "sha256": "b619dd73fda2e271e998e017feb2ed0d8ec006918e91204bc4999ebec294041b"
+    },
+    {
+      "rowBox": [
+        406,
+        1,
+        586,
+        183
+      ],
+      "bodyBox": [
+        406,
+        1,
+        586,
+        183
+      ],
+      "footX": 88,
+      "bodyHeight": 182,
+      "character": "Luna",
+      "action": "Jump",
+      "source": "Assets/Art/Sources/Luna-Movement-v6-source.png",
+      "sourceRow": 2,
+      "sourcePose": 2,
+      "sourceRect": [
+        406,
+        410,
+        586,
+        592
+      ],
+      "sourceNormalization": 1.1049723756906078,
+      "output": "Assets/Art/Characters/Luna/Jump/03.png",
+      "outputScale": 1.1049723756906078,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        31,
+        31,
+        230,
+        232
+      ],
+      "minimumEdge": 24,
+      "sha256": "df4c80407112540d105e41f58f03b81567403fdd7bd130f4437cc07224bb74a7"
+    },
+    {
+      "rowBox": [
+        605,
+        0,
+        783,
+        189
+      ],
+      "bodyBox": [
+        605,
+        0,
+        783,
+        189
+      ],
+      "footX": 92.0,
+      "bodyHeight": 189,
+      "character": "Luna",
+      "action": "Jump",
+      "source": "Assets/Art/Sources/Luna-Movement-v6-source.png",
+      "sourceRow": 2,
+      "sourcePose": 3,
+      "sourceRect": [
+        605,
+        409,
+        783,
+        598
+      ],
+      "sourceNormalization": 1.1049723756906078,
+      "output": "Assets/Art/Characters/Luna/Jump/04.png",
+      "outputScale": 1.1049723756906078,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        26,
+        23,
+        223,
+        232
+      ],
+      "minimumEdge": 23,
+      "sha256": "29dcb42444aeea341158e62379ebec0cfcc23d0ae66590618f08ff17eb73e9ff"
+    },
+    {
+      "rowBox": [
+        802,
+        28,
+        975,
+        205
+      ],
+      "bodyBox": [
+        802,
+        28,
+        975,
+        205
+      ],
+      "footX": 107,
+      "bodyHeight": 177,
+      "character": "Luna",
+      "action": "Jump",
+      "source": "Assets/Art/Sources/Luna-Movement-v6-source.png",
+      "sourceRow": 2,
+      "sourcePose": 4,
+      "sourceRect": [
+        802,
+        437,
+        975,
+        614
+      ],
+      "sourceNormalization": 1.1049723756906078,
+      "output": "Assets/Art/Characters/Luna/Jump/05.png",
+      "outputScale": 1.1049723756906078,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        10,
+        36,
+        201,
+        232
+      ],
+      "minimumEdge": 10,
+      "sha256": "935b5d023b427705bacf97883bef56797caf238fc3fd1be77ff9dd09adf3a6b7"
+    },
+    {
+      "rowBox": [
+        16,
+        6,
+        188,
+        178
+      ],
+      "bodyBox": [
+        16,
+        6,
+        188,
+        178
+      ],
+      "footX": 76,
+      "bodyHeight": 172,
+      "character": "Luna",
+      "action": "Jump",
+      "source": "Assets/Art/Sources/Luna-Movement-v6-source.png",
+      "sourceRow": 3,
+      "sourcePose": 0,
+      "sourceRect": [
+        16,
+        635,
+        188,
+        807
+      ],
+      "sourceNormalization": 1.1049723756906078,
+      "output": "Assets/Art/Characters/Luna/Jump/06.png",
+      "outputScale": 1.1049723756906078,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        44,
+        42,
+        234,
+        232
+      ],
+      "minimumEdge": 22,
+      "sha256": "b2822957ac337104903e864d336b9506ab5ff2ed52f963836ec8c835f75c4908"
+    },
+    {
+      "rowBox": [
+        209,
+        14,
+        385,
+        184
+      ],
+      "bodyBox": [
+        209,
+        14,
+        385,
+        184
+      ],
+      "footX": 79,
+      "bodyHeight": 170,
+      "character": "Luna",
+      "action": "Jump",
+      "source": "Assets/Art/Sources/Luna-Movement-v6-source.png",
+      "sourceRow": 3,
+      "sourcePose": 1,
+      "sourceRect": [
+        209,
+        643,
+        385,
+        813
+      ],
+      "sourceNormalization": 1.1049723756906078,
+      "output": "Assets/Art/Characters/Luna/Jump/07.png",
+      "outputScale": 1.1049723756906078,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        41,
+        44,
+        235,
+        232
+      ],
+      "minimumEdge": 21,
+      "sha256": "476dee14abc19bf0e5ea7e9827a4d5b7fb08600770fe5e754974072c0c98a287"
+    },
+    {
+      "rowBox": [
+        412,
+        37,
+        584,
+        185
+      ],
+      "bodyBox": [
+        412,
+        37,
+        584,
+        185
+      ],
+      "footX": 81,
+      "bodyHeight": 148,
+      "character": "Luna",
+      "action": "Jump",
+      "source": "Assets/Art/Sources/Luna-Movement-v6-source.png",
+      "sourceRow": 3,
+      "sourcePose": 2,
+      "sourceRect": [
+        412,
+        666,
+        584,
+        814
+      ],
+      "sourceNormalization": 1.1049723756906078,
+      "output": "Assets/Art/Characters/Luna/Jump/08.png",
+      "outputScale": 1.1049723756906078,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        38,
+        68,
+        228,
+        232
+      ],
+      "minimumEdge": 24,
+      "sha256": "3adf93da4d600565a45efdd52085ed746699ce6c76d4e95fa767634e3add58f6"
+    },
+    {
+      "rowBox": [
+        611,
+        26,
+        780,
+        186
+      ],
+      "bodyBox": [
+        611,
+        26,
+        780,
+        186
+      ],
+      "footX": 87,
+      "bodyHeight": 160,
+      "character": "Luna",
+      "action": "Jump",
+      "source": "Assets/Art/Sources/Luna-Movement-v6-source.png",
+      "sourceRow": 3,
+      "sourcePose": 3,
+      "sourceRect": [
+        611,
+        655,
+        780,
+        815
+      ],
+      "sourceNormalization": 1.1049723756906078,
+      "output": "Assets/Art/Characters/Luna/Jump/09.png",
+      "outputScale": 1.1049723756906078,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        32,
+        55,
+        219,
+        232
+      ],
+      "minimumEdge": 24,
+      "sha256": "66329b0a2dfc0345646b39e1d30940e5c073e240f9cea08606420f61b2927290"
+    },
+    {
+      "rowBox": [
+        805,
+        0,
+        969,
+        186
+      ],
+      "bodyBox": [
+        805,
+        0,
+        969,
+        186
+      ],
+      "footX": 94,
+      "bodyHeight": 186,
+      "character": "Luna",
+      "action": "Jump",
+      "source": "Assets/Art/Sources/Luna-Movement-v6-source.png",
+      "sourceRow": 3,
+      "sourcePose": 4,
+      "sourceRect": [
+        805,
+        629,
+        969,
+        815
+      ],
+      "sourceNormalization": 1.1049723756906078,
+      "output": "Assets/Art/Characters/Luna/Jump/10.png",
+      "outputScale": 1.1049723756906078,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        24,
+        26,
+        205,
+        232
+      ],
+      "minimumEdge": 24,
+      "sha256": "54e1aa9367391fab9c862eeab050e537323283094720b0043d69b63aeeaa8439"
+    },
+    {
+      "rowBox": [
+        26,
+        0,
+        194,
+        185
+      ],
+      "bodyBox": [
+        26,
+        0,
+        194,
+        185
+      ],
+      "footX": 79,
+      "bodyHeight": 185,
+      "character": "Luna",
+      "action": "Hurt",
+      "source": "Assets/Art/Sources/Luna-Movement-v6-source.png",
+      "sourceRow": 4,
+      "sourcePose": 0,
+      "sourceRect": [
+        26,
+        828,
+        194,
+        1013
+      ],
+      "sourceNormalization": 1.1049723756906078,
+      "output": "Assets/Art/Characters/Luna/Hurt/01.png",
+      "outputScale": 1.1049723756906078,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        41,
+        28,
+        227,
+        232
+      ],
+      "minimumEdge": 24,
+      "sha256": "61e7271269e1462a79cc7399345ea96dc3da956faaa4ea8db45afe13faa9758d"
+    },
+    {
+      "rowBox": [
+        216,
+        8,
+        384,
+        184
+      ],
+      "bodyBox": [
+        216,
+        8,
+        384,
+        184
+      ],
+      "footX": 88.0,
+      "bodyHeight": 176,
+      "character": "Luna",
+      "action": "Hurt",
+      "source": "Assets/Art/Sources/Luna-Movement-v6-source.png",
+      "sourceRow": 4,
+      "sourcePose": 1,
+      "sourceRect": [
+        216,
+        836,
+        384,
+        1012
+      ],
+      "sourceNormalization": 1.1049723756906078,
+      "output": "Assets/Art/Characters/Luna/Hurt/02.png",
+      "outputScale": 1.1049723756906078,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        31,
+        38,
+        217,
+        232
+      ],
+      "minimumEdge": 24,
+      "sha256": "ff2235d741e9d2322e82c2b339753767ab66bd91cffbffba172618ecf7cd2d69"
+    },
+    {
+      "rowBox": [
+        408,
+        13,
+        579,
+        181
+      ],
+      "bodyBox": [
+        408,
+        13,
+        579,
+        181
+      ],
+      "footX": 119.0,
+      "bodyHeight": 168,
+      "character": "Luna",
+      "action": "Hurt",
+      "source": "Assets/Art/Sources/Luna-Movement-v6-source.png",
+      "sourceRow": 4,
+      "sourcePose": 2,
+      "sourceRect": [
+        408,
+        841,
+        579,
+        1009
+      ],
+      "sourceNormalization": 1.1049723756906078,
+      "output": "Assets/Art/Characters/Luna/Hurt/03.png",
+      "outputScale": 1.1049723756906078,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        4,
+        46,
+        193,
+        232
+      ],
+      "minimumEdge": 4,
+      "sha256": "716b57269fafd9a3e3bfbe6b1e0abe310d881fd62aab4904634a5d0f1e41483b"
+    },
+    {
+      "rowBox": [
+        604,
+        15,
+        773,
+        182
+      ],
+      "bodyBox": [
+        604,
+        15,
+        773,
+        182
+      ],
+      "footX": 106.5,
+      "bodyHeight": 167,
+      "character": "Luna",
+      "action": "Hurt",
+      "source": "Assets/Art/Sources/Luna-Movement-v6-source.png",
+      "sourceRow": 4,
+      "sourcePose": 3,
+      "sourceRect": [
+        604,
+        843,
+        773,
+        1010
+      ],
+      "sourceNormalization": 1.1049723756906078,
+      "output": "Assets/Art/Characters/Luna/Hurt/04.png",
+      "outputScale": 1.1049723756906078,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        10,
+        47,
+        197,
+        232
+      ],
+      "minimumEdge": 10,
+      "sha256": "a6a1e96f0db33680e2c38e98f49f9401f3b001f324e9bb06b2dc5dac9f90d78b"
+    },
+    {
+      "rowBox": [
+        806,
+        25,
+        970,
+        182
+      ],
+      "bodyBox": [
+        806,
+        25,
+        970,
+        182
+      ],
+      "footX": 98,
+      "bodyHeight": 157,
+      "character": "Luna",
+      "action": "Hurt",
+      "source": "Assets/Art/Sources/Luna-Movement-v6-source.png",
+      "sourceRow": 4,
+      "sourcePose": 4,
+      "sourceRect": [
+        806,
+        853,
+        970,
+        1010
+      ],
+      "sourceNormalization": 1.1049723756906078,
+      "output": "Assets/Art/Characters/Luna/Hurt/05.png",
+      "outputScale": 1.1049723756906078,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        20,
+        59,
+        201,
+        232
+      ],
+      "minimumEdge": 20,
+      "sha256": "7ad345be9b2aa900135233c354f5266b733e7aecec2a4d4f1b461e611e6de119"
+    },
+    {
+      "rowBox": [
+        26,
+        39,
+        183,
+        184
+      ],
+      "bodyBox": [
+        26,
+        39,
+        183,
+        184
+      ],
+      "footX": 87,
+      "bodyHeight": 145,
+      "character": "Luna",
+      "action": "Hurt",
+      "source": "Assets/Art/Sources/Luna-Movement-v6-source.png",
+      "sourceRow": 5,
+      "sourcePose": 0,
+      "sourceRect": [
+        26,
+        1063,
+        183,
+        1208
+      ],
+      "sourceNormalization": 1.1049723756906078,
+      "output": "Assets/Art/Characters/Luna/Hurt/06.png",
+      "outputScale": 1.1049723756906078,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        32,
+        72,
+        205,
+        232
+      ],
+      "minimumEdge": 24,
+      "sha256": "2252511bbb85695730f1e7d557116aa1d09af952a0ee8014f1a966bc76ac768f"
+    },
+    {
+      "rowBox": [
+        213,
+        27,
+        388,
+        188
+      ],
+      "bodyBox": [
+        213,
+        27,
+        388,
+        188
+      ],
+      "footX": 107,
+      "bodyHeight": 161,
+      "character": "Luna",
+      "action": "Hurt",
+      "source": "Assets/Art/Sources/Luna-Movement-v6-source.png",
+      "sourceRow": 5,
+      "sourcePose": 1,
+      "sourceRect": [
+        213,
+        1051,
+        388,
+        1212
+      ],
+      "sourceNormalization": 1.1049723756906078,
+      "output": "Assets/Art/Characters/Luna/Hurt/07.png",
+      "outputScale": 1.1049723756906078,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        10,
+        54,
+        203,
+        232
+      ],
+      "minimumEdge": 10,
+      "sha256": "7113d2cc2654ae3144e2c0b8bc64e7919308e11696f3d1a07508adef7840f33b"
+    },
+    {
+      "rowBox": [
+        408,
+        14,
+        576,
+        187
+      ],
+      "bodyBox": [
+        408,
+        14,
+        576,
+        187
+      ],
+      "footX": 113,
+      "bodyHeight": 173,
+      "character": "Luna",
+      "action": "Hurt",
+      "source": "Assets/Art/Sources/Luna-Movement-v6-source.png",
+      "sourceRow": 5,
+      "sourcePose": 2,
+      "sourceRect": [
+        408,
+        1038,
+        576,
+        1211
+      ],
+      "sourceNormalization": 1.1049723756906078,
+      "output": "Assets/Art/Characters/Luna/Hurt/08.png",
+      "outputScale": 1.1049723756906078,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        4,
+        41,
+        190,
+        232
+      ],
+      "minimumEdge": 4,
+      "sha256": "049f36cbf209f7fa3ab790c27c2cdfb9df1ba5f11040c3f0fa0be18ff5468225"
+    },
+    {
+      "rowBox": [
+        609,
+        2,
+        776,
+        191
+      ],
+      "bodyBox": [
+        609,
+        2,
+        776,
+        191
+      ],
+      "footX": 90,
+      "bodyHeight": 189,
+      "character": "Luna",
+      "action": "Hurt",
+      "source": "Assets/Art/Sources/Luna-Movement-v6-source.png",
+      "sourceRow": 5,
+      "sourcePose": 3,
+      "sourceRect": [
+        609,
+        1026,
+        776,
+        1215
+      ],
+      "sourceNormalization": 1.1049723756906078,
+      "output": "Assets/Art/Characters/Luna/Hurt/09.png",
+      "outputScale": 1.1049723756906078,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        29,
+        23,
+        214,
+        232
+      ],
+      "minimumEdge": 23,
+      "sha256": "624af49cc69b97d9d0f635cda48329c4f1f737ea6c8fd31d82610502eb0a3374"
+    },
+    {
+      "rowBox": [
+        809,
+        0,
+        969,
+        191
+      ],
+      "bodyBox": [
+        809,
+        0,
+        969,
+        191
+      ],
+      "footX": 87.5,
+      "bodyHeight": 191,
+      "character": "Luna",
+      "action": "Hurt",
+      "source": "Assets/Art/Sources/Luna-Movement-v6-source.png",
+      "sourceRow": 5,
+      "sourcePose": 4,
+      "sourceRect": [
+        809,
+        1024,
+        969,
+        1215
+      ],
+      "sourceNormalization": 1.1049723756906078,
+      "output": "Assets/Art/Characters/Luna/Hurt/10.png",
+      "outputScale": 1.1049723756906078,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        31,
+        21,
+        208,
+        232
+      ],
+      "minimumEdge": 21,
+      "sha256": "8a206fdab762b6e44f99dd315fc29be72e44a239960841b42865eda162708192"
+    },
+    {
+      "rowBox": [
+        28,
+        0,
+        198,
+        191
+      ],
+      "bodyBox": [
+        28,
+        0,
+        198,
+        191
+      ],
+      "footX": 107,
+      "bodyHeight": 191,
+      "character": "Luna",
+      "action": "Knockout",
+      "source": "Assets/Art/Sources/Luna-Movement-v6-source.png",
+      "sourceRow": 6,
+      "sourcePose": 0,
+      "sourceRect": [
+        28,
+        1224,
+        198,
+        1415
+      ],
+      "sourceNormalization": 1.1049723756906078,
+      "output": "Assets/Art/Characters/Luna/Knockout/01.png",
+      "outputScale": 1.1049723756906078,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        10,
+        21,
+        198,
+        232
+      ],
+      "minimumEdge": 10,
+      "sha256": "1341d243f9623a8ae2f3d4514e778eac38686094da7187eb61fc9c0953ac2702"
+    },
+    {
+      "rowBox": [
+        225,
+        23,
+        404,
+        188
+      ],
+      "bodyBox": [
+        225,
+        23,
+        404,
+        188
+      ],
+      "footX": 99,
+      "bodyHeight": 165,
+      "character": "Luna",
+      "action": "Knockout",
+      "source": "Assets/Art/Sources/Luna-Movement-v6-source.png",
+      "sourceRow": 6,
+      "sourcePose": 1,
+      "sourceRect": [
+        225,
+        1247,
+        404,
+        1412
+      ],
+      "sourceNormalization": 1.1049723756906078,
+      "output": "Assets/Art/Characters/Luna/Knockout/02.png",
+      "outputScale": 1.1049723756906078,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        19,
+        50,
+        217,
+        232
+      ],
+      "minimumEdge": 19,
+      "sha256": "366d6f8a2443f95424a10a522759cbab1bb63bc8e5810198a1fe3c998b50c611"
+    },
+    {
+      "rowBox": [
+        413,
+        46,
+        584,
+        187
+      ],
+      "bodyBox": [
+        413,
+        46,
+        584,
+        187
+      ],
+      "footX": 68,
+      "bodyHeight": 141,
+      "character": "Luna",
+      "action": "Knockout",
+      "source": "Assets/Art/Sources/Luna-Movement-v6-source.png",
+      "sourceRow": 6,
+      "sourcePose": 2,
+      "sourceRect": [
+        413,
+        1270,
+        584,
+        1411
+      ],
+      "sourceNormalization": 1.1049723756906078,
+      "output": "Assets/Art/Characters/Luna/Knockout/03.png",
+      "outputScale": 1.1049723756906078,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        53,
+        76,
+        242,
+        232
+      ],
+      "minimumEdge": 14,
+      "sha256": "5c60ea2f5b6c49989562faae5a552d807f6d153959511ea9de29fd944e987ac3"
+    },
+    {
+      "rowBox": [
+        601,
+        64,
+        785,
+        188
+      ],
+      "bodyBox": [
+        601,
+        64,
+        785,
+        188
+      ],
+      "footX": 94.0,
+      "bodyHeight": 124,
+      "character": "Luna",
+      "action": "Knockout",
+      "source": "Assets/Art/Sources/Luna-Movement-v6-source.png",
+      "sourceRow": 6,
+      "sourcePose": 3,
+      "sourceRect": [
+        601,
+        1288,
+        785,
+        1412
+      ],
+      "sourceNormalization": 1.1049723756906078,
+      "output": "Assets/Art/Characters/Luna/Knockout/04.png",
+      "outputScale": 1.1049723756906078,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        24,
+        95,
+        227,
+        232
+      ],
+      "minimumEdge": 24,
+      "sha256": "8db6e35ab63fa1990838222b26d5804ca18a49b47fd3525d8dc2c9f833d415aa"
+    },
+    {
+      "rowBox": [
+        795,
+        82,
+        972,
+        188
+      ],
+      "bodyBox": [
+        795,
+        82,
+        972,
+        188
+      ],
+      "footX": 100.0,
+      "bodyHeight": 106,
+      "character": "Luna",
+      "action": "Knockout",
+      "source": "Assets/Art/Sources/Luna-Movement-v6-source.png",
+      "sourceRow": 6,
+      "sourcePose": 4,
+      "sourceRect": [
+        795,
+        1306,
+        972,
+        1412
+      ],
+      "sourceNormalization": 1.1049723756906078,
+      "output": "Assets/Art/Characters/Luna/Knockout/05.png",
+      "outputScale": 1.1049723756906078,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        18,
+        115,
+        214,
+        232
+      ],
+      "minimumEdge": 18,
+      "sha256": "2c8bd1dab6b3afcc1e29b8f3c6e686dc21b840a44d3d55c261ff4cdc0625c496"
+    },
+    {
+      "rowBox": [
+        15,
+        0,
+        194,
+        96
+      ],
+      "bodyBox": [
+        15,
+        0,
+        194,
+        96
+      ],
+      "footX": 104,
+      "bodyHeight": 96,
+      "character": "Luna",
+      "action": "Knockout",
+      "source": "Assets/Art/Sources/Luna-Movement-v6-source.png",
+      "sourceRow": 7,
+      "sourcePose": 0,
+      "sourceRect": [
+        15,
+        1464,
+        194,
+        1560
+      ],
+      "sourceNormalization": 1.1049723756906078,
+      "output": "Assets/Art/Characters/Luna/Knockout/06.png",
+      "outputScale": 1.1049723756906078,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        13,
+        126,
+        211,
+        232
+      ],
+      "minimumEdge": 13,
+      "sha256": "f2aeafc30ceecf6ca7e7cda42756017451740bb980a957a6756fe047b16a0c1b"
+    },
+    {
+      "rowBox": [
+        205,
+        4,
+        381,
+        96
+      ],
+      "bodyBox": [
+        205,
+        4,
+        381,
+        96
+      ],
+      "footX": 111,
+      "bodyHeight": 92,
+      "character": "Luna",
+      "action": "Knockout",
+      "source": "Assets/Art/Sources/Luna-Movement-v6-source.png",
+      "sourceRow": 7,
+      "sourcePose": 1,
+      "sourceRect": [
+        205,
+        1468,
+        381,
+        1560
+      ],
+      "sourceNormalization": 1.1049723756906078,
+      "output": "Assets/Art/Characters/Luna/Knockout/07.png",
+      "outputScale": 1.1049723756906078,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        5,
+        130,
+        199,
+        232
+      ],
+      "minimumEdge": 5,
+      "sha256": "a6bf99aba00be26564fef49d7946708d3f0df0681d70ec789984ad026efa14a0"
+    },
+    {
+      "rowBox": [
+        389,
+        7,
+        587,
+        95
+      ],
+      "bodyBox": [
+        389,
+        7,
+        587,
+        95
+      ],
+      "footX": 125.0,
+      "bodyHeight": 88,
+      "character": "Luna",
+      "action": "Knockout",
+      "source": "Assets/Art/Sources/Luna-Movement-v6-source.png",
+      "sourceRow": 7,
+      "sourcePose": 2,
+      "sourceRect": [
+        389,
+        1471,
+        587,
+        1559
+      ],
+      "sourceNormalization": 1.1049723756906078,
+      "output": "Assets/Art/Characters/Luna/Knockout/08.png",
+      "outputScale": 1.1049723756906078,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        4,
+        135,
+        223,
+        232
+      ],
+      "minimumEdge": 4,
+      "sha256": "ee432042163faeb78e02c5a9840f3856d666d87cacb878fe5fc027d181d4bf33"
+    },
+    {
+      "rowBox": [
+        595,
+        11,
+        787,
+        95
+      ],
+      "bodyBox": [
+        595,
+        11,
+        787,
+        95
+      ],
+      "footX": 120,
+      "bodyHeight": 84,
+      "character": "Luna",
+      "action": "Knockout",
+      "source": "Assets/Art/Sources/Luna-Movement-v6-source.png",
+      "sourceRow": 7,
+      "sourcePose": 3,
+      "sourceRect": [
+        595,
+        1475,
+        787,
+        1559
+      ],
+      "sourceNormalization": 1.1049723756906078,
+      "output": "Assets/Art/Characters/Luna/Knockout/09.png",
+      "outputScale": 1.1049723756906078,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        4,
+        139,
+        216,
+        232
+      ],
+      "minimumEdge": 4,
+      "sha256": "ce086a46fe03381b358d1f9df7b36d4436501946e8a138cc67ee6ba4ed4946c3"
+    },
+    {
+      "rowBox": [
+        794,
+        14,
+        982,
+        94
+      ],
+      "bodyBox": [
+        794,
+        14,
+        982,
+        94
+      ],
+      "footX": 99,
+      "bodyHeight": 80,
+      "character": "Luna",
+      "action": "Knockout",
+      "source": "Assets/Art/Sources/Luna-Movement-v6-source.png",
+      "sourceRow": 7,
+      "sourcePose": 4,
+      "sourceRect": [
+        794,
+        1478,
+        982,
+        1558
+      ],
+      "sourceNormalization": 1.1049723756906078,
+      "output": "Assets/Art/Characters/Luna/Knockout/10.png",
+      "outputScale": 1.1049723756906078,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        19,
+        144,
+        227,
+        232
+      ],
+      "minimumEdge": 19,
+      "sha256": "efda7396157c55e4a15b8e31d5190bb1266af2d5771420baffffb2cd2eefce26"
+    },
+    {
+      "rowBox": [
+        18,
+        0,
+        186,
+        176
+      ],
+      "bodyBox": [
+        18,
+        0,
+        186,
+        176
+      ],
+      "footX": 113.5,
+      "bodyHeight": 176,
+      "character": "Luna",
+      "action": "Punch",
+      "source": "Assets/Art/Sources/Luna-Combat-v6-source.png",
+      "sourceRow": 0,
+      "sourcePose": 0,
+      "sourceRect": [
+        18,
+        23,
+        186,
+        199
+      ],
+      "sourceNormalization": 1.1049723756906078,
+      "output": "Assets/Art/Characters/Luna/Punch/01.png",
+      "outputScale": 1.1049723756906078,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        4,
+        38,
+        190,
+        232
+      ],
+      "minimumEdge": 4,
+      "sha256": "d76c2e357b9de81c79e1fa4cfa38345f02997e5466be58eb1f34f4d793bf9e67"
+    },
+    {
+      "rowBox": [
+        205,
+        0,
+        386,
+        175
+      ],
+      "bodyBox": [
+        205,
+        0,
+        386,
+        175
+      ],
+      "footX": 119.5,
+      "bodyHeight": 175,
+      "character": "Luna",
+      "action": "Punch",
+      "source": "Assets/Art/Sources/Luna-Combat-v6-source.png",
+      "sourceRow": 0,
+      "sourcePose": 1,
+      "sourceRect": [
+        205,
+        23,
+        386,
+        198
+      ],
+      "sourceNormalization": 1.1049723756906078,
+      "output": "Assets/Art/Characters/Luna/Punch/02.png",
+      "outputScale": 1.1049723756906078,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        4,
+        39,
+        204,
+        232
+      ],
+      "minimumEdge": 4,
+      "sha256": "35cb9844e8714d0f8769cad35a9ad1e8f2e723d679c2a69a73f0b727385a0159"
+    },
+    {
+      "rowBox": [
+        401,
+        1,
+        574,
+        176
+      ],
+      "bodyBox": [
+        401,
+        1,
+        574,
+        176
+      ],
+      "footX": 112,
+      "bodyHeight": 175,
+      "character": "Luna",
+      "action": "Punch",
+      "source": "Assets/Art/Sources/Luna-Combat-v6-source.png",
+      "sourceRow": 0,
+      "sourcePose": 2,
+      "sourceRect": [
+        401,
+        24,
+        574,
+        199
+      ],
+      "sourceNormalization": 1.1049723756906078,
+      "output": "Assets/Art/Characters/Luna/Punch/03.png",
+      "outputScale": 1.1049723756906078,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        4,
+        39,
+        195,
+        232
+      ],
+      "minimumEdge": 4,
+      "sha256": "a4cb921de06ed75fe8fc154bb1f899c564c545e09c728701fc25cd579a55e333"
+    },
+    {
+      "rowBox": [
+        584,
+        6,
+        790,
+        176
+      ],
+      "bodyBox": [
+        584,
+        6,
+        790,
+        176
+      ],
+      "footX": 141,
+      "bodyHeight": 170,
+      "character": "Luna",
+      "action": "Punch",
+      "source": "Assets/Art/Sources/Luna-Combat-v6-source.png",
+      "sourceRow": 0,
+      "sourcePose": 3,
+      "sourceRect": [
+        584,
+        29,
+        790,
+        199
+      ],
+      "sourceNormalization": 1.1049723756906078,
+      "output": "Assets/Art/Characters/Luna/Punch/04.png",
+      "outputScale": 1.1049723756906078,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        4,
+        44,
+        232,
+        232
+      ],
+      "minimumEdge": 4,
+      "sha256": "cb54ed3b8902902af005474f530e9018e54de58f00e43ff9244faf84d070b229"
+    },
+    {
+      "rowBox": [
+        798,
+        2,
+        984,
+        175
+      ],
+      "bodyBox": [
+        798,
+        2,
+        984,
+        175
+      ],
+      "footX": 115,
+      "bodyHeight": 173,
+      "character": "Luna",
+      "action": "Punch",
+      "source": "Assets/Art/Sources/Luna-Combat-v6-source.png",
+      "sourceRow": 0,
+      "sourcePose": 4,
+      "sourceRect": [
+        798,
+        25,
+        984,
+        198
+      ],
+      "sourceNormalization": 1.1049723756906078,
+      "output": "Assets/Art/Characters/Luna/Punch/05.png",
+      "outputScale": 1.1049723756906078,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        4,
+        41,
+        210,
+        232
+      ],
+      "minimumEdge": 4,
+      "sha256": "f65c37a732b697b75ba1353afa864f1129b419f2673af96133eccd898f604287"
+    },
+    {
+      "rowBox": [
+        13,
+        0,
+        209,
+        179
+      ],
+      "bodyBox": [
+        13,
+        0,
+        190,
+        179
+      ],
+      "footX": 113,
+      "bodyHeight": 179,
+      "character": "Luna",
+      "action": "Punch",
+      "source": "Assets/Art/Sources/Luna-Combat-v6-source.png",
+      "sourceRow": 1,
+      "sourcePose": 0,
+      "sourceRect": [
+        13,
+        218,
+        209,
+        397
+      ],
+      "sourceNormalization": 1.1049723756906078,
+      "output": "Assets/Art/Characters/Luna/Punch/06.png",
+      "outputScale": 1.1049723756906078,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        4,
+        34,
+        221,
+        232
+      ],
+      "minimumEdge": 4,
+      "sha256": "18c6746177f6128782e66d51fdb851db6eaa8dce9b18d7dea75a5f39ce14a114"
+    },
+    {
+      "rowBox": [
+        197,
+        2,
+        403,
+        180
+      ],
+      "bodyBox": [
+        209,
+        2,
+        372,
+        180
+      ],
+      "footX": 72,
+      "bodyHeight": 178,
+      "character": "Luna",
+      "action": "Punch",
+      "source": "Assets/Art/Sources/Luna-Combat-v6-source.png",
+      "sourceRow": 1,
+      "sourcePose": 1,
+      "sourceRect": [
+        197,
+        220,
+        403,
+        398
+      ],
+      "sourceNormalization": 1.1049723756906078,
+      "output": "Assets/Art/Characters/Luna/Punch/07.png",
+      "outputScale": 1.1049723756906078,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        24,
+        35,
+        252,
+        232
+      ],
+      "minimumEdge": 4,
+      "sha256": "42ff11de48b9f92e143cd7d3bb86df0b7351c4fa6999f14a828543e00b03c1f6"
+    },
+    {
+      "rowBox": [
+        380,
+        4,
+        594,
+        180
+      ],
+      "bodyBox": [
+        400,
+        4,
+        594,
+        180
+      ],
+      "footX": 85.5,
+      "bodyHeight": 176,
+      "character": "Luna",
+      "action": "Punch",
+      "source": "Assets/Art/Sources/Luna-Combat-v6-source.png",
+      "sourceRow": 1,
+      "sourcePose": 2,
+      "sourceRect": [
+        380,
+        222,
+        594,
+        398
+      ],
+      "sourceNormalization": 1.1049723756906078,
+      "output": "Assets/Art/Characters/Luna/Punch/08.png",
+      "outputScale": 1.1049723756906078,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        16,
+        38,
+        252,
+        232
+      ],
+      "minimumEdge": 4,
+      "sha256": "8a156b71a491144b88b3ce80773e2b7ebcac6f5110a389f76b03d1ad7cf1b71b"
+    },
+    {
+      "rowBox": [
+        605,
+        6,
+        770,
+        180
+      ],
+      "bodyBox": [
+        605,
+        6,
+        770,
+        180
+      ],
+      "footX": 71,
+      "bodyHeight": 174,
+      "character": "Luna",
+      "action": "Punch",
+      "source": "Assets/Art/Sources/Luna-Combat-v6-source.png",
+      "sourceRow": 1,
+      "sourcePose": 3,
+      "sourceRect": [
+        605,
+        224,
+        770,
+        398
+      ],
+      "sourceNormalization": 1.1049723756906078,
+      "output": "Assets/Art/Characters/Luna/Punch/09.png",
+      "outputScale": 1.1049723756906078,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        50,
+        40,
+        232,
+        232
+      ],
+      "minimumEdge": 24,
+      "sha256": "07b5dcc4dd2061fd5e70ec1935dcfb1fe5eb665ac7c59c6c0dd4e5566de4d9a6"
+    },
+    {
+      "rowBox": [
+        799,
+        4,
+        957,
+        180
+      ],
+      "bodyBox": [
+        799,
+        4,
+        957,
+        180
+      ],
+      "footX": 103,
+      "bodyHeight": 176,
+      "character": "Luna",
+      "action": "Punch",
+      "source": "Assets/Art/Sources/Luna-Combat-v6-source.png",
+      "sourceRow": 1,
+      "sourcePose": 4,
+      "sourceRect": [
+        799,
+        222,
+        957,
+        398
+      ],
+      "sourceNormalization": 1.1049723756906078,
+      "output": "Assets/Art/Characters/Luna/Punch/10.png",
+      "outputScale": 1.1049723756906078,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        14,
+        38,
+        189,
+        232
+      ],
+      "minimumEdge": 14,
+      "sha256": "46325cb505ac7f18f5f656e256b31e32d2ec73ec5305627a066bcc8c8311eb05"
+    },
+    {
+      "rowBox": [
+        18,
+        4,
+        183,
+        183
+      ],
+      "bodyBox": [
+        18,
+        4,
+        183,
+        183
+      ],
+      "footX": 67,
+      "bodyHeight": 179,
+      "character": "Luna",
+      "action": "Kick",
+      "source": "Assets/Art/Sources/Luna-Combat-v6-source.png",
+      "sourceRow": 2,
+      "sourcePose": 0,
+      "sourceRect": [
+        18,
+        418,
+        183,
+        597
+      ],
+      "sourceNormalization": 1.1049723756906078,
+      "output": "Assets/Art/Characters/Luna/Kick/01.png",
+      "outputScale": 1.1049723756906078,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        54,
+        34,
+        236,
+        232
+      ],
+      "minimumEdge": 20,
+      "sha256": "aff7dbc4a5b2dcafe42cbddbcc4b2585790feea4b7ddb45d3f7e8c5120bfa0cc"
+    },
+    {
+      "rowBox": [
+        192,
+        27,
+        388,
+        181
+      ],
+      "bodyBox": [
+        192,
+        27,
+        388,
+        181
+      ],
+      "footX": 98.0,
+      "bodyHeight": 154,
+      "character": "Luna",
+      "action": "Kick",
+      "source": "Assets/Art/Sources/Luna-Combat-v6-source.png",
+      "sourceRow": 2,
+      "sourcePose": 1,
+      "sourceRect": [
+        192,
+        441,
+        388,
+        595
+      ],
+      "sourceNormalization": 1.1049723756906078,
+      "output": "Assets/Art/Characters/Luna/Kick/02.png",
+      "outputScale": 1.1049723756906078,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        20,
+        62,
+        237,
+        232
+      ],
+      "minimumEdge": 19,
+      "sha256": "81c78a0aa6a384f41b4aaaf63502da8c66217bb6a31e7bf5ade67b6333aaf772"
+    },
+    {
+      "rowBox": [
+        405,
+        0,
+        576,
+        185
+      ],
+      "bodyBox": [
+        405,
+        0,
+        576,
+        185
+      ],
+      "footX": 103.5,
+      "bodyHeight": 185,
+      "character": "Luna",
+      "action": "Kick",
+      "source": "Assets/Art/Sources/Luna-Combat-v6-source.png",
+      "sourceRow": 2,
+      "sourcePose": 2,
+      "sourceRect": [
+        405,
+        414,
+        576,
+        599
+      ],
+      "sourceNormalization": 1.1049723756906078,
+      "output": "Assets/Art/Characters/Luna/Kick/03.png",
+      "outputScale": 1.1049723756906078,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        14,
+        28,
+        203,
+        232
+      ],
+      "minimumEdge": 14,
+      "sha256": "5e6ecdcd7f85426296642a3e109d3543b60ba212ffc1eeaedf7399f53828be88"
+    },
+    {
+      "rowBox": [
+        583,
+        11,
+        792,
+        187
+      ],
+      "bodyBox": [
+        583,
+        11,
+        792,
+        187
+      ],
+      "footX": 108.0,
+      "bodyHeight": 176,
+      "character": "Luna",
+      "action": "Kick",
+      "source": "Assets/Art/Sources/Luna-Combat-v6-source.png",
+      "sourceRow": 2,
+      "sourcePose": 3,
+      "sourceRect": [
+        583,
+        425,
+        792,
+        601
+      ],
+      "sourceNormalization": 1.1049723756906078,
+      "output": "Assets/Art/Characters/Luna/Kick/04.png",
+      "outputScale": 1.1049723756906078,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        9,
+        38,
+        240,
+        232
+      ],
+      "minimumEdge": 9,
+      "sha256": "51bb0f0262aa84c770ee07391635a686920b36248f44b35f36fed453b10d3a45"
+    },
+    {
+      "rowBox": [
+        794,
+        16,
+        969,
+        189
+      ],
+      "bodyBox": [
+        794,
+        16,
+        969,
+        189
+      ],
+      "footX": 126.0,
+      "bodyHeight": 173,
+      "character": "Luna",
+      "action": "Kick",
+      "source": "Assets/Art/Sources/Luna-Combat-v6-source.png",
+      "sourceRow": 2,
+      "sourcePose": 4,
+      "sourceRect": [
+        794,
+        430,
+        969,
+        603
+      ],
+      "sourceNormalization": 1.1049723756906078,
+      "output": "Assets/Art/Characters/Luna/Kick/05.png",
+      "outputScale": 1.1049723756906078,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        4,
+        41,
+        197,
+        232
+      ],
+      "minimumEdge": 4,
+      "sha256": "257414cb1f577cd147c25f839102924f093b290204dc751c127c65e24f9d579f"
+    },
+    {
+      "rowBox": [
+        14,
+        0,
+        220,
+        182
+      ],
+      "bodyBox": [
+        14,
+        0,
+        194,
+        182
+      ],
+      "footX": 88,
+      "bodyHeight": 182,
+      "character": "Luna",
+      "action": "Kick",
+      "source": "Assets/Art/Sources/Luna-Combat-v6-source.png",
+      "sourceRow": 3,
+      "sourcePose": 0,
+      "sourceRect": [
+        14,
+        615,
+        220,
+        797
+      ],
+      "sourceNormalization": 1.1049723756906078,
+      "output": "Assets/Art/Characters/Luna/Kick/06.png",
+      "outputScale": 1.1049723756906078,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        24,
+        31,
+        252,
+        232
+      ],
+      "minimumEdge": 4,
+      "sha256": "ccd6efc57260248ee41df0dc9567358d25607f2ecd9aa401cd180c7139de246e"
+    },
+    {
+      "rowBox": [
+        222,
+        11,
+        393,
+        181
+      ],
+      "bodyBox": [
+        222,
+        11,
+        393,
+        181
+      ],
+      "footX": 73,
+      "bodyHeight": 170,
+      "character": "Luna",
+      "action": "Kick",
+      "source": "Assets/Art/Sources/Luna-Combat-v6-source.png",
+      "sourceRow": 3,
+      "sourcePose": 1,
+      "sourceRect": [
+        222,
+        626,
+        393,
+        796
+      ],
+      "sourceNormalization": 1.1049723756906078,
+      "output": "Assets/Art/Characters/Luna/Kick/07.png",
+      "outputScale": 1.1049723756906078,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        47,
+        44,
+        236,
+        232
+      ],
+      "minimumEdge": 20,
+      "sha256": "c1be67b0f46748a1325e7325f62d4d507346f2d6be7e52df6dae2bb8b066ed0b"
+    },
+    {
+      "rowBox": [
+        397,
+        25,
+        584,
+        180
+      ],
+      "bodyBox": [
+        397,
+        25,
+        584,
+        180
+      ],
+      "footX": 70.0,
+      "bodyHeight": 155,
+      "character": "Luna",
+      "action": "Kick",
+      "source": "Assets/Art/Sources/Luna-Combat-v6-source.png",
+      "sourceRow": 3,
+      "sourcePose": 2,
+      "sourceRect": [
+        397,
+        640,
+        584,
+        795
+      ],
+      "sourceNormalization": 1.1049723756906078,
+      "output": "Assets/Art/Characters/Luna/Kick/08.png",
+      "outputScale": 1.1049723756906078,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        45,
+        61,
+        252,
+        232
+      ],
+      "minimumEdge": 4,
+      "sha256": "bd4925d19bb758a3804ba8005e1603440c372ca4f1c22725e22e4c8512b34366"
+    },
+    {
+      "rowBox": [
+        598,
+        8,
+        773,
+        181
+      ],
+      "bodyBox": [
+        598,
+        8,
+        773,
+        181
+      ],
+      "footX": 69.0,
+      "bodyHeight": 173,
+      "character": "Luna",
+      "action": "Kick",
+      "source": "Assets/Art/Sources/Luna-Combat-v6-source.png",
+      "sourceRow": 3,
+      "sourcePose": 3,
+      "sourceRect": [
+        598,
+        623,
+        773,
+        796
+      ],
+      "sourceNormalization": 1.1049723756906078,
+      "output": "Assets/Art/Characters/Luna/Kick/09.png",
+      "outputScale": 1.1049723756906078,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        52,
+        41,
+        245,
+        232
+      ],
+      "minimumEdge": 11,
+      "sha256": "1c158254ffc69edc326eeb6b09e5133ce8b565a246ab5978d10ee2ec2b0921c1"
+    },
+    {
+      "rowBox": [
+        795,
+        9,
+        966,
+        183
+      ],
+      "bodyBox": [
+        795,
+        9,
+        966,
+        183
+      ],
+      "footX": 82.0,
+      "bodyHeight": 174,
+      "character": "Luna",
+      "action": "Kick",
+      "source": "Assets/Art/Sources/Luna-Combat-v6-source.png",
+      "sourceRow": 3,
+      "sourcePose": 4,
+      "sourceRect": [
+        795,
+        624,
+        966,
+        798
+      ],
+      "sourceNormalization": 1.1049723756906078,
+      "output": "Assets/Art/Characters/Luna/Kick/10.png",
+      "outputScale": 1.1049723756906078,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        37,
+        40,
+        226,
+        232
+      ],
+      "minimumEdge": 24,
+      "sha256": "b194253015ad087f9eab2e92e0276811d8e0fc039fa3c0c66ed3166cf9b541d5"
+    },
+    {
+      "rowBox": [
+        16,
+        3,
+        189,
+        182
+      ],
+      "bodyBox": [
+        16,
+        3,
+        189,
+        182
+      ],
+      "footX": 78.0,
+      "bodyHeight": 179,
+      "character": "Luna",
+      "action": "Block",
+      "source": "Assets/Art/Sources/Luna-Combat-v6-source.png",
+      "sourceRow": 4,
+      "sourcePose": 0,
+      "sourceRect": [
+        16,
+        819,
+        189,
+        998
+      ],
+      "sourceNormalization": 1.1049723756906078,
+      "output": "Assets/Art/Characters/Luna/Block/01.png",
+      "outputScale": 1.1049723756906078,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        42,
+        34,
+        233,
+        232
+      ],
+      "minimumEdge": 23,
+      "sha256": "9678ddda5531682118da10c371f4963fd3855f72f66b1b4b0ca995a45bf6bba3"
+    },
+    {
+      "rowBox": [
+        190,
+        1,
+        401,
+        185
+      ],
+      "bodyBox": [
+        190,
+        1,
+        401,
+        185
+      ],
+      "footX": 134,
+      "bodyHeight": 184,
+      "character": "Luna",
+      "action": "Block",
+      "source": "Assets/Art/Sources/Luna-Combat-v6-source.png",
+      "sourceRow": 4,
+      "sourcePose": 1,
+      "sourceRect": [
+        190,
+        817,
+        401,
+        1001
+      ],
+      "sourceNormalization": 1.1049723756906078,
+      "output": "Assets/Art/Characters/Luna/Block/02.png",
+      "outputScale": 1.1049723756906078,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        4,
+        29,
+        237,
+        232
+      ],
+      "minimumEdge": 4,
+      "sha256": "b347271a7d3924fc704014c834d4e0ec0454e5b00c6a4ad70a7405fa4a088ea3"
+    },
+    {
+      "rowBox": [
+        404,
+        3,
+        590,
+        185
+      ],
+      "bodyBox": [
+        404,
+        3,
+        590,
+        185
+      ],
+      "footX": 83,
+      "bodyHeight": 182,
+      "character": "Luna",
+      "action": "Block",
+      "source": "Assets/Art/Sources/Luna-Combat-v6-source.png",
+      "sourceRow": 4,
+      "sourcePose": 2,
+      "sourceRect": [
+        404,
+        819,
+        590,
+        1001
+      ],
+      "sourceNormalization": 1.1049723756906078,
+      "output": "Assets/Art/Characters/Luna/Block/03.png",
+      "outputScale": 1.1049723756906078,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        36,
+        31,
+        242,
+        232
+      ],
+      "minimumEdge": 14,
+      "sha256": "35e1ba0e63e12bf33c5dab3863725166f46425af863f1fd3b0767a78a4d19b2f"
+    },
+    {
+      "rowBox": [
+        594,
+        0,
+        790,
+        185
+      ],
+      "bodyBox": [
+        594,
+        0,
+        790,
+        185
+      ],
+      "footX": 128,
+      "bodyHeight": 185,
+      "character": "Luna",
+      "action": "Block",
+      "source": "Assets/Art/Sources/Luna-Combat-v6-source.png",
+      "sourceRow": 4,
+      "sourcePose": 3,
+      "sourceRect": [
+        594,
+        816,
+        790,
+        1001
+      ],
+      "sourceNormalization": 1.1049723756906078,
+      "output": "Assets/Art/Characters/Luna/Block/04.png",
+      "outputScale": 1.1049723756906078,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        4,
+        28,
+        221,
+        232
+      ],
+      "minimumEdge": 4,
+      "sha256": "70b93fd584f5e5f31d19a0e4b509a824d72b65d0af4cb847347a0c2e64b7e338"
+    },
+    {
+      "rowBox": [
+        798,
+        6,
+        977,
+        185
+      ],
+      "bodyBox": [
+        798,
+        6,
+        977,
+        185
+      ],
+      "footX": 117.0,
+      "bodyHeight": 179,
+      "character": "Luna",
+      "action": "Block",
+      "source": "Assets/Art/Sources/Luna-Combat-v6-source.png",
+      "sourceRow": 4,
+      "sourcePose": 4,
+      "sourceRect": [
+        798,
+        822,
+        977,
+        1001
+      ],
+      "sourceNormalization": 1.1049723756906078,
+      "output": "Assets/Art/Characters/Luna/Block/05.png",
+      "outputScale": 1.1049723756906078,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        4,
+        34,
+        202,
+        232
+      ],
+      "minimumEdge": 4,
+      "sha256": "028a5a5fe9c4c5045bfd65d59bd87930d1baf3f71c54ccbe7a80a68b783224e3"
+    },
+    {
+      "rowBox": [
+        9,
+        2,
+        188,
+        180
+      ],
+      "bodyBox": [
+        9,
+        2,
+        188,
+        180
+      ],
+      "footX": 75,
+      "bodyHeight": 178,
+      "character": "Luna",
+      "action": "Block",
+      "source": "Assets/Art/Sources/Luna-Combat-v6-source.png",
+      "sourceRow": 5,
+      "sourcePose": 0,
+      "sourceRect": [
+        9,
+        1021,
+        188,
+        1199
+      ],
+      "sourceNormalization": 1.1049723756906078,
+      "output": "Assets/Art/Characters/Luna/Block/06.png",
+      "outputScale": 1.1049723756906078,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        45,
+        35,
+        243,
+        232
+      ],
+      "minimumEdge": 13,
+      "sha256": "dec024d8b14731b0d34e993a2659c0d25b6b2f3329cd45fa10be9bf28c116827"
+    },
+    {
+      "rowBox": [
+        193,
+        3,
+        393,
+        180
+      ],
+      "bodyBox": [
+        193,
+        3,
+        393,
+        180
+      ],
+      "footX": 84.0,
+      "bodyHeight": 177,
+      "character": "Luna",
+      "action": "Block",
+      "source": "Assets/Art/Sources/Luna-Combat-v6-source.png",
+      "sourceRow": 5,
+      "sourcePose": 1,
+      "sourceRect": [
+        193,
+        1022,
+        393,
+        1199
+      ],
+      "sourceNormalization": 1.1049723756906078,
+      "output": "Assets/Art/Characters/Luna/Block/07.png",
+      "outputScale": 1.1049723756906078,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        31,
+        36,
+        252,
+        232
+      ],
+      "minimumEdge": 4,
+      "sha256": "02f8a1fdca278a74cddbdb6e4925610c20cb6ef7acc9310b3a5e3cfba7c95b4c"
+    },
+    {
+      "rowBox": [
+        383,
+        2,
+        577,
+        180
+      ],
+      "bodyBox": [
+        401,
+        2,
+        577,
+        180
+      ],
+      "footX": 115.0,
+      "bodyHeight": 178,
+      "character": "Luna",
+      "action": "Block",
+      "source": "Assets/Art/Sources/Luna-Combat-v6-source.png",
+      "sourceRow": 5,
+      "sourcePose": 2,
+      "sourceRect": [
+        383,
+        1021,
+        577,
+        1199
+      ],
+      "sourceNormalization": 1.1049723756906078,
+      "output": "Assets/Art/Characters/Luna/Block/08.png",
+      "outputScale": 1.1049723756906078,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        4,
+        35,
+        218,
+        232
+      ],
+      "minimumEdge": 4,
+      "sha256": "4df3ee4b11e5998aac44f94566c6a90793e1431b9abac7b5ee8ef862ace8c592"
+    },
+    {
+      "rowBox": [
+        587,
+        0,
+        769,
+        181
+      ],
+      "bodyBox": [
+        587,
+        0,
+        769,
+        181
+      ],
+      "footX": 75.0,
+      "bodyHeight": 181,
+      "character": "Luna",
+      "action": "Block",
+      "source": "Assets/Art/Sources/Luna-Combat-v6-source.png",
+      "sourceRow": 5,
+      "sourcePose": 3,
+      "sourceRect": [
+        587,
+        1019,
+        769,
+        1200
+      ],
+      "sourceNormalization": 1.1049723756906078,
+      "output": "Assets/Art/Characters/Luna/Block/09.png",
+      "outputScale": 1.1049723756906078,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        45,
+        32,
+        246,
+        232
+      ],
+      "minimumEdge": 10,
+      "sha256": "cd80f34c422af14db8c5d78964ad8ce4c2b69fd0bf5c2caaa03a756c3840d788"
+    },
+    {
+      "rowBox": [
+        799,
+        3,
+        968,
+        180
+      ],
+      "bodyBox": [
+        799,
+        3,
+        968,
+        180
+      ],
+      "footX": 77,
+      "bodyHeight": 177,
+      "character": "Luna",
+      "action": "Block",
+      "source": "Assets/Art/Sources/Luna-Combat-v6-source.png",
+      "sourceRow": 5,
+      "sourcePose": 4,
+      "sourceRect": [
+        799,
+        1022,
+        968,
+        1199
+      ],
+      "sourceNormalization": 1.1049723756906078,
+      "output": "Assets/Art/Characters/Luna/Block/10.png",
+      "outputScale": 1.1049723756906078,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        43,
+        36,
+        230,
+        232
+      ],
+      "minimumEdge": 24,
+      "sha256": "04a843cd75db05791e74fbaf8c06f1477df2b0d802c234a520d61b0c578e4a59"
+    },
+    {
+      "rowBox": [
+        13,
+        0,
+        189,
+        174
+      ],
+      "bodyBox": [
+        13,
+        0,
+        189,
+        174
+      ],
+      "footX": 71.0,
+      "bodyHeight": 174,
+      "character": "Luna",
+      "action": "Special",
+      "source": "Assets/Art/Sources/Luna-Combat-v6-source.png",
+      "sourceRow": 6,
+      "sourcePose": 0,
+      "sourceRect": [
+        13,
+        1218,
+        189,
+        1392
+      ],
+      "sourceNormalization": 1.1049723756906078,
+      "output": "Assets/Art/Characters/Luna/Special/01.png",
+      "outputScale": 1.1049723756906078,
+      "canvas": [
+        384,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        192,
+        24
+      ],
+      "bbox": [
+        114,
+        40,
+        308,
+        232
+      ],
+      "minimumEdge": 24,
+      "sha256": "3940f855848aaac246306b15d259e368a376dee595f7ecb7877c69df68ef2280"
+    },
+    {
+      "rowBox": [
+        199,
+        1,
+        401,
+        173
+      ],
+      "bodyBox": [
+        199,
+        1,
+        380,
+        173
+      ],
+      "footX": 120.0,
+      "bodyHeight": 172,
+      "character": "Luna",
+      "action": "Special",
+      "source": "Assets/Art/Sources/Luna-Combat-v6-source.png",
+      "sourceRow": 6,
+      "sourcePose": 1,
+      "sourceRect": [
+        199,
+        1219,
+        401,
+        1391
+      ],
+      "sourceNormalization": 1.1049723756906078,
+      "output": "Assets/Art/Characters/Luna/Special/02.png",
+      "outputScale": 1.1049723756906078,
+      "canvas": [
+        384,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        192,
+        24
+      ],
+      "bbox": [
+        59,
+        42,
+        282,
+        232
+      ],
+      "minimumEdge": 24,
+      "sha256": "bc648187795745331696b945f1089fec7ed259350df0f4834678c7a39efe4e85"
+    },
+    {
+      "rowBox": [
+        378,
+        6,
+        608,
+        176
+      ],
+      "bodyBox": [
+        378,
+        6,
+        608,
+        176
+      ],
+      "footX": 83.0,
+      "bodyHeight": 170,
+      "character": "Luna",
+      "action": "Special",
+      "source": "Assets/Art/Sources/Luna-Combat-v6-source.png",
+      "sourceRow": 6,
+      "sourcePose": 2,
+      "sourceRect": [
+        378,
+        1224,
+        608,
+        1394
+      ],
+      "sourceNormalization": 1.1049723756906078,
+      "output": "Assets/Art/Characters/Luna/Special/03.png",
+      "outputScale": 1.1049723756906078,
+      "canvas": [
+        384,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        192,
+        24
+      ],
+      "bbox": [
+        100,
+        44,
+        354,
+        232
+      ],
+      "minimumEdge": 24,
+      "sha256": "fa582d2c4dfb62cf503cc170331fdbe20ed49b68ef68ecc57e7864f3be7ed313"
+    },
+    {
+      "rowBox": [
+        591,
+        24,
+        804,
+        175
+      ],
+      "bodyBox": [
+        591,
+        24,
+        804,
+        175
+      ],
+      "footX": 134,
+      "bodyHeight": 151,
+      "character": "Luna",
+      "action": "Special",
+      "source": "Assets/Art/Sources/Luna-Combat-v6-source.png",
+      "sourceRow": 6,
+      "sourcePose": 3,
+      "sourceRect": [
+        591,
+        1242,
+        804,
+        1393
+      ],
+      "sourceNormalization": 1.1049723756906078,
+      "output": "Assets/Art/Characters/Luna/Special/04.png",
+      "outputScale": 1.1049723756906078,
+      "canvas": [
+        384,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        192,
+        24
+      ],
+      "bbox": [
+        44,
+        65,
+        279,
+        232
+      ],
+      "minimumEdge": 24,
+      "sha256": "92d1323608fa20245e2b60e6e171f3b8c5e241c268c269db03bd365b5df5ac35"
+    },
+    {
+      "rowBox": [
+        785,
+        13,
+        984,
+        177
+      ],
+      "bodyBox": [
+        807,
+        13,
+        984,
+        177
+      ],
+      "footX": 143.0,
+      "bodyHeight": 164,
+      "character": "Luna",
+      "action": "Special",
+      "source": "Assets/Art/Sources/Luna-Combat-v6-source.png",
+      "sourceRow": 6,
+      "sourcePose": 4,
+      "sourceRect": [
+        785,
+        1231,
+        984,
+        1395
+      ],
+      "sourceNormalization": 1.1049723756906078,
+      "output": "Assets/Art/Characters/Luna/Special/05.png",
+      "outputScale": 1.1049723756906078,
+      "canvas": [
+        384,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        192,
+        24
+      ],
+      "bbox": [
+        34,
+        51,
+        254,
+        232
+      ],
+      "minimumEdge": 24,
+      "sha256": "aaabb4328507795e58cd54c7d736dfa41e7e705508221b28530aa4c5420c653c"
+    },
+    {
+      "rowBox": [
+        9,
+        2,
+        193,
+        163
+      ],
+      "bodyBox": [
+        9,
+        2,
+        171,
+        163
+      ],
+      "footX": 70.0,
+      "bodyHeight": 161,
+      "character": "Luna",
+      "action": "Special",
+      "source": "Assets/Art/Sources/Luna-Combat-v6-source.png",
+      "sourceRow": 7,
+      "sourcePose": 0,
+      "sourceRect": [
+        9,
+        1414,
+        193,
+        1575
+      ],
+      "sourceNormalization": 1.1049723756906078,
+      "output": "Assets/Art/Characters/Luna/Special/06.png",
+      "outputScale": 1.1049723756906078,
+      "canvas": [
+        384,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        192,
+        24
+      ],
+      "bbox": [
+        115,
+        54,
+        318,
+        232
+      ],
+      "minimumEdge": 24,
+      "sha256": "944141ea2248343a45398754757305678eaddef443d24300f6ff4314848c0bf6"
+    },
+    {
+      "rowBox": [
+        185,
+        0,
+        400,
+        162
+      ],
+      "bodyBox": [
+        202,
+        0,
+        371,
+        162
+      ],
+      "footX": 129,
+      "bodyHeight": 162,
+      "character": "Luna",
+      "action": "Special",
+      "source": "Assets/Art/Sources/Luna-Combat-v6-source.png",
+      "sourceRow": 7,
+      "sourcePose": 1,
+      "sourceRect": [
+        185,
+        1412,
+        400,
+        1574
+      ],
+      "sourceNormalization": 1.1049723756906078,
+      "output": "Assets/Art/Characters/Luna/Special/07.png",
+      "outputScale": 1.1049723756906078,
+      "canvas": [
+        384,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        192,
+        24
+      ],
+      "bbox": [
+        49,
+        53,
+        287,
+        232
+      ],
+      "minimumEdge": 24,
+      "sha256": "82be2d299d175bce5c2e528e42212ac77b8a3675385b692d4608d405a0b5a186"
+    },
+    {
+      "rowBox": [
+        400,
+        3,
+        566,
+        162
+      ],
+      "bodyBox": [
+        400,
+        3,
+        566,
+        162
+      ],
+      "footX": 114.0,
+      "bodyHeight": 159,
+      "character": "Luna",
+      "action": "Special",
+      "source": "Assets/Art/Sources/Luna-Combat-v6-source.png",
+      "sourceRow": 7,
+      "sourcePose": 2,
+      "sourceRect": [
+        400,
+        1415,
+        566,
+        1574
+      ],
+      "sourceNormalization": 1.1049723756906078,
+      "output": "Assets/Art/Characters/Luna/Special/08.png",
+      "outputScale": 1.1049723756906078,
+      "canvas": [
+        384,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        192,
+        24
+      ],
+      "bbox": [
+        66,
+        56,
+        249,
+        232
+      ],
+      "minimumEdge": 24,
+      "sha256": "33c84f81fc17ea35f647504db18a33406dae285c0e18f96556dd88b3e8c00091"
+    },
+    {
+      "rowBox": [
+        583,
+        17,
+        776,
+        161
+      ],
+      "bodyBox": [
+        583,
+        17,
+        776,
+        161
+      ],
+      "footX": 88.5,
+      "bodyHeight": 144,
+      "character": "Luna",
+      "action": "Special",
+      "source": "Assets/Art/Sources/Luna-Combat-v6-source.png",
+      "sourceRow": 7,
+      "sourcePose": 3,
+      "sourceRect": [
+        583,
+        1429,
+        776,
+        1573
+      ],
+      "sourceNormalization": 1.1049723756906078,
+      "output": "Assets/Art/Characters/Luna/Special/09.png",
+      "outputScale": 1.1049723756906078,
+      "canvas": [
+        384,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        192,
+        24
+      ],
+      "bbox": [
+        94,
+        73,
+        307,
+        232
+      ],
+      "minimumEdge": 24,
+      "sha256": "f47a02064bf18c1bbf0cc2e9d7932ed0dd4e33b6dea68027523e72fe73a1ced6"
+    },
+    {
+      "rowBox": [
+        795,
+        0,
+        969,
+        163
+      ],
+      "bodyBox": [
+        795,
+        0,
+        969,
+        163
+      ],
+      "footX": 86,
+      "bodyHeight": 163,
+      "character": "Luna",
+      "action": "Special",
+      "source": "Assets/Art/Sources/Luna-Combat-v6-source.png",
+      "sourceRow": 7,
+      "sourcePose": 4,
+      "sourceRect": [
+        795,
+        1412,
+        969,
+        1575
+      ],
+      "sourceNormalization": 1.1049723756906078,
+      "output": "Assets/Art/Characters/Luna/Special/10.png",
+      "outputScale": 1.1049723756906078,
+      "canvas": [
+        384,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        192,
+        24
+      ],
+      "bbox": [
+        97,
+        52,
+        289,
+        232
+      ],
+      "minimumEdge": 24,
+      "sha256": "382096de4fa789f26fec320bc894b9f4059d59d877e30a32c40c36475abd153b"
+    },
+    {
+      "rowBox": [
+        12,
+        2,
+        165,
+        204
+      ],
+      "bodyBox": [
+        12,
+        2,
+        165,
+        204
+      ],
+      "footX": 63,
+      "bodyHeight": 202,
+      "character": "Bram",
+      "action": "Walk",
+      "source": "Assets/Art/Sources/Bram-Movement-v6-source.png",
+      "sourceRow": 0,
+      "sourcePose": 0,
+      "sourceRect": [
+        12,
+        42,
+        165,
+        244
+      ],
+      "sourceNormalization": 0.9900990099009901,
+      "output": "Assets/Art/Characters/Bram/Walk/01.png",
+      "outputScale": 0.9900990099009901,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        66,
+        32,
+        217,
+        232
+      ],
+      "minimumEdge": 24,
+      "sha256": "9ae09253715fec200530f59f2a1f1c685389848eb1d14d5f55a076c055360ca2"
+    },
+    {
+      "rowBox": [
+        176,
+        0,
+        336,
+        204
+      ],
+      "bodyBox": [
+        176,
+        0,
+        336,
+        204
+      ],
+      "footX": 60.0,
+      "bodyHeight": 204,
+      "character": "Bram",
+      "action": "Walk",
+      "source": "Assets/Art/Sources/Bram-Movement-v6-source.png",
+      "sourceRow": 0,
+      "sourcePose": 1,
+      "sourceRect": [
+        176,
+        40,
+        336,
+        244
+      ],
+      "sourceNormalization": 0.9900990099009901,
+      "output": "Assets/Art/Characters/Bram/Walk/02.png",
+      "outputScale": 0.9900990099009901,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        69,
+        30,
+        227,
+        232
+      ],
+      "minimumEdge": 24,
+      "sha256": "97176e737dacc5d383d7d14217edc32b8debee7f0fa29f1ea8da512f0f298ad8"
+    },
+    {
+      "rowBox": [
+        351,
+        2,
+        506,
+        203
+      ],
+      "bodyBox": [
+        351,
+        2,
+        506,
+        203
+      ],
+      "footX": 68,
+      "bodyHeight": 201,
+      "character": "Bram",
+      "action": "Walk",
+      "source": "Assets/Art/Sources/Bram-Movement-v6-source.png",
+      "sourceRow": 0,
+      "sourcePose": 2,
+      "sourceRect": [
+        351,
+        42,
+        506,
+        243
+      ],
+      "sourceNormalization": 0.9900990099009901,
+      "output": "Assets/Art/Characters/Bram/Walk/03.png",
+      "outputScale": 0.9900990099009901,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        61,
+        33,
+        214,
+        232
+      ],
+      "minimumEdge": 24,
+      "sha256": "43b5841eefbf1eaad7a8fb49e9f87df288122d025c5c7780d01dec07e38e6f48"
+    },
+    {
+      "rowBox": [
+        517,
+        2,
+        682,
+        203
+      ],
+      "bodyBox": [
+        517,
+        2,
+        682,
+        203
+      ],
+      "footX": 117.5,
+      "bodyHeight": 201,
+      "character": "Bram",
+      "action": "Walk",
+      "source": "Assets/Art/Sources/Bram-Movement-v6-source.png",
+      "sourceRow": 0,
+      "sourcePose": 3,
+      "sourceRect": [
+        517,
+        42,
+        682,
+        243
+      ],
+      "sourceNormalization": 0.9900990099009901,
+      "output": "Assets/Art/Characters/Bram/Walk/04.png",
+      "outputScale": 0.9900990099009901,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        12,
+        33,
+        175,
+        232
+      ],
+      "minimumEdge": 12,
+      "sha256": "aa31b036d459bb1a6bbcf375d05c6f18e64583374d09a07768589bf4d27b6221"
+    },
+    {
+      "rowBox": [
+        696,
+        1,
+        869,
+        200
+      ],
+      "bodyBox": [
+        696,
+        1,
+        869,
+        200
+      ],
+      "footX": 109,
+      "bodyHeight": 199,
+      "character": "Bram",
+      "action": "Walk",
+      "source": "Assets/Art/Sources/Bram-Movement-v6-source.png",
+      "sourceRow": 0,
+      "sourcePose": 4,
+      "sourceRect": [
+        696,
+        41,
+        869,
+        240
+      ],
+      "sourceNormalization": 0.9900990099009901,
+      "output": "Assets/Art/Characters/Bram/Walk/05.png",
+      "outputScale": 0.9900990099009901,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        20,
+        35,
+        191,
+        232
+      ],
+      "minimumEdge": 20,
+      "sha256": "997425d71d3df9caf80f86787c0e60cb7a48ff777632f2f69a722732b98ae523"
+    },
+    {
+      "rowBox": [
+        881,
+        0,
+        1029,
+        203
+      ],
+      "bodyBox": [
+        881,
+        0,
+        1029,
+        203
+      ],
+      "footX": 45.0,
+      "bodyHeight": 203,
+      "character": "Bram",
+      "action": "Walk",
+      "source": "Assets/Art/Sources/Bram-Movement-v6-source.png",
+      "sourceRow": 0,
+      "sourcePose": 5,
+      "sourceRect": [
+        881,
+        40,
+        1029,
+        243
+      ],
+      "sourceNormalization": 0.9900990099009901,
+      "output": "Assets/Art/Characters/Bram/Walk/06.png",
+      "outputScale": 0.9900990099009901,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        83,
+        31,
+        230,
+        232
+      ],
+      "minimumEdge": 24,
+      "sha256": "446c668eadf6798ba99b3f0a5086ece080650f33cbb16b6118e2f2c83c89a03b"
+    },
+    {
+      "rowBox": [
+        1056,
+        1,
+        1210,
+        202
+      ],
+      "bodyBox": [
+        1056,
+        1,
+        1210,
+        202
+      ],
+      "footX": 47.0,
+      "bodyHeight": 201,
+      "character": "Bram",
+      "action": "Walk",
+      "source": "Assets/Art/Sources/Bram-Movement-v6-source.png",
+      "sourceRow": 0,
+      "sourcePose": 6,
+      "sourceRect": [
+        1056,
+        41,
+        1210,
+        242
+      ],
+      "sourceNormalization": 0.9900990099009901,
+      "output": "Assets/Art/Characters/Bram/Walk/07.png",
+      "outputScale": 0.9900990099009901,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        81,
+        33,
+        233,
+        232
+      ],
+      "minimumEdge": 23,
+      "sha256": "68a404c70c392c33afba2b4c8b0418edd7c39cecbf01fef705e3db15ec77abe5"
+    },
+    {
+      "rowBox": [
+        1227,
+        0,
+        1385,
+        202
+      ],
+      "bodyBox": [
+        1227,
+        0,
+        1385,
+        202
+      ],
+      "footX": 60.0,
+      "bodyHeight": 202,
+      "character": "Bram",
+      "action": "Walk",
+      "source": "Assets/Art/Sources/Bram-Movement-v6-source.png",
+      "sourceRow": 0,
+      "sourcePose": 7,
+      "sourceRect": [
+        1227,
+        40,
+        1385,
+        242
+      ],
+      "sourceNormalization": 0.9900990099009901,
+      "output": "Assets/Art/Characters/Bram/Walk/08.png",
+      "outputScale": 0.9900990099009901,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        69,
+        32,
+        225,
+        232
+      ],
+      "minimumEdge": 24,
+      "sha256": "5d644d74cf171026305c33bfc3f58f5a634de0fabc84a44356862c53574aaf55"
+    },
+    {
+      "rowBox": [
+        1402,
+        0,
+        1565,
+        203
+      ],
+      "bodyBox": [
+        1402,
+        0,
+        1565,
+        203
+      ],
+      "footX": 86.5,
+      "bodyHeight": 203,
+      "character": "Bram",
+      "action": "Walk",
+      "source": "Assets/Art/Sources/Bram-Movement-v6-source.png",
+      "sourceRow": 0,
+      "sourcePose": 8,
+      "sourceRect": [
+        1402,
+        40,
+        1565,
+        243
+      ],
+      "sourceNormalization": 0.9900990099009901,
+      "output": "Assets/Art/Characters/Bram/Walk/09.png",
+      "outputScale": 0.9900990099009901,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        42,
+        31,
+        203,
+        232
+      ],
+      "minimumEdge": 24,
+      "sha256": "af610c4b8d6670328bbe444adf40e08f8cc1b1be0ea2565a22c51ff889c1a3c2"
+    },
+    {
+      "rowBox": [
+        1587,
+        0,
+        1750,
+        202
+      ],
+      "bodyBox": [
+        1587,
+        0,
+        1750,
+        202
+      ],
+      "footX": 111.0,
+      "bodyHeight": 202,
+      "character": "Bram",
+      "action": "Walk",
+      "source": "Assets/Art/Sources/Bram-Movement-v6-source.png",
+      "sourceRow": 0,
+      "sourcePose": 9,
+      "sourceRect": [
+        1587,
+        40,
+        1750,
+        242
+      ],
+      "sourceNormalization": 0.9900990099009901,
+      "output": "Assets/Art/Characters/Bram/Walk/10.png",
+      "outputScale": 0.9900990099009901,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        18,
+        32,
+        179,
+        232
+      ],
+      "minimumEdge": 18,
+      "sha256": "caf030a88f88db781f8b7b82365268c1e20e2fd91d2ca62505cd0ad548bb309e"
+    },
+    {
+      "rowBox": [
+        11,
+        51,
+        165,
+        231
+      ],
+      "bodyBox": [
+        11,
+        51,
+        165,
+        231
+      ],
+      "footX": 82,
+      "bodyHeight": 180,
+      "character": "Bram",
+      "action": "Jump",
+      "source": "Assets/Art/Sources/Bram-Movement-v6-source.png",
+      "sourceRow": 1,
+      "sourcePose": 0,
+      "sourceRect": [
+        11,
+        303,
+        165,
+        483
+      ],
+      "sourceNormalization": 0.9900990099009901,
+      "output": "Assets/Art/Characters/Bram/Jump/01.png",
+      "outputScale": 0.9900990099009901,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        47,
+        54,
+        199,
+        232
+      ],
+      "minimumEdge": 24,
+      "sha256": "34481908e2ab09c393f7479a20b83d16c9e3ced7ade5c415f7b28c8f1440a897"
+    },
+    {
+      "rowBox": [
+        178,
+        28,
+        351,
+        223
+      ],
+      "bodyBox": [
+        178,
+        28,
+        351,
+        223
+      ],
+      "footX": 50,
+      "bodyHeight": 195,
+      "character": "Bram",
+      "action": "Jump",
+      "source": "Assets/Art/Sources/Bram-Movement-v6-source.png",
+      "sourceRow": 1,
+      "sourcePose": 1,
+      "sourceRect": [
+        178,
+        280,
+        351,
+        475
+      ],
+      "sourceNormalization": 0.9900990099009901,
+      "output": "Assets/Art/Characters/Bram/Jump/02.png",
+      "outputScale": 0.9900990099009901,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        78,
+        39,
+        249,
+        232
+      ],
+      "minimumEdge": 7,
+      "sha256": "9e4eb81a82345e790e101988ec845ac101cc43ff6c59204b429a2b6e9e2c3d9e"
+    },
+    {
+      "rowBox": [
+        351,
+        13,
+        526,
+        215
+      ],
+      "bodyBox": [
+        351,
+        13,
+        526,
+        215
+      ],
+      "footX": 61,
+      "bodyHeight": 202,
+      "character": "Bram",
+      "action": "Jump",
+      "source": "Assets/Art/Sources/Bram-Movement-v6-source.png",
+      "sourceRow": 1,
+      "sourcePose": 2,
+      "sourceRect": [
+        351,
+        265,
+        526,
+        467
+      ],
+      "sourceNormalization": 0.9900990099009901,
+      "output": "Assets/Art/Characters/Bram/Jump/03.png",
+      "outputScale": 0.9900990099009901,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        68,
+        32,
+        241,
+        232
+      ],
+      "minimumEdge": 15,
+      "sha256": "3c9ecbc5dca0d9f5a38a23c0e0fa6318e6e1dac1f27feda8ed1583a733531611"
+    },
+    {
+      "rowBox": [
+        526,
+        10,
+        697,
+        208
+      ],
+      "bodyBox": [
+        526,
+        10,
+        697,
+        208
+      ],
+      "footX": 78,
+      "bodyHeight": 198,
+      "character": "Bram",
+      "action": "Jump",
+      "source": "Assets/Art/Sources/Bram-Movement-v6-source.png",
+      "sourceRow": 1,
+      "sourcePose": 3,
+      "sourceRect": [
+        526,
+        262,
+        697,
+        460
+      ],
+      "sourceNormalization": 0.9900990099009901,
+      "output": "Assets/Art/Characters/Bram/Jump/04.png",
+      "outputScale": 0.9900990099009901,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        51,
+        36,
+        220,
+        232
+      ],
+      "minimumEdge": 24,
+      "sha256": "d8953648ada820fbba9a4ba3b8eb59ef4a90e3b0a68757a9f428910c532f7fd2"
+    },
+    {
+      "rowBox": [
+        696,
+        2,
+        880,
+        193
+      ],
+      "bodyBox": [
+        696,
+        2,
+        880,
+        193
+      ],
+      "footX": 77,
+      "bodyHeight": 191,
+      "character": "Bram",
+      "action": "Jump",
+      "source": "Assets/Art/Sources/Bram-Movement-v6-source.png",
+      "sourceRow": 1,
+      "sourcePose": 4,
+      "sourceRect": [
+        696,
+        254,
+        880,
+        445
+      ],
+      "sourceNormalization": 0.9900990099009901,
+      "output": "Assets/Art/Characters/Bram/Jump/05.png",
+      "outputScale": 0.9900990099009901,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        52,
+        43,
+        234,
+        232
+      ],
+      "minimumEdge": 22,
+      "sha256": "cca269e6af3070bedda789b778f15ad6e1c4942cb9c51af91b4259fe9ef841eb"
+    },
+    {
+      "rowBox": [
+        883,
+        0,
+        1071,
+        182
+      ],
+      "bodyBox": [
+        883,
+        0,
+        1071,
+        182
+      ],
+      "footX": 49.0,
+      "bodyHeight": 182,
+      "character": "Bram",
+      "action": "Jump",
+      "source": "Assets/Art/Sources/Bram-Movement-v6-source.png",
+      "sourceRow": 1,
+      "sourcePose": 5,
+      "sourceRect": [
+        883,
+        252,
+        1071,
+        434
+      ],
+      "sourceNormalization": 0.9900990099009901,
+      "output": "Assets/Art/Characters/Bram/Jump/06.png",
+      "outputScale": 0.9900990099009901,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        66,
+        52,
+        252,
+        232
+      ],
+      "minimumEdge": 4,
+      "sha256": "0e824ed84211493d6019528fe96a2eb0c559ed5bb981b62bcc4f940f92d1e463"
+    },
+    {
+      "rowBox": [
+        1063,
+        27,
+        1240,
+        208
+      ],
+      "bodyBox": [
+        1063,
+        27,
+        1240,
+        208
+      ],
+      "footX": 84,
+      "bodyHeight": 181,
+      "character": "Bram",
+      "action": "Jump",
+      "source": "Assets/Art/Sources/Bram-Movement-v6-source.png",
+      "sourceRow": 1,
+      "sourcePose": 6,
+      "sourceRect": [
+        1063,
+        279,
+        1240,
+        460
+      ],
+      "sourceNormalization": 0.9900990099009901,
+      "output": "Assets/Art/Characters/Bram/Jump/07.png",
+      "outputScale": 0.9900990099009901,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        45,
+        53,
+        220,
+        232
+      ],
+      "minimumEdge": 24,
+      "sha256": "8cb62b6852db52b9aa92a8c8c5a009c6a90381b7f42e49adcf334711bfdccd48"
+    },
+    {
+      "rowBox": [
+        1238,
+        35,
+        1413,
+        218
+      ],
+      "bodyBox": [
+        1238,
+        35,
+        1413,
+        218
+      ],
+      "footX": 73,
+      "bodyHeight": 183,
+      "character": "Bram",
+      "action": "Jump",
+      "source": "Assets/Art/Sources/Bram-Movement-v6-source.png",
+      "sourceRow": 1,
+      "sourcePose": 7,
+      "sourceRect": [
+        1238,
+        287,
+        1413,
+        470
+      ],
+      "sourceNormalization": 0.9900990099009901,
+      "output": "Assets/Art/Characters/Bram/Jump/08.png",
+      "outputScale": 0.9900990099009901,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        56,
+        51,
+        229,
+        232
+      ],
+      "minimumEdge": 24,
+      "sha256": "9dcfaedbf1b1ee749ae76439fae286f0ac4c516650ecde0417f5a0e69072718d"
+    },
+    {
+      "rowBox": [
+        1416,
+        57,
+        1578,
+        232
+      ],
+      "bodyBox": [
+        1416,
+        57,
+        1578,
+        232
+      ],
+      "footX": 86,
+      "bodyHeight": 175,
+      "character": "Bram",
+      "action": "Jump",
+      "source": "Assets/Art/Sources/Bram-Movement-v6-source.png",
+      "sourceRow": 1,
+      "sourcePose": 8,
+      "sourceRect": [
+        1416,
+        309,
+        1578,
+        484
+      ],
+      "sourceNormalization": 0.9900990099009901,
+      "output": "Assets/Art/Characters/Bram/Jump/09.png",
+      "outputScale": 0.9900990099009901,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        43,
+        59,
+        203,
+        232
+      ],
+      "minimumEdge": 24,
+      "sha256": "f6990495aa356c1cc70b1a840af46540c6106cfc2ac3e2cc7073b6001b616d8d"
+    },
+    {
+      "rowBox": [
+        1587,
+        53,
+        1755,
+        232
+      ],
+      "bodyBox": [
+        1587,
+        53,
+        1755,
+        232
+      ],
+      "footX": 95,
+      "bodyHeight": 179,
+      "character": "Bram",
+      "action": "Jump",
+      "source": "Assets/Art/Sources/Bram-Movement-v6-source.png",
+      "sourceRow": 1,
+      "sourcePose": 9,
+      "sourceRect": [
+        1587,
+        305,
+        1755,
+        484
+      ],
+      "sourceNormalization": 0.9900990099009901,
+      "output": "Assets/Art/Characters/Bram/Jump/10.png",
+      "outputScale": 0.9900990099009901,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        34,
+        55,
+        200,
+        232
+      ],
+      "minimumEdge": 24,
+      "sha256": "e15733fbd970c05dd6b1e9b6da5605cf354b0df54954fc3937215497ce09e77b"
+    },
+    {
+      "rowBox": [
+        11,
+        15,
+        168,
+        201
+      ],
+      "bodyBox": [
+        11,
+        15,
+        168,
+        201
+      ],
+      "footX": 88,
+      "bodyHeight": 186,
+      "character": "Bram",
+      "action": "Hurt",
+      "source": "Assets/Art/Sources/Bram-Movement-v6-source.png",
+      "sourceRow": 2,
+      "sourcePose": 0,
+      "sourceRect": [
+        11,
+        507,
+        168,
+        693
+      ],
+      "sourceNormalization": 0.9900990099009901,
+      "output": "Assets/Art/Characters/Bram/Hurt/01.png",
+      "outputScale": 0.9900990099009901,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        41,
+        48,
+        196,
+        232
+      ],
+      "minimumEdge": 24,
+      "sha256": "4b9815d8da2cf81520acc5753f30e25a10a2016f424fba6a5438374bdec35987"
+    },
+    {
+      "rowBox": [
+        179,
+        5,
+        345,
+        203
+      ],
+      "bodyBox": [
+        179,
+        6,
+        345,
+        203
+      ],
+      "footX": 125,
+      "bodyHeight": 197,
+      "character": "Bram",
+      "action": "Hurt",
+      "source": "Assets/Art/Sources/Bram-Movement-v6-source.png",
+      "sourceRow": 2,
+      "sourcePose": 1,
+      "sourceRect": [
+        179,
+        497,
+        345,
+        695
+      ],
+      "sourceNormalization": 0.9900990099009901,
+      "output": "Assets/Art/Characters/Bram/Hurt/02.png",
+      "outputScale": 0.9900990099009901,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        4,
+        36,
+        168,
+        232
+      ],
+      "minimumEdge": 4,
+      "sha256": "b0089bf98eda8841cbe7b286957ece3b37ec20ff1909e11bf87fb5daa333eaaa"
+    },
+    {
+      "rowBox": [
+        350,
+        1,
+        528,
+        206
+      ],
+      "bodyBox": [
+        350,
+        4,
+        528,
+        206
+      ],
+      "footX": 79,
+      "bodyHeight": 202,
+      "character": "Bram",
+      "action": "Hurt",
+      "source": "Assets/Art/Sources/Bram-Movement-v6-source.png",
+      "sourceRow": 2,
+      "sourcePose": 2,
+      "sourceRect": [
+        350,
+        493,
+        528,
+        698
+      ],
+      "sourceNormalization": 0.9900990099009901,
+      "output": "Assets/Art/Characters/Bram/Hurt/03.png",
+      "outputScale": 0.9900990099009901,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        50,
+        29,
+        226,
+        232
+      ],
+      "minimumEdge": 24,
+      "sha256": "99b44105b9375d41b98294667461cb4f92c78f082b748ed0fc789df928e0bf7d"
+    },
+    {
+      "rowBox": [
+        521,
+        0,
+        704,
+        206
+      ],
+      "bodyBox": [
+        521,
+        9,
+        704,
+        206
+      ],
+      "footX": 109.0,
+      "bodyHeight": 197,
+      "character": "Bram",
+      "action": "Hurt",
+      "source": "Assets/Art/Sources/Bram-Movement-v6-source.png",
+      "sourceRow": 2,
+      "sourcePose": 3,
+      "sourceRect": [
+        521,
+        492,
+        704,
+        698
+      ],
+      "sourceNormalization": 0.9900990099009901,
+      "output": "Assets/Art/Characters/Bram/Hurt/04.png",
+      "outputScale": 0.9900990099009901,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        20,
+        28,
+        201,
+        232
+      ],
+      "minimumEdge": 20,
+      "sha256": "65bbf71f36d9e7c85efb7242f2604b55adcd6d589621236c35e3bdfbeecd4c30"
+    },
+    {
+      "rowBox": [
+        709,
+        4,
+        876,
+        204
+      ],
+      "bodyBox": [
+        709,
+        4,
+        876,
+        204
+      ],
+      "footX": 78,
+      "bodyHeight": 200,
+      "character": "Bram",
+      "action": "Hurt",
+      "source": "Assets/Art/Sources/Bram-Movement-v6-source.png",
+      "sourceRow": 2,
+      "sourcePose": 4,
+      "sourceRect": [
+        709,
+        496,
+        876,
+        696
+      ],
+      "sourceNormalization": 0.9900990099009901,
+      "output": "Assets/Art/Characters/Bram/Hurt/05.png",
+      "outputScale": 0.9900990099009901,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        51,
+        34,
+        216,
+        232
+      ],
+      "minimumEdge": 24,
+      "sha256": "a89ad7cdd1492c3b10faf9ea9e7dde06241f2031cef7b095d03c7a0a83ebf566"
+    },
+    {
+      "rowBox": [
+        870,
+        10,
+        1046,
+        204
+      ],
+      "bodyBox": [
+        881,
+        10,
+        1046,
+        204
+      ],
+      "footX": 92,
+      "bodyHeight": 194,
+      "character": "Bram",
+      "action": "Hurt",
+      "source": "Assets/Art/Sources/Bram-Movement-v6-source.png",
+      "sourceRow": 2,
+      "sourcePose": 5,
+      "sourceRect": [
+        870,
+        502,
+        1046,
+        696
+      ],
+      "sourceNormalization": 0.9900990099009901,
+      "output": "Assets/Art/Characters/Bram/Hurt/06.png",
+      "outputScale": 0.9900990099009901,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        37,
+        40,
+        211,
+        232
+      ],
+      "minimumEdge": 24,
+      "sha256": "6ffb661c3b43d42c999affc6c60d38e0e963bddd3c311a1f58191ff6d48f78a5"
+    },
+    {
+      "rowBox": [
+        1055,
+        20,
+        1225,
+        202
+      ],
+      "bodyBox": [
+        1055,
+        23,
+        1225,
+        202
+      ],
+      "footX": 89.0,
+      "bodyHeight": 179,
+      "character": "Bram",
+      "action": "Hurt",
+      "source": "Assets/Art/Sources/Bram-Movement-v6-source.png",
+      "sourceRow": 2,
+      "sourcePose": 6,
+      "sourceRect": [
+        1055,
+        512,
+        1225,
+        694
+      ],
+      "sourceNormalization": 0.9900990099009901,
+      "output": "Assets/Art/Characters/Bram/Hurt/07.png",
+      "outputScale": 0.9900990099009901,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        40,
+        52,
+        208,
+        232
+      ],
+      "minimumEdge": 24,
+      "sha256": "6e7f594c1a53d1d13f20bf3a9d27526e5391bf781373a69b50bc8541ee0e3cfb"
+    },
+    {
+      "rowBox": [
+        1224,
+        31,
+        1403,
+        204
+      ],
+      "bodyBox": [
+        1224,
+        56,
+        1403,
+        204
+      ],
+      "footX": 92,
+      "bodyHeight": 148,
+      "character": "Bram",
+      "action": "Hurt",
+      "source": "Assets/Art/Sources/Bram-Movement-v6-source.png",
+      "sourceRow": 2,
+      "sourcePose": 7,
+      "sourceRect": [
+        1224,
+        523,
+        1403,
+        696
+      ],
+      "sourceNormalization": 0.9900990099009901,
+      "output": "Assets/Art/Characters/Bram/Hurt/08.png",
+      "outputScale": 0.9900990099009901,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        37,
+        61,
+        214,
+        232
+      ],
+      "minimumEdge": 24,
+      "sha256": "63f969125a83622868524e32f05f11444c740932e6c0f0599b86ce8e204360e4"
+    },
+    {
+      "rowBox": [
+        1409,
+        35,
+        1578,
+        208
+      ],
+      "bodyBox": [
+        1409,
+        54,
+        1578,
+        208
+      ],
+      "footX": 81.0,
+      "bodyHeight": 154,
+      "character": "Bram",
+      "action": "Hurt",
+      "source": "Assets/Art/Sources/Bram-Movement-v6-source.png",
+      "sourceRow": 2,
+      "sourcePose": 8,
+      "sourceRect": [
+        1409,
+        527,
+        1578,
+        700
+      ],
+      "sourceNormalization": 0.9900990099009901,
+      "output": "Assets/Art/Characters/Bram/Hurt/09.png",
+      "outputScale": 0.9900990099009901,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        48,
+        61,
+        215,
+        232
+      ],
+      "minimumEdge": 24,
+      "sha256": "078a597e1961b120ed32a749f87ab86c3bc35763a986bc2c86eae825c0c01966"
+    },
+    {
+      "rowBox": [
+        1587,
+        22,
+        1739,
+        211
+      ],
+      "bodyBox": [
+        1587,
+        22,
+        1739,
+        211
+      ],
+      "footX": 78.0,
+      "bodyHeight": 189,
+      "character": "Bram",
+      "action": "Hurt",
+      "source": "Assets/Art/Sources/Bram-Movement-v6-source.png",
+      "sourceRow": 2,
+      "sourcePose": 9,
+      "sourceRect": [
+        1587,
+        514,
+        1739,
+        703
+      ],
+      "sourceNormalization": 0.9900990099009901,
+      "output": "Assets/Art/Characters/Bram/Hurt/10.png",
+      "outputScale": 0.9900990099009901,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        51,
+        45,
+        201,
+        232
+      ],
+      "minimumEdge": 24,
+      "sha256": "a74c57152aa36c9be3f3412234109ff87aa6d7ccb3a4e0f11af711b586d84527"
+    },
+    {
+      "rowBox": [
+        16,
+        0,
+        185,
+        164
+      ],
+      "bodyBox": [
+        16,
+        3,
+        185,
+        164
+      ],
+      "footX": 92,
+      "bodyHeight": 161,
+      "character": "Bram",
+      "action": "Knockout",
+      "source": "Assets/Art/Sources/Bram-Movement-v6-source.png",
+      "sourceRow": 3,
+      "sourcePose": 0,
+      "sourceRect": [
+        16,
+        708,
+        185,
+        872
+      ],
+      "sourceNormalization": 0.9900990099009901,
+      "output": "Assets/Art/Characters/Bram/Knockout/01.png",
+      "outputScale": 0.9900990099009901,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        37,
+        70,
+        204,
+        232
+      ],
+      "minimumEdge": 24,
+      "sha256": "b4f369e16f66ae2ce740d5096df88aaf4f9be8208d7199a901b55f3da7bade1f"
+    },
+    {
+      "rowBox": [
+        190,
+        2,
+        356,
+        166
+      ],
+      "bodyBox": [
+        190,
+        2,
+        356,
+        166
+      ],
+      "footX": 83.0,
+      "bodyHeight": 164,
+      "character": "Bram",
+      "action": "Knockout",
+      "source": "Assets/Art/Sources/Bram-Movement-v6-source.png",
+      "sourceRow": 3,
+      "sourcePose": 1,
+      "sourceRect": [
+        190,
+        710,
+        356,
+        874
+      ],
+      "sourceNormalization": 0.9900990099009901,
+      "output": "Assets/Art/Characters/Bram/Knockout/02.png",
+      "outputScale": 0.9900990099009901,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        46,
+        70,
+        210,
+        232
+      ],
+      "minimumEdge": 24,
+      "sha256": "9bd6206c35dd080e4c03bce92ab73983e3ff871344c473bede48cc6755448587"
+    },
+    {
+      "rowBox": [
+        369,
+        19,
+        557,
+        164
+      ],
+      "bodyBox": [
+        369,
+        19,
+        557,
+        164
+      ],
+      "footX": 85,
+      "bodyHeight": 145,
+      "character": "Bram",
+      "action": "Knockout",
+      "source": "Assets/Art/Sources/Bram-Movement-v6-source.png",
+      "sourceRow": 3,
+      "sourcePose": 2,
+      "sourceRect": [
+        369,
+        727,
+        557,
+        872
+      ],
+      "sourceNormalization": 0.9900990099009901,
+      "output": "Assets/Art/Characters/Bram/Knockout/03.png",
+      "outputScale": 0.9900990099009901,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        44,
+        88,
+        230,
+        232
+      ],
+      "minimumEdge": 24,
+      "sha256": "1581ef013365324960e0f6d38c57b9ea3f2154668dee061bf3053bb1da789047"
+    },
+    {
+      "rowBox": [
+        567,
+        36,
+        758,
+        166
+      ],
+      "bodyBox": [
+        567,
+        36,
+        758,
+        166
+      ],
+      "footX": 88.5,
+      "bodyHeight": 130,
+      "character": "Bram",
+      "action": "Knockout",
+      "source": "Assets/Art/Sources/Bram-Movement-v6-source.png",
+      "sourceRow": 3,
+      "sourcePose": 3,
+      "sourceRect": [
+        567,
+        744,
+        758,
+        874
+      ],
+      "sourceNormalization": 0.9900990099009901,
+      "output": "Assets/Art/Characters/Bram/Knockout/04.png",
+      "outputScale": 0.9900990099009901,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        40,
+        103,
+        229,
+        232
+      ],
+      "minimumEdge": 24,
+      "sha256": "e8aca91dbdb22821384d171f107c88737c74a7870097ba45066103b0a39a201a"
+    },
+    {
+      "rowBox": [
+        769,
+        23,
+        996,
+        166
+      ],
+      "bodyBox": [
+        769,
+        36,
+        996,
+        166
+      ],
+      "footX": 109,
+      "bodyHeight": 130,
+      "character": "Bram",
+      "action": "Knockout",
+      "source": "Assets/Art/Sources/Bram-Movement-v6-source.png",
+      "sourceRow": 3,
+      "sourcePose": 4,
+      "sourceRect": [
+        769,
+        731,
+        996,
+        874
+      ],
+      "sourceNormalization": 0.9900990099009901,
+      "output": "Assets/Art/Characters/Bram/Knockout/05.png",
+      "outputScale": 0.9900990099009901,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        20,
+        90,
+        245,
+        232
+      ],
+      "minimumEdge": 11,
+      "sha256": "61e20b18c80e1ad809986b80f16fbe8571b9b3e1fd603bde1c36a1675582fc94"
+    },
+    {
+      "rowBox": [
+        1009,
+        45,
+        1250,
+        165
+      ],
+      "bodyBox": [
+        1009,
+        49,
+        1250,
+        165
+      ],
+      "footX": 109.5,
+      "bodyHeight": 116,
+      "character": "Bram",
+      "action": "Knockout",
+      "source": "Assets/Art/Sources/Bram-Movement-v6-source.png",
+      "sourceRow": 3,
+      "sourcePose": 5,
+      "sourceRect": [
+        1009,
+        753,
+        1250,
+        873
+      ],
+      "sourceNormalization": 0.9900990099009901,
+      "output": "Assets/Art/Characters/Bram/Knockout/06.png",
+      "outputScale": 0.9900990099009901,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        13,
+        113,
+        252,
+        232
+      ],
+      "minimumEdge": 4,
+      "sha256": "b9e804c6cf2d1f5b50e035460031d93ddb72855f1eaf2af50f9c645fcde52e53"
+    },
+    {
+      "rowBox": [
+        1261,
+        49,
+        1497,
+        166
+      ],
+      "bodyBox": [
+        1265,
+        49,
+        1497,
+        166
+      ],
+      "footX": 90,
+      "bodyHeight": 117,
+      "character": "Bram",
+      "action": "Knockout",
+      "source": "Assets/Art/Sources/Bram-Movement-v6-source.png",
+      "sourceRow": 3,
+      "sourcePose": 6,
+      "sourceRect": [
+        1261,
+        757,
+        1497,
+        874
+      ],
+      "sourceNormalization": 0.9900990099009901,
+      "output": "Assets/Art/Characters/Bram/Knockout/07.png",
+      "outputScale": 0.9900990099009901,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        18,
+        116,
+        252,
+        232
+      ],
+      "minimumEdge": 4,
+      "sha256": "a171ba9a3264f6f7d178d9dc10a870791978d6d090ab79662c9d0a232e7fc340"
+    },
+    {
+      "rowBox": [
+        1509,
+        53,
+        1751,
+        163
+      ],
+      "bodyBox": [
+        1509,
+        53,
+        1751,
+        163
+      ],
+      "footX": 76.0,
+      "bodyHeight": 110,
+      "character": "Bram",
+      "action": "Knockout",
+      "source": "Assets/Art/Sources/Bram-Movement-v6-source.png",
+      "sourceRow": 3,
+      "sourcePose": 7,
+      "sourceRect": [
+        1509,
+        761,
+        1751,
+        871
+      ],
+      "sourceNormalization": 0.9900990099009901,
+      "output": "Assets/Art/Characters/Bram/Knockout/08.png",
+      "outputScale": 0.9900990099009901,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        12,
+        123,
+        252,
+        232
+      ],
+      "minimumEdge": 4,
+      "sha256": "e4b2348c1a373cb737414a1fea4e0012e7ac6c7ec033ca19a5db0afe9db3b044"
+    },
+    {
+      "rowBox": [
+        11,
+        1,
+        161,
+        198
+      ],
+      "bodyBox": [
+        11,
+        1,
+        161,
+        198
+      ],
+      "footX": 102.0,
+      "bodyHeight": 197,
+      "character": "Bram",
+      "action": "Special",
+      "source": "Assets/Art/Sources/Bram-Movement-Extra-v6-source.png",
+      "sourceRow": 0,
+      "sourcePose": 0,
+      "sourceRect": [
+        11,
+        24,
+        161,
+        221
+      ],
+      "sourceNormalization": 1.0050251256281406,
+      "output": "Assets/Art/Characters/Bram/Special/01.png",
+      "outputScale": 1.0050251256281406,
+      "canvas": [
+        384,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        192,
+        24
+      ],
+      "bbox": [
+        89,
+        34,
+        240,
+        232
+      ],
+      "minimumEdge": 24,
+      "sha256": "396a2ee97727fc6ea650df3954344019728d2575cb1d12b5445c20a9e6005263"
+    },
+    {
+      "rowBox": [
+        563,
+        58,
+        768,
+        185
+      ],
+      "bodyBox": [
+        563,
+        87,
+        768,
+        185
+      ],
+      "footX": 65,
+      "bodyHeight": 98,
+      "character": "Bram",
+      "action": "Knockout",
+      "source": "Assets/Art/Sources/Bram-Movement-Extra-v6-source.png",
+      "sourceRow": 5,
+      "sourcePose": 3,
+      "sourceRect": [
+        563,
+        1427,
+        768,
+        1554
+      ],
+      "sourceNormalization": 1.0050251256281406,
+      "output": "Assets/Art/Characters/Bram/Knockout/09.png",
+      "outputScale": 1.0050251256281406,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        46,
+        104,
+        252,
+        232
+      ],
+      "minimumEdge": 4,
+      "sha256": "ca2adfaa2c1e0f1045073a582370d44a137828a41417a3e632fe70b28d521f61"
+    },
+    {
+      "rowBox": [
+        775,
+        74,
+        975,
+        184
+      ],
+      "bodyBox": [
+        775,
+        98,
+        975,
+        184
+      ],
+      "footX": 54.0,
+      "bodyHeight": 86,
+      "character": "Bram",
+      "action": "Knockout",
+      "source": "Assets/Art/Sources/Bram-Movement-Extra-v6-source.png",
+      "sourceRow": 5,
+      "sourcePose": 4,
+      "sourceRect": [
+        775,
+        1443,
+        975,
+        1553
+      ],
+      "sourceNormalization": 1.0050251256281406,
+      "output": "Assets/Art/Characters/Bram/Knockout/10.png",
+      "outputScale": 1.0050251256281406,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        51,
+        121,
+        252,
+        232
+      ],
+      "minimumEdge": 4,
+      "sha256": "c360ba819cfac2eb8c380d8a4b5dc5bf5b8114cbd900b8ab8db30c3ad02e71ed"
+    },
+    {
+      "rowBox": [
+        9,
+        1,
+        172,
+        202
+      ],
+      "bodyBox": [
+        9,
+        1,
+        172,
+        202
+      ],
+      "footX": 60,
+      "bodyHeight": 201,
+      "character": "Bram",
+      "action": "Punch",
+      "source": "Assets/Art/Sources/Bram-Combat-v6-source.png",
+      "sourceRow": 0,
+      "sourcePose": 0,
+      "sourceRect": [
+        9,
+        41,
+        172,
+        242
+      ],
+      "sourceNormalization": 0.9950248756218906,
+      "output": "Assets/Art/Characters/Bram/Punch/01.png",
+      "outputScale": 0.9950248756218906,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        68,
+        32,
+        230,
+        232
+      ],
+      "minimumEdge": 24,
+      "sha256": "c937124baf925df074878c0eb51f99a07c38aa6a4a91b3542b2b57f8530aa24d"
+    },
+    {
+      "rowBox": [
+        171,
+        0,
+        350,
+        202
+      ],
+      "bodyBox": [
+        171,
+        0,
+        350,
+        202
+      ],
+      "footX": 107.5,
+      "bodyHeight": 202,
+      "character": "Bram",
+      "action": "Punch",
+      "source": "Assets/Art/Sources/Bram-Combat-v6-source.png",
+      "sourceRow": 0,
+      "sourcePose": 1,
+      "sourceRect": [
+        171,
+        40,
+        350,
+        242
+      ],
+      "sourceNormalization": 0.9950248756218906,
+      "output": "Assets/Art/Characters/Bram/Punch/02.png",
+      "outputScale": 0.9950248756218906,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        21,
+        31,
+        199,
+        232
+      ],
+      "minimumEdge": 21,
+      "sha256": "71e52acd88c95d9fd25762c607bc8f51e75eb14df0ffa476f7cf96b419966c3f"
+    },
+    {
+      "rowBox": [
+        342,
+        1,
+        511,
+        201
+      ],
+      "bodyBox": [
+        342,
+        1,
+        511,
+        201
+      ],
+      "footX": 104.5,
+      "bodyHeight": 200,
+      "character": "Bram",
+      "action": "Punch",
+      "source": "Assets/Art/Sources/Bram-Combat-v6-source.png",
+      "sourceRow": 0,
+      "sourcePose": 2,
+      "sourceRect": [
+        342,
+        41,
+        511,
+        241
+      ],
+      "sourceNormalization": 0.9950248756218906,
+      "output": "Assets/Art/Characters/Bram/Punch/03.png",
+      "outputScale": 0.9950248756218906,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        24,
+        33,
+        192,
+        232
+      ],
+      "minimumEdge": 24,
+      "sha256": "b7117474358412729ee0a9ee3194f3fec89308410a4f3dc4f08224edcb920186"
+    },
+    {
+      "rowBox": [
+        510,
+        2,
+        727,
+        201
+      ],
+      "bodyBox": [
+        510,
+        2,
+        723,
+        201
+      ],
+      "footX": 114.5,
+      "bodyHeight": 199,
+      "character": "Bram",
+      "action": "Punch",
+      "source": "Assets/Art/Sources/Bram-Combat-v6-source.png",
+      "sourceRow": 0,
+      "sourcePose": 3,
+      "sourceRect": [
+        510,
+        42,
+        727,
+        241
+      ],
+      "sourceNormalization": 0.9950248756218906,
+      "output": "Assets/Art/Characters/Bram/Punch/04.png",
+      "outputScale": 0.9950248756218906,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        14,
+        34,
+        230,
+        232
+      ],
+      "minimumEdge": 14,
+      "sha256": "3bae52a2c9edfaff733c59ea45a057c624824b68d341c928c0017be41447b510"
+    },
+    {
+      "rowBox": [
+        726,
+        5,
+        893,
+        202
+      ],
+      "bodyBox": [
+        734,
+        5,
+        893,
+        202
+      ],
+      "footX": 109,
+      "bodyHeight": 197,
+      "character": "Bram",
+      "action": "Punch",
+      "source": "Assets/Art/Sources/Bram-Combat-v6-source.png",
+      "sourceRow": 0,
+      "sourcePose": 4,
+      "sourceRect": [
+        726,
+        45,
+        893,
+        242
+      ],
+      "sourceNormalization": 0.9950248756218906,
+      "output": "Assets/Art/Characters/Bram/Punch/05.png",
+      "outputScale": 0.9950248756218906,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        20,
+        36,
+        186,
+        232
+      ],
+      "minimumEdge": 20,
+      "sha256": "eb2301e0cb9f9803364584788055934f3fa5e8720abf5832948315d7ecf19cce"
+    },
+    {
+      "rowBox": [
+        893,
+        3,
+        1059,
+        202
+      ],
+      "bodyBox": [
+        893,
+        3,
+        1059,
+        202
+      ],
+      "footX": 58.0,
+      "bodyHeight": 199,
+      "character": "Bram",
+      "action": "Punch",
+      "source": "Assets/Art/Sources/Bram-Combat-v6-source.png",
+      "sourceRow": 0,
+      "sourcePose": 5,
+      "sourceRect": [
+        893,
+        43,
+        1059,
+        242
+      ],
+      "sourceNormalization": 0.9950248756218906,
+      "output": "Assets/Art/Characters/Bram/Punch/06.png",
+      "outputScale": 0.9950248756218906,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        70,
+        34,
+        235,
+        232
+      ],
+      "minimumEdge": 21,
+      "sha256": "fe6a74996edfc03011c34bfd46b0dda3bd990b617024d59543dc52a221551c35"
+    },
+    {
+      "rowBox": [
+        1057,
+        1,
+        1232,
+        201
+      ],
+      "bodyBox": [
+        1057,
+        1,
+        1232,
+        201
+      ],
+      "footX": 114,
+      "bodyHeight": 200,
+      "character": "Bram",
+      "action": "Punch",
+      "source": "Assets/Art/Sources/Bram-Combat-v6-source.png",
+      "sourceRow": 0,
+      "sourcePose": 6,
+      "sourceRect": [
+        1057,
+        41,
+        1232,
+        241
+      ],
+      "sourceNormalization": 0.9950248756218906,
+      "output": "Assets/Art/Characters/Bram/Punch/07.png",
+      "outputScale": 0.9950248756218906,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        15,
+        33,
+        189,
+        232
+      ],
+      "minimumEdge": 15,
+      "sha256": "3d46f16c94097d302f31a847d0887afb03ac57964a7646359c65fc5f7f5adf82"
+    },
+    {
+      "rowBox": [
+        1226,
+        5,
+        1437,
+        202
+      ],
+      "bodyBox": [
+        1226,
+        5,
+        1437,
+        202
+      ],
+      "footX": 53,
+      "bodyHeight": 197,
+      "character": "Bram",
+      "action": "Punch",
+      "source": "Assets/Art/Sources/Bram-Combat-v6-source.png",
+      "sourceRow": 0,
+      "sourcePose": 7,
+      "sourceRect": [
+        1226,
+        45,
+        1437,
+        242
+      ],
+      "sourceNormalization": 0.9950248756218906,
+      "output": "Assets/Art/Characters/Bram/Punch/08.png",
+      "outputScale": 0.9950248756218906,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        42,
+        36,
+        252,
+        232
+      ],
+      "minimumEdge": 4,
+      "sha256": "c53fed56dfa649df7c36af74e5c6024cf5832c265def1d523be00c5b3548e790"
+    },
+    {
+      "rowBox": [
+        1433,
+        7,
+        1592,
+        202
+      ],
+      "bodyBox": [
+        1447,
+        7,
+        1592,
+        202
+      ],
+      "footX": 47.0,
+      "bodyHeight": 195,
+      "character": "Bram",
+      "action": "Punch",
+      "source": "Assets/Art/Sources/Bram-Combat-v6-source.png",
+      "sourceRow": 0,
+      "sourcePose": 8,
+      "sourceRect": [
+        1433,
+        47,
+        1592,
+        242
+      ],
+      "sourceNormalization": 0.9950248756218906,
+      "output": "Assets/Art/Characters/Bram/Punch/09.png",
+      "outputScale": 0.9950248756218906,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        81,
+        38,
+        239,
+        232
+      ],
+      "minimumEdge": 17,
+      "sha256": "15536d084bed4616760a459a1b45f7b9aad87164c285195d3d627986eb67bf82"
+    },
+    {
+      "rowBox": [
+        1590,
+        1,
+        1758,
+        201
+      ],
+      "bodyBox": [
+        1590,
+        1,
+        1758,
+        201
+      ],
+      "footX": 61,
+      "bodyHeight": 200,
+      "character": "Bram",
+      "action": "Punch",
+      "source": "Assets/Art/Sources/Bram-Combat-v6-source.png",
+      "sourceRow": 0,
+      "sourcePose": 9,
+      "sourceRect": [
+        1590,
+        41,
+        1758,
+        241
+      ],
+      "sourceNormalization": 0.9950248756218906,
+      "output": "Assets/Art/Characters/Bram/Punch/10.png",
+      "outputScale": 0.9950248756218906,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        67,
+        33,
+        234,
+        232
+      ],
+      "minimumEdge": 22,
+      "sha256": "0aa9bf976e0027ec267c02ca6405552a77d96a6cf0fde7cd8a167e54fae46bfd"
+    },
+    {
+      "rowBox": [
+        12,
+        3,
+        178,
+        206
+      ],
+      "bodyBox": [
+        12,
+        3,
+        178,
+        206
+      ],
+      "footX": 62.0,
+      "bodyHeight": 203,
+      "character": "Bram",
+      "action": "Kick",
+      "source": "Assets/Art/Sources/Bram-Combat-v6-source.png",
+      "sourceRow": 1,
+      "sourcePose": 0,
+      "sourceRect": [
+        12,
+        260,
+        178,
+        463
+      ],
+      "sourceNormalization": 0.9950248756218906,
+      "output": "Assets/Art/Characters/Bram/Kick/01.png",
+      "outputScale": 0.9950248756218906,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        66,
+        30,
+        231,
+        232
+      ],
+      "minimumEdge": 24,
+      "sha256": "a3940889ee16bc2c82adeb29e0d7257520e58bb8a9ad3657c4a7f530539d4246"
+    },
+    {
+      "rowBox": [
+        182,
+        4,
+        352,
+        208
+      ],
+      "bodyBox": [
+        182,
+        4,
+        352,
+        208
+      ],
+      "footX": 69,
+      "bodyHeight": 204,
+      "character": "Bram",
+      "action": "Kick",
+      "source": "Assets/Art/Sources/Bram-Combat-v6-source.png",
+      "sourceRow": 1,
+      "sourcePose": 1,
+      "sourceRect": [
+        182,
+        261,
+        352,
+        465
+      ],
+      "sourceNormalization": 0.9950248756218906,
+      "output": "Assets/Art/Characters/Bram/Kick/02.png",
+      "outputScale": 0.9950248756218906,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        59,
+        29,
+        228,
+        232
+      ],
+      "minimumEdge": 24,
+      "sha256": "5b2a6c137cb7438337aeaafa4ec3ccbd256cee80d69c9bed140f70d2056c17b6"
+    },
+    {
+      "rowBox": [
+        357,
+        4,
+        533,
+        206
+      ],
+      "bodyBox": [
+        357,
+        4,
+        533,
+        206
+      ],
+      "footX": 98.0,
+      "bodyHeight": 202,
+      "character": "Bram",
+      "action": "Kick",
+      "source": "Assets/Art/Sources/Bram-Combat-v6-source.png",
+      "sourceRow": 1,
+      "sourcePose": 2,
+      "sourceRect": [
+        357,
+        261,
+        533,
+        463
+      ],
+      "sourceNormalization": 0.9950248756218906,
+      "output": "Assets/Art/Characters/Bram/Kick/03.png",
+      "outputScale": 0.9950248756218906,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        30,
+        31,
+        205,
+        232
+      ],
+      "minimumEdge": 24,
+      "sha256": "cd00b55ebc55bc8f70a80d0645eb029e01cbeb70594e4b3d530979204599331d"
+    },
+    {
+      "rowBox": [
+        532,
+        4,
+        717,
+        206
+      ],
+      "bodyBox": [
+        532,
+        4,
+        717,
+        206
+      ],
+      "footX": 98.0,
+      "bodyHeight": 202,
+      "character": "Bram",
+      "action": "Kick",
+      "source": "Assets/Art/Sources/Bram-Combat-v6-source.png",
+      "sourceRow": 1,
+      "sourcePose": 3,
+      "sourceRect": [
+        532,
+        261,
+        717,
+        463
+      ],
+      "sourceNormalization": 0.9950248756218906,
+      "output": "Assets/Art/Characters/Bram/Kick/04.png",
+      "outputScale": 0.9950248756218906,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        30,
+        31,
+        214,
+        232
+      ],
+      "minimumEdge": 24,
+      "sha256": "a5788e2bc3eb63f6eebf500ad5ead0a7db2d537d187c14f71a5c1dce96761f7b"
+    },
+    {
+      "rowBox": [
+        713,
+        4,
+        925,
+        208
+      ],
+      "bodyBox": [
+        713,
+        4,
+        925,
+        208
+      ],
+      "footX": 111.0,
+      "bodyHeight": 204,
+      "character": "Bram",
+      "action": "Kick",
+      "source": "Assets/Art/Sources/Bram-Combat-v6-source.png",
+      "sourceRow": 1,
+      "sourcePose": 4,
+      "sourceRect": [
+        713,
+        261,
+        925,
+        465
+      ],
+      "sourceNormalization": 0.9950248756218906,
+      "output": "Assets/Art/Characters/Bram/Kick/05.png",
+      "outputScale": 0.9950248756218906,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        18,
+        29,
+        229,
+        232
+      ],
+      "minimumEdge": 18,
+      "sha256": "aeb16dbd330f3ff6f90265ee2e1fb90f02f417f7d810712be12caad0c0820375"
+    },
+    {
+      "rowBox": [
+        908,
+        9,
+        1091,
+        207
+      ],
+      "bodyBox": [
+        918,
+        9,
+        1091,
+        207
+      ],
+      "footX": 102,
+      "bodyHeight": 198,
+      "character": "Bram",
+      "action": "Kick",
+      "source": "Assets/Art/Sources/Bram-Combat-v6-source.png",
+      "sourceRow": 1,
+      "sourcePose": 5,
+      "sourceRect": [
+        908,
+        266,
+        1091,
+        464
+      ],
+      "sourceNormalization": 0.9950248756218906,
+      "output": "Assets/Art/Characters/Bram/Kick/06.png",
+      "outputScale": 0.9950248756218906,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        27,
+        35,
+        209,
+        232
+      ],
+      "minimumEdge": 24,
+      "sha256": "a2bae4ebac5c113de90fe8e9866798e0c7a84d80d0271a4a8980f1c8119a2b1b"
+    },
+    {
+      "rowBox": [
+        1096,
+        0,
+        1270,
+        204
+      ],
+      "bodyBox": [
+        1096,
+        0,
+        1270,
+        204
+      ],
+      "footX": 92.0,
+      "bodyHeight": 204,
+      "character": "Bram",
+      "action": "Kick",
+      "source": "Assets/Art/Sources/Bram-Combat-v6-source.png",
+      "sourceRow": 1,
+      "sourcePose": 6,
+      "sourceRect": [
+        1096,
+        257,
+        1270,
+        461
+      ],
+      "sourceNormalization": 0.9950248756218906,
+      "output": "Assets/Art/Characters/Bram/Kick/07.png",
+      "outputScale": 0.9950248756218906,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        36,
+        29,
+        209,
+        232
+      ],
+      "minimumEdge": 24,
+      "sha256": "0f067d656db2ccc108d7c29c5d6ff65404dce430bc46b4a9c9377271fdff1b94"
+    },
+    {
+      "rowBox": [
+        1276,
+        1,
+        1433,
+        208
+      ],
+      "bodyBox": [
+        1276,
+        1,
+        1433,
+        208
+      ],
+      "footX": 77.0,
+      "bodyHeight": 207,
+      "character": "Bram",
+      "action": "Kick",
+      "source": "Assets/Art/Sources/Bram-Combat-v6-source.png",
+      "sourceRow": 1,
+      "sourcePose": 7,
+      "sourceRect": [
+        1276,
+        258,
+        1433,
+        465
+      ],
+      "sourceNormalization": 0.9950248756218906,
+      "output": "Assets/Art/Characters/Bram/Kick/08.png",
+      "outputScale": 0.9950248756218906,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        51,
+        26,
+        207,
+        232
+      ],
+      "minimumEdge": 24,
+      "sha256": "2d3c19da97a87589adda4a9d5bd34484645407bdcf16fd123cceee8a78b1de67"
+    },
+    {
+      "rowBox": [
+        1443,
+        4,
+        1597,
+        207
+      ],
+      "bodyBox": [
+        1443,
+        4,
+        1597,
+        207
+      ],
+      "footX": 66,
+      "bodyHeight": 203,
+      "character": "Bram",
+      "action": "Kick",
+      "source": "Assets/Art/Sources/Bram-Combat-v6-source.png",
+      "sourceRow": 1,
+      "sourcePose": 8,
+      "sourceRect": [
+        1443,
+        261,
+        1597,
+        464
+      ],
+      "sourceNormalization": 0.9950248756218906,
+      "output": "Assets/Art/Characters/Bram/Kick/09.png",
+      "outputScale": 0.9950248756218906,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        62,
+        30,
+        215,
+        232
+      ],
+      "minimumEdge": 24,
+      "sha256": "1257857b6b44777589659a56579d7d9dc7424423cbe767ce5f3114efe2dae0a8"
+    },
+    {
+      "rowBox": [
+        1599,
+        4,
+        1760,
+        206
+      ],
+      "bodyBox": [
+        1599,
+        4,
+        1760,
+        206
+      ],
+      "footX": 64,
+      "bodyHeight": 202,
+      "character": "Bram",
+      "action": "Kick",
+      "source": "Assets/Art/Sources/Bram-Combat-v6-source.png",
+      "sourceRow": 1,
+      "sourcePose": 9,
+      "sourceRect": [
+        1599,
+        261,
+        1760,
+        463
+      ],
+      "sourceNormalization": 0.9950248756218906,
+      "output": "Assets/Art/Characters/Bram/Kick/10.png",
+      "outputScale": 0.9950248756218906,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        64,
+        31,
+        224,
+        232
+      ],
+      "minimumEdge": 24,
+      "sha256": "75c7df9b6fc5bb0a7a2f7aa653e5f90006e6f99c08879baa846343c1c0766e36"
+    },
+    {
+      "rowBox": [
+        12,
+        1,
+        174,
+        201
+      ],
+      "bodyBox": [
+        12,
+        1,
+        174,
+        201
+      ],
+      "footX": 65,
+      "bodyHeight": 200,
+      "character": "Bram",
+      "action": "Block",
+      "source": "Assets/Art/Sources/Bram-Combat-v6-source.png",
+      "sourceRow": 2,
+      "sourcePose": 0,
+      "sourceRect": [
+        12,
+        482,
+        174,
+        682
+      ],
+      "sourceNormalization": 0.9950248756218906,
+      "output": "Assets/Art/Characters/Bram/Block/01.png",
+      "outputScale": 0.9950248756218906,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        63,
+        33,
+        224,
+        232
+      ],
+      "minimumEdge": 24,
+      "sha256": "94d5e4b13f2fb57e82e9425c11e3b45374a89950df44418439456e4e1a5c317a"
+    },
+    {
+      "rowBox": [
+        179,
+        1,
+        363,
+        200
+      ],
+      "bodyBox": [
+        179,
+        1,
+        363,
+        200
+      ],
+      "footX": 67,
+      "bodyHeight": 199,
+      "character": "Bram",
+      "action": "Block",
+      "source": "Assets/Art/Sources/Bram-Combat-v6-source.png",
+      "sourceRow": 2,
+      "sourcePose": 1,
+      "sourceRect": [
+        179,
+        482,
+        363,
+        681
+      ],
+      "sourceNormalization": 0.9950248756218906,
+      "output": "Assets/Art/Characters/Bram/Block/02.png",
+      "outputScale": 0.9950248756218906,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        61,
+        34,
+        244,
+        232
+      ],
+      "minimumEdge": 12,
+      "sha256": "26fe61bb511f0255362de7fa0150420f443f4beb3e19420681eb717aa3c9b9db"
+    },
+    {
+      "rowBox": [
+        364,
+        2,
+        540,
+        200
+      ],
+      "bodyBox": [
+        364,
+        2,
+        540,
+        200
+      ],
+      "footX": 51,
+      "bodyHeight": 198,
+      "character": "Bram",
+      "action": "Block",
+      "source": "Assets/Art/Sources/Bram-Combat-v6-source.png",
+      "sourceRow": 2,
+      "sourcePose": 2,
+      "sourceRect": [
+        364,
+        483,
+        540,
+        681
+      ],
+      "sourceNormalization": 0.9950248756218906,
+      "output": "Assets/Art/Characters/Bram/Block/03.png",
+      "outputScale": 0.9950248756218906,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        77,
+        35,
+        252,
+        232
+      ],
+      "minimumEdge": 4,
+      "sha256": "237f9ae6e7e0c3dfbd52dcbb596add5baf22128945e3b134534a162446cb655d"
+    },
+    {
+      "rowBox": [
+        546,
+        3,
+        719,
+        200
+      ],
+      "bodyBox": [
+        546,
+        3,
+        719,
+        200
+      ],
+      "footX": 50,
+      "bodyHeight": 197,
+      "character": "Bram",
+      "action": "Block",
+      "source": "Assets/Art/Sources/Bram-Combat-v6-source.png",
+      "sourceRow": 2,
+      "sourcePose": 3,
+      "sourceRect": [
+        546,
+        484,
+        719,
+        681
+      ],
+      "sourceNormalization": 0.9950248756218906,
+      "output": "Assets/Art/Characters/Bram/Block/04.png",
+      "outputScale": 0.9950248756218906,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        78,
+        36,
+        250,
+        232
+      ],
+      "minimumEdge": 6,
+      "sha256": "37e6452530a419ddaae5d77c1a139d1a7d73a335d584820efcbd71e330902941"
+    },
+    {
+      "rowBox": [
+        726,
+        4,
+        900,
+        201
+      ],
+      "bodyBox": [
+        728,
+        4,
+        892,
+        201
+      ],
+      "footX": 49.0,
+      "bodyHeight": 197,
+      "character": "Bram",
+      "action": "Block",
+      "source": "Assets/Art/Sources/Bram-Combat-v6-source.png",
+      "sourceRow": 2,
+      "sourcePose": 4,
+      "sourceRect": [
+        726,
+        485,
+        900,
+        682
+      ],
+      "sourceNormalization": 0.9950248756218906,
+      "output": "Assets/Art/Characters/Bram/Block/05.png",
+      "outputScale": 0.9950248756218906,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        79,
+        36,
+        252,
+        232
+      ],
+      "minimumEdge": 4,
+      "sha256": "bee1bd2c3ac6801353de5b62ff5aa580eb65ae561992ad0a477ff052dafcdb76"
+    },
+    {
+      "rowBox": [
+        902,
+        7,
+        1087,
+        201
+      ],
+      "bodyBox": [
+        902,
+        7,
+        1084,
+        201
+      ],
+      "footX": 57,
+      "bodyHeight": 194,
+      "character": "Bram",
+      "action": "Block",
+      "source": "Assets/Art/Sources/Bram-Combat-v6-source.png",
+      "sourceRow": 2,
+      "sourcePose": 5,
+      "sourceRect": [
+        902,
+        488,
+        1087,
+        682
+      ],
+      "sourceNormalization": 0.9950248756218906,
+      "output": "Assets/Art/Characters/Bram/Block/06.png",
+      "outputScale": 0.9950248756218906,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        68,
+        39,
+        252,
+        232
+      ],
+      "minimumEdge": 4,
+      "sha256": "7578a5e7a844b23bb45a9b14ee4d62f5f9f5c4ee04ad9964bd6ecef70ddd4d5b"
+    },
+    {
+      "rowBox": [
+        1092,
+        3,
+        1268,
+        200
+      ],
+      "bodyBox": [
+        1092,
+        3,
+        1260,
+        200
+      ],
+      "footX": 51.0,
+      "bodyHeight": 197,
+      "character": "Bram",
+      "action": "Block",
+      "source": "Assets/Art/Sources/Bram-Combat-v6-source.png",
+      "sourceRow": 2,
+      "sourcePose": 6,
+      "sourceRect": [
+        1092,
+        484,
+        1268,
+        681
+      ],
+      "sourceNormalization": 0.9950248756218906,
+      "output": "Assets/Art/Characters/Bram/Block/07.png",
+      "outputScale": 0.9950248756218906,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        77,
+        36,
+        252,
+        232
+      ],
+      "minimumEdge": 4,
+      "sha256": "33603e6e494cabc27d417093e2dfc97e86d6b30bd55af49f1ceabd4b1beee6ed"
+    },
+    {
+      "rowBox": [
+        1270,
+        6,
+        1435,
+        202
+      ],
+      "bodyBox": [
+        1270,
+        6,
+        1435,
+        202
+      ],
+      "footX": 62,
+      "bodyHeight": 196,
+      "character": "Bram",
+      "action": "Block",
+      "source": "Assets/Art/Sources/Bram-Combat-v6-source.png",
+      "sourceRow": 2,
+      "sourcePose": 7,
+      "sourceRect": [
+        1270,
+        487,
+        1435,
+        683
+      ],
+      "sourceNormalization": 0.9950248756218906,
+      "output": "Assets/Art/Characters/Bram/Block/08.png",
+      "outputScale": 0.9950248756218906,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        66,
+        37,
+        230,
+        232
+      ],
+      "minimumEdge": 24,
+      "sha256": "4efc0aff22e8908ab8b426e1985c2b15488362924cc5abd2d9f45f02f1f6b06f"
+    },
+    {
+      "rowBox": [
+        1441,
+        12,
+        1598,
+        201
+      ],
+      "bodyBox": [
+        1441,
+        12,
+        1598,
+        201
+      ],
+      "footX": 58.0,
+      "bodyHeight": 189,
+      "character": "Bram",
+      "action": "Block",
+      "source": "Assets/Art/Sources/Bram-Combat-v6-source.png",
+      "sourceRow": 2,
+      "sourcePose": 8,
+      "sourceRect": [
+        1441,
+        493,
+        1598,
+        682
+      ],
+      "sourceNormalization": 0.9950248756218906,
+      "output": "Assets/Art/Characters/Bram/Block/09.png",
+      "outputScale": 0.9950248756218906,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        70,
+        44,
+        226,
+        232
+      ],
+      "minimumEdge": 24,
+      "sha256": "43915045e82c6804b3f665f2470baa1c14cf25af3b056af9d72c07fc9703f476"
+    },
+    {
+      "rowBox": [
+        1599,
+        0,
+        1757,
+        201
+      ],
+      "bodyBox": [
+        1599,
+        0,
+        1757,
+        201
+      ],
+      "footX": 64.0,
+      "bodyHeight": 201,
+      "character": "Bram",
+      "action": "Block",
+      "source": "Assets/Art/Sources/Bram-Combat-v6-source.png",
+      "sourceRow": 2,
+      "sourcePose": 9,
+      "sourceRect": [
+        1599,
+        481,
+        1757,
+        682
+      ],
+      "sourceNormalization": 0.9950248756218906,
+      "output": "Assets/Art/Characters/Bram/Block/10.png",
+      "outputScale": 0.9950248756218906,
+      "canvas": [
+        256,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        128,
+        24
+      ],
+      "bbox": [
+        64,
+        32,
+        221,
+        232
+      ],
+      "minimumEdge": 24,
+      "sha256": "d9fca021eb066e570cd2b16841d563a1c0ed355f87d860f0e2de9067d35c3515"
+    },
+    {
+      "rowBox": [
+        14,
+        24,
+        193,
+        196
+      ],
+      "bodyBox": [
+        14,
+        24,
+        193,
+        196
+      ],
+      "footX": 52,
+      "bodyHeight": 172,
+      "character": "Bram",
+      "action": "Special",
+      "source": "Assets/Art/Sources/Bram-Combat-v6-source.png",
+      "sourceRow": 3,
+      "sourcePose": 0,
+      "sourceRect": [
+        14,
+        708,
+        193,
+        880
+      ],
+      "sourceNormalization": 0.9950248756218906,
+      "output": "Assets/Art/Characters/Bram/Special/02.png",
+      "outputScale": 0.9950248756218906,
+      "canvas": [
+        384,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        192,
+        24
+      ],
+      "bbox": [
+        140,
+        61,
+        318,
+        232
+      ],
+      "minimumEdge": 24,
+      "sha256": "c140a63e497fd8b4c159cf6a8357eccf287259c7dead0e6134aa90e6cd773742"
+    },
+    {
+      "rowBox": [
+        195,
+        31,
+        379,
+        196
+      ],
+      "bodyBox": [
+        195,
+        31,
+        379,
+        196
+      ],
+      "footX": 54.0,
+      "bodyHeight": 165,
+      "character": "Bram",
+      "action": "Special",
+      "source": "Assets/Art/Sources/Bram-Combat-v6-source.png",
+      "sourceRow": 3,
+      "sourcePose": 1,
+      "sourceRect": [
+        195,
+        715,
+        379,
+        880
+      ],
+      "sourceNormalization": 0.9950248756218906,
+      "output": "Assets/Art/Characters/Bram/Special/03.png",
+      "outputScale": 0.9950248756218906,
+      "canvas": [
+        384,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        192,
+        24
+      ],
+      "bbox": [
+        138,
+        68,
+        321,
+        232
+      ],
+      "minimumEdge": 24,
+      "sha256": "73822ccd6983c4c30779cb825aef5803c046c02c1ac7fdd9162f0028fd283224"
+    },
+    {
+      "rowBox": [
+        382,
+        18,
+        545,
+        196
+      ],
+      "bodyBox": [
+        382,
+        18,
+        545,
+        196
+      ],
+      "footX": 52,
+      "bodyHeight": 178,
+      "character": "Bram",
+      "action": "Special",
+      "source": "Assets/Art/Sources/Bram-Combat-v6-source.png",
+      "sourceRow": 3,
+      "sourcePose": 2,
+      "sourceRect": [
+        382,
+        702,
+        545,
+        880
+      ],
+      "sourceNormalization": 0.9950248756218906,
+      "output": "Assets/Art/Characters/Bram/Special/04.png",
+      "outputScale": 0.9950248756218906,
+      "canvas": [
+        384,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        192,
+        24
+      ],
+      "bbox": [
+        140,
+        55,
+        302,
+        232
+      ],
+      "minimumEdge": 24,
+      "sha256": "27ee6546868ebbd4c15f27ed2fcf107a31cbf2690e460dff01ffd95543f3ab7d"
+    },
+    {
+      "rowBox": [
+        563,
+        0,
+        756,
+        196
+      ],
+      "bodyBox": [
+        563,
+        0,
+        735,
+        196
+      ],
+      "footX": 64.0,
+      "bodyHeight": 196,
+      "character": "Bram",
+      "action": "Special",
+      "source": "Assets/Art/Sources/Bram-Combat-v6-source.png",
+      "sourceRow": 3,
+      "sourcePose": 3,
+      "sourceRect": [
+        563,
+        684,
+        756,
+        880
+      ],
+      "sourceNormalization": 0.9950248756218906,
+      "output": "Assets/Art/Characters/Bram/Special/05.png",
+      "outputScale": 0.9950248756218906,
+      "canvas": [
+        384,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        192,
+        24
+      ],
+      "bbox": [
+        128,
+        37,
+        320,
+        232
+      ],
+      "minimumEdge": 24,
+      "sha256": "fe1c13e96e85b71985df200642374e67323d3c594cb375ce0eccedfa219b7f4e"
+    },
+    {
+      "rowBox": [
+        738,
+        48,
+        966,
+        199
+      ],
+      "bodyBox": [
+        738,
+        48,
+        966,
+        199
+      ],
+      "footX": 119.0,
+      "bodyHeight": 151,
+      "character": "Bram",
+      "action": "Special",
+      "source": "Assets/Art/Sources/Bram-Combat-v6-source.png",
+      "sourceRow": 3,
+      "sourcePose": 4,
+      "sourceRect": [
+        738,
+        732,
+        966,
+        883
+      ],
+      "sourceNormalization": 0.9950248756218906,
+      "output": "Assets/Art/Characters/Bram/Special/06.png",
+      "outputScale": 0.9950248756218906,
+      "canvas": [
+        384,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        192,
+        24
+      ],
+      "bbox": [
+        74,
+        82,
+        301,
+        232
+      ],
+      "minimumEdge": 24,
+      "sha256": "0d29e47c332b296d9fc2882fcbfe41a2439bc00004740bed51bf0c38355e908d"
+    },
+    {
+      "rowBox": [
+        975,
+        51,
+        1208,
+        199
+      ],
+      "bodyBox": [
+        975,
+        51,
+        1208,
+        199
+      ],
+      "footX": 108.5,
+      "bodyHeight": 148,
+      "character": "Bram",
+      "action": "Special",
+      "source": "Assets/Art/Sources/Bram-Combat-v6-source.png",
+      "sourceRow": 3,
+      "sourcePose": 5,
+      "sourceRect": [
+        975,
+        735,
+        1208,
+        883
+      ],
+      "sourceNormalization": 0.9950248756218906,
+      "output": "Assets/Art/Characters/Bram/Special/07.png",
+      "outputScale": 0.9950248756218906,
+      "canvas": [
+        384,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        192,
+        24
+      ],
+      "bbox": [
+        84,
+        85,
+        316,
+        232
+      ],
+      "minimumEdge": 24,
+      "sha256": "e7c2bd29c1311713fe0c6daf197b8e4d8da4848a605924378837c068699ca1e9"
+    },
+    {
+      "rowBox": [
+        1212,
+        38,
+        1420,
+        198
+      ],
+      "bodyBox": [
+        1212,
+        38,
+        1420,
+        198
+      ],
+      "footX": 101,
+      "bodyHeight": 160,
+      "character": "Bram",
+      "action": "Special",
+      "source": "Assets/Art/Sources/Bram-Combat-v6-source.png",
+      "sourceRow": 3,
+      "sourcePose": 6,
+      "sourceRect": [
+        1212,
+        722,
+        1420,
+        882
+      ],
+      "sourceNormalization": 0.9950248756218906,
+      "output": "Assets/Art/Characters/Bram/Special/08.png",
+      "outputScale": 0.9950248756218906,
+      "canvas": [
+        384,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        192,
+        24
+      ],
+      "bbox": [
+        92,
+        73,
+        299,
+        232
+      ],
+      "minimumEdge": 24,
+      "sha256": "5cca80d7747e4901dc28868d274cc8e362c96245dd5bec770fb48a1bc79c75a2"
+    },
+    {
+      "rowBox": [
+        1400,
+        25,
+        1588,
+        196
+      ],
+      "bodyBox": [
+        1412,
+        25,
+        1588,
+        196
+      ],
+      "footX": 79,
+      "bodyHeight": 171,
+      "character": "Bram",
+      "action": "Special",
+      "source": "Assets/Art/Sources/Bram-Combat-v6-source.png",
+      "sourceRow": 3,
+      "sourcePose": 7,
+      "sourceRect": [
+        1400,
+        709,
+        1588,
+        880
+      ],
+      "sourceNormalization": 0.9950248756218906,
+      "output": "Assets/Art/Characters/Bram/Special/09.png",
+      "outputScale": 0.9950248756218906,
+      "canvas": [
+        384,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        192,
+        24
+      ],
+      "bbox": [
+        113,
+        62,
+        300,
+        232
+      ],
+      "minimumEdge": 24,
+      "sha256": "26f89303de0a22b1a246746ea34fee96c5553eb259b4dda443151a13cd7fe72d"
+    },
+    {
+      "rowBox": [
+        1591,
+        16,
+        1758,
+        196
+      ],
+      "bodyBox": [
+        1591,
+        16,
+        1758,
+        196
+      ],
+      "footX": 62.0,
+      "bodyHeight": 180,
+      "character": "Bram",
+      "action": "Special",
+      "source": "Assets/Art/Sources/Bram-Combat-v6-source.png",
+      "sourceRow": 3,
+      "sourcePose": 8,
+      "sourceRect": [
+        1591,
+        700,
+        1758,
+        880
+      ],
+      "sourceNormalization": 0.9950248756218906,
+      "output": "Assets/Art/Characters/Bram/Special/10.png",
+      "outputScale": 0.9950248756218906,
+      "canvas": [
+        384,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        192,
+        24
+      ],
+      "bbox": [
+        130,
+        53,
+        296,
+        232
+      ],
+      "minimumEdge": 24,
+      "sha256": "742dad7ed894ce4ce094eeab4c0aea84d9f2969648a0fb8348050eeaa104be4a"
+    },
+    {
+      "rowBox": [
+        26,
+        56,
+        262,
+        254
+      ],
+      "bodyBox": [
+        26,
+        56,
+        262,
+        254
+      ],
+      "footX": 108.0,
+      "bodyHeight": 198,
+      "character": "Fern",
+      "action": "Special",
+      "source": "Assets/Art/Sources/Fern-Ember-Special-v6-source.png",
+      "sourceRow": 0,
+      "sourcePose": 0,
+      "sourceRect": [
+        26,
+        87,
+        262,
+        285
+      ],
+      "sourceNormalization": 0.823045267489712,
+      "output": "Assets/Art/Characters/Fern/Special/01.png",
+      "outputScale": 0.823045267489712,
+      "canvas": [
+        384,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        192,
+        24
+      ],
+      "bbox": [
+        103,
+        69,
+        297,
+        232
+      ],
+      "minimumEdge": 24,
+      "sha256": "5378c1fa964eb6cadc4524ea870febc8a1601bb1139eb39991edb9b160cbd6f4"
+    },
+    {
+      "rowBox": [
+        288,
+        8,
+        515,
+        251
+      ],
+      "bodyBox": [
+        300,
+        8,
+        489,
+        251
+      ],
+      "footX": 115.0,
+      "bodyHeight": 243,
+      "character": "Fern",
+      "action": "Special",
+      "source": "Assets/Art/Sources/Fern-Ember-Special-v6-source.png",
+      "sourceRow": 0,
+      "sourcePose": 1,
+      "sourceRect": [
+        288,
+        39,
+        515,
+        282
+      ],
+      "sourceNormalization": 0.823045267489712,
+      "output": "Assets/Art/Characters/Fern/Special/02.png",
+      "outputScale": 0.823045267489712,
+      "canvas": [
+        384,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        192,
+        24
+      ],
+      "bbox": [
+        97,
+        32,
+        284,
+        232
+      ],
+      "minimumEdge": 24,
+      "sha256": "c6d3104aa5ac2aed3800ffb121552abce941da83c2093de494065621b0ef94c0"
+    },
+    {
+      "rowBox": [
+        532,
+        0,
+        772,
+        254
+      ],
+      "bodyBox": [
+        540,
+        0,
+        750,
+        254
+      ],
+      "footX": 120,
+      "bodyHeight": 254,
+      "character": "Fern",
+      "action": "Special",
+      "source": "Assets/Art/Sources/Fern-Ember-Special-v6-source.png",
+      "sourceRow": 0,
+      "sourcePose": 2,
+      "sourceRect": [
+        532,
+        31,
+        772,
+        285
+      ],
+      "sourceNormalization": 0.823045267489712,
+      "output": "Assets/Art/Characters/Fern/Special/03.png",
+      "outputScale": 0.823045267489712,
+      "canvas": [
+        384,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        192,
+        24
+      ],
+      "bbox": [
+        93,
+        23,
+        291,
+        232
+      ],
+      "minimumEdge": 23,
+      "sha256": "c89ad2641fc3bea2cce57e9e45b427a9757ffa83d7585d5ccc05d72a8568053d"
+    },
+    {
+      "rowBox": [
+        784,
+        33,
+        1134,
+        253
+      ],
+      "bodyBox": [
+        784,
+        33,
+        1134,
+        253
+      ],
+      "footX": 119,
+      "bodyHeight": 220,
+      "character": "Fern",
+      "action": "Special",
+      "source": "Assets/Art/Sources/Fern-Ember-Special-v6-source.png",
+      "sourceRow": 0,
+      "sourcePose": 3,
+      "sourceRect": [
+        784,
+        64,
+        1134,
+        284
+      ],
+      "sourceNormalization": 0.823045267489712,
+      "output": "Assets/Art/Characters/Fern/Special/04.png",
+      "outputScale": 0.823045267489712,
+      "canvas": [
+        384,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        192,
+        24
+      ],
+      "bbox": [
+        92,
+        51,
+        380,
+        232
+      ],
+      "minimumEdge": 4,
+      "sha256": "7b0e958e8409da767a53b5968dc0defd39aaa6749027bf48cf53d8bfde17b674"
+    },
+    {
+      "rowBox": [
+        1141,
+        14,
+        1386,
+        254
+      ],
+      "bodyBox": [
+        1141,
+        14,
+        1385,
+        254
+      ],
+      "footX": 108.0,
+      "bodyHeight": 240,
+      "character": "Fern",
+      "action": "Special",
+      "source": "Assets/Art/Sources/Fern-Ember-Special-v6-source.png",
+      "sourceRow": 0,
+      "sourcePose": 4,
+      "sourceRect": [
+        1141,
+        45,
+        1386,
+        285
+      ],
+      "sourceNormalization": 0.823045267489712,
+      "output": "Assets/Art/Characters/Fern/Special/05.png",
+      "outputScale": 0.823045267489712,
+      "canvas": [
+        384,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        192,
+        24
+      ],
+      "bbox": [
+        103,
+        34,
+        305,
+        232
+      ],
+      "minimumEdge": 24,
+      "sha256": "cdda11ccd4ae13156d08c1acbd9adf683d27f36da7b07c2a160517e0c9d44820"
+    },
+    {
+      "rowBox": [
+        15,
+        0,
+        284,
+        252
+      ],
+      "bodyBox": [
+        15,
+        0,
+        284,
+        252
+      ],
+      "footX": 114.0,
+      "bodyHeight": 252,
+      "character": "Fern",
+      "action": "Special",
+      "source": "Assets/Art/Sources/Fern-Ember-Special-v6-source.png",
+      "sourceRow": 1,
+      "sourcePose": 0,
+      "sourceRect": [
+        15,
+        303,
+        284,
+        555
+      ],
+      "sourceNormalization": 0.823045267489712,
+      "output": "Assets/Art/Characters/Fern/Special/06.png",
+      "outputScale": 0.823045267489712,
+      "canvas": [
+        384,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        192,
+        24
+      ],
+      "bbox": [
+        98,
+        25,
+        319,
+        232
+      ],
+      "minimumEdge": 24,
+      "sha256": "bfd2805d33ae218cfda8979318755fae8abed4b0a00547316d2e50175b1cb716"
+    },
+    {
+      "rowBox": [
+        281,
+        5,
+        549,
+        253
+      ],
+      "bodyBox": [
+        281,
+        5,
+        549,
+        252
+      ],
+      "footX": 108.0,
+      "bodyHeight": 247,
+      "character": "Fern",
+      "action": "Special",
+      "source": "Assets/Art/Sources/Fern-Ember-Special-v6-source.png",
+      "sourceRow": 1,
+      "sourcePose": 1,
+      "sourceRect": [
+        281,
+        308,
+        549,
+        556
+      ],
+      "sourceNormalization": 0.823045267489712,
+      "output": "Assets/Art/Characters/Fern/Special/07.png",
+      "outputScale": 0.823045267489712,
+      "canvas": [
+        384,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        192,
+        24
+      ],
+      "bbox": [
+        103,
+        28,
+        324,
+        232
+      ],
+      "minimumEdge": 24,
+      "sha256": "ede45b70b2ee39a803a26501d4ca29b58a64cf864bf87e1ead3ccf9631b4572a"
+    },
+    {
+      "rowBox": [
+        543,
+        23,
+        828,
+        260
+      ],
+      "bodyBox": [
+        543,
+        23,
+        821,
+        254
+      ],
+      "footX": 128.0,
+      "bodyHeight": 231,
+      "character": "Fern",
+      "action": "Special",
+      "source": "Assets/Art/Sources/Fern-Ember-Special-v6-source.png",
+      "sourceRow": 1,
+      "sourcePose": 2,
+      "sourceRect": [
+        543,
+        326,
+        828,
+        563
+      ],
+      "sourceNormalization": 0.823045267489712,
+      "output": "Assets/Art/Characters/Fern/Special/08.png",
+      "outputScale": 0.823045267489712,
+      "canvas": [
+        384,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        192,
+        24
+      ],
+      "bbox": [
+        87,
+        37,
+        322,
+        232
+      ],
+      "minimumEdge": 24,
+      "sha256": "b189f1f68aa6b89457c048dbe259fe23e9e50e790e78466d400bfb61512e6eaa"
+    },
+    {
+      "rowBox": [
+        831,
+        10,
+        1137,
+        254
+      ],
+      "bodyBox": [
+        831,
+        10,
+        1101,
+        254
+      ],
+      "footX": 122,
+      "bodyHeight": 244,
+      "character": "Fern",
+      "action": "Special",
+      "source": "Assets/Art/Sources/Fern-Ember-Special-v6-source.png",
+      "sourceRow": 1,
+      "sourcePose": 3,
+      "sourceRect": [
+        831,
+        313,
+        1137,
+        557
+      ],
+      "sourceNormalization": 0.823045267489712,
+      "output": "Assets/Art/Characters/Fern/Special/09.png",
+      "outputScale": 0.823045267489712,
+      "canvas": [
+        384,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        192,
+        24
+      ],
+      "bbox": [
+        92,
+        31,
+        344,
+        232
+      ],
+      "minimumEdge": 24,
+      "sha256": "b7955b2033bf464172b81690ba23c5b08f7ee0eaae7eda4799b389fe644e9365"
+    },
+    {
+      "rowBox": [
+        1161,
+        3,
+        1374,
+        254
+      ],
+      "bodyBox": [
+        1161,
+        3,
+        1360,
+        254
+      ],
+      "footX": 106,
+      "bodyHeight": 251,
+      "character": "Fern",
+      "action": "Special",
+      "source": "Assets/Art/Sources/Fern-Ember-Special-v6-source.png",
+      "sourceRow": 1,
+      "sourcePose": 4,
+      "sourceRect": [
+        1161,
+        306,
+        1374,
+        557
+      ],
+      "sourceNormalization": 0.823045267489712,
+      "output": "Assets/Art/Characters/Fern/Special/10.png",
+      "outputScale": 0.823045267489712,
+      "canvas": [
+        384,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        192,
+        24
+      ],
+      "bbox": [
+        105,
+        25,
+        280,
+        232
+      ],
+      "minimumEdge": 24,
+      "sha256": "e0631d9b5a67bc10c9655dd4990d22616f5d4657701da21f29be784d3229c924"
+    },
+    {
+      "rowBox": [
+        17,
+        24,
+        255,
+        241
+      ],
+      "bodyBox": [
+        17,
+        24,
+        255,
+        241
+      ],
+      "footX": 111.5,
+      "bodyHeight": 217,
+      "character": "Ember",
+      "action": "Special",
+      "source": "Assets/Art/Sources/Fern-Ember-Special-v6-source.png",
+      "sourceRow": 2,
+      "sourcePose": 0,
+      "sourceRect": [
+        17,
+        614,
+        255,
+        831
+      ],
+      "sourceNormalization": 0.8333333333333334,
+      "output": "Assets/Art/Characters/Ember/Special/01.png",
+      "outputScale": 0.8333333333333334,
+      "canvas": [
+        384,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        192,
+        24
+      ],
+      "bbox": [
+        99,
+        51,
+        297,
+        232
+      ],
+      "minimumEdge": 24,
+      "sha256": "ec5a59c7354017d95dd1c580f8233df125a95ab36127343c7da952d775ad76fc"
+    },
+    {
+      "rowBox": [
+        256,
+        18,
+        507,
+        241
+      ],
+      "bodyBox": [
+        256,
+        18,
+        507,
+        241
+      ],
+      "footX": 60,
+      "bodyHeight": 223,
+      "character": "Ember",
+      "action": "Special",
+      "source": "Assets/Art/Sources/Fern-Ember-Special-v6-source.png",
+      "sourceRow": 2,
+      "sourcePose": 1,
+      "sourceRect": [
+        256,
+        608,
+        507,
+        831
+      ],
+      "sourceNormalization": 0.8333333333333334,
+      "output": "Assets/Art/Characters/Ember/Special/02.png",
+      "outputScale": 0.8333333333333334,
+      "canvas": [
+        384,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        192,
+        24
+      ],
+      "bbox": [
+        142,
+        46,
+        351,
+        232
+      ],
+      "minimumEdge": 24,
+      "sha256": "b3d7d590736f5a0a19199e6d0571f0c76432a60de1dee6266eb913a2ee2962b8"
+    },
+    {
+      "rowBox": [
+        509,
+        4,
+        783,
+        241
+      ],
+      "bodyBox": [
+        509,
+        4,
+        781,
+        241
+      ],
+      "footX": 88,
+      "bodyHeight": 237,
+      "character": "Ember",
+      "action": "Special",
+      "source": "Assets/Art/Sources/Fern-Ember-Special-v6-source.png",
+      "sourceRow": 2,
+      "sourcePose": 2,
+      "sourceRect": [
+        509,
+        594,
+        783,
+        831
+      ],
+      "sourceNormalization": 0.8333333333333334,
+      "output": "Assets/Art/Characters/Ember/Special/03.png",
+      "outputScale": 0.8333333333333334,
+      "canvas": [
+        384,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        192,
+        24
+      ],
+      "bbox": [
+        119,
+        34,
+        347,
+        232
+      ],
+      "minimumEdge": 24,
+      "sha256": "3b1ce4f4bca5428ae3ef099fef25ac815d47f3e85957f8a51b733c5799635162"
+    },
+    {
+      "rowBox": [
+        775,
+        19,
+        1108,
+        241
+      ],
+      "bodyBox": [
+        775,
+        19,
+        1108,
+        241
+      ],
+      "footX": 150,
+      "bodyHeight": 222,
+      "character": "Ember",
+      "action": "Special",
+      "source": "Assets/Art/Sources/Fern-Ember-Special-v6-source.png",
+      "sourceRow": 2,
+      "sourcePose": 3,
+      "sourceRect": [
+        775,
+        609,
+        1108,
+        831
+      ],
+      "sourceNormalization": 0.8333333333333334,
+      "output": "Assets/Art/Characters/Ember/Special/04.png",
+      "outputScale": 0.8333333333333334,
+      "canvas": [
+        384,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        192,
+        24
+      ],
+      "bbox": [
+        67,
+        47,
+        345,
+        232
+      ],
+      "minimumEdge": 24,
+      "sha256": "e4162c6a4621c16daa9f35f4d0c8a747787701b33fa51c2678535b6169d72697"
+    },
+    {
+      "rowBox": [
+        1094,
+        0,
+        1390,
+        245
+      ],
+      "bodyBox": [
+        1114,
+        0,
+        1390,
+        245
+      ],
+      "footX": 154,
+      "bodyHeight": 245,
+      "character": "Ember",
+      "action": "Special",
+      "source": "Assets/Art/Sources/Fern-Ember-Special-v6-source.png",
+      "sourceRow": 2,
+      "sourcePose": 4,
+      "sourceRect": [
+        1094,
+        590,
+        1390,
+        835
+      ],
+      "sourceNormalization": 0.8333333333333334,
+      "output": "Assets/Art/Characters/Ember/Special/05.png",
+      "outputScale": 0.8333333333333334,
+      "canvas": [
+        384,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        192,
+        24
+      ],
+      "bbox": [
+        64,
+        29,
+        311,
+        232
+      ],
+      "minimumEdge": 24,
+      "sha256": "eb073770473008db5fc340a441ac256a195f081151366b8f6f9b056fbc179654"
+    },
+    {
+      "rowBox": [
+        17,
+        12,
+        313,
+        241
+      ],
+      "bodyBox": [
+        17,
+        12,
+        313,
+        241
+      ],
+      "footX": 72.5,
+      "bodyHeight": 229,
+      "character": "Ember",
+      "action": "Special",
+      "source": "Assets/Art/Sources/Fern-Ember-Special-v6-source.png",
+      "sourceRow": 3,
+      "sourcePose": 0,
+      "sourceRect": [
+        17,
+        863,
+        313,
+        1092
+      ],
+      "sourceNormalization": 0.8333333333333334,
+      "output": "Assets/Art/Characters/Ember/Special/06.png",
+      "outputScale": 0.8333333333333334,
+      "canvas": [
+        384,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        192,
+        24
+      ],
+      "bbox": [
+        132,
+        41,
+        379,
+        232
+      ],
+      "minimumEdge": 5,
+      "sha256": "70726593e8bfe927e49718dcc85adb1e5e2d9f0b34abe70ae808331d4c3b5c39"
+    },
+    {
+      "rowBox": [
+        307,
+        5,
+        583,
+        241
+      ],
+      "bodyBox": [
+        307,
+        5,
+        583,
+        241
+      ],
+      "footX": 68.0,
+      "bodyHeight": 236,
+      "character": "Ember",
+      "action": "Special",
+      "source": "Assets/Art/Sources/Fern-Ember-Special-v6-source.png",
+      "sourceRow": 3,
+      "sourcePose": 1,
+      "sourceRect": [
+        307,
+        856,
+        583,
+        1092
+      ],
+      "sourceNormalization": 0.8333333333333334,
+      "output": "Assets/Art/Characters/Ember/Special/07.png",
+      "outputScale": 0.8333333333333334,
+      "canvas": [
+        384,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        192,
+        24
+      ],
+      "bbox": [
+        135,
+        35,
+        365,
+        232
+      ],
+      "minimumEdge": 19,
+      "sha256": "06211856acd17414e0247df11d8af993c606880e6859e81a197cd945fcd29b95"
+    },
+    {
+      "rowBox": [
+        591,
+        0,
+        860,
+        241
+      ],
+      "bodyBox": [
+        591,
+        0,
+        860,
+        241
+      ],
+      "footX": 144,
+      "bodyHeight": 241,
+      "character": "Ember",
+      "action": "Special",
+      "source": "Assets/Art/Sources/Fern-Ember-Special-v6-source.png",
+      "sourceRow": 3,
+      "sourcePose": 2,
+      "sourceRect": [
+        591,
+        851,
+        860,
+        1092
+      ],
+      "sourceNormalization": 0.8333333333333334,
+      "output": "Assets/Art/Characters/Ember/Special/08.png",
+      "outputScale": 0.8333333333333334,
+      "canvas": [
+        384,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        192,
+        24
+      ],
+      "bbox": [
+        72,
+        31,
+        296,
+        232
+      ],
+      "minimumEdge": 24,
+      "sha256": "f5042a2663ddc1ce1ece8cd8c14c6cffc03636faf9368848b55b44114e3ef6ec"
+    },
+    {
+      "rowBox": [
+        879,
+        11,
+        1113,
+        241
+      ],
+      "bodyBox": [
+        879,
+        11,
+        1096,
+        241
+      ],
+      "footX": 125,
+      "bodyHeight": 230,
+      "character": "Ember",
+      "action": "Special",
+      "source": "Assets/Art/Sources/Fern-Ember-Special-v6-source.png",
+      "sourceRow": 3,
+      "sourcePose": 3,
+      "sourceRect": [
+        879,
+        862,
+        1113,
+        1092
+      ],
+      "sourceNormalization": 0.8333333333333334,
+      "output": "Assets/Art/Characters/Ember/Special/09.png",
+      "outputScale": 0.8333333333333334,
+      "canvas": [
+        384,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        192,
+        24
+      ],
+      "bbox": [
+        88,
+        40,
+        283,
+        232
+      ],
+      "minimumEdge": 24,
+      "sha256": "da04028d7db027d29e12cd8182cb4ff8f9fd2497e02113e05087e3620ec72241"
+    },
+    {
+      "rowBox": [
+        1161,
+        2,
+        1356,
+        242
+      ],
+      "bodyBox": [
+        1161,
+        2,
+        1356,
+        242
+      ],
+      "footX": 108,
+      "bodyHeight": 240,
+      "character": "Ember",
+      "action": "Special",
+      "source": "Assets/Art/Sources/Fern-Ember-Special-v6-source.png",
+      "sourceRow": 3,
+      "sourcePose": 4,
+      "sourceRect": [
+        1161,
+        853,
+        1356,
+        1093
+      ],
+      "sourceNormalization": 0.8333333333333334,
+      "output": "Assets/Art/Characters/Ember/Special/10.png",
+      "outputScale": 0.8333333333333334,
+      "canvas": [
+        384,
+        256
+      ],
+      "feetPivotUnityPixels": [
+        192,
+        24
+      ],
+      "bbox": [
+        102,
+        32,
+        264,
+        232
+      ],
+      "minimumEdge": 24,
+      "sha256": "194f45412884d76041017b653783295e5d98f862fc9ca8927e76c365c71a4cb6"
+    }
+  ]
+}

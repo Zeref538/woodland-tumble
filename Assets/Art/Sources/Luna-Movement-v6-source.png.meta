@@ -1,0 +1,585 @@
+fileFormatVersion: 2
+guid: 8401e7951cb3f3d47854557df6b8071c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -636575603154293688
+    second: Luna-Movement-v6-source_0
+  - first:
+      213: 5099024985949563053
+    second: Luna-Movement-v6-source_1
+  - first:
+      213: -8871788900840642050
+    second: Luna-Movement-v6-source_2
+  - first:
+      213: 3576602143779399035
+    second: Luna-Movement-v6-source_3
+  - first:
+      213: 1012866527138679768
+    second: Luna-Movement-v6-source_4
+  - first:
+      213: -818441052845080839
+    second: Luna-Movement-v6-source_5
+  - first:
+      213: 5578626239923175949
+    second: Luna-Movement-v6-source_6
+  - first:
+      213: 2971230389975965894
+    second: Luna-Movement-v6-source_7
+  - first:
+      213: 2586322947637282438
+    second: Luna-Movement-v6-source_8
+  - first:
+      213: 6017713934068401610
+    second: Luna-Movement-v6-source_9
+  - first:
+      213: 7334651403438477673
+    second: Luna-Movement-v6-source_10
+  - first:
+      213: 7394386547678906994
+    second: Luna-Movement-v6-source_11
+  - first:
+      213: -1614171087877934537
+    second: Luna-Movement-v6-source_12
+  - first:
+      213: -2454238202964182945
+    second: Luna-Movement-v6-source_13
+  - first:
+      213: 3423371299182035593
+    second: Luna-Movement-v6-source_14
+  - first:
+      213: -4775265532419624571
+    second: Luna-Movement-v6-source_15
+  - first:
+      213: 693958791463480431
+    second: Luna-Movement-v6-source_16
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Luna-Movement-v6-source_0
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 1387
+        width: 181
+        height: 188
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84cee459cdd6a27f0800000000000000
+      internalID: -636575603154293688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Luna-Movement-v6-source_1
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 1387
+        width: 172
+        height: 188
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da86d5c753063c640800000000000000
+      internalID: 5099024985949563053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Luna-Movement-v6-source_2
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 1385
+        width: 179
+        height: 191
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef9e32bdff211e480800000000000000
+      internalID: -8871788900840642050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Luna-Movement-v6-source_3
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 1387
+        width: 173
+        height: 186
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b752fda33b4a2a130800000000000000
+      internalID: 3576602143779399035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Luna-Movement-v6-source_4
+      rect:
+        serializedVersion: 2
+        x: 811
+        y: 1386
+        width: 168
+        height: 197
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8db0cf27dbc6e0e00800000000000000
+      internalID: 1012866527138679768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Luna-Movement-v6-source_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 568
+        width: 787
+        height: 813
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9fe729fd23054a4f0800000000000000
+      internalID: -818441052845080839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Luna-Movement-v6-source_6
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 1175
+        width: 179
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d024b4522034b6d40800000000000000
+      internalID: 5578626239923175949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Luna-Movement-v6-source_7
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 766
+        width: 183
+        height: 169
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c0ec542c4eeb3920800000000000000
+      internalID: 2971230389975965894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Luna-Movement-v6-source_8
+      rect:
+        serializedVersion: 2
+        x: 797
+        y: 766
+        width: 184
+        height: 390
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6868c58940774e320800000000000000
+      internalID: 2586322947637282438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Luna-Movement-v6-source_9
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 161
+        width: 194
+        height: 370
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac5c01890f6338350800000000000000
+      internalID: 6017713934068401610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Luna-Movement-v6-source_10
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 365
+        width: 187
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 961554d379ae9c560800000000000000
+      internalID: 7334651403438477673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Luna-Movement-v6-source_11
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 367
+        width: 182
+        height: 189
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27a045253632e9660800000000000000
+      internalID: 7394386547678906994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Luna-Movement-v6-source_12
+      rect:
+        serializedVersion: 2
+        x: 602
+        y: 367
+        width: 184
+        height: 198
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7327454a2ff4999e0800000000000000
+      internalID: -1614171087877934537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Luna-Movement-v6-source_13
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 366
+        width: 182
+        height: 383
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5870268b5bc0fdd0800000000000000
+      internalID: -2454238202964182945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Luna-Movement-v6-source_14
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 169
+        width: 396
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 982430e0f02428f20800000000000000
+      internalID: 3423371299182035593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Luna-Movement-v6-source_15
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 161
+        width: 386
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58136f77c49dabdb0800000000000000
+      internalID: -4775265532419624571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Luna-Movement-v6-source_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 14
+        width: 992
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6ca0f518df61a900800000000000000
+      internalID: 693958791463480431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Luna-Movement-v6-source_0: -636575603154293688
+      Luna-Movement-v6-source_1: 5099024985949563053
+      Luna-Movement-v6-source_10: 7334651403438477673
+      Luna-Movement-v6-source_11: 7394386547678906994
+      Luna-Movement-v6-source_12: -1614171087877934537
+      Luna-Movement-v6-source_13: -2454238202964182945
+      Luna-Movement-v6-source_14: 3423371299182035593
+      Luna-Movement-v6-source_15: -4775265532419624571
+      Luna-Movement-v6-source_16: 693958791463480431
+      Luna-Movement-v6-source_2: -8871788900840642050
+      Luna-Movement-v6-source_3: 3576602143779399035
+      Luna-Movement-v6-source_4: 1012866527138679768
+      Luna-Movement-v6-source_5: -818441052845080839
+      Luna-Movement-v6-source_6: 5578626239923175949
+      Luna-Movement-v6-source_7: 2971230389975965894
+      Luna-Movement-v6-source_8: 2586322947637282438
+      Luna-Movement-v6-source_9: 6017713934068401610
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

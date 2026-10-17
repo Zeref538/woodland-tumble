@@ -1,5 +1,18 @@
 # Agent Tasks
 
+- [x] Generate and integrate illustrated menu and map-selection artwork.
+- [x] Add Solo versus AI and local multiplayer menu flows.
+- [x] Move fighter HUDs to the top corners.
+- [ ] Validate menus, AI and existing combat; build and publish the project.
+- [x] Add four distinct character catalogs, portraits and elemental specials.
+- [x] Add Arena PVP platforms and retain the Balance ruleset.
+- [x] Add Skyward Ruins as the fourth illustrated map.
+- [x] Match the portrait-left HUD reference with values inside both bars.
+- [x] Map all face and shoulder buttons, including Backstep and Grab & Toss.
+- [x] Add volume, fullscreen, camera shake and effects settings.
+- [x] Update the game title and clone instructions.
+- [x] Package the new artwork in the separate sprites repository.
+
 - [x] Add independent controller controls and safe reconnect handling.
 - [x] Refine HUD artwork, spacing and controller prompts.
 - [x] Validate controllers and combat, build and publish the update.

@@ -229,6 +229,7 @@ MonoBehaviour:
   id: 1
   displayName: Ember
   inputEnabled: 1
+  aiControlled: 0
   art: {fileID: 7008911880329495265}
   animator: {fileID: 7739663773941691728}
   animations: {fileID: 11400000, guid: 11826f0af83b74a1f94d69b1442a2be2, type: 2}

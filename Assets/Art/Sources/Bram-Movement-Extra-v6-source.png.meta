@@ -1,0 +1,429 @@
+fileFormatVersion: 2
+guid: f3340a63fe4011f4c9e5c3a9763eb972
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2767526940016079000
+    second: Bram-Movement-Extra-v6-source_0
+  - first:
+      213: -2323996260152230463
+    second: Bram-Movement-Extra-v6-source_1
+  - first:
+      213: -2854479022915158959
+    second: Bram-Movement-Extra-v6-source_2
+  - first:
+      213: 1518224967125544443
+    second: Bram-Movement-Extra-v6-source_3
+  - first:
+      213: -3900966272635421997
+    second: Bram-Movement-Extra-v6-source_4
+  - first:
+      213: -1896106930418335933
+    second: Bram-Movement-Extra-v6-source_5
+  - first:
+      213: -7284471304899122691
+    second: Bram-Movement-Extra-v6-source_6
+  - first:
+      213: 3435005495575601065
+    second: Bram-Movement-Extra-v6-source_7
+  - first:
+      213: 3002951590085650457
+    second: Bram-Movement-Extra-v6-source_8
+  - first:
+      213: -7822230572231467105
+    second: Bram-Movement-Extra-v6-source_9
+  - first:
+      213: -1180867397601251542
+    second: Bram-Movement-Extra-v6-source_10
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Bram-Movement-Extra-v6-source_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1353
+        width: 596
+        height: 215
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86f840a39e4c799d0800000000000000
+      internalID: -2767526940016079000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Movement-Extra-v6-source_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1131
+        width: 992
+        height: 214
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1cd3a46e6b18fbfd0800000000000000
+      internalID: -2323996260152230463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Movement-Extra-v6-source_2
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 1345
+        width: 408
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15c765cc37ad268d0800000000000000
+      internalID: -2854479022915158959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Movement-Extra-v6-source_3
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 652
+        width: 986
+        height: 262
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfda5ae4091d11510800000000000000
+      internalID: 1518224967125544443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Movement-Extra-v6-source_4
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 876
+        width: 984
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3da39ced7dbfcd9c0800000000000000
+      internalID: -3900966272635421997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Movement-Extra-v6-source_5
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 445
+        width: 967
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34f3244faccafa5e0800000000000000
+      internalID: -1896106930418335933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Movement-Extra-v6-source_6
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 223
+        width: 491
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df926f661fb58ea90800000000000000
+      internalID: -7284471304899122691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Movement-Extra-v6-source_7
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 207
+        width: 506
+        height: 217
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9af5c4d7c479baf20800000000000000
+      internalID: 3435005495575601065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Movement-Extra-v6-source_8
+      rect:
+        serializedVersion: 2
+        x: 574
+        y: 421
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 918efb49f80aca920800000000000000
+      internalID: 3002951590085650457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Movement-Extra-v6-source_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 79
+        width: 5
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9f51fe0dbad17390800000000000000
+      internalID: -7822230572231467105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Movement-Extra-v6-source_10
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 27
+        width: 971
+        height: 197
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2f232fbb57bc9fe0800000000000000
+      internalID: -1180867397601251542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Bram-Movement-Extra-v6-source_0: -2767526940016079000
+      Bram-Movement-Extra-v6-source_1: -2323996260152230463
+      Bram-Movement-Extra-v6-source_10: -1180867397601251542
+      Bram-Movement-Extra-v6-source_2: -2854479022915158959
+      Bram-Movement-Extra-v6-source_3: 1518224967125544443
+      Bram-Movement-Extra-v6-source_4: -3900966272635421997
+      Bram-Movement-Extra-v6-source_5: -1896106930418335933
+      Bram-Movement-Extra-v6-source_6: -7284471304899122691
+      Bram-Movement-Extra-v6-source_7: 3435005495575601065
+      Bram-Movement-Extra-v6-source_8: 3002951590085650457
+      Bram-Movement-Extra-v6-source_9: -7822230572231467105
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

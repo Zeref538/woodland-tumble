@@ -8,7 +8,23 @@ public class Scout : MonoBehaviour
     [Header("Identity and scene references")]
     [Range(0, 1)] public int id;
     public string displayName = "Fern";
+    public int CharacterIndex { get; private set; }
+    public string SkillName => SkillIndex == 0 ? "VINE BIND" : SkillIndex == 1 ? "FLAME RUSH" : SkillIndex == 2 ? "FROST WAVE" : "STONE QUAKE";
+    int SkillIndex => characterSelected ? CharacterIndex : id;
+    bool characterSelected;
+    Color characterElement;
+    float slowedUntil, rootedUntil;
+    public bool Rooted => Time.time < rootedUntil;
+    public bool Slowed => Time.time < slowedUntil;
+    Rigidbody2D groundBody;
     public bool inputEnabled = true;
+    public bool aiControlled;
+    public int AIDecisions { get; private set; }
+    // Counts requested actions; normal cooldowns and validation still decide whether they execute.
+    public int AIActionRequests { get; private set; }
+    float nextAIThink, aiBlockUntil, aiChargeUntil, aiThreatSince = -1;
+    BoxCollider2D aiPlankCollider;
+
     public SpriteRenderer art;
     public Animator animator;
     public ScoutAnimations animations;
@@ -28,6 +44,12 @@ public class Scout : MonoBehaviour
     public float dashCooldown = .85f;
     public float dashSpeed = 10;
     public float Shield { get; private set; } = 100;
+    public float Stamina => Shield;
+    public float StaminaCapacity => shieldCapacity;
+    public float BackstepReady => Mathf.Clamp01(1 - (nextEvade - Time.time) / .9f);
+    public float GrabReady => Mathf.Clamp01(1 - (nextGrab - Time.time) / 1.1f);
+    float nextEnergyRegen, nextEvade, nextGrab;
+    bool backstepRequested, grabRequested;
     public bool Blocking { get; private set; }
     public bool Charging { get; private set; }
     public int AirJumpsRemaining { get; private set; } = 1;
@@ -37,7 +59,7 @@ public class Scout : MonoBehaviour
     float comboUntil, bufferedUntil;
     int comboCount, bufferedAttack;
     public float Facing => face;
-    public Color Element => id == 0 ? new Color(.38f, 1, .68f) : new Color(1, .48f, .18f);
+    public Color Element => characterSelected ? characterElement : id == 0 ? new Color(.38f, 1, .68f) : new Color(1, .48f, .18f);
     float nextParry, shieldStarted, shieldBrokenUntil, nextWard, nextDash, dashUntil, chargeStart, doubleJumpUntil;
     bool blockHeld, dashRequested, chargePressed, chargeReleased, chargeHeld;
     Gamepad previousGamepad;
@@ -58,7 +80,7 @@ public class Scout : MonoBehaviour
     public string AnimationState { get; private set; } = "Idle";
     public float PushReady => Mathf.Clamp01(1 - (nextPush - Time.time) / pushCooldown);
     public float PunchReady => Mathf.Clamp01(1 - (nextPunch - Time.time) / punchCooldown);
-    public string Status => KnockedOut ? "KNOCKED OUT" : Time.time < shieldBrokenUntil ? "GUARD BROKEN" : Time.time < hurtUntil ? "STAGGERED" : Blocking ? "WARD UP" : Charging ? "CHARGING SMASH" : Time.time < dashUntil ? "DASH!" : action == 3 ? "SMASH!" : action == 1 ? "SHOVE!" : action == 2 ? "PUNCH!" : "HOLD YOUR GROUND";
+    public string Status => KnockedOut ? "KNOCKED OUT" : Time.time < shieldBrokenUntil ? "GUARD BROKEN" : Time.time < hurtUntil ? "STAGGERED" : Blocking ? "WARD UP" : Charging ? "CHARGING SMASH" : Time.time < dashUntil ? "DASH!" : action == 3 ? "SMASH!" : action == 1 ? "KICK!" : action == 2 ? "PUNCH!" : action == 4 ? "GRAB & TOSS!" : "HOLD YOUR GROUND";
     float axis, face, hurtUntil, invulnerableUntil, nextPush, nextPunch, nextTrail, nextTouch, nextFootstep, lastVerticalSpeed;
     bool jumpRequested, pushRequested, punchRequested, grounded;
     int action;
@@ -78,6 +100,17 @@ public class Scout : MonoBehaviour
         face = id == 0 ? 1 : -1;
         textureBinding = new MaterialPropertyBlock();
     }
+    public void SetCharacter(int index, string name, ScoutAnimations set, RuntimeAnimatorController controller, Color color)
+    {
+        CharacterIndex = Mathf.Clamp(index, 0, 3);
+        characterSelected = true;
+        characterElement = color;
+        displayName = name;
+        if (set != null) animations = set;
+        if (controller != null) animator.runtimeAnimatorController = controller;
+        if (animations != null && animations.walk != null && animations.walk.Length > 0) art.sprite = animations.walk[0];
+        AnimationState = "";
+    }
     public void ResetScout()
     {
         StopAllCoroutines();
@@ -90,6 +123,8 @@ public class Scout : MonoBehaviour
         face = id == 0 ? 1 : -1;
         Health = maxHealth;
         Shield = shieldCapacity; Blocking = Charging = blockHeld = chargeHeld = false;
+        nextEnergyRegen = nextEvade = nextGrab = 0;
+        slowedUntil = rootedUntil = 0; groundBody = null;
         nextParry = 0; shieldStarted = -10; shieldBrokenUntil = nextWard = nextDash = dashUntil = doubleJumpUntil = 0;
         AirJumpsRemaining = 1; comboCount = bufferedAttack = 0; comboUntil = bufferedUntil = 0;
         KnockedOut = false;
@@ -97,6 +132,9 @@ public class Scout : MonoBehaviour
         axis = 0; action = 0;
         grounded = false; lastVerticalSpeed = 0; nextFootstep = 0;
         ClearRequests();
+        nextAIThink = aiBlockUntil = aiChargeUntil = 0; aiThreatSince = -1;
+        AIDecisions = AIActionRequests = 0;
+        previousGamepad = null;
         art.color = Color.white;
         art.flipX = face < 0;
         art.transform.localScale = smoothScale = baseScale;
@@ -107,9 +145,15 @@ public class Scout : MonoBehaviour
     void Update()
     {
         var game = WoodlandGame.Instance;
-        if (game == null || game.Paused) return;
+        if (game == null || game.Paused) {
+            if (aiControlled) ClearAIInput();
+            return;
+        }
         var keys = Keyboard.current;
-        if (inputEnabled && game.playing && !KnockedOut) {
+        if (aiControlled) {
+            if (inputEnabled && game.playing && !KnockedOut) UpdateAI(game);
+            else ClearAIInput();
+        } else if (inputEnabled && game.playing && !KnockedOut) {
             axis = keys == null ? 0 : id == 0 ? (keys.dKey.isPressed ? 1 : 0) - (keys.aKey.isPressed ? 1 : 0)
                            : (keys.rightArrowKey.isPressed ? 1 : 0) - (keys.leftArrowKey.isPressed ? 1 : 0);
             bool held = false;
@@ -120,10 +164,12 @@ public class Scout : MonoBehaviour
                 punchRequested |= id == 0 ? keys.gKey.wasPressedThisFrame : keys.lKey.wasPressedThisFrame;
                 blockHeld = id == 0 ? keys.sKey.isPressed : keys.downArrowKey.isPressed;
                 dashRequested |= id == 0 ? keys.leftShiftKey.wasPressedThisFrame : keys.rightShiftKey.wasPressedThisFrame;
+                backstepRequested |= id == 0 ? keys.qKey.wasPressedThisFrame : keys.uKey.wasPressedThisFrame;
+                grabRequested |= id == 0 ? keys.eKey.wasPressedThisFrame : keys.oKey.wasPressedThisFrame;
                 held = id == 0 ? keys.hKey.isPressed : keys.jKey.isPressed;
             }
             var pad = game.GetGamepad(id);
-            // Losing a held trigger cancels its charge rather than firing an unintended smash.
+            // Losing a held special cancels its charge rather than firing an unintended smash.
             if (pad != previousGamepad && chargeHeld && !held) { Charging = false; chargeHeld = false; }
             previousGamepad = pad;
             if (WoodlandGame.PadMenuChord(pad) && !held) { Charging = false; chargeHeld = false; }
@@ -131,12 +177,14 @@ public class Scout : MonoBehaviour
                 float padAxis = pad.dpad.x.ReadValue();
                 if (Mathf.Abs(padAxis) < .5f) padAxis = pad.leftStick.x.ReadValue();
                 if (Mathf.Abs(padAxis) > .15f) axis = padAxis;
-                jumpRequested |= pad.buttonSouth.wasPressedThisFrame;
+                jumpRequested |= pad.leftShoulder.wasPressedThisFrame;
                 punchRequested |= pad.buttonWest.wasPressedThisFrame;
                 pushRequested |= pad.buttonEast.wasPressedThisFrame;
-                blockHeld |= pad.leftTrigger.isPressed || pad.leftShoulder.isPressed;
+                blockHeld |= pad.buttonSouth.isPressed;
+                backstepRequested |= pad.leftTrigger.wasPressedThisFrame;
+                grabRequested |= pad.rightTrigger.wasPressedThisFrame;
                 dashRequested |= pad.rightShoulder.wasPressedThisFrame;
-                held |= pad.rightTrigger.isPressed || pad.buttonNorth.isPressed;
+                held |= pad.buttonNorth.isPressed;
             }
             chargePressed |= held && !chargeHeld;
             chargeReleased |= !held && chargeHeld;
@@ -148,10 +196,10 @@ public class Scout : MonoBehaviour
             Shield = Mathf.Max(0, Shield - shieldDrain * Time.deltaTime);
             if (Shield <= 0) BreakGuard();
             else if (Time.time >= nextWard) { nextWard = Time.time + .07f; WoodlandEffects.Instance?.Ward(Body.position, face, Element, Shield / shieldCapacity); }
-        } else if (Time.time >= shieldBrokenUntil) Shield = Mathf.Min(shieldCapacity, Shield + shieldRecovery * Time.deltaTime);
+        } else if (Time.time >= shieldBrokenUntil && Time.time >= nextEnergyRegen) Shield = Mathf.Min(shieldCapacity, Shield + shieldRecovery * Time.deltaTime);
         if (Charging && Time.time >= nextWard) { nextWard = Time.time + .08f; WoodlandEffects.Instance?.Windup(Body.position + Vector2.right * face * .45f, face, Element); }
         if (Charging && Charge >= 1) ReleaseSmash();
-        string state = KnockedOut ? "Knockout" : Time.time < hurtUntil ? "Hurt" : Blocking ? "Block" : Charging ? "Charge" : Time.time < dashUntil ? "Dash" : action != 0 ? actionAnimation : Time.time < doubleJumpUntil ? "DoubleJump" : !grounded && game.playing ? "Jump" : Mathf.Abs(axis) > .1f ? "Walk" : "Idle";
+        string state = KnockedOut ? "Knockout" : Time.time < hurtUntil ? "Hurt" : Blocking ? "Block" : Charging ? "Charge" : Time.time < dashUntil ? (AnimationState == "Backstep" ? "Backstep" : "Dash") : action != 0 ? actionAnimation : Time.time < doubleJumpUntil ? "DoubleJump" : !grounded && game.playing ? "Jump" : Mathf.Abs(axis) > .1f ? "Walk" : "Idle";
         PlayState(state);
         art.flipX = face < 0;
         art.color = Time.time < hurtUntil && !KnockedOut ? new Color(1, .72f, .62f) : Color.white;
@@ -162,7 +210,113 @@ public class Scout : MonoBehaviour
         art.transform.localScale = smoothScale;
         if (Body.simulated && Time.time >= nextTrail && (Body.linearVelocity.sqrMagnitude > 10 || action > 0 || Time.time < hurtUntil)) {
             nextTrail = Time.time + .05f;
-            WoodlandEffects.Instance?.Ghost(art, id == 0 ? new Color(.5f, 1, .62f) : new Color(1, .62f, .32f));
+            WoodlandEffects.Instance?.Ghost(art, Color.Lerp(Element, Color.white, .15f));
+        }
+    }
+    void ClearAIInput()
+    {
+        axis = 0;
+        blockHeld = chargeHeld = Blocking = Charging = false;
+        aiBlockUntil = aiChargeUntil = 0;
+        aiThreatSince = -1;
+        ClearRequests();
+    }
+    void UpdateAI(WoodlandGame game)
+    {
+        // The CPU writes exactly the same requests as a keyboard. It never moves a body directly.
+        if (game.plank == null || game.players == null || game.players.Length < 2) { ClearAIInput(); return; }
+        Scout rival = game.players[1 - id];
+        if (rival == null || rival.KnockedOut || !Body.simulated || Time.time < hurtUntil) { ClearAIInput(); return; }
+        blockHeld = Time.time < aiBlockUntil && Shield > 25;
+        if (chargeHeld && Time.time >= aiChargeUntil) {
+            chargeHeld = false;
+            chargeReleased |= Charging;
+        }
+        Vector2 delta = rival.Body.position - Body.position;
+        bool threatening = rival.Charging || rival.action != 0;
+        if (threatening && Mathf.Abs(delta.x) < 2.3f && Mathf.Abs(delta.y) < 1.3f) {
+            if (aiThreatSince < 0) aiThreatSince = Time.time;
+        } else aiThreatSince = -1;
+        if (Time.time < nextAIThink) return;
+        nextAIThink = Time.time + Random.Range(.18f, .32f);
+        AIDecisions++;
+        if (aiPlankCollider == null || aiPlankCollider.attachedRigidbody != game.plank)
+            aiPlankCollider = game.plank.GetComponent<BoxCollider2D>();
+        if (aiPlankCollider == null) { ClearAIInput(); return; }
+        Transform surface = game.plank.transform;
+        Vector2 local = surface.InverseTransformPoint(Body.position);
+        Vector2 rivalLocal = surface.InverseTransformPoint(rival.Body.position);
+        float center = aiPlankCollider.offset.x;
+        float safeHalf = Mathf.Max(.5f, aiPlankCollider.size.x * .5f - .95f);
+        float top = aiPlankCollider.offset.y + aiPlankCollider.size.y * .5f;
+        Vector2 relativeVelocity = Body.linearVelocity - game.plank.GetPointVelocity(Body.position);
+        float alongSpeed = Vector2.Dot(relativeVelocity, surface.right) / Mathf.Max(.01f, Mathf.Abs(surface.lossyScale.x));
+        bool nearEdge = Mathf.Abs(local.x - center) > safeHalf;
+        bool driftingOff = Mathf.Abs(local.x - center + alongSpeed * .28f) > safeHalf;
+        bool recovering = !grounded && (local.y < top + .1f || Mathf.Abs(local.x - center) > safeHalf + .4f);
+        float target = Mathf.Clamp(rivalLocal.x - Mathf.Sign(rivalLocal.x - local.x) * 1.1f, center - safeHalf, center + safeHalf);
+        if (nearEdge || driftingOff || recovering) target = center;
+        float distance = target - local.x;
+        axis = Mathf.Abs(distance) > .22f ? Mathf.Sign(distance) : 0;
+        if (!grounded && recovering) {
+            // Air controls act on world X, while ground controls follow the rotated plank tangent.
+            float centerX = surface.TransformPoint(new Vector3(center, top, 0)).x;
+            axis = Mathf.Abs(centerX - Body.position.x) > .2f ? Mathf.Sign(centerX - Body.position.x) : 0;
+        }
+        if (action == 0 && !Charging && Time.time >= dashUntil) {
+            if (axis != 0) face = Mathf.Sign(axis);
+            else if (Mathf.Abs(delta.x) > .1f) face = Mathf.Sign(delta.x);
+        }
+        if (recovering || nearEdge || driftingOff) {
+            aiBlockUntil = 0; blockHeld = false;
+            if (Charging) { Charging = false; chargeHeld = false; aiChargeUntil = 0; }
+            if ((grounded && nearEdge) || (!grounded && Body.linearVelocity.y < .6f && AirJumpsRemaining > 0)) {
+                jumpRequested = true; AIActionRequests++;
+            }
+            // A recovery dash points inward and only fires while it can still reach the surface.
+            if (!grounded && recovering && axis != 0 && Mathf.Abs(local.x - center) > safeHalf && local.y > top - 1.5f && Time.time >= nextDash) {
+                face = Mathf.Sign(axis); dashRequested = true; AIActionRequests++;
+            }
+            return;
+        }
+        if (Charging || chargeHeld || blockHeld || Time.time < shieldBrokenUntil) return;
+        if (Shield < 14) {
+            float retreat = Mathf.Clamp(local.x - Mathf.Sign(delta.x) * 1.4f, center - safeHalf, center + safeHalf);
+            axis = Mathf.Abs(retreat - local.x) > .2f ? Mathf.Sign(retreat - local.x) : 0;
+            return;
+        }
+        // Reaction delay is longer than the parry window: no instant input-reading parries.
+        if (aiThreatSince >= 0 && Time.time - aiThreatSince >= .2f && grounded && Shield > 35 && Random.value < .65f) {
+            axis = 0; face = Mathf.Sign(delta.x);
+            float escape = local.x - face * 1.2f;
+            if (rival.Charging && Shield >= 12 && Time.time >= nextEvade && Mathf.Abs(escape - center) < safeHalf && Random.value < .4f) {
+                backstepRequested = true; AIActionRequests++; return;
+            }
+            blockHeld = true; aiBlockUntil = Time.time + Random.Range(.3f, .5f); AIActionRequests++;
+            return;
+        }
+        if (!game.BalanceMode && delta.y > .8f && (grounded || (AirJumpsRemaining > 0 && Body.linearVelocity.y < .8f))) {
+            jumpRequested = true; AIActionRequests++; return;
+        }
+        bool inRange = Mathf.Abs(delta.x) < 1.35f && Mathf.Abs(delta.y) < 1.05f;
+        if (inRange) {
+            axis = 0;
+            if (action == 0 && Mathf.Abs(delta.x) > .1f) face = Mathf.Sign(delta.x);
+            if (rival.Blocking && Mathf.Abs(delta.x) < 1.1f && action == 0 && Time.time >= nextGrab && Shield >= 18) {
+                grabRequested = true; AIActionRequests++; return;
+            }
+            if (action == 0 && grounded && Time.time >= nextPunch && ComboCount == 0 && Random.value < .12f) {
+                chargePressed = chargeHeld = true;
+                aiChargeUntil = Time.time + Random.Range(.42f, .72f);
+            } else if (ComboCount > 0 || Random.value < .55f) punchRequested = true;
+            else pushRequested = true;
+            AIActionRequests++;
+        } else if (grounded && Mathf.Abs(delta.x) > 2 && Mathf.Abs(delta.x) < 4 && Random.value < .09f) {
+            jumpRequested = true; AIActionRequests++;
+        } else if (grounded && Mathf.Abs(delta.x) > 3 && !driftingOff && Random.value < .07f && Time.time >= nextDash) {
+            // Leave a full dash length before an edge instead of dashing off the plank.
+            float projected = local.x + axis * dashSpeed * .16f;
+            if (Mathf.Abs(projected - center) < safeHalf) { dashRequested = true; AIActionRequests++; }
         }
     }
     void LateUpdate()
@@ -186,9 +340,9 @@ public class Scout : MonoBehaviour
         int count = Physics2D.Raycast(Body.position + Vector2.down * .49f, Vector2.down, new ContactFilter2D { useTriggers = false }, groundHits, .25f);
         for (int i = 0; i < count; i++) {
             var hit = groundHits[i];
-            // Only the top of the plank is ground. Its vertical edges and the rival cannot grant traction.
-            if (Body.linearVelocity.y <= .5f && game != null && hit.rigidbody == game.plank && hit.normal.y > .65f && Vector2.Dot(hit.normal, game.plank.transform.up) > .9f) {
-                grounded = true; groundNormal = hit.normal; break;
+            // Only arena surface tops grant traction. Their vertical edges and the rival never do.
+            if (Body.linearVelocity.y <= .5f && game != null && game.IsGroundBody(hit.rigidbody) && hit.normal.y > .65f && Vector2.Dot(hit.normal, hit.rigidbody.transform.up) > .9f) {
+                grounded = true; groundNormal = hit.normal; groundBody = hit.rigidbody; break;
             }
         }
         if (grounded && Body.linearVelocity.y <= .5f) AirJumpsRemaining = 1;
@@ -199,10 +353,11 @@ public class Scout : MonoBehaviour
         if (Time.time >= hurtUntil) {
             if (axis != 0 && action == 0) face = Mathf.Sign(axis);
             float movement = Blocking ? axis * .2f : Charging ? 0 : axis;
+            movement *= Time.time < rootedUntil ? 0 : Time.time < slowedUntil ? .45f : 1;
             if (Time.time < dashUntil) { ClearRequests(); return; }
             if (grounded) {
                 Vector2 tangent = new Vector2(groundNormal.y, -groundNormal.x);
-                Vector2 platformVelocity = game.plank.GetPointVelocity(Body.position);
+                Vector2 platformVelocity = (groundBody != null ? groundBody : game.plank).GetPointVelocity(Body.position);
                 float speed = Vector2.Dot(Body.linearVelocity - platformVelocity, tangent);
                 float control = Mathf.Clamp((movement * moveSpeed - speed) * 10, -acceleration, acceleration);
                 float slopeGravity = Vector2.Dot(Physics2D.gravity * Body.gravityScale, tangent);
@@ -216,7 +371,9 @@ public class Scout : MonoBehaviour
                 WoodlandEffects.Instance?.Footstep(Body.position + Vector2.down * .625f, axis);
             }
             if (jumpRequested) TryJump();
+            if (backstepRequested) TryBackstep();
             if (dashRequested) TryDash();
+            if (grabRequested) TryGrab();
             if (chargePressed) BeginSmash();
             if (chargeReleased) ReleaseSmash();
             if (punchRequested) TryAttack(true);
@@ -224,12 +381,20 @@ public class Scout : MonoBehaviour
         }
         ClearRequests();
     }
-    void ClearRequests() { jumpRequested = pushRequested = punchRequested = dashRequested = chargePressed = chargeReleased = false; }
-    bool CanAct => WoodlandGame.Instance != null && WoodlandGame.Instance.playing && !KnockedOut && Time.time >= hurtUntil && Time.time >= shieldBrokenUntil;
+    void ClearRequests() { jumpRequested = pushRequested = punchRequested = dashRequested = backstepRequested = grabRequested = chargePressed = chargeReleased = false; }
+    bool CanAct => WoodlandGame.Instance != null && WoodlandGame.Instance.playing && !WoodlandGame.Instance.Paused && !KnockedOut && Time.time >= hurtUntil && Time.time >= shieldBrokenUntil;
+    bool SpendStamina(float cost)
+    {
+        if (Shield < cost) return false;
+        Shield = Mathf.Clamp(Shield - cost, 0, shieldCapacity);
+        nextEnergyRegen = Time.time + .65f;
+        return true;
+    }
     public bool TryJump()
     {
-        if (!CanAct || Blocking || Charging || Time.time < dashUntil || action != 0 || (!grounded && AirJumpsRemaining == 0)) return false;
+        if (!CanAct || Time.time < rootedUntil || Blocking || Charging || Time.time < dashUntil || action != 0 || (!grounded && AirJumpsRemaining == 0)) return false;
         bool aerial = !grounded;
+        if (!SpendStamina(aerial ? 6 : 4)) return false;
         if (aerial) AirJumpsRemaining--;
         else { AirJumpsRemaining = 1; grounded = false; }
         Body.linearVelocity = new Vector2(Body.linearVelocity.x, jumpSpeed * (aerial ? .92f : 1));
@@ -239,11 +404,52 @@ public class Scout : MonoBehaviour
     }
     public bool TryDash()
     {
-        if (!CanAct || Blocking || Charging || action != 0 || Time.time < nextDash) return false;
+        if (!CanAct || Time.time < rootedUntil || Blocking || Charging || action != 0 || Time.time < dashUntil || Time.time < nextDash) return false;
+        if (!SpendStamina(10)) return false;
         nextDash = Time.time + dashCooldown; dashUntil = Time.time + .16f;
         Body.linearVelocity = new Vector2(face * dashSpeed, Mathf.Max(-2, Body.linearVelocity.y));
         PlayState("Dash"); WoodlandEffects.Instance?.Dash(Body.position, face, Element);
         return true;
+    }
+    public bool TryBackstep()
+    {
+        if (!CanAct || Time.time < rootedUntil || Blocking || Charging || action != 0 || Time.time < dashUntil || Time.time < nextEvade) return false;
+        if (!SpendStamina(12)) return false;
+        nextEvade = Time.time + .9f; dashUntil = Time.time + .14f;
+        invulnerableUntil = Mathf.Max(invulnerableUntil, Time.time + .16f);
+        Body.linearVelocity = new Vector2(-face * 7, Mathf.Max(-2, Body.linearVelocity.y));
+        PlayState("Backstep");
+        WoodlandEffects.Instance?.Dash(Body.position, -face, Color.Lerp(Element, Color.white, .5f));
+        return true;
+    }
+    public bool TryGrab()
+    {
+        if (!CanAct || Blocking || Charging || action != 0 || Time.time < dashUntil || Time.time < nextGrab) return false;
+        if (!SpendStamina(18)) return false;
+        nextGrab = Time.time + 1.1f;
+        StartCoroutine(Grab());
+        return true;
+    }
+    IEnumerator Grab()
+    {
+        action = 4; actionAnimation = "Grab"; PlayState(actionAnimation);
+        float direction = face;
+        WoodlandEffects.Instance?.Windup(Body.position + Vector2.right * direction * .5f, direction, Element);
+        yield return new WaitForSeconds(.22f);
+        var game = WoodlandGame.Instance;
+        Scout other = game.players[1 - id];
+        Vector2 delta = other.Body.position - Body.position;
+        if (game.playing && !KnockedOut && Time.time >= hurtUntil && delta.x * direction > 0 && Mathf.Abs(delta.x) < 1.15f && Mathf.Abs(delta.y) < 1.1f) {
+            bool guarded = other.Blocking;
+            other.Blocking = false;
+            if (other.ReceiveHit(this, direction, false, .5f)) {
+                other.Body.AddForce(new Vector2(direction * 3, 2), ForceMode2D.Impulse);
+                WoodlandEffects.Instance?.ElementHit(other.Body.position, direction, Element, 1, id);
+                WoodlandEffects.Instance?.Impact(other.Body.position, direction, false, false);
+            } else other.Blocking = guarded;
+        }
+        yield return new WaitForSeconds(.32f);
+        action = 0;
     }
     public bool SetBlock(bool held)
     {
@@ -259,7 +465,7 @@ public class Scout : MonoBehaviour
     }
     public bool BeginSmash()
     {
-        if (!CanAct || Blocking || Charging || action != 0 || Time.time < dashUntil || Time.time < nextPunch) return false;
+        if (!CanAct || Blocking || Charging || action != 0 || Time.time < dashUntil || Time.time < nextPunch || Shield < 14 || (SkillIndex == 3 && !grounded)) return false;
         Charging = true; chargeStart = Time.time; PlayState("Charge");
         WoodlandEffects.Instance?.Windup(Body.position, face, Element);
         return true;
@@ -268,32 +474,82 @@ public class Scout : MonoBehaviour
     {
         if (!Charging) return false;
         float power = Charge; Charging = false;
-        if (!CanAct) return false;
+        if (!CanAct || (SkillIndex == 3 && !grounded) || !SpendStamina(14)) return false;
         nextPunch = Time.time + 1.05f;
         StartCoroutine(Smash(power)); return true;
+    }
+    bool SpecialHit(Scout other, float direction, float power, float slow = 0, float root = 0, float lift = 0)
+    {
+        var game = WoodlandGame.Instance;
+        if (game == null || !game.playing || KnockedOut || Time.time < hurtUntil || !other.ReceiveHit(this, direction, true, power)) return false;
+        other.slowedUntil = Mathf.Max(other.slowedUntil, Time.time + slow);
+        other.rootedUntil = Mathf.Max(other.rootedUntil, Time.time + root);
+        if (lift > 0) other.Body.AddForce(Vector2.up * lift, ForceMode2D.Impulse);
+        WoodlandEffects.Instance?.HeavyImpact(other.Body.position, direction, Element, Mathf.Clamp01(power - 1));
+        return true;
     }
     IEnumerator Smash(float power)
     {
         action = 3; actionAnimation = "Smash"; PlayState(actionAnimation);
         float direction = face;
+        int skill = SkillIndex;
         yield return new WaitForSeconds(.16f);
-        WoodlandEffects.Instance?.Smash(Body.position, direction, Element, power);
         var game = WoodlandGame.Instance;
-        var other = game.players[1-id]; Vector2 delta = other.Body.position - Body.position;
-        if (game.playing && !KnockedOut && delta.x * direction > 0 && Mathf.Abs(delta.x) < 1.9f && Mathf.Abs(delta.y) < 1.3f)
-            if(other.ReceiveHit(this, direction, true, 1.1f + power * .9f)) WoodlandEffects.Instance?.HeavyImpact(other.Body.position,direction,Element,power);
+        var other = game.players[1-id];
+        WoodlandEffects.Instance?.Smash(Body.position, direction, Element, power);
+        if (skill == 1) {
+            // Ember commits to a short lunge; two separated contacts respect normal invulnerability.
+            Body.AddForce(Vector2.right * direction * 3.5f, ForceMode2D.Impulse);
+            for (int tick = 0; tick < 2; tick++) {
+                Vector2 delta = other.Body.position - Body.position;
+                WoodlandEffects.Instance?.Burst(Body.position + Vector2.right * direction * .5f, Vector2.right * direction, 10, Element, 2);
+                if (delta.x * direction > 0 && Mathf.Abs(delta.x) < 2 && Mathf.Abs(delta.y) < 1.3f)
+                    SpecialHit(other, direction, .65f + power * .35f);
+                if (tick == 0) yield return new WaitForSeconds(.27f);
+            }
+        } else if (skill == 2) {
+            // Luna's visible wave travels from its cast point and can hit the rival once along its path.
+            Vector2 origin = Body.position;
+            bool connected = false;
+            for (int pulse = 0; pulse < 8; pulse++) {
+                Vector2 point = origin + Vector2.right * direction * (.55f + pulse * .55f);
+                WoodlandEffects.Instance?.Burst(point, Vector2.right * direction, 6, Element, 1.2f);
+                float forward = (other.Body.position.x - origin.x) * direction;
+                if (!connected && forward > 0 && forward <= 4.5f && Mathf.Abs(other.Body.position.x - point.x) < .65f && Mathf.Abs(other.Body.position.y - point.y) < 1.3f) {
+                    connected = true;
+                    SpecialHit(other, direction, .85f + power * .45f, .8f);
+                }
+                yield return new WaitForSeconds(.055f);
+            }
+        } else if (skill == 3) {
+            // Bram's ground quake reaches either side and launches without turning the opponent first.
+            if (grounded) {
+                WoodlandEffects.Instance?.Burst(Body.position + Vector2.down * .5f, Vector2.up, 28, Element, 3);
+                Vector2 delta = other.Body.position - Body.position;
+                if (delta.sqrMagnitude < 2.6f * 2.6f)
+                    SpecialHit(other, Mathf.Abs(delta.x) > .01f ? Mathf.Sign(delta.x) : direction, 1 + power * .65f, 0, 0, 4);
+            }
+        } else {
+            Vector2 delta = other.Body.position - Body.position;
+            if (delta.x * direction > 0 && Mathf.Abs(delta.x) < 1.9f && Mathf.Abs(delta.y) < 1.3f) {
+                // Fern keeps the charged smash damage and binds only after a successful contact.
+                if (SpecialHit(other, direction, 1.1f + power * .9f, .7f, .4f))
+                    WoodlandEffects.Instance?.Burst(other.Body.position, Vector2.up, 12, Element, 1.4f);
+            }
+        }
         yield return new WaitForSeconds(.4f); action = 0;
     }
     public bool TryAttack(bool punch)
     {
         var game = WoodlandGame.Instance;
-        if (game == null || !game.playing || KnockedOut || Blocking || Charging || Time.time < dashUntil || Time.time < hurtUntil) return false;
+        if (!CanAct || Blocking || Charging || Time.time < dashUntil) return false;
         if (action != 0) {
             if (action == 1 || action == 2) { bufferedAttack = punch ? 2 : 1; bufferedUntil = Time.time + .55f; }
             return false;
         }
         bool chain = ComboCount > 0 && comboCount < 3;
         if (!chain && Time.time < (punch ? nextPunch : nextPush)) return false;
+        if (!SpendStamina(punch ? 8 : 6)) return false;
         if (!chain) comboCount = 0;
         if (punch) nextPunch = Time.time + punchCooldown;
         else nextPush = Time.time + pushCooldown;
@@ -304,9 +560,9 @@ public class Scout : MonoBehaviour
     {
         action = punch ? 2 : 1;
         float direction = face;
-        actionAnimation = comboCount == 1 ? "Combo2" : comboCount == 2 ? "Combo3" : punch ? "Punch" : "Push";
+        actionAnimation = comboCount == 1 ? "Combo2" : comboCount == 2 ? "Combo3" : punch ? "Punch" : "Kick";
         PlayState(actionAnimation);
-        WoodlandEffects.Instance?.Windup(Body.position + new Vector2(direction * .55f, 0), direction, id == 0 ? new Color(.4f, .85f, .4f) : new Color(1, .55f, .2f));
+        WoodlandEffects.Instance?.Windup(Body.position + new Vector2(direction * .55f, 0), direction, Element);
         yield return new WaitForSeconds(.18f);
         WoodlandEffects.Instance?.Swipe(Body.position, direction, punch,id);
         var game = WoodlandGame.Instance;
@@ -367,7 +623,7 @@ public class Scout : MonoBehaviour
         axis = 0;
         StopAllCoroutines();
         PlayState("Knockout");
-        WoodlandEffects.Instance?.Knockout(Body.position, id == 0 ? new Color(.6f, .85f, .35f) : new Color(1, .6f, .25f));
+        WoodlandEffects.Instance?.Knockout(Body.position, Element);
         WoodlandGame.Instance.RegisterKnockout(this);
     }
     void OnCollisionEnter2D(Collision2D collision)
