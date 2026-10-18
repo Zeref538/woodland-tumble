@@ -1,0 +1,4171 @@
+{
+  "canvas": [
+    384,
+    256
+  ],
+  "feetPivotUnityPixels": [
+    192,
+    24
+  ],
+  "method": "Transparent row gutters and connected silhouette extraction. One source-wide scale calibrated from neutral full-body first Dash pose height to200px. Effects remain attached, no per-frame stretch.",
+  "frames": [
+    {
+      "character": "Fern",
+      "action": "Dash",
+      "frame": 1,
+      "output": "Assets/Art/Characters/Fern/Dash/01.png",
+      "bodyReference": 176,
+      "uniformScale": 1.1363636363636365,
+      "sourceRow": 0,
+      "sourceRect": [
+        23,
+        14,
+        168,
+        190
+      ],
+      "bbox": [
+        107,
+        32,
+        272,
+        232
+      ],
+      "sha256": "4236b460a67dcdb2696828a0fa4f4dd6c3728c2f2f5d6b08ef38adc27ba5c6a3",
+      "sourceBand": [
+        14,
+        190
+      ]
+    },
+    {
+      "character": "Fern",
+      "action": "Dash",
+      "frame": 2,
+      "output": "Assets/Art/Characters/Fern/Dash/02.png",
+      "bodyReference": 176,
+      "uniformScale": 1.1363636363636365,
+      "sourceRow": 0,
+      "sourceRect": [
+        210,
+        17,
+        359,
+        190
+      ],
+      "bbox": [
+        104,
+        35,
+        273,
+        232
+      ],
+      "sha256": "195bb93002c3d12d713ab7848bd0d92b236832d72dce94ea1b11611169983d10",
+      "sourceBand": [
+        14,
+        190
+      ]
+    },
+    {
+      "character": "Fern",
+      "action": "Dash",
+      "frame": 3,
+      "output": "Assets/Art/Characters/Fern/Dash/03.png",
+      "bodyReference": 176,
+      "uniformScale": 1.1363636363636365,
+      "sourceRow": 0,
+      "sourceRect": [
+        369,
+        19,
+        575,
+        189
+      ],
+      "bbox": [
+        110,
+        39,
+        344,
+        232
+      ],
+      "sha256": "74d58d3cc45ac9ab19538f132346f2b284ed1a02a9e28101112226a073795cbe",
+      "sourceBand": [
+        14,
+        190
+      ]
+    },
+    {
+      "character": "Fern",
+      "action": "Dash",
+      "frame": 4,
+      "output": "Assets/Art/Characters/Fern/Dash/04.png",
+      "bodyReference": 176,
+      "uniformScale": 1.1363636363636365,
+      "sourceRow": 0,
+      "sourceRect": [
+        570,
+        21,
+        784,
+        189
+      ],
+      "bbox": [
+        119,
+        41,
+        362,
+        232
+      ],
+      "sha256": "293bba490acbb49749d1e69101e35e521102e8f97a77b32fe064db471fbfdf92",
+      "sourceBand": [
+        14,
+        190
+      ]
+    },
+    {
+      "character": "Fern",
+      "action": "Dash",
+      "frame": 5,
+      "output": "Assets/Art/Characters/Fern/Dash/05.png",
+      "bodyReference": 176,
+      "uniformScale": 1.1363636363636365,
+      "sourceRow": 0,
+      "sourceRect": [
+        769,
+        28,
+        1029,
+        189
+      ],
+      "bbox": [
+        85,
+        49,
+        380,
+        232
+      ],
+      "sha256": "e130bc504d6f1c1e3bd58553af421e05514ea7214a30f63acbd85a48cb13e205",
+      "sourceBand": [
+        14,
+        190
+      ]
+    },
+    {
+      "character": "Fern",
+      "action": "Dash",
+      "frame": 6,
+      "output": "Assets/Art/Characters/Fern/Dash/06.png",
+      "bodyReference": 176,
+      "uniformScale": 1.1363636363636365,
+      "sourceRow": 0,
+      "sourceRect": [
+        1023,
+        37,
+        1283,
+        189
+      ],
+      "bbox": [
+        85,
+        59,
+        380,
+        232
+      ],
+      "sha256": "c458e4181296302f479b5b01faa1ad932e341ad1cdcaff3f60ad895b4f3fed5f",
+      "sourceBand": [
+        14,
+        190
+      ]
+    },
+    {
+      "character": "Fern",
+      "action": "Dash",
+      "frame": 7,
+      "output": "Assets/Art/Characters/Fern/Dash/07.png",
+      "bodyReference": 176,
+      "uniformScale": 1.1363636363636365,
+      "sourceRow": 0,
+      "sourceRect": [
+        1265,
+        29,
+        1494,
+        190
+      ],
+      "bbox": [
+        111,
+        49,
+        371,
+        232
+      ],
+      "sha256": "4576d4aa118bcffc33d6901880136e41e093156fc8110c1f5d5397e66a8f6804",
+      "sourceBand": [
+        14,
+        190
+      ]
+    },
+    {
+      "character": "Fern",
+      "action": "Dash",
+      "frame": 8,
+      "output": "Assets/Art/Characters/Fern/Dash/08.png",
+      "bodyReference": 176,
+      "uniformScale": 1.1363636363636365,
+      "sourceRow": 0,
+      "sourceRect": [
+        1478,
+        21,
+        1663,
+        190
+      ],
+      "bbox": [
+        132,
+        40,
+        342,
+        232
+      ],
+      "sha256": "8534c2379fa71bf4fcc041881544529dea7317389c6ec53f1e397acf28069d1f",
+      "sourceBand": [
+        14,
+        190
+      ]
+    },
+    {
+      "character": "Fern",
+      "action": "Dash",
+      "frame": 9,
+      "output": "Assets/Art/Characters/Fern/Dash/09.png",
+      "bodyReference": 176,
+      "uniformScale": 1.1363636363636365,
+      "sourceRow": 0,
+      "sourceRect": [
+        1682,
+        19,
+        1816,
+        190
+      ],
+      "bbox": [
+        147,
+        38,
+        299,
+        232
+      ],
+      "sha256": "8b507b5ee5db38a67decaa39fcaf94e7c7cbb87adb6cdc2124e057653dea514c",
+      "sourceBand": [
+        14,
+        190
+      ]
+    },
+    {
+      "character": "Fern",
+      "action": "Dash",
+      "frame": 10,
+      "output": "Assets/Art/Characters/Fern/Dash/10.png",
+      "bodyReference": 176,
+      "uniformScale": 1.1363636363636365,
+      "sourceRow": 0,
+      "sourceRect": [
+        1837,
+        14,
+        1972,
+        190
+      ],
+      "bbox": [
+        117,
+        32,
+        270,
+        232
+      ],
+      "sha256": "fa17f007007abde2821fb0fde1ce0de897050048f39a5ce7458c4b5b007614c2",
+      "sourceBand": [
+        14,
+        190
+      ]
+    },
+    {
+      "character": "Fern",
+      "action": "Backstep",
+      "frame": 1,
+      "output": "Assets/Art/Characters/Fern/Backstep/01.png",
+      "bodyReference": 176,
+      "uniformScale": 1.1363636363636365,
+      "sourceRow": 1,
+      "sourceRect": [
+        22,
+        213,
+        166,
+        390
+      ],
+      "bbox": [
+        106,
+        31,
+        270,
+        232
+      ],
+      "sha256": "feab968fef9b5b94c8a5e41e0c5c26c5c49a3da061eb43e9b233fd288669b40e",
+      "sourceBand": [
+        213,
+        391
+      ]
+    },
+    {
+      "character": "Fern",
+      "action": "Backstep",
+      "frame": 2,
+      "output": "Assets/Art/Characters/Fern/Backstep/02.png",
+      "bodyReference": 176,
+      "uniformScale": 1.1363636363636365,
+      "sourceRow": 1,
+      "sourceRect": [
+        194,
+        220,
+        341,
+        390
+      ],
+      "bbox": [
+        85,
+        39,
+        252,
+        232
+      ],
+      "sha256": "a8d09ce366585fc91e39294faaec9822e7d5325e936e2cd1588d79bcae2eb803",
+      "sourceBand": [
+        213,
+        391
+      ]
+    },
+    {
+      "character": "Fern",
+      "action": "Backstep",
+      "frame": 3,
+      "output": "Assets/Art/Characters/Fern/Backstep/03.png",
+      "bodyReference": 176,
+      "uniformScale": 1.1363636363636365,
+      "sourceRow": 1,
+      "sourceRect": [
+        388,
+        221,
+        565,
+        390
+      ],
+      "bbox": [
+        54,
+        40,
+        255,
+        232
+      ],
+      "sha256": "e8dd0853ed3d5c12f0286f0118c0afd08d70511c845486bc3a50e93d9c8d1986",
+      "sourceBand": [
+        213,
+        391
+      ]
+    },
+    {
+      "character": "Fern",
+      "action": "Backstep",
+      "frame": 4,
+      "output": "Assets/Art/Characters/Fern/Backstep/04.png",
+      "bodyReference": 176,
+      "uniformScale": 1.1363636363636365,
+      "sourceRow": 1,
+      "sourceRect": [
+        562,
+        219,
+        765,
+        390
+      ],
+      "bbox": [
+        82,
+        38,
+        313,
+        232
+      ],
+      "sha256": "2f9bcb89e1b0f36448f8e177f5d535d8f31b482aa9bfe1e7d4f5836daf0d8a6b",
+      "sourceBand": [
+        213,
+        391
+      ]
+    },
+    {
+      "character": "Fern",
+      "action": "Backstep",
+      "frame": 5,
+      "output": "Assets/Art/Characters/Fern/Backstep/05.png",
+      "bodyReference": 176,
+      "uniformScale": 1.1363636363636365,
+      "sourceRow": 1,
+      "sourceRect": [
+        760,
+        226,
+        987,
+        390
+      ],
+      "bbox": [
+        59,
+        46,
+        317,
+        232
+      ],
+      "sha256": "9bd19906ad92b0c61935569fbc0026c08abecc9504169a65684f58c684ffacd3",
+      "sourceBand": [
+        213,
+        391
+      ]
+    },
+    {
+      "character": "Fern",
+      "action": "Backstep",
+      "frame": 6,
+      "output": "Assets/Art/Characters/Fern/Backstep/06.png",
+      "bodyReference": 176,
+      "uniformScale": 1.1363636363636365,
+      "sourceRow": 1,
+      "sourceRect": [
+        978,
+        233,
+        1207,
+        390
+      ],
+      "bbox": [
+        74,
+        54,
+        334,
+        232
+      ],
+      "sha256": "9b7337c03b72cd7fdec80dd5fcb8e91610701653470cef4fefb97dfa0bad1d08",
+      "sourceBand": [
+        213,
+        391
+      ]
+    },
+    {
+      "character": "Fern",
+      "action": "Backstep",
+      "frame": 7,
+      "output": "Assets/Art/Characters/Fern/Backstep/07.png",
+      "bodyReference": 176,
+      "uniformScale": 1.1363636363636365,
+      "sourceRow": 1,
+      "sourceRect": [
+        1234,
+        234,
+        1433,
+        390
+      ],
+      "bbox": [
+        98,
+        55,
+        324,
+        232
+      ],
+      "sha256": "3106b4abf20fd772f7960d0695ec4b62c6bd654950ee5e2a03c7d7444654930c",
+      "sourceBand": [
+        213,
+        391
+      ]
+    },
+    {
+      "character": "Fern",
+      "action": "Backstep",
+      "frame": 8,
+      "output": "Assets/Art/Characters/Fern/Backstep/08.png",
+      "bodyReference": 176,
+      "uniformScale": 1.1363636363636365,
+      "sourceRow": 1,
+      "sourceRect": [
+        1444,
+        228,
+        1600,
+        391
+      ],
+      "bbox": [
+        124,
+        47,
+        301,
+        232
+      ],
+      "sha256": "a5a2f271b2121353eeddb4db8b2a56ec87353469fb2a5ad61986d49d89188245",
+      "sourceBand": [
+        213,
+        391
+      ]
+    },
+    {
+      "character": "Fern",
+      "action": "Backstep",
+      "frame": 9,
+      "output": "Assets/Art/Characters/Fern/Backstep/09.png",
+      "bodyReference": 176,
+      "uniformScale": 1.1363636363636365,
+      "sourceRow": 1,
+      "sourceRect": [
+        1591,
+        223,
+        1799,
+        390
+      ],
+      "bbox": [
+        98,
+        42,
+        334,
+        232
+      ],
+      "sha256": "5a30e3637480ed3b7a095290c9d73a030c83e568474c7b0fd8add62ba7fb7741",
+      "sourceBand": [
+        213,
+        391
+      ]
+    },
+    {
+      "character": "Fern",
+      "action": "Backstep",
+      "frame": 10,
+      "output": "Assets/Art/Characters/Fern/Backstep/10.png",
+      "bodyReference": 176,
+      "uniformScale": 1.1363636363636365,
+      "sourceRow": 1,
+      "sourceRect": [
+        1832,
+        217,
+        1971,
+        391
+      ],
+      "bbox": [
+        110,
+        34,
+        268,
+        232
+      ],
+      "sha256": "58ed3051fbfaeca750353783d03044b0be20a3895039250db3ab825f0a6f9f9d",
+      "sourceBand": [
+        213,
+        391
+      ]
+    },
+    {
+      "character": "Fern",
+      "action": "Victory",
+      "frame": 1,
+      "output": "Assets/Art/Characters/Fern/Victory/01.png",
+      "bodyReference": 176,
+      "uniformScale": 1.1363636363636365,
+      "sourceRow": 2,
+      "sourceRect": [
+        22,
+        419,
+        167,
+        598
+      ],
+      "bbox": [
+        104,
+        29,
+        269,
+        232
+      ],
+      "sha256": "b0e9b7325e82b6996d04e1bd4c5e7c7014c8e175d4147dfffab665b361e74cee",
+      "sourceBand": [
+        405,
+        600
+      ]
+    },
+    {
+      "character": "Fern",
+      "action": "Victory",
+      "frame": 2,
+      "output": "Assets/Art/Characters/Fern/Victory/02.png",
+      "bodyReference": 176,
+      "uniformScale": 1.1363636363636365,
+      "sourceRow": 2,
+      "sourceRect": [
+        198,
+        421,
+        349,
+        599
+      ],
+      "bbox": [
+        99,
+        30,
+        271,
+        232
+      ],
+      "sha256": "27407ebfb53957ce10270370261cca7dd325dc8bde4a5c0c657c4e0a634915be",
+      "sourceBand": [
+        405,
+        600
+      ]
+    },
+    {
+      "character": "Fern",
+      "action": "Victory",
+      "frame": 3,
+      "output": "Assets/Art/Characters/Fern/Victory/03.png",
+      "bodyReference": 176,
+      "uniformScale": 1.1363636363636365,
+      "sourceRow": 2,
+      "sourceRect": [
+        375,
+        408,
+        542,
+        599
+      ],
+      "bbox": [
+        57,
+        15,
+        247,
+        232
+      ],
+      "sha256": "435e4a3acca211c323282ae11fd7f9a49fd6cfbb94ba3aaae629ce2aac92645d",
+      "sourceBand": [
+        405,
+        600
+      ]
+    },
+    {
+      "character": "Fern",
+      "action": "Victory",
+      "frame": 4,
+      "output": "Assets/Art/Characters/Fern/Victory/04.png",
+      "bodyReference": 176,
+      "uniformScale": 1.1363636363636365,
+      "sourceRow": 2,
+      "sourceRect": [
+        569,
+        405,
+        744,
+        600
+      ],
+      "bbox": [
+        42,
+        10,
+        241,
+        232
+      ],
+      "sha256": "f2de9f4edc054e4b408019f38de62b3713f2857412a111d844ffc14ec0f7fd9a",
+      "sourceBand": [
+        405,
+        600
+      ]
+    },
+    {
+      "character": "Fern",
+      "action": "Victory",
+      "frame": 5,
+      "output": "Assets/Art/Characters/Fern/Victory/05.png",
+      "bodyReference": 176,
+      "uniformScale": 1.1363636363636365,
+      "sourceRow": 2,
+      "sourceRect": [
+        766,
+        413,
+        948,
+        600
+      ],
+      "bbox": [
+        59,
+        19,
+        266,
+        232
+      ],
+      "sha256": "e8c28cda88fe68c98aafe83eca62caa6b282f9774bb0aba224f46759a64ead56",
+      "sourceBand": [
+        405,
+        600
+      ]
+    },
+    {
+      "character": "Fern",
+      "action": "Victory",
+      "frame": 6,
+      "output": "Assets/Art/Characters/Fern/Victory/06.png",
+      "bodyReference": 176,
+      "uniformScale": 1.1363636363636365,
+      "sourceRow": 2,
+      "sourceRect": [
+        972,
+        423,
+        1145,
+        600
+      ],
+      "bbox": [
+        86,
+        31,
+        283,
+        232
+      ],
+      "sha256": "c5fb066a77299fc2e36de23f0ad7b21e9acace8ef552228533626083fd30130b",
+      "sourceBand": [
+        405,
+        600
+      ]
+    },
+    {
+      "character": "Fern",
+      "action": "Victory",
+      "frame": 7,
+      "output": "Assets/Art/Characters/Fern/Victory/07.png",
+      "bodyReference": 176,
+      "uniformScale": 1.1363636363636365,
+      "sourceRow": 2,
+      "sourceRect": [
+        1168,
+        433,
+        1362,
+        600
+      ],
+      "bbox": [
+        79,
+        42,
+        299,
+        232
+      ],
+      "sha256": "289a03c985ccf53df94339c307514c10517528ed40ee44f56ea428ed13fbcaf4",
+      "sourceBand": [
+        405,
+        600
+      ]
+    },
+    {
+      "character": "Fern",
+      "action": "Victory",
+      "frame": 8,
+      "output": "Assets/Art/Characters/Fern/Victory/08.png",
+      "bodyReference": 176,
+      "uniformScale": 1.1363636363636365,
+      "sourceRow": 2,
+      "sourceRect": [
+        1395,
+        435,
+        1576,
+        600
+      ],
+      "bbox": [
+        81,
+        44,
+        287,
+        232
+      ],
+      "sha256": "849d7c5a332ba9ead87fdbc4e2e560782c4167b44400ffddc40be1819af0567b",
+      "sourceBand": [
+        405,
+        600
+      ]
+    },
+    {
+      "character": "Fern",
+      "action": "Victory",
+      "frame": 9,
+      "output": "Assets/Art/Characters/Fern/Victory/09.png",
+      "bodyReference": 176,
+      "uniformScale": 1.1363636363636365,
+      "sourceRow": 2,
+      "sourceRect": [
+        1591,
+        429,
+        1788,
+        600
+      ],
+      "bbox": [
+        62,
+        38,
+        286,
+        232
+      ],
+      "sha256": "4c847d823c9bed7b780fbe215afce97354eca71a5bfbf3a07bc01fb830e932b1",
+      "sourceBand": [
+        405,
+        600
+      ]
+    },
+    {
+      "character": "Fern",
+      "action": "Victory",
+      "frame": 10,
+      "output": "Assets/Art/Characters/Fern/Victory/10.png",
+      "bodyReference": 176,
+      "uniformScale": 1.1363636363636365,
+      "sourceRow": 2,
+      "sourceRect": [
+        1801,
+        421,
+        1961,
+        600
+      ],
+      "bbox": [
+        104,
+        29,
+        286,
+        232
+      ],
+      "sha256": "8e5714c9ce8c812e8605661a267c274e6f0691d653dd81ac6c3e73d28c6d889d",
+      "sourceBand": [
+        405,
+        600
+      ]
+    },
+    {
+      "character": "Fern",
+      "action": "Ultimate",
+      "frame": 1,
+      "output": "Assets/Art/Characters/Fern/Ultimate/01.png",
+      "bodyReference": 176,
+      "uniformScale": 1.1363636363636365,
+      "sourceRow": 3,
+      "sourceRect": [
+        23,
+        621,
+        166,
+        785
+      ],
+      "bbox": [
+        112,
+        46,
+        275,
+        232
+      ],
+      "sha256": "acd34a0d8e3e989d628b4f112b367458c6a9dd6ab792b7cb25fc9bd23df1a982",
+      "sourceBand": [
+        617,
+        785
+      ]
+    },
+    {
+      "character": "Fern",
+      "action": "Ultimate",
+      "frame": 2,
+      "output": "Assets/Art/Characters/Fern/Ultimate/02.png",
+      "bodyReference": 176,
+      "uniformScale": 1.1363636363636365,
+      "sourceRow": 3,
+      "sourceRect": [
+        188,
+        636,
+        329,
+        784
+      ],
+      "bbox": [
+        115,
+        64,
+        275,
+        232
+      ],
+      "sha256": "2400a8afced39a856e8ba3223a177f1bad2eeb9b139423fe004c5149b433b506",
+      "sourceBand": [
+        617,
+        785
+      ]
+    },
+    {
+      "character": "Fern",
+      "action": "Ultimate",
+      "frame": 3,
+      "output": "Assets/Art/Characters/Fern/Ultimate/03.png",
+      "bodyReference": 176,
+      "uniformScale": 1.1363636363636365,
+      "sourceRow": 3,
+      "sourceRect": [
+        332,
+        640,
+        503,
+        784
+      ],
+      "bbox": [
+        99,
+        68,
+        293,
+        232
+      ],
+      "sha256": "a91e0d77210c5391113bdfdddea49e162d16c3e0454959c6e1018acd0115e8ca",
+      "sourceBand": [
+        617,
+        785
+      ]
+    },
+    {
+      "character": "Fern",
+      "action": "Ultimate",
+      "frame": 4,
+      "output": "Assets/Art/Characters/Fern/Ultimate/04.png",
+      "bodyReference": 176,
+      "uniformScale": 1.1363636363636365,
+      "sourceRow": 3,
+      "sourceRect": [
+        514,
+        617,
+        736,
+        784
+      ],
+      "bbox": [
+        68,
+        42,
+        320,
+        232
+      ],
+      "sha256": "1431fa0c53cf4481ac1b7b43ef76b70d018678486932751c765d9a1b8c461ddc",
+      "sourceBand": [
+        617,
+        785
+      ]
+    },
+    {
+      "character": "Fern",
+      "action": "Ultimate",
+      "frame": 5,
+      "output": "Assets/Art/Characters/Fern/Ultimate/05.png",
+      "bodyReference": 176,
+      "uniformScale": 1.1363636363636365,
+      "sourceRow": 3,
+      "sourceRect": [
+        742,
+        622,
+        958,
+        784
+      ],
+      "bbox": [
+        64,
+        48,
+        309,
+        232
+      ],
+      "sha256": "7f3884d6472e2561d942df94bb623e05e410eb0ca4cdddf3eef1941413523842",
+      "sourceBand": [
+        617,
+        785
+      ]
+    },
+    {
+      "character": "Fern",
+      "action": "Ultimate",
+      "frame": 6,
+      "output": "Assets/Art/Characters/Fern/Ultimate/06.png",
+      "bodyReference": 176,
+      "uniformScale": 1.1363636363636365,
+      "sourceRow": 3,
+      "sourceRect": [
+        970,
+        619,
+        1162,
+        784
+      ],
+      "bbox": [
+        92,
+        44,
+        310,
+        232
+      ],
+      "sha256": "d1d825e656dea74dc064a6db6ea995b734893ffcf54bd2922d743c611b4a2c47",
+      "sourceBand": [
+        617,
+        785
+      ]
+    },
+    {
+      "character": "Fern",
+      "action": "Ultimate",
+      "frame": 7,
+      "output": "Assets/Art/Characters/Fern/Ultimate/07.png",
+      "bodyReference": 176,
+      "uniformScale": 1.1363636363636365,
+      "sourceRow": 3,
+      "sourceRect": [
+        1181,
+        628,
+        1419,
+        785
+      ],
+      "bbox": [
+        110,
+        54,
+        380,
+        232
+      ],
+      "sha256": "d4b1e89e3a9788076a480a04c2a268da5a18eb06134ff918585b04866197130c",
+      "sourceBand": [
+        617,
+        785
+      ]
+    },
+    {
+      "character": "Fern",
+      "action": "Ultimate",
+      "frame": 8,
+      "output": "Assets/Art/Characters/Fern/Ultimate/08.png",
+      "bodyReference": 176,
+      "uniformScale": 1.1363636363636365,
+      "sourceRow": 3,
+      "sourceRect": [
+        1427,
+        627,
+        1637,
+        784
+      ],
+      "bbox": [
+        90,
+        54,
+        329,
+        232
+      ],
+      "sha256": "c0a39f9aa7397399944aed8b1fad84619717793ebe36a3be1d943abdc1636e75",
+      "sourceBand": [
+        617,
+        785
+      ]
+    },
+    {
+      "character": "Fern",
+      "action": "Ultimate",
+      "frame": 9,
+      "output": "Assets/Art/Characters/Fern/Ultimate/09.png",
+      "bodyReference": 176,
+      "uniformScale": 1.1363636363636365,
+      "sourceRow": 3,
+      "sourceRect": [
+        1641,
+        629,
+        1807,
+        785
+      ],
+      "bbox": [
+        133,
+        55,
+        322,
+        232
+      ],
+      "sha256": "d112133eab462e276d22bf8322f2297c07c502c460a601034a57530889bb54d6",
+      "sourceBand": [
+        617,
+        785
+      ]
+    },
+    {
+      "character": "Fern",
+      "action": "Ultimate",
+      "frame": 10,
+      "output": "Assets/Art/Characters/Fern/Ultimate/10.png",
+      "bodyReference": 176,
+      "uniformScale": 1.1363636363636365,
+      "sourceRow": 3,
+      "sourceRect": [
+        1823,
+        624,
+        1960,
+        785
+      ],
+      "bbox": [
+        109,
+        49,
+        265,
+        232
+      ],
+      "sha256": "c57e96df63d2693eda69937f2c25f4bfa2f4db466866a7a772e06f0b21e287bc",
+      "sourceBand": [
+        617,
+        785
+      ]
+    },
+    {
+      "character": "Ember",
+      "action": "Dash",
+      "frame": 1,
+      "output": "Assets/Art/Characters/Ember/Dash/01.png",
+      "bodyReference": 177,
+      "uniformScale": 1.1299435028248588,
+      "sourceRow": 0,
+      "sourceRect": [
+        34,
+        20,
+        184,
+        197
+      ],
+      "bbox": [
+        103,
+        32,
+        272,
+        232
+      ],
+      "sha256": "bd77a851b74d9e0698abe4adc27577c90e20a93772b1f5d057ee5356f85b8301",
+      "sourceBand": [
+        20,
+        197
+      ]
+    },
+    {
+      "character": "Ember",
+      "action": "Dash",
+      "frame": 2,
+      "output": "Assets/Art/Characters/Ember/Dash/02.png",
+      "bodyReference": 177,
+      "uniformScale": 1.1299435028248588,
+      "sourceRow": 0,
+      "sourceRect": [
+        219,
+        41,
+        377,
+        196
+      ],
+      "bbox": [
+        90,
+        57,
+        269,
+        232
+      ],
+      "sha256": "23b8ee9f491f498413d8f80d2edb3f65fb8d790666082f0524c9ab8ebefc50f6",
+      "sourceBand": [
+        20,
+        197
+      ]
+    },
+    {
+      "character": "Ember",
+      "action": "Dash",
+      "frame": 3,
+      "output": "Assets/Art/Characters/Ember/Dash/03.png",
+      "bodyReference": 177,
+      "uniformScale": 1.1299435028248588,
+      "sourceRow": 0,
+      "sourceRect": [
+        426,
+        45,
+        592,
+        197
+      ],
+      "bbox": [
+        91,
+        60,
+        279,
+        232
+      ],
+      "sha256": "f8899d28e025d457b5fac2a895842d24fc6b99961d32a8404c9db220670a2fc1",
+      "sourceBand": [
+        20,
+        197
+      ]
+    },
+    {
+      "character": "Ember",
+      "action": "Dash",
+      "frame": 4,
+      "output": "Assets/Art/Characters/Ember/Dash/04.png",
+      "bodyReference": 177,
+      "uniformScale": 1.1299435028248588,
+      "sourceRow": 0,
+      "sourceRect": [
+        647,
+        32,
+        818,
+        196
+      ],
+      "bbox": [
+        64,
+        47,
+        257,
+        232
+      ],
+      "sha256": "4de3512fab526d88d5c3ef4ec974d916273d10f30e1e4006e3ab7baed0b569a9",
+      "sourceBand": [
+        20,
+        197
+      ]
+    },
+    {
+      "character": "Ember",
+      "action": "Dash",
+      "frame": 5,
+      "output": "Assets/Art/Characters/Ember/Dash/05.png",
+      "bodyReference": 177,
+      "uniformScale": 1.1299435028248588,
+      "sourceRow": 0,
+      "sourceRect": [
+        858,
+        38,
+        1043,
+        196
+      ],
+      "bbox": [
+        147,
+        53,
+        356,
+        232
+      ],
+      "sha256": "f5bc847d159cae66ba65d5d32f9985bd4338333f872184757db5e67e0127f583",
+      "sourceBand": [
+        20,
+        197
+      ]
+    },
+    {
+      "character": "Ember",
+      "action": "Dash",
+      "frame": 6,
+      "output": "Assets/Art/Characters/Ember/Dash/06.png",
+      "bodyReference": 177,
+      "uniformScale": 1.1299435028248588,
+      "sourceRow": 0,
+      "sourceRect": [
+        1063,
+        57,
+        1258,
+        197
+      ],
+      "bbox": [
+        147,
+        74,
+        367,
+        232
+      ],
+      "sha256": "524b55e9ca1db16896be19220f20d2786cc81a1db25731f8bea51b53c3616274",
+      "sourceBand": [
+        20,
+        197
+      ]
+    },
+    {
+      "character": "Ember",
+      "action": "Dash",
+      "frame": 7,
+      "output": "Assets/Art/Characters/Ember/Dash/07.png",
+      "bodyReference": 177,
+      "uniformScale": 1.1299435028248588,
+      "sourceRow": 0,
+      "sourceRect": [
+        1267,
+        60,
+        1452,
+        197
+      ],
+      "bbox": [
+        156,
+        77,
+        365,
+        232
+      ],
+      "sha256": "bbbc86cd6e2261ea6853f51496e03a0908d7d3c66589f2e4a6875484123e4097",
+      "sourceBand": [
+        20,
+        197
+      ]
+    },
+    {
+      "character": "Ember",
+      "action": "Dash",
+      "frame": 8,
+      "output": "Assets/Art/Characters/Ember/Dash/08.png",
+      "bodyReference": 177,
+      "uniformScale": 1.1299435028248588,
+      "sourceRow": 0,
+      "sourceRect": [
+        1474,
+        35,
+        1625,
+        197
+      ],
+      "bbox": [
+        103,
+        49,
+        274,
+        232
+      ],
+      "sha256": "8506300605d22ae805be2e0a81d3c1d52283927431d7958bdec1ce99fc38b5f6",
+      "sourceBand": [
+        20,
+        197
+      ]
+    },
+    {
+      "character": "Ember",
+      "action": "Dash",
+      "frame": 9,
+      "output": "Assets/Art/Characters/Ember/Dash/09.png",
+      "bodyReference": 177,
+      "uniformScale": 1.1299435028248588,
+      "sourceRow": 0,
+      "sourceRect": [
+        1644,
+        30,
+        1790,
+        197
+      ],
+      "bbox": [
+        102,
+        43,
+        267,
+        232
+      ],
+      "sha256": "e3d8ca3e04f4dd9a3a770b2efcfbcc16bf0241024fd0067ed8e12e89b6d0221e",
+      "sourceBand": [
+        20,
+        197
+      ]
+    },
+    {
+      "character": "Ember",
+      "action": "Dash",
+      "frame": 10,
+      "output": "Assets/Art/Characters/Ember/Dash/10.png",
+      "bodyReference": 177,
+      "uniformScale": 1.1299435028248588,
+      "sourceRow": 0,
+      "sourceRect": [
+        1826,
+        23,
+        1960,
+        197
+      ],
+      "bbox": [
+        107,
+        35,
+        258,
+        232
+      ],
+      "sha256": "923393d50546c5a51040dfceb6053e4415dd458cc1a1ac6ec16bacc3963fb963",
+      "sourceBand": [
+        20,
+        197
+      ]
+    },
+    {
+      "character": "Ember",
+      "action": "Backstep",
+      "frame": 1,
+      "output": "Assets/Art/Characters/Ember/Backstep/01.png",
+      "bodyReference": 177,
+      "uniformScale": 1.1299435028248588,
+      "sourceRow": 1,
+      "sourceRect": [
+        29,
+        215,
+        174,
+        392
+      ],
+      "bbox": [
+        107,
+        32,
+        271,
+        232
+      ],
+      "sha256": "68281278b9737d65444821f691fad27d0858012d1f478d2110b60b25dec12590",
+      "sourceBand": [
+        215,
+        392
+      ]
+    },
+    {
+      "character": "Ember",
+      "action": "Backstep",
+      "frame": 2,
+      "output": "Assets/Art/Characters/Ember/Backstep/02.png",
+      "bodyReference": 177,
+      "uniformScale": 1.1299435028248588,
+      "sourceRow": 1,
+      "sourceRect": [
+        212,
+        224,
+        356,
+        392
+      ],
+      "bbox": [
+        85,
+        42,
+        248,
+        232
+      ],
+      "sha256": "9307774002b4ef2af1896c9981309f6a5815638a1b27588e4929c95ad77507b6",
+      "sourceBand": [
+        215,
+        392
+      ]
+    },
+    {
+      "character": "Ember",
+      "action": "Backstep",
+      "frame": 3,
+      "output": "Assets/Art/Characters/Ember/Backstep/03.png",
+      "bodyReference": 177,
+      "uniformScale": 1.1299435028248588,
+      "sourceRow": 1,
+      "sourceRect": [
+        412,
+        227,
+        577,
+        392
+      ],
+      "bbox": [
+        74,
+        46,
+        260,
+        232
+      ],
+      "sha256": "0e1110118fa6901aae0c51a351684edfe571124c129119c9c05f8a702c4df119",
+      "sourceBand": [
+        215,
+        392
+      ]
+    },
+    {
+      "character": "Ember",
+      "action": "Backstep",
+      "frame": 4,
+      "output": "Assets/Art/Characters/Ember/Backstep/04.png",
+      "bodyReference": 177,
+      "uniformScale": 1.1299435028248588,
+      "sourceRow": 1,
+      "sourceRect": [
+        621,
+        235,
+        839,
+        392
+      ],
+      "bbox": [
+        26,
+        55,
+        272,
+        232
+      ],
+      "sha256": "4fec6dffb9394f87806e325dc94122247bd3285a48ad8ed7e191417698edd449",
+      "sourceBand": [
+        215,
+        392
+      ]
+    },
+    {
+      "character": "Ember",
+      "action": "Backstep",
+      "frame": 5,
+      "output": "Assets/Art/Characters/Ember/Backstep/05.png",
+      "bodyReference": 177,
+      "uniformScale": 1.1299435028248588,
+      "sourceRow": 1,
+      "sourceRect": [
+        878,
+        232,
+        1085,
+        392
+      ],
+      "bbox": [
+        68,
+        51,
+        302,
+        232
+      ],
+      "sha256": "91ce33d70834c78633cf3ad2eb5b7c5be0afc4d4f6b34cb2d13711f2ef464b6d",
+      "sourceBand": [
+        215,
+        392
+      ]
+    },
+    {
+      "character": "Ember",
+      "action": "Backstep",
+      "frame": 6,
+      "output": "Assets/Art/Characters/Ember/Backstep/06.png",
+      "bodyReference": 177,
+      "uniformScale": 1.1299435028248588,
+      "sourceRow": 1,
+      "sourceRect": [
+        1076,
+        231,
+        1281,
+        392
+      ],
+      "bbox": [
+        43,
+        50,
+        275,
+        232
+      ],
+      "sha256": "cf2bcc8e4314ba15fc12d698ce4408fb23b95acf8cb3e923ee224b67fedd228f",
+      "sourceBand": [
+        215,
+        392
+      ]
+    },
+    {
+      "character": "Ember",
+      "action": "Backstep",
+      "frame": 7,
+      "output": "Assets/Art/Characters/Ember/Backstep/07.png",
+      "bodyReference": 177,
+      "uniformScale": 1.1299435028248588,
+      "sourceRow": 1,
+      "sourceRect": [
+        1286,
+        223,
+        1421,
+        392
+      ],
+      "bbox": [
+        86,
+        41,
+        239,
+        232
+      ],
+      "sha256": "f08860a85e421ddade239e8474be0531ebf34d34f1c37237b5c014ed44797131",
+      "sourceBand": [
+        215,
+        392
+      ]
+    },
+    {
+      "character": "Ember",
+      "action": "Backstep",
+      "frame": 8,
+      "output": "Assets/Art/Characters/Ember/Backstep/08.png",
+      "bodyReference": 177,
+      "uniformScale": 1.1299435028248588,
+      "sourceRow": 1,
+      "sourceRect": [
+        1474,
+        225,
+        1616,
+        392
+      ],
+      "bbox": [
+        96,
+        43,
+        256,
+        232
+      ],
+      "sha256": "3d1db7363315e043c52ddff8cff5dbe848805dd921c1ce1891fdcd4d344d2399",
+      "sourceBand": [
+        215,
+        392
+      ]
+    },
+    {
+      "character": "Ember",
+      "action": "Backstep",
+      "frame": 9,
+      "output": "Assets/Art/Characters/Ember/Backstep/09.png",
+      "bodyReference": 177,
+      "uniformScale": 1.1299435028248588,
+      "sourceRow": 1,
+      "sourceRect": [
+        1654,
+        220,
+        1794,
+        392
+      ],
+      "bbox": [
+        108,
+        38,
+        266,
+        232
+      ],
+      "sha256": "5fb49b248cbcd0f2b38691b1896241db68183c630c2b3a55cad75f371ec22c8f",
+      "sourceBand": [
+        215,
+        392
+      ]
+    },
+    {
+      "character": "Ember",
+      "action": "Backstep",
+      "frame": 10,
+      "output": "Assets/Art/Characters/Ember/Backstep/10.png",
+      "bodyReference": 177,
+      "uniformScale": 1.1299435028248588,
+      "sourceRow": 1,
+      "sourceRect": [
+        1826,
+        220,
+        1958,
+        392
+      ],
+      "bbox": [
+        107,
+        38,
+        256,
+        232
+      ],
+      "sha256": "7d5d787577cb12382644cf31ca270a7a7274a576e7de0e786bf632ae3ecedb50",
+      "sourceBand": [
+        215,
+        392
+      ]
+    },
+    {
+      "character": "Ember",
+      "action": "Victory",
+      "frame": 1,
+      "output": "Assets/Art/Characters/Ember/Victory/01.png",
+      "bodyReference": 177,
+      "uniformScale": 1.1299435028248588,
+      "sourceRow": 2,
+      "sourceRect": [
+        29,
+        416,
+        177,
+        588
+      ],
+      "bbox": [
+        104,
+        38,
+        271,
+        232
+      ],
+      "sha256": "d97dd1c5718b30cde8c49ccb6ecb88599acfc31fc4e56d6dd4418cf7482d2a3f",
+      "sourceBand": [
+        409,
+        588
+      ]
+    },
+    {
+      "character": "Ember",
+      "action": "Victory",
+      "frame": 2,
+      "output": "Assets/Art/Characters/Ember/Victory/02.png",
+      "bodyReference": 177,
+      "uniformScale": 1.1299435028248588,
+      "sourceRow": 2,
+      "sourceRect": [
+        214,
+        416,
+        370,
+        588
+      ],
+      "bbox": [
+        98,
+        38,
+        274,
+        232
+      ],
+      "sha256": "f0671cf203a79ce316aecfb3c22fb7309ed6d5f2aecf9abefbbc5fd0ac66f935",
+      "sourceBand": [
+        409,
+        588
+      ]
+    },
+    {
+      "character": "Ember",
+      "action": "Victory",
+      "frame": 3,
+      "output": "Assets/Art/Characters/Ember/Victory/03.png",
+      "bodyReference": 177,
+      "uniformScale": 1.1299435028248588,
+      "sourceRow": 2,
+      "sourceRect": [
+        402,
+        420,
+        561,
+        588
+      ],
+      "bbox": [
+        88,
+        42,
+        268,
+        232
+      ],
+      "sha256": "80650ad90fd4be72b9f2f97ba081a1f91af5127b6617a58f11f4afae04fde7d8",
+      "sourceBand": [
+        409,
+        588
+      ]
+    },
+    {
+      "character": "Ember",
+      "action": "Victory",
+      "frame": 4,
+      "output": "Assets/Art/Characters/Ember/Victory/04.png",
+      "bodyReference": 177,
+      "uniformScale": 1.1299435028248588,
+      "sourceRow": 2,
+      "sourceRect": [
+        623,
+        413,
+        775,
+        587
+      ],
+      "bbox": [
+        141,
+        35,
+        313,
+        232
+      ],
+      "sha256": "d7be52681a4b96d7c0b6b97c360d7e1ca5d07b12ee6a83a246c4d79067b5545e",
+      "sourceBand": [
+        409,
+        588
+      ]
+    },
+    {
+      "character": "Ember",
+      "action": "Victory",
+      "frame": 5,
+      "output": "Assets/Art/Characters/Ember/Victory/05.png",
+      "bodyReference": 177,
+      "uniformScale": 1.1299435028248588,
+      "sourceRow": 2,
+      "sourceRect": [
+        827,
+        416,
+        983,
+        588
+      ],
+      "bbox": [
+        114,
+        38,
+        290,
+        232
+      ],
+      "sha256": "c2eab28631d9063665bc255c0900705f16bc89c527dccc12fc4e81f95639798d",
+      "sourceBand": [
+        409,
+        588
+      ]
+    },
+    {
+      "character": "Ember",
+      "action": "Victory",
+      "frame": 6,
+      "output": "Assets/Art/Characters/Ember/Victory/06.png",
+      "bodyReference": 177,
+      "uniformScale": 1.1299435028248588,
+      "sourceRow": 2,
+      "sourceRect": [
+        1029,
+        417,
+        1181,
+        588
+      ],
+      "bbox": [
+        100,
+        39,
+        272,
+        232
+      ],
+      "sha256": "11c1f3b733d583adf2e41e946b0d13a50e89f750286bd60807cd47bf22e35a4a",
+      "sourceBand": [
+        409,
+        588
+      ]
+    },
+    {
+      "character": "Ember",
+      "action": "Victory",
+      "frame": 7,
+      "output": "Assets/Art/Characters/Ember/Victory/07.png",
+      "bodyReference": 177,
+      "uniformScale": 1.1299435028248588,
+      "sourceRow": 2,
+      "sourceRect": [
+        1231,
+        416,
+        1391,
+        588
+      ],
+      "bbox": [
+        100,
+        38,
+        281,
+        232
+      ],
+      "sha256": "d9cc3baf16b5c9908e54f148dcadc08bd26632b5011ecb2af0c4cc637089b1b5",
+      "sourceBand": [
+        409,
+        588
+      ]
+    },
+    {
+      "character": "Ember",
+      "action": "Victory",
+      "frame": 8,
+      "output": "Assets/Art/Characters/Ember/Victory/08.png",
+      "bodyReference": 177,
+      "uniformScale": 1.1299435028248588,
+      "sourceRow": 2,
+      "sourceRect": [
+        1422,
+        416,
+        1566,
+        588
+      ],
+      "bbox": [
+        97,
+        38,
+        260,
+        232
+      ],
+      "sha256": "3fc28e7b88c434c02f84a6e5925c50faf3fa6c26782bdd78936818d45fc3bd04",
+      "sourceBand": [
+        409,
+        588
+      ]
+    },
+    {
+      "character": "Ember",
+      "action": "Victory",
+      "frame": 9,
+      "output": "Assets/Art/Characters/Ember/Victory/09.png",
+      "bodyReference": 177,
+      "uniformScale": 1.1299435028248588,
+      "sourceRow": 2,
+      "sourceRect": [
+        1616,
+        417,
+        1778,
+        588
+      ],
+      "bbox": [
+        87,
+        39,
+        270,
+        232
+      ],
+      "sha256": "7f9cd6e286fd39248d52172dfe0edf66a205904944af8b39684895429a25a97a",
+      "sourceBand": [
+        409,
+        588
+      ]
+    },
+    {
+      "character": "Ember",
+      "action": "Victory",
+      "frame": 10,
+      "output": "Assets/Art/Characters/Ember/Victory/10.png",
+      "bodyReference": 177,
+      "uniformScale": 1.1299435028248588,
+      "sourceRow": 2,
+      "sourceRect": [
+        1814,
+        409,
+        1949,
+        588
+      ],
+      "bbox": [
+        104,
+        30,
+        257,
+        232
+      ],
+      "sha256": "5709f0174f6756a3974d03f74f38c7bc6004c2fa0531a537f07e91c0dea88a81",
+      "sourceBand": [
+        409,
+        588
+      ]
+    },
+    {
+      "character": "Ember",
+      "action": "Ultimate",
+      "frame": 1,
+      "output": "Assets/Art/Characters/Ember/Ultimate/01.png",
+      "bodyReference": 177,
+      "uniformScale": 1.1299435028248588,
+      "sourceRow": 3,
+      "sourceRect": [
+        26,
+        627,
+        170,
+        774
+      ],
+      "bbox": [
+        112,
+        66,
+        275,
+        232
+      ],
+      "sha256": "53d6d6762ac049ee40b91271135578b437e5463bcac5b6c7d9b0ae65e22a010c",
+      "sourceBand": [
+        609,
+        776
+      ]
+    },
+    {
+      "character": "Ember",
+      "action": "Ultimate",
+      "frame": 2,
+      "output": "Assets/Art/Characters/Ember/Ultimate/02.png",
+      "bodyReference": 177,
+      "uniformScale": 1.1299435028248588,
+      "sourceRow": 3,
+      "sourceRect": [
+        188,
+        633,
+        350,
+        774
+      ],
+      "bbox": [
+        91,
+        73,
+        274,
+        232
+      ],
+      "sha256": "b9b617ec10dc91a929a40c0a490b8648e05f98d0cf76929a0be7c672123f61be",
+      "sourceBand": [
+        609,
+        776
+      ]
+    },
+    {
+      "character": "Ember",
+      "action": "Ultimate",
+      "frame": 3,
+      "output": "Assets/Art/Characters/Ember/Ultimate/03.png",
+      "bodyReference": 177,
+      "uniformScale": 1.1299435028248588,
+      "sourceRow": 3,
+      "sourceRect": [
+        367,
+        624,
+        533,
+        774
+      ],
+      "bbox": [
+        91,
+        63,
+        279,
+        232
+      ],
+      "sha256": "8240b27dacb727b4cea8f15cd8c87475ed02557d3def7f127fb54070aaf97e45",
+      "sourceBand": [
+        609,
+        776
+      ]
+    },
+    {
+      "character": "Ember",
+      "action": "Ultimate",
+      "frame": 4,
+      "output": "Assets/Art/Characters/Ember/Ultimate/04.png",
+      "bodyReference": 177,
+      "uniformScale": 1.1299435028248588,
+      "sourceRow": 3,
+      "sourceRect": [
+        552,
+        630,
+        752,
+        774
+      ],
+      "bbox": [
+        133,
+        69,
+        359,
+        232
+      ],
+      "sha256": "f9b9fada50fda7d94497600370b5e2e7fefa16f3571111ed59cf214184cfe49e",
+      "sourceBand": [
+        609,
+        776
+      ]
+    },
+    {
+      "character": "Ember",
+      "action": "Ultimate",
+      "frame": 5,
+      "output": "Assets/Art/Characters/Ember/Ultimate/05.png",
+      "bodyReference": 177,
+      "uniformScale": 1.1299435028248588,
+      "sourceRow": 3,
+      "sourceRect": [
+        752,
+        624,
+        943,
+        775
+      ],
+      "bbox": [
+        152,
+        61,
+        368,
+        232
+      ],
+      "sha256": "7071afc8c697c7e322fec3d8b8d3ba81b3ba3f2f627968dacd0c26cdc9aa8514",
+      "sourceBand": [
+        609,
+        776
+      ]
+    },
+    {
+      "character": "Ember",
+      "action": "Ultimate",
+      "frame": 6,
+      "output": "Assets/Art/Characters/Ember/Ultimate/06.png",
+      "bodyReference": 177,
+      "uniformScale": 1.1299435028248588,
+      "sourceRow": 3,
+      "sourceRect": [
+        959,
+        613,
+        1153,
+        776
+      ],
+      "bbox": [
+        78,
+        48,
+        297,
+        232
+      ],
+      "sha256": "e4cd2311782f8092a3554b29cff11ccd745d7dd16441acff22a37fc829656df4",
+      "sourceBand": [
+        609,
+        776
+      ]
+    },
+    {
+      "character": "Ember",
+      "action": "Ultimate",
+      "frame": 7,
+      "output": "Assets/Art/Characters/Ember/Ultimate/07.png",
+      "bodyReference": 177,
+      "uniformScale": 1.1299435028248588,
+      "sourceRow": 3,
+      "sourceRect": [
+        1138,
+        609,
+        1438,
+        776
+      ],
+      "bbox": [
+        41,
+        43,
+        380,
+        232
+      ],
+      "sha256": "89c0ca67fb2d6ae7dc40e9b7bafe05831778821c756c7448d35292aa6eac7d0e",
+      "sourceBand": [
+        609,
+        776
+      ]
+    },
+    {
+      "character": "Ember",
+      "action": "Ultimate",
+      "frame": 8,
+      "output": "Assets/Art/Characters/Ember/Ultimate/08.png",
+      "bodyReference": 177,
+      "uniformScale": 1.1299435028248588,
+      "sourceRow": 3,
+      "sourceRect": [
+        1424,
+        624,
+        1631,
+        776
+      ],
+      "bbox": [
+        107,
+        60,
+        341,
+        232
+      ],
+      "sha256": "8280f4dc91ae1d5808a3bfc621a3dd7102806c580d64d5a97001b3d906811d4f",
+      "sourceBand": [
+        609,
+        776
+      ]
+    },
+    {
+      "character": "Ember",
+      "action": "Ultimate",
+      "frame": 9,
+      "output": "Assets/Art/Characters/Ember/Ultimate/09.png",
+      "bodyReference": 177,
+      "uniformScale": 1.1299435028248588,
+      "sourceRow": 3,
+      "sourceRect": [
+        1654,
+        617,
+        1804,
+        776
+      ],
+      "bbox": [
+        99,
+        52,
+        268,
+        232
+      ],
+      "sha256": "4ce77729faa9e7c92b44d328481a7b8cb141a1ba5cc063b7b4fad9a9c8432169",
+      "sourceBand": [
+        609,
+        776
+      ]
+    },
+    {
+      "character": "Ember",
+      "action": "Ultimate",
+      "frame": 10,
+      "output": "Assets/Art/Characters/Ember/Ultimate/10.png",
+      "bodyReference": 177,
+      "uniformScale": 1.1299435028248588,
+      "sourceRow": 3,
+      "sourceRect": [
+        1828,
+        611,
+        1958,
+        776
+      ],
+      "bbox": [
+        120,
+        46,
+        267,
+        232
+      ],
+      "sha256": "6196d31acf0354836c799a295f65f3c8e07f7335e832437818c489ca33eae6ae",
+      "sourceBand": [
+        609,
+        776
+      ]
+    },
+    {
+      "character": "Luna",
+      "action": "Dash",
+      "frame": 1,
+      "output": "Assets/Art/Characters/Luna/Dash/01.png",
+      "bodyReference": 182,
+      "uniformScale": 1.098901098901099,
+      "sourceRow": 0,
+      "sourceRect": [
+        12,
+        15,
+        170,
+        197
+      ],
+      "bbox": [
+        71,
+        32,
+        245,
+        232
+      ],
+      "sha256": "272d0e5a8a602b076e9d9ea529b326cc9f44ebf0d8dab68ec5f93b0605ddd557",
+      "sourceBand": [
+        15,
+        198
+      ]
+    },
+    {
+      "character": "Luna",
+      "action": "Dash",
+      "frame": 2,
+      "output": "Assets/Art/Characters/Luna/Dash/02.png",
+      "bodyReference": 182,
+      "uniformScale": 1.098901098901099,
+      "sourceRow": 0,
+      "sourceRect": [
+        194,
+        35,
+        402,
+        195
+      ],
+      "bbox": [
+        144,
+        56,
+        373,
+        232
+      ],
+      "sha256": "83c8f9e55f4555cf9213317eae4c928a22e81d466c57d26910f495f23c104f47",
+      "sourceBand": [
+        15,
+        198
+      ]
+    },
+    {
+      "character": "Luna",
+      "action": "Dash",
+      "frame": 3,
+      "output": "Assets/Art/Characters/Luna/Dash/03.png",
+      "bodyReference": 182,
+      "uniformScale": 1.098901098901099,
+      "sourceRow": 0,
+      "sourceRect": [
+        411,
+        54,
+        629,
+        197
+      ],
+      "bbox": [
+        129,
+        75,
+        369,
+        232
+      ],
+      "sha256": "51a39d1c54aae24ef4b9f0c4524c2f66e177c949eec4219cc2b8fcbb3ac322d3",
+      "sourceBand": [
+        15,
+        198
+      ]
+    },
+    {
+      "character": "Luna",
+      "action": "Dash",
+      "frame": 4,
+      "output": "Assets/Art/Characters/Luna/Dash/04.png",
+      "bodyReference": 182,
+      "uniformScale": 1.098901098901099,
+      "sourceRow": 0,
+      "sourceRect": [
+        606,
+        54,
+        862,
+        197
+      ],
+      "bbox": [
+        99,
+        75,
+        380,
+        232
+      ],
+      "sha256": "8d9dd1ffe0c7f5fc6975ab5b386ade095c0caacae4b6bdea8e2577cbf742bdd8",
+      "sourceBand": [
+        15,
+        198
+      ]
+    },
+    {
+      "character": "Luna",
+      "action": "Dash",
+      "frame": 5,
+      "output": "Assets/Art/Characters/Luna/Dash/05.png",
+      "bodyReference": 182,
+      "uniformScale": 1.098901098901099,
+      "sourceRow": 0,
+      "sourceRect": [
+        832,
+        56,
+        1084,
+        197
+      ],
+      "bbox": [
+        103,
+        77,
+        380,
+        232
+      ],
+      "sha256": "637db7426aa7c21c9c989168c9f5728133a0ae4f18dd41b8e850235cc76ef752",
+      "sourceBand": [
+        15,
+        198
+      ]
+    },
+    {
+      "character": "Luna",
+      "action": "Dash",
+      "frame": 6,
+      "output": "Assets/Art/Characters/Luna/Dash/06.png",
+      "bodyReference": 182,
+      "uniformScale": 1.098901098901099,
+      "sourceRow": 0,
+      "sourceRect": [
+        1079,
+        56,
+        1306,
+        198
+      ],
+      "bbox": [
+        131,
+        76,
+        380,
+        232
+      ],
+      "sha256": "01ac9c4e073e61f1dce1c6cea102bb38fe554ea13d330d1922fb1a1c3a9426b5",
+      "sourceBand": [
+        15,
+        198
+      ]
+    },
+    {
+      "character": "Luna",
+      "action": "Dash",
+      "frame": 7,
+      "output": "Assets/Art/Characters/Luna/Dash/07.png",
+      "bodyReference": 182,
+      "uniformScale": 1.098901098901099,
+      "sourceRow": 0,
+      "sourceRect": [
+        1298,
+        55,
+        1466,
+        196
+      ],
+      "bbox": [
+        155,
+        77,
+        340,
+        232
+      ],
+      "sha256": "a6520dcece3c7d015e10c7eff159c38fb9976365278e6dac615552528d53bb9a",
+      "sourceBand": [
+        15,
+        198
+      ]
+    },
+    {
+      "character": "Luna",
+      "action": "Dash",
+      "frame": 8,
+      "output": "Assets/Art/Characters/Luna/Dash/08.png",
+      "bodyReference": 182,
+      "uniformScale": 1.098901098901099,
+      "sourceRow": 0,
+      "sourceRect": [
+        1465,
+        42,
+        1614,
+        197
+      ],
+      "bbox": [
+        148,
+        62,
+        312,
+        232
+      ],
+      "sha256": "edf7c8ad4f7aec60ba474938953a0b62f2dff58d5fdf53f95949a5510a713d15",
+      "sourceBand": [
+        15,
+        198
+      ]
+    },
+    {
+      "character": "Luna",
+      "action": "Dash",
+      "frame": 9,
+      "output": "Assets/Art/Characters/Luna/Dash/09.png",
+      "bodyReference": 182,
+      "uniformScale": 1.098901098901099,
+      "sourceRow": 0,
+      "sourceRect": [
+        1625,
+        21,
+        1780,
+        197
+      ],
+      "bbox": [
+        125,
+        39,
+        295,
+        232
+      ],
+      "sha256": "8edc5ca2c5f0bfe2f7be8e386bd261b4631d1f79554e6318d03e645937a2ae3c",
+      "sourceBand": [
+        15,
+        198
+      ]
+    },
+    {
+      "character": "Luna",
+      "action": "Dash",
+      "frame": 10,
+      "output": "Assets/Art/Characters/Luna/Dash/10.png",
+      "bodyReference": 182,
+      "uniformScale": 1.098901098901099,
+      "sourceRow": 0,
+      "sourceRect": [
+        1804,
+        15,
+        1945,
+        197
+      ],
+      "bbox": [
+        87,
+        32,
+        242,
+        232
+      ],
+      "sha256": "0797ccac1533e9ab3fe88806c836cd1dd694a5330399f5e4515ac786f9eaebd7",
+      "sourceBand": [
+        15,
+        198
+      ]
+    },
+    {
+      "character": "Luna",
+      "action": "Backstep",
+      "frame": 1,
+      "output": "Assets/Art/Characters/Luna/Backstep/01.png",
+      "bodyReference": 182,
+      "uniformScale": 1.098901098901099,
+      "sourceRow": 1,
+      "sourceRect": [
+        13,
+        211,
+        164,
+        395
+      ],
+      "bbox": [
+        68,
+        30,
+        234,
+        232
+      ],
+      "sha256": "eb4cb9654e8740c7b644896df84115b3c3b3844c0c76bff7824f96c1d749f4e4",
+      "sourceBand": [
+        211,
+        395
+      ]
+    },
+    {
+      "character": "Luna",
+      "action": "Backstep",
+      "frame": 2,
+      "output": "Assets/Art/Characters/Luna/Backstep/02.png",
+      "bodyReference": 182,
+      "uniformScale": 1.098901098901099,
+      "sourceRow": 1,
+      "sourceRect": [
+        206,
+        225,
+        433,
+        391
+      ],
+      "bbox": [
+        13,
+        50,
+        262,
+        232
+      ],
+      "sha256": "8c8d39f72af1b954e4ddd3dd6423eaacd5a1caeb906fb6e4099d729c68ef1514",
+      "sourceBand": [
+        211,
+        395
+      ]
+    },
+    {
+      "character": "Luna",
+      "action": "Backstep",
+      "frame": 3,
+      "output": "Assets/Art/Characters/Luna/Backstep/03.png",
+      "bodyReference": 182,
+      "uniformScale": 1.098901098901099,
+      "sourceRow": 1,
+      "sourceRect": [
+        426,
+        231,
+        653,
+        392
+      ],
+      "bbox": [
+        6,
+        55,
+        255,
+        232
+      ],
+      "sha256": "1dd55fbe205f1073b1e965a946aeed6b889fd1c465f8399bf955b1cf9e856271",
+      "sourceBand": [
+        211,
+        395
+      ]
+    },
+    {
+      "character": "Luna",
+      "action": "Backstep",
+      "frame": 4,
+      "output": "Assets/Art/Characters/Luna/Backstep/04.png",
+      "bodyReference": 182,
+      "uniformScale": 1.098901098901099,
+      "sourceRow": 1,
+      "sourceRect": [
+        646,
+        236,
+        883,
+        392
+      ],
+      "bbox": [
+        4,
+        61,
+        264,
+        232
+      ],
+      "sha256": "c4717e0267efc9613c4fa4333db037a638992be6b512730348b016c01c021f3e",
+      "sourceBand": [
+        211,
+        395
+      ]
+    },
+    {
+      "character": "Luna",
+      "action": "Backstep",
+      "frame": 5,
+      "output": "Assets/Art/Characters/Luna/Backstep/05.png",
+      "bodyReference": 182,
+      "uniformScale": 1.098901098901099,
+      "sourceRow": 1,
+      "sourceRect": [
+        876,
+        238,
+        1099,
+        394
+      ],
+      "bbox": [
+        4,
+        61,
+        249,
+        232
+      ],
+      "sha256": "73b8bf5bc767a9dff4cee3d1ecd3c17e58b2b88459bd117433d42470a5c81851",
+      "sourceBand": [
+        211,
+        395
+      ]
+    },
+    {
+      "character": "Luna",
+      "action": "Backstep",
+      "frame": 6,
+      "output": "Assets/Art/Characters/Luna/Backstep/06.png",
+      "bodyReference": 182,
+      "uniformScale": 1.098901098901099,
+      "sourceRow": 1,
+      "sourceRect": [
+        1088,
+        238,
+        1297,
+        395
+      ],
+      "bbox": [
+        14,
+        59,
+        244,
+        232
+      ],
+      "sha256": "35ab6ab1fcc42c7f575c15cf9ca1d6e89a2833f1de64dac131b413944d7ecb13",
+      "sourceBand": [
+        211,
+        395
+      ]
+    },
+    {
+      "character": "Luna",
+      "action": "Backstep",
+      "frame": 7,
+      "output": "Assets/Art/Characters/Luna/Backstep/07.png",
+      "bodyReference": 182,
+      "uniformScale": 1.098901098901099,
+      "sourceRow": 1,
+      "sourceRect": [
+        1297,
+        232,
+        1483,
+        395
+      ],
+      "bbox": [
+        38,
+        53,
+        242,
+        232
+      ],
+      "sha256": "2ce92dca3ece83b101a144e13c034cfc28f4ef785e23cdc21b30568514a8e306",
+      "sourceBand": [
+        211,
+        395
+      ]
+    },
+    {
+      "character": "Luna",
+      "action": "Backstep",
+      "frame": 8,
+      "output": "Assets/Art/Characters/Luna/Backstep/08.png",
+      "bodyReference": 182,
+      "uniformScale": 1.098901098901099,
+      "sourceRow": 1,
+      "sourceRect": [
+        1475,
+        229,
+        1643,
+        395
+      ],
+      "bbox": [
+        56,
+        50,
+        241,
+        232
+      ],
+      "sha256": "101dcfe9273dd1e50f60a96d2687dd488a346f7b5ba82be16c0ba0b07b1e9f84",
+      "sourceBand": [
+        211,
+        395
+      ]
+    },
+    {
+      "character": "Luna",
+      "action": "Backstep",
+      "frame": 9,
+      "output": "Assets/Art/Characters/Luna/Backstep/09.png",
+      "bodyReference": 182,
+      "uniformScale": 1.098901098901099,
+      "sourceRow": 1,
+      "sourceRect": [
+        1649,
+        220,
+        1786,
+        395
+      ],
+      "bbox": [
+        81,
+        40,
+        232,
+        232
+      ],
+      "sha256": "e5ebcf6e1560c2aae2ef2737c06277eb9d5fb47f4f6e99e92d95be3bb0d067ab",
+      "sourceBand": [
+        211,
+        395
+      ]
+    },
+    {
+      "character": "Luna",
+      "action": "Backstep",
+      "frame": 10,
+      "output": "Assets/Art/Characters/Luna/Backstep/10.png",
+      "bodyReference": 182,
+      "uniformScale": 1.098901098901099,
+      "sourceRow": 1,
+      "sourceRect": [
+        1815,
+        211,
+        1949,
+        395
+      ],
+      "bbox": [
+        94,
+        30,
+        241,
+        232
+      ],
+      "sha256": "7eebd4c5fd368c2e30e4c4d6e419f6e0e5a849f0b3de15356829e357f00861de",
+      "sourceBand": [
+        211,
+        395
+      ]
+    },
+    {
+      "character": "Luna",
+      "action": "Victory",
+      "frame": 1,
+      "output": "Assets/Art/Characters/Luna/Victory/01.png",
+      "bodyReference": 182,
+      "uniformScale": 1.098901098901099,
+      "sourceRow": 2,
+      "sourceRect": [
+        18,
+        407,
+        163,
+        591
+      ],
+      "bbox": [
+        85,
+        30,
+        244,
+        232
+      ],
+      "sha256": "c11284356f05d09cccfd6aa9fa7e4883d644a795ab082bcbd4122c12caca81d0",
+      "sourceBand": [
+        406,
+        591
+      ]
+    },
+    {
+      "character": "Luna",
+      "action": "Victory",
+      "frame": 2,
+      "output": "Assets/Art/Characters/Luna/Victory/02.png",
+      "bodyReference": 182,
+      "uniformScale": 1.098901098901099,
+      "sourceRow": 2,
+      "sourceRect": [
+        195,
+        414,
+        400,
+        590
+      ],
+      "bbox": [
+        63,
+        39,
+        288,
+        232
+      ],
+      "sha256": "50cae7d35cc74def4e4e56e231b4bf021fce3fc4e1b7e18ec2169f229dc61db8",
+      "sourceBand": [
+        406,
+        591
+      ]
+    },
+    {
+      "character": "Luna",
+      "action": "Victory",
+      "frame": 3,
+      "output": "Assets/Art/Characters/Luna/Victory/03.png",
+      "bodyReference": 182,
+      "uniformScale": 1.098901098901099,
+      "sourceRow": 2,
+      "sourceRect": [
+        419,
+        415,
+        611,
+        591
+      ],
+      "bbox": [
+        92,
+        39,
+        303,
+        232
+      ],
+      "sha256": "269452a7227240902c754c0591ef5596b5d87a74c1bbaf74d4e7d2941dbb7630",
+      "sourceBand": [
+        406,
+        591
+      ]
+    },
+    {
+      "character": "Luna",
+      "action": "Victory",
+      "frame": 4,
+      "output": "Assets/Art/Characters/Luna/Victory/04.png",
+      "bodyReference": 182,
+      "uniformScale": 1.098901098901099,
+      "sourceRow": 2,
+      "sourceRect": [
+        603,
+        414,
+        815,
+        591
+      ],
+      "bbox": [
+        69,
+        37,
+        302,
+        232
+      ],
+      "sha256": "ef5a39ef7575c5baa0cc7a2932bfe900ac6fbd4fab02cf4ae2c052f7ed881d96",
+      "sourceBand": [
+        406,
+        591
+      ]
+    },
+    {
+      "character": "Luna",
+      "action": "Victory",
+      "frame": 5,
+      "output": "Assets/Art/Characters/Luna/Victory/05.png",
+      "bodyReference": 182,
+      "uniformScale": 1.098901098901099,
+      "sourceRow": 2,
+      "sourceRect": [
+        809,
+        414,
+        1011,
+        591
+      ],
+      "bbox": [
+        75,
+        37,
+        297,
+        232
+      ],
+      "sha256": "4e6938803c0a3184328451e09defb2cf0e8e3696f8dcb881ddf4babddb505be5",
+      "sourceBand": [
+        406,
+        591
+      ]
+    },
+    {
+      "character": "Luna",
+      "action": "Victory",
+      "frame": 6,
+      "output": "Assets/Art/Characters/Luna/Victory/06.png",
+      "bodyReference": 182,
+      "uniformScale": 1.098901098901099,
+      "sourceRow": 2,
+      "sourceRect": [
+        1018,
+        420,
+        1208,
+        590
+      ],
+      "bbox": [
+        94,
+        45,
+        303,
+        232
+      ],
+      "sha256": "ae70d33320d8a323f20a59f5011ff2d3fb7b76c6f1e5ee3c27f163387c28615c",
+      "sourceBand": [
+        406,
+        591
+      ]
+    },
+    {
+      "character": "Luna",
+      "action": "Victory",
+      "frame": 7,
+      "output": "Assets/Art/Characters/Luna/Victory/07.png",
+      "bodyReference": 182,
+      "uniformScale": 1.098901098901099,
+      "sourceRow": 2,
+      "sourceRect": [
+        1210,
+        425,
+        1390,
+        591
+      ],
+      "bbox": [
+        80,
+        50,
+        278,
+        232
+      ],
+      "sha256": "d075dbefd02947d703e8322319b945729e45e520534cd51b2fe59101d53405e1",
+      "sourceBand": [
+        406,
+        591
+      ]
+    },
+    {
+      "character": "Luna",
+      "action": "Victory",
+      "frame": 8,
+      "output": "Assets/Art/Characters/Luna/Victory/08.png",
+      "bodyReference": 182,
+      "uniformScale": 1.098901098901099,
+      "sourceRow": 2,
+      "sourceRect": [
+        1427,
+        421,
+        1580,
+        591
+      ],
+      "bbox": [
+        93,
+        45,
+        261,
+        232
+      ],
+      "sha256": "e92926ba9f199295bbb83b6a1ccbea8b3b8bf6703b797a7e6d6dab2682f0f8be",
+      "sourceBand": [
+        406,
+        591
+      ]
+    },
+    {
+      "character": "Luna",
+      "action": "Victory",
+      "frame": 9,
+      "output": "Assets/Art/Characters/Luna/Victory/09.png",
+      "bodyReference": 182,
+      "uniformScale": 1.098901098901099,
+      "sourceRow": 2,
+      "sourceRect": [
+        1625,
+        416,
+        1774,
+        591
+      ],
+      "bbox": [
+        87,
+        40,
+        251,
+        232
+      ],
+      "sha256": "a8d7ab7ec1205d4055124b31a978bcc439f75030e4e5e395caa7828c28016767",
+      "sourceBand": [
+        406,
+        591
+      ]
+    },
+    {
+      "character": "Luna",
+      "action": "Victory",
+      "frame": 10,
+      "output": "Assets/Art/Characters/Luna/Victory/10.png",
+      "bodyReference": 182,
+      "uniformScale": 1.098901098901099,
+      "sourceRow": 2,
+      "sourceRect": [
+        1805,
+        406,
+        1964,
+        591
+      ],
+      "bbox": [
+        87,
+        29,
+        262,
+        232
+      ],
+      "sha256": "c52fff7d491548e363a1cc3dfafb4d56d6302d97d36280ba5732ed2cf6cc7af5",
+      "sourceBand": [
+        406,
+        591
+      ]
+    },
+    {
+      "character": "Bram",
+      "action": "Dash",
+      "frame": 1,
+      "output": "Assets/Art/Characters/Bram/Dash/01.png",
+      "bodyReference": 178,
+      "uniformScale": 1.1235955056179776,
+      "sourceRow": 0,
+      "sourceRect": [
+        27,
+        24,
+        169,
+        202
+      ],
+      "bbox": [
+        91,
+        32,
+        251,
+        232
+      ],
+      "sha256": "bf465ff90903d9b01d5be46adeeb6e7264e92bda1dec7190a6cd73b83619f42d",
+      "sourceBand": [
+        24,
+        202
+      ]
+    },
+    {
+      "character": "Bram",
+      "action": "Dash",
+      "frame": 2,
+      "output": "Assets/Art/Characters/Bram/Dash/02.png",
+      "bodyReference": 178,
+      "uniformScale": 1.1235955056179776,
+      "sourceRow": 0,
+      "sourceRect": [
+        214,
+        40,
+        374,
+        202
+      ],
+      "bbox": [
+        98,
+        50,
+        278,
+        232
+      ],
+      "sha256": "f30d2f331c9468afbbe52c2886f30f60f538ade2cdfa561d9b7149e7bd6f4250",
+      "sourceBand": [
+        24,
+        202
+      ]
+    },
+    {
+      "character": "Bram",
+      "action": "Dash",
+      "frame": 3,
+      "output": "Assets/Art/Characters/Bram/Dash/03.png",
+      "bodyReference": 178,
+      "uniformScale": 1.1235955056179776,
+      "sourceRow": 0,
+      "sourceRect": [
+        409,
+        37,
+        613,
+        201
+      ],
+      "bbox": [
+        134,
+        48,
+        363,
+        232
+      ],
+      "sha256": "00e2a333df7ce7291e0fb2b995abcf3e41a41d13bcc4284f5b830ec1f0f62dbd",
+      "sourceBand": [
+        24,
+        202
+      ]
+    },
+    {
+      "character": "Bram",
+      "action": "Dash",
+      "frame": 4,
+      "output": "Assets/Art/Characters/Bram/Dash/04.png",
+      "bodyReference": 178,
+      "uniformScale": 1.1235955056179776,
+      "sourceRow": 0,
+      "sourceRect": [
+        625,
+        40,
+        825,
+        201
+      ],
+      "bbox": [
+        137,
+        51,
+        362,
+        232
+      ],
+      "sha256": "921b5f3d302710a701e8c489d021a28172b29ba1423e7ace7cfc3ef69b48ebef",
+      "sourceBand": [
+        24,
+        202
+      ]
+    },
+    {
+      "character": "Bram",
+      "action": "Dash",
+      "frame": 5,
+      "output": "Assets/Art/Characters/Bram/Dash/05.png",
+      "bodyReference": 178,
+      "uniformScale": 1.1235955056179776,
+      "sourceRow": 0,
+      "sourceRect": [
+        810,
+        42,
+        1035,
+        201
+      ],
+      "bbox": [
+        123,
+        53,
+        376,
+        232
+      ],
+      "sha256": "e5462163b7e1d1d9c5f226e15ae87c5e264d507ca556d0a58c8b2a79fe7d9a91",
+      "sourceBand": [
+        24,
+        202
+      ]
+    },
+    {
+      "character": "Bram",
+      "action": "Dash",
+      "frame": 6,
+      "output": "Assets/Art/Characters/Bram/Dash/06.png",
+      "bodyReference": 178,
+      "uniformScale": 1.1235955056179776,
+      "sourceRow": 0,
+      "sourceRect": [
+        1033,
+        46,
+        1238,
+        201
+      ],
+      "bbox": [
+        126,
+        58,
+        356,
+        232
+      ],
+      "sha256": "2aa65f078d96542fc2955ff16bb95e064107df383ea595a79b6e949b9c2c667b",
+      "sourceBand": [
+        24,
+        202
+      ]
+    },
+    {
+      "character": "Bram",
+      "action": "Dash",
+      "frame": 7,
+      "output": "Assets/Art/Characters/Bram/Dash/07.png",
+      "bodyReference": 178,
+      "uniformScale": 1.1235955056179776,
+      "sourceRow": 0,
+      "sourceRect": [
+        1228,
+        33,
+        1415,
+        201
+      ],
+      "bbox": [
+        133,
+        43,
+        343,
+        232
+      ],
+      "sha256": "35d97dbc83bf7a92434f68fef53d27af77fae87c0f5fa304d8b0736a600dffff",
+      "sourceBand": [
+        24,
+        202
+      ]
+    },
+    {
+      "character": "Bram",
+      "action": "Dash",
+      "frame": 8,
+      "output": "Assets/Art/Characters/Bram/Dash/08.png",
+      "bodyReference": 178,
+      "uniformScale": 1.1235955056179776,
+      "sourceRow": 0,
+      "sourceRect": [
+        1415,
+        38,
+        1590,
+        201
+      ],
+      "bbox": [
+        138,
+        49,
+        335,
+        232
+      ],
+      "sha256": "db147e87cacec3b0ea2cf9b2518140a6ace9263954d1733dad3d0b0f58fbed94",
+      "sourceBand": [
+        24,
+        202
+      ]
+    },
+    {
+      "character": "Bram",
+      "action": "Dash",
+      "frame": 9,
+      "output": "Assets/Art/Characters/Bram/Dash/09.png",
+      "bodyReference": 178,
+      "uniformScale": 1.1235955056179776,
+      "sourceRow": 0,
+      "sourceRect": [
+        1620,
+        35,
+        1769,
+        202
+      ],
+      "bbox": [
+        88,
+        44,
+        255,
+        232
+      ],
+      "sha256": "6b817a7a0e904f8dd9d545ca8f3fa56b8d1fd79e110023a58aaa039a4f9b241e",
+      "sourceBand": [
+        24,
+        202
+      ]
+    },
+    {
+      "character": "Bram",
+      "action": "Dash",
+      "frame": 10,
+      "output": "Assets/Art/Characters/Bram/Dash/10.png",
+      "bodyReference": 178,
+      "uniformScale": 1.1235955056179776,
+      "sourceRow": 0,
+      "sourceRect": [
+        1806,
+        29,
+        1942,
+        202
+      ],
+      "bbox": [
+        91,
+        38,
+        244,
+        232
+      ],
+      "sha256": "3dc7f189de5f08253810b43e605e57308def4ea6339c385d2b18c891c67989bd",
+      "sourceBand": [
+        24,
+        202
+      ]
+    },
+    {
+      "character": "Bram",
+      "action": "Backstep",
+      "frame": 1,
+      "output": "Assets/Art/Characters/Bram/Backstep/01.png",
+      "bodyReference": 178,
+      "uniformScale": 1.1235955056179776,
+      "sourceRow": 1,
+      "sourceRect": [
+        27,
+        220,
+        168,
+        395
+      ],
+      "bbox": [
+        90,
+        35,
+        248,
+        232
+      ],
+      "sha256": "8531c1bb4c33356c7dc47c78385fb46b676a4d7261e9629ce466d76c8be47f18",
+      "sourceBand": [
+        220,
+        395
+      ]
+    },
+    {
+      "character": "Bram",
+      "action": "Backstep",
+      "frame": 2,
+      "output": "Assets/Art/Characters/Bram/Backstep/02.png",
+      "bodyReference": 178,
+      "uniformScale": 1.1235955056179776,
+      "sourceRow": 1,
+      "sourceRect": [
+        224,
+        227,
+        394,
+        395
+      ],
+      "bbox": [
+        94,
+        43,
+        285,
+        232
+      ],
+      "sha256": "8dfc4ed38c68baef1c79af9b83127d93542e35e5a2e1a4888c942c128159f82c",
+      "sourceBand": [
+        220,
+        395
+      ]
+    },
+    {
+      "character": "Bram",
+      "action": "Backstep",
+      "frame": 3,
+      "output": "Assets/Art/Characters/Bram/Backstep/03.png",
+      "bodyReference": 178,
+      "uniformScale": 1.1235955056179776,
+      "sourceRow": 1,
+      "sourceRect": [
+        443,
+        230,
+        625,
+        392
+      ],
+      "bbox": [
+        67,
+        50,
+        271,
+        232
+      ],
+      "sha256": "a4b3fa7c61846daf5b8c31e83654a4baf27c2cde6543405717992cf776255a9f",
+      "sourceBand": [
+        220,
+        395
+      ]
+    },
+    {
+      "character": "Bram",
+      "action": "Backstep",
+      "frame": 4,
+      "output": "Assets/Art/Characters/Bram/Backstep/04.png",
+      "bodyReference": 178,
+      "uniformScale": 1.1235955056179776,
+      "sourceRow": 1,
+      "sourceRect": [
+        662,
+        231,
+        844,
+        393
+      ],
+      "bbox": [
+        104,
+        50,
+        308,
+        232
+      ],
+      "sha256": "20ffd3fe88b38270fbed114865ce81b1f4a2e774323040f3dca409307f5a7eac",
+      "sourceBand": [
+        220,
+        395
+      ]
+    },
+    {
+      "character": "Bram",
+      "action": "Backstep",
+      "frame": 5,
+      "output": "Assets/Art/Characters/Bram/Backstep/05.png",
+      "bodyReference": 178,
+      "uniformScale": 1.1235955056179776,
+      "sourceRow": 1,
+      "sourceRect": [
+        864,
+        238,
+        1047,
+        393
+      ],
+      "bbox": [
+        100,
+        58,
+        306,
+        232
+      ],
+      "sha256": "ed9320384b925c6d1273a575871621599bd9b65d3a3ad26f3e667ee99776e66d",
+      "sourceBand": [
+        220,
+        395
+      ]
+    },
+    {
+      "character": "Bram",
+      "action": "Backstep",
+      "frame": 6,
+      "output": "Assets/Art/Characters/Bram/Backstep/06.png",
+      "bodyReference": 178,
+      "uniformScale": 1.1235955056179776,
+      "sourceRow": 1,
+      "sourceRect": [
+        1070,
+        240,
+        1240,
+        393
+      ],
+      "bbox": [
+        110,
+        60,
+        301,
+        232
+      ],
+      "sha256": "ae8a3b033b5cf8238e80e24bd8f0da5090a0aa29b254bd3383d2b523159dd5a8",
+      "sourceBand": [
+        220,
+        395
+      ]
+    },
+    {
+      "character": "Bram",
+      "action": "Backstep",
+      "frame": 7,
+      "output": "Assets/Art/Characters/Bram/Backstep/07.png",
+      "bodyReference": 178,
+      "uniformScale": 1.1235955056179776,
+      "sourceRow": 1,
+      "sourceRect": [
+        1262,
+        240,
+        1433,
+        393
+      ],
+      "bbox": [
+        101,
+        60,
+        293,
+        232
+      ],
+      "sha256": "c9cdc70fc805aa9e55168d8e74b65b0d460de85eb27e7fc72ecff0b338676fdb",
+      "sourceBand": [
+        220,
+        395
+      ]
+    },
+    {
+      "character": "Bram",
+      "action": "Backstep",
+      "frame": 8,
+      "output": "Assets/Art/Characters/Bram/Backstep/08.png",
+      "bodyReference": 178,
+      "uniformScale": 1.1235955056179776,
+      "sourceRow": 1,
+      "sourceRect": [
+        1458,
+        242,
+        1619,
+        394
+      ],
+      "bbox": [
+        110,
+        61,
+        291,
+        232
+      ],
+      "sha256": "eb074b3eb93853d3592d8e0db4d8cf2b4065e7773d46c25578bbf06e909a4c01",
+      "sourceBand": [
+        220,
+        395
+      ]
+    },
+    {
+      "character": "Bram",
+      "action": "Backstep",
+      "frame": 9,
+      "output": "Assets/Art/Characters/Bram/Backstep/09.png",
+      "bodyReference": 178,
+      "uniformScale": 1.1235955056179776,
+      "sourceRow": 1,
+      "sourceRect": [
+        1631,
+        229,
+        1774,
+        395
+      ],
+      "bbox": [
+        79,
+        45,
+        240,
+        232
+      ],
+      "sha256": "298f0f141bcd55413dd774b13e25195f785eef460255fddb94119fb80244d922",
+      "sourceBand": [
+        220,
+        395
+      ]
+    },
+    {
+      "character": "Bram",
+      "action": "Backstep",
+      "frame": 10,
+      "output": "Assets/Art/Characters/Bram/Backstep/10.png",
+      "bodyReference": 178,
+      "uniformScale": 1.1235955056179776,
+      "sourceRow": 1,
+      "sourceRect": [
+        1807,
+        222,
+        1943,
+        395
+      ],
+      "bbox": [
+        93,
+        38,
+        246,
+        232
+      ],
+      "sha256": "702016bebb21fae6858efbded59a2707f19dfe1575f7c9b8b807b52ff6dad98c",
+      "sourceBand": [
+        220,
+        395
+      ]
+    },
+    {
+      "character": "Bram",
+      "action": "Victory",
+      "frame": 1,
+      "output": "Assets/Art/Characters/Bram/Victory/01.png",
+      "bodyReference": 178,
+      "uniformScale": 1.1235955056179776,
+      "sourceRow": 2,
+      "sourceRect": [
+        30,
+        420,
+        172,
+        590
+      ],
+      "bbox": [
+        95,
+        41,
+        255,
+        232
+      ],
+      "sha256": "993d41ad75b753f766c30df877b9921c720e4f980ddde3cc7ead103973dea1f7",
+      "sourceBand": [
+        412,
+        590
+      ]
+    },
+    {
+      "character": "Bram",
+      "action": "Victory",
+      "frame": 2,
+      "output": "Assets/Art/Characters/Bram/Victory/02.png",
+      "bodyReference": 178,
+      "uniformScale": 1.1235955056179776,
+      "sourceRow": 2,
+      "sourceRect": [
+        219,
+        424,
+        374,
+        590
+      ],
+      "bbox": [
+        88,
+        45,
+        262,
+        232
+      ],
+      "sha256": "3ebbc13ff590313452a50b920072f99abaaf4adab001f89563ff8e4d8ae0c01d",
+      "sourceBand": [
+        412,
+        590
+      ]
+    },
+    {
+      "character": "Bram",
+      "action": "Victory",
+      "frame": 3,
+      "output": "Assets/Art/Characters/Bram/Victory/03.png",
+      "bodyReference": 178,
+      "uniformScale": 1.1235955056179776,
+      "sourceRow": 2,
+      "sourceRect": [
+        397,
+        412,
+        596,
+        590
+      ],
+      "bbox": [
+        54,
+        32,
+        278,
+        232
+      ],
+      "sha256": "5d1a84a9e739e65cc6dde026e7f3ac0bedd551a91044f13f17d8a091b30ef779",
+      "sourceBand": [
+        412,
+        590
+      ]
+    },
+    {
+      "character": "Bram",
+      "action": "Victory",
+      "frame": 4,
+      "output": "Assets/Art/Characters/Bram/Victory/04.png",
+      "bodyReference": 178,
+      "uniformScale": 1.1235955056179776,
+      "sourceRow": 2,
+      "sourceRect": [
+        610,
+        429,
+        771,
+        589
+      ],
+      "bbox": [
+        72,
+        52,
+        253,
+        232
+      ],
+      "sha256": "97b1fe21f4154e241020a70b7a93b1e691edadb2a86951a86318893c66d63f94",
+      "sourceBand": [
+        412,
+        590
+      ]
+    },
+    {
+      "character": "Bram",
+      "action": "Victory",
+      "frame": 5,
+      "output": "Assets/Art/Characters/Bram/Victory/05.png",
+      "bodyReference": 178,
+      "uniformScale": 1.1235955056179776,
+      "sourceRow": 2,
+      "sourceRect": [
+        808,
+        425,
+        983,
+        590
+      ],
+      "bbox": [
+        80,
+        47,
+        277,
+        232
+      ],
+      "sha256": "1c7744e9e4fb979b06486f74bf2493463359db0bf16d27494395d52d672d3dfe",
+      "sourceBand": [
+        412,
+        590
+      ]
+    },
+    {
+      "character": "Bram",
+      "action": "Victory",
+      "frame": 6,
+      "output": "Assets/Art/Characters/Bram/Victory/06.png",
+      "bodyReference": 178,
+      "uniformScale": 1.1235955056179776,
+      "sourceRow": 2,
+      "sourceRect": [
+        1013,
+        431,
+        1142,
+        590
+      ],
+      "bbox": [
+        95,
+        53,
+        240,
+        232
+      ],
+      "sha256": "e2dd3ff6740a8485d339e1ec23a47275dbcfe0f10270dde749c206f37cccbde3",
+      "sourceBand": [
+        412,
+        590
+      ]
+    },
+    {
+      "character": "Bram",
+      "action": "Victory",
+      "frame": 7,
+      "output": "Assets/Art/Characters/Bram/Victory/07.png",
+      "bodyReference": 178,
+      "uniformScale": 1.1235955056179776,
+      "sourceRow": 2,
+      "sourceRect": [
+        1191,
+        416,
+        1376,
+        590
+      ],
+      "bbox": [
+        65,
+        36,
+        273,
+        232
+      ],
+      "sha256": "eb0ee76f77cde78468cf33c5111434e4fc35eee1ab97e1683a95c7cb91165e32",
+      "sourceBand": [
+        412,
+        590
+      ]
+    },
+    {
+      "character": "Bram",
+      "action": "Victory",
+      "frame": 8,
+      "output": "Assets/Art/Characters/Bram/Victory/08.png",
+      "bodyReference": 178,
+      "uniformScale": 1.1235955056179776,
+      "sourceRow": 2,
+      "sourceRect": [
+        1395,
+        417,
+        1572,
+        590
+      ],
+      "bbox": [
+        75,
+        38,
+        274,
+        232
+      ],
+      "sha256": "39f4e887386e4cbf05731c1b44509c7e4d3b089bec12e3b67677ba5dc83cb156",
+      "sourceBand": [
+        412,
+        590
+      ]
+    },
+    {
+      "character": "Bram",
+      "action": "Victory",
+      "frame": 9,
+      "output": "Assets/Art/Characters/Bram/Victory/09.png",
+      "bodyReference": 178,
+      "uniformScale": 1.1235955056179776,
+      "sourceRow": 2,
+      "sourceRect": [
+        1597,
+        418,
+        1780,
+        590
+      ],
+      "bbox": [
+        64,
+        39,
+        270,
+        232
+      ],
+      "sha256": "62b3be37d93634ef963182d7d8373502449222057e3ea710fb27ec12b3bfe7d2",
+      "sourceBand": [
+        412,
+        590
+      ]
+    },
+    {
+      "character": "Bram",
+      "action": "Victory",
+      "frame": 10,
+      "output": "Assets/Art/Characters/Bram/Victory/10.png",
+      "bodyReference": 178,
+      "uniformScale": 1.1235955056179776,
+      "sourceRow": 2,
+      "sourceRect": [
+        1803,
+        416,
+        1958,
+        589
+      ],
+      "bbox": [
+        83,
+        38,
+        257,
+        232
+      ],
+      "sha256": "5cf6bd59984c828cc16a42d86668023b6b29408c3eeed66a5f6580dcee83c657",
+      "sourceBand": [
+        412,
+        590
+      ]
+    },
+    {
+      "character": "Bram",
+      "action": "Ultimate",
+      "frame": 1,
+      "output": "Assets/Art/Characters/Bram/Ultimate/01.png",
+      "bodyReference": 178,
+      "uniformScale": 1.1235955056179776,
+      "sourceRow": 3,
+      "sourceRect": [
+        23,
+        608,
+        167,
+        777
+      ],
+      "bbox": [
+        87,
+        42,
+        249,
+        232
+      ],
+      "sha256": "9ece3680c0a4ca959ff701f1d1ae5445580cb38c55816a844dd6fa85940fd1ae",
+      "sourceBand": [
+        603,
+        777
+      ]
+    },
+    {
+      "character": "Bram",
+      "action": "Ultimate",
+      "frame": 2,
+      "output": "Assets/Art/Characters/Bram/Ultimate/02.png",
+      "bodyReference": 178,
+      "uniformScale": 1.1235955056179776,
+      "sourceRow": 3,
+      "sourceRect": [
+        192,
+        636,
+        339,
+        776
+      ],
+      "bbox": [
+        91,
+        75,
+        256,
+        232
+      ],
+      "sha256": "33dd16a10e7a55ef1cb63a5c97f840b5d4e3dc863b7f71fc9c0435223f522db7",
+      "sourceBand": [
+        603,
+        777
+      ]
+    },
+    {
+      "character": "Bram",
+      "action": "Ultimate",
+      "frame": 3,
+      "output": "Assets/Art/Characters/Bram/Ultimate/03.png",
+      "bodyReference": 178,
+      "uniformScale": 1.1235955056179776,
+      "sourceRow": 3,
+      "sourceRect": [
+        353,
+        631,
+        559,
+        776
+      ],
+      "bbox": [
+        95,
+        69,
+        326,
+        232
+      ],
+      "sha256": "82d8cb83ca98666844d381fc0c9105d8b5c9e938d8d19b7e747c70b2627787fa",
+      "sourceBand": [
+        603,
+        777
+      ]
+    },
+    {
+      "character": "Bram",
+      "action": "Ultimate",
+      "frame": 4,
+      "output": "Assets/Art/Characters/Bram/Ultimate/04.png",
+      "bodyReference": 178,
+      "uniformScale": 1.1235955056179776,
+      "sourceRow": 3,
+      "sourceRect": [
+        561,
+        605,
+        747,
+        777
+      ],
+      "bbox": [
+        109,
+        39,
+        318,
+        232
+      ],
+      "sha256": "1f1e2cf27763bf4330563f4fb2fffecacd9145156eb1dd90d2ab706228dd1b6c",
+      "sourceBand": [
+        603,
+        777
+      ]
+    },
+    {
+      "character": "Bram",
+      "action": "Ultimate",
+      "frame": 5,
+      "output": "Assets/Art/Characters/Bram/Ultimate/05.png",
+      "bodyReference": 178,
+      "uniformScale": 1.1235955056179776,
+      "sourceRow": 3,
+      "sourceRect": [
+        765,
+        603,
+        956,
+        777
+      ],
+      "bbox": [
+        112,
+        36,
+        327,
+        232
+      ],
+      "sha256": "3ed2da7003efef10b65aa7bead2b178deb4cd56e6ad257cf0b61ea15e81735da",
+      "sourceBand": [
+        603,
+        777
+      ]
+    },
+    {
+      "character": "Bram",
+      "action": "Ultimate",
+      "frame": 6,
+      "output": "Assets/Art/Characters/Bram/Ultimate/06.png",
+      "bodyReference": 178,
+      "uniformScale": 1.1235955056179776,
+      "sourceRow": 3,
+      "sourceRect": [
+        972,
+        614,
+        1173,
+        776
+      ],
+      "bbox": [
+        79,
+        50,
+        305,
+        232
+      ],
+      "sha256": "7652237b64d32f564f56c5e02e15b7e38243408e635498091b419fd50cda1ab2",
+      "sourceBand": [
+        603,
+        777
+      ]
+    },
+    {
+      "character": "Bram",
+      "action": "Ultimate",
+      "frame": 7,
+      "output": "Assets/Art/Characters/Bram/Ultimate/07.png",
+      "bodyReference": 178,
+      "uniformScale": 1.1235955056179776,
+      "sourceRow": 3,
+      "sourceRect": [
+        1181,
+        629,
+        1397,
+        776
+      ],
+      "bbox": [
+        72,
+        67,
+        315,
+        232
+      ],
+      "sha256": "1279be1807ce04638eaee71c584bb458ec089aa006b95e974f7a5c4b5116fe96",
+      "sourceBand": [
+        603,
+        777
+      ]
+    },
+    {
+      "character": "Bram",
+      "action": "Ultimate",
+      "frame": 8,
+      "output": "Assets/Art/Characters/Bram/Ultimate/08.png",
+      "bodyReference": 178,
+      "uniformScale": 1.1235955056179776,
+      "sourceRow": 3,
+      "sourceRect": [
+        1404,
+        644,
+        1605,
+        776
+      ],
+      "bbox": [
+        80,
+        84,
+        306,
+        232
+      ],
+      "sha256": "d80f3d9e108e15d7eb98e12cacc2a3f1c76d071cd14419705dba0780c272c13c",
+      "sourceBand": [
+        603,
+        777
+      ]
+    },
+    {
+      "character": "Bram",
+      "action": "Ultimate",
+      "frame": 9,
+      "output": "Assets/Art/Characters/Bram/Ultimate/09.png",
+      "bodyReference": 178,
+      "uniformScale": 1.1235955056179776,
+      "sourceRow": 3,
+      "sourceRect": [
+        1624,
+        630,
+        1779,
+        777
+      ],
+      "bbox": [
+        83,
+        67,
+        257,
+        232
+      ],
+      "sha256": "5f9197c501304f0b188c5115ad6e2eb2bd452120b0375b6e20adb23c47b96ef5",
+      "sourceBand": [
+        603,
+        777
+      ]
+    },
+    {
+      "character": "Bram",
+      "action": "Ultimate",
+      "frame": 10,
+      "output": "Assets/Art/Characters/Bram/Ultimate/10.png",
+      "bodyReference": 178,
+      "uniformScale": 1.1235955056179776,
+      "sourceRow": 3,
+      "sourceRect": [
+        1801,
+        609,
+        1959,
+        777
+      ],
+      "bbox": [
+        80,
+        43,
+        258,
+        232
+      ],
+      "sha256": "3ab583c0e938e5ffc7525aa9600c13c49adbcf0ea35d606b3c805cea31b822d5",
+      "sourceBand": [
+        603,
+        777
+      ]
+    },
+    {
+      "character": "Luna",
+      "action": "Ultimate",
+      "frame": 1,
+      "output": "Assets/Art/Characters/Luna/Ultimate/01.png",
+      "uniformScale": 0.6846846846846847,
+      "bbox": [
+        69,
+        35,
+        250,
+        232
+      ],
+      "sha256": "86c49df452f282180d57e1bb8d89d941f9e2d43bcf69eb375b2210af4b7a39c5",
+      "source": "Assets\\Art\\Sources\\Luna-Ultimate-v7-source.png",
+      "sourceRow": 0,
+      "sourcePose": 0,
+      "sourceRect": [
+        41,
+        92,
+        306,
+        379
+      ]
+    },
+    {
+      "character": "Luna",
+      "action": "Ultimate",
+      "frame": 2,
+      "output": "Assets/Art/Characters/Luna/Ultimate/02.png",
+      "uniformScale": 0.6846846846846847,
+      "bbox": [
+        66,
+        16,
+        315,
+        232
+      ],
+      "sha256": "494f14585ead5ca4b1ecee2d9254a3325ac4bace0c0e85f540c6420523443e6e",
+      "source": "Assets\\Art\\Sources\\Luna-Ultimate-v7-source.png",
+      "sourceRow": 0,
+      "sourcePose": 1,
+      "sourceRect": [
+        392,
+        62,
+        756,
+        378
+      ]
+    },
+    {
+      "character": "Luna",
+      "action": "Ultimate",
+      "frame": 3,
+      "output": "Assets/Art/Characters/Luna/Ultimate/03.png",
+      "uniformScale": 0.6846846846846847,
+      "bbox": [
+        75,
+        35,
+        313,
+        232
+      ],
+      "sha256": "826433028bbf306a35e7fe3ac6ec56d555b8edb7b3750878190bed14e5fa92c5",
+      "source": "Assets\\Art\\Sources\\Luna-Ultimate-v7-source.png",
+      "sourceRow": 0,
+      "sourcePose": 2,
+      "sourceRect": [
+        805,
+        92,
+        1153,
+        380
+      ]
+    },
+    {
+      "character": "Luna",
+      "action": "Ultimate",
+      "frame": 4,
+      "output": "Assets/Art/Characters/Luna/Ultimate/04.png",
+      "uniformScale": 0.6846846846846847,
+      "bbox": [
+        63,
+        4,
+        337,
+        232
+      ],
+      "sha256": "2d33b6a7d8600a8e115be4e2cba4f62ba97e5600cbe51edd4f65579d4e4f86e6",
+      "source": "Assets\\Art\\Sources\\Luna-Ultimate-v7-source.png",
+      "sourceRow": 0,
+      "sourcePose": 3,
+      "sourceRect": [
+        1187,
+        46,
+        1587,
+        379
+      ]
+    },
+    {
+      "character": "Luna",
+      "action": "Ultimate",
+      "frame": 5,
+      "output": "Assets/Art/Characters/Luna/Ultimate/05.png",
+      "uniformScale": 0.6846846846846847,
+      "bbox": [
+        50,
+        35,
+        300,
+        232
+      ],
+      "sha256": "457163cc3b6fb0c9847a866354cb676ebe3a9cfc018126b616cd1d968248a93d",
+      "source": "Assets\\Art\\Sources\\Luna-Ultimate-v7-source.png",
+      "sourceRow": 0,
+      "sourcePose": 4,
+      "sourceRect": [
+        1605,
+        94,
+        1970,
+        381
+      ]
+    },
+    {
+      "character": "Luna",
+      "action": "Ultimate",
+      "frame": 6,
+      "output": "Assets/Art/Characters/Luna/Ultimate/06.png",
+      "uniformScale": 0.6846846846846847,
+      "bbox": [
+        52,
+        32,
+        321,
+        232
+      ],
+      "sha256": "5520f1da8990fe0f2edf4cf7b4127e9b3321d9e5434c8391714987e3f9dd8179",
+      "source": "Assets\\Art\\Sources\\Luna-Ultimate-v7-source.png",
+      "sourceRow": 1,
+      "sourcePose": 0,
+      "sourceRect": [
+        23,
+        445,
+        416,
+        737
+      ]
+    },
+    {
+      "character": "Luna",
+      "action": "Ultimate",
+      "frame": 7,
+      "output": "Assets/Art/Characters/Luna/Ultimate/07.png",
+      "uniformScale": 0.6846846846846847,
+      "bbox": [
+        41,
+        38,
+        348,
+        232
+      ],
+      "sha256": "fc69939529d24f51446a1c0a67fc4768a3eaf1e2c43f46e994f2a3df535e091d",
+      "source": "Assets\\Art\\Sources\\Luna-Ultimate-v7-source.png",
+      "sourceRow": 1,
+      "sourcePose": 1,
+      "sourceRect": [
+        408,
+        454,
+        856,
+        738
+      ]
+    },
+    {
+      "character": "Luna",
+      "action": "Ultimate",
+      "frame": 8,
+      "output": "Assets/Art/Characters/Luna/Ultimate/08.png",
+      "uniformScale": 0.6846846846846847,
+      "bbox": [
+        64,
+        32,
+        311,
+        232
+      ],
+      "sha256": "54c8cea6c7315c856e4e920ba33f597b56b71e596c14d8a67208dffa38aac354",
+      "source": "Assets\\Art\\Sources\\Luna-Ultimate-v7-source.png",
+      "sourceRow": 1,
+      "sourcePose": 2,
+      "sourceRect": [
+        857,
+        454,
+        1218,
+        746
+      ]
+    },
+    {
+      "character": "Luna",
+      "action": "Ultimate",
+      "frame": 9,
+      "output": "Assets/Art/Characters/Luna/Ultimate/09.png",
+      "uniformScale": 0.6846846846846847,
+      "bbox": [
+        81,
+        29,
+        282,
+        232
+      ],
+      "sha256": "4a4de28365f69f0767cd850ee019ebe6c1faafe365a516b46565408d53b65835",
+      "source": "Assets\\Art\\Sources\\Luna-Ultimate-v7-source.png",
+      "sourceRow": 1,
+      "sourcePose": 3,
+      "sourceRect": [
+        1280,
+        450,
+        1575,
+        747
+      ]
+    },
+    {
+      "character": "Luna",
+      "action": "Ultimate",
+      "frame": 10,
+      "output": "Assets/Art/Characters/Luna/Ultimate/10.png",
+      "uniformScale": 0.6846846846846847,
+      "bbox": [
+        85,
+        25,
+        257,
+        232
+      ],
+      "sha256": "d1355131090f5737ccfc23fe31dc2cfbe12d3f4ec5f5e8bc993b6cc7a31ffb48",
+      "source": "Assets\\Art\\Sources\\Luna-Ultimate-v7-source.png",
+      "sourceRow": 1,
+      "sourcePose": 4,
+      "sourceRect": [
+        1657,
+        445,
+        1908,
+        747
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "character": "Fern",
+      "source": "Assets\\Art\\Sources\\Fern-Actions-v7-source.png",
+      "sha256": "2a73bb0733c97e29181230e33ddc51eaee717bc7ee376087e758e195f7e0b9fa"
+    },
+    {
+      "character": "Ember",
+      "source": "Assets\\Art\\Sources\\Ember-Actions-v7-source.png",
+      "sha256": "22afdc0b6eb925c174f135126511cb59a9c31f4f0813ab8ec611cfde80692512"
+    },
+    {
+      "character": "Luna",
+      "source": "Assets\\Art\\Sources\\Luna-Actions-v7-source.png",
+      "sha256": "ef94c7b65542196aed2184d5da08d6334807d9d11a32eca0befa6b99a860fb8a"
+    },
+    {
+      "character": "Bram",
+      "source": "Assets\\Art\\Sources\\Bram-Actions-v7-source.png",
+      "sha256": "5a348550a6c6812cb35a0003c0f7bca647b9bb720fac527228443f5baf09aff2"
+    },
+    {
+      "character": "Luna",
+      "source": "Assets\\Art\\Sources\\Luna-Ultimate-v7-source.png",
+      "sha256": "88221b228af1fd1fb2bb9906d8aa26c601ba814008d06c7e2799a9ade183ead3",
+      "note": "Regenerated ten complete Ultimate poses; original sheet contained merged/FX-only cells. One row-wide scale retains all effects; neutral body height195px vs200px nominal."
+    }
+  ]
+}

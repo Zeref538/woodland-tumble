@@ -1,0 +1,949 @@
+fileFormatVersion: 2
+guid: b8d031e9f79f81646a7afde24148e0d2
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6310830654143177062
+    second: Ember-Actions-v7-source_0
+  - first:
+      213: 8136146189169829178
+    second: Ember-Actions-v7-source_1
+  - first:
+      213: -7263442035865566938
+    second: Ember-Actions-v7-source_2
+  - first:
+      213: 2276732898817705703
+    second: Ember-Actions-v7-source_3
+  - first:
+      213: -1696727322598239137
+    second: Ember-Actions-v7-source_4
+  - first:
+      213: 7214822823930320221
+    second: Ember-Actions-v7-source_5
+  - first:
+      213: -5570543977579733214
+    second: Ember-Actions-v7-source_6
+  - first:
+      213: 1679333161361199892
+    second: Ember-Actions-v7-source_7
+  - first:
+      213: -3072950839527555675
+    second: Ember-Actions-v7-source_8
+  - first:
+      213: 7017647261715113806
+    second: Ember-Actions-v7-source_9
+  - first:
+      213: 2843464048832804033
+    second: Ember-Actions-v7-source_10
+  - first:
+      213: -7977564251722976857
+    second: Ember-Actions-v7-source_11
+  - first:
+      213: 1626975611600723560
+    second: Ember-Actions-v7-source_12
+  - first:
+      213: -1525284631574091232
+    second: Ember-Actions-v7-source_13
+  - first:
+      213: -2191381241710005960
+    second: Ember-Actions-v7-source_14
+  - first:
+      213: 5564703210315743111
+    second: Ember-Actions-v7-source_15
+  - first:
+      213: -3305620301899788199
+    second: Ember-Actions-v7-source_16
+  - first:
+      213: 7536838099845307918
+    second: Ember-Actions-v7-source_17
+  - first:
+      213: -5320018659901628070
+    second: Ember-Actions-v7-source_18
+  - first:
+      213: 8444178201152621357
+    second: Ember-Actions-v7-source_19
+  - first:
+      213: -3948056280521610314
+    second: Ember-Actions-v7-source_20
+  - first:
+      213: 5184062804862285929
+    second: Ember-Actions-v7-source_21
+  - first:
+      213: -4931362230108822813
+    second: Ember-Actions-v7-source_22
+  - first:
+      213: -5054323859415313632
+    second: Ember-Actions-v7-source_23
+  - first:
+      213: 862991658032565334
+    second: Ember-Actions-v7-source_24
+  - first:
+      213: -7869463085789261296
+    second: Ember-Actions-v7-source_25
+  - first:
+      213: -1171975795096628482
+    second: Ember-Actions-v7-source_26
+  - first:
+      213: 6471971721368288556
+    second: Ember-Actions-v7-source_27
+  - first:
+      213: -2688248114957524363
+    second: Ember-Actions-v7-source_28
+  - first:
+      213: 5559863556945543279
+    second: Ember-Actions-v7-source_29
+  - first:
+      213: -4041932101873604781
+    second: Ember-Actions-v7-source_30
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Ember-Actions-v7-source_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 386
+        width: 195
+        height: 392
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 661a9d13b03949750800000000000000
+      internalID: 6310830654143177062
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Actions-v7-source_1
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 590
+        width: 186
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a35ad161ad569e070800000000000000
+      internalID: 8136146189169829178
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Actions-v7-source_2
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 586
+        width: 186
+        height: 169
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 621c795a3f1133b90800000000000000
+      internalID: -7263442035865566938
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Actions-v7-source_3
+      rect:
+        serializedVersion: 2
+        x: 617
+        y: 591
+        width: 216
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e689724284989f10800000000000000
+      internalID: 2276732898817705703
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Actions-v7-source_4
+      rect:
+        serializedVersion: 2
+        x: 850
+        y: 593
+        width: 200
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5415df5d730478e0800000000000000
+      internalID: -1696727322598239137
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Actions-v7-source_5
+      rect:
+        serializedVersion: 2
+        x: 1059
+        y: 590
+        width: 401
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d555fb1f123302460800000000000000
+      internalID: 7214822823930320221
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Actions-v7-source_6
+      rect:
+        serializedVersion: 2
+        x: 1465
+        y: 593
+        width: 166
+        height: 169
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22f1ba234c371b2b0800000000000000
+      internalID: -5570543977579733214
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Actions-v7-source_7
+      rect:
+        serializedVersion: 2
+        x: 1639
+        y: 590
+        width: 156
+        height: 183
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 413d77edc903e4710800000000000000
+      internalID: 1679333161361199892
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Actions-v7-source_8
+      rect:
+        serializedVersion: 2
+        x: 1806
+        y: 193
+        width: 165
+        height: 586
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5adb8bd1e7faa55d0800000000000000
+      internalID: -3072950839527555675
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Actions-v7-source_9
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 197
+        width: 168
+        height: 385
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e47a581e001b36160800000000000000
+      internalID: 7017647261715113806
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Actions-v7-source_10
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 395
+        width: 194
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c4f542bc73067720800000000000000
+      internalID: 2843464048832804033
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Actions-v7-source_11
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 488
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a1723b749ff94190800000000000000
+      internalID: -7977564251722976857
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Actions-v7-source_12
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 387
+        width: 250
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86e5fabd2bd249610800000000000000
+      internalID: 1626975611600723560
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Actions-v7-source_13
+      rect:
+        serializedVersion: 2
+        x: 868
+        y: 363
+        width: 566
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02ae9a975b915dae0800000000000000
+      internalID: -1525284631574091232
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Actions-v7-source_14
+      rect:
+        serializedVersion: 2
+        x: 1465
+        y: 387
+        width: 164
+        height: 191
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 831bb600f56a691e0800000000000000
+      internalID: -2191381241710005960
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Actions-v7-source_15
+      rect:
+        serializedVersion: 2
+        x: 1610
+        y: 199
+        width: 199
+        height: 385
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78f7853361cc93d40800000000000000
+      internalID: 5564703210315743111
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Actions-v7-source_16
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 390
+        width: 30
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95091fe69d31022d0800000000000000
+      internalID: -3305620301899788199
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Actions-v7-source_17
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 195
+        width: 165
+        height: 191
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0ed8e6e15a389860800000000000000
+      internalID: 7536838099845307918
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Actions-v7-source_18
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 371
+        width: 17
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a512d1a273f7b26b0800000000000000
+      internalID: -5320018659901628070
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Actions-v7-source_19
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 193
+        width: 170
+        height: 183
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2b8cc3b55fbf2570800000000000000
+      internalID: 8444178201152621357
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Actions-v7-source_20
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 194
+        width: 177
+        height: 191
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6bb62460bbfa539c0800000000000000
+      internalID: -3948056280521610314
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Actions-v7-source_21
+      rect:
+        serializedVersion: 2
+        x: 818
+        y: 196
+        width: 170
+        height: 186
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 968b12997ad71f740800000000000000
+      internalID: 5184062804862285929
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Actions-v7-source_22
+      rect:
+        serializedVersion: 2
+        x: 1016
+        y: 195
+        width: 170
+        height: 189
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e2e59fdd28409bb0800000000000000
+      internalID: -4931362230108822813
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Actions-v7-source_23
+      rect:
+        serializedVersion: 2
+        x: 1219
+        y: 195
+        width: 183
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 023d4c39a3f6bd9b0800000000000000
+      internalID: -5054323859415313632
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Actions-v7-source_24
+      rect:
+        serializedVersion: 2
+        x: 1416
+        y: 195
+        width: 155
+        height: 194
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65c08253756f9fb00800000000000000
+      internalID: 862991658032565334
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Actions-v7-source_25
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 331
+        width: 22
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0125b76840d0ac290800000000000000
+      internalID: -7869463085789261296
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Actions-v7-source_26
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 353
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef2d8e7493e4cbfe0800000000000000
+      internalID: -1171975795096628482
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Actions-v7-source_27
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 359
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2db7889dff01d950800000000000000
+      internalID: 6471971721368288556
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Actions-v7-source_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 13
+        width: 181
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 572e7d7159c61bad0800000000000000
+      internalID: -2688248114957524363
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Actions-v7-source_29
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 0
+        width: 1634
+        height: 194
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f600167927a982d40800000000000000
+      internalID: 5559863556945543279
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Actions-v7-source_30
+      rect:
+        serializedVersion: 2
+        x: 1812
+        y: 14
+        width: 158
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 357639d1b2c28e7c0800000000000000
+      internalID: -4041932101873604781
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    outline: []
+    customData:
+    physicsShape: []
+    bones: []
+    spriteID:
+    internalID: 0
+    vertices: []
+    indices:
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Ember-Actions-v7-source_0: 6310830654143177062
+      Ember-Actions-v7-source_1: 8136146189169829178
+      Ember-Actions-v7-source_10: 2843464048832804033
+      Ember-Actions-v7-source_11: -7977564251722976857
+      Ember-Actions-v7-source_12: 1626975611600723560
+      Ember-Actions-v7-source_13: -1525284631574091232
+      Ember-Actions-v7-source_14: -2191381241710005960
+      Ember-Actions-v7-source_15: 5564703210315743111
+      Ember-Actions-v7-source_16: -3305620301899788199
+      Ember-Actions-v7-source_17: 7536838099845307918
+      Ember-Actions-v7-source_18: -5320018659901628070
+      Ember-Actions-v7-source_19: 8444178201152621357
+      Ember-Actions-v7-source_2: -7263442035865566938
+      Ember-Actions-v7-source_20: -3948056280521610314
+      Ember-Actions-v7-source_21: 5184062804862285929
+      Ember-Actions-v7-source_22: -4931362230108822813
+      Ember-Actions-v7-source_23: -5054323859415313632
+      Ember-Actions-v7-source_24: 862991658032565334
+      Ember-Actions-v7-source_25: -7869463085789261296
+      Ember-Actions-v7-source_26: -1171975795096628482
+      Ember-Actions-v7-source_27: 6471971721368288556
+      Ember-Actions-v7-source_28: -2688248114957524363
+      Ember-Actions-v7-source_29: 5559863556945543279
+      Ember-Actions-v7-source_3: 2276732898817705703
+      Ember-Actions-v7-source_30: -4041932101873604781
+      Ember-Actions-v7-source_4: -1696727322598239137
+      Ember-Actions-v7-source_5: 7214822823930320221
+      Ember-Actions-v7-source_6: -5570543977579733214
+      Ember-Actions-v7-source_7: 1679333161361199892
+      Ember-Actions-v7-source_8: -3072950839527555675
+      Ember-Actions-v7-source_9: 7017647261715113806
+  mipmapLimitGroupName:
+  pSDRemoveMatte: 0
+  userData:
+  assetBundleName:
+  assetBundleVariant:

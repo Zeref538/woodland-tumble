@@ -27,7 +27,7 @@ AnimationClip:
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0}
       - serializedVersion: 3
-        time: 0.5
+        time: 0.2857143
         value: {x: 0, y: 0, z: -20}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
@@ -35,6 +35,15 @@ AnimationClip:
         weightedMode: 0
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0}
+      - serializedVersion: 3
+        time: 0.5
+        value: {x: 0, y: 0, z: -20}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 0.8333333
         value: {x: 0, y: 0, z: -20}
@@ -47,7 +56,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: 
+    path:
   m_PositionCurves: []
   m_ScaleCurves: []
   m_FloatCurves: []
@@ -56,32 +65,32 @@ AnimationClip:
     curve:
     - time: 0
       value: {fileID: 21300000, guid: 35cd8d199e6125a489575c74a3173dc4, type: 3}
-    - time: 0.05
+    - time: 0.028571429
       value: {fileID: 21300000, guid: c6d15ee4b4d999649ba8dec28164bec4, type: 3}
-    - time: 0.1
+    - time: 0.057142857
       value: {fileID: 21300000, guid: 847e0bc9d7f70144597e6e6823171b25, type: 3}
-    - time: 0.15
+    - time: 0.08571429
       value: {fileID: 21300000, guid: 5d813f1168bcaf3489f694ef641cf292, type: 3}
-    - time: 0.2
+    - time: 0.114285715
       value: {fileID: 21300000, guid: cd7a8e5b03ff5bb4fb23d71907299621, type: 3}
-    - time: 0.25
+    - time: 0.14285715
       value: {fileID: 21300000, guid: b30c271ed96847e408e9905c90328566, type: 3}
-    - time: 0.3
+    - time: 0.17142858
       value: {fileID: 21300000, guid: a581cd8298ed58941bc458c0a4e51cff, type: 3}
-    - time: 0.35
+    - time: 0.2
       value: {fileID: 21300000, guid: 3cbc962a18d7c684fac2c6f01f2fb14b, type: 3}
-    - time: 0.4
+    - time: 0.22857143
       value: {fileID: 21300000, guid: 67194c642d0ab394e80181bb540758f2, type: 3}
-    - time: 0.45
+    - time: 0.25714287
       value: {fileID: 21300000, guid: 46fc8ebd5affea245b1dcf683a820be0, type: 3}
-    - time: 0.5
+    - time: 0.2857143
       value: {fileID: 21300000, guid: 46fc8ebd5affea245b1dcf683a820be0, type: 3}
     attribute: m_Sprite
-    path: 
+    path:
     classID: 212
     script: {fileID: 0}
     flags: 2
-  m_SampleRate: 20
+  m_SampleRate: 35
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}

@@ -13,8 +13,8 @@ public class WoodlandGame : MonoBehaviour
     public int PendingCharacter { get; private set; }
     public int[] CharacterChoices = {0,1};
     public string[] CharacterNames={"Fern","Ember","Luna","Bram"};
-    public string[] SkillNames={"Vine Bind","Flame Rush","Frost Wave","Stone Quake"};
-    public string[] SkillDescriptions={"Catch a rival in living vines and control the ground.","Lunge forward with two fiery strikes.","Send a freezing wave across the arena.","Slam the ground and launch nearby rivals upward."};
+    public string[] SkillNames={"Vine Bolt","Fire Bolt","Frost Wave","Stone Wave"};
+    public string[] SkillDescriptions={"Fire a binding vine bolt. Low-health ultimate: Wildroot Prison.","Launch a fire bolt. Low-health ultimate: Phoenix Combo.","Send a slowing frost wave. Low-health ultimate: Moonfrost Seal.","Launch a rising stone wave. Low-health ultimate: World Shatter."};
     public Sprite[] CharacterPortraits=new Sprite[4];
     public ScoutAnimations[] CharacterAnimationSets=new ScoutAnimations[4];
     public RuntimeAnimatorController[] CharacterControllers=new RuntimeAnimatorController[4];
@@ -32,6 +32,7 @@ public class WoodlandGame : MonoBehaviour
     [Header("Arena wardrobe")]
     public SpriteRenderer backgroundArt, plankArt, sphereArt;
     public Sprite[] backgrounds = new Sprite[4], planks = new Sprite[4], spheres = new Sprite[4];
+    public Sprite[] PvpBases = new Sprite[4], PvpLedges = new Sprite[4];
     public string[] arenaNames = { "SUNLIT HOLLOW", "MOONLIT LAKE", "EMBER GROVE", "SKYWARD RUINS" };
     public int ArenaIndex { get; private set; }
     public string ArenaName => arenaNames[ArenaIndex];
@@ -40,9 +41,8 @@ public class WoodlandGame : MonoBehaviour
         if (index < 0 || index >= backgrounds.Length || !backgrounds[index] || !planks[index] || !spheres[index]) return;
         bool changed=ArenaIndex!=index;ArenaIndex = index;
         if(changed)WoodlandEffects.Instance?.PlayCue(12,.18f);
-        backgroundArt.sprite = backgrounds[index]; plankArt.sprite = planks[index]; sphereArt.sprite = spheres[index];
-        foreach(var platform in arenaPlatforms)if(platform)platform.GetComponent<SpriteRenderer>().sprite=planks[index];
-        // All plank and sphere canvases share dimensions, keeping the physical surface unchanged.
+        backgroundArt.sprite = backgrounds[index]; sphereArt.sprite = spheres[index];
+        ApplyPlatformArt();
         float scale = Mathf.Max(22 / backgroundArt.sprite.bounds.size.x, 12.5f / backgroundArt.sprite.bounds.size.y);
         backgroundArt.transform.localScale = Vector3.one * scale;
         if (WoodlandEffects.Instance) WoodlandEffects.Instance.ambientTint = index == 1 ? new Color(.3f,1,.85f) : index == 2 ? new Color(1,.4f,.12f) : new Color(1,.86f,.42f);
@@ -59,6 +59,10 @@ public class WoodlandGame : MonoBehaviour
     public bool MatchOver => score[0] >= roundsToWin || score[1] >= roundsToWin;
     Vector2 plankHome;
     float plankAngle;
+    bool balanceGeometrySaved;
+    Vector3 balanceScale;
+    Vector2 balanceColliderSize, balanceColliderOffset;
+    float balanceEdgeRadius;
     Coroutine roundRoutine;
     readonly Gamepad[] gamepads = new Gamepad[2];
 
@@ -95,13 +99,14 @@ public class WoodlandGame : MonoBehaviour
         plankAngle = plank.rotation;
         var hinge = plank.GetComponent<HingeJoint2D>();
         if (hinge != null && hinge.connectedBody == null) hinge.connectedAnchor = plank.transform.TransformPoint(hinge.anchor);
-        if(WoodlandEffects.Instance){WoodlandEffects.Instance.cameraShake=PlayerPrefs.GetInt("Woodland.CameraShake",1)==1;WoodlandEffects.Instance.effectIntensity=PlayerPrefs.GetFloat("Woodland.EffectsQuality",1);}
+        if(WoodlandEffects.Instance){WoodlandEffects.Instance.cameraShake=PlayerPrefs.GetInt("Woodland.CameraShake",1)==1;WoodlandEffects.Instance.effectIntensity=Mathf.Clamp(PlayerPrefs.GetFloat("Woodland.EffectsQuality",1.35f),.25f,2);}
         ApplyRules();ReturnToMenu();
     }
     void FreezeMatch()
     {
         StopAllCoroutines();roundRoutine=null;
         playing=false;Paused=false;Time.timeScale=1;AudioListener.pause=false;message="";
+        WoodlandEffects.Instance?.ResetCameraPresentation();
         plank.simulated=false;plank.linearVelocity=Vector2.zero;plank.angularVelocity=0;
         plank.position=plankHome;plank.rotation=plankAngle;
         foreach(var scout in players) { scout.ResetScout();scout.Body.simulated=false; }
@@ -152,9 +157,45 @@ public class WoodlandGame : MonoBehaviour
     void ApplyRules()
     {
         if(plank){var hinge=plank.GetComponent<HingeJoint2D>();if(hinge)hinge.enabled=BalanceMode;plank.bodyType=BalanceMode?RigidbodyType2D.Dynamic:RigidbodyType2D.Kinematic;}
+        ApplyPlatformArt();
         foreach(var platform in arenaPlatforms)if(platform)platform.gameObject.SetActive(!BalanceMode);
         if(sphereArt)sphereArt.gameObject.SetActive(BalanceMode);
-        if(WoodlandEffects.Instance)WoodlandEffects.Instance.SetArenaCamera(BalanceMode?4.5f:5.3f,new Vector3(0,BalanceMode?1:1.4f,-10));
+        if(WoodlandEffects.Instance)WoodlandEffects.Instance.SetArenaCamera(BalanceMode?4.5f:5.8f,new Vector3(0,BalanceMode?1:1.4f,-10));
+    }
+    void ApplyPlatformArt()
+    {
+        if(!plank || !plankArt)return;
+        var box=plank.GetComponent<BoxCollider2D>();
+        // Capture once, before PVP resizes the board. Repeated mode changes must not compound scaling.
+        if(!balanceGeometrySaved) {
+            balanceScale=plank.transform.localScale;
+            if(box){balanceColliderSize=box.size;balanceColliderOffset=box.offset;balanceEdgeRadius=box.edgeRadius;}
+            balanceGeometrySaved=true;
+        }
+        if(BalanceMode) {
+            plankArt.sprite=planks[ArenaIndex];
+            plank.transform.localScale=balanceScale;
+            if(box){box.size=balanceColliderSize;box.offset=balanceColliderOffset;box.edgeRadius=balanceEdgeRadius;}
+        } else {
+            if(ArenaIndex<PvpBases.Length && PvpBases[ArenaIndex])
+                SizePlatform(plank,PvpBases[ArenaIndex],14f,13.5f);
+            foreach(var platform in arenaPlatforms)
+                if(platform && ArenaIndex<PvpLedges.Length && PvpLedges[ArenaIndex])
+                    SizePlatform(platform,PvpLedges[ArenaIndex],4.2f,4.05f);
+        }
+    }
+    static void SizePlatform(Rigidbody2D platform,Sprite sprite,float artWidth,float colliderWidth)
+    {
+        var renderer=platform.GetComponent<SpriteRenderer>();
+        if(!renderer || sprite.bounds.size.x<=0)return;
+        renderer.sprite=sprite;
+        float scale=artWidth/sprite.bounds.size.x;
+        platform.transform.localScale=Vector3.one*scale;
+        var box=platform.GetComponent<BoxCollider2D>();
+        if(!box)return;
+        box.size=new Vector2(colliderWidth/scale,.22f/scale);
+        box.offset=new Vector2(0,.04f/scale);
+        box.edgeRadius=.04f/scale;
     }
     public void OpenMapSelection()
     {
@@ -208,6 +249,7 @@ public class WoodlandGame : MonoBehaviour
     }
     IEnumerator StartRound()
     {
+        WoodlandEffects.Instance?.ResetCameraPresentation();
         playing = false;
         plank.simulated = false;
         plank.transform.SetPositionAndRotation(plankHome, Quaternion.Euler(0, 0, plankAngle));
@@ -223,7 +265,7 @@ public class WoodlandGame : MonoBehaviour
         plank.simulated = true;
         foreach (var scout in players) scout.Body.simulated = true;
         playing = true;
-        message = "SCOUTS, SHOVE!";
+        message = "RIVALS, FIGHT!";
         yield return new WaitForSeconds(.65f);
         if (playing) message = "";
         roundRoutine = null;
@@ -232,6 +274,7 @@ public class WoodlandGame : MonoBehaviour
     {
         if (!playing) return;
         playing = false;
+        WoodlandEffects.Instance?.ResetCameraPresentation();
         message = "KNOCKOUT!";
         if (roundRoutine != null) StopCoroutine(roundRoutine);
         roundRoutine = StartCoroutine(ResolveRound(loser.id));
@@ -242,9 +285,10 @@ public class WoodlandGame : MonoBehaviour
         yield return new WaitForSeconds(knockoutDisplayTime);
         int winner = 1 - loser;
         score[winner]++;
-        WoodlandEffects.Instance?.Celebrate(players[winner].transform.position + Vector3.up * .5f, winner == 0 ? new Color(.6f, .85f, .35f) : new Color(1, .6f, .25f));
+        players[winner].PlayVictory();
+        WoodlandEffects.Instance?.Celebrate(players[winner].transform.position + Vector3.up * .5f, players[winner].Element);
         message = players[winner].displayName.ToUpper() + " WINS";
-        yield return new WaitForSeconds(1.1f);
+        yield return new WaitForSeconds(1.5f);
         if (MatchOver) {
             message = players[winner].displayName.ToUpper() + " IS CHAMPION!\nR TO PLAY AGAIN";
             roundRoutine = null;
@@ -259,7 +303,7 @@ public class WoodlandGame : MonoBehaviour
         Paused = false;
         roundRoutine = StartCoroutine(StartRound());
     }
-    public void TogglePause() { if(Screen!=MenuScreen.Match)return;Paused = !Paused; Time.timeScale = Paused ? 0 : 1; }
+    public void TogglePause() { if(Screen!=MenuScreen.Match)return;Paused = !Paused; Time.timeScale = Paused ? 0 : 1;if(Paused)WoodlandEffects.Instance?.ResetCameraPresentation(); }
     void Update()
     {
         RefreshGamepads();

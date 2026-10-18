@@ -1,0 +1,27 @@
+{
+  "editor": "6000.5.10f1",
+  "product": "Tilt Rivals",
+  "version": "7.0.0",
+  "target": "StandaloneWindows64",
+  "playmode_checks": 693,
+  "hud_checks": 164,
+  "natural_melee_checks": 28,
+  "playmode_success": true,
+  "build_result": "Success",
+  "build_evidence": "Build Finished, Result: Success. in tilt-v7-windows.log",
+  "visual_review": "Final bottom HUD render inspected after announcement clears; circular masks, eighty-pixel action circles and outlined labels visible",
+  "controller_transport": "Virtual DualShock4 and XInput layouts tested; physical USB/Bluetooth remains unverified",
+  "audio_testing": "Silent listener during automated runs",
+  "artwork_commit": "15b9b66",
+  "artwork_release": "https://github.com/Zeref538/Woodland-Scouts/releases/tag/tumble-art-v7.0.0",
+  "assembly_sha256": "218cc0691f35eadafd32803e7b9e2dbe19054f48451280c2c06c36bcdcdddf8c",
+  "source_hash_normalization": "File bytes with CRLF converted to LF",
+  "scripts": {
+    "Scout.cs": "89ab35a4625f06df1d15024027046c5acdee192e8577df3ec20071d25a659524",
+    "ScoutAnimations.cs": "fba9d1724140943d12090e0ec9138939316e66208ba2f8180b4e8a1042c5c206",
+    "SpawnMarker.cs": "678414abd6028ca57f40f084c3f664ef2cbf663ea2d956523bd78c35ac2f02ff",
+    "WoodlandEffects.cs": "239337b0ba6f891f8dc9abb625196cfb9de54529448df5163dd74b4668fbef48",
+    "WoodlandGame.cs": "c54992fd6a15cc62caed5cf649a61b3babb594c439cdd0e3bbedd8e3d731335e",
+    "WoodlandHUD.cs": "48f7797d62dc85c5357321c62c2e436dfedf8bb086369881e1c4564ed865c088"
+  }
+}

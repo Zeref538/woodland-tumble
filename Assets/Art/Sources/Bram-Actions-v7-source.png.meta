@@ -1,0 +1,585 @@
+fileFormatVersion: 2
+guid: c15b1d4cce1a13c49bd86343fc141a2c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4350239424333896690
+    second: Bram-Actions-v7-source_0
+  - first:
+      213: 9076723939638744595
+    second: Bram-Actions-v7-source_1
+  - first:
+      213: 3326691845988261799
+    second: Bram-Actions-v7-source_2
+  - first:
+      213: 2733053745946544951
+    second: Bram-Actions-v7-source_3
+  - first:
+      213: -1743646451953417564
+    second: Bram-Actions-v7-source_4
+  - first:
+      213: 551962170910390710
+    second: Bram-Actions-v7-source_5
+  - first:
+      213: 6426244094056551131
+    second: Bram-Actions-v7-source_6
+  - first:
+      213: 2773893931382724018
+    second: Bram-Actions-v7-source_7
+  - first:
+      213: -1939850934273960431
+    second: Bram-Actions-v7-source_8
+  - first:
+      213: 8047874644767809983
+    second: Bram-Actions-v7-source_9
+  - first:
+      213: -7655907802797648884
+    second: Bram-Actions-v7-source_10
+  - first:
+      213: -7717751182508177984
+    second: Bram-Actions-v7-source_11
+  - first:
+      213: -2941633794021665204
+    second: Bram-Actions-v7-source_12
+  - first:
+      213: -8847111354921978198
+    second: Bram-Actions-v7-source_13
+  - first:
+      213: -2185574586500291619
+    second: Bram-Actions-v7-source_14
+  - first:
+      213: -3698795535359482672
+    second: Bram-Actions-v7-source_15
+  - first:
+      213: -6409969801032375104
+    second: Bram-Actions-v7-source_16
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Bram-Actions-v7-source_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 387
+        width: 178
+        height: 390
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e04ada8ca48d0a3c0800000000000000
+      internalID: -4350239424333896690
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Actions-v7-source_1
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 582
+        width: 179
+        height: 179
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3169372255007fd70800000000000000
+      internalID: 9076723939638744595
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Actions-v7-source_2
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 579
+        width: 217
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7af915dbb98ca2e20800000000000000
+      internalID: 3326691845988261799
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Actions-v7-source_3
+      rect:
+        serializedVersion: 2
+        x: 613
+        y: 576
+        width: 807
+        height: 187
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73bc13fc6e1cde520800000000000000
+      internalID: 2733053745946544951
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Actions-v7-source_4
+      rect:
+        serializedVersion: 2
+        x: 1409
+        y: 578
+        width: 190
+        height: 183
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a242794ac25dc7e0800000000000000
+      internalID: -1743646451953417564
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Actions-v7-source_5
+      rect:
+        serializedVersion: 2
+        x: 1608
+        y: 577
+        width: 169
+        height: 186
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b931968ba6f8a700800000000000000
+      internalID: 551962170910390710
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Actions-v7-source_6
+      rect:
+        serializedVersion: 2
+        x: 1802
+        y: 389
+        width: 153
+        height: 382
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd25132b4fa9e2950800000000000000
+      internalID: 6426244094056551131
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Actions-v7-source_7
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 387
+        width: 186
+        height: 183
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b5dda875d9de7620800000000000000
+      internalID: 2773893931382724018
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Actions-v7-source_8
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 194
+        width: 245
+        height: 375
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11614616ad34415e0800000000000000
+      internalID: -1939850934273960431
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Actions-v7-source_9
+      rect:
+        serializedVersion: 2
+        x: 657
+        y: 384
+        width: 199
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb12246995bcfaf60800000000000000
+      internalID: 8047874644767809983
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Actions-v7-source_10
+      rect:
+        serializedVersion: 2
+        x: 855
+        y: 385
+        width: 197
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c04da158a60c0c590800000000000000
+      internalID: -7655907802797648884
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Actions-v7-source_11
+      rect:
+        serializedVersion: 2
+        x: 1058
+        y: 385
+        width: 187
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c5cfbd903a05e490800000000000000
+      internalID: -7717751182508177984
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Actions-v7-source_12
+      rect:
+        serializedVersion: 2
+        x: 1186
+        y: 191
+        width: 252
+        height: 367
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c46dd0856a73d27d0800000000000000
+      internalID: -2941633794021665204
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Actions-v7-source_13
+      rect:
+        serializedVersion: 2
+        x: 1386
+        y: 193
+        width: 241
+        height: 366
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa6fc81c81fb83580800000000000000
+      internalID: -8847111354921978198
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Actions-v7-source_14
+      rect:
+        serializedVersion: 2
+        x: 1625
+        y: 389
+        width: 152
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd367854e774ba1e0800000000000000
+      internalID: -2185574586500291619
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Actions-v7-source_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 13
+        width: 180
+        height: 364
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d4e812ce0d3bacc0800000000000000
+      internalID: -3698795535359482672
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Actions-v7-source_16
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 0
+        width: 1780
+        height: 382
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c4eb7c6d663b07a0800000000000000
+      internalID: -6409969801032375104
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    outline: []
+    customData:
+    physicsShape: []
+    bones: []
+    spriteID:
+    internalID: 0
+    vertices: []
+    indices:
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Bram-Actions-v7-source_0: -4350239424333896690
+      Bram-Actions-v7-source_1: 9076723939638744595
+      Bram-Actions-v7-source_10: -7655907802797648884
+      Bram-Actions-v7-source_11: -7717751182508177984
+      Bram-Actions-v7-source_12: -2941633794021665204
+      Bram-Actions-v7-source_13: -8847111354921978198
+      Bram-Actions-v7-source_14: -2185574586500291619
+      Bram-Actions-v7-source_15: -3698795535359482672
+      Bram-Actions-v7-source_16: -6409969801032375104
+      Bram-Actions-v7-source_2: 3326691845988261799
+      Bram-Actions-v7-source_3: 2733053745946544951
+      Bram-Actions-v7-source_4: -1743646451953417564
+      Bram-Actions-v7-source_5: 551962170910390710
+      Bram-Actions-v7-source_6: 6426244094056551131
+      Bram-Actions-v7-source_7: 2773893931382724018
+      Bram-Actions-v7-source_8: -1939850934273960431
+      Bram-Actions-v7-source_9: 8047874644767809983
+  mipmapLimitGroupName:
+  pSDRemoveMatte: 0
+  userData:
+  assetBundleName:
+  assetBundleVariant:

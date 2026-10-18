@@ -1,0 +1,373 @@
+{
+  "method": "One uniform nearest-neighbor resize per asset. No stretching. Platform opaque central top profile median aligned to local+.04world at declared width; transparent padding retained.",
+  "assets": [
+    {
+      "kind": "Base",
+      "theme": "Forest",
+      "worldWidth": 14,
+      "nominalSupportLocalY": 0.04,
+      "actualSupportLocalY": 0.04012120327102823,
+      "sourceTopProfileMedian": 35.0,
+      "output": "Assets/Art/Arena/PVP/Forest/Base.png",
+      "source": "Assets/Art/Sources/Forest-Base-v7-source.png",
+      "sourceSize": [
+        2172,
+        724
+      ],
+      "sourceBounds": [
+        16,
+        280,
+        2156,
+        581
+      ],
+      "canvas": [
+        1536,
+        640
+      ],
+      "uniformScale": 0.702803738317757,
+      "visibleBounds": [
+        16,
+        291,
+        1520,
+        503
+      ],
+      "sha256": "de241625579f065afb038894139c933c78809272c8b0897d6b61efb4cf6d9bcb"
+    },
+    {
+      "kind": "Ledge",
+      "theme": "Forest",
+      "worldWidth": 4.2,
+      "nominalSupportLocalY": 0.04,
+      "actualSupportLocalY": 0.03961422491578441,
+      "sourceTopProfileMedian": 7.0,
+      "output": "Assets/Art/Arena/PVP/Forest/Ledge.png",
+      "source": "Assets/Art/Sources/Forest-Ledge-v7-source.png",
+      "sourceSize": [
+        2172,
+        724
+      ],
+      "sourceBounds": [
+        47,
+        356,
+        2125,
+        622
+      ],
+      "canvas": [
+        1024,
+        384
+      ],
+      "uniformScale": 0.4773820981713186,
+      "visibleBounds": [
+        16,
+        179,
+        1008,
+        306
+      ],
+      "sha256": "2c1522bada2de918fbf9483bcdb10a716edd24705c33a3689d9d4e1b55713853"
+    },
+    {
+      "kind": "Base",
+      "theme": "Moonlit",
+      "worldWidth": 14,
+      "nominalSupportLocalY": 0.04,
+      "actualSupportLocalY": 0.03905134990485274,
+      "sourceTopProfileMedian": 1.0,
+      "output": "Assets/Art/Arena/PVP/Moonlit/Base.png",
+      "source": "Assets/Art/Sources/Moonlit-Base-v7-source.png",
+      "sourceSize": [
+        2126,
+        740
+      ],
+      "sourceBounds": [
+        12,
+        372,
+        2114,
+        671
+      ],
+      "canvas": [
+        1536,
+        640
+      ],
+      "uniformScale": 0.7155090390104663,
+      "visibleBounds": [
+        16,
+        315,
+        1520,
+        529
+      ],
+      "sha256": "008385c5eae37a9d203bbf86b0ee0afe23637f54bee182a875363e753c77a257"
+    },
+    {
+      "kind": "Ledge",
+      "theme": "Moonlit",
+      "worldWidth": 4.2,
+      "nominalSupportLocalY": 0.04,
+      "actualSupportLocalY": 0.03895966239262255,
+      "sourceTopProfileMedian": 1,
+      "output": "Assets/Art/Arena/PVP/Moonlit/Ledge.png",
+      "source": "Assets/Art/Sources/Moonlit-Ledge-v7-source.png",
+      "sourceSize": [
+        2056,
+        765
+      ],
+      "sourceBounds": [
+        39,
+        293,
+        2018,
+        622
+      ],
+      "canvas": [
+        1024,
+        384
+      ],
+      "uniformScale": 0.5012632642748863,
+      "visibleBounds": [
+        16,
+        182,
+        1008,
+        347
+      ],
+      "sha256": "f3c828109227dda1942a160ab5e13d5debb57aa7b840e4ef00714ad4cb06c8b8"
+    },
+    {
+      "kind": "Base",
+      "theme": "Ember",
+      "worldWidth": 14,
+      "nominalSupportLocalY": 0.04,
+      "actualSupportLocalY": 0.04120831284824641,
+      "sourceTopProfileMedian": 2.0,
+      "output": "Assets/Art/Arena/PVP/Ember/Base.png",
+      "source": "Assets/Art/Sources/Ember-Base-v7-source.png",
+      "sourceSize": [
+        2098,
+        750
+      ],
+      "sourceBounds": [
+        32,
+        370,
+        2066,
+        682
+      ],
+      "canvas": [
+        1536,
+        640
+      ],
+      "uniformScale": 0.7394296951819076,
+      "visibleBounds": [
+        16,
+        314,
+        1520,
+        545
+      ],
+      "sha256": "260c9a695d34fbb4d5e20a5c76673bd66b0aa032c631b2dd1876109991ecc506"
+    },
+    {
+      "kind": "Ledge",
+      "theme": "Ember",
+      "worldWidth": 4.2,
+      "nominalSupportLocalY": 0.04,
+      "actualSupportLocalY": 0.03902990025622254,
+      "sourceTopProfileMedian": 1,
+      "output": "Assets/Art/Arena/PVP/Ember/Ledge.png",
+      "source": "Assets/Art/Sources/Ember-Ledge-v7-source.png",
+      "sourceSize": [
+        2170,
+        725
+      ],
+      "sourceBounds": [
+        63,
+        311,
+        2112,
+        623
+      ],
+      "canvas": [
+        1024,
+        384
+      ],
+      "uniformScale": 0.48413860419716936,
+      "visibleBounds": [
+        16,
+        182,
+        1008,
+        333
+      ],
+      "sha256": "2a480d3a4eab62ea48483237e2835d9052df13c14a2a2892394b79f63ab29d66"
+    },
+    {
+      "kind": "Base",
+      "theme": "Skyward",
+      "worldWidth": 14,
+      "nominalSupportLocalY": 0.04,
+      "actualSupportLocalY": 0.038749455574912904,
+      "sourceTopProfileMedian": 1,
+      "output": "Assets/Art/Arena/PVP/Skyward/Base.png",
+      "source": "Assets/Art/Sources/Skyward-Base-v7-source.png",
+      "sourceSize": [
+        2073,
+        758
+      ],
+      "sourceBounds": [
+        32,
+        355,
+        2041,
+        686
+      ],
+      "canvas": [
+        1536,
+        640
+      ],
+      "uniformScale": 0.7486311597809856,
+      "visibleBounds": [
+        16,
+        315,
+        1520,
+        563
+      ],
+      "sha256": "432d692ba75feed5f06772a62bc265a895ca8c2cbc8bfe9db56e90cbdd5a80a5"
+    },
+    {
+      "kind": "Ledge",
+      "theme": "Skyward",
+      "worldWidth": 4.2,
+      "nominalSupportLocalY": 0.04,
+      "actualSupportLocalY": 0.04121991738505745,
+      "sourceTopProfileMedian": 2.0,
+      "output": "Assets/Art/Arena/PVP/Skyward/Ledge.png",
+      "source": "Assets/Art/Sources/Skyward-Ledge-v7-source.png",
+      "sourceSize": [
+        2172,
+        724
+      ],
+      "sourceBounds": [
+        42,
+        284,
+        2130,
+        623
+      ],
+      "canvas": [
+        1024,
+        384
+      ],
+      "uniformScale": 0.47509578544061304,
+      "visibleBounds": [
+        16,
+        181,
+        1008,
+        342
+      ],
+      "sha256": "040ccadaa1e9195554d846d34ebe0a9169aa63a49837d99b03b2d0658b4233e8"
+    },
+    {
+      "kind": "ActionCover",
+      "character": "Fern",
+      "output": "Assets/Art/UI/Actions/Fern/Jump.png",
+      "source": "Assets/Art/Sources/Fern-Jump-v7-source.png",
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "sourceBounds": [
+        188,
+        49,
+        1107,
+        1223
+      ],
+      "canvas": [
+        512,
+        512
+      ],
+      "uniformScale": 0.4088586030664395,
+      "visibleBounds": [
+        68,
+        16,
+        444,
+        496
+      ],
+      "sha256": "78b7e91e424c4224317a6ab835925653191003f6f85929175ec7f36c732129fd"
+    },
+    {
+      "kind": "ActionCover",
+      "character": "Ember",
+      "output": "Assets/Art/UI/Actions/Ember/Jump.png",
+      "source": "Assets/Art/Sources/Ember-Jump-v7-source.png",
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "sourceBounds": [
+        192,
+        39,
+        1090,
+        1230
+      ],
+      "canvas": [
+        512,
+        512
+      ],
+      "uniformScale": 0.40302267002518893,
+      "visibleBounds": [
+        75,
+        16,
+        437,
+        496
+      ],
+      "sha256": "b483fd9d6bda08c5fa231717aff98b54e359d3d72e24ebf2f787212ffc4297df"
+    },
+    {
+      "kind": "ActionCover",
+      "character": "Luna",
+      "output": "Assets/Art/UI/Actions/Luna/Jump.png",
+      "source": "Assets/Art/Sources/Luna-Jump-v7-source.png",
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "sourceBounds": [
+        86,
+        33,
+        1170,
+        1230
+      ],
+      "canvas": [
+        512,
+        512
+      ],
+      "uniformScale": 0.40100250626566414,
+      "visibleBounds": [
+        38,
+        16,
+        473,
+        496
+      ],
+      "sha256": "0f344f4baa2283b0176af98bc2a0f1030eeeacc770045a51ce1e32143a797857"
+    },
+    {
+      "kind": "ActionCover",
+      "character": "Bram",
+      "output": "Assets/Art/UI/Actions/Bram/Jump.png",
+      "source": "Assets/Art/Sources/Bram-Jump-v7-source.png",
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "sourceBounds": [
+        265,
+        129,
+        1006,
+        1234
+      ],
+      "canvas": [
+        512,
+        512
+      ],
+      "uniformScale": 0.4343891402714932,
+      "visibleBounds": [
+        95,
+        16,
+        417,
+        496
+      ],
+      "sha256": "891fc85167d0d3eb66e00e4519dcc48f44fa86a75911948152d89da4890414af"
+    }
+  ]
+}

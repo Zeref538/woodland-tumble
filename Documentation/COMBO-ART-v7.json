@@ -1,0 +1,208 @@
+{
+  "grid": [
+    6,
+    2
+  ],
+  "canvas": [
+    256,
+    256
+  ],
+  "pixelGrid": [
+    64,
+    64
+  ],
+  "frames": [
+    {
+      "path": "Assets/Resources/Art/Combo/Fern/Hit/01.png",
+      "sha256": "19fd0fa918a7a67f5cf88e51fb5d04ae18305577ef0833d752222e659bc355b4"
+    },
+    {
+      "path": "Assets/Resources/Art/Combo/Fern/Hit/02.png",
+      "sha256": "c69b81b880d6e14c39b2d008e471725346eaffcf23f1668859490e750147c095"
+    },
+    {
+      "path": "Assets/Resources/Art/Combo/Fern/Hit/03.png",
+      "sha256": "1dc4d7b372bdf9caff1fc3455bef3e0a945530aa78cb9670cae3d13768b776a0"
+    },
+    {
+      "path": "Assets/Resources/Art/Combo/Fern/Hit/04.png",
+      "sha256": "b246492ec964133a65a04977c0b82baf67971538921c95b4a3cee8d15e2c954d"
+    },
+    {
+      "path": "Assets/Resources/Art/Combo/Fern/Hit/05.png",
+      "sha256": "32e1f749f28ab8032c6d8f589dbd6dcfbe18ab9af6f6f21b6e166d1728e2f721"
+    },
+    {
+      "path": "Assets/Resources/Art/Combo/Fern/Hit/06.png",
+      "sha256": "8e175a79f35ff5427040f2254066b8637249cd16a59ddae553e757714f514895"
+    },
+    {
+      "path": "Assets/Resources/Art/Combo/Fern/Finisher/01.png",
+      "sha256": "f140e2a978007ed9dd0907dbb1d180d0aa2433990a6f5a5bd4481c74360aab4d"
+    },
+    {
+      "path": "Assets/Resources/Art/Combo/Fern/Finisher/02.png",
+      "sha256": "d989115dcf0a3fe1fc9b8fbbe4203bed74d166e36b4cc99edb6e15c95b3afa4e"
+    },
+    {
+      "path": "Assets/Resources/Art/Combo/Fern/Finisher/03.png",
+      "sha256": "c1190bb5b76cc03b443d68b43422e178fb526a6ee51f87be7d6f7752c0949f99"
+    },
+    {
+      "path": "Assets/Resources/Art/Combo/Fern/Finisher/04.png",
+      "sha256": "5211c8660d3f2c56688a92da3990d20a5d26c7d90e46d72a325d9a819b728d50"
+    },
+    {
+      "path": "Assets/Resources/Art/Combo/Fern/Finisher/05.png",
+      "sha256": "4e6e5e338b04651ede8b5402e66b58fc482db6a8b260363095a0b83454d1aa63"
+    },
+    {
+      "path": "Assets/Resources/Art/Combo/Fern/Finisher/06.png",
+      "sha256": "7dc0ff84c39919baca313e0913fcdf36e61b7cfdeb1e43ea33a3c0dfe8dc6d12"
+    },
+    {
+      "path": "Assets/Resources/Art/Combo/Ember/Hit/01.png",
+      "sha256": "cf34886eb246dda63b623359302d61b5336df62055b952b87ce0dc821c3bcc3c"
+    },
+    {
+      "path": "Assets/Resources/Art/Combo/Ember/Hit/02.png",
+      "sha256": "5878fcb2d4fa53bb8e90bef1dcf76feccdd1e72352313745cc9bc54ad9cb3741"
+    },
+    {
+      "path": "Assets/Resources/Art/Combo/Ember/Hit/03.png",
+      "sha256": "f656ddb4d7053285044dca99278d924c42e7537365ee62fdb1b30eacef760ace"
+    },
+    {
+      "path": "Assets/Resources/Art/Combo/Ember/Hit/04.png",
+      "sha256": "79903454222db4625057759c17c18ff9194cb5a6a64611ddb2908704f6146c39"
+    },
+    {
+      "path": "Assets/Resources/Art/Combo/Ember/Hit/05.png",
+      "sha256": "447da98b23c8e13b4edb232f88b933197da73f0b9abeb0509cbd1cd5fc00dd99"
+    },
+    {
+      "path": "Assets/Resources/Art/Combo/Ember/Hit/06.png",
+      "sha256": "9a59b64a0a0c688ac3e069f292478a221e17de5160b3adc228aff77d7bc674cd"
+    },
+    {
+      "path": "Assets/Resources/Art/Combo/Ember/Finisher/01.png",
+      "sha256": "513ea45be2321eb5231e161cb1841ac2b9282092c49c0a5b4818264da8991eca"
+    },
+    {
+      "path": "Assets/Resources/Art/Combo/Ember/Finisher/02.png",
+      "sha256": "d7bac99775cf9c3d82dcfdefb9afee96ebb40066bc73f7867f7f25aa859d7b6b"
+    },
+    {
+      "path": "Assets/Resources/Art/Combo/Ember/Finisher/03.png",
+      "sha256": "55e75be663963a5ec018e0603fb09606a2baa23413117a4d36874b9769d96cab"
+    },
+    {
+      "path": "Assets/Resources/Art/Combo/Ember/Finisher/04.png",
+      "sha256": "906d4ccf35ffb935dbf49e4a375b1ebb88c26b50043f23aa087b521913874cc4"
+    },
+    {
+      "path": "Assets/Resources/Art/Combo/Ember/Finisher/05.png",
+      "sha256": "eb9fb9ed3f5de3b00aab8428eeff5c6ef765ca4d333ae4a57c985348f5fc9595"
+    },
+    {
+      "path": "Assets/Resources/Art/Combo/Ember/Finisher/06.png",
+      "sha256": "c5f274a7fd4d4bae666fbc506111dc012cc794b41aa92a3808c2760e7674bbac"
+    },
+    {
+      "path": "Assets/Resources/Art/Combo/Luna/Hit/01.png",
+      "sha256": "7801e5d9810d61368ca4533b7947a85282308e1af3e80d726cce12563d0e4a46"
+    },
+    {
+      "path": "Assets/Resources/Art/Combo/Luna/Hit/02.png",
+      "sha256": "b1cafc1baf377dbaa662bb8299bf213c3d001f4dd76dfd328addaf1e57c48989"
+    },
+    {
+      "path": "Assets/Resources/Art/Combo/Luna/Hit/03.png",
+      "sha256": "43598967ec809cc8639f18c9fe6b98b06bbe90e6731e089cfb52cea23a787384"
+    },
+    {
+      "path": "Assets/Resources/Art/Combo/Luna/Hit/04.png",
+      "sha256": "9114d0e2aa5e877787a54d788e3a74dbcd4287ab081c50a54bcbf8261013c9a5"
+    },
+    {
+      "path": "Assets/Resources/Art/Combo/Luna/Hit/05.png",
+      "sha256": "2b7b9cb97e06d906d8ee385f6e5b9aa3cb90aaf6a343209b2f8cab610c4d8464"
+    },
+    {
+      "path": "Assets/Resources/Art/Combo/Luna/Hit/06.png",
+      "sha256": "368f3ab911ea0c3af22db91ec4ceba4e352b802ec58aca6f7662d021537422d7"
+    },
+    {
+      "path": "Assets/Resources/Art/Combo/Luna/Finisher/01.png",
+      "sha256": "0430a8e3e76c32a8e54e0e3364e19219e49d045181e6f294331c956be44b07df"
+    },
+    {
+      "path": "Assets/Resources/Art/Combo/Luna/Finisher/02.png",
+      "sha256": "d9208e8d91bdc2a46388953d5059836c8ecf10cf303d2ac1e9388fe509a0c9a1"
+    },
+    {
+      "path": "Assets/Resources/Art/Combo/Luna/Finisher/03.png",
+      "sha256": "29529ca9804b750771ea5bb4f3760757598931ce995dbf050eeb564970daac37"
+    },
+    {
+      "path": "Assets/Resources/Art/Combo/Luna/Finisher/04.png",
+      "sha256": "f1b581d2d86a1bd301755804266b5baaac5c9b94b18e8f27ea8e3f386e5e5bbd"
+    },
+    {
+      "path": "Assets/Resources/Art/Combo/Luna/Finisher/05.png",
+      "sha256": "5376d58c08add6abef120131f64f6f39ad85c80d8fd2acacfddf792acca6a748"
+    },
+    {
+      "path": "Assets/Resources/Art/Combo/Luna/Finisher/06.png",
+      "sha256": "8433e59da92d4fd8d7d3d07c771843029048e696fddbdac407099efc4ab0ba05"
+    },
+    {
+      "path": "Assets/Resources/Art/Combo/Bram/Hit/01.png",
+      "sha256": "c0539e3e6e566307a66e8443a50570e7c415c8764c572efd2f0fa8d7a06a7272"
+    },
+    {
+      "path": "Assets/Resources/Art/Combo/Bram/Hit/02.png",
+      "sha256": "4afa28f732a7de5ebed4702eacf70b039545fad6302627c8b7ed144c50fe648d"
+    },
+    {
+      "path": "Assets/Resources/Art/Combo/Bram/Hit/03.png",
+      "sha256": "abcf14703f1164afe46efd765519892c1c8cb4abe7f440c32b661fe442427759"
+    },
+    {
+      "path": "Assets/Resources/Art/Combo/Bram/Hit/04.png",
+      "sha256": "8d431c15c4891ac7fea0a95dbc0dbc10ac8185d0708d515288bde9027ae93520"
+    },
+    {
+      "path": "Assets/Resources/Art/Combo/Bram/Hit/05.png",
+      "sha256": "f19a8659fce7e268c4fbb148a966acf122eacd618cde379db7916ad839752538"
+    },
+    {
+      "path": "Assets/Resources/Art/Combo/Bram/Hit/06.png",
+      "sha256": "8e55601eacec48b731d2d9d7f915525140acb15ec19f17629c0c9464cd748d51"
+    },
+    {
+      "path": "Assets/Resources/Art/Combo/Bram/Finisher/01.png",
+      "sha256": "1bef36ee3f08be06c97586717596d400ad677f37e7c182228c565a5946c36d24"
+    },
+    {
+      "path": "Assets/Resources/Art/Combo/Bram/Finisher/02.png",
+      "sha256": "f8b9be7cd126ce455b8cbd1e48696429883c27afbb972669be8d4eab1e60eb6b"
+    },
+    {
+      "path": "Assets/Resources/Art/Combo/Bram/Finisher/03.png",
+      "sha256": "06cd25bf8fa3c90422eb57742270af97f3cca840934c52440f8e0ff7eb04fdf9"
+    },
+    {
+      "path": "Assets/Resources/Art/Combo/Bram/Finisher/04.png",
+      "sha256": "b0d8a65b22dd510657fa988b8d24940bdf64b68dde378b0108eb4b4187663e5b"
+    },
+    {
+      "path": "Assets/Resources/Art/Combo/Bram/Finisher/05.png",
+      "sha256": "33d3f1a891b01842397418dc020d617d46220be1a36d17124aaf3b10a277dce7"
+    },
+    {
+      "path": "Assets/Resources/Art/Combo/Bram/Finisher/06.png",
+      "sha256": "63e5284ce425a71d82299d833294d7b04692ee7a66bea3256b024f054a991827"
+    }
+  ]
+}

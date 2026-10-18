@@ -1,0 +1,455 @@
+fileFormatVersion: 2
+guid: 23b7d87d0b921434d8624ac9d714a717
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8385439203035905968
+    second: Skyward-Ledge-v7-source_0
+  - first:
+      213: 302883674652211065
+    second: Skyward-Ledge-v7-source_1
+  - first:
+      213: -8812843839326909549
+    second: Skyward-Ledge-v7-source_2
+  - first:
+      213: -8283802619320885192
+    second: Skyward-Ledge-v7-source_3
+  - first:
+      213: -5221235118119236761
+    second: Skyward-Ledge-v7-source_4
+  - first:
+      213: -2847320265334195374
+    second: Skyward-Ledge-v7-source_5
+  - first:
+      213: -3173454957804175853
+    second: Skyward-Ledge-v7-source_6
+  - first:
+      213: -8982953045840642888
+    second: Skyward-Ledge-v7-source_7
+  - first:
+      213: 5901678446322273814
+    second: Skyward-Ledge-v7-source_8
+  - first:
+      213: 728507485633291283
+    second: Skyward-Ledge-v7-source_9
+  - first:
+      213: 247522034266082742
+    second: Skyward-Ledge-v7-source_10
+  - first:
+      213: 2823670674257573561
+    second: Skyward-Ledge-v7-source_11
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Skyward-Ledge-v7-source_0
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 17
+        width: 2125
+        height: 670
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0500969097fe0ab80800000000000000
+      internalID: -8385439203035905968
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skyward-Ledge-v7-source_1
+      rect:
+        serializedVersion: 2
+        x: 1172
+        y: 586
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 977f8ebe81f043400800000000000000
+      internalID: 302883674652211065
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skyward-Ledge-v7-source_2
+      rect:
+        serializedVersion: 2
+        x: 1615
+        y: 578
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39b0ee7783d72b580800000000000000
+      internalID: -8812843839326909549
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skyward-Ledge-v7-source_3
+      rect:
+        serializedVersion: 2
+        x: 1664
+        y: 580
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 830aded38650a0d80800000000000000
+      internalID: -8283802619320885192
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skyward-Ledge-v7-source_4
+      rect:
+        serializedVersion: 2
+        x: 1174
+        y: 63
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76b45b7c2527a87b0800000000000000
+      internalID: -5221235118119236761
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skyward-Ledge-v7-source_5
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 21
+        width: 17
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25bfbfeed494c78d0800000000000000
+      internalID: -2847320265334195374
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skyward-Ledge-v7-source_6
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 47
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31e3161978f95f3d0800000000000000
+      internalID: -3173454957804175853
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skyward-Ledge-v7-source_7
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 18
+        width: 10
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8bcb7ac6cc3265380800000000000000
+      internalID: -8982953045840642888
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skyward-Ledge-v7-source_8
+      rect:
+        serializedVersion: 2
+        x: 1279
+        y: 31
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61e4e9b4749f6e150800000000000000
+      internalID: 5901678446322273814
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skyward-Ledge-v7-source_9
+      rect:
+        serializedVersion: 2
+        x: 1285
+        y: 29
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 314a269c2bd2c1a00800000000000000
+      internalID: 728507485633291283
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skyward-Ledge-v7-source_10
+      rect:
+        serializedVersion: 2
+        x: 1341
+        y: 16
+        width: 12
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6bd038e8aff5f6300800000000000000
+      internalID: 247522034266082742
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skyward-Ledge-v7-source_11
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 21
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b67fcd8481bf2720800000000000000
+      internalID: 2823670674257573561
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    outline: []
+    customData:
+    physicsShape: []
+    bones: []
+    spriteID:
+    internalID: 0
+    vertices: []
+    indices:
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Skyward-Ledge-v7-source_0: -8385439203035905968
+      Skyward-Ledge-v7-source_1: 302883674652211065
+      Skyward-Ledge-v7-source_10: 247522034266082742
+      Skyward-Ledge-v7-source_11: 2823670674257573561
+      Skyward-Ledge-v7-source_2: -8812843839326909549
+      Skyward-Ledge-v7-source_3: -8283802619320885192
+      Skyward-Ledge-v7-source_4: -5221235118119236761
+      Skyward-Ledge-v7-source_5: -2847320265334195374
+      Skyward-Ledge-v7-source_6: -3173454957804175853
+      Skyward-Ledge-v7-source_7: -8982953045840642888
+      Skyward-Ledge-v7-source_8: 5901678446322273814
+      Skyward-Ledge-v7-source_9: 728507485633291283
+  mipmapLimitGroupName:
+  pSDRemoveMatte: 0
+  userData:
+  assetBundleName:
+  assetBundleVariant:

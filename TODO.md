@@ -1,5 +1,17 @@
 # Agent Tasks
 
+- [x] Connect dedicated PVP art slots, uniform platform sizing and original Balance geometry restoration. Unity passed 84 sizing checks across four map slots and three mode-switch cycles using generated test sprites. Production artwork is now integrated.
+- [x] Verify a naturally connecting grounded punch-punch-kick combo; reduce early knockback so the finisher stays in range. Silent Play Mode passed 28 checks including stamina, whiffs, guard and parry.
+- [x] Create 48 new character-specific combo-effect sprites, integrate confirmed-hit and finisher playback, and inspect the running effect preview.
+- [x] Smooth melee input buffering and combat timing; remap shoulder dashes and trigger ultimate.
+- [x] Add four unique ranged specials with cooldowns and low-health cinematic ultimates.
+- [x] Create dedicated dash, backward dash, victory and ultimate animation art for every character.
+- [x] Enlarge action circles to 80 pixels with adaptive prompts and accepted/refused press effects.
+- [x] Create new larger PVP arena art and set the highest VFX quality as the default.
+- [x] Move enlarged clickable action diamonds to the bottom corners, use circular portraits and remove the heavy fighter-panel backing. Silent Play Mode passed 164 targeted checks.
+- [x] Verify combat, remapping, ultimates, HUD and win emotes; Windows build succeeded. Core 693 checks, final HUD 164 checks and natural melee 28 checks passed.
+- [ ] Publish the v7 source ZIP and verify its public download.
+
 - [x] Create sixteen distinct pixel-art action covers, four for each character.
 - [x] Bind covers to the selected character and verify both player slots in the running game.
 - [x] Inspect all four HUDs, build and publish the character-art update.

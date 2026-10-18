@@ -109,7 +109,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6a1da84a655aa4d088230d0f925ac4a2, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::Scout
   id: 0
   displayName: Fern
@@ -135,8 +135,8 @@ MonoBehaviour:
   pushKnockback: 4.8
   punchKnockback: 4
   damageKnockbackMultiplier: 0.3
-  pushCooldown: 0.58
-  punchCooldown: 0.85
+  pushCooldown: 0.32
+  punchCooldown: 0.36
   pushRange: 1.65
   punchRange: 1.45
 --- !u!1 &3549746565867829804
@@ -249,7 +249,7 @@ Animator:
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_AnimatePhysics: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0

@@ -1,0 +1,689 @@
+fileFormatVersion: 2
+guid: 90b974b5606d170439b8222e646c3a7f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1631040415137465937
+    second: Moonlit-Ledge-v7-source_0
+  - first:
+      213: 3426254663271039962
+    second: Moonlit-Ledge-v7-source_1
+  - first:
+      213: 5600856174247486439
+    second: Moonlit-Ledge-v7-source_2
+  - first:
+      213: -5527399273835411856
+    second: Moonlit-Ledge-v7-source_3
+  - first:
+      213: 4440083215439047874
+    second: Moonlit-Ledge-v7-source_4
+  - first:
+      213: -8553752066278280920
+    second: Moonlit-Ledge-v7-source_5
+  - first:
+      213: -4398508325158644225
+    second: Moonlit-Ledge-v7-source_6
+  - first:
+      213: 915666212455013240
+    second: Moonlit-Ledge-v7-source_7
+  - first:
+      213: -8602657911043603901
+    second: Moonlit-Ledge-v7-source_8
+  - first:
+      213: 6492585842727455246
+    second: Moonlit-Ledge-v7-source_9
+  - first:
+      213: -2471461522661761576
+    second: Moonlit-Ledge-v7-source_10
+  - first:
+      213: -5383175551664646873
+    second: Moonlit-Ledge-v7-source_11
+  - first:
+      213: 4984742382793914116
+    second: Moonlit-Ledge-v7-source_12
+  - first:
+      213: 3804622890147792502
+    second: Moonlit-Ledge-v7-source_13
+  - first:
+      213: -7100020226879540062
+    second: Moonlit-Ledge-v7-source_14
+  - first:
+      213: 2021628833918614946
+    second: Moonlit-Ledge-v7-source_15
+  - first:
+      213: 1718798841764321604
+    second: Moonlit-Ledge-v7-source_16
+  - first:
+      213: 3309056437571975671
+    second: Moonlit-Ledge-v7-source_17
+  - first:
+      213: 5773544724936096839
+    second: Moonlit-Ledge-v7-source_18
+  - first:
+      213: -6800469099918480611
+    second: Moonlit-Ledge-v7-source_19
+  - first:
+      213: 5245196290739341223
+    second: Moonlit-Ledge-v7-source_20
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Moonlit-Ledge-v7-source_0
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 554
+        width: 475
+        height: 147
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa9fc6152616d59e0800000000000000
+      internalID: -1631040415137465937
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Moonlit-Ledge-v7-source_1
+      rect:
+        serializedVersion: 2
+        x: 574
+        y: 607
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad3cb4296708c8f20800000000000000
+      internalID: 3426254663271039962
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Moonlit-Ledge-v7-source_2
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 617
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e32310140d3abd40800000000000000
+      internalID: 5600856174247486439
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Moonlit-Ledge-v7-source_3
+      rect:
+        serializedVersion: 2
+        x: 651
+        y: 613
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 076c94755abba43b0800000000000000
+      internalID: -5527399273835411856
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Moonlit-Ledge-v7-source_4
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 577
+        width: 52
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2cc2b6de8285e9d30800000000000000
+      internalID: 4440083215439047874
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Moonlit-Ledge-v7-source_5
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 536
+        width: 115
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82138b0c0d7fa4980800000000000000
+      internalID: -8553752066278280920
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Moonlit-Ledge-v7-source_6
+      rect:
+        serializedVersion: 2
+        x: 879
+        y: 536
+        width: 136
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff512598bfb55f2c0800000000000000
+      internalID: -4398508325158644225
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Moonlit-Ledge-v7-source_7
+      rect:
+        serializedVersion: 2
+        x: 1050
+        y: 552
+        width: 429
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87b553e919915bc00800000000000000
+      internalID: 915666212455013240
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Moonlit-Ledge-v7-source_8
+      rect:
+        serializedVersion: 2
+        x: 1556
+        y: 558
+        width: 69
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 342ca0075383d9880800000000000000
+      internalID: -8602657911043603901
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Moonlit-Ledge-v7-source_9
+      rect:
+        serializedVersion: 2
+        x: 1642
+        y: 606
+        width: 28
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0a008dbc6c4a1a50800000000000000
+      internalID: 6492585842727455246
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Moonlit-Ledge-v7-source_10
+      rect:
+        serializedVersion: 2
+        x: 1652
+        y: 607
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8dd13b9e6da93bdd0800000000000000
+      internalID: -2471461522661761576
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Moonlit-Ledge-v7-source_11
+      rect:
+        serializedVersion: 2
+        x: 1660
+        y: 526
+        width: 383
+        height: 186
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72516776b5e1b45b0800000000000000
+      internalID: -5383175551664646873
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Moonlit-Ledge-v7-source_12
+      rect:
+        serializedVersion: 2
+        x: 1662
+        y: 560
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 407f34f69cc5d2540800000000000000
+      internalID: 4984742382793914116
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Moonlit-Ledge-v7-source_13
+      rect:
+        serializedVersion: 2
+        x: 1743
+        y: 603
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 676449f5c5cbcc430800000000000000
+      internalID: 3804622890147792502
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Moonlit-Ledge-v7-source_14
+      rect:
+        serializedVersion: 2
+        x: 1751
+        y: 603
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a4b1ce9839a77d90800000000000000
+      internalID: -7100020226879540062
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Moonlit-Ledge-v7-source_15
+      rect:
+        serializedVersion: 2
+        x: 1757
+        y: 603
+        width: 9
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2adf761a6b44e0c10800000000000000
+      internalID: 2021628833918614946
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Moonlit-Ledge-v7-source_16
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 0
+        width: 1999
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44917b3a0766ad710800000000000000
+      internalID: 1718798841764321604
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Moonlit-Ledge-v7-source_17
+      rect:
+        serializedVersion: 2
+        x: 924
+        y: 506
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f9723f3c412ced20800000000000000
+      internalID: 3309056437571975671
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Moonlit-Ledge-v7-source_18
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 113
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74c75a87650cf1050800000000000000
+      internalID: 5773544724936096839
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Moonlit-Ledge-v7-source_19
+      rect:
+        serializedVersion: 2
+        x: 1662
+        y: 83
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1ba6515261ef91a0800000000000000
+      internalID: -6800469099918480611
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Moonlit-Ledge-v7-source_20
+      rect:
+        serializedVersion: 2
+        x: 1482
+        y: 64
+        width: 19
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a707b67c3eaac840800000000000000
+      internalID: 5245196290739341223
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    outline: []
+    customData:
+    physicsShape: []
+    bones: []
+    spriteID:
+    internalID: 0
+    vertices: []
+    indices:
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Moonlit-Ledge-v7-source_0: -1631040415137465937
+      Moonlit-Ledge-v7-source_1: 3426254663271039962
+      Moonlit-Ledge-v7-source_10: -2471461522661761576
+      Moonlit-Ledge-v7-source_11: -5383175551664646873
+      Moonlit-Ledge-v7-source_12: 4984742382793914116
+      Moonlit-Ledge-v7-source_13: 3804622890147792502
+      Moonlit-Ledge-v7-source_14: -7100020226879540062
+      Moonlit-Ledge-v7-source_15: 2021628833918614946
+      Moonlit-Ledge-v7-source_16: 1718798841764321604
+      Moonlit-Ledge-v7-source_17: 3309056437571975671
+      Moonlit-Ledge-v7-source_18: 5773544724936096839
+      Moonlit-Ledge-v7-source_19: -6800469099918480611
+      Moonlit-Ledge-v7-source_2: 5600856174247486439
+      Moonlit-Ledge-v7-source_20: 5245196290739341223
+      Moonlit-Ledge-v7-source_3: -5527399273835411856
+      Moonlit-Ledge-v7-source_4: 4440083215439047874
+      Moonlit-Ledge-v7-source_5: -8553752066278280920
+      Moonlit-Ledge-v7-source_6: -4398508325158644225
+      Moonlit-Ledge-v7-source_7: 915666212455013240
+      Moonlit-Ledge-v7-source_8: -8602657911043603901
+      Moonlit-Ledge-v7-source_9: 6492585842727455246
+  mipmapLimitGroupName:
+  pSDRemoveMatte: 0
+  userData:
+  assetBundleName:
+  assetBundleVariant:

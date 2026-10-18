@@ -1,0 +1,5239 @@
+fileFormatVersion: 2
+guid: dfc39a0bee5947c4d8accf237900c6bf
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1716038985386431948
+    second: Bram-Combo-v7-source_0
+  - first:
+      213: -7602036429691099066
+    second: Bram-Combo-v7-source_1
+  - first:
+      213: 1577376658291080865
+    second: Bram-Combo-v7-source_2
+  - first:
+      213: 3240971778275459214
+    second: Bram-Combo-v7-source_3
+  - first:
+      213: 7272252179913689765
+    second: Bram-Combo-v7-source_4
+  - first:
+      213: 7562507171882971231
+    second: Bram-Combo-v7-source_5
+  - first:
+      213: 2480002161493191342
+    second: Bram-Combo-v7-source_6
+  - first:
+      213: -8039956075432066393
+    second: Bram-Combo-v7-source_7
+  - first:
+      213: 7985296700439605619
+    second: Bram-Combo-v7-source_8
+  - first:
+      213: 6703809515223788987
+    second: Bram-Combo-v7-source_9
+  - first:
+      213: 8906427685152372875
+    second: Bram-Combo-v7-source_10
+  - first:
+      213: 631083945151588402
+    second: Bram-Combo-v7-source_11
+  - first:
+      213: -3271234025065956160
+    second: Bram-Combo-v7-source_12
+  - first:
+      213: -9016172981564293430
+    second: Bram-Combo-v7-source_13
+  - first:
+      213: -2549860606249296147
+    second: Bram-Combo-v7-source_14
+  - first:
+      213: -4540040040589697164
+    second: Bram-Combo-v7-source_15
+  - first:
+      213: -5851356897890437027
+    second: Bram-Combo-v7-source_16
+  - first:
+      213: 2234258848915496830
+    second: Bram-Combo-v7-source_17
+  - first:
+      213: -5519703613512501060
+    second: Bram-Combo-v7-source_18
+  - first:
+      213: 7032765814353572400
+    second: Bram-Combo-v7-source_19
+  - first:
+      213: -162762957041080330
+    second: Bram-Combo-v7-source_20
+  - first:
+      213: 4098081609290044520
+    second: Bram-Combo-v7-source_21
+  - first:
+      213: 8126895656773308658
+    second: Bram-Combo-v7-source_22
+  - first:
+      213: -8120487599036342111
+    second: Bram-Combo-v7-source_23
+  - first:
+      213: -4071582297062735830
+    second: Bram-Combo-v7-source_24
+  - first:
+      213: 3181512422012558031
+    second: Bram-Combo-v7-source_25
+  - first:
+      213: 8255590466622810733
+    second: Bram-Combo-v7-source_26
+  - first:
+      213: -6320546977368544226
+    second: Bram-Combo-v7-source_27
+  - first:
+      213: -2285326130213183457
+    second: Bram-Combo-v7-source_28
+  - first:
+      213: 4431682521495639452
+    second: Bram-Combo-v7-source_29
+  - first:
+      213: 1332403181434388986
+    second: Bram-Combo-v7-source_30
+  - first:
+      213: -2179836459578801423
+    second: Bram-Combo-v7-source_31
+  - first:
+      213: -7994933605531164832
+    second: Bram-Combo-v7-source_32
+  - first:
+      213: -8729607345169259174
+    second: Bram-Combo-v7-source_33
+  - first:
+      213: 5890467623094284989
+    second: Bram-Combo-v7-source_34
+  - first:
+      213: 3383443091573865384
+    second: Bram-Combo-v7-source_35
+  - first:
+      213: -4023477405409226023
+    second: Bram-Combo-v7-source_36
+  - first:
+      213: 3383280610598162958
+    second: Bram-Combo-v7-source_37
+  - first:
+      213: 6610466456237798312
+    second: Bram-Combo-v7-source_38
+  - first:
+      213: -5044791930392799695
+    second: Bram-Combo-v7-source_39
+  - first:
+      213: 187992318982713149
+    second: Bram-Combo-v7-source_40
+  - first:
+      213: 8106900454085795609
+    second: Bram-Combo-v7-source_41
+  - first:
+      213: 5329265423914890817
+    second: Bram-Combo-v7-source_42
+  - first:
+      213: -1486608354725293798
+    second: Bram-Combo-v7-source_43
+  - first:
+      213: -8700309021217110678
+    second: Bram-Combo-v7-source_44
+  - first:
+      213: -737834321001214757
+    second: Bram-Combo-v7-source_45
+  - first:
+      213: -3310713246575969597
+    second: Bram-Combo-v7-source_46
+  - first:
+      213: 813024183447325227
+    second: Bram-Combo-v7-source_47
+  - first:
+      213: 4062275177085709666
+    second: Bram-Combo-v7-source_48
+  - first:
+      213: -2265509466664833512
+    second: Bram-Combo-v7-source_49
+  - first:
+      213: -2597993417462235046
+    second: Bram-Combo-v7-source_50
+  - first:
+      213: -2324750890323009347
+    second: Bram-Combo-v7-source_51
+  - first:
+      213: 3233638486713926645
+    second: Bram-Combo-v7-source_52
+  - first:
+      213: -5789948878860013800
+    second: Bram-Combo-v7-source_53
+  - first:
+      213: -7708411003121381832
+    second: Bram-Combo-v7-source_54
+  - first:
+      213: -4517889901207102616
+    second: Bram-Combo-v7-source_55
+  - first:
+      213: 4476471975666967209
+    second: Bram-Combo-v7-source_56
+  - first:
+      213: 5779415735142175269
+    second: Bram-Combo-v7-source_57
+  - first:
+      213: -4911364851813821428
+    second: Bram-Combo-v7-source_58
+  - first:
+      213: 8800965693799210695
+    second: Bram-Combo-v7-source_59
+  - first:
+      213: 7916332643814165864
+    second: Bram-Combo-v7-source_60
+  - first:
+      213: -5999371918763873070
+    second: Bram-Combo-v7-source_61
+  - first:
+      213: 8420104437210805981
+    second: Bram-Combo-v7-source_62
+  - first:
+      213: 5888844018897537304
+    second: Bram-Combo-v7-source_63
+  - first:
+      213: 8209580569156371700
+    second: Bram-Combo-v7-source_64
+  - first:
+      213: -847998564538082854
+    second: Bram-Combo-v7-source_65
+  - first:
+      213: 9115026022334486520
+    second: Bram-Combo-v7-source_66
+  - first:
+      213: 3051322748733005108
+    second: Bram-Combo-v7-source_67
+  - first:
+      213: 5597493896279900410
+    second: Bram-Combo-v7-source_68
+  - first:
+      213: -8326057175729471515
+    second: Bram-Combo-v7-source_69
+  - first:
+      213: 7883774611197156001
+    second: Bram-Combo-v7-source_70
+  - first:
+      213: -4242487319770700351
+    second: Bram-Combo-v7-source_71
+  - first:
+      213: 6452869725458627780
+    second: Bram-Combo-v7-source_72
+  - first:
+      213: 9104756127776658148
+    second: Bram-Combo-v7-source_73
+  - first:
+      213: 7212898508945961356
+    second: Bram-Combo-v7-source_74
+  - first:
+      213: -7549702822519184574
+    second: Bram-Combo-v7-source_75
+  - first:
+      213: -5365683979557382575
+    second: Bram-Combo-v7-source_76
+  - first:
+      213: -4840323314389620473
+    second: Bram-Combo-v7-source_77
+  - first:
+      213: -2831832478992106854
+    second: Bram-Combo-v7-source_78
+  - first:
+      213: 4150692918152996594
+    second: Bram-Combo-v7-source_79
+  - first:
+      213: 3026485759799318263
+    second: Bram-Combo-v7-source_80
+  - first:
+      213: 6196936854392784464
+    second: Bram-Combo-v7-source_81
+  - first:
+      213: -2612437265463043327
+    second: Bram-Combo-v7-source_82
+  - first:
+      213: -9129980699506829883
+    second: Bram-Combo-v7-source_83
+  - first:
+      213: 7145156695775954021
+    second: Bram-Combo-v7-source_84
+  - first:
+      213: -646352594855847277
+    second: Bram-Combo-v7-source_85
+  - first:
+      213: -6140463466045690816
+    second: Bram-Combo-v7-source_86
+  - first:
+      213: 8293911240853655441
+    second: Bram-Combo-v7-source_87
+  - first:
+      213: 5209250100225972298
+    second: Bram-Combo-v7-source_88
+  - first:
+      213: 6475965557648292499
+    second: Bram-Combo-v7-source_89
+  - first:
+      213: -4748501443078579093
+    second: Bram-Combo-v7-source_90
+  - first:
+      213: -3363733082547880120
+    second: Bram-Combo-v7-source_91
+  - first:
+      213: 2455793427986819010
+    second: Bram-Combo-v7-source_92
+  - first:
+      213: -6905062457515619167
+    second: Bram-Combo-v7-source_93
+  - first:
+      213: 5571083594530034714
+    second: Bram-Combo-v7-source_94
+  - first:
+      213: 5920277512196420046
+    second: Bram-Combo-v7-source_95
+  - first:
+      213: -5284992742382282859
+    second: Bram-Combo-v7-source_96
+  - first:
+      213: 2456728499112426284
+    second: Bram-Combo-v7-source_97
+  - first:
+      213: 6467044555273587632
+    second: Bram-Combo-v7-source_98
+  - first:
+      213: -1787041945343205425
+    second: Bram-Combo-v7-source_99
+  - first:
+      213: -2876233146449063054
+    second: Bram-Combo-v7-source_100
+  - first:
+      213: -2389297086329717165
+    second: Bram-Combo-v7-source_101
+  - first:
+      213: -3483638850617223080
+    second: Bram-Combo-v7-source_102
+  - first:
+      213: -1580491833418651120
+    second: Bram-Combo-v7-source_103
+  - first:
+      213: 2025804253791564150
+    second: Bram-Combo-v7-source_104
+  - first:
+      213: 2667842525298051537
+    second: Bram-Combo-v7-source_105
+  - first:
+      213: -6162739833347711286
+    second: Bram-Combo-v7-source_106
+  - first:
+      213: -4530254664511253962
+    second: Bram-Combo-v7-source_107
+  - first:
+      213: 7192447971726123443
+    second: Bram-Combo-v7-source_108
+  - first:
+      213: 5968615919918773363
+    second: Bram-Combo-v7-source_109
+  - first:
+      213: 4365406046696167498
+    second: Bram-Combo-v7-source_110
+  - first:
+      213: 4301068635535129001
+    second: Bram-Combo-v7-source_111
+  - first:
+      213: -8244080426538108632
+    second: Bram-Combo-v7-source_112
+  - first:
+      213: 4859808782515882243
+    second: Bram-Combo-v7-source_113
+  - first:
+      213: -3029076956896820243
+    second: Bram-Combo-v7-source_114
+  - first:
+      213: -8497599080996368106
+    second: Bram-Combo-v7-source_115
+  - first:
+      213: 7937933040284706163
+    second: Bram-Combo-v7-source_116
+  - first:
+      213: 4958914427898213929
+    second: Bram-Combo-v7-source_117
+  - first:
+      213: -5941852835333587895
+    second: Bram-Combo-v7-source_118
+  - first:
+      213: -207223313170804254
+    second: Bram-Combo-v7-source_119
+  - first:
+      213: 3152952117919374244
+    second: Bram-Combo-v7-source_120
+  - first:
+      213: -6741576496101961448
+    second: Bram-Combo-v7-source_121
+  - first:
+      213: -600532639636543351
+    second: Bram-Combo-v7-source_122
+  - first:
+      213: -6578527575344522832
+    second: Bram-Combo-v7-source_123
+  - first:
+      213: -144268254177031041
+    second: Bram-Combo-v7-source_124
+  - first:
+      213: 5629818810560102833
+    second: Bram-Combo-v7-source_125
+  - first:
+      213: -6347285816834510806
+    second: Bram-Combo-v7-source_126
+  - first:
+      213: 8882212212210379462
+    second: Bram-Combo-v7-source_127
+  - first:
+      213: -6384795586582999468
+    second: Bram-Combo-v7-source_128
+  - first:
+      213: -3886534661773637563
+    second: Bram-Combo-v7-source_129
+  - first:
+      213: 6249782511862020943
+    second: Bram-Combo-v7-source_130
+  - first:
+      213: 345630274606062641
+    second: Bram-Combo-v7-source_131
+  - first:
+      213: -2989902204977434365
+    second: Bram-Combo-v7-source_132
+  - first:
+      213: 8835397968686534231
+    second: Bram-Combo-v7-source_133
+  - first:
+      213: 1547688405154610061
+    second: Bram-Combo-v7-source_134
+  - first:
+      213: -637522403052939717
+    second: Bram-Combo-v7-source_135
+  - first:
+      213: -6706374311051902883
+    second: Bram-Combo-v7-source_136
+  - first:
+      213: 542675246860680937
+    second: Bram-Combo-v7-source_137
+  - first:
+      213: 2569702201852805643
+    second: Bram-Combo-v7-source_138
+  - first:
+      213: 5389026940440599063
+    second: Bram-Combo-v7-source_139
+  - first:
+      213: 7388880597658489525
+    second: Bram-Combo-v7-source_140
+  - first:
+      213: 741462184315274198
+    second: Bram-Combo-v7-source_141
+  - first:
+      213: -5537101839049218507
+    second: Bram-Combo-v7-source_142
+  - first:
+      213: -2380482822338616024
+    second: Bram-Combo-v7-source_143
+  - first:
+      213: 4492453386532582275
+    second: Bram-Combo-v7-source_144
+  - first:
+      213: 4840536071679970371
+    second: Bram-Combo-v7-source_145
+  - first:
+      213: -6410428725730329905
+    second: Bram-Combo-v7-source_146
+  - first:
+      213: 7344904788025286660
+    second: Bram-Combo-v7-source_147
+  - first:
+      213: 7232211570809763289
+    second: Bram-Combo-v7-source_148
+  - first:
+      213: -2507559071459499389
+    second: Bram-Combo-v7-source_149
+  - first:
+      213: 2760338236240717491
+    second: Bram-Combo-v7-source_150
+  - first:
+      213: 6966566302552922935
+    second: Bram-Combo-v7-source_151
+  - first:
+      213: -458918344772011913
+    second: Bram-Combo-v7-source_152
+  - first:
+      213: 8203134876177383993
+    second: Bram-Combo-v7-source_153
+  - first:
+      213: 2752066700996174205
+    second: Bram-Combo-v7-source_154
+  - first:
+      213: -3330809274232615295
+    second: Bram-Combo-v7-source_155
+  - first:
+      213: -6947642594320718156
+    second: Bram-Combo-v7-source_156
+  - first:
+      213: -5295966599876356427
+    second: Bram-Combo-v7-source_157
+  - first:
+      213: -1726598077584758906
+    second: Bram-Combo-v7-source_158
+  - first:
+      213: 6745433609616938669
+    second: Bram-Combo-v7-source_159
+  - first:
+      213: 2525790405092758589
+    second: Bram-Combo-v7-source_160
+  - first:
+      213: -7214212762100455367
+    second: Bram-Combo-v7-source_161
+  - first:
+      213: 4597215063564594416
+    second: Bram-Combo-v7-source_162
+  - first:
+      213: -833461487746327252
+    second: Bram-Combo-v7-source_163
+  - first:
+      213: -102222858743063379
+    second: Bram-Combo-v7-source_164
+  - first:
+      213: 5012982804376071716
+    second: Bram-Combo-v7-source_165
+  - first:
+      213: 6383241805187696740
+    second: Bram-Combo-v7-source_166
+  - first:
+      213: -3176460605742600003
+    second: Bram-Combo-v7-source_167
+  - first:
+      213: -1549016800190098590
+    second: Bram-Combo-v7-source_168
+  - first:
+      213: -2084224131450650266
+    second: Bram-Combo-v7-source_169
+  - first:
+      213: -864798662281642969
+    second: Bram-Combo-v7-source_170
+  - first:
+      213: -8008408618730934063
+    second: Bram-Combo-v7-source_171
+  - first:
+      213: -2299074612362660799
+    second: Bram-Combo-v7-source_172
+  - first:
+      213: 7975668353652436738
+    second: Bram-Combo-v7-source_173
+  - first:
+      213: 8561202237046189207
+    second: Bram-Combo-v7-source_174
+  - first:
+      213: -8676549908387784827
+    second: Bram-Combo-v7-source_175
+  - first:
+      213: -3177604345662099340
+    second: Bram-Combo-v7-source_176
+  - first:
+      213: -4667264793367454573
+    second: Bram-Combo-v7-source_177
+  - first:
+      213: 1673642961385295718
+    second: Bram-Combo-v7-source_178
+  - first:
+      213: -7447890727876820013
+    second: Bram-Combo-v7-source_179
+  - first:
+      213: 2961538883431115041
+    second: Bram-Combo-v7-source_180
+  - first:
+      213: -7336438977120706900
+    second: Bram-Combo-v7-source_181
+  - first:
+      213: 7086371482440206123
+    second: Bram-Combo-v7-source_182
+  - first:
+      213: -1011875632799624179
+    second: Bram-Combo-v7-source_183
+  - first:
+      213: 7662775705346584885
+    second: Bram-Combo-v7-source_184
+  - first:
+      213: 374335333230642029
+    second: Bram-Combo-v7-source_185
+  - first:
+      213: 7984054434472841053
+    second: Bram-Combo-v7-source_186
+  - first:
+      213: 3738170786878342045
+    second: Bram-Combo-v7-source_187
+  - first:
+      213: -1333393420339641800
+    second: Bram-Combo-v7-source_188
+  - first:
+      213: -272756851620629051
+    second: Bram-Combo-v7-source_189
+  - first:
+      213: -8664788106344089893
+    second: Bram-Combo-v7-source_190
+  - first:
+      213: -2500286148120067489
+    second: Bram-Combo-v7-source_191
+  - first:
+      213: -5786174801397935169
+    second: Bram-Combo-v7-source_192
+  - first:
+      213: 3017217061698958467
+    second: Bram-Combo-v7-source_193
+  - first:
+      213: -5380202012737976281
+    second: Bram-Combo-v7-source_194
+  - first:
+      213: -125320614599270917
+    second: Bram-Combo-v7-source_195
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 675
+        width: 71
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43ae15f72a76f28e0800000000000000
+      internalID: -1716038985386431948
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_1
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 651
+        width: 94
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 648eeaef424208690800000000000000
+      internalID: -7602036429691099066
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_2
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 597
+        width: 65
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1aebe62a6b7f3e510800000000000000
+      internalID: 1577376658291080865
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_3
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 657
+        width: 159
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e80cc2339ae3afc20800000000000000
+      internalID: 3240971778275459214
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_4
+      rect:
+        serializedVersion: 2
+        x: 1380
+        y: 633
+        width: 101
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5aac0dcd3da3ce460800000000000000
+      internalID: 7272252179913689765
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_5
+      rect:
+        serializedVersion: 2
+        x: 1808
+        y: 711
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f50bd67743c63f860800000000000000
+      internalID: 7562507171882971231
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_6
+      rect:
+        serializedVersion: 2
+        x: 1987
+        y: 608
+        width: 108
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eaaa00683dcba6220800000000000000
+      internalID: 2480002161493191342
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_7
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 608
+        width: 80
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a2c0220c865c6090800000000000000
+      internalID: -8039956075432066393
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_8
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 675
+        width: 42
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3713dc78a0971de60800000000000000
+      internalID: 7985296700439605619
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_9
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 687
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bbd2ccc5c37b80d50800000000000000
+      internalID: 6703809515223788987
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_10
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 659
+        width: 25
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8836379accf99b70800000000000000
+      internalID: 8906427685152372875
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_11
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 673
+        width: 42
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2386636218f02c800800000000000000
+      internalID: 631083945151588402
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_12
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 673
+        width: 36
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ccb5c66cfd3a92d0800000000000000
+      internalID: -3271234025065956160
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_13
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 645
+        width: 41
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aceb268617e10e280800000000000000
+      internalID: -9016172981564293430
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_14
+      rect:
+        serializedVersion: 2
+        x: 754
+        y: 648
+        width: 70
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dee9fb1d9431d9cd0800000000000000
+      internalID: -2549860606249296147
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_15
+      rect:
+        serializedVersion: 2
+        x: 941
+        y: 648
+        width: 50
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47fd99223a98ef0c0800000000000000
+      internalID: -4540040040589697164
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_16
+      rect:
+        serializedVersion: 2
+        x: 995
+        y: 632
+        width: 62
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d58753737edcbcea0800000000000000
+      internalID: -5851356897890437027
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_17
+      rect:
+        serializedVersion: 2
+        x: 1044
+        y: 377
+        width: 385
+        height: 307
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7f91e1e59ea10f10800000000000000
+      internalID: 2234258848915496830
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_18
+      rect:
+        serializedVersion: 2
+        x: 1138
+        y: 667
+        width: 94
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb8b523eec21663b0800000000000000
+      internalID: -5519703613512501060
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_19
+      rect:
+        serializedVersion: 2
+        x: 1172
+        y: 682
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0323e093f37699160800000000000000
+      internalID: 7032765814353572400
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_20
+      rect:
+        serializedVersion: 2
+        x: 1187
+        y: 681
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f769f2f3ffbdbdf0800000000000000
+      internalID: -162762957041080330
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_21
+      rect:
+        serializedVersion: 2
+        x: 1283
+        y: 681
+        width: 74
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8645b46d28f4fd830800000000000000
+      internalID: 4098081609290044520
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_22
+      rect:
+        serializedVersion: 2
+        x: 1486
+        y: 647
+        width: 46
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f053acaa8888c070800000000000000
+      internalID: 8126895656773308658
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_23
+      rect:
+        serializedVersion: 2
+        x: 1559
+        y: 677
+        width: 37
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a069788d8b3e4f80800000000000000
+      internalID: -8120487599036342111
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_24
+      rect:
+        serializedVersion: 2
+        x: 1621
+        y: 649
+        width: 41
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a208ec51975de77c0800000000000000
+      internalID: -4071582297062735830
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_25
+      rect:
+        serializedVersion: 2
+        x: 1677
+        y: 677
+        width: 19
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fca1d8201b0072c20800000000000000
+      internalID: 3181512422012558031
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_26
+      rect:
+        serializedVersion: 2
+        x: 1695
+        y: 651
+        width: 48
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6a67261acfb19270800000000000000
+      internalID: 8255590466622810733
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_27
+      rect:
+        serializedVersion: 2
+        x: 1695
+        y: 675
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1c67c30308e848a0800000000000000
+      internalID: -6320546977368544226
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_28
+      rect:
+        serializedVersion: 2
+        x: 1733
+        y: 693
+        width: 24
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f10a9b42ef3e840e0800000000000000
+      internalID: -2285326130213183457
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_29
+      rect:
+        serializedVersion: 2
+        x: 1742
+        y: 520
+        width: 107
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c951e03f5cf708d30800000000000000
+      internalID: 4431682521495639452
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_30
+      rect:
+        serializedVersion: 2
+        x: 1820
+        y: 689
+        width: 37
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af14ff652a5ad7210800000000000000
+      internalID: 1332403181434388986
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_31
+      rect:
+        serializedVersion: 2
+        x: 1862
+        y: 594
+        width: 40
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f24c5e0a4aafb1e0800000000000000
+      internalID: -2179836459578801423
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_32
+      rect:
+        serializedVersion: 2
+        x: 1939
+        y: 665
+        width: 27
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06f5b77ae3a4c0190800000000000000
+      internalID: -7994933605531164832
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_33
+      rect:
+        serializedVersion: 2
+        x: 2122
+        y: 659
+        width: 17
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a55ab8afe543ad680800000000000000
+      internalID: -8729607345169259174
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_34
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 631
+        width: 12
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db2797b18152fb150800000000000000
+      internalID: 5890467623094284989
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_35
+      rect:
+        serializedVersion: 2
+        x: 318
+        y: 653
+        width: 11
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ab7207c09764fe20800000000000000
+      internalID: 3383443091573865384
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_36
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 645
+        width: 9
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d2d5c8fd9cb928c0800000000000000
+      internalID: -4023477405409226023
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_37
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 641
+        width: 13
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e029b2a3ac3d3fe20800000000000000
+      internalID: 3383280610598162958
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_38
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 648
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a370bbd7381dbb50800000000000000
+      internalID: 6610466456237798312
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_39
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 663
+        width: 23
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1361e2fb77c4df9b0800000000000000
+      internalID: -5044791930392799695
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_40
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 646
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3f6771a402eb9200800000000000000
+      internalID: 187992318982713149
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_41
+      rect:
+        serializedVersion: 2
+        x: 619
+        y: 645
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91f9c33c20f718070800000000000000
+      internalID: 8106900454085795609
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_42
+      rect:
+        serializedVersion: 2
+        x: 635
+        y: 640
+        width: 20
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 146f73adaaa55f940800000000000000
+      internalID: 5329265423914890817
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_43
+      rect:
+        serializedVersion: 2
+        x: 654
+        y: 608
+        width: 57
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a119878e3918e5be0800000000000000
+      internalID: -1486608354725293798
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_44
+      rect:
+        serializedVersion: 2
+        x: 706
+        y: 640
+        width: 17
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a654a3a9a0b424780800000000000000
+      internalID: -8700309021217110678
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_45
+      rect:
+        serializedVersion: 2
+        x: 730
+        y: 385
+        width: 315
+        height: 265
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bdc81a1289fa2c5f0800000000000000
+      internalID: -737834321001214757
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_46
+      rect:
+        serializedVersion: 2
+        x: 1044
+        y: 657
+        width: 19
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3cab8a8d7dbfd02d0800000000000000
+      internalID: -3310713246575969597
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_47
+      rect:
+        serializedVersion: 2
+        x: 1428
+        y: 332
+        width: 383
+        height: 318
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2a0e20ff21784b00800000000000000
+      internalID: 813024183447325227
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_48
+      rect:
+        serializedVersion: 2
+        x: 1432
+        y: 661
+        width: 11
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26da41e20c9106830800000000000000
+      internalID: 4062275177085709666
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_49
+      rect:
+        serializedVersion: 2
+        x: 1432
+        y: 632
+        width: 15
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81e682ca42b4f80e0800000000000000
+      internalID: -2265509466664833512
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_50
+      rect:
+        serializedVersion: 2
+        x: 1492
+        y: 647
+        width: 15
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a504c5760c212fbd0800000000000000
+      internalID: -2597993417462235046
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_51
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 649
+        width: 26
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db0260fd163dcbfd0800000000000000
+      internalID: -2324750890323009347
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_52
+      rect:
+        serializedVersion: 2
+        x: 1701
+        y: 656
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f38d94321130ec20800000000000000
+      internalID: 3233638486713926645
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_53
+      rect:
+        serializedVersion: 2
+        x: 1754
+        y: 663
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81fa0efcb28f5afa0800000000000000
+      internalID: -5789948878860013800
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_54
+      rect:
+        serializedVersion: 2
+        x: 1839
+        y: 644
+        width: 12
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83ecc389809360590800000000000000
+      internalID: -7708411003121381832
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_55
+      rect:
+        serializedVersion: 2
+        x: 1842
+        y: 624
+        width: 23
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86bd938521b3d41c0800000000000000
+      internalID: -4517889901207102616
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_56
+      rect:
+        serializedVersion: 2
+        x: 1886
+        y: 642
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a2ee946b8f9f1e30800000000000000
+      internalID: 4476471975666967209
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_57
+      rect:
+        serializedVersion: 2
+        x: 1951
+        y: 618
+        width: 29
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 522d37e8dfb943050800000000000000
+      internalID: 5779415735142175269
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_58
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 655
+        width: 12
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c045c4550b357dbb0800000000000000
+      internalID: -4911364851813821428
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_59
+      rect:
+        serializedVersion: 2
+        x: 2069
+        y: 644
+        width: 50
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ce1d434baf432a70800000000000000
+      internalID: 8800965693799210695
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_60
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 353
+        width: 285
+        height: 291
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86d4f56d8967cdd60800000000000000
+      internalID: 7916332643814165864
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_61
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 576
+        width: 33
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2dc20a2a603fdbca0800000000000000
+      internalID: -5999371918763873070
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_62
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 375
+        width: 361
+        height: 267
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd6f3afbf583ad470800000000000000
+      internalID: 8420104437210805981
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_63
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 628
+        width: 13
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 819421c4f6069b150800000000000000
+      internalID: 5888844018897537304
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_64
+      rect:
+        serializedVersion: 2
+        x: 643
+        y: 642
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f4c38b080a4ee170800000000000000
+      internalID: 8209580569156371700
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_65
+      rect:
+        serializedVersion: 2
+        x: 721
+        y: 634
+        width: 6
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad99aa66ccd4b34f0800000000000000
+      internalID: -847998564538082854
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_66
+      rect:
+        serializedVersion: 2
+        x: 1058
+        y: 632
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f750b3bfd31f7e70800000000000000
+      internalID: 9115026022334486520
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_67
+      rect:
+        serializedVersion: 2
+        x: 1066
+        y: 632
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43d9c459fd9785a20800000000000000
+      internalID: 3051322748733005108
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_68
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 615
+        width: 21
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af04e28ba0b4ead40800000000000000
+      internalID: 5597493896279900410
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_69
+      rect:
+        serializedVersion: 2
+        x: 1424
+        y: 622
+        width: 9
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ef7d0dac17e37c80800000000000000
+      internalID: -8326057175729471515
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_70
+      rect:
+        serializedVersion: 2
+        x: 2126
+        y: 626
+        width: 44
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1aa56a52d3bc86d60800000000000000
+      internalID: 7883774611197156001
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_71
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 609
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c5e7f4a248af15c0800000000000000
+      internalID: -4242487319770700351
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_72
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 616
+        width: 19
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4cc75d793d23d8950800000000000000
+      internalID: 6452869725458627780
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_73
+      rect:
+        serializedVersion: 2
+        x: 698
+        y: 576
+        width: 45
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e250ba85779a5e70800000000000000
+      internalID: 9104756127776658148
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_74
+      rect:
+        serializedVersion: 2
+        x: 1038
+        y: 608
+        width: 27
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c813ba27afc591460800000000000000
+      internalID: 7212898508945961356
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_75
+      rect:
+        serializedVersion: 2
+        x: 1067
+        y: 626
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 243eaff68411a3790800000000000000
+      internalID: -7549702822519184574
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_76
+      rect:
+        serializedVersion: 2
+        x: 1438
+        y: 628
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1565a7569d24985b0800000000000000
+      internalID: -5365683979557382575
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_77
+      rect:
+        serializedVersion: 2
+        x: 2011
+        y: 586
+        width: 47
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 709e3c73797b3dcb0800000000000000
+      internalID: -4840323314389620473
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_78
+      rect:
+        serializedVersion: 2
+        x: 2045
+        y: 621
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9af2423d5f43b8d0800000000000000
+      internalID: -2831832478992106854
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_79
+      rect:
+        serializedVersion: 2
+        x: 2070
+        y: 622
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f62d3eb7393a9930800000000000000
+      internalID: 4150692918152996594
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_80
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 614
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f6dd9673cc300a20800000000000000
+      internalID: 3026485759799318263
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_81
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 616
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 056cb9d7c31fff550800000000000000
+      internalID: 6196936854392784464
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_82
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 486
+        width: 49
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10b151af522cebbd0800000000000000
+      internalID: -2612437265463043327
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_83
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 580
+        width: 19
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c519bf2deacb4180800000000000000
+      internalID: -9129980699506829883
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_84
+      rect:
+        serializedVersion: 2
+        x: 716
+        y: 614
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 564ca3c7822b82360800000000000000
+      internalID: 7145156695775954021
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_85
+      rect:
+        serializedVersion: 2
+        x: 2065
+        y: 618
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39a17ff4db1b707f0800000000000000
+      internalID: -646352594855847277
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_86
+      rect:
+        serializedVersion: 2
+        x: 2081
+        y: 484
+        width: 91
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04c251ed201b8caa0800000000000000
+      internalID: -6140463466045690816
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_87
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 572
+        width: 19
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19f83bd9454e91370800000000000000
+      internalID: 8293911240853655441
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_88
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 594
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a48132acd59fa4840800000000000000
+      internalID: 5209250100225972298
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_89
+      rect:
+        serializedVersion: 2
+        x: 1422
+        y: 590
+        width: 32
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39a7a411d504fd950800000000000000
+      internalID: 6475965557648292499
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_90
+      rect:
+        serializedVersion: 2
+        x: 1428
+        y: 560
+        width: 35
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6c1fdd981fe91eb0800000000000000
+      internalID: -4748501443078579093
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_91
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 554
+        width: 23
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84ff08f459e9151d0800000000000000
+      internalID: -3363733082547880120
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_92
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 558
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c7a4e48c1bb41220800000000000000
+      internalID: 2455793427986819010
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_93
+      rect:
+        serializedVersion: 2
+        x: 706
+        y: 552
+        width: 21
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ac45eb874a4c20a0800000000000000
+      internalID: -6905062457515619167
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_94
+      rect:
+        serializedVersion: 2
+        x: 1436
+        y: 546
+        width: 13
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1418f92307705d40800000000000000
+      internalID: 5571083594530034714
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_95
+      rect:
+        serializedVersion: 2
+        x: 1802
+        y: 546
+        width: 7
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec17336c70d092250800000000000000
+      internalID: 5920277512196420046
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_96
+      rect:
+        serializedVersion: 2
+        x: 1830
+        y: 256
+        width: 327
+        height: 333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59759c51a1fe7a6b0800000000000000
+      internalID: -5284992742382282859
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_97
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 538
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2bbc2bbd8d081220800000000000000
+      internalID: 2456728499112426284
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_98
+      rect:
+        serializedVersion: 2
+        x: 708
+        y: 512
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0bbc4b752ce8fb950800000000000000
+      internalID: 6467044555273587632
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_99
+      rect:
+        serializedVersion: 2
+        x: 625
+        y: 429
+        width: 72
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fcf5811a1d62337e0800000000000000
+      internalID: -1787041945343205425
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_100
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 492
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27313b631319518d0800000000000000
+      internalID: -2876233146449063054
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_101
+      rect:
+        serializedVersion: 2
+        x: 689
+        y: 472
+        width: 22
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35ef07285f287ded0800000000000000
+      internalID: -2389297086329717165
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_102
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 472
+        width: 27
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 858d5372ce0a7afc0800000000000000
+      internalID: -3483638850617223080
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_103
+      rect:
+        serializedVersion: 2
+        x: 1810
+        y: 431
+        width: 29
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01aeca22d07f01ae0800000000000000
+      internalID: -1580491833418651120
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_104
+      rect:
+        serializedVersion: 2
+        x: 1826
+        y: 486
+        width: 15
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 671b8b35c3a1d1c10800000000000000
+      internalID: 2025804253791564150
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_105
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 463
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d9421554a4160520800000000000000
+      internalID: 2667842525298051537
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_106
+      rect:
+        serializedVersion: 2
+        x: 692
+        y: 425
+        width: 31
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aced82ee5cc897aa0800000000000000
+      internalID: -6162739833347711286
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_107
+      rect:
+        serializedVersion: 2
+        x: 1430
+        y: 436
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63210cb826d4121c0800000000000000
+      internalID: -4530254664511253962
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_108
+      rect:
+        serializedVersion: 2
+        x: 1824
+        y: 431
+        width: 14
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b1e634b255b0d360800000000000000
+      internalID: 7192447971726123443
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_109
+      rect:
+        serializedVersion: 2
+        x: 1840
+        y: 435
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 374ff7b5e88c4d250800000000000000
+      internalID: 5968615919918773363
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_110
+      rect:
+        serializedVersion: 2
+        x: 1842
+        y: 447
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a48daa9aba9059c30800000000000000
+      internalID: 4365406046696167498
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_111
+      rect:
+        serializedVersion: 2
+        x: 547
+        y: 427
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a935afc22770bb30800000000000000
+      internalID: 4301068635535129001
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_112
+      rect:
+        serializedVersion: 2
+        x: 625
+        y: 417
+        width: 8
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 829f174f784279d80800000000000000
+      internalID: -8244080426538108632
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_113
+      rect:
+        serializedVersion: 2
+        x: 674
+        y: 399
+        width: 51
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 309ce2ed652817340800000000000000
+      internalID: 4859808782515882243
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_114
+      rect:
+        serializedVersion: 2
+        x: 939
+        y: 421
+        width: 9
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de308d27e8e86f5d0800000000000000
+      internalID: -3029076956896820243
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_115
+      rect:
+        serializedVersion: 2
+        x: 1219
+        y: 411
+        width: 23
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 611968578a6721a80800000000000000
+      internalID: -8497599080996368106
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_116
+      rect:
+        serializedVersion: 2
+        x: 1569
+        y: 425
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 375a10d0b04392e60800000000000000
+      internalID: 7937933040284706163
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_117
+      rect:
+        serializedVersion: 2
+        x: 1738
+        y: 404
+        width: 27
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 926be62166a91d440800000000000000
+      internalID: 4958914427898213929
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_118
+      rect:
+        serializedVersion: 2
+        x: 1764
+        y: 409
+        width: 17
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94c3b4ad35c4a8da0800000000000000
+      internalID: -5941852835333587895
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_119
+      rect:
+        serializedVersion: 2
+        x: 1808
+        y: 417
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e1564d9e7bcf1df0800000000000000
+      internalID: -207223313170804254
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_120
+      rect:
+        serializedVersion: 2
+        x: 1824
+        y: 407
+        width: 19
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ab56660f3981cb20800000000000000
+      internalID: 3152952117919374244
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_121
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 389
+        width: 32
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81158bb25eb1172a0800000000000000
+      internalID: -6741576496101961448
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_122
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 407
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 988af6afeba7aa7f0800000000000000
+      internalID: -600532639636543351
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_123
+      rect:
+        serializedVersion: 2
+        x: 634
+        y: 404
+        width: 21
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b95a76560064b4a0800000000000000
+      internalID: -6578527575344522832
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_124
+      rect:
+        serializedVersion: 2
+        x: 1233
+        y: 383
+        width: 23
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7c896589c47ffdf0800000000000000
+      internalID: -144268254177031041
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_125
+      rect:
+        serializedVersion: 2
+        x: 1253
+        y: 401
+        width: 15
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b14f315162212e40800000000000000
+      internalID: 5629818810560102833
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_126
+      rect:
+        serializedVersion: 2
+        x: 1307
+        y: 407
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2034bfcd29e9e7a0800000000000000
+      internalID: -6347285816834510806
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_127
+      rect:
+        serializedVersion: 2
+        x: 1494
+        y: 407
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6caaf6072f4f34b70800000000000000
+      internalID: 8882212212210379462
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_128
+      rect:
+        serializedVersion: 2
+        x: 1597
+        y: 405
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45e0d3afd36a467a0800000000000000
+      internalID: -6384795586582999468
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_129
+      rect:
+        serializedVersion: 2
+        x: 1617
+        y: 397
+        width: 23
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5484dbd1151401ac0800000000000000
+      internalID: -3886534661773637563
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_130
+      rect:
+        serializedVersion: 2
+        x: 1776
+        y: 333
+        width: 53
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4bfbfee410bbb650800000000000000
+      internalID: 6249782511862020943
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_131
+      rect:
+        serializedVersion: 2
+        x: 806
+        y: 389
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13cd38d47ecebc400800000000000000
+      internalID: 345630274606062641
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_132
+      rect:
+        serializedVersion: 2
+        x: 955
+        y: 385
+        width: 15
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 301b92729cbb186d0800000000000000
+      internalID: -2989902204977434365
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_133
+      rect:
+        serializedVersion: 2
+        x: 1005
+        y: 393
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75ec4ccf3a3ad9a70800000000000000
+      internalID: 8835397968686534231
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_134
+      rect:
+        serializedVersion: 2
+        x: 1454
+        y: 363
+        width: 45
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8b3b3c876e7a7510800000000000000
+      internalID: 1547688405154610061
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_135
+      rect:
+        serializedVersion: 2
+        x: 1656
+        y: 380
+        width: 12
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b361dad80c01727f0800000000000000
+      internalID: -637522403052939717
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_136
+      rect:
+        serializedVersion: 2
+        x: 1695
+        y: 371
+        width: 38
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5042f2981c2ee2a0800000000000000
+      internalID: -6706374311051902883
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_137
+      rect:
+        serializedVersion: 2
+        x: 1730
+        y: 383
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ee37850348f78700800000000000000
+      internalID: 542675246860680937
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_138
+      rect:
+        serializedVersion: 2
+        x: 1872
+        y: 389
+        width: 7
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b02c9f7a98a69a320800000000000000
+      internalID: 2569702201852805643
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_139
+      rect:
+        serializedVersion: 2
+        x: 1957
+        y: 391
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71ad8f5337ba9ca40800000000000000
+      internalID: 5389026940440599063
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_140
+      rect:
+        serializedVersion: 2
+        x: 2015
+        y: 368
+        width: 19
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b2d53f61c39a8660800000000000000
+      internalID: 7388880597658489525
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_141
+      rect:
+        serializedVersion: 2
+        x: 2033
+        y: 375
+        width: 15
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d34f7e9de33a4a00800000000000000
+      internalID: 741462184315274198
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_142
+      rect:
+        serializedVersion: 2
+        x: 2063
+        y: 391
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5362f46d6334823b0800000000000000
+      internalID: -5537101839049218507
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_143
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 0
+        width: 1211
+        height: 381
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82566944c73d6fed0800000000000000
+      internalID: -2380482822338616024
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_144
+      rect:
+        serializedVersion: 2
+        x: 1291
+        y: 377
+        width: 15
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38376429d86685e30800000000000000
+      internalID: 4492453386532582275
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_145
+      rect:
+        serializedVersion: 2
+        x: 1442
+        y: 381
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34c03f239e90d2340800000000000000
+      internalID: 4840536071679970371
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_146
+      rect:
+        serializedVersion: 2
+        x: 1446
+        y: 377
+        width: 9
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fca32e0b9059907a0800000000000000
+      internalID: -6410428725730329905
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_147
+      rect:
+        serializedVersion: 2
+        x: 1828
+        y: 374
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 400205f5df75ee560800000000000000
+      internalID: 7344904788025286660
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_148
+      rect:
+        serializedVersion: 2
+        x: 1359
+        y: 369
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d5f5921b1afd5460800000000000000
+      internalID: 7232211570809763289
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_149
+      rect:
+        serializedVersion: 2
+        x: 1719
+        y: 369
+        width: 18
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38229546f4c533dd0800000000000000
+      internalID: -2507559071459499389
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_150
+      rect:
+        serializedVersion: 2
+        x: 2138
+        y: 351
+        width: 25
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b66e0f3001be4620800000000000000
+      internalID: 2760338236240717491
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_151
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 343
+        width: 24
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73b9fd744273ea060800000000000000
+      internalID: 6966566302552922935
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_152
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 345
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77834f6623891a9f0800000000000000
+      internalID: -458918344772011913
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_153
+      rect:
+        serializedVersion: 2
+        x: 1422
+        y: 327
+        width: 27
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 932cb2335b367d170800000000000000
+      internalID: 8203134876177383993
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_154
+      rect:
+        serializedVersion: 2
+        x: 1553
+        y: 348
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d71ee0f551e413620800000000000000
+      internalID: 2752066700996174205
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_155
+      rect:
+        serializedVersion: 2
+        x: 1744
+        y: 345
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18ec9cacc9696c1d0800000000000000
+      internalID: -3330809274232615295
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_156
+      rect:
+        serializedVersion: 2
+        x: 1848
+        y: 319
+        width: 29
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b6e323eed3059f90800000000000000
+      internalID: -6947642594320718156
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_157
+      rect:
+        serializedVersion: 2
+        x: 1912
+        y: 345
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b65908cf62f086b0800000000000000
+      internalID: -5295966599876356427
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_158
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 0
+        width: 323
+        height: 346
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68720b34234e908e0800000000000000
+      internalID: -1726598077584758906
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_159
+      rect:
+        serializedVersion: 2
+        x: 1639
+        y: 331
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da6d23d01289c9d50800000000000000
+      internalID: 6745433609616938669
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_160
+      rect:
+        serializedVersion: 2
+        x: 1681
+        y: 339
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d34d4a0cdf86d0320800000000000000
+      internalID: 2525790405092758589
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_161
+      rect:
+        serializedVersion: 2
+        x: 1718
+        y: 333
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 938a9e427b7f1eb90800000000000000
+      internalID: -7214212762100455367
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_162
+      rect:
+        serializedVersion: 2
+        x: 2025
+        y: 327
+        width: 17
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0fca7d34eb69ccf30800000000000000
+      internalID: 4597215063564594416
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_163
+      rect:
+        serializedVersion: 2
+        x: 2053
+        y: 319
+        width: 28
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2d59e85133fe64f0800000000000000
+      internalID: -833461487746327252
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_164
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 291
+        width: 37
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dacd1b00ad4d49ef0800000000000000
+      internalID: -102222858743063379
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_165
+      rect:
+        serializedVersion: 2
+        x: 1454
+        y: 0
+        width: 383
+        height: 336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42e2af7fc41b19540800000000000000
+      internalID: 5012982804376071716
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_166
+      rect:
+        serializedVersion: 2
+        x: 1651
+        y: 321
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 468c2a91a94d59850800000000000000
+      internalID: 6383241805187696740
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_167
+      rect:
+        serializedVersion: 2
+        x: 1713
+        y: 329
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db0b0bf98e1fae3d0800000000000000
+      internalID: -3176460605742600003
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_168
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 317
+        width: 9
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2639e816d69c08ae0800000000000000
+      internalID: -1549016800190098590
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_169
+      rect:
+        serializedVersion: 2
+        x: 2043
+        y: 321
+        width: 11
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6614694f1395313e0800000000000000
+      internalID: -2084224131450650266
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_170
+      rect:
+        serializedVersion: 2
+        x: 1823
+        y: 311
+        width: 10
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72c3874d23e9ff3f0800000000000000
+      internalID: -864798662281642969
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_171
+      rect:
+        serializedVersion: 2
+        x: 2003
+        y: 313
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d0bd58aaca6cd090800000000000000
+      internalID: -8008408618730934063
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_172
+      rect:
+        serializedVersion: 2
+        x: 2085
+        y: 303
+        width: 22
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 144310232db0810e0800000000000000
+      internalID: -2299074612362660799
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_173
+      rect:
+        serializedVersion: 2
+        x: 1446
+        y: 270
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20f27c95c144fae60800000000000000
+      internalID: 7975668353652436738
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_174
+      rect:
+        serializedVersion: 2
+        x: 1817
+        y: 272
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79cea6d43108fc670800000000000000
+      internalID: 8561202237046189207
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_175
+      rect:
+        serializedVersion: 2
+        x: 1836
+        y: 0
+        width: 307
+        height: 282
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 587199224d3b69780800000000000000
+      internalID: -8676549908387784827
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_176
+      rect:
+        serializedVersion: 2
+        x: 1442
+        y: 252
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 470b21ceea1e6e3d0800000000000000
+      internalID: -3177604345662099340
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_177
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 130
+        width: 27
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39c55ae066b8a3fb0800000000000000
+      internalID: -4667264793367454573
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_178
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 162
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66f0432f769f93710800000000000000
+      internalID: 1673642961385295718
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_179
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 49
+        width: 26
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d30af6f7d6c3a890800000000000000
+      internalID: -7447890727876820013
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_180
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 67
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1292b6f6cef791920800000000000000
+      internalID: 2961538883431115041
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_181
+      rect:
+        serializedVersion: 2
+        x: 318
+        y: 59
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: caed364de9bbf2a90800000000000000
+      internalID: -7336438977120706900
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_182
+      rect:
+        serializedVersion: 2
+        x: 1462
+        y: 49
+        width: 17
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b278e4d6159d75260800000000000000
+      internalID: 7086371482440206123
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_183
+      rect:
+        serializedVersion: 2
+        x: 1840
+        y: 71
+        width: 11
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d04da1e197815f1f0800000000000000
+      internalID: -1011875632799624179
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_184
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 41
+        width: 15
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5313da6a7e5a75a60800000000000000
+      internalID: 7662775705346584885
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_185
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 41
+        width: 27
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6307149008e13500800000000000000
+      internalID: 374335333230642029
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_186
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 47
+        width: 6
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5fc222f43f0dce60800000000000000
+      internalID: 7984054434472841053
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_187
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 51
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9340a56686a0e330800000000000000
+      internalID: 3738170786878342045
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_188
+      rect:
+        serializedVersion: 2
+        x: 1442
+        y: 31
+        width: 21
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83200d2bfb5de7de0800000000000000
+      internalID: -1333393420339641800
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_189
+      rect:
+        serializedVersion: 2
+        x: 1528
+        y: 53
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c5391da619f63cf0800000000000000
+      internalID: -272756851620629051
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_190
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 31
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd6b453102d70c780800000000000000
+      internalID: -8664788106344089893
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_191
+      rect:
+        serializedVersion: 2
+        x: 1526
+        y: 15
+        width: 18
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f524970def23d4dd0800000000000000
+      internalID: -2500286148120067489
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_192
+      rect:
+        serializedVersion: 2
+        x: 1540
+        y: 27
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb31c52bca063bfa0800000000000000
+      internalID: -5786174801397935169
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_193
+      rect:
+        serializedVersion: 2
+        x: 1697
+        y: 15
+        width: 32
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38470d48eee4fd920800000000000000
+      internalID: 3017217061698958467
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_194
+      rect:
+        serializedVersion: 2
+        x: 1335
+        y: 7
+        width: 9
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72849e266cea555b0800000000000000
+      internalID: -5380202012737976281
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bram-Combo-v7-source_195
+      rect:
+        serializedVersion: 2
+        x: 1341
+        y: 7
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfdd6c3a095c24ef0800000000000000
+      internalID: -125320614599270917
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    outline: []
+    customData:
+    physicsShape: []
+    bones: []
+    spriteID:
+    internalID: 0
+    vertices: []
+    indices:
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Bram-Combo-v7-source_0: -1716038985386431948
+      Bram-Combo-v7-source_1: -7602036429691099066
+      Bram-Combo-v7-source_10: 8906427685152372875
+      Bram-Combo-v7-source_100: -2876233146449063054
+      Bram-Combo-v7-source_101: -2389297086329717165
+      Bram-Combo-v7-source_102: -3483638850617223080
+      Bram-Combo-v7-source_103: -1580491833418651120
+      Bram-Combo-v7-source_104: 2025804253791564150
+      Bram-Combo-v7-source_105: 2667842525298051537
+      Bram-Combo-v7-source_106: -6162739833347711286
+      Bram-Combo-v7-source_107: -4530254664511253962
+      Bram-Combo-v7-source_108: 7192447971726123443
+      Bram-Combo-v7-source_109: 5968615919918773363
+      Bram-Combo-v7-source_11: 631083945151588402
+      Bram-Combo-v7-source_110: 4365406046696167498
+      Bram-Combo-v7-source_111: 4301068635535129001
+      Bram-Combo-v7-source_112: -8244080426538108632
+      Bram-Combo-v7-source_113: 4859808782515882243
+      Bram-Combo-v7-source_114: -3029076956896820243
+      Bram-Combo-v7-source_115: -8497599080996368106
+      Bram-Combo-v7-source_116: 7937933040284706163
+      Bram-Combo-v7-source_117: 4958914427898213929
+      Bram-Combo-v7-source_118: -5941852835333587895
+      Bram-Combo-v7-source_119: -207223313170804254
+      Bram-Combo-v7-source_12: -3271234025065956160
+      Bram-Combo-v7-source_120: 3152952117919374244
+      Bram-Combo-v7-source_121: -6741576496101961448
+      Bram-Combo-v7-source_122: -600532639636543351
+      Bram-Combo-v7-source_123: -6578527575344522832
+      Bram-Combo-v7-source_124: -144268254177031041
+      Bram-Combo-v7-source_125: 5629818810560102833
+      Bram-Combo-v7-source_126: -6347285816834510806
+      Bram-Combo-v7-source_127: 8882212212210379462
+      Bram-Combo-v7-source_128: -6384795586582999468
+      Bram-Combo-v7-source_129: -3886534661773637563
+      Bram-Combo-v7-source_13: -9016172981564293430
+      Bram-Combo-v7-source_130: 6249782511862020943
+      Bram-Combo-v7-source_131: 345630274606062641
+      Bram-Combo-v7-source_132: -2989902204977434365
+      Bram-Combo-v7-source_133: 8835397968686534231
+      Bram-Combo-v7-source_134: 1547688405154610061
+      Bram-Combo-v7-source_135: -637522403052939717
+      Bram-Combo-v7-source_136: -6706374311051902883
+      Bram-Combo-v7-source_137: 542675246860680937
+      Bram-Combo-v7-source_138: 2569702201852805643
+      Bram-Combo-v7-source_139: 5389026940440599063
+      Bram-Combo-v7-source_14: -2549860606249296147
+      Bram-Combo-v7-source_140: 7388880597658489525
+      Bram-Combo-v7-source_141: 741462184315274198
+      Bram-Combo-v7-source_142: -5537101839049218507
+      Bram-Combo-v7-source_143: -2380482822338616024
+      Bram-Combo-v7-source_144: 4492453386532582275
+      Bram-Combo-v7-source_145: 4840536071679970371
+      Bram-Combo-v7-source_146: -6410428725730329905
+      Bram-Combo-v7-source_147: 7344904788025286660
+      Bram-Combo-v7-source_148: 7232211570809763289
+      Bram-Combo-v7-source_149: -2507559071459499389
+      Bram-Combo-v7-source_15: -4540040040589697164
+      Bram-Combo-v7-source_150: 2760338236240717491
+      Bram-Combo-v7-source_151: 6966566302552922935
+      Bram-Combo-v7-source_152: -458918344772011913
+      Bram-Combo-v7-source_153: 8203134876177383993
+      Bram-Combo-v7-source_154: 2752066700996174205
+      Bram-Combo-v7-source_155: -3330809274232615295
+      Bram-Combo-v7-source_156: -6947642594320718156
+      Bram-Combo-v7-source_157: -5295966599876356427
+      Bram-Combo-v7-source_158: -1726598077584758906
+      Bram-Combo-v7-source_159: 6745433609616938669
+      Bram-Combo-v7-source_16: -5851356897890437027
+      Bram-Combo-v7-source_160: 2525790405092758589
+      Bram-Combo-v7-source_161: -7214212762100455367
+      Bram-Combo-v7-source_162: 4597215063564594416
+      Bram-Combo-v7-source_163: -833461487746327252
+      Bram-Combo-v7-source_164: -102222858743063379
+      Bram-Combo-v7-source_165: 5012982804376071716
+      Bram-Combo-v7-source_166: 6383241805187696740
+      Bram-Combo-v7-source_167: -3176460605742600003
+      Bram-Combo-v7-source_168: -1549016800190098590
+      Bram-Combo-v7-source_169: -2084224131450650266
+      Bram-Combo-v7-source_17: 2234258848915496830
+      Bram-Combo-v7-source_170: -864798662281642969
+      Bram-Combo-v7-source_171: -8008408618730934063
+      Bram-Combo-v7-source_172: -2299074612362660799
+      Bram-Combo-v7-source_173: 7975668353652436738
+      Bram-Combo-v7-source_174: 8561202237046189207
+      Bram-Combo-v7-source_175: -8676549908387784827
+      Bram-Combo-v7-source_176: -3177604345662099340
+      Bram-Combo-v7-source_177: -4667264793367454573
+      Bram-Combo-v7-source_178: 1673642961385295718
+      Bram-Combo-v7-source_179: -7447890727876820013
+      Bram-Combo-v7-source_18: -5519703613512501060
+      Bram-Combo-v7-source_180: 2961538883431115041
+      Bram-Combo-v7-source_181: -7336438977120706900
+      Bram-Combo-v7-source_182: 7086371482440206123
+      Bram-Combo-v7-source_183: -1011875632799624179
+      Bram-Combo-v7-source_184: 7662775705346584885
+      Bram-Combo-v7-source_185: 374335333230642029
+      Bram-Combo-v7-source_186: 7984054434472841053
+      Bram-Combo-v7-source_187: 3738170786878342045
+      Bram-Combo-v7-source_188: -1333393420339641800
+      Bram-Combo-v7-source_189: -272756851620629051
+      Bram-Combo-v7-source_19: 7032765814353572400
+      Bram-Combo-v7-source_190: -8664788106344089893
+      Bram-Combo-v7-source_191: -2500286148120067489
+      Bram-Combo-v7-source_192: -5786174801397935169
+      Bram-Combo-v7-source_193: 3017217061698958467
+      Bram-Combo-v7-source_194: -5380202012737976281
+      Bram-Combo-v7-source_195: -125320614599270917
+      Bram-Combo-v7-source_2: 1577376658291080865
+      Bram-Combo-v7-source_20: -162762957041080330
+      Bram-Combo-v7-source_21: 4098081609290044520
+      Bram-Combo-v7-source_22: 8126895656773308658
+      Bram-Combo-v7-source_23: -8120487599036342111
+      Bram-Combo-v7-source_24: -4071582297062735830
+      Bram-Combo-v7-source_25: 3181512422012558031
+      Bram-Combo-v7-source_26: 8255590466622810733
+      Bram-Combo-v7-source_27: -6320546977368544226
+      Bram-Combo-v7-source_28: -2285326130213183457
+      Bram-Combo-v7-source_29: 4431682521495639452
+      Bram-Combo-v7-source_3: 3240971778275459214
+      Bram-Combo-v7-source_30: 1332403181434388986
+      Bram-Combo-v7-source_31: -2179836459578801423
+      Bram-Combo-v7-source_32: -7994933605531164832
+      Bram-Combo-v7-source_33: -8729607345169259174
+      Bram-Combo-v7-source_34: 5890467623094284989
+      Bram-Combo-v7-source_35: 3383443091573865384
+      Bram-Combo-v7-source_36: -4023477405409226023
+      Bram-Combo-v7-source_37: 3383280610598162958
+      Bram-Combo-v7-source_38: 6610466456237798312
+      Bram-Combo-v7-source_39: -5044791930392799695
+      Bram-Combo-v7-source_4: 7272252179913689765
+      Bram-Combo-v7-source_40: 187992318982713149
+      Bram-Combo-v7-source_41: 8106900454085795609
+      Bram-Combo-v7-source_42: 5329265423914890817
+      Bram-Combo-v7-source_43: -1486608354725293798
+      Bram-Combo-v7-source_44: -8700309021217110678
+      Bram-Combo-v7-source_45: -737834321001214757
+      Bram-Combo-v7-source_46: -3310713246575969597
+      Bram-Combo-v7-source_47: 813024183447325227
+      Bram-Combo-v7-source_48: 4062275177085709666
+      Bram-Combo-v7-source_49: -2265509466664833512
+      Bram-Combo-v7-source_5: 7562507171882971231
+      Bram-Combo-v7-source_50: -2597993417462235046
+      Bram-Combo-v7-source_51: -2324750890323009347
+      Bram-Combo-v7-source_52: 3233638486713926645
+      Bram-Combo-v7-source_53: -5789948878860013800
+      Bram-Combo-v7-source_54: -7708411003121381832
+      Bram-Combo-v7-source_55: -4517889901207102616
+      Bram-Combo-v7-source_56: 4476471975666967209
+      Bram-Combo-v7-source_57: 5779415735142175269
+      Bram-Combo-v7-source_58: -4911364851813821428
+      Bram-Combo-v7-source_59: 8800965693799210695
+      Bram-Combo-v7-source_6: 2480002161493191342
+      Bram-Combo-v7-source_60: 7916332643814165864
+      Bram-Combo-v7-source_61: -5999371918763873070
+      Bram-Combo-v7-source_62: 8420104437210805981
+      Bram-Combo-v7-source_63: 5888844018897537304
+      Bram-Combo-v7-source_64: 8209580569156371700
+      Bram-Combo-v7-source_65: -847998564538082854
+      Bram-Combo-v7-source_66: 9115026022334486520
+      Bram-Combo-v7-source_67: 3051322748733005108
+      Bram-Combo-v7-source_68: 5597493896279900410
+      Bram-Combo-v7-source_69: -8326057175729471515
+      Bram-Combo-v7-source_7: -8039956075432066393
+      Bram-Combo-v7-source_70: 7883774611197156001
+      Bram-Combo-v7-source_71: -4242487319770700351
+      Bram-Combo-v7-source_72: 6452869725458627780
+      Bram-Combo-v7-source_73: 9104756127776658148
+      Bram-Combo-v7-source_74: 7212898508945961356
+      Bram-Combo-v7-source_75: -7549702822519184574
+      Bram-Combo-v7-source_76: -5365683979557382575
+      Bram-Combo-v7-source_77: -4840323314389620473
+      Bram-Combo-v7-source_78: -2831832478992106854
+      Bram-Combo-v7-source_79: 4150692918152996594
+      Bram-Combo-v7-source_8: 7985296700439605619
+      Bram-Combo-v7-source_80: 3026485759799318263
+      Bram-Combo-v7-source_81: 6196936854392784464
+      Bram-Combo-v7-source_82: -2612437265463043327
+      Bram-Combo-v7-source_83: -9129980699506829883
+      Bram-Combo-v7-source_84: 7145156695775954021
+      Bram-Combo-v7-source_85: -646352594855847277
+      Bram-Combo-v7-source_86: -6140463466045690816
+      Bram-Combo-v7-source_87: 8293911240853655441
+      Bram-Combo-v7-source_88: 5209250100225972298
+      Bram-Combo-v7-source_89: 6475965557648292499
+      Bram-Combo-v7-source_9: 6703809515223788987
+      Bram-Combo-v7-source_90: -4748501443078579093
+      Bram-Combo-v7-source_91: -3363733082547880120
+      Bram-Combo-v7-source_92: 2455793427986819010
+      Bram-Combo-v7-source_93: -6905062457515619167
+      Bram-Combo-v7-source_94: 5571083594530034714
+      Bram-Combo-v7-source_95: 5920277512196420046
+      Bram-Combo-v7-source_96: -5284992742382282859
+      Bram-Combo-v7-source_97: 2456728499112426284
+      Bram-Combo-v7-source_98: 6467044555273587632
+      Bram-Combo-v7-source_99: -1787041945343205425
+  mipmapLimitGroupName:
+  pSDRemoveMatte: 0
+  userData:
+  assetBundleName:
+  assetBundleVariant:

@@ -18,13 +18,16 @@ public class WoodlandEffects : MonoBehaviour
     public float punchShake = .09f;
     public float pushShake = .035f;
     public float particleGravity = 7;
-    [Range(.25f, 2)] public float effectIntensity = 1;
+    [Range(.25f, 2)] public float effectIntensity = 1.35f;
     public bool ambientFireflies = true;
     public Color ambientTint = new Color(1,.86f,.42f);
     public bool cameraShake = true;
     public float footstepInterval = .16f;
     [Header("Elemental sprite animation")]
     public Sprite[] fernSlash=new Sprite[8],emberSlash=new Sprite[8];
+    readonly Sprite[][] comboHits=new Sprite[4][],comboFinishers=new Sprite[4][];
+    public int ComboAnimationsPlayed { get; private set; }
+    public int ComboFramesLoaded(int character)=>character>=0&&character<4?(comboHits[character]?.Length??0)+(comboFinishers[character]?.Length??0):0;
     [Header("Action sound mix")]
     public AudioClip[] soundBank = new AudioClip[13];
     [Range(0,1)] public float masterVolume = .65f;
@@ -39,10 +42,17 @@ public class WoodlandEffects : MonoBehaviour
     Coroutine hitPause;
     Vector2 cameraOffset, cameraVelocity;
     float cameraZoom;
+    Scout cinematicScout;
+    Vector2 cinematicFocus;
+    float cinematicImpactUntil, nextCinematicMote;
+    public bool CinematicActive => cinematicScout != null;
+    public int UltimateCinematicsStarted { get; private set; }
+    public int UltimateImpactsPlayed { get; private set; }
     public void SetArenaCamera(float size,Vector3 position)
     {
         if(!cam)cam=Camera.main;
         if(!cam)return;
+        cinematicScout=null;cinematicImpactUntil=0;
         cameraHome=position;cameraZoom=size;cameraOffset=cameraVelocity=Vector2.zero;
         cam.transform.position=position;cam.orthographicSize=size;
     }
@@ -61,6 +71,7 @@ public class WoodlandEffects : MonoBehaviour
     void Awake()
     {
         Instance = this;
+        effectIntensity = Mathf.Clamp(PlayerPrefs.GetFloat("Woodland.EffectsQuality",1.35f),.25f,2);
         if(System.Array.IndexOf(System.Environment.GetCommandLineArgs(),"-silent-test")>=0)AudioListener.volume=0;
         masterVolume = Mathf.Clamp01(PlayerPrefs.GetFloat("Woodland.SfxVolume", masterVolume));
         Muted = PlayerPrefs.GetInt("Woodland.SfxMuted",0) == 1;
@@ -79,10 +90,99 @@ public class WoodlandEffects : MonoBehaviour
         glow = SoftGlow();
         glowMaterial = new Material(material); glowMaterial.SetColor("_Color", new Color(2.4f,2.4f,2.4f,1));
         material.mainTexture = pixel.texture;
+        string[] characters={"Fern","Ember","Luna","Bram"};
+        for(int character=0;character<characters.Length;character++) {
+            comboHits[character]=LoadComboFrames(characters[character],"Hit");
+            comboFinishers[character]=LoadComboFrames(characters[character],"Finisher");
+        }
         for (int i=0; i<Capacity; i++) {
             var go = new GameObject("Pooled woodland VFX");go.transform.SetParent(transform);
             var sr = go.AddComponent<SpriteRenderer>();sr.sharedMaterial = material;sr.enabled = false;pool[i].art = sr;
         }
+    }
+    void OnEnable()
+    {
+        Scout.UltimateCinematic += UltimateCinematic;
+        Scout.UltimateImpact += UltimateImpact;
+    }
+    void OnDisable()
+    {
+        Scout.UltimateCinematic -= UltimateCinematic;
+        Scout.UltimateImpact -= UltimateImpact;
+        RestoreCinematic();
+    }
+    public void ResetCameraPresentation() => RestoreCinematic();
+    void RestoreCinematic()
+    {
+        cinematicScout = null; cinematicImpactUntil = 0;
+        cameraOffset = cameraVelocity = Vector2.zero; shake = 0;
+        if (cam) { cam.transform.position = cameraHome; cam.orthographicSize = cameraZoom; }
+    }
+    void UltimateCinematic(Scout caster, bool active)
+    {
+        if (!active) { if (cinematicScout == caster) RestoreCinematic(); return; }
+        var game = WoodlandGame.Instance;
+        if (!caster || !game || !game.playing || game.Paused) return;
+        cinematicScout = caster;
+        Vector2 rival = game.players[1-caster.id].Body.position;
+        // Camera focus is presentation only. Neither fighters nor attack paths are moved or tracked.
+        cinematicFocus = Vector2.Lerp(caster.Body.position, rival, .35f);
+        cinematicFocus.x = Mathf.Clamp(cinematicFocus.x, cameraHome.x-1, cameraHome.x+1);
+        cinematicFocus.y = Mathf.Clamp(cinematicFocus.y, cameraHome.y-.55f, cameraHome.y+.55f);
+        nextCinematicMote = 0;
+        UltimateCinematicsStarted++;
+        Pulse(caster.Body.position, caster.Element, 2.2f, .55f, true);
+        Light(caster.Body.position, caster.Element, 2.7f, .55f);
+        PlayCue(4,.32f,.75f);
+    }
+    void UltimateImpact(Scout caster, Scout victim)
+    {
+        if (!caster || !victim) return;
+        UltimateImpactsPlayed++;
+        Vector2 point = victim.Body.position;
+        Color tint = caster.Element;
+        int character = caster.CharacterIndex;
+        ComboImpact(point, caster.Facing, character, true);
+        Light(point, tint, 3.4f, .45f);
+        if (character == 0) {
+            // Curved leafy strands leave the target readable inside the binding effect.
+            for (int strand=0;strand<3;strand++) for(int step=0;step<6;step++) {
+                float phase=strand*Mathf.PI*2/3+step*.65f;
+                Vector2 offset=new Vector2(Mathf.Cos(phase)*.65f,-.6f+step*.22f);
+                Emit(leaf,point+offset,new Vector2(-Mathf.Sin(phase)*.3f,.35f),tint,.55f+step*.025f,
+                    Vector2.one*.13f,Vector2.one*.04f,0,10,phase*Mathf.Rad2Deg,100);
+            }
+            Pulse(point+Vector2.down*.5f,tint,3.2f,.5f,true);
+        } else if (character == 1) {
+            // Every confirmed phoenix contact throws a separate radial flame burst.
+            Burst(point,Vector2.up,24,tint,4.2f);
+            for (int i=0;i<8;i++) {
+                float a=i*45*Mathf.Deg2Rad;
+                Vector2 direction=new Vector2(Mathf.Cos(a),Mathf.Sin(a));
+                Emit(streak,point,direction*3.6f,Color.Lerp(tint,Gold,.35f),.35f,new Vector2(1.1f,.3f),Vector2.zero,0,11,i*45);
+            }
+            Pulse(point,Gold,2.8f,.25f);
+        } else if (character == 2) {
+            // Frost spokes and a crystalline ring mark a confirmed moonfrost freeze.
+            Pulse(point,tint,2.7f,.65f);Pulse(point,Color.white,1.8f,.35f);
+            for (int i=0;i<12;i++) {
+                float a=i*30*Mathf.Deg2Rad;
+                Vector2 direction=new Vector2(Mathf.Cos(a),Mathf.Sin(a));
+                Emit(streak,point,direction*1.4f,tint,.6f,new Vector2(.85f,.18f),Vector2.zero,0,11,i*30);
+                Emit(star,point+direction*.5f,Vector2.up*.25f,Color.white,.55f,Vector2.one*.14f,Vector2.zero,0,12,45,35);
+            }
+        } else {
+            // Stone columns erupt outward from the hit, then fall with visible weight.
+            for (int i=0;i<7;i++) {
+                Vector2 origin=point+new Vector2((i-3)*.32f,-.65f);
+                Emit(pixel,origin,new Vector2((i-3)*.3f,2.7f),tint,.65f,new Vector2(.25f,.25f),new Vector2(.15f,.9f),5,10,i*13,i*25);
+            }
+            Burst(point+Vector2.down*.6f,Vector2.up,26,tint,3.2f);
+            Pulse(point+Vector2.down*.6f,tint,3.8f,.45f,true);
+        }
+        var game=WoodlandGame.Instance;
+        if (game && game.playing && !game.Paused && cinematicScout==caster) cinematicImpactUntil=Time.unscaledTime+.23f;
+        KickCamera(new Vector2(caster.Facing,.35f),.12f);
     }
     Sprite SoftGlow()
     {
@@ -118,6 +218,12 @@ public class WoodlandEffects : MonoBehaviour
     }
     void Update()
     {
+        var game=WoodlandGame.Instance;
+        if (cinematicScout && (!game || !game.playing || game.Paused || !cinematicScout.UltimateActive)) RestoreCinematic();
+        if (cinematicScout && Time.time>=nextCinematicMote) {
+            nextCinematicMote=Time.time+.1f;
+            Windup(cinematicScout.Body.position+Vector2.up*.2f,cinematicScout.Facing,cinematicScout.Element);
+        }
         var keys=Keyboard.current;
         if(keys!=null){
             if(keys.mKey.wasPressedThisFrame)ToggleMute();
@@ -234,8 +340,28 @@ public class WoodlandEffects : MonoBehaviour
         }
         shake=Mathf.Max(shake,punch?punchShake:pushShake);
     }
-    public void ElementHit(Vector2 point, float facing, Color tint, int combo, int player)
+    static Sprite[] LoadComboFrames(string character,string action)
     {
+        var frames=new Sprite[6];
+        for(int i=0;i<frames.Length;i++) {
+            frames[i]=Resources.Load<Sprite>("Art/Combo/"+character+"/"+action+"/"+(i+1).ToString("00"));
+            if(!frames[i])return new Sprite[0];
+        }
+        return frames;
+    }
+    public void ComboImpact(Vector2 point,float facing,int character,bool finisher)
+    {
+        if(character<0 || character>=4)return;
+        var frames=finisher?comboFinishers[character]:comboHits[character];
+        if(frames==null || frames.Length==0)return;
+        float size=finisher?2.15f:1.25f;
+        int index=Emit(frames[0],point,Vector2.right*facing*.22f,Color.white,finisher?.34f:.22f,Vector2.one*size,Vector2.one*size,0,11);
+        pool[index].frames=frames;pool[index].art.flipX=facing<0;
+        ComboAnimationsPlayed++;
+    }
+    public void ElementHit(Vector2 point, float facing, Color tint, int combo, int player,int character=-1)
+    {
+        ComboImpact(point,facing,character<0?player:character,combo==3);
         Pulse(point, tint, .9f + combo * .35f, .24f);
         for (int i=0;i<Count(8+combo*4);i++) {
             Vector2 velocity = new Vector2(facing*Random.Range(1f,4f),Random.Range(-2f,3f));
@@ -269,9 +395,11 @@ public class WoodlandEffects : MonoBehaviour
     public void Dash(Vector2 point, float facing, Color tint)
     {
         PlayCue(5,.40f,Random.Range(.97f,1.05f));Light(point,tint,1.4f,.22f);
-        Burst(point, Vector2.left * facing, 14, tint, 2.5f);
-        for (int i=0;i<7;i++) Emit(streak, point + new Vector2(-facing * .3f, (i-3)*.14f),
-            Vector2.left*facing*3, tint, .22f, new Vector2(1.4f,.6f), Vector2.zero, 0, 7);
+        Burst(point + Vector2.down*.55f, Vector2.left * facing, 6, tint, 1.4f);
+        var trailTint=new Color(tint.r,tint.g,tint.b,.4f);
+        // Keep speed accents behind the body; opaque parallel bars hid the new dash poses.
+        for (int i=0;i<3;i++) Emit(streak, point + new Vector2(-facing * .65f, (i-1)*.18f),
+            Vector2.left*facing*2, trailTint, .12f+i*.025f, new Vector2(.45f+i*.12f,.2f), Vector2.zero, 0, 4);
     }
     public void GuardImpact(Vector2 point, float facing, Color tint, bool parry, bool broken)
     {
@@ -354,8 +482,16 @@ public class WoodlandEffects : MonoBehaviour
             float smoothDt=Mathf.Min(Time.unscaledDeltaTime,.05f);
             cameraVelocity+=(-cameraOffset*145-cameraVelocity*20)*smoothDt;
             cameraOffset+=cameraVelocity*smoothDt;cameraOffset=Vector2.ClampMagnitude(cameraOffset,.18f);
-            cam.transform.position=cameraHome+(cameraShake?(Vector3)cameraOffset:Vector3.zero);
-            cam.orthographicSize=Mathf.Lerp(cam.orthographicSize,cameraZoom-(cameraShake?shake*.45f:0),1-Mathf.Exp(-16*smoothDt));
+            var game=WoodlandGame.Instance;
+            bool motionAllowed=game && game.playing && !game.Paused;
+            if (!motionAllowed) { cameraOffset=cameraVelocity=Vector2.zero;shake=0; }
+            bool cinematic=motionAllowed && cameraShake && cinematicScout;
+            Vector3 focus=cameraHome;
+            if(cinematic)focus=Vector3.Lerp(cameraHome,new Vector3(cinematicFocus.x,cinematicFocus.y,cameraHome.z),.28f);
+            Vector3 target=focus+(cameraShake&&motionAllowed?(Vector3)cameraOffset:Vector3.zero);
+            float zoom=cameraZoom*(cinematic?(Time.unscaledTime<cinematicImpactUntil?.91f:.95f):1);
+            cam.transform.position=motionAllowed?Vector3.Lerp(cam.transform.position,target,1-Mathf.Exp(-14*smoothDt)):cameraHome;
+            cam.orthographicSize=motionAllowed?Mathf.Lerp(cam.orthographicSize,zoom-(cameraShake?shake*.45f:0),1-Mathf.Exp(-16*smoothDt)):cameraZoom;
             shake=Mathf.MoveTowards(shake,0,smoothDt*.7f);
         }
     }

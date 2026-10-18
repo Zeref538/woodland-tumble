@@ -1,0 +1,585 @@
+fileFormatVersion: 2
+guid: f4df978ff8cbc854da71c2e174d81539
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3233525847282019910
+    second: Ember-Ledge-v7-source_0
+  - first:
+      213: -8219987120784990322
+    second: Ember-Ledge-v7-source_1
+  - first:
+      213: 6876757343019285749
+    second: Ember-Ledge-v7-source_2
+  - first:
+      213: -504081315720698710
+    second: Ember-Ledge-v7-source_3
+  - first:
+      213: -7949157388897769440
+    second: Ember-Ledge-v7-source_4
+  - first:
+      213: -7050644293789490107
+    second: Ember-Ledge-v7-source_5
+  - first:
+      213: 7302208027143870975
+    second: Ember-Ledge-v7-source_6
+  - first:
+      213: 4881457386184619430
+    second: Ember-Ledge-v7-source_7
+  - first:
+      213: -3147165866562721575
+    second: Ember-Ledge-v7-source_8
+  - first:
+      213: -4657839221947399065
+    second: Ember-Ledge-v7-source_9
+  - first:
+      213: -3320361476961380150
+    second: Ember-Ledge-v7-source_10
+  - first:
+      213: 8621431908452617655
+    second: Ember-Ledge-v7-source_11
+  - first:
+      213: 8390262263269110599
+    second: Ember-Ledge-v7-source_12
+  - first:
+      213: -7878181076730200744
+    second: Ember-Ledge-v7-source_13
+  - first:
+      213: 2664751822798690063
+    second: Ember-Ledge-v7-source_14
+  - first:
+      213: 9103834884154273593
+    second: Ember-Ledge-v7-source_15
+  - first:
+      213: -7060838871967488505
+    second: Ember-Ledge-v7-source_16
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Ember-Ledge-v7-source_0
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 0
+        width: 2090
+        height: 622
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64ee94b40aacfdc20800000000000000
+      internalID: 3233525847282019910
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Ledge-v7-source_1
+      rect:
+        serializedVersion: 2
+        x: 1607
+        y: 599
+        width: 56
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8f1357d34dbced80800000000000000
+      internalID: -8219987120784990322
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Ledge-v7-source_2
+      rect:
+        serializedVersion: 2
+        x: 1750
+        y: 82
+        width: 15
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5fc393d6e562f6f50800000000000000
+      internalID: 6876757343019285749
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Ledge-v7-source_3
+      rect:
+        serializedVersion: 2
+        x: 1826
+        y: 85
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa46e8ec6b42109f0800000000000000
+      internalID: -504081315720698710
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Ledge-v7-source_4
+      rect:
+        serializedVersion: 2
+        x: 1844
+        y: 77
+        width: 22
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 028a313a87beea190800000000000000
+      internalID: -7949157388897769440
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Ledge-v7-source_5
+      rect:
+        serializedVersion: 2
+        x: 745
+        y: 67
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 544ea07ee54172e90800000000000000
+      internalID: -7050644293789490107
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Ledge-v7-source_6
+      rect:
+        serializedVersion: 2
+        x: 1290
+        y: 53
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff99aed0387a65560800000000000000
+      internalID: 7302208027143870975
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Ledge-v7-source_7
+      rect:
+        serializedVersion: 2
+        x: 1372
+        y: 65
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a5bdb131ab6eb340800000000000000
+      internalID: 4881457386184619430
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Ledge-v7-source_8
+      rect:
+        serializedVersion: 2
+        x: 1824
+        y: 55
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d86b4a91550354d0800000000000000
+      internalID: -3147165866562721575
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Ledge-v7-source_9
+      rect:
+        serializedVersion: 2
+        x: 1246
+        y: 50
+        width: 7
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76481fae7e70c5fb0800000000000000
+      internalID: -4657839221947399065
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Ledge-v7-source_10
+      rect:
+        serializedVersion: 2
+        x: 1306
+        y: 45
+        width: 19
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac853d724d4bbe1d0800000000000000
+      internalID: -3320361476961380150
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Ledge-v7-source_11
+      rect:
+        serializedVersion: 2
+        x: 1412
+        y: 39
+        width: 18
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bd498674aa75a770800000000000000
+      internalID: 8621431908452617655
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Ledge-v7-source_12
+      rect:
+        serializedVersion: 2
+        x: 1569
+        y: 49
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 743358e2313307470800000000000000
+      internalID: 8390262263269110599
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Ledge-v7-source_13
+      rect:
+        serializedVersion: 2
+        x: 1804
+        y: 52
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85dba451d041ba290800000000000000
+      internalID: -7878181076730200744
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Ledge-v7-source_14
+      rect:
+        serializedVersion: 2
+        x: 1814
+        y: 49
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f079d741aa91bf420800000000000000
+      internalID: 2664751822798690063
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Ledge-v7-source_15
+      rect:
+        serializedVersion: 2
+        x: 1836
+        y: 51
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93f23dbc791575e70800000000000000
+      internalID: 9103834884154273593
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Ledge-v7-source_16
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 33
+        width: 11
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 706ab14b47cd20e90800000000000000
+      internalID: -7060838871967488505
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    outline: []
+    customData:
+    physicsShape: []
+    bones: []
+    spriteID:
+    internalID: 0
+    vertices: []
+    indices:
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Ember-Ledge-v7-source_0: 3233525847282019910
+      Ember-Ledge-v7-source_1: -8219987120784990322
+      Ember-Ledge-v7-source_10: -3320361476961380150
+      Ember-Ledge-v7-source_11: 8621431908452617655
+      Ember-Ledge-v7-source_12: 8390262263269110599
+      Ember-Ledge-v7-source_13: -7878181076730200744
+      Ember-Ledge-v7-source_14: 2664751822798690063
+      Ember-Ledge-v7-source_15: 9103834884154273593
+      Ember-Ledge-v7-source_16: -7060838871967488505
+      Ember-Ledge-v7-source_2: 6876757343019285749
+      Ember-Ledge-v7-source_3: -504081315720698710
+      Ember-Ledge-v7-source_4: -7949157388897769440
+      Ember-Ledge-v7-source_5: -7050644293789490107
+      Ember-Ledge-v7-source_6: 7302208027143870975
+      Ember-Ledge-v7-source_7: 4881457386184619430
+      Ember-Ledge-v7-source_8: -3147165866562721575
+      Ember-Ledge-v7-source_9: -4657839221947399065
+  mipmapLimitGroupName:
+  pSDRemoveMatte: 0
+  userData:
+  assetBundleName:
+  assetBundleVariant:

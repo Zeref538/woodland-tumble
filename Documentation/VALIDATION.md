@@ -1,3 +1,13 @@
+# Tilt Rivals v7 validation
+
+Unity 6000.5.10f1 passed 693 core Play Mode checks against the saved scene. A separate final HUD run passed 164 checks covering both bottom diamonds, 80-pixel targets, circular masked portraits without opaque fighter slabs, all sixteen character covers, PlayStation/Xbox labels and all eight real button callbacks. Accepted actions and refused cooldown/paused actions were checked for feedback and exact resource effects. See PLAYMODE-VALIDATION-v7.json and HUD-VALIDATION-v7.json.
+
+The core run covers four ranged specials, six-second cooldowns, the exact 25-health ultimate threshold, once-per-round limits, guarding, misses, interruption, camera cleanup, victory animations, AI and virtual controller mappings. A separate 28-check melee run verifies a natural punch-punch-kick string without teleporting fighters. It dealt 48.8 damage and spent 22 stamina. Eight hit/finisher sequences use 48 new sprite frames.
+
+The new animation and platform sources were retained. All 692 PNGs in the artwork pack decoded; manifests record output hashes and sizing. The game includes 160 new dash, backstep, victory and ultimate frames, eight new PVP platform images and four new jump covers. Original Balance geometry is restored on mode changes.
+
+HUD-bottom-diamonds-1280-v7.png is the final HUD render. Other v7 screenshots document the earlier combat test stages and may retain the earlier top action layout. Physical USB/Bluetooth controller transport and subjective audio balance remain unverified; automated playback was muted.
+
 # Tilt Rivals v6.2 character-cover validation
 
 The current scene passed 526 Play Mode checks. The new coverage switches all four characters through both player slots and verifies all 32 action-cover assignments plus 32 unchanged input badges. All sixteen catalog sprites load from separate assets. The exported files also have sixteen distinct decoded RGBA hashes and transparent edge margins.

@@ -1,0 +1,3315 @@
+fileFormatVersion: 2
+guid: edcc00f2514b40a48a8b0d3c7dba8e1d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4798715928391929186
+    second: Ember-Combo-v7-source_0
+  - first:
+      213: -7103288933112579087
+    second: Ember-Combo-v7-source_1
+  - first:
+      213: -7006415644141157169
+    second: Ember-Combo-v7-source_2
+  - first:
+      213: 3625836099892861476
+    second: Ember-Combo-v7-source_3
+  - first:
+      213: -2528333117102850455
+    second: Ember-Combo-v7-source_4
+  - first:
+      213: -7571494574119643772
+    second: Ember-Combo-v7-source_5
+  - first:
+      213: -1588785865104674863
+    second: Ember-Combo-v7-source_6
+  - first:
+      213: -3809359134972481885
+    second: Ember-Combo-v7-source_7
+  - first:
+      213: 8574757505475199685
+    second: Ember-Combo-v7-source_8
+  - first:
+      213: -6451398253211386880
+    second: Ember-Combo-v7-source_9
+  - first:
+      213: -4630799400059691489
+    second: Ember-Combo-v7-source_10
+  - first:
+      213: 2500636239668807642
+    second: Ember-Combo-v7-source_11
+  - first:
+      213: -9170263762146584482
+    second: Ember-Combo-v7-source_12
+  - first:
+      213: 3311558764196320266
+    second: Ember-Combo-v7-source_13
+  - first:
+      213: -5332839172032633796
+    second: Ember-Combo-v7-source_14
+  - first:
+      213: -4188731355153219735
+    second: Ember-Combo-v7-source_15
+  - first:
+      213: -9177228879136684819
+    second: Ember-Combo-v7-source_16
+  - first:
+      213: -3114616924987095223
+    second: Ember-Combo-v7-source_17
+  - first:
+      213: -5907917897720716885
+    second: Ember-Combo-v7-source_18
+  - first:
+      213: 391726240697752285
+    second: Ember-Combo-v7-source_19
+  - first:
+      213: 3541151482448728322
+    second: Ember-Combo-v7-source_20
+  - first:
+      213: -7877799779081755177
+    second: Ember-Combo-v7-source_21
+  - first:
+      213: 8587541609811641474
+    second: Ember-Combo-v7-source_22
+  - first:
+      213: 6884015633570171319
+    second: Ember-Combo-v7-source_23
+  - first:
+      213: 7308177014324412797
+    second: Ember-Combo-v7-source_24
+  - first:
+      213: -3742175810769341737
+    second: Ember-Combo-v7-source_25
+  - first:
+      213: 6207553159622831006
+    second: Ember-Combo-v7-source_26
+  - first:
+      213: -1163342254422359536
+    second: Ember-Combo-v7-source_27
+  - first:
+      213: 5454658735764611121
+    second: Ember-Combo-v7-source_28
+  - first:
+      213: 3451859034528957486
+    second: Ember-Combo-v7-source_29
+  - first:
+      213: 1222308797551771435
+    second: Ember-Combo-v7-source_30
+  - first:
+      213: 491589020423236591
+    second: Ember-Combo-v7-source_31
+  - first:
+      213: 9153092696577764581
+    second: Ember-Combo-v7-source_32
+  - first:
+      213: -7852946511393741205
+    second: Ember-Combo-v7-source_33
+  - first:
+      213: 2118317027589302375
+    second: Ember-Combo-v7-source_34
+  - first:
+      213: 730875467400127481
+    second: Ember-Combo-v7-source_35
+  - first:
+      213: -1571370299160545168
+    second: Ember-Combo-v7-source_36
+  - first:
+      213: 5110296292069401525
+    second: Ember-Combo-v7-source_37
+  - first:
+      213: 6076842512326557
+    second: Ember-Combo-v7-source_38
+  - first:
+      213: 114585559225029434
+    second: Ember-Combo-v7-source_39
+  - first:
+      213: -299226144862154144
+    second: Ember-Combo-v7-source_40
+  - first:
+      213: -9046332820103377685
+    second: Ember-Combo-v7-source_41
+  - first:
+      213: 4499567524176650482
+    second: Ember-Combo-v7-source_42
+  - first:
+      213: 1067565013553041823
+    second: Ember-Combo-v7-source_43
+  - first:
+      213: 8637058605828150521
+    second: Ember-Combo-v7-source_44
+  - first:
+      213: 4027226101745534522
+    second: Ember-Combo-v7-source_45
+  - first:
+      213: 5019721287213391170
+    second: Ember-Combo-v7-source_46
+  - first:
+      213: -2482478362272835874
+    second: Ember-Combo-v7-source_47
+  - first:
+      213: -8244175356838645679
+    second: Ember-Combo-v7-source_48
+  - first:
+      213: -3790131627514194656
+    second: Ember-Combo-v7-source_49
+  - first:
+      213: -4098398050145443875
+    second: Ember-Combo-v7-source_50
+  - first:
+      213: 6508806717518801932
+    second: Ember-Combo-v7-source_51
+  - first:
+      213: 5017114265152314399
+    second: Ember-Combo-v7-source_52
+  - first:
+      213: 7958609588692680000
+    second: Ember-Combo-v7-source_53
+  - first:
+      213: 6377856605580411464
+    second: Ember-Combo-v7-source_54
+  - first:
+      213: -7552766712849593619
+    second: Ember-Combo-v7-source_55
+  - first:
+      213: -4768094602659714851
+    second: Ember-Combo-v7-source_56
+  - first:
+      213: 8756651076428327334
+    second: Ember-Combo-v7-source_57
+  - first:
+      213: 2838668738935682037
+    second: Ember-Combo-v7-source_58
+  - first:
+      213: 6364869122466910248
+    second: Ember-Combo-v7-source_59
+  - first:
+      213: -6996187556271730630
+    second: Ember-Combo-v7-source_60
+  - first:
+      213: -4600602873867379775
+    second: Ember-Combo-v7-source_61
+  - first:
+      213: -7595697035525397685
+    second: Ember-Combo-v7-source_62
+  - first:
+      213: -1941442604820736316
+    second: Ember-Combo-v7-source_63
+  - first:
+      213: -6703240219175709069
+    second: Ember-Combo-v7-source_64
+  - first:
+      213: -3198772496781660803
+    second: Ember-Combo-v7-source_65
+  - first:
+      213: -1761013601386784796
+    second: Ember-Combo-v7-source_66
+  - first:
+      213: 1923524728853254263
+    second: Ember-Combo-v7-source_67
+  - first:
+      213: 5146160035737486238
+    second: Ember-Combo-v7-source_68
+  - first:
+      213: 7853190140317055567
+    second: Ember-Combo-v7-source_69
+  - first:
+      213: -4423662613011233650
+    second: Ember-Combo-v7-source_70
+  - first:
+      213: -7103221774711023576
+    second: Ember-Combo-v7-source_71
+  - first:
+      213: -1315139405656073477
+    second: Ember-Combo-v7-source_72
+  - first:
+      213: 5025105997317278373
+    second: Ember-Combo-v7-source_73
+  - first:
+      213: 2433896969384277077
+    second: Ember-Combo-v7-source_74
+  - first:
+      213: 1983094293742619857
+    second: Ember-Combo-v7-source_75
+  - first:
+      213: -1670736074005447713
+    second: Ember-Combo-v7-source_76
+  - first:
+      213: -7369725516023374466
+    second: Ember-Combo-v7-source_77
+  - first:
+      213: 4282003317290622449
+    second: Ember-Combo-v7-source_78
+  - first:
+      213: -8736874256779390793
+    second: Ember-Combo-v7-source_79
+  - first:
+      213: 911295308473922168
+    second: Ember-Combo-v7-source_80
+  - first:
+      213: -4084810225863558666
+    second: Ember-Combo-v7-source_81
+  - first:
+      213: 2773487818847689248
+    second: Ember-Combo-v7-source_82
+  - first:
+      213: 7886887740532520460
+    second: Ember-Combo-v7-source_83
+  - first:
+      213: 7526883374709063456
+    second: Ember-Combo-v7-source_84
+  - first:
+      213: -2715689709623254895
+    second: Ember-Combo-v7-source_85
+  - first:
+      213: 7868225252389648161
+    second: Ember-Combo-v7-source_86
+  - first:
+      213: -7860930505111005374
+    second: Ember-Combo-v7-source_87
+  - first:
+      213: 9067604432993814447
+    second: Ember-Combo-v7-source_88
+  - first:
+      213: -7851260173425776527
+    second: Ember-Combo-v7-source_89
+  - first:
+      213: -3721549980653566589
+    second: Ember-Combo-v7-source_90
+  - first:
+      213: -5153448288362790610
+    second: Ember-Combo-v7-source_91
+  - first:
+      213: -2825588284400918233
+    second: Ember-Combo-v7-source_92
+  - first:
+      213: 7652577511081827509
+    second: Ember-Combo-v7-source_93
+  - first:
+      213: -6095426095569235345
+    second: Ember-Combo-v7-source_94
+  - first:
+      213: 2343180829510161338
+    second: Ember-Combo-v7-source_95
+  - first:
+      213: 4486998681621353718
+    second: Ember-Combo-v7-source_96
+  - first:
+      213: 7588568367640393385
+    second: Ember-Combo-v7-source_97
+  - first:
+      213: -4705333690831994005
+    second: Ember-Combo-v7-source_98
+  - first:
+      213: 7145573404634984763
+    second: Ember-Combo-v7-source_99
+  - first:
+      213: 4974552639386543878
+    second: Ember-Combo-v7-source_100
+  - first:
+      213: 4000137355257761957
+    second: Ember-Combo-v7-source_101
+  - first:
+      213: 5903445625923863460
+    second: Ember-Combo-v7-source_102
+  - first:
+      213: 7534776801861236459
+    second: Ember-Combo-v7-source_103
+  - first:
+      213: 3692004871464070751
+    second: Ember-Combo-v7-source_104
+  - first:
+      213: 7338028237988954387
+    second: Ember-Combo-v7-source_105
+  - first:
+      213: 7520446893299780572
+    second: Ember-Combo-v7-source_106
+  - first:
+      213: 6358160370613020977
+    second: Ember-Combo-v7-source_107
+  - first:
+      213: -1153006749393812455
+    second: Ember-Combo-v7-source_108
+  - first:
+      213: -553760491638793314
+    second: Ember-Combo-v7-source_109
+  - first:
+      213: -6859523578276243788
+    second: Ember-Combo-v7-source_110
+  - first:
+      213: -6491329113649045908
+    second: Ember-Combo-v7-source_111
+  - first:
+      213: -5626723962896183702
+    second: Ember-Combo-v7-source_112
+  - first:
+      213: -1014545653175584639
+    second: Ember-Combo-v7-source_113
+  - first:
+      213: -4499873270191158249
+    second: Ember-Combo-v7-source_114
+  - first:
+      213: 2142363704162867332
+    second: Ember-Combo-v7-source_115
+  - first:
+      213: -664712580131639931
+    second: Ember-Combo-v7-source_116
+  - first:
+      213: 1513266808374420328
+    second: Ember-Combo-v7-source_117
+  - first:
+      213: -3653061768828617963
+    second: Ember-Combo-v7-source_118
+  - first:
+      213: 7953543290605703426
+    second: Ember-Combo-v7-source_119
+  - first:
+      213: -912304509584324885
+    second: Ember-Combo-v7-source_120
+  - first:
+      213: 488696644015715022
+    second: Ember-Combo-v7-source_121
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_0
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 648
+        width: 8
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26d4fc156b6789240800000000000000
+      internalID: 4798715928391929186
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_1
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 628
+        width: 134
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fb7cd4a95c0c6d90800000000000000
+      internalID: -7103288933112579087
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_2
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 568
+        width: 74
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc40a3ed71634ce90800000000000000
+      internalID: -7006415644141157169
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_3
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 303
+        width: 446
+        height: 399
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42ad6ebe8be815230800000000000000
+      internalID: 3625836099892861476
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_4
+      rect:
+        serializedVersion: 2
+        x: 633
+        y: 649
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96e7a39fc6e89ecd0800000000000000
+      internalID: -2528333117102850455
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_5
+      rect:
+        serializedVersion: 2
+        x: 708
+        y: 586
+        width: 45
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4851dc2ecc5ace690800000000000000
+      internalID: -7571494574119643772
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_6
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 371
+        width: 375
+        height: 315
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1df26466caf73f9e0800000000000000
+      internalID: -1588785865104674863
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_7
+      rect:
+        serializedVersion: 2
+        x: 963
+        y: 661
+        width: 54
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ae6312bc00722bc0800000000000000
+      internalID: -3809359134972481885
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_8
+      rect:
+        serializedVersion: 2
+        x: 1038
+        y: 661
+        width: 37
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c2c6fc2588aff670800000000000000
+      internalID: 8574757505475199685
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_9
+      rect:
+        serializedVersion: 2
+        x: 1070
+        y: 632
+        width: 53
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00c72cc38770876a0800000000000000
+      internalID: -6451398253211386880
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_10
+      rect:
+        serializedVersion: 2
+        x: 1102
+        y: 339
+        width: 363
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1e995d0b781cbfb0800000000000000
+      internalID: -4630799400059691489
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_11
+      rect:
+        serializedVersion: 2
+        x: 1106
+        y: 667
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad78de9396b04b220800000000000000
+      internalID: 2500636239668807642
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_12
+      rect:
+        serializedVersion: 2
+        x: 1174
+        y: 697
+        width: 18
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e589d98c1bdacb080800000000000000
+      internalID: -9170263762146584482
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_13
+      rect:
+        serializedVersion: 2
+        x: 1361
+        y: 669
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a04d0c0962505fd20800000000000000
+      internalID: 3311558764196320266
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_14
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 667
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c34e4b21703fdf5b0800000000000000
+      internalID: -5332839172032633796
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_15
+      rect:
+        serializedVersion: 2
+        x: 1436
+        y: 617
+        width: 29
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96f3d8c7603aed5c0800000000000000
+      internalID: -4188731355153219735
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_16
+      rect:
+        serializedVersion: 2
+        x: 1458
+        y: 324
+        width: 391
+        height: 368
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de40a9c15fee3a080800000000000000
+      internalID: -9177228879136684819
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_17
+      rect:
+        serializedVersion: 2
+        x: 1705
+        y: 677
+        width: 20
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94789be9868a6c4d0800000000000000
+      internalID: -3114616924987095223
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_18
+      rect:
+        serializedVersion: 2
+        x: 1935
+        y: 641
+        width: 168
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba12f2839fbd20ea0800000000000000
+      internalID: -5907917897720716885
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_19
+      rect:
+        serializedVersion: 2
+        x: 2067
+        y: 636
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dda1df1c0f0bf6500800000000000000
+      internalID: 391726240697752285
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_20
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 630
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 201543fe282b42130800000000000000
+      internalID: 3541151482448728322
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_21
+      rect:
+        serializedVersion: 2
+        x: 1074
+        y: 552
+        width: 25
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d56e2cd6de6ca290800000000000000
+      internalID: -7877799779081755177
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_22
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 305
+        width: 232
+        height: 324
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28485ba68931d2770800000000000000
+      internalID: 8587541609811641474
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_23
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 593
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b98f23eebfe88f50800000000000000
+      internalID: 6884015633570171319
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_24
+      rect:
+        serializedVersion: 2
+        x: 1838
+        y: 295
+        width: 317
+        height: 314
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d714b7e264cdb6560800000000000000
+      internalID: 7308177014324412797
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_25
+      rect:
+        serializedVersion: 2
+        x: 1862
+        y: 572
+        width: 54
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d2b8005dee111cc0800000000000000
+      internalID: -3742175810769341737
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_26
+      rect:
+        serializedVersion: 2
+        x: 722
+        y: 560
+        width: 21
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9b2caba5b8a52650800000000000000
+      internalID: 6207553159622831006
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_27
+      rect:
+        serializedVersion: 2
+        x: 1067
+        y: 568
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01204fc126afadfe0800000000000000
+      internalID: -1163342254422359536
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_28
+      rect:
+        serializedVersion: 2
+        x: 1446
+        y: 537
+        width: 21
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1302b3c5837d2bb40800000000000000
+      internalID: 5454658735764611121
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_29
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 506
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2442dfc08777ef20800000000000000
+      internalID: 3451859034528957486
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_30
+      rect:
+        serializedVersion: 2
+        x: 1048
+        y: 467
+        width: 45
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2f78e3106386f010800000000000000
+      internalID: 1222308797551771435
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_31
+      rect:
+        serializedVersion: 2
+        x: 1812
+        y: 500
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: feb2fc90c9972d600800000000000000
+      internalID: 491589020423236591
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_32
+      rect:
+        serializedVersion: 2
+        x: 692
+        y: 484
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ec6db7ff41560f70800000000000000
+      internalID: 9153092696577764581
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_33
+      rect:
+        serializedVersion: 2
+        x: 1448
+        y: 488
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b66ab3c21cab40390800000000000000
+      internalID: -7852946511393741205
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_34
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 455
+        width: 9
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7682f1ffc16c56d10800000000000000
+      internalID: 2118317027589302375
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_35
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 472
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f3ae618d57942a00800000000000000
+      internalID: 730875467400127481
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_36
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 449
+        width: 9
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 078bfe3d90f513ae0800000000000000
+      internalID: -1571370299160545168
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_37
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 433
+        width: 21
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b3eac1f66b6be640800000000000000
+      internalID: 5110296292069401525
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_38
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 458
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9f9d472bd6951000800000000000000
+      internalID: 6076842512326557
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_39
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 449
+        width: 23
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a335ff185f6179100800000000000000
+      internalID: 114585559225029434
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_40
+      rect:
+        serializedVersion: 2
+        x: 1102
+        y: 451
+        width: 7
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0625bf7186fe8dbf0800000000000000
+      internalID: -299226144862154144
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_41
+      rect:
+        serializedVersion: 2
+        x: 1442
+        y: 443
+        width: 9
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: becc7c9ca38f47280800000000000000
+      internalID: -9046332820103377685
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_42
+      rect:
+        serializedVersion: 2
+        x: 1824
+        y: 444
+        width: 21
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f0ee61d2dca17e30800000000000000
+      internalID: 4499567524176650482
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_43
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 447
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f91d67f39b0c0de00800000000000000
+      internalID: 1067565013553041823
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_44
+      rect:
+        serializedVersion: 2
+        x: 654
+        y: 427
+        width: 21
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f41e987a0ffcd770800000000000000
+      internalID: 8637058605828150521
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_45
+      rect:
+        serializedVersion: 2
+        x: 1430
+        y: 441
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3649b86dc493e730800000000000000
+      internalID: 4027226101745534522
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_46
+      rect:
+        serializedVersion: 2
+        x: 1770
+        y: 432
+        width: 11
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24d12d34ae1a9a540800000000000000
+      internalID: 5019721287213391170
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_47
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 421
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed6522e05177c8dd0800000000000000
+      internalID: -2482478362272835874
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_48
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 419
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1507a95413ec69d80800000000000000
+      internalID: -8244175356838645679
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_49
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 407
+        width: 13
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0251b02ad5fb66bc0800000000000000
+      internalID: -3790131627514194656
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_50
+      rect:
+        serializedVersion: 2
+        x: 1020
+        y: 415
+        width: 9
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ddf5de800b09f17c0800000000000000
+      internalID: -4098398050145443875
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_51
+      rect:
+        serializedVersion: 2
+        x: 1028
+        y: 409
+        width: 9
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0c6265793de35a50800000000000000
+      internalID: 6508806717518801932
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_52
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 397
+        width: 15
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1cd2f3a7de50a540800000000000000
+      internalID: 5017114265152314399
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_53
+      rect:
+        serializedVersion: 2
+        x: 1420
+        y: 385
+        width: 41
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04d7b002149a27e60800000000000000
+      internalID: 7958609588692680000
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_54
+      rect:
+        serializedVersion: 2
+        x: 1446
+        y: 419
+        width: 7
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 842cffb9ac2b28850800000000000000
+      internalID: 6377856605580411464
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_55
+      rect:
+        serializedVersion: 2
+        x: 1778
+        y: 417
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dea8431e0be2f2790800000000000000
+      internalID: -7552766712849593619
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_56
+      rect:
+        serializedVersion: 2
+        x: 1816
+        y: 417
+        width: 9
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd8a209a83354ddb0800000000000000
+      internalID: -4768094602659714851
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_57
+      rect:
+        serializedVersion: 2
+        x: 615
+        y: 413
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a96d8062cfd58970800000000000000
+      internalID: 8756651076428327334
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_58
+      rect:
+        serializedVersion: 2
+        x: 617
+        y: 403
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f3744b9d2af46720800000000000000
+      internalID: 2838668738935682037
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_59
+      rect:
+        serializedVersion: 2
+        x: 980
+        y: 405
+        width: 33
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8201e7e8ebe845850800000000000000
+      internalID: 6364869122466910248
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_60
+      rect:
+        serializedVersion: 2
+        x: 1060
+        y: 407
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a305a662c7c88ee90800000000000000
+      internalID: -6996187556271730630
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_61
+      rect:
+        serializedVersion: 2
+        x: 1343
+        y: 409
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1cb5e7eaf006720c0800000000000000
+      internalID: -4600602873867379775
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_62
+      rect:
+        serializedVersion: 2
+        x: 1421
+        y: 401
+        width: 10
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4365083ac9a69690800000000000000
+      internalID: -7595697035525397685
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_63
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 391
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c6d9d3bc3c9e05e0800000000000000
+      internalID: -1941442604820736316
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_64
+      rect:
+        serializedVersion: 2
+        x: 577
+        y: 387
+        width: 9
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3769be3398e49f2a0800000000000000
+      internalID: -6703240219175709069
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_65
+      rect:
+        serializedVersion: 2
+        x: 748
+        y: 388
+        width: 7
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7d2a0cac5dab93d0800000000000000
+      internalID: -3198772496781660803
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_66
+      rect:
+        serializedVersion: 2
+        x: 1351
+        y: 393
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e795b4b57f9f87e0800000000000000
+      internalID: -1761013601386784796
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_67
+      rect:
+        serializedVersion: 2
+        x: 1496
+        y: 379
+        width: 19
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7705af3bc8bb1ba10800000000000000
+      internalID: 1923524728853254263
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_68
+      rect:
+        serializedVersion: 2
+        x: 1520
+        y: 387
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e93c1777945da6740800000000000000
+      internalID: 5146160035737486238
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_69
+      rect:
+        serializedVersion: 2
+        x: 1526
+        y: 391
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4ab23b13d22cfc60800000000000000
+      internalID: 7853190140317055567
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_70
+      rect:
+        serializedVersion: 2
+        x: 1729
+        y: 395
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e840a418a4efb92c0800000000000000
+      internalID: -4423662613011233650
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_71
+      rect:
+        serializedVersion: 2
+        x: 1754
+        y: 401
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 828978d2e694c6d90800000000000000
+      internalID: -7103221774711023576
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_72
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 393
+        width: 21
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfa50cfadafafbde0800000000000000
+      internalID: -1315139405656073477
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_73
+      rect:
+        serializedVersion: 2
+        x: 1896
+        y: 389
+        width: 20
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5aa08c8c743ccb540800000000000000
+      internalID: 5025105997317278373
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_74
+      rect:
+        serializedVersion: 2
+        x: 1914
+        y: 389
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 554bc08f560f6c120800000000000000
+      internalID: 2433896969384277077
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_75
+      rect:
+        serializedVersion: 2
+        x: 1987
+        y: 389
+        width: 25
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1dc02a6d0cd558b10800000000000000
+      internalID: 1983094293742619857
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_76
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 387
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fdb7973846a50d8e0800000000000000
+      internalID: -1670736074005447713
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_77
+      rect:
+        serializedVersion: 2
+        x: 710
+        y: 379
+        width: 9
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7d5b4d80b979b990800000000000000
+      internalID: -7369725516023374466
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_78
+      rect:
+        serializedVersion: 2
+        x: 718
+        y: 385
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fdd62e745bbc6b30800000000000000
+      internalID: 4282003317290622449
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_79
+      rect:
+        serializedVersion: 2
+        x: 1601
+        y: 387
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b0d865472360c680800000000000000
+      internalID: -8736874256779390793
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_80
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 0
+        width: 765
+        height: 378
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 872711b314295ac00800000000000000
+      internalID: 911295308473922168
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_81
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 365
+        width: 9
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f9f488edb6df47c0800000000000000
+      internalID: -4084810225863558666
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_82
+      rect:
+        serializedVersion: 2
+        x: 1349
+        y: 376
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02a1a470a786d7620800000000000000
+      internalID: 2773487818847689248
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_83
+      rect:
+        serializedVersion: 2
+        x: 1729
+        y: 377
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c06f2dd0d9ad37d60800000000000000
+      internalID: 7886887740532520460
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_84
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 357
+        width: 22
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02fb357dc8cd47860800000000000000
+      internalID: 7526883374709063456
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_85
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 359
+        width: 9
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 190e8b1f89eef4ad0800000000000000
+      internalID: -2715689709623254895
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_86
+      rect:
+        serializedVersion: 2
+        x: 1233
+        y: 367
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 127717ded2d813d60800000000000000
+      internalID: 7868225252389648161
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_87
+      rect:
+        serializedVersion: 2
+        x: 1235
+        y: 348
+        width: 29
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24793d6ca5d58e290800000000000000
+      internalID: -7860930505111005374
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_88
+      rect:
+        serializedVersion: 2
+        x: 1267
+        y: 359
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa78a58803a96dd70800000000000000
+      internalID: 9067604432993814447
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_89
+      rect:
+        serializedVersion: 2
+        x: 1752
+        y: 355
+        width: 13
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 178e8c35878ba0390800000000000000
+      internalID: -7851260173425776527
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_90
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 312
+        width: 26
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 385484d92066a5cc0800000000000000
+      internalID: -3721549980653566589
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_91
+      rect:
+        serializedVersion: 2
+        x: 1174
+        y: 353
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e218acbf5164b78b0800000000000000
+      internalID: -5153448288362790610
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_92
+      rect:
+        serializedVersion: 2
+        x: 2075
+        y: 353
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72127ca0d6e79c8d0800000000000000
+      internalID: -2825588284400918233
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_93
+      rect:
+        serializedVersion: 2
+        x: 1106
+        y: 0
+        width: 369
+        height: 348
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bcdc2483ba633a60800000000000000
+      internalID: 7652577511081827509
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_94
+      rect:
+        serializedVersion: 2
+        x: 1426
+        y: 339
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6213f2d242b86ba0800000000000000
+      internalID: -6095426095569235345
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_95
+      rect:
+        serializedVersion: 2
+        x: 1446
+        y: 337
+        width: 7
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab3557bbc86a48020800000000000000
+      internalID: 2343180829510161338
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_96
+      rect:
+        serializedVersion: 2
+        x: 1474
+        y: 0
+        width: 379
+        height: 346
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f4dfad1785054e30800000000000000
+      internalID: 4486998681621353718
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_97
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 311
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a6b8f279b2005960800000000000000
+      internalID: 7588568367640393385
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_98
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 305
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b63084820fb43beb0800000000000000
+      internalID: -4705333690831994005
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_99
+      rect:
+        serializedVersion: 2
+        x: 2071
+        y: 317
+        width: 24
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b313fb3172d2a2360800000000000000
+      internalID: 7145573404634984763
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_100
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 0
+        width: 315
+        height: 306
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 607ed1be449290540800000000000000
+      internalID: 4974552639386543878
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_101
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 298
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a0d8e02bb7538730800000000000000
+      internalID: 4000137355257761957
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_102
+      rect:
+        serializedVersion: 2
+        x: 1862
+        y: 0
+        width: 289
+        height: 302
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a3860cd4804de150800000000000000
+      internalID: 5903445625923863460
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_103
+      rect:
+        serializedVersion: 2
+        x: 1820
+        y: 254
+        width: 29
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be6fac09497e09860800000000000000
+      internalID: 7534776801861236459
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_104
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 212
+        width: 19
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5ea0a89ed2ac3330800000000000000
+      internalID: 3692004871464070751
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_105
+      rect:
+        serializedVersion: 2
+        x: 1810
+        y: 232
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3110e1dcdc9e5d560800000000000000
+      internalID: 7338028237988954387
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_106
+      rect:
+        serializedVersion: 2
+        x: 1458
+        y: 210
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cdbc25bba9efd5860800000000000000
+      internalID: 7520446893299780572
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_107
+      rect:
+        serializedVersion: 2
+        x: 1084
+        y: 166
+        width: 21
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 139ea5b8b29bc3850800000000000000
+      internalID: 6358160370613020977
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_108
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 93
+        width: 48
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91401c66872bfffe0800000000000000
+      internalID: -1153006749393812455
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_109
+      rect:
+        serializedVersion: 2
+        x: 1810
+        y: 136
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9b593d44c5a058f0800000000000000
+      internalID: -553760491638793314
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_110
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 103
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b69d6c16a31ec0a0800000000000000
+      internalID: -6859523578276243788
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_111
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 87
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6e1ccc409a2ae5a0800000000000000
+      internalID: -6491329113649045908
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_112
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 77
+        width: 9
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6e056e0e5cd9e1b0800000000000000
+      internalID: -5626723962896183702
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_113
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 86
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1887d0e8a1c9be1f0800000000000000
+      internalID: -1014545653175584639
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_114
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 65
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71c0bf32a1d3d81c0800000000000000
+      internalID: -4499873270191158249
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_115
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 71
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 488515e20743bbd10800000000000000
+      internalID: 2142363704162867332
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_116
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 21
+        width: 18
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58d258f1e6776c6f0800000000000000
+      internalID: -664712580131639931
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_117
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 17
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 863eb830524300510800000000000000
+      internalID: 1513266808374420328
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_118
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 23
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51bf86e0da7bd4dc0800000000000000
+      internalID: -3653061768828617963
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_119
+      rect:
+        serializedVersion: 2
+        x: 1444
+        y: 19
+        width: 11
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2019e3eab79a06e60800000000000000
+      internalID: 7953543290605703426
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_120
+      rect:
+        serializedVersion: 2
+        x: 1802
+        y: 21
+        width: 23
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be64d33d1e7d653f0800000000000000
+      internalID: -912304509584324885
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ember-Combo-v7-source_121
+      rect:
+        serializedVersion: 2
+        x: 1824
+        y: 27
+        width: 9
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec27b7d220338c600800000000000000
+      internalID: 488696644015715022
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    outline: []
+    customData:
+    physicsShape: []
+    bones: []
+    spriteID:
+    internalID: 0
+    vertices: []
+    indices:
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Ember-Combo-v7-source_0: 4798715928391929186
+      Ember-Combo-v7-source_1: -7103288933112579087
+      Ember-Combo-v7-source_10: -4630799400059691489
+      Ember-Combo-v7-source_100: 4974552639386543878
+      Ember-Combo-v7-source_101: 4000137355257761957
+      Ember-Combo-v7-source_102: 5903445625923863460
+      Ember-Combo-v7-source_103: 7534776801861236459
+      Ember-Combo-v7-source_104: 3692004871464070751
+      Ember-Combo-v7-source_105: 7338028237988954387
+      Ember-Combo-v7-source_106: 7520446893299780572
+      Ember-Combo-v7-source_107: 6358160370613020977
+      Ember-Combo-v7-source_108: -1153006749393812455
+      Ember-Combo-v7-source_109: -553760491638793314
+      Ember-Combo-v7-source_11: 2500636239668807642
+      Ember-Combo-v7-source_110: -6859523578276243788
+      Ember-Combo-v7-source_111: -6491329113649045908
+      Ember-Combo-v7-source_112: -5626723962896183702
+      Ember-Combo-v7-source_113: -1014545653175584639
+      Ember-Combo-v7-source_114: -4499873270191158249
+      Ember-Combo-v7-source_115: 2142363704162867332
+      Ember-Combo-v7-source_116: -664712580131639931
+      Ember-Combo-v7-source_117: 1513266808374420328
+      Ember-Combo-v7-source_118: -3653061768828617963
+      Ember-Combo-v7-source_119: 7953543290605703426
+      Ember-Combo-v7-source_12: -9170263762146584482
+      Ember-Combo-v7-source_120: -912304509584324885
+      Ember-Combo-v7-source_121: 488696644015715022
+      Ember-Combo-v7-source_13: 3311558764196320266
+      Ember-Combo-v7-source_14: -5332839172032633796
+      Ember-Combo-v7-source_15: -4188731355153219735
+      Ember-Combo-v7-source_16: -9177228879136684819
+      Ember-Combo-v7-source_17: -3114616924987095223
+      Ember-Combo-v7-source_18: -5907917897720716885
+      Ember-Combo-v7-source_19: 391726240697752285
+      Ember-Combo-v7-source_2: -7006415644141157169
+      Ember-Combo-v7-source_20: 3541151482448728322
+      Ember-Combo-v7-source_21: -7877799779081755177
+      Ember-Combo-v7-source_22: 8587541609811641474
+      Ember-Combo-v7-source_23: 6884015633570171319
+      Ember-Combo-v7-source_24: 7308177014324412797
+      Ember-Combo-v7-source_25: -3742175810769341737
+      Ember-Combo-v7-source_26: 6207553159622831006
+      Ember-Combo-v7-source_27: -1163342254422359536
+      Ember-Combo-v7-source_28: 5454658735764611121
+      Ember-Combo-v7-source_29: 3451859034528957486
+      Ember-Combo-v7-source_3: 3625836099892861476
+      Ember-Combo-v7-source_30: 1222308797551771435
+      Ember-Combo-v7-source_31: 491589020423236591
+      Ember-Combo-v7-source_32: 9153092696577764581
+      Ember-Combo-v7-source_33: -7852946511393741205
+      Ember-Combo-v7-source_34: 2118317027589302375
+      Ember-Combo-v7-source_35: 730875467400127481
+      Ember-Combo-v7-source_36: -1571370299160545168
+      Ember-Combo-v7-source_37: 5110296292069401525
+      Ember-Combo-v7-source_38: 6076842512326557
+      Ember-Combo-v7-source_39: 114585559225029434
+      Ember-Combo-v7-source_4: -2528333117102850455
+      Ember-Combo-v7-source_40: -299226144862154144
+      Ember-Combo-v7-source_41: -9046332820103377685
+      Ember-Combo-v7-source_42: 4499567524176650482
+      Ember-Combo-v7-source_43: 1067565013553041823
+      Ember-Combo-v7-source_44: 8637058605828150521
+      Ember-Combo-v7-source_45: 4027226101745534522
+      Ember-Combo-v7-source_46: 5019721287213391170
+      Ember-Combo-v7-source_47: -2482478362272835874
+      Ember-Combo-v7-source_48: -8244175356838645679
+      Ember-Combo-v7-source_49: -3790131627514194656
+      Ember-Combo-v7-source_5: -7571494574119643772
+      Ember-Combo-v7-source_50: -4098398050145443875
+      Ember-Combo-v7-source_51: 6508806717518801932
+      Ember-Combo-v7-source_52: 5017114265152314399
+      Ember-Combo-v7-source_53: 7958609588692680000
+      Ember-Combo-v7-source_54: 6377856605580411464
+      Ember-Combo-v7-source_55: -7552766712849593619
+      Ember-Combo-v7-source_56: -4768094602659714851
+      Ember-Combo-v7-source_57: 8756651076428327334
+      Ember-Combo-v7-source_58: 2838668738935682037
+      Ember-Combo-v7-source_59: 6364869122466910248
+      Ember-Combo-v7-source_6: -1588785865104674863
+      Ember-Combo-v7-source_60: -6996187556271730630
+      Ember-Combo-v7-source_61: -4600602873867379775
+      Ember-Combo-v7-source_62: -7595697035525397685
+      Ember-Combo-v7-source_63: -1941442604820736316
+      Ember-Combo-v7-source_64: -6703240219175709069
+      Ember-Combo-v7-source_65: -3198772496781660803
+      Ember-Combo-v7-source_66: -1761013601386784796
+      Ember-Combo-v7-source_67: 1923524728853254263
+      Ember-Combo-v7-source_68: 5146160035737486238
+      Ember-Combo-v7-source_69: 7853190140317055567
+      Ember-Combo-v7-source_7: -3809359134972481885
+      Ember-Combo-v7-source_70: -4423662613011233650
+      Ember-Combo-v7-source_71: -7103221774711023576
+      Ember-Combo-v7-source_72: -1315139405656073477
+      Ember-Combo-v7-source_73: 5025105997317278373
+      Ember-Combo-v7-source_74: 2433896969384277077
+      Ember-Combo-v7-source_75: 1983094293742619857
+      Ember-Combo-v7-source_76: -1670736074005447713
+      Ember-Combo-v7-source_77: -7369725516023374466
+      Ember-Combo-v7-source_78: 4282003317290622449
+      Ember-Combo-v7-source_79: -8736874256779390793
+      Ember-Combo-v7-source_8: 8574757505475199685
+      Ember-Combo-v7-source_80: 911295308473922168
+      Ember-Combo-v7-source_81: -4084810225863558666
+      Ember-Combo-v7-source_82: 2773487818847689248
+      Ember-Combo-v7-source_83: 7886887740532520460
+      Ember-Combo-v7-source_84: 7526883374709063456
+      Ember-Combo-v7-source_85: -2715689709623254895
+      Ember-Combo-v7-source_86: 7868225252389648161
+      Ember-Combo-v7-source_87: -7860930505111005374
+      Ember-Combo-v7-source_88: 9067604432993814447
+      Ember-Combo-v7-source_89: -7851260173425776527
+      Ember-Combo-v7-source_9: -6451398253211386880
+      Ember-Combo-v7-source_90: -3721549980653566589
+      Ember-Combo-v7-source_91: -5153448288362790610
+      Ember-Combo-v7-source_92: -2825588284400918233
+      Ember-Combo-v7-source_93: 7652577511081827509
+      Ember-Combo-v7-source_94: -6095426095569235345
+      Ember-Combo-v7-source_95: 2343180829510161338
+      Ember-Combo-v7-source_96: 4486998681621353718
+      Ember-Combo-v7-source_97: 7588568367640393385
+      Ember-Combo-v7-source_98: -4705333690831994005
+      Ember-Combo-v7-source_99: 7145573404634984763
+  mipmapLimitGroupName:
+  pSDRemoveMatte: 0
+  userData:
+  assetBundleName:
+  assetBundleVariant:
