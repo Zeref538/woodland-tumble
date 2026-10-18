@@ -42,6 +42,7 @@ public class WoodlandHUD : MonoBehaviour
     public GameObject[] actionTooltipPanels = new GameObject[2];
     public Text[] actionTooltips = new Text[2];
     public Sprite[] characterActionCovers = new Sprite[16];
+    public Sprite[] characterGuardCovers=new Sprite[4];
     public Sprite[] playstationIcons = new Sprite[4];
     public Sprite[] neutralIcons = new Sprite[4];
     public Text arenaText;
@@ -193,7 +194,7 @@ public class WoodlandHUD : MonoBehaviour
             string dash=ps?"L1 / R1":xbox?"LB / RB":pad!=null?"LEFT / RIGHT SHOULDER":i==0?"Q / SHIFT":"U / R SHIFT";
             string ultimate=ps?"L2 + R2":xbox?"LT + RT":pad!=null?"BOTH TRIGGERS":i==0?"T":"I";
             string ranged=actor.CharacterIndex==0?"Roots and slows a rival at range.":actor.CharacterIndex==1?"A stronger fire hit from a safe distance.":actor.CharacterIndex==2?"A moonfrost shot that slows its target.":"A stone shot that launches its target.";
-            string finisher=actor.CharacterIndex==0?"30 damage with a rooting leaf prison.":actor.CharacterIndex==1?"Three flame contacts, 10 damage each.":actor.CharacterIndex==2?"26 damage with a freezing moon seal.":"35 damage ground shock. Must be grounded.";
+            string finisher=actor.CharacterIndex==0?(30*Scout.DamageScale).ToString("0.#")+" damage with a rooting leaf prison.":actor.CharacterIndex==1?"Three flame contacts, "+(10*Scout.DamageScale).ToString("0.#")+" damage each.":actor.CharacterIndex==2?(26*Scout.DamageScale).ToString("0.#")+" damage with a freezing moon seal.":(35*Scout.DamageScale).ToString("0.#")+" damage ground shock. Must be grounded.";
             if(guideNames[i]){guideNames[i].text=(i==1 && game.SoloMode?"CPU":"P"+(i+1))+"  "+actor.displayName.ToUpper();guideNames[i].color=actor.Element;}
             if(controlsText[i])controlsText[i].text=
                 "<b>"+punch+"   PUNCH</b>\n8 stamina. Start a close-range combo.\n"+
@@ -353,7 +354,7 @@ public class WoodlandHUD : MonoBehaviour
             if(actionCovers[slot]){
                 int character=Mathf.Clamp(scout.CharacterIndex,0,game.CharacterAnimationSets.Length-1);
                 var set=game.CharacterAnimationSets[character];
-                if(a==0 && set && set.block!=null && set.block.Length>0 && set.block[Mathf.Min(4,set.block.Length-1)])actionCovers[slot].sprite=set.block[Mathf.Min(4,set.block.Length-1)];
+                if(a==0 && character>=0 && character<characterGuardCovers.Length && characterGuardCovers[character])actionCovers[slot].sprite=characterGuardCovers[character];
                 else if(a!=0 && coverIndex<characterActionCovers.Length && characterActionCovers[coverIndex])actionCovers[slot].sprite=characterActionCovers[coverIndex];
             }
             if(actionIcons[slot]){actionIcons[slot].enabled=!cpu&&ps;actionIcons[slot].sprite=playstationIcons[a];actionIcons[slot].color=Color.white;}

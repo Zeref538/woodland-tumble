@@ -1,0 +1,24 @@
+{
+  "editor": "6000.5.10f1",
+  "version": "8.1.0",
+  "target": "StandaloneWindows64",
+  "build_result": "Success",
+  "combat_presentation_checks": 112,
+  "melee_checks": 28,
+  "damage_scale": 0.85,
+  "replay": "Champion screen: Cross / A / R",
+  "artwork_commit": "305814b",
+  "audio_testing": "Silent listener",
+  "physical_controller_testing": "Unverified USB/Bluetooth",
+  "mac_downgrade": "6000.2.2f1 unverified",
+  "assembly_sha256": "0327992d4486e5ad7b67b73fb9f1a115cd6615579402b8bfd99a98d12fb97606",
+  "source_hash_normalization": "CRLF converted to LF",
+  "scripts": {
+    "Scout.cs": "9e4a264c68c970c216eb7a3115f057f979612b67816796c370189d23d61f4aae",
+    "ScoutAnimations.cs": "fba9d1724140943d12090e0ec9138939316e66208ba2f8180b4e8a1042c5c206",
+    "SpawnMarker.cs": "678414abd6028ca57f40f084c3f664ef2cbf663ea2d956523bd78c35ac2f02ff",
+    "WoodlandEffects.cs": "13b829a49675607549bc189d6c6367d2395e03c2b7097979c8a3028fd6a2264c",
+    "WoodlandGame.cs": "cbc761caf52033901485b8aa7522f5bc292c263b72ae31730575b0d45a64dc24",
+    "WoodlandHUD.cs": "f36e0e1d6704d37c113cd7355ec27aa3f2d543e09375782bf005a60e977cb877"
+  }
+}

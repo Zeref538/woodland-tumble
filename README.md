@@ -54,6 +54,8 @@ The two meters are health and real shared stamina. Jump costs 4, aerial jump 6, 
 
 **Settings** adjusts sound volume, fullscreen, camera shake and effect intensity. Sound volume, mute, shake and effect intensity persist between sessions. Exit closes the standalone game; in the Editor it stops Play Mode.
 
+For Mac lab editing, read [HANDOFF.md](HANDOFF.md): editor version, controls, safe branches and checks. The lab editor 6000.2.2f1 is older than this project; downgrade compatibility is unverified.
+
 ## Clone and update
 
 Install Git and Unity **6000.5.10f1** through Unity Hub. Clone once, then add the downloaded project folder in Unity Hub and open `Assets/Scenes/WoodlandTumble.unity`.
@@ -62,7 +64,7 @@ Install Git and Unity **6000.5.10f1** through Unity Hub. Clone once, then add th
 
 ```sh
 cd ~/Desktop
-git clone https://github.com/Zeref538/woodland-tumble.git
+git clone --depth 1 --single-branch https://github.com/Zeref538/woodland-tumble.git
 cd woodland-tumble
 ```
 
@@ -70,7 +72,7 @@ cd woodland-tumble
 
 ```powershell
 cd $HOME
-git clone https://github.com/Zeref538/woodland-tumble.git
+git clone --depth 1 --single-branch https://github.com/Zeref538/woodland-tumble.git
 cd woodland-tumble
 ```
 
@@ -94,17 +96,17 @@ Reopen the project after the update. If Git reports local changes or a merge con
 
 The saved scene contains the camera, arena, player prefab instances and native HUD. Edit `Environment - Edit These Objects`, `Players - Editable Prefab Instances` and `HUD - Arena Broadcast` in the Hierarchy. Character assets live under `Assets/Art/Characters/{name}` and native clips under `Assets/Animations/{name}`.
 
-There are **522 individual character frames**, including dedicated neutral Idle poses for Luna and Bram. Ordinary frames are 256 x 256. Special, Dash, Backstep, Victory and Ultimate frames are 384 x 256 so effects do not shrink the body. Every canvas shares a foot pivot 24 pixels above the bottom. Sources and extraction measurements are retained in `Assets/Art/Sources` and [the v7 roster manifest](Documentation/ROSTER-ART-v7.json). No character references another character's sprite files.
+There are **522 individual character frames**, including dedicated neutral Idle poses for Luna and Bram. Ordinary frames are 256 x 256. Special, Dash, Backstep, Victory and Ultimate frames are 384 x 256 so effects do not shrink the body. Every canvas shares a foot pivot 24 pixels above the bottom. Original sheets are retained in [the separate artwork repository](https://github.com/Zeref538/Woodland-Scouts/tree/main/tumble/sources), with extraction measurements in [the v7 roster manifest](Documentation/ROSTER-ART-v7.json). No character references another character's sprite files.
 
 `Woodland > Rebuild Editable Demo Scene` restores the supplied layout and overwrites custom demo edits. Menu callbacks bind when the game starts so they survive scene reloads. `Woodland > Validate Editable Game` runs the controlled Play Mode fixture. Audio sources and licensing are in [Documentation/AUDIO.md](Documentation/AUDIO.md).
 
 ## Download and verification
 
-The saved game passed **693 core Play Mode checks**, and its reports are retained as historical evidence. The current v8 scene passed **101 targeted combat and presentation checks** in Unity 6000.5.10f1. The separate reports retain every assertion: [combat](Documentation/PLAYMODE-VALIDATION-v7.json), [HUD](Documentation/PLAYMODE-VALIDATION-v8.json) and [28 current combo checks](Documentation/MELEE-VALIDATION-v8.json). Windows build evidence is recorded in [BUILD-v8.json](Documentation/BUILD-v8.json). Physical controller USB/Bluetooth play and subjective headphone balance still require a local check. Automated playback stays silent.
+The current v8.1 scene passed **112 combat, presentation and replay checks** in Unity 6000.5.10f1. See [the assertion report](Documentation/PLAYMODE-VALIDATION-v8.1.json), [28 combo checks](Documentation/MELEE-VALIDATION-v8.1.json) and [build evidence](Documentation/BUILD-v8.1.json). Older reports are historical. Physical controller USB/Bluetooth play and subjective headphone balance still need a local check. Automated playback stays silent.
 
-[Full Unity source ZIP](https://github.com/Zeref538/woodland-tumble/releases/download/v8.0.0/Tilt-Rivals-Unity-v8.zip) includes Assets, Packages and ProjectSettings without Library or executable output. On John's existing PC, the project files are already updated locally; no pull is needed there.
+[Full Unity source ZIP](https://github.com/Zeref538/woodland-tumble/releases/download/v8.1.0/Tilt-Rivals-Unity-v8.1.zip) includes Assets, Packages and ProjectSettings without Library or executable output. On John's existing PC, the project files are already updated locally; no pull is needed there.
 
-![Bottom action diamonds and circular portraits](Documentation/charge-2-v8.png)
+![Bottom action diamonds and circular portraits](Documentation/HUD-v8.1.png)
 
 ![Four scouts](Documentation/roster-menu-1280-v7.png)
 
@@ -124,7 +126,7 @@ Press **Esc** on keyboard, **Options** on PlayStation or the three-line **Menu**
 
 The game reads Unity's standard Gamepad controls rather than restricting gameplay to one controller model. The local fixture verified Sony's PS4 revision IDs 05C4 and 09CC, DualSense and Edge IDs 0CE6 and 0DF2, the shared Xbox XInput layouts and a generic gamepad fallback. These are software layout and description tests, not physical-device tests. Official pads and compatible third-party controllers still depend on the operating system and driver exposing a supported gamepad. See [Unity's supported devices](https://docs.unity3d.com/Packages/com.unity.inputsystem@1.19/manual/SupportedDevices.html).
 
-![Paused character move guide](Documentation/move-guide-v8.png)
+![Paused character move guide](Documentation/Move-guide-v8.1.png)
 
 ## Combat corrections v8
 
@@ -135,3 +137,11 @@ Melee effects follow the selected character rather than the player slot. Luna us
 Charged projectiles use a leaf lance, flame wings, an ice crescent or a segmented stone gauntlet. Ultimates add an animated character cut-in, its move name, background dimming, a brief impact tint and ghost afterimages. End, interruption, menu and pause restore the cinematic presentation.
 
 Character art uses one uniform scale per character across every pose: Fern/Luna 160 pixels per unit, Ember 165 and Bram 151. These are modest visual calibrations; sprites are never stretched independently by axis. Both new idle poses retain a feet pivot 24 pixels above the bottom.
+
+## Replay and lighter download v8.1
+
+On the champion screen, press **Cross on PlayStation**, **A on Xbox** or **R on keyboard** to play again. Cross/A still guards during combat. All attack damage is 15 percent lower: a base punch deals 13.6 and a base kick deals 10.2 before action modifiers. Four distinct chunky pixel shields now cover the guard buttons.
+
+![Pixel guard emblems](Documentation/Guard-icons-v8.1.png)
+
+The current project omits duplicate original art sheets and historical screenshots. Their verified copies remain in the artwork repository and older releases; see [archived artwork](Documentation/ARCHIVED-ART.md). Use the shallow clone command above to skip old Git history. A normal full-history clone still downloads the old objects.

@@ -1,5 +1,13 @@
 # Agent Tasks
 
+- [x] Add a Mac lab HANDOFF.md with editor version, controls and safe save/update commands.
+
+- [x] Add controller Play Again at match end and reduce damage by 15 percent.
+- [x] Generate four matching pixel-art shield icons for guard.
+- [x] Slim the current GitHub tree, preserving original art and historical screenshots.
+- [x] Validate replay, damage and guard art: 112 gameplay/replay checks and 28 combo checks passed; Windows build succeeded.
+- [ ] Publish and measure the smaller download; copy the clean Unity project to D:/GameDev/TiltRivals.
+
 - [x] Remove upper PVP ledges and verify the Up jump / double-jump and Cross/A guard mappings.
 - [x] Replace ranged cooldown with an interruptible charge, distinct projectiles and matching HUD guide.
 - [x] Fix character-specific melee effects, remove streaks and add ghost-based ultimate transitions.

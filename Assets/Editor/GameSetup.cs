@@ -142,7 +142,7 @@ public static class GameSetup
         uiInput.move=null;uiInput.submit=null;uiInput.cancel=null;
         EditorSceneManager.SaveScene(scene, path);
         EditorBuildSettings.scenes = new[] { new EditorBuildSettingsScene(path, true) };
-        PlayerSettings.companyName = "Woodland Games";PlayerSettings.productName = "Tilt Rivals";PlayerSettings.bundleVersion="8.0.0";
+        PlayerSettings.companyName = "Woodland Games";PlayerSettings.productName = "Tilt Rivals";PlayerSettings.bundleVersion="8.1.0";
         PlayerSettings.defaultScreenWidth = 1280;PlayerSettings.defaultScreenHeight = 720;PlayerSettings.runInBackground = true;
         AssetDatabase.SaveAssets();
         Selection.activeGameObject = beam;
@@ -270,6 +270,10 @@ public static class GameSetup
         font = body;
         var versus=Flat("Versus Emblem",match,new Rect(0,0,168,94),Color.white);versus.sprite=SpriteAt("Assets/Art/UI/Versus.png");versus.preserveAspect=true;var vsRect=versus.rectTransform;vsRect.anchorMin=vsRect.anchorMax=new Vector2(.5f,1);vsRect.pivot=new Vector2(.5f,1);vsRect.anchoredPosition=new Vector2(0,-18);
         for(int a=0;a<4;a++){hud.playstationIcons[a]=SpriteAt("Assets/Art/UI/PSAction"+a+".png");hud.neutralIcons[a]=SpriteAt("Assets/Art/UI/CPUAction"+a+".png");}
+        for(int c=0;c<4;c++){
+            hud.characterGuardCovers[c]=SpriteAt("Assets/Art/UI/Actions/"+game.CharacterNames[c]+"/Guard.png");
+            if(!hud.characterGuardCovers[c])throw new System.Exception("Missing pixel shield icon: "+game.CharacterNames[c]);
+        }
         string[] actionNames={"Jump","Punch","Kick","Special"};
         for(int character=0;character<4;character++)for(int action=0;action<4;action++) {
             var cover=SpriteAt("Assets/Art/UI/Actions/"+game.CharacterNames[character]+"/"+actionNames[action]+".png");
@@ -318,7 +322,7 @@ public static class GameSetup
                 int slot=i*4+a;var position=buttonPositions[a];
                 var disc=Flat("Face Button "+captions[a],diamond,new Rect(position.x,position.y,WoodlandHUD.ActionButtonDiameter,WoodlandHUD.ActionButtonDiameter),Color.white);disc.sprite=SpriteAt("Assets/Art/UI/ControlDisc.png");disc.raycastTarget=true;disc.alphaHitTestMinimumThreshold=.1f;disc.rectTransform.pivot=Vector2.one*.5f;disc.rectTransform.anchoredPosition+=new Vector2(40,-40);hud.actionDiscs[slot]=disc;
                 var button=disc.gameObject.AddComponent<Button>();button.targetGraphic=disc;button.transition=Selectable.Transition.None;button.navigation=new Navigation{mode=Navigation.Mode.None};hud.actionButtons[slot]=button;
-                hud.actionCovers[slot]=Flat("Illustrated "+captions[a],disc.transform,new Rect(0,0,80,80),Color.white);hud.actionCovers[slot].sprite=hud.characterActionCovers[i*4+a];hud.actionCovers[slot].preserveAspect=true;
+                hud.actionCovers[slot]=Flat("Illustrated "+captions[a],disc.transform,new Rect(0,0,80,80),Color.white);hud.actionCovers[slot].sprite=a==0?hud.characterGuardCovers[i]:hud.characterActionCovers[i*4+a];hud.actionCovers[slot].preserveAspect=true;
                 if(a==3){
                     hud.specialCooldown[i]=Flat("Ranged Cooldown Sweep",disc.transform,new Rect(0,0,80,80),new Color(.018f,.03f,.035f,.8f));hud.specialCooldown[i].sprite=SpriteAt("Assets/Art/UI/ControlDisc.png");hud.specialCooldown[i].type=Image.Type.Filled;hud.specialCooldown[i].fillMethod=Image.FillMethod.Radial360;hud.specialCooldown[i].fillOrigin=(int)Image.Origin360.Top;hud.specialCooldown[i].fillClockwise=false;
                     hud.specialCooldownText[i]=Label("Ranged Cooldown Seconds",disc.transform,"",new Rect(0,19,80,43),29,white,TextAnchor.MiddleCenter);hud.specialCooldownText[i].fontStyle=FontStyle.Bold;

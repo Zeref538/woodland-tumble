@@ -76,6 +76,7 @@ public class Scout : MonoBehaviour
     bool blockHeld, dashRequested, chargePressed, chargeReleased, chargeHeld;
     Gamepad previousGamepad;
     [Header("Damage and knockout")]
+    public const float DamageScale=.85f;
     public float maxHealth = 100;
     public float pushDamage = 12;
     public float punchDamage = 16;
@@ -685,7 +686,7 @@ public class Scout : MonoBehaviour
     public bool ReceiveHit(Scout attacker, float direction, bool punch, float power = 1)
     {
         if (KnockedOut || Time.time < invulnerableUntil) return false;
-        float damage = (punch ? attacker.punchDamage : attacker.pushDamage) * power;
+        float damage = (punch ? attacker.punchDamage : attacker.pushDamage) * power * DamageScale;
         bool frontal = (attacker.Body.position.x - Body.position.x) * face > 0;
         if (Blocking && frontal) {
             bool parry = Time.time - shieldStarted <= parryWindow;

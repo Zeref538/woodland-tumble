@@ -1,0 +1,58 @@
+{
+  "canvas": [
+    256,
+    256
+  ],
+  "method": "Four generated low-resolution shield emblems; quadrant extraction, uniform nearest-neighbor scaling and transparent padding. No independent axis stretching.",
+  "source": "Woodland-Scouts/tumble/sources/Guard-Atlas-v8.1-source.png",
+  "icons": [
+    {
+      "character": "Fern",
+      "file": "Assets/Art/UI/Actions/Fern/Guard.png",
+      "sha256": "2335d90f8f3e4112aa187d9c4f73125a07252e51959d20940ca8558e85c5f576",
+      "sourceCrop": [
+        23,
+        12,
+        631,
+        623
+      ],
+      "uniformScale": 0.39279869067103107
+    },
+    {
+      "character": "Ember",
+      "file": "Assets/Art/UI/Actions/Ember/Guard.png",
+      "sha256": "f0d38aaf7d6a0428e4cf486059935ed3b5fc0f3a12c00c0b6fc4a51da8c30de5",
+      "sourceCrop": [
+        0,
+        12,
+        608,
+        623
+      ],
+      "uniformScale": 0.39279869067103107
+    },
+    {
+      "character": "Luna",
+      "file": "Assets/Art/UI/Actions/Luna/Guard.png",
+      "sha256": "ac1bde0543cf94d08b62782949bef090d8754b3461cb7869ee4fc1674598c9c7",
+      "sourceCrop": [
+        23,
+        0,
+        631,
+        580
+      ],
+      "uniformScale": 0.39473684210526316
+    },
+    {
+      "character": "Bram",
+      "file": "Assets/Art/UI/Actions/Bram/Guard.png",
+      "sha256": "454c632c4491f25e791e7a764e17052a3ad73c67c7e1ebba8d53f2541a193594",
+      "sourceCrop": [
+        0,
+        0,
+        608,
+        580
+      ],
+      "uniformScale": 0.39473684210526316
+    }
+  ]
+}

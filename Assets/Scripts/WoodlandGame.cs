@@ -57,6 +57,11 @@ public class WoodlandGame : MonoBehaviour
     [HideInInspector] public string message;
     public bool Paused { get; private set; }
     public bool MatchOver => score[0] >= roundsToWin || score[1] >= roundsToWin;
+    public bool CanPlayAgain => MatchOver && roundRoutine==null;
+    public string ReplayHint {
+        get { var pad=GetGamepad(0)??GetGamepad(1);string style=GamepadStyle(pad);return (style=="PLAYSTATION"?"CROSS":style=="XBOX"?"A":pad!=null?"SOUTH":"R")+" TO PLAY AGAIN"; }
+    }
+
     Vector2 plankHome;
     float plankAngle;
     bool balanceGeometrySaved;
@@ -291,7 +296,7 @@ public class WoodlandGame : MonoBehaviour
         message = players[winner].displayName.ToUpper() + " WINS";
         yield return new WaitForSeconds(1.5f);
         if (MatchOver) {
-            message = players[winner].displayName.ToUpper() + " IS CHAMPION!\nR TO PLAY AGAIN";
+            message = players[winner].displayName.ToUpper() + " IS CHAMPION!\n"+ReplayHint;
             roundRoutine = null;
         } else roundRoutine = StartCoroutine(StartRound());
     }
@@ -310,6 +315,7 @@ public class WoodlandGame : MonoBehaviour
     {
         RefreshGamepads();
         if(Screen!=MenuScreen.Match)return;
+        if(CanPlayAgain)message=players[score[0]>=roundsToWin?0:1].displayName.ToUpper()+" IS CHAMPION!\n"+ReplayHint;
         var keyboard = Keyboard.current;
         bool pause = keyboard != null && keyboard.escapeKey.wasPressedThisFrame;
         bool restart = keyboard != null && keyboard.rKey.wasPressedThisFrame;
@@ -322,6 +328,7 @@ public class WoodlandGame : MonoBehaviour
         foreach (var pad in gamepads) {
             if (pad == null) continue;
             pause |= pad.startButton.wasPressedThisFrame;
+            restart |= CanPlayAgain && pad.buttonSouth.wasPressedThisFrame;
             if (!PadMenuChord(pad)) continue;
             restart |= pad.buttonSouth.wasPressedThisFrame;
             if (pad.rightShoulder.wasPressedThisFrame) SelectArena((ArenaIndex + 1) % backgrounds.Length);
