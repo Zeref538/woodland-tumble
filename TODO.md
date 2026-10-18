@@ -10,7 +10,7 @@
 - [x] Create new larger PVP arena art and set the highest VFX quality as the default.
 - [x] Move enlarged clickable action diamonds to the bottom corners, use circular portraits and remove the heavy fighter-panel backing. Silent Play Mode passed 164 targeted checks.
 - [x] Verify combat, remapping, ultimates, HUD and win emotes; Windows build succeeded. Core 693 checks, final HUD 164 checks and natural melee 28 checks passed.
-- [ ] Publish the v7 source ZIP and verify its public download.
+- [x] Publish the v7 source ZIP and verify its public download. GitHub digest and 283,523,395-byte size match; anonymous download returns HTTP 200.
 
 - [x] Create sixteen distinct pixel-art action covers, four for each character.
 - [x] Bind covers to the selected character and verify both player slots in the running game.
