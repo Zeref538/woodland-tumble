@@ -13,6 +13,8 @@ Use **6000.5.10f1**, matching `ProjectSettings/ProjectVersion.txt`. This project
 
 The lab's **6000.2.2f1 is older**. Downgrade compatibility has not been verified. Prefer opening with 6000.5.10f1 through Unity Hub. If the lab only permits the older editor, use a separate clone and branch, keep the original ProjectVersion.txt, and test before saving converted files back to GitHub. Do not silently change the editor version on main.
 
+For USB installation, exact Intel/Apple Silicon installer links, licence requirements and offline package preparation, read [OFFLINE-SETUP.md](OFFLINE-SETUP.md).
+
 ## Fast first download
 
 The current tree contains the playable Unity project. Original source sheets are in the artwork repository, and old screenshots remain in historical tags/releases. A shallow clone skips those old Git objects.

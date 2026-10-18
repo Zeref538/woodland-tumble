@@ -1,0 +1,16 @@
+{
+  "release": "https://github.com/Zeref538/woodland-tumble/releases/tag/v8.1.0",
+  "commit": "233d304f30fa08bfe961682e6184eeba171db880",
+  "archive_bytes": 63573322,
+  "sha256": "22f900c82d2ca5e7ad9dca8def18bbbbfae3d6451584fbc5af0ffaf19cd2f3c2",
+  "github_asset_digest_verified": true,
+  "public_download_http": 200,
+  "archive_crc": "passed",
+  "previous_archive_bytes": 306673591,
+  "reduction_percent": 79.27,
+  "shallow_clone_commits": 1,
+  "shallow_clone_git_bytes": 62655462,
+  "mac_downgrade": "6000.2.2f1 unverified",
+  "local_copy": "D:/GameDev/TiltRivals: 1786 archived files copied and SHA-256 matched; documentation updates also copied",
+  "offline_guide": "OFFLINE-SETUP.md, exact installers checked HTTP 200; Mac execution unverified"
+}

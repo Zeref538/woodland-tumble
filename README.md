@@ -54,7 +54,7 @@ The two meters are health and real shared stamina. Jump costs 4, aerial jump 6, 
 
 **Settings** adjusts sound volume, fullscreen, camera shake and effect intensity. Sound volume, mute, shake and effect intensity persist between sessions. Exit closes the standalone game; in the Editor it stops Play Mode.
 
-For Mac lab editing, read [HANDOFF.md](HANDOFF.md): editor version, controls, safe branches and checks. The lab editor 6000.2.2f1 is older than this project; downgrade compatibility is unverified.
+For offline USB installation, read [OFFLINE-SETUP.md](OFFLINE-SETUP.md). For Mac lab editing, read [HANDOFF.md](HANDOFF.md): editor version, controls, safe branches and checks. The lab editor 6000.2.2f1 is older than this project; downgrade compatibility is unverified.
 
 ## Clone and update
 
@@ -144,4 +144,4 @@ On the champion screen, press **Cross on PlayStation**, **A on Xbox** or **R on 
 
 ![Pixel guard emblems](Documentation/Guard-icons-v8.1.png)
 
-The current project omits duplicate original art sheets and historical screenshots. Their verified copies remain in the artwork repository and older releases; see [archived artwork](Documentation/ARCHIVED-ART.md). Use the shallow clone command above to skip old Git history. A normal full-history clone still downloads the old objects.
+The source ZIP is **63,573,322 bytes**, 79.27 percent smaller than the previous release. The current project omits duplicate original art sheets and historical screenshots. Their verified copies remain in the artwork repository and older releases; see [archived artwork](Documentation/ARCHIVED-ART.md). Use the shallow clone command above to skip old Git history. A normal full-history clone still downloads the old objects.

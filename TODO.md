@@ -6,7 +6,8 @@
 - [x] Generate four matching pixel-art shield icons for guard.
 - [x] Slim the current GitHub tree, preserving original art and historical screenshots.
 - [x] Validate replay, damage and guard art: 112 gameplay/replay checks and 28 combo checks passed; Windows build succeeded.
-- [ ] Publish and measure the smaller download; copy the clean Unity project to D:/GameDev/TiltRivals.
+- [x] Publish and verify the 63,573,322-byte source ZIP, 79.27 percent smaller. Copy 1,786 files to D:/GameDev/TiltRivals with matching hashes.
+- [x] Add exact Unity version and offline Mac installation instructions with verified installer links.
 
 - [x] Remove upper PVP ledges and verify the Up jump / double-jump and Cross/A guard mappings.
 - [x] Replace ranged cooldown with an interruptible charge, distinct projectiles and matching HUD guide.
