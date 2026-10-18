@@ -35,7 +35,7 @@ public static class GameValidation
     {
         AudioListener.volume=0;
         SessionState.SetBool("Woodland.HudOnly",true);
-        GameSetup.Prepare();Begin(true);
+        GameSetup.PrepareHUD();Begin(true);
     }
     public static void RunMelee()
     {
@@ -594,7 +594,7 @@ public static class GameValidation
             } else if (stage == 158 && SimElapsed > .08f && ((a.DashReady<1 && b.DashReady<1) || Elapsed>2)) {
                 Check(a.DashReady<1 && b.DashReady<1 && a.Stamina==a.StaminaCapacity-10 && b.Stamina==b.StaminaCapacity-10 && a.Body.linearVelocity.x>7 && b.Body.linearVelocity.x< -7,"Both right shoulders dash forward in each fighter's own direction with the correct cost");
                 padStates[0]=padStates[1]=new GamepadState();
-                Check(game.hud.pauseButtons.Length == 4 && game.hud.pauseButtons.All(button => button != null), "All four pause menu buttons are wired");
+                Check(game.hud.pauseButtons.Length == 5 && game.hud.pauseButtons.All(button => button != null), "All five pause menu buttons are wired");
                 game.TogglePause();game.hud.RefreshMenu();
                 Check(game.hud.pauseMenu.activeSelf, "Pausing displays the interactive pause menu");
                 game.hud.pauseButtons[0].onClick.Invoke();
@@ -1152,6 +1152,33 @@ public static class GameValidation
         canvas.renderMode = mode;canvas.worldCamera = previousCamera;canvas.planeDistance = distance;canvas.sortingOrder=order;
         UnityEngine.Object.DestroyImmediate(shot);UnityEngine.Object.DestroyImmediate(rt);
     }
+    static void ValidateControllerFamilies(WoodlandGame game)
+    {
+        // Hardware descriptions exercise Unity's actual Sony revision matchers.
+        foreach(int product in new[]{0x5C4,0x9CC,0xCE6,0xDF2}){
+            var description=new UnityEngine.InputSystem.Layouts.InputDeviceDescription{interfaceName="HID",manufacturer="Sony Interactive Entertainment",product="Wireless Controller",capabilities="{\"vendorId\":1356,\"productId\":"+product+"}"};
+            var pad=InputSystem.AddDevice(description) as Gamepad;
+            try{
+                Check(pad!=null && WoodlandGame.GamepadStyle(pad)=="PLAYSTATION","Sony product "+product.ToString("X")+": actual PS4/DualSense revision matcher resolves to PlayStation");
+                game.RefreshGamepads();game.hud.Refresh();Check(game.hud.helpHint.text=="MENU  [OPTIONS]","Sony revision Menu footer renders Options");
+                Check(pad.buttonSouth!=null && pad.buttonWest!=null && pad.buttonEast!=null && pad.buttonNorth!=null && pad.leftShoulder!=null && pad.rightShoulder!=null && pad.leftTrigger!=null && pad.rightTrigger!=null && pad.startButton!=null,"Sony revision exposes every gameplay and Menu control");
+            }finally{if(pad!=null)InputSystem.RemoveDevice(pad);game.RefreshGamepads();}
+        }
+        foreach(string layout in new[]{"XInputController","XInputControllerWindows","Gamepad"}){
+            if(!InputSystem.ListLayouts().Contains(layout))continue;
+            var pad=(Gamepad)InputSystem.AddDevice(layout);
+            try{
+                game.RefreshGamepads();game.hud.Refresh();bool xbox=layout.StartsWith("XInput");
+                Check(WoodlandGame.GamepadStyle(pad)==(xbox?"XBOX":"GAMEPAD"),layout+": shared Xbox or generic layout has correct button family");
+                Check(game.hud.helpHint.text==(xbox?"MENU  [\u2261]":"MENU  [START]"),layout+": rendered Menu hint follows assigned layout");
+                Check(pad.buttonSouth!=null && pad.buttonWest!=null && pad.buttonEast!=null && pad.buttonNorth!=null && pad.leftShoulder!=null && pad.rightShoulder!=null && pad.leftTrigger!=null && pad.rightTrigger!=null && pad.startButton!=null,layout+": all combat, dash, ultimate and Menu controls exist");
+                game.hud.OpenMoveGuide();game.hud.Refresh();
+                Check(game.hud.controlsText[0].text.Contains(xbox?"LT + RT":"BOTH TRIGGERS"),layout+": move guide follows its actual trigger labels");
+                game.hud.CloseMoveGuide();
+            }finally{InputSystem.RemoveDevice(pad);game.RefreshGamepads();}
+        }
+        game.hud.Refresh();Check(game.hud.helpHint.text=="MENU  [ESC]","Disconnecting matrix devices restores the keyboard Menu label");
+    }
     static void TickHUD()
     {
         try {
@@ -1164,12 +1191,41 @@ public static class GameValidation
             }else if(stage==0 && game.playing && string.IsNullOrEmpty(game.message)){
                 foreach(var scout in game.players){scout.inputEnabled=false;scout.aiControlled=false;scout.ResetScout();}
                 ValidateHudCorners(game);ValidateHudMeters(game);
+                Check(hud.arenaText==null && hud.transform.Find("Match HUD/Arena")==null,"Combat HUD removes the arena-name label");
+                var vs=(RectTransform)hud.transform.Find("Match HUD/Versus Emblem");Check(vs.rect.width>=160 && vs.rect.height>=90,"VS artwork is enlarged without changing its aspect ratio");
+                foreach(var portrait in hud.fighterPortraits)Check(portrait.rectTransform.rect.width<=100 && portrait.rectTransform.rect.height<=100,"Portrait fits the circle instead of cropping into a face close-up");
+                for(int i=0;i<2;i++){
+                    var hp=hud.healthFill[i].rectTransform;var sp=hud.shieldFill[i].rectTransform;
+                    Check(Vector2.Distance(hp.TransformPoint(hp.rect.center),hud.healthText[i].rectTransform.TransformPoint(hud.healthText[i].rectTransform.rect.center))<.1f,"Health value sits at the exact meter center");
+                    Check(Vector2.Distance(sp.TransformPoint(sp.rect.center),hud.shieldText[i].rectTransform.TransformPoint(hud.shieldText[i].rectTransform.rect.center))<.1f,"Stamina value sits at the exact meter center");
+                }
+
                 disabledPads=Gamepad.all.Where(pad=>pad.enabled).ToArray();foreach(var pad in disabledPads)InputSystem.DisableDevice(pad);
                 testPads[0]=(Gamepad)InputSystem.AddDevice("DualShock4GamepadHID");testPads[1]=(Gamepad)InputSystem.AddDevice("XInputController");game.RefreshGamepads();hud.Refresh();
                 Check(hud.deviceText[0].text.Contains("PLAYSTATION")&&hud.deviceText[1].text.Contains("XBOX"),"Targeted HUD binds real registered PlayStation and Xbox input layouts");
                 ValidateCharacterActionCovers(game);
-                Capture("Documentation/HUD-bottom-diamonds-1280-v7.png");
+                Check(hud.MenuHint=="MENU  [OPTIONS]" && hud.helpHint.text==hud.MenuHint,"PlayStation Menu hint uses the actual Options button name");
+                game.TogglePause();hud.Refresh();hud.pauseButtons[4].onClick.Invoke();
+                Check(game.Paused && Time.timeScale==0 && hud.MoveGuideOpen,"Move List opens from the pause menu while combat stays frozen");
+                Check(hud.guideNames[0].text.Contains("FERN") && hud.guideNames[1].text.Contains("EMBER"),"Move guide names match the two selected fighters");
+                for(int character=0;character<4;character++){
+                    var actor=game.players[0];actor.SetCharacter(character,game.CharacterNames[character],game.CharacterAnimationSets[character],game.CharacterControllers[character],game.CharacterColors[character]);hud.Refresh();Canvas.ForceUpdateCanvases();
+                    Check(hud.controlsText[0].text.Contains(actor.SkillName) && hud.controlsText[0].text.Contains(actor.UltimateName),"Character "+character+": guide follows its actual ranged skill and ultimate");
+                    Check(hud.controlsText[0].preferredHeight<=hud.controlsText[0].rectTransform.rect.height,"Character "+character+": all move explanations fit without clipping");
+                }
+                game.players[0].SetCharacter(0,game.CharacterNames[0],game.CharacterAnimationSets[0],game.CharacterControllers[0],game.CharacterColors[0]);hud.Refresh();
+                Check(hud.controlsText[0].text.Contains("SQUARE") && hud.controlsText[1].text.Contains("LT + RT"),"Move guide binds PlayStation and Xbox inputs independently");
+                SetStage(10);
+            }else if(stage==10 && Elapsed>.15f){
+                Capture("Documentation/Move-list-1280-v7.1.png");hud.guideCloseButton.onClick.Invoke();
+                Check(!hud.MoveGuideOpen && game.Paused,"Move-list Back button returns to the paused match menu");
+                game.ResumeMatch();hud.Refresh();
+
+                Capture("Documentation/HUD-centered-1280-v7.1.png");
                 for(int i=0;i<2;i++){InputSystem.RemoveDevice(testPads[i]);testPads[i]=null;}game.RefreshGamepads();
+                hud.Refresh();Check(hud.MenuHint=="MENU  [ESC]" && hud.helpHint.text==hud.MenuHint,"Removing controllers restores the keyboard Esc Menu hint");
+
+                ValidateControllerFamilies(game);
                 SessionState.SetInt("Woodland.HudClick",0);SetStage(1);
             }else if(stage==1){
                 int slot=SessionState.GetInt("Woodland.HudClick",0);int player=slot/4,action=slot%4;
@@ -1207,7 +1263,11 @@ public static class GameValidation
                 game.TogglePause();
                 foreach(var scout in game.players)scout.ResetScout();hud.Refresh();
                 Check(hud.ultimateLabels.All(label=>!string.IsNullOrEmpty(label.text)),"Both ultimate labels remain visible after mouse actions and reset");
-                Complete(true,"HUD_PASS: bottom diamonds, floating profiles, roster covers and actual mouse action callbacks validated");
+                game.TogglePause();hud.Refresh();hud.OpenMoveGuide();game.ResumeMatch();hud.Refresh();
+                Check(!hud.MoveGuideOpen && !game.Paused,"Resuming a match always clears the move guide");
+                game.TogglePause();hud.Refresh();hud.OpenMoveGuide();game.RestartMatch();hud.Refresh();
+                Check(!hud.MoveGuideOpen && !game.Paused,"Rematching always clears the move guide and paused state");
+                Complete(true,"HUD_PASS: centered meters, zoomed portraits, enlarged VS, adaptive Menu hint, paused move guide and mouse actions validated");
             }
         }catch(Exception error){Complete(false,error.ToString());}
     }
@@ -1232,7 +1292,7 @@ public static class GameValidation
         bool hudOnly=SessionState.GetBool("Woodland.HudOnly",false);
         SessionState.SetBool("Woodland.MeleeOnly",false);
         SessionState.SetBool("Woodland.HudOnly",false);
-        File.WriteAllText(hudOnly?"Documentation/HUD-VALIDATION-v7.json":meleeOnly?"Documentation/MELEE-VALIDATION-v7.json":"Documentation/PLAYMODE-VALIDATION-v7.json", JsonUtility.ToJson(report, true));
+        File.WriteAllText(hudOnly?"Documentation/HUD-VALIDATION-v7.1.json":meleeOnly?"Documentation/MELEE-VALIDATION-v7.json":"Documentation/PLAYMODE-VALIDATION-v7.json", JsonUtility.ToJson(report, true));
         if (success) Debug.Log(status);else Debug.LogError(status);
         EditorApplication.isPlaying = false;
         if (SessionState.GetBool("Woodland.ValidationExit", false)) EditorApplication.delayCall += () => EditorApplication.Exit(success ? 0 : 1);

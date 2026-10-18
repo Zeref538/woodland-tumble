@@ -62,6 +62,10 @@ public class WoodlandHUD : MonoBehaviour
     public Text modeText, mapDescription;
     public Image mapPreview;
     public GameObject helpPanel;
+    public Text[] guideNames=new Text[2];
+    public Button guideCloseButton;
+    public bool MoveGuideOpen => helpPanel && helpPanel.activeSelf;
+    int guideClosedFrame=-1;
     public GameObject bannerPanel;
     public Text bannerText;
     public Color fernColor = new Color(.43f, .94f, .70f);
@@ -113,6 +117,8 @@ public class WoodlandHUD : MonoBehaviour
         if(pauseButtons.Length>1 && pauseButtons[1])pauseButtons[1].onClick.AddListener(game.RestartMatch);
         if(pauseButtons.Length>2 && pauseButtons[2])pauseButtons[2].onClick.AddListener(game.OpenMapSelection);
         if(pauseButtons.Length>3 && pauseButtons[3])pauseButtons[3].onClick.AddListener(game.ReturnToMenu);
+        if(pauseButtons.Length>4 && pauseButtons[4])pauseButtons[4].onClick.AddListener(OpenMoveGuide);
+        if(guideCloseButton)guideCloseButton.onClick.AddListener(CloseMoveGuide);
         for(int slot=0;slot<actionDiscs.Length;slot++){
             if(!actionDiscs[slot])continue;int captured=slot;
             if(actionButtons[slot])actionButtons[slot].onClick.AddListener(()=>ActivateAction(captured/4,captured%4));
@@ -136,10 +142,51 @@ public class WoodlandHUD : MonoBehaviour
                 !pad.buttonSouth.isPressed && !pad.leftShoulder.isPressed && !pad.rightShoulder.isPressed && !menuChordUsed;
             if(pad!=null && pad.selectButton.isPressed && (pad.buttonSouth.isPressed || pad.leftShoulder.isPressed || pad.rightShoulder.isPressed)) menuChordUsed=true;
         }
-        if (helpPanel && toggle) { helpPanel.SetActive(!helpPanel.activeSelf);WoodlandEffects.Instance?.PlayCue(12,.18f); }
+        if (helpPanel && toggle) { if(MoveGuideOpen)CloseMoveGuide();else OpenMoveGuide(); }
         bool menuHeld=false;
         if(game)for(int i=0;i<2;i++)menuHeld|=WoodlandGame.PadMenuChord(game.GetGamepad(i));
         if(!menuHeld)menuChordUsed=false;
+    }
+    public string MenuHint {
+        get {
+            var pad=game?game.GetGamepad(0)??game.GetGamepad(1):null;
+            string style=WoodlandGame.GamepadStyle(pad);
+            return style=="PLAYSTATION"?"MENU  [OPTIONS]":style=="XBOX"?"MENU  [\u2261]":pad!=null?"MENU  [START]":"MENU  [ESC]";
+        }
+    }
+    public void OpenMoveGuide()
+    {
+        if(!helpPanel || !game || game.Screen!=WoodlandGame.MenuScreen.Match)return;
+        RefreshMenu();RefreshMoveGuide();helpPanel.transform.SetAsLastSibling();helpPanel.SetActive(true);
+        WoodlandEffects.Instance?.PlayCue(12,.18f);
+    }
+    public void CloseMoveGuide(){if(helpPanel)helpPanel.SetActive(false);guideClosedFrame=Time.frameCount;}
+    void RefreshMoveGuide()
+    {
+        for(int i=0;i<2;i++){
+            if(game.players.Length<=i || !game.players[i])continue;
+            var actor=game.players[i];var pad=game.GetGamepad(i);string style=WoodlandGame.GamepadStyle(pad);
+            bool ps=style=="PLAYSTATION", xbox=style=="XBOX";
+            string punch=ps?"SQUARE":xbox?"X":pad!=null?"WEST":i==0?"G":"L";
+            string kick=ps?"CIRCLE":xbox?"B":pad!=null?"EAST":i==0?"F":"K";
+            string jump=ps?"CROSS":xbox?"A":pad!=null?"SOUTH":i==0?"W":"UP";
+            string skill=ps?"TRIANGLE":xbox?"Y":pad!=null?"NORTH":i==0?"H":"J";
+            string guard=ps?"HOLD L2":xbox?"HOLD LT":pad!=null?"LEFT TRIGGER":i==0?"HOLD S":"HOLD DOWN";
+            string dash=ps?"L1 / R1":xbox?"LB / RB":pad!=null?"LEFT / RIGHT SHOULDER":i==0?"Q / SHIFT":"U / R SHIFT";
+            string ultimate=ps?"L2 + R2":xbox?"LT + RT":pad!=null?"BOTH TRIGGERS":i==0?"T":"I";
+            string ranged=actor.CharacterIndex==0?"Roots and slows a rival at range.":actor.CharacterIndex==1?"A stronger fire hit from a safe distance.":actor.CharacterIndex==2?"A moonfrost shot that slows its target.":"A stone shot that launches its target.";
+            string finisher=actor.CharacterIndex==0?"30 damage with a rooting leaf prison.":actor.CharacterIndex==1?"Three flame contacts, 10 damage each.":actor.CharacterIndex==2?"26 damage with a freezing moon seal.":"35 damage ground shock. Must be grounded.";
+            if(guideNames[i]){guideNames[i].text=(i==1 && game.SoloMode?"CPU":"P"+(i+1))+"  "+actor.displayName.ToUpper();guideNames[i].color=actor.Element;}
+            if(controlsText[i])controlsText[i].text=
+                "<b>"+punch+"   PUNCH</b>\n8 stamina. Start a close-range combo.\n"+
+                "<b>"+kick+"   KICK</b>\n6 stamina. Finish a string and launch.\n"+
+                "<b>"+punch+", "+punch+", "+kick+"   THREE-HIT COMBO</b>\nQueue during recovery. Third hit: 1.4x damage.\n"+
+                "<b>"+jump+"   JUMP / DOUBLE JUMP</b>\n4 stamina on ground; 6 for the aerial jump.\n"+
+                "<b>"+guard+"   GUARD / PARRY</b>\nFace the hit. A fresh guard parries. Grabs beat guard.\n"+
+                "<b>"+dash+"   BACKDASH / FORWARD DASH</b>\n12 / 10 stamina. Backdash briefly avoids hits.\n"+
+                "<b>"+skill+"   "+actor.SkillName+"</b>\n14 stamina. 6s cooldown. "+ranged+"\n"+
+                "<b>"+ultimate+"   "+actor.UltimateName+"</b>\n25 HP or less. Once per round. "+finisher;
+        }
     }
     bool menuChordUsed;
     void LateUpdate() => Refresh();
@@ -147,6 +194,8 @@ public class WoodlandHUD : MonoBehaviour
     {
         if (!game || game.players == null) return;
         RefreshMenu();
+        if(helpHint)helpHint.text=MenuHint;
+        RefreshMoveGuide();
         float dt = Time.unscaledDeltaTime;
         for (int i = 0; i < 2; i++) {
             if (i >= game.players.Length || !game.players[i]) continue;
@@ -154,8 +203,6 @@ public class WoodlandHUD : MonoBehaviour
             var pad=game.GetGamepad(i);
             string style=WoodlandGame.GamepadStyle(pad);
             if(deviceText[i])deviceText[i].text=i==1 && game.SoloMode?"CPU RIVAL  /  "+scout.displayName.ToUpper():style=="KEYBOARD"?"KEYBOARD  /  "+(i==0?"A D + W":"ARROW KEYS"):style+"  /  PAD "+(i+1);
-            if(controlsText[i])controlsText[i].text=i==1 && game.SoloMode?scout.displayName.ToUpper()+" / CPU RIVAL\nReads spacing, guards and counters.\nBait a strike, punish the recovery.":pad==null?(i==0?"A / D   Move      W   Jump / double jump\nS   Block    Q   Backdash    Shift   Dash\nG   Punch    F   Kick\nH   Ranged skill [6s cooldown]\nT   Ultimate [25 HP or less, once / round]":"Arrows   Move      Up   Jump / double jump\nDown   Block    U   Backdash    R Shift   Dash\nL   Punch    K   Kick\nJ   Ranged skill [6s cooldown]\nI   Ultimate [25 HP or less, once / round]"):
-                "STICK / D-PAD   Move\n"+(style=="PLAYSTATION"?"CROSS   Jump    SQUARE   Punch\nCIRCLE   Kick    TRIANGLE   Ranged [6s]\nL2   Block    L1   Backdash    R1   Dash\nL2 + R2   Ultimate [25 HP or less]":style=="XBOX"?"A   Jump    X   Punch    B   Kick\nY   Ranged [6s]    LT   Block\nLB   Backdash    RB   Dash\nLT + RT   Ultimate [25 HP or less]":"SOUTH   Jump    WEST   Punch\nEAST   Kick    NORTH   Ranged [6s]\nL TRIGGER   Block    L SHOULDER   Backdash\nR SHOULDER   Dash    BOTH TRIGGERS   Ult");
             RefreshActionDiamond(i,scout,pad,style);
             Color accent = scout.Element;
             int character=game.CharacterChoices[i];
@@ -201,7 +248,7 @@ public class WoodlandHUD : MonoBehaviour
             }
         }
         var audio=WoodlandEffects.Instance;
-        if(helpHint)helpHint.text=game.GetGamepad(0)!=null||game.GetGamepad(1)!=null?"START PAUSE    SHARE / VIEW CONTROLS":"F1 CONTROLS    ESC PAUSE    R REMATCH";
+        if(helpHint)helpHint.text=MenuHint;
         if(soundText && audio) {
             bool quiet=audio.Muted||audio.SfxVolume<=0;
             bool notice=quiet||Time.unscaledTime<audio.AudioNoticeUntil;soundText.gameObject.SetActive(notice);if(helpHint)helpHint.gameObject.SetActive(!notice);
@@ -307,7 +354,7 @@ public class WoodlandHUD : MonoBehaviour
         if(mapMenu)mapMenu.SetActive(screen==WoodlandGame.MenuScreen.Maps);
         if(settingsMenu)settingsMenu.SetActive(screen==WoodlandGame.MenuScreen.Settings);
         if(matchHud)matchHud.SetActive(match);
-        if(pauseMenu)pauseMenu.SetActive(match && game.Paused);
+        if(pauseMenu)pauseMenu.SetActive(match && game.Paused && !MoveGuideOpen);
         if(screen!=lastScreen){
             menuFocus=screen==WoodlandGame.MenuScreen.Rules && game.BalanceMode?1:0;nextNavigation=Time.unscaledTime+.12f;lastScreen=screen;if(helpPanel)helpPanel.SetActive(false);
             for(int i=0;i<2;i++){hoveredAction[i]=recentAction[i]=-1;tooltipUntil[i]=0;observationsReady[i]=false;}
@@ -366,6 +413,11 @@ public class WoodlandHUD : MonoBehaviour
             previous|=pad.dpad.up.wasPressedThisFrame || pad.dpad.left.wasPressedThisFrame;
             Vector2 stick=pad.leftStick.ReadValue();analogNext|=stick.x>.55f || stick.y<-.55f;analogPrevious|=stick.x<-.55f || stick.y>.55f;
         }
+        if(MoveGuideOpen){
+            if(back || confirm || (keys!=null && keys.f1Key.wasPressedThisFrame))CloseMoveGuide();
+            return;
+        }
+        if(guideClosedFrame==Time.frameCount)return;
         bool analog=analogNext||analogPrevious;
         if(Time.unscaledTime>=nextNavigation){next|=analogNext;previous|=analogPrevious;}
         if(!analog && !next && !previous)nextNavigation=0;
@@ -379,7 +431,7 @@ public class WoodlandHUD : MonoBehaviour
             }
             else if(game.Screen==WoodlandGame.MenuScreen.Maps)game.PreviewArena((game.PendingArena+direction+mapButtons.Length)%mapButtons.Length);
             else if(game.Screen==WoodlandGame.MenuScreen.Settings)menuFocus=(menuFocus+direction+settingsButtons.Length)%settingsButtons.Length;
-            else pauseFocus=(pauseFocus+direction+4)%4;
+            else pauseFocus=(pauseFocus+direction+pauseButtons.Length)%pauseButtons.Length;
             nextNavigation=Time.unscaledTime+.22f;
         }
         if(back){

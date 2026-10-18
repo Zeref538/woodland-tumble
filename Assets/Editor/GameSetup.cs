@@ -149,12 +149,23 @@ public static class GameSetup
         uiInput.move=null;uiInput.submit=null;uiInput.cancel=null;
         EditorSceneManager.SaveScene(scene, path);
         EditorBuildSettings.scenes = new[] { new EditorBuildSettingsScene(path, true) };
-        PlayerSettings.companyName = "Woodland Games";PlayerSettings.productName = "Tilt Rivals";PlayerSettings.bundleVersion="7.0.0";
+        PlayerSettings.companyName = "Woodland Games";PlayerSettings.productName = "Tilt Rivals";PlayerSettings.bundleVersion="7.1.0";
         PlayerSettings.defaultScreenWidth = 1280;PlayerSettings.defaultScreenHeight = 720;PlayerSettings.runInBackground = true;
         AssetDatabase.SaveAssets();
         Selection.activeGameObject = beam;
         SceneView.RepaintAll();
         Debug.Log("WOODLAND_EDITABLE_READY: four character catalogs, four maps, two rulesets and editable HUD saved.");
+    }
+    public static void PrepareHUD()
+    {
+        if(EditorApplication.isPlaying)throw new System.Exception("Stop Play Mode before rebuilding the HUD.");
+        var scene=EditorSceneManager.OpenScene("Assets/Scenes/WoodlandTumble.unity");
+        var game=Object.FindAnyObjectByType<WoodlandGame>();
+        if(!game)throw new System.Exception("Saved game scene is missing its game component.");
+        font=AssetDatabase.LoadAssetAtPath<Font>("Assets/Fonts/PressStart2P-Regular.ttf");
+        panelSprite=SpriteAt("Assets/Art/UI/WoodlandPanel.png");
+        if(game.hud)Object.DestroyImmediate(game.hud.gameObject);
+        CreateHUD(game);EditorSceneManager.SaveScene(scene);AssetDatabase.SaveAssets();
     }
     static void ImportSprite(string path, float ppu, Vector2? pivot = null, Vector4? border = null)
     {
@@ -263,9 +274,7 @@ public static class GameSetup
         var header=Flat("Header Contrast Fade",match,new Rect(0,0,1280,110),new Color(1,1,1,.25f));header.sprite=SpriteAt("Assets/Art/UI/HeaderShade.png");
         header.rectTransform.anchorMin=new Vector2(0,1);header.rectTransform.anchorMax=new Vector2(1,1);header.rectTransform.pivot=new Vector2(.5f,1);header.rectTransform.anchoredPosition=Vector2.zero;header.rectTransform.sizeDelta=new Vector2(0,110);
         font = body;
-        hud.arenaText = Label("Arena",match,"SUNLIT HOLLOW",new Rect(0,0,120,40),12,new Color(.83f,.87f,.78f),TextAnchor.MiddleCenter);
-        var ar = hud.arenaText.rectTransform; ar.anchorMin = ar.anchorMax = new Vector2(.5f,1); ar.pivot = new Vector2(.5f,1); ar.anchoredPosition = new Vector2(0,-83);
-        var versus=Flat("Versus Emblem",match,new Rect(0,0,94,52),Color.white);versus.sprite=SpriteAt("Assets/Art/UI/Versus.png");versus.preserveAspect=true;var vsRect=versus.rectTransform;vsRect.anchorMin=vsRect.anchorMax=new Vector2(.5f,1);vsRect.pivot=new Vector2(.5f,1);vsRect.anchoredPosition=new Vector2(0,-24);
+        var versus=Flat("Versus Emblem",match,new Rect(0,0,168,94),Color.white);versus.sprite=SpriteAt("Assets/Art/UI/Versus.png");versus.preserveAspect=true;var vsRect=versus.rectTransform;vsRect.anchorMin=vsRect.anchorMax=new Vector2(.5f,1);vsRect.pivot=new Vector2(.5f,1);vsRect.anchoredPosition=new Vector2(0,-18);
         for(int a=0;a<4;a++){hud.playstationIcons[a]=SpriteAt("Assets/Art/UI/PSAction"+a+".png");hud.neutralIcons[a]=SpriteAt("Assets/Art/UI/CPUAction"+a+".png");}
         string[] actionNames={"Jump","Punch","Kick","Special"};
         for(int character=0;character<4;character++)for(int action=0;action<4;action++) {
@@ -276,28 +285,28 @@ public static class GameSetup
         for(int i=0;i<2;i++) {
             Color accent = i==0 ? hud.fernColor : hud.emberColor;
             var plate = new GameObject(i==0?"Fern Fighter Plate":"Ember Fighter Plate",typeof(RectTransform)).GetComponent<RectTransform>();
-            plate.SetParent(match,false);plate.anchorMin=plate.anchorMax=new Vector2(i,1);plate.pivot=new Vector2(i,1);plate.anchoredPosition=new Vector2(i==0?24:-24,-18);plate.sizeDelta=new Vector2(410,WoodlandHUD.FighterHudHeight);plate.localScale=Vector3.one*WoodlandHUD.FighterHudScale;
+            plate.SetParent(match,false);plate.anchorMin=plate.anchorMax=new Vector2(i,1);plate.pivot=new Vector2(i,1);plate.anchoredPosition=new Vector2(i==0?24:-24,-18);plate.sizeDelta=new Vector2(590,WoodlandHUD.FighterHudHeight);plate.localScale=Vector3.one*WoodlandHUD.FighterHudScale;
             hud.fighterPlates[i]=plate;
-            float portraitX=i==0?0:285,meterX=i==0?141:16;TextAnchor side=i==0?TextAnchor.MiddleLeft:TextAnchor.MiddleRight;
-            var portraitMask=Box("Circular Portrait Mask",plate,new Rect(portraitX,5,125,125));
+            float portraitX=i==0?0:490,meterX=i==0?120:18;TextAnchor side=i==0?TextAnchor.MiddleLeft:TextAnchor.MiddleRight;
+            var portraitMask=Box("Circular Portrait Mask",plate,new Rect(portraitX,5,100,100));
             var maskImage=portraitMask.gameObject.AddComponent<Image>();maskImage.sprite=SpriteAt("Assets/Art/UI/ControlDisc.png");maskImage.raycastTarget=false;
             var mask=portraitMask.gameObject.AddComponent<Mask>();mask.showMaskGraphic=false;
-            var portrait=Flat("Scout Portrait",portraitMask,new Rect(-45,-8,216,216),Color.white);portrait.sprite=game.CharacterPortraits[i];portrait.preserveAspect=true;hud.fighterPortraits[i]=portrait;
-            if(i==1){var portraitRect=portrait.rectTransform;portraitRect.pivot=Vector2.one*.5f;portraitRect.anchoredPosition+=new Vector2(108,-108);portraitRect.localScale=new Vector3(-1,1,1);}
-            hud.fighterPortraitRings[i]=Flat("Portrait Fine Ring",plate,new Rect(portraitX-5,0,135,135),new Color(accent.r,accent.g,accent.b,.72f));hud.fighterPortraitRings[i].sprite=SpriteAt("Assets/Art/UI/ControlRipple.png");
-            Flat("Health Rail",plate,new Rect(meterX-2,17,256,36),new Color(.035f,.07f,.065f,.82f));
-            hud.damageGhost[i]=Flat("Damage Echo",plate,new Rect(meterX,19,252,32),new Color(1,.86f,.63f));hud.damageGhost[i].type=Image.Type.Filled;hud.damageGhost[i].fillMethod=Image.FillMethod.Horizontal;
-            hud.healthFill[i]=Flat("Health Fill",plate,new Rect(meterX,19,252,32),accent);hud.healthFill[i].type=Image.Type.Filled;hud.healthFill[i].fillMethod=Image.FillMethod.Horizontal;hud.healthFill[i].fillOrigin=i;hud.damageGhost[i].fillOrigin=i;
-            hud.healthText[i]=Label("Health Number",plate,"100 / 100",new Rect(meterX,18,252,34),23,white,TextAnchor.MiddleCenter);hud.healthText[i].fontStyle=FontStyle.Bold;
+            var portrait=Flat("Scout Portrait",portraitMask,new Rect(0,0,100,100),Color.white);portrait.sprite=game.CharacterPortraits[i];portrait.preserveAspect=true;hud.fighterPortraits[i]=portrait;
+            if(i==1){var portraitRect=portrait.rectTransform;portraitRect.pivot=Vector2.one*.5f;portraitRect.anchoredPosition+=new Vector2(50,-50);portraitRect.localScale=new Vector3(-1,1,1);}
+            hud.fighterPortraitRings[i]=Flat("Portrait Fine Ring",plate,new Rect(portraitX-5,0,110,110),new Color(accent.r,accent.g,accent.b,.72f));hud.fighterPortraitRings[i].sprite=SpriteAt("Assets/Art/UI/ControlRipple.png");
+            Flat("Health Rail",plate,new Rect(meterX-2,17,456,40),new Color(.035f,.07f,.065f,.82f));
+            hud.damageGhost[i]=Flat("Damage Echo",plate,new Rect(meterX,19,452,36),new Color(1,.86f,.63f));hud.damageGhost[i].type=Image.Type.Filled;hud.damageGhost[i].fillMethod=Image.FillMethod.Horizontal;
+            hud.healthFill[i]=Flat("Health Fill",plate,new Rect(meterX,19,452,36),accent);hud.healthFill[i].type=Image.Type.Filled;hud.healthFill[i].fillMethod=Image.FillMethod.Horizontal;hud.healthFill[i].fillOrigin=i;hud.damageGhost[i].fillOrigin=i;
+            hud.healthText[i]=Label("Health Number",plate,"100 / 100",new Rect(meterX,19,452,36),23,white,TextAnchor.MiddleCenter);hud.healthText[i].fontStyle=FontStyle.Bold;
             var healthOutline=hud.healthText[i].gameObject.AddComponent<Outline>();healthOutline.effectColor=new Color(.025f,.06f,.045f,1);healthOutline.effectDistance=new Vector2(1,-1);
-            Flat("Stamina Rail",plate,new Rect(meterX-2,65,256,22),new Color(.07f,.075f,.045f,.82f));
-            hud.shieldFill[i]=Flat("Stamina Fill",plate,new Rect(meterX,67,252,18),new Color(.94f,.78f,.39f));hud.shieldFill[i].type=Image.Type.Filled;hud.shieldFill[i].fillMethod=Image.FillMethod.Horizontal;hud.shieldFill[i].fillOrigin=i;
-            hud.shieldText[i]=Label("Stamina Number",plate,"100 / 100",new Rect(meterX,66,252,20),16,white,TextAnchor.MiddleCenter);hud.shieldText[i].fontStyle=FontStyle.Bold;
+            Flat("Stamina Rail",plate,new Rect(meterX-2,65,456,24),new Color(.07f,.075f,.045f,.82f));
+            hud.shieldFill[i]=Flat("Stamina Fill",plate,new Rect(meterX,67,452,20),new Color(.94f,.78f,.39f));hud.shieldFill[i].type=Image.Type.Filled;hud.shieldFill[i].fillMethod=Image.FillMethod.Horizontal;hud.shieldFill[i].fillOrigin=i;
+            hud.shieldText[i]=Label("Stamina Number",plate,"100 / 100",new Rect(meterX,67,452,20),16,white,TextAnchor.MiddleCenter);hud.shieldText[i].fontStyle=FontStyle.Bold;
             var staminaOutline=hud.shieldText[i].gameObject.AddComponent<Outline>();staminaOutline.effectColor=new Color(.08f,.065f,.02f,1);staminaOutline.effectDistance=new Vector2(1,-1);
-            hud.names[i]=Label("Player Name",plate,i==0?"P1  FERN":"P2  EMBER",new Rect(meterX,97,185,28),21,accent,side);
-            for(int j=0;j<3;j++){hud.roundPips[i*3+j]=Flat("Round "+(j+1),plate,new Rect(i==0?335+j*19:16+j*19,106,11,11),accent);hud.roundPips[i*3+j].rectTransform.localRotation=Quaternion.Euler(0,0,45);}
-            if(i==1)hud.names[i].rectTransform.anchoredPosition=new Vector2(83,-97);
-            hud.deviceText[i]=Label("Input Device",plate,"KEYBOARD",new Rect(meterX,130,252,20),14,new Color(.84f,.91f,.85f),side);
+            hud.names[i]=Label("Player Name",plate,i==0?"P1  FERN":"P2  EMBER",new Rect(meterX,97,300,28),21,accent,side);
+            for(int j=0;j<3;j++){hud.roundPips[i*3+j]=Flat("Round "+(j+1),plate,new Rect(i==0?516+j*19:18+j*19,106,11,11),accent);hud.roundPips[i*3+j].rectTransform.localRotation=Quaternion.Euler(0,0,45);}
+            if(i==1)hud.names[i].rectTransform.anchoredPosition=new Vector2(172,-97);
+            hud.deviceText[i]=Label("Input Device",plate,"KEYBOARD",new Rect(meterX,130,452,20),14,new Color(.84f,.91f,.85f),side);
             var ultimatePanel=Box("Ultimate Ready Callout",plate,new Rect(0,160,410,34));
             Flat("Ultimate Rail",ultimatePanel,new Rect(0,0,410,34),new Color(.035f,.055f,.06f,.75f));
             hud.ultimateLabels[i]=Label("Ultimate State",ultimatePanel,"",new Rect(7,3,396,28),15,new Color(1,.87f,.52f),TextAnchor.MiddleCenter);hud.ultimatePanels[i]=ultimatePanel.gameObject;
@@ -327,27 +336,28 @@ public static class GameSetup
             hud.statusText[i]=Label("Fighter Combo Popup",match,"",new Rect(0,0,280,45),25,accent,TextAnchor.MiddleCenter);hud.statusText[i].rectTransform.pivot=Vector2.one*.5f;
             var comboOutline=hud.statusText[i].gameObject.AddComponent<Outline>();comboOutline.effectColor=new Color(.015f,.035f,.04f,1);comboOutline.effectDistance=new Vector2(1,-1);
         }
-        var footer=Flat("Quiet Controls Strip",match,new Rect(0,0,390,30),new Color(ink.r,ink.g,ink.b,.5f));footer.rectTransform.anchorMin=footer.rectTransform.anchorMax=new Vector2(.5f,0);footer.rectTransform.pivot=new Vector2(.5f,0);footer.rectTransform.anchoredPosition=new Vector2(0,7);
-        hud.helpHint=Label("Help Hint",match,"F1 CONTROLS    ESC PAUSE    R REMATCH",new Rect(0,0,390,22),14,new Color(.82f,.87f,.82f),TextAnchor.MiddleCenter);
-        foreach(var text in hud.names.Concat(hud.deviceText).Concat(new[]{hud.arenaText,hud.helpHint})) {
+        var footer=Flat("Quiet Controls Strip",match,new Rect(0,0,210,30),new Color(ink.r,ink.g,ink.b,.5f));footer.rectTransform.anchorMin=footer.rectTransform.anchorMax=new Vector2(.5f,0);footer.rectTransform.pivot=new Vector2(.5f,0);footer.rectTransform.anchoredPosition=new Vector2(0,7);
+        hud.helpHint=Label("Help Hint",match,"MENU  [ESC]",new Rect(0,0,210,22),14,new Color(.82f,.87f,.82f),TextAnchor.MiddleCenter);
+        foreach(var text in hud.names.Concat(hud.deviceText).Concat(new[]{hud.helpHint})) {
             var outline=text.gameObject.AddComponent<Outline>();outline.effectColor=new Color(.025f,.04f,.035f,1);outline.effectDistance=new Vector2(1,-1);
         }
         var hintRect=hud.helpHint.rectTransform;hintRect.anchorMin=hintRect.anchorMax=new Vector2(.5f,0);hintRect.pivot=Vector2.one*.5f;hintRect.anchoredPosition=new Vector2(0,23);
         var banner = new GameObject("Round Announcement",typeof(RectTransform)).GetComponent<RectTransform>();banner.SetParent(match,false);banner.anchorMin=banner.anchorMax=Vector2.one*.5f;banner.pivot=Vector2.one*.5f;banner.sizeDelta=new Vector2(520,100);banner.anchoredPosition=new Vector2(0,130);
         Flat("Announcement Backing",banner,new Rect(0,0,520,100),new Color(.025f,.055f,.065f,.90f));Flat("Announcement Rule",banner,new Rect(160,0,200,2),gold);
         hud.bannerPanel=banner.gameObject;hud.bannerText=Label("Announcement",banner,"GET READY",new Rect(10,8,500,84),30,white,TextAnchor.MiddleCenter);banner.gameObject.SetActive(false);
-        var help = new GameObject("F1 Controls Overlay",typeof(RectTransform)).GetComponent<RectTransform>();help.SetParent(match,false);help.anchorMin=help.anchorMax=Vector2.one*.5f;help.pivot=Vector2.one*.5f;help.sizeDelta=new Vector2(880,396);
-        Flat("Help Backing",help,new Rect(0,0,880,396),new Color(.02f,.045f,.055f,.98f));Flat("Help Rule",help,new Rect(28,26,824,1),gold);
-        Label("Help Heading",help,"THE FIELD GUIDE",new Rect(30,40,820,34),26,white,TextAnchor.MiddleCenter);
-        Flat("Guide Column Divider",help,new Rect(440,104,1,176),new Color(.22f,.32f,.32f));
+        var help = new GameObject("F1 Controls Overlay",typeof(RectTransform)).GetComponent<RectTransform>();help.SetParent(root.transform,false);help.anchorMin=help.anchorMax=Vector2.one*.5f;help.pivot=Vector2.one*.5f;help.sizeDelta=new Vector2(1140,636);
+        Flat("Guide Surface",help,new Rect(0,0,1140,636),new Color(.02f,.045f,.055f,1));Flat("Guide Rule",help,new Rect(32,22,1076,2),gold);
+        Label("Help Heading",help,"MOVE LIST",new Rect(36,30,800,40),28,white);
+        Label("Guide Subtitle",help,"Your selected rivals. Their moves and counterplay.",new Rect(36,72,1000,25),17,new Color(.72f,.8f,.75f));
+        Flat("Guide Divider",help,new Rect(570,112,1,450),new Color(.22f,.32f,.32f));
         for(int i=0;i<2;i++){
-            float x=36+i*440;Color c=i==0?hud.fernColor:hud.emberColor;
-            Label("Player",help,i==0?"P1  FERN":"P2  EMBER",new Rect(x,100,330,25),22,c);
-            hud.controlsText[i]=Label("Keys",help,"",new Rect(x,142,370,144),18,white);
+            float x=36+i*566;
+            hud.guideNames[i]=Label("Guide Scout",help,"",new Rect(x,111,500,30),22,i==0?hud.fernColor:hud.emberColor);
+            hud.controlsText[i]=Label("Move Explanations",help,"",new Rect(x,152,500,425),17,white,TextAnchor.UpperLeft);hud.controlsText[i].supportRichText=true;
         }
-        Label("Pad System Keys",help,"START pause   /   SHARE or VIEW controls\nHold SHARE / VIEW + A or CROSS: rematch   /   + LB or RB: arena",new Rect(24,290,832,52),16,new Color(.8f,.85f,.79f),TextAnchor.MiddleCenter);
-        Label("System Keys",help,"TAB arena    R rematch    ESC pause    M mute    - / + volume    F1 close",new Rect(24,354,832,24),15,new Color(.71f,.77f,.7f),TextAnchor.MiddleCenter);
-        hud.helpPanel=help.gameObject; help.gameObject.SetActive(false);
+        hud.guideCloseButton=MenuButton("Close Move List",help,new Rect(870,580,234,42),"BACK","",gold);
+        Label("Guide Footer",help,"ESC / OPTIONS / MENU: back     EAST BUTTON: back",new Rect(36,590,810,25),14,new Color(.72f,.8f,.75f));
+        hud.helpPanel=help.gameObject;help.gameObject.SetActive(false);
 
         CreateMenus(hud,root.transform,body,pixel);
         font=pixel;
@@ -463,12 +473,12 @@ public static class GameSetup
         Label("Settings Footer",settings,"UP / DOWN  choose     ENTER / SOUTH  change     ESC / EAST  back",new Rect(286,641,730,32),15,muted);
         var pause=MenuLayer("Paused Match",canvas);hud.pauseMenu=pause.gameObject;
         Flat("Pause Scrim",pause,new Rect(0,0,1280,720),new Color(.01f,.025f,.025f,.8f));
-        var pauseSheet=Box("Pause Sheet",pause,new Rect(410,120,460,488));
-        Flat("Pause Surface",pauseSheet,new Rect(0,0,460,488),new Color(.026f,.06f,.057f));Flat("Pause Fine Rule",pauseSheet,new Rect(32,22,396,1),brass);
+        var pauseSheet=Box("Pause Sheet",pause,new Rect(410,76,460,568));
+        Flat("Pause Surface",pauseSheet,new Rect(0,0,460,568),new Color(.026f,.06f,.057f));Flat("Pause Fine Rule",pauseSheet,new Rect(32,22,396,1),brass);
         Label("Pause Heading",pauseSheet,"TAKE A BREATHER",new Rect(32,42,396,48),30,white,TextAnchor.MiddleCenter);
-        hud.pauseButtons=new Button[4];string[] choices={"RESUME","REMATCH","CHOOSE MAP","MAIN MENU"};
-        for(int j=0;j<4;j++)hud.pauseButtons[j]=MenuButton(choices[j],pauseSheet,new Rect(36,113+j*77,388,60),choices[j],"",brass);
-        Label("Pause Footer",pauseSheet,"UP / DOWN  choose     ENTER / SOUTH  confirm",new Rect(20,449,420,26),14,muted,TextAnchor.MiddleCenter);
+        hud.pauseButtons=new Button[5];string[] choices={"RESUME","REMATCH","CHOOSE MAP","MAIN MENU","MOVE LIST"};
+        for(int j=0;j<5;j++)hud.pauseButtons[j]=MenuButton(choices[j],pauseSheet,new Rect(36,113+j*77,388,60),choices[j],"",brass);
+        Label("Pause Footer",pauseSheet,"UP / DOWN  choose     ENTER / SOUTH  confirm",new Rect(20,524,420,26),14,muted,TextAnchor.MiddleCenter);
         pause.gameObject.SetActive(false);hud.RefreshMenu();
     }
     static void CreateControlRipple()

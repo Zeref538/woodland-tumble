@@ -1,3 +1,11 @@
+# Tilt Rivals v7.1 HUD and controller validation
+
+The final targeted fixture passed 213 assertions. It verifies the removed arena label, enlarged VS, exact meter centers, zoomed-out circular portraits, the rendered device-specific Menu hint, the real pause-menu Move List callback, all four characters' skill explanations and text fit, and returning to pause without resuming combat. Existing bottom diamond mouse actions and refusal checks remain included.
+
+Sony's actual device-description matchers were exercised for PS4 product IDs 05C4 and 09CC, DualSense 0CE6 and DualSense Edge 0DF2. Two XInput layouts and generic Gamepad were checked for all required controls, correct family prompts and the device-specific move guide. Disconnection restores Esc in the actual footer text. This does not prove physical USB/Bluetooth transport or every third-party hardware variant.
+
+The older 693-check combat report remains retained as the v7 baseline. HUD-centered-1280-v7.1.png and Move-list-1280-v7.1.png show the revised native scene. BUILD-v7.1.json records the final Windows build and runtime hashes.
+
 # Tilt Rivals v7 validation
 
 Unity 6000.5.10f1 passed 693 core Play Mode checks against the saved scene. A separate final HUD run passed 164 checks covering both bottom diamonds, 80-pixel targets, circular masked portraits without opaque fighter slabs, all sixteen character covers, PlayStation/Xbox labels and all eight real button callbacks. Accepted actions and refused cooldown/paused actions were checked for feedback and exact resource effects. See PLAYMODE-VALIDATION-v7.json and HUD-VALIDATION-v7.json.

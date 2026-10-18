@@ -100,11 +100,11 @@ There are **520 individual character frames**. Ordinary frames are 256 x 256. Sp
 
 ## Download and verification
 
-The saved game passed **693 core Play Mode checks**, plus **164 targeted HUD checks** in Unity 6000.5.10f1. The separate reports retain every assertion: [combat](Documentation/PLAYMODE-VALIDATION-v7.json), [HUD](Documentation/HUD-VALIDATION-v7.json) and [natural combos](Documentation/MELEE-VALIDATION-v7.json). Windows build evidence is recorded in [BUILD-v7.json](Documentation/BUILD-v7.json). Physical controller USB/Bluetooth play and subjective headphone balance still require a local check. Automated playback stays silent.
+The saved game passed **693 core Play Mode checks**, plus **213 targeted HUD and controller checks** in Unity 6000.5.10f1. The separate reports retain every assertion: [combat](Documentation/PLAYMODE-VALIDATION-v7.json), [HUD](Documentation/HUD-VALIDATION-v7.1.json) and [natural combos](Documentation/MELEE-VALIDATION-v7.json). Windows build evidence is recorded in [BUILD-v7.json](Documentation/BUILD-v7.1.json). Physical controller USB/Bluetooth play and subjective headphone balance still require a local check. Automated playback stays silent.
 
-[Full Unity source ZIP](https://github.com/Zeref538/woodland-tumble/releases/download/v7.0.0/Tilt-Rivals-Unity-v7.zip) includes Assets, Packages and ProjectSettings without Library or executable output. On John's existing PC, the project files are already updated locally; no pull is needed there.
+[Full Unity source ZIP](https://github.com/Zeref538/woodland-tumble/releases/download/v7.1.0/Tilt-Rivals-Unity-v7.1.zip) includes Assets, Packages and ProjectSettings without Library or executable output. On John's existing PC, the project files are already updated locally; no pull is needed there.
 
-![Bottom action diamonds and circular portraits](Documentation/HUD-bottom-diamonds-1280-v7.png)
+![Bottom action diamonds and circular portraits](Documentation/HUD-centered-1280-v7.1.png)
 
 ![Four scouts](Documentation/roster-menu-1280-v7.png)
 
@@ -112,8 +112,16 @@ The saved game passed **693 core Play Mode checks**, plus **164 targeted HUD che
 
 Public repository: [Zeref538/woodland-tumble](https://github.com/Zeref538/woodland-tumble).
 
-The combat HUD has floating circular portraits at the top corners, with player two mirrored to the right. Health and stamina values stay inside their meter rails. The large panel backgrounds are removed. Each bottom corner has four 80-pixel action circles arranged as a diamond at the 1280x720 reference size.
+The combat HUD has small circular portraits showing the whole scout at the top corners, with player two mirrored to the right. The widened meters have precisely centered values. A larger VS emblem replaces the arena-name label. Health and stamina values stay inside their meter rails. The large panel backgrounds are removed. Each bottom corner has four 80-pixel action circles arranged as a diamond at the 1280x720 reference size.
 
 Every action circle accepts pointer clicks through the same gameplay validation as its keyboard or controller action. Accepted actions pulse their own artwork and an expanding ring. Unavailable or paused actions flash red without spending stamina. Input badges follow the assigned device, and the ranged special displays its six-second cooldown. Shoulder actions remain in F1 Controls. The center uses the illustrated VS mark; the sound-percentage popup is removed.
 
 Each character has its own pixel-art action covers: leaves and vines for Fern, fire for Ember, moonlight and frost for Luna, and stone for Bram. The UI follows the selected character in either player slot.
+
+## Match menu and move guide
+
+Press **Esc** on keyboard, **Options** on PlayStation or the three-line **Menu** button on Xbox. Choose **Move List** from the paused menu. Both columns follow the selected scouts and their assigned devices, showing moves, costs, the three-hit combo, ranged cooldowns and low-health ultimate rules. Back returns to the paused menu; Resume returns to combat. F1 remains a quick reference shortcut.
+
+The game reads Unity's standard Gamepad controls rather than restricting gameplay to one controller model. The local fixture verified Sony's PS4 revision IDs 05C4 and 09CC, DualSense and Edge IDs 0CE6 and 0DF2, the shared Xbox XInput layouts and a generic gamepad fallback. These are software layout and description tests, not physical-device tests. Official pads and compatible third-party controllers still depend on the operating system and driver exposing a supported gamepad. See [Unity's supported devices](https://docs.unity3d.com/Packages/com.unity.inputsystem@1.19/manual/SupportedDevices.html).
+
+![Paused character move guide](Documentation/Move-list-1280-v7.1.png)

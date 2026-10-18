@@ -11,3 +11,10 @@ The four illustrated action circles grow to 80 screen pixels at 1280x720 and mov
 Arena PVP uses newly illustrated bases and upper ledges for all four map themes, with a longer physical main platform and wider ledges. Balance retains its existing plank and sphere. The saved scene, source archive and separate artwork pack must include the new assets.
 
 Validate the final input map on two virtual gamepads, buffered combos, ranged reach and cooldown denial, low-health thresholds, one ultimate per round, interruption and camera cleanup, unique animation files, win emotes, both rule sets, HUD bounds and image assignments. Review actual Play Mode screenshots before publishing.
+
+
+## HUD and move-guide refinement
+
+Remove the combat arena-name label and enlarge the centered VS emblem to 168 x 94 reference pixels. Spread the mirrored meters inward, keep each numeric value at its meter's exact center, and fit full character artwork into smaller circular portraits without stretching.
+
+Replace the controls footer with one Menu hint: Esc for keyboard, Options for PlayStation and the three-line Menu mark for Xbox. Add Move List to the paused match menu. Its two columns follow the selected fighters and assigned controllers, explain their moves, costs, combo sequence, cooldown and ultimate requirement, and return to the paused menu when closed.

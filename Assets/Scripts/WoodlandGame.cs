@@ -245,6 +245,7 @@ public class WoodlandGame : MonoBehaviour
     public void ResumeMatch()
     {
         if(Screen!=MenuScreen.Match)return;
+        if(hud)hud.CloseMoveGuide();
         Paused=false;Time.timeScale=1;AudioListener.pause=false;
     }
     IEnumerator StartRound()
@@ -297,6 +298,7 @@ public class WoodlandGame : MonoBehaviour
     public void RestartMatch()
     {
         if(Screen!=MenuScreen.Match)return;
+        if(hud)hud.CloseMoveGuide();
         StopAllCoroutines();
         score[0] = score[1] = 0;
         Time.timeScale = 1;
@@ -326,7 +328,7 @@ public class WoodlandGame : MonoBehaviour
             if (pad.leftShoulder.wasPressedThisFrame) SelectArena((ArenaIndex + backgrounds.Length - 1) % backgrounds.Length);
         }
         if (restart) RestartMatch();
-        else if (pause) TogglePause();
+        else if (pause) { if(hud && hud.MoveGuideOpen)hud.CloseMoveGuide();else TogglePause(); }
     }
     void FixedUpdate()
     {

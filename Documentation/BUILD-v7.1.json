@@ -1,0 +1,24 @@
+{
+  "editor": "6000.5.10f1",
+  "product": "Tilt Rivals",
+  "version": "7.1.0",
+  "target": "StandaloneWindows64",
+  "targeted_hud_controller_checks": 213,
+  "checks_success": true,
+  "combat_baseline_version": "7.0.0",
+  "combat_baseline_checks": 693,
+  "controller_validation": "Sony PS4 05C4 and 09CC, DualSense 0CE6 and Edge 0DF2 description matching; XInputController and XInputControllerWindows plus generic Gamepad; no physical transport testing",
+  "build_result": "Success",
+  "build_evidence": "Build Finished, Result: Success. in tilt-v71-windows-final.log",
+  "audio_testing": "silent listener",
+  "source_hash_normalization": "CRLF converted to LF",
+  "scripts": {
+    "Scout.cs": "89ab35a4625f06df1d15024027046c5acdee192e8577df3ec20071d25a659524",
+    "ScoutAnimations.cs": "fba9d1724140943d12090e0ec9138939316e66208ba2f8180b4e8a1042c5c206",
+    "SpawnMarker.cs": "678414abd6028ca57f40f084c3f664ef2cbf663ea2d956523bd78c35ac2f02ff",
+    "WoodlandEffects.cs": "239337b0ba6f891f8dc9abb625196cfb9de54529448df5163dd74b4668fbef48",
+    "WoodlandGame.cs": "9a21d902cec05e302f127bb2f4fed42cb8a5b73c02b3cb7a0fa7f00b7eca0f11",
+    "WoodlandHUD.cs": "6d30149ca455cdc7ef68c9f8edd347c864e250a2bf630ae53216f2f0d99579b1"
+  },
+  "assembly_sha256": "77da5e0da38c9d443b3c4e5082cb1d3c34e0db27ceed9285f48a1bae6f655265"
+}
