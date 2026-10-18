@@ -45,6 +45,8 @@ public class WoodlandEffects : MonoBehaviour
     Scout cinematicScout;
     Vector2 cinematicFocus;
     float cinematicImpactUntil, nextCinematicMote;
+    float cinematicStarted, cinematicExitUntil;
+    readonly SpriteRenderer[] cinematicLayers = new SpriteRenderer[4];
     public bool CinematicActive => cinematicScout != null;
     public int UltimateCinematicsStarted { get; private set; }
     public int UltimateImpactsPlayed { get; private set; }
@@ -59,7 +61,7 @@ public class WoodlandEffects : MonoBehaviour
     const int Capacity = 320;
     readonly Mote[] pool = new Mote[Capacity];
     int cursor;
-    Sprite pixel, leaf, star, ring, slash, streak, glow;
+    Sprite pixel, leaf, star, ring, slash, glow, panel;
     Material material, glowMaterial;
     MaterialPropertyBlock textureBinding;
     Camera cam;
@@ -82,11 +84,11 @@ public class WoodlandEffects : MonoBehaviour
         if (cam) { cameraHome = cam.transform.position; cameraZoom = cam.orthographicSize; }
         material = new Material(Shader.Find("Universal Render Pipeline/2D/Sprite-Unlit-Default"));
         pixel = Shape("Dust", 8, 8, (x,y) => Mathf.Abs(x-3)+Mathf.Abs(y-3)<5);
+        panel = Shape("Cinematic solid",2,2,(x,y)=>true);
         leaf = Shape("Leaf", 12, 12, (x,y) => Mathf.Abs(x-y)<4 && x+y>3 && x+y<18);
         star = Shape("Spark", 16, 16, (x,y) => Mathf.Abs(x-7)<2 || Mathf.Abs(y-7)<2 || Mathf.Abs(x-7)+Mathf.Abs(y-7)<6);
         ring = Shape("Pixel shockwave", 32, 32, (x,y) => { float d = Vector2.Distance(new Vector2(x,y),new Vector2(15.5f,15.5f));return d>12 && d<15; });
         slash = Shape("Attack arc", 32, 32, (x,y) => { float d = Vector2.Distance(new Vector2(x,y),new Vector2(7,15));return x>11 && d>15 && d<20; });
-        streak = Shape("Speed line", 24, 4, (x,y) => x>2 && x<22 && (y==1 || y==2));
         glow = SoftGlow();
         glowMaterial = new Material(material); glowMaterial.SetColor("_Color", new Color(2.4f,2.4f,2.4f,1));
         material.mainTexture = pixel.texture;
@@ -98,6 +100,12 @@ public class WoodlandEffects : MonoBehaviour
         for (int i=0; i<Capacity; i++) {
             var go = new GameObject("Pooled woodland VFX");go.transform.SetParent(transform);
             var sr = go.AddComponent<SpriteRenderer>();sr.sharedMaterial = material;sr.enabled = false;pool[i].art = sr;
+        }
+        for(int i=0;i<cinematicLayers.Length;i++) {
+            var layer=new GameObject("Ultimate cinematic layer");layer.transform.SetParent(transform);
+            var sr=layer.AddComponent<SpriteRenderer>();sr.sharedMaterial=material;sr.sprite=panel;
+            textureBinding.Clear();textureBinding.SetTexture("_MainTex",panel.texture);sr.SetPropertyBlock(textureBinding);
+            sr.sortingOrder=i==0?3:14;sr.enabled=false;cinematicLayers[i]=sr;
         }
     }
     void OnEnable()
@@ -115,15 +123,25 @@ public class WoodlandEffects : MonoBehaviour
     void RestoreCinematic()
     {
         cinematicScout = null; cinematicImpactUntil = 0;
+        cinematicExitUntil=0;
+        foreach(var layer in cinematicLayers)if(layer)layer.enabled=false;
         cameraOffset = cameraVelocity = Vector2.zero; shake = 0;
         if (cam) { cam.transform.position = cameraHome; cam.orthographicSize = cameraZoom; }
     }
     void UltimateCinematic(Scout caster, bool active)
     {
-        if (!active) { if (cinematicScout == caster) RestoreCinematic(); return; }
+        if (!active) {
+            if(cinematicScout==caster) {
+                RestoreCinematic();
+                var match=WoodlandGame.Instance;
+                if(match&&match.playing&&!match.Paused)cinematicExitUntil=Time.unscaledTime+.18f;
+            }
+            return;
+        }
         var game = WoodlandGame.Instance;
         if (!caster || !game || !game.playing || game.Paused) return;
         cinematicScout = caster;
+        cinematicStarted=Time.unscaledTime;cinematicExitUntil=0;
         Vector2 rival = game.players[1-caster.id].Body.position;
         // Camera focus is presentation only. Neither fighters nor attack paths are moved or tracked.
         cinematicFocus = Vector2.Lerp(caster.Body.position, rival, .35f);
@@ -133,6 +151,8 @@ public class WoodlandEffects : MonoBehaviour
         UltimateCinematicsStarted++;
         Pulse(caster.Body.position, caster.Element, 2.2f, .55f, true);
         Light(caster.Body.position, caster.Element, 2.7f, .55f);
+        Ghost(caster.art,caster.Element);
+        CinematicAccents(caster.Body.position,caster.Element);
         PlayCue(4,.32f,.75f);
     }
     void UltimateImpact(Scout caster, Scout victim)
@@ -143,6 +163,8 @@ public class WoodlandEffects : MonoBehaviour
         Color tint = caster.Element;
         int character = caster.CharacterIndex;
         ComboImpact(point, caster.Facing, character, true);
+        CinematicAccents(point,tint);
+        Ghost(victim.art,tint);
         Light(point, tint, 3.4f, .45f);
         if (character == 0) {
             // Curved leafy strands leave the target readable inside the binding effect.
@@ -159,7 +181,7 @@ public class WoodlandEffects : MonoBehaviour
             for (int i=0;i<8;i++) {
                 float a=i*45*Mathf.Deg2Rad;
                 Vector2 direction=new Vector2(Mathf.Cos(a),Mathf.Sin(a));
-                Emit(streak,point,direction*3.6f,Color.Lerp(tint,Gold,.35f),.35f,new Vector2(1.1f,.3f),Vector2.zero,0,11,i*45);
+                Emit(leaf,point,direction*3.6f,Color.Lerp(tint,Gold,.35f),.35f,new Vector2(.5f,.2f),Vector2.zero,0,11,i*45,140);
             }
             Pulse(point,Gold,2.8f,.25f);
         } else if (character == 2) {
@@ -168,7 +190,7 @@ public class WoodlandEffects : MonoBehaviour
             for (int i=0;i<12;i++) {
                 float a=i*30*Mathf.Deg2Rad;
                 Vector2 direction=new Vector2(Mathf.Cos(a),Mathf.Sin(a));
-                Emit(streak,point,direction*1.4f,tint,.6f,new Vector2(.85f,.18f),Vector2.zero,0,11,i*30);
+                Emit(slash,point,direction*1.4f,tint,.6f,new Vector2(.5f,.6f),Vector2.zero,0,11,i*30,40);
                 Emit(star,point+direction*.5f,Vector2.up*.25f,Color.white,.55f,Vector2.one*.14f,Vector2.zero,0,12,45,35);
             }
         } else {
@@ -301,7 +323,7 @@ public class WoodlandEffects : MonoBehaviour
         PlayCue(3,.28f,Random.Range(.96f,1.04f));Light(feet,tint,1,.2f);
         Pulse(feet,tint,.9f,.25f,true);
         Burst(feet,new Vector2(-1,.2f),6,tint,1.7f);Burst(feet,new Vector2(1,.2f),6,tint,1.7f);
-        for(int i=0;i<3;i++) Emit(streak,feet+new Vector2((i-1)*.15f,.2f),Vector2.down*.6f,new Color(1,.92f,.65f,.6f),.2f,new Vector2(.32f,.9f),Vector2.zero,0,7,90);
+        for(int i=0;i<3;i++) Emit(leaf,feet+new Vector2((i-1)*.15f,.2f),Vector2.down*.6f,new Color(1,.92f,.65f,.6f),.2f,new Vector2(.12f,.2f),Vector2.zero,0,7,90,120);
     }
     public void Land(Vector2 feet, float speed)
     {
@@ -319,12 +341,119 @@ public class WoodlandEffects : MonoBehaviour
         }
         Emit(star,point,Vector2.zero,Gold,.18f,Vector2.one*.08f,Vector2.one*.22f,0,8,0,180);
     }
-    public void Swipe(Vector2 point, float facing, bool punch,int player=0)
+    // Presentation only: the controller owns charge duration, path and damage.
+    public void ChargeAura(Vector2 point,int character,float charge)
+    {
+        charge=Mathf.Clamp01(charge);Color tint=CharacterTint(character);
+        Vector2 feet=point+Vector2.down*.58f;
+        Emit(ring,feet,Vector2.zero,new Color(tint.r,tint.g,tint.b,.42f),.18f,
+            new Vector2(1.25f+charge*.6f,.28f),new Vector2(.55f,.1f),0,4,0);
+        for(int i=0;i<4;i++) {
+            float phase=Time.time*5+i*Mathf.PI*.5f;
+            Vector2 offset=new Vector2(Mathf.Cos(phase)*(.65f-charge*.22f),Mathf.Sin(phase)*.45f+.1f);
+            Emit(character==0?leaf:character==2?star:pixel,point+offset,-offset*2.2f,tint,.2f,
+                Vector2.one*(.08f+charge*.045f),Vector2.zero,0,7,phase*Mathf.Rad2Deg,character==3?0:140);
+        }
+        Light(point,tint,.8f+charge*.8f,.13f);
+    }
+    public void RangedProjectile(Vector2 point,float direction,int character,float charge)
+    {
+        Color tint=CharacterTint(character);charge=Mathf.Clamp01(charge);
+        float size=.9f+charge*.25f;
+        Light(point,tint,1.6f,.15f);
+        if(character==0) {
+            // A braided root lance, with leaves flowing behind its tip.
+            for(int i=0;i<6;i++) {
+                Vector2 offset=new Vector2(-direction*i*.16f,Mathf.Sin(i*1.1f+Time.time*14)*.17f);
+                Emit(leaf,point+offset,Vector2.right*direction*1.7f,tint,.14f,
+                    new Vector2(.25f,.12f)*size,Vector2.zero,0,10,direction>0?35:145);
+            }
+            Emit(slash,point,Vector2.right*direction*2,Color.white,.1f,new Vector2(.42f,.7f)*size,Vector2.zero,0,11,direction<0?180:0);
+        } else if(character==1) {
+            // Flame wings and a tapering hot tail read as a forward phoenix, not an orb.
+            for(int i=0;i<5;i++)for(int wing=-1;wing<=1;wing+=2)
+                Emit(leaf,point+new Vector2(-direction*i*.15f,wing*(.3f-i*.045f)),Vector2.right*direction*2,
+                    Color.Lerp(Gold,tint,i*.22f),.13f,new Vector2(.3f,.13f)*size,Vector2.zero,0,10,wing*25*direction);
+            Emit(slash,point+Vector2.left*direction*.35f,Vector2.right*direction*2,Gold,.13f,new Vector2(.55f,.7f)*size,Vector2.zero,0,11,direction<0?180:0);
+        } else if(character==2) {
+            // Three crystalline crescents form a broad moonfrost blade.
+            for(int i=0;i<3;i++)Emit(slash,point+Vector2.left*direction*i*.15f,Vector2.right*direction*1.8f,
+                Color.Lerp(Color.white,tint,i*.4f),.14f,new Vector2(.72f,1.2f-i*.18f)*size,Vector2.zero,0,10,direction<0?180:0);
+            for(int i=0;i<3;i++)Emit(star,point+new Vector2(-direction*(.4f+i*.13f),(i-1)*.25f),Vector2.zero,tint,.17f,
+                Vector2.one*.1f,Vector2.zero,0,10,45,50);
+        } else {
+            // A heavy segmented stone gauntlet trails chips below its silhouette.
+            for(int i=0;i<4;i++)Emit(pixel,point+new Vector2(-direction*i*.18f,(i%2)*.12f),Vector2.right*direction*1.5f,
+                Color.Lerp(tint,new Color(.4f,.32f,.25f),i*.17f),.16f,new Vector2(.29f,.35f)*size,Vector2.zero,0,10,45);
+            Emit(pixel,point+Vector2.left*direction*.5f,Vector2.right*direction,tint,.14f,new Vector2(.18f,.22f),Vector2.zero,0,9,45,90);
+            Emit(pixel,point+Vector2.down*.28f,Vector2.down,tint,.25f,Vector2.one*.09f,Vector2.zero,5,9,45,120);
+        }
+    }
+    void CinematicAccents(Vector2 point,Color tint)
+    {
+        for(int i=0;i<10;i++) {
+            float angle=i*Mathf.PI*2/10;
+            Vector2 radial=new Vector2(Mathf.Cos(angle),Mathf.Sin(angle));
+            Emit(leaf,point+radial*.85f,radial*2,
+                new Color(tint.r,tint.g,tint.b,.42f),.28f,new Vector2(.23f,.13f),Vector2.zero,0,4,angle*Mathf.Rad2Deg,180);
+        }
+    }
+    void UpdateCinematicLayers()
+    {
+        if(!cam)return;
+        var game=WoodlandGame.Instance;
+        bool allowed=game&&game.playing&&!game.Paused;
+        bool active=allowed&&cinematicScout;
+        float strength=active?Mathf.Clamp01((Time.unscaledTime-cinematicStarted)/.14f):
+            allowed?Mathf.Clamp01((cinematicExitUntil-Time.unscaledTime)/.18f):0;
+        float height=cam.orthographicSize*2,width=height*cam.aspect;
+        Vector3 center=cam.transform.position;center.z=0;
+        for(int i=0;i<cinematicLayers.Length;i++) {
+            var layer=cinematicLayers[i];layer.enabled=strength>0;if(!layer.enabled)continue;
+            Vector3 position=center;Vector2 scale=new Vector2(width,height);
+            Color color=new Color(.025f,.035f,.08f,.32f*strength);
+            if(i==1||i==2) {
+                float bar=height*.065f*strength;scale=new Vector2(width,bar);
+                position.y+=(i==1?1:-1)*(height*.5f-bar*.5f);color=new Color(.015f,.02f,.035f,.92f);
+            } else if(i==3) {
+                float hit=active?Mathf.Clamp01((cinematicImpactUntil-Time.unscaledTime)/.23f):0;
+                color=new Color(1,.95f,.8f,hit*.13f);
+            }
+            layer.transform.position=position;layer.transform.localScale=new Vector3(scale.x,scale.y,1);layer.color=color;
+        }
+    }
+    int CharacterForPlayer(int player)
+    {
+        var game=WoodlandGame.Instance;
+        return game&&player>=0&&player<game.players.Length&&game.players[player]
+            ?game.players[player].CharacterIndex:Mathf.Clamp(player,0,3);
+    }
+    Color CharacterTint(int character)
+    {
+        switch(character) {
+            case 1:return new Color(1,.38f,.12f);
+            case 2:return new Color(.56f,.76f,1);
+            case 3:return new Color(1,.76f,.32f);
+            default:return new Color(.38f,1,.68f);
+        }
+    }
+    public void Swipe(Vector2 point, float facing, bool punch,int player=0,int character=-1)
     {
         PlayCue(0,.38f,punch?1.08f:.95f);
-        var color=punch?Gold:new Color(.68f,1,.55f);
-        AnimatedSlash(point+Vector2.right*facing*.65f,facing,player==0,punch?1.8f:1.6f,.26f);
-        for(int i=0;i<Count(4);i++) Emit(streak,point+new Vector2(-facing*.25f,Random.Range(-.3f,.3f)),Vector2.right*facing*3,color,.16f,new Vector2(.7f,.7f),new Vector2(.15f,.3f));
+        character=character<0?CharacterForPlayer(player):character;
+        var color=CharacterTint(character);
+        Vector2 contact=point+new Vector2(facing*.6f,punch?.16f:-.25f);
+        if(character<2)AnimatedSlash(contact,facing,character==0,punch?1.55f:1.85f,.22f);
+        else if(character==2) {
+            for(int i=0;i<3;i++)Emit(slash,contact+new Vector2(facing*i*.12f,i*.1f),Vector2.right*facing*.8f,
+                Color.Lerp(color,Color.white,i*.25f),.18f,new Vector2(.7f,punch?.85f:1.3f),Vector2.zero,0,10,punch?0:45*facing);
+        } else {
+            for(int i=0;i<5;i++)Emit(pixel,contact+new Vector2(facing*i*.12f,(i%2)*.14f),
+                new Vector2(facing*(1+i*.25f),.4f),color,.2f,Vector2.one*(punch?.15f:.2f),Vector2.zero,3,10,45,i*35);
+            Emit(slash,contact,Vector2.right*facing,color,.16f,new Vector2(punch?.6f:.9f,.8f),Vector2.zero,0,10,punch?0:25*facing);
+        }
+        for(int i=0;i<Count(3);i++)Emit(character==0?leaf:character==2?star:pixel,contact,Vector2.right*facing*2+Random.insideUnitCircle,
+            color,.19f,Vector2.one*.09f,Vector2.zero,0,10,45,120);
     }
     public void Impact(Vector2 point, float facing, bool punch, bool finisher=false)
     {
@@ -336,7 +465,7 @@ public class WoodlandEffects : MonoBehaviour
         Emit(star,point,Vector2.zero,new Color(1,.96f,.74f),.13f,Vector2.one*.6f,Vector2.one*.06f,0,11,45,180);
         for(int i=0;i<6;i++) {
             float angle=i*60+Random.Range(-10,10);Vector2 direction=new Vector2(Mathf.Cos(angle*Mathf.Deg2Rad),Mathf.Sin(angle*Mathf.Deg2Rad));
-            Emit(streak,point,direction*4.5f,Gold,.2f,new Vector2(.65f,.65f),Vector2.zero,0,10,angle);
+            Emit(star,point,direction*4.5f,Gold,.2f,Vector2.one*.18f,Vector2.zero,0,10,angle,100);
         }
         shake=Mathf.Max(shake,punch?punchShake:pushShake);
     }
@@ -361,12 +490,13 @@ public class WoodlandEffects : MonoBehaviour
     }
     public void ElementHit(Vector2 point, float facing, Color tint, int combo, int player,int character=-1)
     {
-        ComboImpact(point,facing,character<0?player:character,combo==3);
+        character=character<0?CharacterForPlayer(player):character;
+        ComboImpact(point,facing,character,combo==3);
         Pulse(point, tint, .9f + combo * .35f, .24f);
         for (int i=0;i<Count(8+combo*4);i++) {
             Vector2 velocity = new Vector2(facing*Random.Range(1f,4f),Random.Range(-2f,3f));
-            Emit(player == 0 ? leaf : star, point, velocity, tint, .3f+combo*.07f,
-                Vector2.one*Random.Range(.09f,.18f), Vector2.zero, player==0?3:0, 10, Random.Range(0,360), player==0?240:-160);
+            Emit(character==0?leaf:character==2?star:pixel, point, velocity, tint, .3f+combo*.07f,
+                Vector2.one*Random.Range(.09f,.18f), Vector2.zero, character==3?5:0, 10, Random.Range(0,360), character==0?240:-160);
         }
         Light(point,tint,1.2f+combo*.25f);
         if (combo == 3) {KickCamera(new Vector2(facing,.2f),.13f);FreezeImpact(.055f); Pulse(point, Color.white, 2.1f,.18f); shake=Mathf.Max(shake,.11f); }
@@ -382,24 +512,22 @@ public class WoodlandEffects : MonoBehaviour
     }
     public void AirJump(Vector2 feet, Color tint, int player)
     {
+        int character=CharacterForPlayer(player);
         PlayCue(4,.38f,player==0?1.08f:.95f);Light(feet,tint,1.8f,.32f);
         Pulse(feet, tint, 1.7f, .32f, true);
         Pulse(feet + Vector2.up * .15f, Color.white, .9f, .2f, true);
         for (int i = 0; i < Count(16); i++) {
             float angle = i * Mathf.PI * 2 / Count(16);
             Vector2 direction = new Vector2(Mathf.Cos(angle), Mathf.Sin(angle) * .35f);
-            Emit(player == 0 ? leaf : star, feet, direction * 2.4f, tint, .4f,
-                Vector2.one * .12f, Vector2.zero, 2, 8, angle * Mathf.Rad2Deg, player == 0 ? 220 : -180);
+            Emit(character==0?leaf:character==2?star:pixel, feet, direction * 2.4f, tint, .4f,
+                Vector2.one * .12f, Vector2.zero, 2, 8, angle * Mathf.Rad2Deg, character==0?220:-180);
         }
     }
     public void Dash(Vector2 point, float facing, Color tint)
     {
         PlayCue(5,.40f,Random.Range(.97f,1.05f));Light(point,tint,1.4f,.22f);
         Burst(point + Vector2.down*.55f, Vector2.left * facing, 6, tint, 1.4f);
-        var trailTint=new Color(tint.r,tint.g,tint.b,.4f);
-        // Keep speed accents behind the body; opaque parallel bars hid the new dash poses.
-        for (int i=0;i<3;i++) Emit(streak, point + new Vector2(-facing * .65f, (i-1)*.18f),
-            Vector2.left*facing*2, trailTint, .12f+i*.025f, new Vector2(.45f+i*.12f,.2f), Vector2.zero, 0, 4);
+        // Sprite afterimages are emitted by the controller; the feet keep only a dust kick.
     }
     public void GuardImpact(Vector2 point, float facing, Color tint, bool parry, bool broken)
     {
@@ -410,16 +538,15 @@ public class WoodlandEffects : MonoBehaviour
         Burst(point, Vector2.right * facing, broken ? 26 : 14, color, 3.5f);
         for(int i=0;i<8;i++) {
             float a=i*45; Vector2 d=new Vector2(Mathf.Cos(a*Mathf.Deg2Rad),Mathf.Sin(a*Mathf.Deg2Rad));
-            Emit(parry ? star : streak, point, d*3, color, .25f, Vector2.one*.22f, Vector2.zero, 0, 11, a, 180);
+            Emit(parry ? star : leaf, point, d*3, color, .25f, Vector2.one*.22f, Vector2.zero, 0, 11, a, 180);
         }
         shake = Mathf.Max(shake, parry ? .06f : .04f);
     }
-    public void Smash(Vector2 point, float facing, Color tint, float charge)
+    public void Smash(Vector2 point, float facing, Color tint, float charge,int character=0)
     {
         PlayCue(5,.4f,.8f);Light(point+Vector2.right*facing*.6f,tint,2.5f+charge,.32f);
         KickCamera(new Vector2(facing,.2f),.07f+charge*.06f);
-        float size = 1 + charge;
-        AnimatedSlash(point+Vector2.right*facing*.75f,facing,tint.g>.8f,2.1f+charge*.6f,.32f);
+        RangedProjectile(point+Vector2.right*facing*.75f,facing,character,charge);
         Pulse(point + Vector2.right*facing*.8f, tint, 1.6f+charge, .28f);
         Burst(point, new Vector2(facing,.25f), 24, tint, 3+charge*2);
         shake=Mathf.Max(shake,.05f+charge*.07f);
@@ -450,6 +577,7 @@ public class WoodlandEffects : MonoBehaviour
     }
     void LateUpdate()
     {
+        UpdateCinematicLayers();
         float dt=Time.deltaTime;if(dt<=0)return;
         if(ambientFireflies && Time.time>=nextAmbient) {
             nextAmbient=Time.time+.35f;
@@ -500,7 +628,7 @@ public class WoodlandEffects : MonoBehaviour
         AudioListener.pause=false;if(hitPause!=null)Time.timeScale=1;
         if(cam){cam.transform.position=cameraHome;cam.orthographicSize=cameraZoom;}
         if(Instance==this)Instance=null;
-        foreach(var sprite in new[]{pixel,leaf,star,ring,slash,streak,glow})if(sprite){Destroy(sprite.texture);Destroy(sprite);}
+        foreach(var sprite in new[]{pixel,leaf,star,ring,slash,glow,panel})if(sprite){Destroy(sprite.texture);Destroy(sprite);}
         if(material)Destroy(material);if(glowMaterial)Destroy(glowMaterial);
     }
 }

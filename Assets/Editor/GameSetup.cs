@@ -32,7 +32,7 @@ public static class GameSetup
         AssetDatabase.Refresh(ImportAssetOptions.ForceSynchronousImport);
         foreach (var file in Directory.GetFiles("Assets/Resources/Art", "*.png")) ImportSprite(file, 100);
         ImportComboArtwork();
-        foreach (var file in Directory.GetFiles("Assets/Art/Characters", "*.png", SearchOption.AllDirectories)) ImportSprite(file.Replace('\\', '/'), 160, new Vector2(.5f, 24f / 256));
+        foreach (var file in Directory.GetFiles("Assets/Art/Characters", "*.png", SearchOption.AllDirectories)) { string normalized=file.Replace('\\','/');float ppu=normalized.Contains("/Bram/")?151:normalized.Contains("/Ember/")?165:160;ImportSprite(normalized,ppu,new Vector2(.5f,24f/256)); }
         foreach (var file in Directory.GetFiles("Assets/Art/VFX", "*.png", SearchOption.AllDirectories)) ImportSprite(file.Replace('\\','/'),256);
         foreach (var file in Directory.GetFiles("Assets/Art/Arena", "*.png", SearchOption.AllDirectories)) ImportSprite(file, 100);
         if (Directory.Exists("Assets/Art/Menu")) foreach (var file in Directory.GetFiles("Assets/Art/Menu", "*.png")) ImportSprite(file, 100);
@@ -107,19 +107,12 @@ public static class GameSetup
         game.PvpBases=pvpThemes.Select(theme=>SpriteAt("Assets/Art/Arena/PVP/"+theme+"/Base.png")).ToArray();
         game.PvpLedges=pvpThemes.Select(theme=>SpriteAt("Assets/Art/Arena/PVP/"+theme+"/Ledge.png")).ToArray();
         if(game.PvpBases.Any(sprite=>!sprite)||game.PvpLedges.Any(sprite=>!sprite))throw new System.Exception("Missing dedicated Arena PVP base or ledge artwork");
-        game.arenaPlatforms = new Rigidbody2D[3];
-        for(int i=0;i<3;i++) {
-            var platform=Visual("Arena PVP Ledge "+(i+1), game.PvpLedges[0], new Vector2(i==0?-4:i==1?4:0,i==2?2.3f:1),3,environment);
-            float platformScale=4.2f/game.PvpLedges[0].bounds.size.x;platform.transform.localScale=Vector3.one*platformScale;
-            var platformBody=platform.AddComponent<Rigidbody2D>();platformBody.bodyType=RigidbodyType2D.Kinematic;
-            var ledge=platform.AddComponent<BoxCollider2D>();ledge.size=new Vector2(4.05f/platformScale,.22f/platformScale);ledge.offset=new Vector2(0,.04f/platformScale);ledge.sharedMaterial=grip;
-            game.arenaPlatforms[i]=platformBody;platform.SetActive(false);
-        }
+        game.arenaPlatforms = new Rigidbody2D[0];
         for(int i=0;i<game.CharacterNames.Length;i++) {
             string identity=game.CharacterNames[i];
             game.CharacterAnimationSets[i]=MakeAnimations(identity);
             game.CharacterControllers[i]=AssetDatabase.LoadAssetAtPath<RuntimeAnimatorController>("Assets/Animations/"+identity+"/"+identity+".controller");
-            game.CharacterPortraits[i]=game.CharacterAnimationSets[i].walk[0];
+            game.CharacterPortraits[i]=SpriteAt("Assets/Art/Characters/"+identity+"/Idle/01.png") ?? game.CharacterAnimationSets[i].walk[0];
         }
         var actors = new GameObject("Players - Editable Prefab Instances").transform;
         var spawns = new GameObject("Spawn Points - Move These To Change Starting Positions").transform;
@@ -149,7 +142,7 @@ public static class GameSetup
         uiInput.move=null;uiInput.submit=null;uiInput.cancel=null;
         EditorSceneManager.SaveScene(scene, path);
         EditorBuildSettings.scenes = new[] { new EditorBuildSettingsScene(path, true) };
-        PlayerSettings.companyName = "Woodland Games";PlayerSettings.productName = "Tilt Rivals";PlayerSettings.bundleVersion="7.1.0";
+        PlayerSettings.companyName = "Woodland Games";PlayerSettings.productName = "Tilt Rivals";PlayerSettings.bundleVersion="8.0.0";
         PlayerSettings.defaultScreenWidth = 1280;PlayerSettings.defaultScreenHeight = 720;PlayerSettings.runInBackground = true;
         AssetDatabase.SaveAssets();
         Selection.activeGameObject = beam;
@@ -210,7 +203,8 @@ public static class GameSetup
             var node = controller.layers[0].stateMachine.AddState(state);node.motion = clip;
         }
         MakeCombatClips(name, dir, set, controller);
-        var idleClip = MakeClip(dir + "/Idle.anim", new[] { set.walk[0] }, 1, true);
+        var idleSprite=SpriteAt("Assets/Art/Characters/"+name+"/Idle/01.png") ?? set.walk[0];
+        var idleClip = MakeClip(dir + "/Idle.anim", new[] { idleSprite }, 1, true);
         var idle = controller.layers[0].stateMachine.AddState("Idle");idle.motion = idleClip;controller.layers[0].stateMachine.defaultState = idle;
         EditorUtility.SetDirty(set);EditorUtility.SetDirty(controller);
         return set;
@@ -231,7 +225,7 @@ public static class GameSetup
         if (set.block.Any(s => !s) || set.doubleJump.Any(s => !s)) throw new System.Exception("Missing dedicated combat frames for " + name);
         foreach (string state in new[] { "Block", "DoubleJump", "Dash", "Backstep", "Grab", "Charge", "Smash", "Combo2", "Combo3", "Victory", "Ultimate" }) {
             Sprite[] poses = state == "Block" ? set.block.Take(7).ToArray()
-                : state == "Charge" ? new[] { set.punch[0], set.punch[1], set.punch[0] }
+                : state == "Charge" ? new[] { set.special[0],set.special[1],set.special[2],set.special[1] }
                 : state == "DoubleJump" ? set.doubleJump
                 : state == "Dash" ? set.dash
                 : state == "Backstep" ? set.backstep
@@ -310,10 +304,16 @@ public static class GameSetup
             var ultimatePanel=Box("Ultimate Ready Callout",plate,new Rect(0,160,410,34));
             Flat("Ultimate Rail",ultimatePanel,new Rect(0,0,410,34),new Color(.035f,.055f,.06f,.75f));
             hud.ultimateLabels[i]=Label("Ultimate State",ultimatePanel,"",new Rect(7,3,396,28),15,new Color(1,.87f,.52f),TextAnchor.MiddleCenter);hud.ultimatePanels[i]=ultimatePanel.gameObject;
+            var cutin=Box("Ultimate Character Cut-in",match,new Rect(i==0?35:925,178,320,270));
+            var cutinGroup=cutin.gameObject.AddComponent<CanvasGroup>();cutinGroup.interactable=false;cutinGroup.blocksRaycasts=false;
+            hud.ultimateCutinArt[i]=Flat("Cinematic Character",cutin,new Rect(35,0,250,210),Color.white);hud.ultimateCutinArt[i].preserveAspect=true;
+            hud.ultimateCutinNames[i]=Label("Cinematic Move Name",cutin,"",new Rect(0,210,320,58),24,accent,TextAnchor.MiddleCenter);hud.ultimateCutinNames[i].fontStyle=FontStyle.Bold;
+            var cutinOutline=hud.ultimateCutinNames[i].gameObject.AddComponent<Outline>();cutinOutline.effectColor=new Color(.02f,.035f,.04f,1);cutinOutline.effectDistance=new Vector2(2,-2);
+            hud.ultimateCutins[i]=cutin.gameObject;cutin.gameObject.SetActive(false);
             var diamond=Box(i==0?"Fern Action Diamond":"Ember Action Diamond",match,new Rect(0,0,WoodlandHUD.ActionDiamondHeight,WoodlandHUD.ActionDiamondHeight));
             diamond.anchorMin=diamond.anchorMax=new Vector2(i,0);diamond.pivot=new Vector2(i,0);diamond.anchoredPosition=new Vector2(i==0?32:-32,32);
             Vector2[] buttonPositions={new Vector2(75,150),new Vector2(0,75),new Vector2(150,75),new Vector2(75,0)};
-            string[] captions={"Jump","Punch","Kick","Special"};
+            string[] captions={"Guard","Punch","Kick","Special"};
             for(int a=0;a<4;a++){
                 int slot=i*4+a;var position=buttonPositions[a];
                 var disc=Flat("Face Button "+captions[a],diamond,new Rect(position.x,position.y,WoodlandHUD.ActionButtonDiameter,WoodlandHUD.ActionButtonDiameter),Color.white);disc.sprite=SpriteAt("Assets/Art/UI/ControlDisc.png");disc.raycastTarget=true;disc.alphaHitTestMinimumThreshold=.1f;disc.rectTransform.pivot=Vector2.one*.5f;disc.rectTransform.anchoredPosition+=new Vector2(40,-40);hud.actionDiscs[slot]=disc;

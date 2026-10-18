@@ -1,3 +1,11 @@
+# Tilt Rivals v8 validation
+
+The current fixture validates controller Up ground jump and aerial jump, Cross/A guarding without jumping, released guard, denial of a third jump and removal of all overhead PVP ledges. Four characters are checked for their own Punch/Kick frames, uniformly calibrated import scales and dedicated Luna/Bram Idle portraits.
+
+Every ranged move is checked through its 14-stamina charge, early-fire and repeat denial, visible pre-hit charge, automatic launch, actual target damage, immediate next-charge availability without a six-second timer and interruption cancellation. The first charge is paused to verify its timer freezes. All four low-health ultimates exercise cinematic entry, character cut-in, one-use limits and cleanup.
+
+PLAYMODE-VALIDATION-v8.json contains the final assertions. The v7 and v7.1 reports below are historical baselines with their former controls, cooldowns and platforms. Automation stays silent; physical controller transport remains a local hardware check.
+
 # Tilt Rivals v7.1 HUD and controller validation
 
 The final targeted fixture passed 213 assertions. It verifies the removed arena label, enlarged VS, exact meter centers, zoomed-out circular portraits, the rendered device-specific Menu hint, the real pause-menu Move List callback, all four characters' skill explanations and text fit, and returning to pause without resuming combat. Existing bottom diamond mouse actions and refusal checks remain included.

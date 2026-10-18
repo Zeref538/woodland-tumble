@@ -28,15 +28,17 @@ public static class GameValidation
         foreach(var text in hud.healthText)Debug.Log("HUD_METRICS: "+text.name+" text="+text.text+" preferred="+text.preferredWidth+"x"+text.preferredHeight+" rect="+text.rectTransform.rect.size+" font="+text.font.name+" size="+text.fontSize);
     }
     [MenuItem("Woodland/Validate Editable Game")]
-    public static void RunInEditor() => Begin(false);
-    public static void Run() { AudioListener.volume=0; GameSetup.Prepare(); Begin(true); }
-    public static void RunSaved() { AudioListener.volume=0; Begin(true); }
+    public static void RunInEditor() {SessionState.SetBool("Woodland.V8",true);Begin(false);}
+    public static void Run() => RunV8();
+    public static void RunSaved() { AudioListener.volume=0;SessionState.SetBool("Woodland.V8",true);Begin(true); }
     public static void RunHUD()
     {
         AudioListener.volume=0;
         SessionState.SetBool("Woodland.HudOnly",true);
         GameSetup.PrepareHUD();Begin(true);
     }
+    public static void RunV8Saved(){AudioListener.volume=0;GameSetup.PrepareHUD();SessionState.SetBool("Woodland.V8",true);Begin(true);}
+    public static void RunV8(){AudioListener.volume=0;GameSetup.Prepare();SessionState.SetBool("Woodland.V8",true);Begin(true);}
     public static void RunMelee()
     {
         AudioListener.volume=0;
@@ -111,6 +113,7 @@ public static class GameValidation
     static void Tick()
     {
         if (!SessionState.GetBool(Active, false) || !EditorApplication.isPlaying) return;
+        if(SessionState.GetBool("Woodland.V8",false)){TickV8();return;}
         if(SessionState.GetBool("Woodland.MeleeOnly",false)) { TickMelee(); return; }
         if(SessionState.GetBool("Woodland.HudOnly",false)) { TickHUD(); return; }
         try {
@@ -1121,7 +1124,7 @@ public static class GameValidation
                 Check(WoodlandEffects.Instance.ComboAnimationsPlayed==before+8,"All four hit and finisher effects play through the bounded sprite pool");
                 SetStage(15);
             } else if(stage==15 && SimElapsed>.1f) {
-                Capture("Documentation/combo-effects-1280-v7.png");
+                Capture("Documentation/combo-effects-1280-v8.png");
                 Complete(true,"MELEE_PASS: grounded combo, natural spacing, stamina, whiff, guard, parry and eight animated combo effects passed");
             }
         } catch(Exception exception) { Complete(false,exception.ToString()); }
@@ -1271,6 +1274,77 @@ public static class GameValidation
             }
         }catch(Exception error){Complete(false,error.ToString());}
     }
+    static void TickV8()
+    {
+        try{
+            if(Elapsed>25)throw new Exception("V8 timeout stage "+SessionState.GetInt("Woodland.Stage",-1));
+            var game=WoodlandGame.Instance;if(!game)return;var a=game.players[0];var b=game.players[1];var hud=game.hud;int stage=SessionState.GetInt("Woodland.Stage",-1);
+            if(stage==-1 && Elapsed>.3f){SelectMenuRoster(game,false,false,0);game.StartSelectedMatch();SetStage(0);}
+            else if(stage==0 && game.playing && string.IsNullOrEmpty(game.message)){
+                Check(AudioListener.volume==0,"V8 tests keep speaker output silent");
+                Check(game.arenaPlatforms.Length==0,"PVP contains no upper ledge objects");
+                Check(!game.BalanceMode && game.plank.bodyType==RigidbodyType2D.Kinematic,"PVP retains its long fixed main platform");
+                for(int c=0;c<4;c++){
+                    float expected=c==1?165:c==3?151:160;Check(Mathf.Approximately(game.CharacterPortraits[c].pixelsPerUnit,expected),"Character "+c+": one calibrated uniform pixel scale");
+                    Check(game.CharacterAnimationSets[c].punch.Select(AssetDatabase.GetAssetPath).All(path=>path.Contains("/"+game.CharacterNames[c]+"/Punch/")),"Character "+c+": punch frames belong to its own roster");
+                    Check(game.CharacterAnimationSets[c].kick.Select(AssetDatabase.GetAssetPath).All(path=>path.Contains("/"+game.CharacterNames[c]+"/Kick/")),"Character "+c+": kick frames belong to its own roster");
+                }
+                foreach(int c in new[]{2,3})Check(AssetDatabase.GetAssetPath(game.CharacterPortraits[c]).Contains("/Idle/01.png"),"Character "+c+": profile uses true neutral Idle artwork");
+                disabledPads=Gamepad.all.Where(p=>p.enabled).ToArray();foreach(var pad in disabledPads)InputSystem.DisableDevice(pad);
+                originalInputSettings=InputSystem.settings;validationInputSettings=UnityEngine.Object.Instantiate(originalInputSettings);validationInputSettings.editorInputBehaviorInPlayMode=InputSettings.EditorInputBehaviorInPlayMode.AllDeviceInputAlwaysGoesToGameView;validationInputSettings.backgroundBehavior=InputSettings.BackgroundBehavior.IgnoreFocus;InputSystem.settings=validationInputSettings;
+                testPads[0]=InputSystem.AddDevice<Gamepad>();game.RefreshGamepads();InputSystem.onBeforeUpdate+=DriveTestInput;
+                foreach(var scout in game.players){scout.ResetScout();scout.Body.simulated=true;scout.Body.gravityScale=1;scout.aiControlled=false;scout.inputEnabled=false;}
+                a.inputEnabled=true;SetStage(1);
+            }else if(stage==1 && SimElapsed>.6f){
+                Check(a.Grounded,"Player settles on the single PVP floor before input checks");SessionState.SetFloat("Woodland.V8Y",a.Body.position.y);
+                padStates[0]=new GamepadState().WithButton(GamepadButton.South);SetStage(2);
+            }else if(stage==2 && SimElapsed>.12f){
+                Check(a.Blocking && a.Body.position.y<SessionState.GetFloat("Woodland.V8Y",0)+.06f,"Cross/A holds guard and does not jump");
+                Check(hud.actionGlyphs[0].text=="SOUTH" || hud.actionIcons[0].sprite!=null,"Guard circle shows the assigned south-button prompt");
+                padStates[0]=new GamepadState();SetStage(3);
+            }else if(stage==3 && SimElapsed>.08f){
+                Check(!a.Blocking,"Releasing Cross/A ends guard");padStates[0]=new GamepadState().WithButton(GamepadButton.DpadUp);SetStage(4);
+            }else if(stage==4 && SimElapsed>.12f){
+                Check(!a.Grounded && a.Body.linearVelocity.y>0 && a.AirJumpsRemaining==1,"First D-pad Up press launches a ground jump and retains one aerial jump");
+                SessionState.SetFloat("Woodland.V8JumpY",a.Body.position.y);padStates[0]=new GamepadState();SetStage(5);
+            }else if(stage==5 && SimElapsed>.08f){padStates[0]=new GamepadState().WithButton(GamepadButton.DpadUp);SetStage(6);}
+            else if(stage==6 && SimElapsed>.12f){
+                Check(a.AirJumpsRemaining==0 && a.Body.position.y>SessionState.GetFloat("Woodland.V8JumpY",0),"Second Up press produces a real aerial jump");
+                Check(a.AnimationState=="DoubleJump","Aerial jump selects its DoubleJump animation");Check(!a.TryJump(),"Third jump is refused without another aerial jump");Capture("Documentation/double-jump-v8.png");
+                padStates[0]=new GamepadState();InputSystem.RemoveDevice(testPads[0]);testPads[0]=null;game.RefreshGamepads();a.inputEnabled=false;
+                SessionState.SetInt("Woodland.V8Character",0);SetStage(9);
+            }else if(stage==9){
+                int c=SessionState.GetInt("Woodland.V8Character",0);PrepareSpecialCase(game,c,4);game.CharacterChoices[0]=c;game.CharacterChoices[1]=c==0?1:0;PositionSpecialPair(game,4,.85f);hud.Refresh();
+                Check(a.TrySpecial() && a.Charging && a.AnimationState=="Charge","Character "+c+": Triangle starts a visible charge");Check(Mathf.Approximately(a.Stamina,86),"Character "+c+": charge spends fourteen stamina exactly once");
+                Check(!a.TrySpecial() && !a.ReleaseSmash(),"Character "+c+": charging cannot be spammed or fired early");Check(a.SpecialCooldownRemaining==0,"Character "+c+": no ranged cooldown timer");SetStage(10);
+            }else if(stage==10 && SimElapsed>.3f){
+                int c=SessionState.GetInt("Woodland.V8Character",0);Check(a.Charging && a.Charge>0 && a.Charge<1 && b.Health==100,"Character "+c+": charge is readable before any projectile damage");hud.Refresh();Check(hud.specialCooldownText[0].text.Contains("CHARGE"),"Character "+c+": HUD displays charge progress instead of cooldown");Capture("Documentation/charge-"+c+"-v8.png");
+                if(c==0){game.TogglePause();SessionState.SetFloat("Woodland.V8FrozenCharge",a.Charge);}SetStage(11);
+            }else if(stage==11 && Elapsed>.17f){
+                if(game.Paused){Check(Mathf.Approximately(a.Charge,SessionState.GetFloat("Woodland.V8FrozenCharge",0)),"Pausing freezes charge progress");game.ResumeMatch();}SetStage(12);
+            }else if(stage==12 && SimElapsed>.82f){
+                int c=SessionState.GetInt("Woodland.V8Character",0);Check(!a.Charging,"Character "+c+": complete charge automatically launches");Capture("Documentation/ranged-"+c+"-v8.png");SetStage(13);
+            }else if(stage==13 && SimElapsed>.7f){
+                int c=SessionState.GetInt("Woodland.V8Character",0);Check(b.Health<100,"Character "+c+": charged projectile reaches and damages its target");
+                Check(a.TrySpecial(),"Character "+c+": next charge is allowed without waiting six seconds");a.Stagger(.1f);Check(!a.Charging,"Character "+c+": interruption cancels the charge");
+                if(c<3){SessionState.SetInt("Woodland.V8Character",c+1);SetStage(9);}else{SessionState.SetInt("Woodland.V8Character",0);SetStage(20);}
+            }else if(stage==20){
+                int c=SessionState.GetInt("Woodland.V8Character",0);PrepareUltimateCase(game,c,0,25,1.2f);game.CharacterChoices[0]=c;game.CharacterChoices[1]=c==0?1:0;PlaceOnPvpBase(game,false);SetStage(21);
+            }else if(stage==21 && SimElapsed>.4f){Check(a.UltimateReady && a.TryUltimate(),"Low-health ultimate starts for character "+a.CharacterIndex);SetStage(22);}
+            else if(stage==22 && SimElapsed>.3f){
+                int c=SessionState.GetInt("Woodland.V8Character",0);Check(WoodlandEffects.Instance.CinematicActive,"Character "+c+": ultimate introduction enters cinematic presentation");hud.Refresh();Check(hud.ultimateCutins[0].activeSelf && hud.ultimateCutinNames[0].text==a.UltimateName,"Character "+c+": animated own-character cut-in displays its move name");Capture("Documentation/ultimate-"+c+"-v8.png");SetStage(23);
+            }else if(stage==23 && SimElapsed>2.1f){
+                int c=SessionState.GetInt("Woodland.V8Character",0);Check(!a.UltimateActive && a.UltimateUsed && !a.TryUltimate(),"Character "+c+": ultimate ends and remains once per round");
+                Check(!WoodlandEffects.Instance.CinematicActive,"Character "+c+": cinematic camera restores after ultimate");hud.Refresh();Check(!hud.ultimateCutins[0].activeSelf,"Character "+c+": cut-in hides after the ultimate");
+                if(c<3){SessionState.SetInt("Woodland.V8Character",c+1);SetStage(20);}else{
+                    PrepareSpecialCase(game,2,3);game.CharacterChoices[0]=2;game.CharacterChoices[1]=3;b.SetCharacter(3,game.CharacterNames[3],game.CharacterAnimationSets[3],game.CharacterControllers[3],game.CharacterColors[3]);PositionSpecialPair(game,3,.85f);hud.Refresh();
+                    Check(hud.ActivateAction(0,0) && a.Blocking,"Actual guard-circle callback holds guard");hud.ReleasePointerGuard(0);Check(!a.Blocking,"Releasing the guard circle ends pointer guard");
+                    hud.OpenMoveGuide();hud.Refresh();Check(hud.controlsText[0].text.Contains("0.85") && !hud.controlsText[0].text.Contains("6s cooldown"),"Move guide explains wind-up instead of six-second cooldown");Capture("Documentation/move-guide-v8.png");hud.CloseMoveGuide();
+                    Complete(true,"V8_PASS: single platform, Up double jump, south guard, all charged projectiles, idle portraits, calibrated scales and ultimate cleanup validated");
+                }
+            }
+        }catch(Exception error){Complete(false,error.ToString());}
+    }
     static void Complete(bool success, string status)
     {
         SessionState.SetBool(Active, false);
@@ -1288,11 +1362,12 @@ public static class GameValidation
         if (testKeyboard != null) { InputSystem.RemoveDevice(testKeyboard);testKeyboard = null; }
         if (originalInputSettings != null) { InputSystem.settings = originalInputSettings;UnityEngine.Object.DestroyImmediate(validationInputSettings);originalInputSettings = null; }
         var report = new Report { success = success, status = status, checks = SessionState.GetString("Woodland.Checks", "").Split('\n').Where(s => s.Length > 0).ToArray() };
+        bool v8=SessionState.GetBool("Woodland.V8",false);SessionState.SetBool("Woodland.V8",false);
         bool meleeOnly=SessionState.GetBool("Woodland.MeleeOnly",false);
         bool hudOnly=SessionState.GetBool("Woodland.HudOnly",false);
         SessionState.SetBool("Woodland.MeleeOnly",false);
         SessionState.SetBool("Woodland.HudOnly",false);
-        File.WriteAllText(hudOnly?"Documentation/HUD-VALIDATION-v7.1.json":meleeOnly?"Documentation/MELEE-VALIDATION-v7.json":"Documentation/PLAYMODE-VALIDATION-v7.json", JsonUtility.ToJson(report, true));
+        File.WriteAllText(v8?"Documentation/PLAYMODE-VALIDATION-v8.json":hudOnly?"Documentation/HUD-VALIDATION-v7.1.json":meleeOnly?"Documentation/MELEE-VALIDATION-v8.json":"Documentation/PLAYMODE-VALIDATION-v7.json", JsonUtility.ToJson(report, true));
         if (success) Debug.Log(status);else Debug.LogError(status);
         EditorApplication.isPlaying = false;
         if (SessionState.GetBool("Woodland.ValidationExit", false)) EditorApplication.delayCall += () => EditorApplication.Exit(success ? 0 : 1);

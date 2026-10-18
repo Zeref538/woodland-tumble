@@ -1,0 +1,27 @@
+{
+  "editor": "6000.5.10f1",
+  "version": "8.0.0",
+  "target": "StandaloneWindows64",
+  "build_result": "Success",
+  "combat_presentation_checks": 101,
+  "melee_checks": 28,
+  "playmode_success": true,
+  "old_reports": "Historical v7/v7.1 controls and platforms retained as baselines, not current expectations",
+  "ranged_windup_seconds": 0.85,
+  "ranged_cooldown_seconds": 0,
+  "pvp_upper_ledges": 0,
+  "visual_review": "Four ranged presentations, four ultimate cut-ins, neutral portraits, charge HUD and single-floor captures inspected",
+  "controller_testing": "Actual Up and South control input exercised on a virtual Gamepad; physical transports remain unverified",
+  "audio_testing": "silent listener",
+  "artwork_commit": "ce8259d",
+  "source_hash_normalization": "CRLF converted to LF",
+  "assembly_sha256": "a7133715e5ad2100eb69058af9cfd68cb6cec7c97151f649a74c51f44b798516",
+  "scripts": {
+    "Scout.cs": "27dd4f383d86e5d33e8665bbe848485d958d54df928d07eef12d6979a3cb2fd6",
+    "ScoutAnimations.cs": "fba9d1724140943d12090e0ec9138939316e66208ba2f8180b4e8a1042c5c206",
+    "SpawnMarker.cs": "678414abd6028ca57f40f084c3f664ef2cbf663ea2d956523bd78c35ac2f02ff",
+    "WoodlandEffects.cs": "13b829a49675607549bc189d6c6367d2395e03c2b7097979c8a3028fd6a2264c",
+    "WoodlandGame.cs": "e274ef6f462dd5a0dddfcc0578a3561d04ebcb8f7f090ce97bdc59d93fb73c65",
+    "WoodlandHUD.cs": "78c0b4ea9a2a1c27f889c0d2e75d960f4b507953184356233fce1e422ba555f9"
+  }
+}

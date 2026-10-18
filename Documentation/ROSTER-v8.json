@@ -1,0 +1,3490 @@
+{
+  "method": "Built-in image generation edited inspected original Walk pose into planted neutral idle. Original alpha retained. Crop uses alpha>=32; full subject resized uniformly with nearest neighbour to200px height, both boots baseline232, body centered using lowest12 opaque boot rows. No stretch.",
+  "canvas": [
+    256,
+    256
+  ],
+  "feetPivotUnityPixels": [
+    128,
+    24
+  ],
+  "assets": [
+    {
+      "character": "Luna",
+      "path": "Assets/Art/Characters/Luna/Idle/01.png",
+      "source": "Assets/Art/Sources/Luna-Idle-v8-source.png",
+      "sourceCrop": [
+        206,
+        164,
+        936,
+        1143
+      ],
+      "uniformScale": 0.20429009193054137,
+      "bbox": [
+        36,
+        32,
+        185,
+        232
+      ],
+      "sha256": "a1ac12906a00849edceb162eda78c8c362d705684622a70bc81b6034c1fdcc2e",
+      "sourceSha256": "0b7ed967833a2d2498921984f909f0365b501fb4fa6f44da84856eb187dd0c2f",
+      "pixelHeight": 200,
+      "feetBaseline": 232
+    },
+    {
+      "character": "Bram",
+      "path": "Assets/Art/Characters/Bram/Idle/01.png",
+      "source": "Assets/Art/Sources/Bram-Idle-v8-source.png",
+      "sourceCrop": [
+        275,
+        172,
+        1023,
+        1137
+      ],
+      "uniformScale": 0.20725388601036268,
+      "bbox": [
+        34,
+        32,
+        189,
+        232
+      ],
+      "sha256": "2cb92d9524fcfe56f3cf4ee00aea3a4a19c4797a9b9c38eca46d79cd98ac3da7",
+      "sourceSha256": "18988fd1ffe653d9c61bbaa4dbc2a49971816589cec966077287a00d93bdbcfa",
+      "pixelHeight": 200,
+      "feetBaseline": 232
+    }
+  ],
+  "existingStateMeasurements": [
+    {
+      "character": "Fern",
+      "action": "Walk",
+      "frames": [
+        {
+          "frame": 1,
+          "alphaBounds": [
+            44,
+            33,
+            212,
+            232
+          ],
+          "heightIncludingEffects": 199
+        },
+        {
+          "frame": 2,
+          "alphaBounds": [
+            44,
+            33,
+            212,
+            232
+          ],
+          "heightIncludingEffects": 199
+        },
+        {
+          "frame": 3,
+          "alphaBounds": [
+            44,
+            35,
+            211,
+            232
+          ],
+          "heightIncludingEffects": 197
+        },
+        {
+          "frame": 4,
+          "alphaBounds": [
+            41,
+            35,
+            213,
+            231
+          ],
+          "heightIncludingEffects": 196
+        },
+        {
+          "frame": 5,
+          "alphaBounds": [
+            44,
+            33,
+            212,
+            232
+          ],
+          "heightIncludingEffects": 199
+        },
+        {
+          "frame": 6,
+          "alphaBounds": [
+            42,
+            40,
+            213,
+            232
+          ],
+          "heightIncludingEffects": 192
+        },
+        {
+          "frame": 7,
+          "alphaBounds": [
+            41,
+            41,
+            215,
+            232
+          ],
+          "heightIncludingEffects": 191
+        },
+        {
+          "frame": 8,
+          "alphaBounds": [
+            44,
+            39,
+            211,
+            231
+          ],
+          "heightIncludingEffects": 192
+        },
+        {
+          "frame": 9,
+          "alphaBounds": [
+            42,
+            30,
+            213,
+            232
+          ],
+          "heightIncludingEffects": 202
+        },
+        {
+          "frame": 10,
+          "alphaBounds": [
+            43,
+            36,
+            212,
+            232
+          ],
+          "heightIncludingEffects": 196
+        }
+      ],
+      "note": "Effect bounds are not body size. Dash/Backstep/Ultimate reference fullbody firstpose was calibrated200px in v7; other frames retain same source-wide scale."
+    },
+    {
+      "character": "Fern",
+      "action": "Block",
+      "frames": [
+        {
+          "frame": 1,
+          "alphaBounds": [
+            32,
+            32,
+            200,
+            232
+          ],
+          "heightIncludingEffects": 200
+        },
+        {
+          "frame": 2,
+          "alphaBounds": [
+            29,
+            33,
+            195,
+            232
+          ],
+          "heightIncludingEffects": 199
+        },
+        {
+          "frame": 3,
+          "alphaBounds": [
+            49,
+            42,
+            217,
+            232
+          ],
+          "heightIncludingEffects": 190
+        },
+        {
+          "frame": 4,
+          "alphaBounds": [
+            53,
+            41,
+            234,
+            232
+          ],
+          "heightIncludingEffects": 191
+        },
+        {
+          "frame": 5,
+          "alphaBounds": [
+            24,
+            41,
+            220,
+            232
+          ],
+          "heightIncludingEffects": 191
+        },
+        {
+          "frame": 6,
+          "alphaBounds": [
+            27,
+            40,
+            224,
+            231
+          ],
+          "heightIncludingEffects": 191
+        },
+        {
+          "frame": 7,
+          "alphaBounds": [
+            23,
+            40,
+            221,
+            231
+          ],
+          "heightIncludingEffects": 191
+        },
+        {
+          "frame": 8,
+          "alphaBounds": [
+            33,
+            40,
+            224,
+            231
+          ],
+          "heightIncludingEffects": 191
+        },
+        {
+          "frame": 9,
+          "alphaBounds": [
+            36,
+            42,
+            217,
+            231
+          ],
+          "heightIncludingEffects": 189
+        },
+        {
+          "frame": 10,
+          "alphaBounds": [
+            34,
+            37,
+            203,
+            231
+          ],
+          "heightIncludingEffects": 194
+        }
+      ],
+      "note": "Effect bounds are not body size. Dash/Backstep/Ultimate reference fullbody firstpose was calibrated200px in v7; other frames retain same source-wide scale."
+    },
+    {
+      "character": "Fern",
+      "action": "Punch",
+      "frames": [
+        {
+          "frame": 1,
+          "alphaBounds": [
+            55,
+            32,
+            201,
+            232
+          ],
+          "heightIncludingEffects": 200
+        },
+        {
+          "frame": 2,
+          "alphaBounds": [
+            49,
+            36,
+            206,
+            232
+          ],
+          "heightIncludingEffects": 196
+        },
+        {
+          "frame": 3,
+          "alphaBounds": [
+            38,
+            36,
+            218,
+            232
+          ],
+          "heightIncludingEffects": 196
+        },
+        {
+          "frame": 4,
+          "alphaBounds": [
+            38,
+            41,
+            217,
+            232
+          ],
+          "heightIncludingEffects": 191
+        },
+        {
+          "frame": 5,
+          "alphaBounds": [
+            53,
+            34,
+            202,
+            232
+          ],
+          "heightIncludingEffects": 198
+        },
+        {
+          "frame": 6,
+          "alphaBounds": [
+            55,
+            36,
+            201,
+            232
+          ],
+          "heightIncludingEffects": 196
+        },
+        {
+          "frame": 7,
+          "alphaBounds": [
+            47,
+            36,
+            207,
+            232
+          ],
+          "heightIncludingEffects": 196
+        },
+        {
+          "frame": 8,
+          "alphaBounds": [
+            35,
+            36,
+            220,
+            232
+          ],
+          "heightIncludingEffects": 196
+        },
+        {
+          "frame": 9,
+          "alphaBounds": [
+            38,
+            38,
+            217,
+            232
+          ],
+          "heightIncludingEffects": 194
+        },
+        {
+          "frame": 10,
+          "alphaBounds": [
+            53,
+            35,
+            203,
+            232
+          ],
+          "heightIncludingEffects": 197
+        }
+      ],
+      "note": "Effect bounds are not body size. Dash/Backstep/Ultimate reference fullbody firstpose was calibrated200px in v7; other frames retain same source-wide scale."
+    },
+    {
+      "character": "Fern",
+      "action": "Kick",
+      "frames": [
+        {
+          "frame": 1,
+          "alphaBounds": [
+            44,
+            32,
+            212,
+            232
+          ],
+          "heightIncludingEffects": 200
+        },
+        {
+          "frame": 2,
+          "alphaBounds": [
+            44,
+            47,
+            212,
+            232
+          ],
+          "heightIncludingEffects": 185
+        },
+        {
+          "frame": 3,
+          "alphaBounds": [
+            50,
+            34,
+            219,
+            232
+          ],
+          "heightIncludingEffects": 198
+        },
+        {
+          "frame": 4,
+          "alphaBounds": [
+            30,
+            40,
+            216,
+            232
+          ],
+          "heightIncludingEffects": 192
+        },
+        {
+          "frame": 5,
+          "alphaBounds": [
+            45,
+            38,
+            225,
+            232
+          ],
+          "heightIncludingEffects": 194
+        },
+        {
+          "frame": 6,
+          "alphaBounds": [
+            56,
+            39,
+            244,
+            232
+          ],
+          "heightIncludingEffects": 193
+        },
+        {
+          "frame": 7,
+          "alphaBounds": [
+            41,
+            35,
+            210,
+            232
+          ],
+          "heightIncludingEffects": 197
+        },
+        {
+          "frame": 8,
+          "alphaBounds": [
+            49,
+            30,
+            218,
+            232
+          ],
+          "heightIncludingEffects": 202
+        },
+        {
+          "frame": 9,
+          "alphaBounds": [
+            41,
+            36,
+            213,
+            232
+          ],
+          "heightIncludingEffects": 196
+        },
+        {
+          "frame": 10,
+          "alphaBounds": [
+            36,
+            32,
+            207,
+            232
+          ],
+          "heightIncludingEffects": 200
+        }
+      ],
+      "note": "Effect bounds are not body size. Dash/Backstep/Ultimate reference fullbody firstpose was calibrated200px in v7; other frames retain same source-wide scale."
+    },
+    {
+      "character": "Fern",
+      "action": "Special",
+      "frames": [
+        {
+          "frame": 1,
+          "alphaBounds": [
+            103,
+            69,
+            297,
+            232
+          ],
+          "heightIncludingEffects": 163
+        },
+        {
+          "frame": 2,
+          "alphaBounds": [
+            97,
+            32,
+            284,
+            232
+          ],
+          "heightIncludingEffects": 200
+        },
+        {
+          "frame": 3,
+          "alphaBounds": [
+            93,
+            23,
+            291,
+            232
+          ],
+          "heightIncludingEffects": 209
+        },
+        {
+          "frame": 4,
+          "alphaBounds": [
+            92,
+            51,
+            380,
+            232
+          ],
+          "heightIncludingEffects": 181
+        },
+        {
+          "frame": 5,
+          "alphaBounds": [
+            103,
+            34,
+            305,
+            232
+          ],
+          "heightIncludingEffects": 198
+        },
+        {
+          "frame": 6,
+          "alphaBounds": [
+            98,
+            25,
+            319,
+            232
+          ],
+          "heightIncludingEffects": 207
+        },
+        {
+          "frame": 7,
+          "alphaBounds": [
+            103,
+            28,
+            324,
+            232
+          ],
+          "heightIncludingEffects": 204
+        },
+        {
+          "frame": 8,
+          "alphaBounds": [
+            87,
+            37,
+            322,
+            232
+          ],
+          "heightIncludingEffects": 195
+        },
+        {
+          "frame": 9,
+          "alphaBounds": [
+            92,
+            31,
+            344,
+            232
+          ],
+          "heightIncludingEffects": 201
+        },
+        {
+          "frame": 10,
+          "alphaBounds": [
+            105,
+            25,
+            280,
+            232
+          ],
+          "heightIncludingEffects": 207
+        }
+      ],
+      "note": "Effect bounds are not body size. Dash/Backstep/Ultimate reference fullbody firstpose was calibrated200px in v7; other frames retain same source-wide scale."
+    },
+    {
+      "character": "Fern",
+      "action": "Dash",
+      "frames": [
+        {
+          "frame": 1,
+          "alphaBounds": [
+            107,
+            32,
+            272,
+            232
+          ],
+          "heightIncludingEffects": 200
+        },
+        {
+          "frame": 2,
+          "alphaBounds": [
+            104,
+            35,
+            273,
+            232
+          ],
+          "heightIncludingEffects": 197
+        },
+        {
+          "frame": 3,
+          "alphaBounds": [
+            110,
+            39,
+            344,
+            232
+          ],
+          "heightIncludingEffects": 193
+        },
+        {
+          "frame": 4,
+          "alphaBounds": [
+            119,
+            41,
+            362,
+            232
+          ],
+          "heightIncludingEffects": 191
+        },
+        {
+          "frame": 5,
+          "alphaBounds": [
+            85,
+            49,
+            380,
+            232
+          ],
+          "heightIncludingEffects": 183
+        },
+        {
+          "frame": 6,
+          "alphaBounds": [
+            85,
+            59,
+            380,
+            232
+          ],
+          "heightIncludingEffects": 173
+        },
+        {
+          "frame": 7,
+          "alphaBounds": [
+            111,
+            49,
+            371,
+            232
+          ],
+          "heightIncludingEffects": 183
+        },
+        {
+          "frame": 8,
+          "alphaBounds": [
+            132,
+            40,
+            342,
+            232
+          ],
+          "heightIncludingEffects": 192
+        },
+        {
+          "frame": 9,
+          "alphaBounds": [
+            147,
+            38,
+            299,
+            232
+          ],
+          "heightIncludingEffects": 194
+        },
+        {
+          "frame": 10,
+          "alphaBounds": [
+            117,
+            32,
+            270,
+            232
+          ],
+          "heightIncludingEffects": 200
+        }
+      ],
+      "note": "Effect bounds are not body size. Dash/Backstep/Ultimate reference fullbody firstpose was calibrated200px in v7; other frames retain same source-wide scale."
+    },
+    {
+      "character": "Fern",
+      "action": "Backstep",
+      "frames": [
+        {
+          "frame": 1,
+          "alphaBounds": [
+            106,
+            31,
+            270,
+            232
+          ],
+          "heightIncludingEffects": 201
+        },
+        {
+          "frame": 2,
+          "alphaBounds": [
+            85,
+            39,
+            252,
+            232
+          ],
+          "heightIncludingEffects": 193
+        },
+        {
+          "frame": 3,
+          "alphaBounds": [
+            54,
+            40,
+            255,
+            232
+          ],
+          "heightIncludingEffects": 192
+        },
+        {
+          "frame": 4,
+          "alphaBounds": [
+            82,
+            38,
+            313,
+            232
+          ],
+          "heightIncludingEffects": 194
+        },
+        {
+          "frame": 5,
+          "alphaBounds": [
+            59,
+            46,
+            317,
+            232
+          ],
+          "heightIncludingEffects": 186
+        },
+        {
+          "frame": 6,
+          "alphaBounds": [
+            74,
+            54,
+            334,
+            232
+          ],
+          "heightIncludingEffects": 178
+        },
+        {
+          "frame": 7,
+          "alphaBounds": [
+            98,
+            55,
+            324,
+            232
+          ],
+          "heightIncludingEffects": 177
+        },
+        {
+          "frame": 8,
+          "alphaBounds": [
+            124,
+            47,
+            301,
+            232
+          ],
+          "heightIncludingEffects": 185
+        },
+        {
+          "frame": 9,
+          "alphaBounds": [
+            98,
+            42,
+            334,
+            232
+          ],
+          "heightIncludingEffects": 190
+        },
+        {
+          "frame": 10,
+          "alphaBounds": [
+            110,
+            34,
+            268,
+            232
+          ],
+          "heightIncludingEffects": 198
+        }
+      ],
+      "note": "Effect bounds are not body size. Dash/Backstep/Ultimate reference fullbody firstpose was calibrated200px in v7; other frames retain same source-wide scale."
+    },
+    {
+      "character": "Fern",
+      "action": "Ultimate",
+      "frames": [
+        {
+          "frame": 1,
+          "alphaBounds": [
+            112,
+            46,
+            275,
+            232
+          ],
+          "heightIncludingEffects": 186
+        },
+        {
+          "frame": 2,
+          "alphaBounds": [
+            115,
+            64,
+            275,
+            232
+          ],
+          "heightIncludingEffects": 168
+        },
+        {
+          "frame": 3,
+          "alphaBounds": [
+            99,
+            68,
+            293,
+            232
+          ],
+          "heightIncludingEffects": 164
+        },
+        {
+          "frame": 4,
+          "alphaBounds": [
+            68,
+            42,
+            320,
+            232
+          ],
+          "heightIncludingEffects": 190
+        },
+        {
+          "frame": 5,
+          "alphaBounds": [
+            64,
+            48,
+            309,
+            232
+          ],
+          "heightIncludingEffects": 184
+        },
+        {
+          "frame": 6,
+          "alphaBounds": [
+            92,
+            44,
+            310,
+            232
+          ],
+          "heightIncludingEffects": 188
+        },
+        {
+          "frame": 7,
+          "alphaBounds": [
+            110,
+            54,
+            380,
+            232
+          ],
+          "heightIncludingEffects": 178
+        },
+        {
+          "frame": 8,
+          "alphaBounds": [
+            90,
+            54,
+            329,
+            232
+          ],
+          "heightIncludingEffects": 178
+        },
+        {
+          "frame": 9,
+          "alphaBounds": [
+            133,
+            55,
+            322,
+            232
+          ],
+          "heightIncludingEffects": 177
+        },
+        {
+          "frame": 10,
+          "alphaBounds": [
+            109,
+            49,
+            265,
+            232
+          ],
+          "heightIncludingEffects": 183
+        }
+      ],
+      "note": "Effect bounds are not body size. Dash/Backstep/Ultimate reference fullbody firstpose was calibrated200px in v7; other frames retain same source-wide scale."
+    },
+    {
+      "character": "Ember",
+      "action": "Walk",
+      "frames": [
+        {
+          "frame": 1,
+          "alphaBounds": [
+            46,
+            32,
+            210,
+            232
+          ],
+          "heightIncludingEffects": 200
+        },
+        {
+          "frame": 2,
+          "alphaBounds": [
+            40,
+            33,
+            216,
+            231
+          ],
+          "heightIncludingEffects": 198
+        },
+        {
+          "frame": 3,
+          "alphaBounds": [
+            39,
+            34,
+            216,
+            231
+          ],
+          "heightIncludingEffects": 197
+        },
+        {
+          "frame": 4,
+          "alphaBounds": [
+            40,
+            31,
+            216,
+            231
+          ],
+          "heightIncludingEffects": 200
+        },
+        {
+          "frame": 5,
+          "alphaBounds": [
+            42,
+            32,
+            213,
+            231
+          ],
+          "heightIncludingEffects": 199
+        },
+        {
+          "frame": 6,
+          "alphaBounds": [
+            44,
+            35,
+            212,
+            232
+          ],
+          "heightIncludingEffects": 197
+        },
+        {
+          "frame": 7,
+          "alphaBounds": [
+            45,
+            33,
+            211,
+            232
+          ],
+          "heightIncludingEffects": 199
+        },
+        {
+          "frame": 8,
+          "alphaBounds": [
+            42,
+            38,
+            213,
+            232
+          ],
+          "heightIncludingEffects": 194
+        },
+        {
+          "frame": 9,
+          "alphaBounds": [
+            45,
+            34,
+            211,
+            232
+          ],
+          "heightIncludingEffects": 198
+        },
+        {
+          "frame": 10,
+          "alphaBounds": [
+            43,
+            35,
+            212,
+            232
+          ],
+          "heightIncludingEffects": 197
+        }
+      ],
+      "note": "Effect bounds are not body size. Dash/Backstep/Ultimate reference fullbody firstpose was calibrated200px in v7; other frames retain same source-wide scale."
+    },
+    {
+      "character": "Ember",
+      "action": "Block",
+      "frames": [
+        {
+          "frame": 1,
+          "alphaBounds": [
+            42,
+            32,
+            206,
+            232
+          ],
+          "heightIncludingEffects": 200
+        },
+        {
+          "frame": 2,
+          "alphaBounds": [
+            41,
+            32,
+            211,
+            232
+          ],
+          "heightIncludingEffects": 200
+        },
+        {
+          "frame": 3,
+          "alphaBounds": [
+            43,
+            33,
+            231,
+            232
+          ],
+          "heightIncludingEffects": 199
+        },
+        {
+          "frame": 4,
+          "alphaBounds": [
+            40,
+            33,
+            248,
+            232
+          ],
+          "heightIncludingEffects": 199
+        },
+        {
+          "frame": 5,
+          "alphaBounds": [
+            42,
+            34,
+            248,
+            232
+          ],
+          "heightIncludingEffects": 198
+        },
+        {
+          "frame": 6,
+          "alphaBounds": [
+            41,
+            35,
+            248,
+            232
+          ],
+          "heightIncludingEffects": 197
+        },
+        {
+          "frame": 7,
+          "alphaBounds": [
+            37,
+            35,
+            248,
+            232
+          ],
+          "heightIncludingEffects": 197
+        },
+        {
+          "frame": 8,
+          "alphaBounds": [
+            44,
+            35,
+            232,
+            232
+          ],
+          "heightIncludingEffects": 197
+        },
+        {
+          "frame": 9,
+          "alphaBounds": [
+            42,
+            35,
+            228,
+            232
+          ],
+          "heightIncludingEffects": 197
+        },
+        {
+          "frame": 10,
+          "alphaBounds": [
+            38,
+            35,
+            196,
+            232
+          ],
+          "heightIncludingEffects": 197
+        }
+      ],
+      "note": "Effect bounds are not body size. Dash/Backstep/Ultimate reference fullbody firstpose was calibrated200px in v7; other frames retain same source-wide scale."
+    },
+    {
+      "character": "Ember",
+      "action": "Punch",
+      "frames": [
+        {
+          "frame": 1,
+          "alphaBounds": [
+            56,
+            32,
+            200,
+            232
+          ],
+          "heightIncludingEffects": 200
+        },
+        {
+          "frame": 2,
+          "alphaBounds": [
+            45,
+            37,
+            211,
+            232
+          ],
+          "heightIncludingEffects": 195
+        },
+        {
+          "frame": 3,
+          "alphaBounds": [
+            30,
+            37,
+            225,
+            232
+          ],
+          "heightIncludingEffects": 195
+        },
+        {
+          "frame": 4,
+          "alphaBounds": [
+            40,
+            40,
+            215,
+            232
+          ],
+          "heightIncludingEffects": 192
+        },
+        {
+          "frame": 5,
+          "alphaBounds": [
+            55,
+            31,
+            201,
+            232
+          ],
+          "heightIncludingEffects": 201
+        },
+        {
+          "frame": 6,
+          "alphaBounds": [
+            57,
+            35,
+            200,
+            232
+          ],
+          "heightIncludingEffects": 197
+        },
+        {
+          "frame": 7,
+          "alphaBounds": [
+            42,
+            38,
+            213,
+            232
+          ],
+          "heightIncludingEffects": 194
+        },
+        {
+          "frame": 8,
+          "alphaBounds": [
+            28,
+            36,
+            228,
+            232
+          ],
+          "heightIncludingEffects": 196
+        },
+        {
+          "frame": 9,
+          "alphaBounds": [
+            38,
+            42,
+            217,
+            232
+          ],
+          "heightIncludingEffects": 190
+        },
+        {
+          "frame": 10,
+          "alphaBounds": [
+            54,
+            35,
+            202,
+            232
+          ],
+          "heightIncludingEffects": 197
+        }
+      ],
+      "note": "Effect bounds are not body size. Dash/Backstep/Ultimate reference fullbody firstpose was calibrated200px in v7; other frames retain same source-wide scale."
+    },
+    {
+      "character": "Ember",
+      "action": "Kick",
+      "frames": [
+        {
+          "frame": 1,
+          "alphaBounds": [
+            36,
+            32,
+            207,
+            232
+          ],
+          "heightIncludingEffects": 200
+        },
+        {
+          "frame": 2,
+          "alphaBounds": [
+            36,
+            43,
+            212,
+            232
+          ],
+          "heightIncludingEffects": 189
+        },
+        {
+          "frame": 3,
+          "alphaBounds": [
+            45,
+            32,
+            218,
+            232
+          ],
+          "heightIncludingEffects": 200
+        },
+        {
+          "frame": 4,
+          "alphaBounds": [
+            38,
+            35,
+            217,
+            232
+          ],
+          "heightIncludingEffects": 197
+        },
+        {
+          "frame": 5,
+          "alphaBounds": [
+            46,
+            33,
+            218,
+            232
+          ],
+          "heightIncludingEffects": 199
+        },
+        {
+          "frame": 6,
+          "alphaBounds": [
+            39,
+            30,
+            235,
+            232
+          ],
+          "heightIncludingEffects": 202
+        },
+        {
+          "frame": 7,
+          "alphaBounds": [
+            41,
+            29,
+            216,
+            232
+          ],
+          "heightIncludingEffects": 203
+        },
+        {
+          "frame": 8,
+          "alphaBounds": [
+            46,
+            27,
+            216,
+            232
+          ],
+          "heightIncludingEffects": 205
+        },
+        {
+          "frame": 9,
+          "alphaBounds": [
+            34,
+            31,
+            207,
+            232
+          ],
+          "heightIncludingEffects": 201
+        },
+        {
+          "frame": 10,
+          "alphaBounds": [
+            29,
+            31,
+            201,
+            232
+          ],
+          "heightIncludingEffects": 201
+        }
+      ],
+      "note": "Effect bounds are not body size. Dash/Backstep/Ultimate reference fullbody firstpose was calibrated200px in v7; other frames retain same source-wide scale."
+    },
+    {
+      "character": "Ember",
+      "action": "Special",
+      "frames": [
+        {
+          "frame": 1,
+          "alphaBounds": [
+            99,
+            51,
+            297,
+            232
+          ],
+          "heightIncludingEffects": 181
+        },
+        {
+          "frame": 2,
+          "alphaBounds": [
+            142,
+            46,
+            351,
+            232
+          ],
+          "heightIncludingEffects": 186
+        },
+        {
+          "frame": 3,
+          "alphaBounds": [
+            119,
+            34,
+            347,
+            232
+          ],
+          "heightIncludingEffects": 198
+        },
+        {
+          "frame": 4,
+          "alphaBounds": [
+            67,
+            47,
+            345,
+            232
+          ],
+          "heightIncludingEffects": 185
+        },
+        {
+          "frame": 5,
+          "alphaBounds": [
+            64,
+            29,
+            311,
+            232
+          ],
+          "heightIncludingEffects": 203
+        },
+        {
+          "frame": 6,
+          "alphaBounds": [
+            132,
+            41,
+            379,
+            232
+          ],
+          "heightIncludingEffects": 191
+        },
+        {
+          "frame": 7,
+          "alphaBounds": [
+            135,
+            35,
+            365,
+            232
+          ],
+          "heightIncludingEffects": 197
+        },
+        {
+          "frame": 8,
+          "alphaBounds": [
+            72,
+            31,
+            296,
+            232
+          ],
+          "heightIncludingEffects": 201
+        },
+        {
+          "frame": 9,
+          "alphaBounds": [
+            88,
+            40,
+            283,
+            232
+          ],
+          "heightIncludingEffects": 192
+        },
+        {
+          "frame": 10,
+          "alphaBounds": [
+            102,
+            32,
+            264,
+            232
+          ],
+          "heightIncludingEffects": 200
+        }
+      ],
+      "note": "Effect bounds are not body size. Dash/Backstep/Ultimate reference fullbody firstpose was calibrated200px in v7; other frames retain same source-wide scale."
+    },
+    {
+      "character": "Ember",
+      "action": "Dash",
+      "frames": [
+        {
+          "frame": 1,
+          "alphaBounds": [
+            103,
+            32,
+            272,
+            232
+          ],
+          "heightIncludingEffects": 200
+        },
+        {
+          "frame": 2,
+          "alphaBounds": [
+            90,
+            57,
+            269,
+            232
+          ],
+          "heightIncludingEffects": 175
+        },
+        {
+          "frame": 3,
+          "alphaBounds": [
+            91,
+            60,
+            279,
+            232
+          ],
+          "heightIncludingEffects": 172
+        },
+        {
+          "frame": 4,
+          "alphaBounds": [
+            64,
+            47,
+            257,
+            232
+          ],
+          "heightIncludingEffects": 185
+        },
+        {
+          "frame": 5,
+          "alphaBounds": [
+            147,
+            53,
+            356,
+            232
+          ],
+          "heightIncludingEffects": 179
+        },
+        {
+          "frame": 6,
+          "alphaBounds": [
+            147,
+            74,
+            367,
+            232
+          ],
+          "heightIncludingEffects": 158
+        },
+        {
+          "frame": 7,
+          "alphaBounds": [
+            156,
+            77,
+            365,
+            232
+          ],
+          "heightIncludingEffects": 155
+        },
+        {
+          "frame": 8,
+          "alphaBounds": [
+            103,
+            49,
+            274,
+            232
+          ],
+          "heightIncludingEffects": 183
+        },
+        {
+          "frame": 9,
+          "alphaBounds": [
+            102,
+            43,
+            267,
+            232
+          ],
+          "heightIncludingEffects": 189
+        },
+        {
+          "frame": 10,
+          "alphaBounds": [
+            107,
+            35,
+            258,
+            232
+          ],
+          "heightIncludingEffects": 197
+        }
+      ],
+      "note": "Effect bounds are not body size. Dash/Backstep/Ultimate reference fullbody firstpose was calibrated200px in v7; other frames retain same source-wide scale."
+    },
+    {
+      "character": "Ember",
+      "action": "Backstep",
+      "frames": [
+        {
+          "frame": 1,
+          "alphaBounds": [
+            107,
+            32,
+            271,
+            232
+          ],
+          "heightIncludingEffects": 200
+        },
+        {
+          "frame": 2,
+          "alphaBounds": [
+            85,
+            42,
+            248,
+            232
+          ],
+          "heightIncludingEffects": 190
+        },
+        {
+          "frame": 3,
+          "alphaBounds": [
+            74,
+            46,
+            260,
+            232
+          ],
+          "heightIncludingEffects": 186
+        },
+        {
+          "frame": 4,
+          "alphaBounds": [
+            26,
+            55,
+            272,
+            232
+          ],
+          "heightIncludingEffects": 177
+        },
+        {
+          "frame": 5,
+          "alphaBounds": [
+            68,
+            51,
+            302,
+            232
+          ],
+          "heightIncludingEffects": 181
+        },
+        {
+          "frame": 6,
+          "alphaBounds": [
+            43,
+            50,
+            275,
+            232
+          ],
+          "heightIncludingEffects": 182
+        },
+        {
+          "frame": 7,
+          "alphaBounds": [
+            86,
+            41,
+            239,
+            232
+          ],
+          "heightIncludingEffects": 191
+        },
+        {
+          "frame": 8,
+          "alphaBounds": [
+            96,
+            43,
+            256,
+            232
+          ],
+          "heightIncludingEffects": 189
+        },
+        {
+          "frame": 9,
+          "alphaBounds": [
+            108,
+            38,
+            266,
+            232
+          ],
+          "heightIncludingEffects": 194
+        },
+        {
+          "frame": 10,
+          "alphaBounds": [
+            107,
+            38,
+            256,
+            232
+          ],
+          "heightIncludingEffects": 194
+        }
+      ],
+      "note": "Effect bounds are not body size. Dash/Backstep/Ultimate reference fullbody firstpose was calibrated200px in v7; other frames retain same source-wide scale."
+    },
+    {
+      "character": "Ember",
+      "action": "Ultimate",
+      "frames": [
+        {
+          "frame": 1,
+          "alphaBounds": [
+            112,
+            66,
+            275,
+            232
+          ],
+          "heightIncludingEffects": 166
+        },
+        {
+          "frame": 2,
+          "alphaBounds": [
+            91,
+            73,
+            274,
+            232
+          ],
+          "heightIncludingEffects": 159
+        },
+        {
+          "frame": 3,
+          "alphaBounds": [
+            91,
+            63,
+            279,
+            232
+          ],
+          "heightIncludingEffects": 169
+        },
+        {
+          "frame": 4,
+          "alphaBounds": [
+            133,
+            69,
+            359,
+            232
+          ],
+          "heightIncludingEffects": 163
+        },
+        {
+          "frame": 5,
+          "alphaBounds": [
+            152,
+            61,
+            368,
+            232
+          ],
+          "heightIncludingEffects": 171
+        },
+        {
+          "frame": 6,
+          "alphaBounds": [
+            78,
+            48,
+            297,
+            232
+          ],
+          "heightIncludingEffects": 184
+        },
+        {
+          "frame": 7,
+          "alphaBounds": [
+            41,
+            43,
+            380,
+            232
+          ],
+          "heightIncludingEffects": 189
+        },
+        {
+          "frame": 8,
+          "alphaBounds": [
+            107,
+            60,
+            341,
+            232
+          ],
+          "heightIncludingEffects": 172
+        },
+        {
+          "frame": 9,
+          "alphaBounds": [
+            99,
+            52,
+            268,
+            232
+          ],
+          "heightIncludingEffects": 180
+        },
+        {
+          "frame": 10,
+          "alphaBounds": [
+            120,
+            46,
+            267,
+            232
+          ],
+          "heightIncludingEffects": 186
+        }
+      ],
+      "note": "Effect bounds are not body size. Dash/Backstep/Ultimate reference fullbody firstpose was calibrated200px in v7; other frames retain same source-wide scale."
+    },
+    {
+      "character": "Luna",
+      "action": "Walk",
+      "frames": [
+        {
+          "frame": 1,
+          "alphaBounds": [
+            4,
+            33,
+            185,
+            232
+          ],
+          "heightIncludingEffects": 199
+        },
+        {
+          "frame": 2,
+          "alphaBounds": [
+            4,
+            32,
+            184,
+            232
+          ],
+          "heightIncludingEffects": 200
+        },
+        {
+          "frame": 3,
+          "alphaBounds": [
+            10,
+            32,
+            188,
+            232
+          ],
+          "heightIncludingEffects": 200
+        },
+        {
+          "frame": 4,
+          "alphaBounds": [
+            4,
+            34,
+            177,
+            232
+          ],
+          "heightIncludingEffects": 198
+        },
+        {
+          "frame": 5,
+          "alphaBounds": [
+            15,
+            31,
+            188,
+            232
+          ],
+          "heightIncludingEffects": 201
+        },
+        {
+          "frame": 6,
+          "alphaBounds": [
+            5,
+            33,
+            183,
+            232
+          ],
+          "heightIncludingEffects": 199
+        },
+        {
+          "frame": 7,
+          "alphaBounds": [
+            4,
+            32,
+            186,
+            232
+          ],
+          "heightIncludingEffects": 200
+        },
+        {
+          "frame": 8,
+          "alphaBounds": [
+            4,
+            30,
+            187,
+            232
+          ],
+          "heightIncludingEffects": 202
+        },
+        {
+          "frame": 9,
+          "alphaBounds": [
+            4,
+            38,
+            184,
+            232
+          ],
+          "heightIncludingEffects": 194
+        },
+        {
+          "frame": 10,
+          "alphaBounds": [
+            4,
+            32,
+            186,
+            232
+          ],
+          "heightIncludingEffects": 200
+        }
+      ],
+      "note": "Effect bounds are not body size. Dash/Backstep/Ultimate reference fullbody firstpose was calibrated200px in v7; other frames retain same source-wide scale."
+    },
+    {
+      "character": "Luna",
+      "action": "Block",
+      "frames": [
+        {
+          "frame": 1,
+          "alphaBounds": [
+            42,
+            34,
+            233,
+            232
+          ],
+          "heightIncludingEffects": 198
+        },
+        {
+          "frame": 2,
+          "alphaBounds": [
+            4,
+            29,
+            237,
+            232
+          ],
+          "heightIncludingEffects": 203
+        },
+        {
+          "frame": 3,
+          "alphaBounds": [
+            36,
+            31,
+            242,
+            232
+          ],
+          "heightIncludingEffects": 201
+        },
+        {
+          "frame": 4,
+          "alphaBounds": [
+            4,
+            28,
+            221,
+            232
+          ],
+          "heightIncludingEffects": 204
+        },
+        {
+          "frame": 5,
+          "alphaBounds": [
+            4,
+            34,
+            202,
+            232
+          ],
+          "heightIncludingEffects": 198
+        },
+        {
+          "frame": 6,
+          "alphaBounds": [
+            45,
+            35,
+            243,
+            232
+          ],
+          "heightIncludingEffects": 197
+        },
+        {
+          "frame": 7,
+          "alphaBounds": [
+            31,
+            36,
+            252,
+            232
+          ],
+          "heightIncludingEffects": 196
+        },
+        {
+          "frame": 8,
+          "alphaBounds": [
+            4,
+            35,
+            218,
+            232
+          ],
+          "heightIncludingEffects": 197
+        },
+        {
+          "frame": 9,
+          "alphaBounds": [
+            45,
+            32,
+            246,
+            232
+          ],
+          "heightIncludingEffects": 200
+        },
+        {
+          "frame": 10,
+          "alphaBounds": [
+            43,
+            36,
+            230,
+            232
+          ],
+          "heightIncludingEffects": 196
+        }
+      ],
+      "note": "Effect bounds are not body size. Dash/Backstep/Ultimate reference fullbody firstpose was calibrated200px in v7; other frames retain same source-wide scale."
+    },
+    {
+      "character": "Luna",
+      "action": "Punch",
+      "frames": [
+        {
+          "frame": 1,
+          "alphaBounds": [
+            4,
+            38,
+            190,
+            232
+          ],
+          "heightIncludingEffects": 194
+        },
+        {
+          "frame": 2,
+          "alphaBounds": [
+            4,
+            39,
+            204,
+            232
+          ],
+          "heightIncludingEffects": 193
+        },
+        {
+          "frame": 3,
+          "alphaBounds": [
+            4,
+            39,
+            195,
+            232
+          ],
+          "heightIncludingEffects": 193
+        },
+        {
+          "frame": 4,
+          "alphaBounds": [
+            4,
+            44,
+            232,
+            232
+          ],
+          "heightIncludingEffects": 188
+        },
+        {
+          "frame": 5,
+          "alphaBounds": [
+            4,
+            41,
+            210,
+            232
+          ],
+          "heightIncludingEffects": 191
+        },
+        {
+          "frame": 6,
+          "alphaBounds": [
+            4,
+            34,
+            221,
+            232
+          ],
+          "heightIncludingEffects": 198
+        },
+        {
+          "frame": 7,
+          "alphaBounds": [
+            24,
+            35,
+            252,
+            232
+          ],
+          "heightIncludingEffects": 197
+        },
+        {
+          "frame": 8,
+          "alphaBounds": [
+            16,
+            38,
+            252,
+            232
+          ],
+          "heightIncludingEffects": 194
+        },
+        {
+          "frame": 9,
+          "alphaBounds": [
+            50,
+            40,
+            232,
+            232
+          ],
+          "heightIncludingEffects": 192
+        },
+        {
+          "frame": 10,
+          "alphaBounds": [
+            14,
+            38,
+            189,
+            232
+          ],
+          "heightIncludingEffects": 194
+        }
+      ],
+      "note": "Effect bounds are not body size. Dash/Backstep/Ultimate reference fullbody firstpose was calibrated200px in v7; other frames retain same source-wide scale."
+    },
+    {
+      "character": "Luna",
+      "action": "Kick",
+      "frames": [
+        {
+          "frame": 1,
+          "alphaBounds": [
+            54,
+            34,
+            236,
+            232
+          ],
+          "heightIncludingEffects": 198
+        },
+        {
+          "frame": 2,
+          "alphaBounds": [
+            20,
+            62,
+            237,
+            232
+          ],
+          "heightIncludingEffects": 170
+        },
+        {
+          "frame": 3,
+          "alphaBounds": [
+            14,
+            28,
+            203,
+            232
+          ],
+          "heightIncludingEffects": 204
+        },
+        {
+          "frame": 4,
+          "alphaBounds": [
+            9,
+            38,
+            240,
+            232
+          ],
+          "heightIncludingEffects": 194
+        },
+        {
+          "frame": 5,
+          "alphaBounds": [
+            4,
+            41,
+            197,
+            232
+          ],
+          "heightIncludingEffects": 191
+        },
+        {
+          "frame": 6,
+          "alphaBounds": [
+            24,
+            31,
+            252,
+            232
+          ],
+          "heightIncludingEffects": 201
+        },
+        {
+          "frame": 7,
+          "alphaBounds": [
+            47,
+            44,
+            236,
+            232
+          ],
+          "heightIncludingEffects": 188
+        },
+        {
+          "frame": 8,
+          "alphaBounds": [
+            45,
+            61,
+            252,
+            232
+          ],
+          "heightIncludingEffects": 171
+        },
+        {
+          "frame": 9,
+          "alphaBounds": [
+            52,
+            41,
+            245,
+            232
+          ],
+          "heightIncludingEffects": 191
+        },
+        {
+          "frame": 10,
+          "alphaBounds": [
+            37,
+            40,
+            226,
+            232
+          ],
+          "heightIncludingEffects": 192
+        }
+      ],
+      "note": "Effect bounds are not body size. Dash/Backstep/Ultimate reference fullbody firstpose was calibrated200px in v7; other frames retain same source-wide scale."
+    },
+    {
+      "character": "Luna",
+      "action": "Special",
+      "frames": [
+        {
+          "frame": 1,
+          "alphaBounds": [
+            114,
+            40,
+            308,
+            232
+          ],
+          "heightIncludingEffects": 192
+        },
+        {
+          "frame": 2,
+          "alphaBounds": [
+            59,
+            42,
+            282,
+            232
+          ],
+          "heightIncludingEffects": 190
+        },
+        {
+          "frame": 3,
+          "alphaBounds": [
+            100,
+            44,
+            354,
+            232
+          ],
+          "heightIncludingEffects": 188
+        },
+        {
+          "frame": 4,
+          "alphaBounds": [
+            44,
+            65,
+            279,
+            232
+          ],
+          "heightIncludingEffects": 167
+        },
+        {
+          "frame": 5,
+          "alphaBounds": [
+            34,
+            51,
+            254,
+            232
+          ],
+          "heightIncludingEffects": 181
+        },
+        {
+          "frame": 6,
+          "alphaBounds": [
+            115,
+            54,
+            318,
+            232
+          ],
+          "heightIncludingEffects": 178
+        },
+        {
+          "frame": 7,
+          "alphaBounds": [
+            49,
+            53,
+            287,
+            232
+          ],
+          "heightIncludingEffects": 179
+        },
+        {
+          "frame": 8,
+          "alphaBounds": [
+            66,
+            56,
+            249,
+            232
+          ],
+          "heightIncludingEffects": 176
+        },
+        {
+          "frame": 9,
+          "alphaBounds": [
+            94,
+            73,
+            307,
+            232
+          ],
+          "heightIncludingEffects": 159
+        },
+        {
+          "frame": 10,
+          "alphaBounds": [
+            97,
+            52,
+            289,
+            232
+          ],
+          "heightIncludingEffects": 180
+        }
+      ],
+      "note": "Effect bounds are not body size. Dash/Backstep/Ultimate reference fullbody firstpose was calibrated200px in v7; other frames retain same source-wide scale."
+    },
+    {
+      "character": "Luna",
+      "action": "Dash",
+      "frames": [
+        {
+          "frame": 1,
+          "alphaBounds": [
+            71,
+            32,
+            245,
+            232
+          ],
+          "heightIncludingEffects": 200
+        },
+        {
+          "frame": 2,
+          "alphaBounds": [
+            144,
+            56,
+            373,
+            232
+          ],
+          "heightIncludingEffects": 176
+        },
+        {
+          "frame": 3,
+          "alphaBounds": [
+            129,
+            75,
+            369,
+            232
+          ],
+          "heightIncludingEffects": 157
+        },
+        {
+          "frame": 4,
+          "alphaBounds": [
+            99,
+            75,
+            380,
+            232
+          ],
+          "heightIncludingEffects": 157
+        },
+        {
+          "frame": 5,
+          "alphaBounds": [
+            103,
+            77,
+            380,
+            232
+          ],
+          "heightIncludingEffects": 155
+        },
+        {
+          "frame": 6,
+          "alphaBounds": [
+            131,
+            76,
+            380,
+            232
+          ],
+          "heightIncludingEffects": 156
+        },
+        {
+          "frame": 7,
+          "alphaBounds": [
+            155,
+            77,
+            340,
+            232
+          ],
+          "heightIncludingEffects": 155
+        },
+        {
+          "frame": 8,
+          "alphaBounds": [
+            148,
+            62,
+            312,
+            232
+          ],
+          "heightIncludingEffects": 170
+        },
+        {
+          "frame": 9,
+          "alphaBounds": [
+            125,
+            39,
+            295,
+            232
+          ],
+          "heightIncludingEffects": 193
+        },
+        {
+          "frame": 10,
+          "alphaBounds": [
+            87,
+            32,
+            242,
+            232
+          ],
+          "heightIncludingEffects": 200
+        }
+      ],
+      "note": "Effect bounds are not body size. Dash/Backstep/Ultimate reference fullbody firstpose was calibrated200px in v7; other frames retain same source-wide scale."
+    },
+    {
+      "character": "Luna",
+      "action": "Backstep",
+      "frames": [
+        {
+          "frame": 1,
+          "alphaBounds": [
+            68,
+            30,
+            234,
+            232
+          ],
+          "heightIncludingEffects": 202
+        },
+        {
+          "frame": 2,
+          "alphaBounds": [
+            13,
+            50,
+            262,
+            232
+          ],
+          "heightIncludingEffects": 182
+        },
+        {
+          "frame": 3,
+          "alphaBounds": [
+            6,
+            55,
+            255,
+            232
+          ],
+          "heightIncludingEffects": 177
+        },
+        {
+          "frame": 4,
+          "alphaBounds": [
+            4,
+            61,
+            264,
+            232
+          ],
+          "heightIncludingEffects": 171
+        },
+        {
+          "frame": 5,
+          "alphaBounds": [
+            4,
+            61,
+            249,
+            232
+          ],
+          "heightIncludingEffects": 171
+        },
+        {
+          "frame": 6,
+          "alphaBounds": [
+            14,
+            59,
+            244,
+            232
+          ],
+          "heightIncludingEffects": 173
+        },
+        {
+          "frame": 7,
+          "alphaBounds": [
+            38,
+            53,
+            242,
+            232
+          ],
+          "heightIncludingEffects": 179
+        },
+        {
+          "frame": 8,
+          "alphaBounds": [
+            56,
+            50,
+            241,
+            232
+          ],
+          "heightIncludingEffects": 182
+        },
+        {
+          "frame": 9,
+          "alphaBounds": [
+            81,
+            40,
+            232,
+            232
+          ],
+          "heightIncludingEffects": 192
+        },
+        {
+          "frame": 10,
+          "alphaBounds": [
+            94,
+            30,
+            241,
+            232
+          ],
+          "heightIncludingEffects": 202
+        }
+      ],
+      "note": "Effect bounds are not body size. Dash/Backstep/Ultimate reference fullbody firstpose was calibrated200px in v7; other frames retain same source-wide scale."
+    },
+    {
+      "character": "Luna",
+      "action": "Ultimate",
+      "frames": [
+        {
+          "frame": 1,
+          "alphaBounds": [
+            69,
+            35,
+            250,
+            232
+          ],
+          "heightIncludingEffects": 197
+        },
+        {
+          "frame": 2,
+          "alphaBounds": [
+            66,
+            16,
+            315,
+            232
+          ],
+          "heightIncludingEffects": 216
+        },
+        {
+          "frame": 3,
+          "alphaBounds": [
+            75,
+            35,
+            313,
+            232
+          ],
+          "heightIncludingEffects": 197
+        },
+        {
+          "frame": 4,
+          "alphaBounds": [
+            63,
+            4,
+            337,
+            232
+          ],
+          "heightIncludingEffects": 228
+        },
+        {
+          "frame": 5,
+          "alphaBounds": [
+            50,
+            35,
+            300,
+            232
+          ],
+          "heightIncludingEffects": 197
+        },
+        {
+          "frame": 6,
+          "alphaBounds": [
+            52,
+            32,
+            321,
+            232
+          ],
+          "heightIncludingEffects": 200
+        },
+        {
+          "frame": 7,
+          "alphaBounds": [
+            41,
+            38,
+            348,
+            232
+          ],
+          "heightIncludingEffects": 194
+        },
+        {
+          "frame": 8,
+          "alphaBounds": [
+            64,
+            32,
+            311,
+            232
+          ],
+          "heightIncludingEffects": 200
+        },
+        {
+          "frame": 9,
+          "alphaBounds": [
+            81,
+            29,
+            282,
+            232
+          ],
+          "heightIncludingEffects": 203
+        },
+        {
+          "frame": 10,
+          "alphaBounds": [
+            85,
+            25,
+            257,
+            232
+          ],
+          "heightIncludingEffects": 207
+        }
+      ],
+      "note": "Effect bounds are not body size. Dash/Backstep/Ultimate reference fullbody firstpose was calibrated200px in v7; other frames retain same source-wide scale."
+    },
+    {
+      "character": "Bram",
+      "action": "Walk",
+      "frames": [
+        {
+          "frame": 1,
+          "alphaBounds": [
+            66,
+            32,
+            217,
+            232
+          ],
+          "heightIncludingEffects": 200
+        },
+        {
+          "frame": 2,
+          "alphaBounds": [
+            69,
+            30,
+            227,
+            232
+          ],
+          "heightIncludingEffects": 202
+        },
+        {
+          "frame": 3,
+          "alphaBounds": [
+            61,
+            33,
+            214,
+            232
+          ],
+          "heightIncludingEffects": 199
+        },
+        {
+          "frame": 4,
+          "alphaBounds": [
+            12,
+            33,
+            175,
+            232
+          ],
+          "heightIncludingEffects": 199
+        },
+        {
+          "frame": 5,
+          "alphaBounds": [
+            20,
+            35,
+            191,
+            232
+          ],
+          "heightIncludingEffects": 197
+        },
+        {
+          "frame": 6,
+          "alphaBounds": [
+            83,
+            31,
+            230,
+            232
+          ],
+          "heightIncludingEffects": 201
+        },
+        {
+          "frame": 7,
+          "alphaBounds": [
+            81,
+            33,
+            233,
+            232
+          ],
+          "heightIncludingEffects": 199
+        },
+        {
+          "frame": 8,
+          "alphaBounds": [
+            69,
+            32,
+            225,
+            232
+          ],
+          "heightIncludingEffects": 200
+        },
+        {
+          "frame": 9,
+          "alphaBounds": [
+            42,
+            31,
+            203,
+            232
+          ],
+          "heightIncludingEffects": 201
+        },
+        {
+          "frame": 10,
+          "alphaBounds": [
+            18,
+            32,
+            179,
+            232
+          ],
+          "heightIncludingEffects": 200
+        }
+      ],
+      "note": "Effect bounds are not body size. Dash/Backstep/Ultimate reference fullbody firstpose was calibrated200px in v7; other frames retain same source-wide scale."
+    },
+    {
+      "character": "Bram",
+      "action": "Block",
+      "frames": [
+        {
+          "frame": 1,
+          "alphaBounds": [
+            63,
+            33,
+            224,
+            232
+          ],
+          "heightIncludingEffects": 199
+        },
+        {
+          "frame": 2,
+          "alphaBounds": [
+            61,
+            34,
+            244,
+            232
+          ],
+          "heightIncludingEffects": 198
+        },
+        {
+          "frame": 3,
+          "alphaBounds": [
+            77,
+            35,
+            252,
+            232
+          ],
+          "heightIncludingEffects": 197
+        },
+        {
+          "frame": 4,
+          "alphaBounds": [
+            78,
+            36,
+            250,
+            232
+          ],
+          "heightIncludingEffects": 196
+        },
+        {
+          "frame": 5,
+          "alphaBounds": [
+            79,
+            36,
+            252,
+            232
+          ],
+          "heightIncludingEffects": 196
+        },
+        {
+          "frame": 6,
+          "alphaBounds": [
+            68,
+            39,
+            252,
+            232
+          ],
+          "heightIncludingEffects": 193
+        },
+        {
+          "frame": 7,
+          "alphaBounds": [
+            77,
+            36,
+            252,
+            232
+          ],
+          "heightIncludingEffects": 196
+        },
+        {
+          "frame": 8,
+          "alphaBounds": [
+            66,
+            37,
+            230,
+            232
+          ],
+          "heightIncludingEffects": 195
+        },
+        {
+          "frame": 9,
+          "alphaBounds": [
+            70,
+            44,
+            226,
+            232
+          ],
+          "heightIncludingEffects": 188
+        },
+        {
+          "frame": 10,
+          "alphaBounds": [
+            64,
+            32,
+            221,
+            232
+          ],
+          "heightIncludingEffects": 200
+        }
+      ],
+      "note": "Effect bounds are not body size. Dash/Backstep/Ultimate reference fullbody firstpose was calibrated200px in v7; other frames retain same source-wide scale."
+    },
+    {
+      "character": "Bram",
+      "action": "Punch",
+      "frames": [
+        {
+          "frame": 1,
+          "alphaBounds": [
+            68,
+            32,
+            230,
+            232
+          ],
+          "heightIncludingEffects": 200
+        },
+        {
+          "frame": 2,
+          "alphaBounds": [
+            21,
+            31,
+            199,
+            232
+          ],
+          "heightIncludingEffects": 201
+        },
+        {
+          "frame": 3,
+          "alphaBounds": [
+            24,
+            33,
+            192,
+            232
+          ],
+          "heightIncludingEffects": 199
+        },
+        {
+          "frame": 4,
+          "alphaBounds": [
+            14,
+            34,
+            230,
+            232
+          ],
+          "heightIncludingEffects": 198
+        },
+        {
+          "frame": 5,
+          "alphaBounds": [
+            20,
+            36,
+            186,
+            232
+          ],
+          "heightIncludingEffects": 196
+        },
+        {
+          "frame": 6,
+          "alphaBounds": [
+            70,
+            34,
+            235,
+            232
+          ],
+          "heightIncludingEffects": 198
+        },
+        {
+          "frame": 7,
+          "alphaBounds": [
+            15,
+            33,
+            189,
+            232
+          ],
+          "heightIncludingEffects": 199
+        },
+        {
+          "frame": 8,
+          "alphaBounds": [
+            42,
+            36,
+            252,
+            232
+          ],
+          "heightIncludingEffects": 196
+        },
+        {
+          "frame": 9,
+          "alphaBounds": [
+            81,
+            38,
+            239,
+            232
+          ],
+          "heightIncludingEffects": 194
+        },
+        {
+          "frame": 10,
+          "alphaBounds": [
+            67,
+            33,
+            234,
+            232
+          ],
+          "heightIncludingEffects": 199
+        }
+      ],
+      "note": "Effect bounds are not body size. Dash/Backstep/Ultimate reference fullbody firstpose was calibrated200px in v7; other frames retain same source-wide scale."
+    },
+    {
+      "character": "Bram",
+      "action": "Kick",
+      "frames": [
+        {
+          "frame": 1,
+          "alphaBounds": [
+            66,
+            30,
+            231,
+            232
+          ],
+          "heightIncludingEffects": 202
+        },
+        {
+          "frame": 2,
+          "alphaBounds": [
+            59,
+            29,
+            228,
+            232
+          ],
+          "heightIncludingEffects": 203
+        },
+        {
+          "frame": 3,
+          "alphaBounds": [
+            30,
+            31,
+            205,
+            232
+          ],
+          "heightIncludingEffects": 201
+        },
+        {
+          "frame": 4,
+          "alphaBounds": [
+            30,
+            31,
+            214,
+            232
+          ],
+          "heightIncludingEffects": 201
+        },
+        {
+          "frame": 5,
+          "alphaBounds": [
+            18,
+            29,
+            229,
+            232
+          ],
+          "heightIncludingEffects": 203
+        },
+        {
+          "frame": 6,
+          "alphaBounds": [
+            27,
+            35,
+            209,
+            232
+          ],
+          "heightIncludingEffects": 197
+        },
+        {
+          "frame": 7,
+          "alphaBounds": [
+            36,
+            29,
+            209,
+            232
+          ],
+          "heightIncludingEffects": 203
+        },
+        {
+          "frame": 8,
+          "alphaBounds": [
+            51,
+            26,
+            207,
+            232
+          ],
+          "heightIncludingEffects": 206
+        },
+        {
+          "frame": 9,
+          "alphaBounds": [
+            62,
+            30,
+            215,
+            232
+          ],
+          "heightIncludingEffects": 202
+        },
+        {
+          "frame": 10,
+          "alphaBounds": [
+            64,
+            31,
+            224,
+            232
+          ],
+          "heightIncludingEffects": 201
+        }
+      ],
+      "note": "Effect bounds are not body size. Dash/Backstep/Ultimate reference fullbody firstpose was calibrated200px in v7; other frames retain same source-wide scale."
+    },
+    {
+      "character": "Bram",
+      "action": "Special",
+      "frames": [
+        {
+          "frame": 1,
+          "alphaBounds": [
+            89,
+            34,
+            240,
+            232
+          ],
+          "heightIncludingEffects": 198
+        },
+        {
+          "frame": 2,
+          "alphaBounds": [
+            140,
+            61,
+            318,
+            232
+          ],
+          "heightIncludingEffects": 171
+        },
+        {
+          "frame": 3,
+          "alphaBounds": [
+            138,
+            68,
+            321,
+            232
+          ],
+          "heightIncludingEffects": 164
+        },
+        {
+          "frame": 4,
+          "alphaBounds": [
+            140,
+            55,
+            302,
+            232
+          ],
+          "heightIncludingEffects": 177
+        },
+        {
+          "frame": 5,
+          "alphaBounds": [
+            128,
+            37,
+            320,
+            232
+          ],
+          "heightIncludingEffects": 195
+        },
+        {
+          "frame": 6,
+          "alphaBounds": [
+            74,
+            82,
+            301,
+            232
+          ],
+          "heightIncludingEffects": 150
+        },
+        {
+          "frame": 7,
+          "alphaBounds": [
+            84,
+            85,
+            316,
+            232
+          ],
+          "heightIncludingEffects": 147
+        },
+        {
+          "frame": 8,
+          "alphaBounds": [
+            92,
+            73,
+            299,
+            232
+          ],
+          "heightIncludingEffects": 159
+        },
+        {
+          "frame": 9,
+          "alphaBounds": [
+            113,
+            62,
+            300,
+            232
+          ],
+          "heightIncludingEffects": 170
+        },
+        {
+          "frame": 10,
+          "alphaBounds": [
+            130,
+            53,
+            296,
+            232
+          ],
+          "heightIncludingEffects": 179
+        }
+      ],
+      "note": "Effect bounds are not body size. Dash/Backstep/Ultimate reference fullbody firstpose was calibrated200px in v7; other frames retain same source-wide scale."
+    },
+    {
+      "character": "Bram",
+      "action": "Dash",
+      "frames": [
+        {
+          "frame": 1,
+          "alphaBounds": [
+            91,
+            32,
+            251,
+            232
+          ],
+          "heightIncludingEffects": 200
+        },
+        {
+          "frame": 2,
+          "alphaBounds": [
+            98,
+            50,
+            278,
+            232
+          ],
+          "heightIncludingEffects": 182
+        },
+        {
+          "frame": 3,
+          "alphaBounds": [
+            134,
+            48,
+            363,
+            232
+          ],
+          "heightIncludingEffects": 184
+        },
+        {
+          "frame": 4,
+          "alphaBounds": [
+            137,
+            51,
+            362,
+            232
+          ],
+          "heightIncludingEffects": 181
+        },
+        {
+          "frame": 5,
+          "alphaBounds": [
+            123,
+            53,
+            376,
+            232
+          ],
+          "heightIncludingEffects": 179
+        },
+        {
+          "frame": 6,
+          "alphaBounds": [
+            126,
+            58,
+            356,
+            232
+          ],
+          "heightIncludingEffects": 174
+        },
+        {
+          "frame": 7,
+          "alphaBounds": [
+            133,
+            43,
+            343,
+            232
+          ],
+          "heightIncludingEffects": 189
+        },
+        {
+          "frame": 8,
+          "alphaBounds": [
+            138,
+            49,
+            335,
+            232
+          ],
+          "heightIncludingEffects": 183
+        },
+        {
+          "frame": 9,
+          "alphaBounds": [
+            88,
+            44,
+            255,
+            232
+          ],
+          "heightIncludingEffects": 188
+        },
+        {
+          "frame": 10,
+          "alphaBounds": [
+            91,
+            38,
+            244,
+            232
+          ],
+          "heightIncludingEffects": 194
+        }
+      ],
+      "note": "Effect bounds are not body size. Dash/Backstep/Ultimate reference fullbody firstpose was calibrated200px in v7; other frames retain same source-wide scale."
+    },
+    {
+      "character": "Bram",
+      "action": "Backstep",
+      "frames": [
+        {
+          "frame": 1,
+          "alphaBounds": [
+            90,
+            35,
+            248,
+            232
+          ],
+          "heightIncludingEffects": 197
+        },
+        {
+          "frame": 2,
+          "alphaBounds": [
+            94,
+            43,
+            285,
+            232
+          ],
+          "heightIncludingEffects": 189
+        },
+        {
+          "frame": 3,
+          "alphaBounds": [
+            67,
+            50,
+            271,
+            232
+          ],
+          "heightIncludingEffects": 182
+        },
+        {
+          "frame": 4,
+          "alphaBounds": [
+            104,
+            50,
+            308,
+            232
+          ],
+          "heightIncludingEffects": 182
+        },
+        {
+          "frame": 5,
+          "alphaBounds": [
+            100,
+            58,
+            306,
+            232
+          ],
+          "heightIncludingEffects": 174
+        },
+        {
+          "frame": 6,
+          "alphaBounds": [
+            110,
+            60,
+            301,
+            232
+          ],
+          "heightIncludingEffects": 172
+        },
+        {
+          "frame": 7,
+          "alphaBounds": [
+            101,
+            60,
+            293,
+            232
+          ],
+          "heightIncludingEffects": 172
+        },
+        {
+          "frame": 8,
+          "alphaBounds": [
+            110,
+            61,
+            291,
+            232
+          ],
+          "heightIncludingEffects": 171
+        },
+        {
+          "frame": 9,
+          "alphaBounds": [
+            79,
+            45,
+            240,
+            232
+          ],
+          "heightIncludingEffects": 187
+        },
+        {
+          "frame": 10,
+          "alphaBounds": [
+            93,
+            38,
+            246,
+            232
+          ],
+          "heightIncludingEffects": 194
+        }
+      ],
+      "note": "Effect bounds are not body size. Dash/Backstep/Ultimate reference fullbody firstpose was calibrated200px in v7; other frames retain same source-wide scale."
+    },
+    {
+      "character": "Bram",
+      "action": "Ultimate",
+      "frames": [
+        {
+          "frame": 1,
+          "alphaBounds": [
+            87,
+            42,
+            249,
+            232
+          ],
+          "heightIncludingEffects": 190
+        },
+        {
+          "frame": 2,
+          "alphaBounds": [
+            91,
+            75,
+            256,
+            232
+          ],
+          "heightIncludingEffects": 157
+        },
+        {
+          "frame": 3,
+          "alphaBounds": [
+            95,
+            69,
+            326,
+            232
+          ],
+          "heightIncludingEffects": 163
+        },
+        {
+          "frame": 4,
+          "alphaBounds": [
+            109,
+            39,
+            318,
+            232
+          ],
+          "heightIncludingEffects": 193
+        },
+        {
+          "frame": 5,
+          "alphaBounds": [
+            112,
+            36,
+            327,
+            232
+          ],
+          "heightIncludingEffects": 196
+        },
+        {
+          "frame": 6,
+          "alphaBounds": [
+            79,
+            50,
+            305,
+            232
+          ],
+          "heightIncludingEffects": 182
+        },
+        {
+          "frame": 7,
+          "alphaBounds": [
+            72,
+            67,
+            315,
+            232
+          ],
+          "heightIncludingEffects": 165
+        },
+        {
+          "frame": 8,
+          "alphaBounds": [
+            80,
+            84,
+            306,
+            232
+          ],
+          "heightIncludingEffects": 148
+        },
+        {
+          "frame": 9,
+          "alphaBounds": [
+            83,
+            67,
+            257,
+            232
+          ],
+          "heightIncludingEffects": 165
+        },
+        {
+          "frame": 10,
+          "alphaBounds": [
+            80,
+            43,
+            258,
+            232
+          ],
+          "heightIncludingEffects": 189
+        }
+      ],
+      "note": "Effect bounds are not body size. Dash/Backstep/Ultimate reference fullbody firstpose was calibrated200px in v7; other frames retain same source-wide scale."
+    }
+  ],
+  "recommendations": {
+    "Fern": 160,
+    "Ember": 165,
+    "Luna": 160,
+    "Bram": 151
+  },
+  "recommendationNote": "Optional perceived-size correction only. Existing full body heights are200px. Ember hat/head is larger relative to torso; Bram has longer legs/smaller head. One PPU per character across all states preserves authored pose proportions; do not normalize individual animation frames by effect bounds."
+}

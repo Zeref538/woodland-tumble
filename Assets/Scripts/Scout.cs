@@ -11,15 +11,15 @@ public class Scout : MonoBehaviour
     public int CharacterIndex { get; private set; }
     public string SkillName => SkillIndex == 0 ? "VINE BOLT" : SkillIndex == 1 ? "FIRE BOLT" : SkillIndex == 2 ? "FROST WAVE" : "STONE WAVE";
     public string UltimateName => SkillIndex == 0 ? "WILDROOT PRISON" : SkillIndex == 1 ? "PHOENIX COMBO" : SkillIndex == 2 ? "MOONFROST SEAL" : "WORLD SHATTER";
-    public const float SpecialCooldown = 6;
-    public float SpecialCooldownRemaining => Mathf.Max(0, nextSpecial - Time.time);
-    public float SpecialReady => 1 - Mathf.Clamp01(SpecialCooldownRemaining / SpecialCooldown);
+    public const float SpecialCooldown = 0;
+    public float SpecialCooldownRemaining => 0;
+    public float SpecialReady => Charging ? Charge : 1;
     public bool UltimateUsed { get; private set; }
     public bool UltimateActive { get; private set; }
     public bool UltimateReady => !UltimateUsed && !KnockedOut && Health > 0 && Health <= 25;
     public static event System.Action<Scout, bool> UltimateCinematic;
     public static event System.Action<Scout, Scout> UltimateImpact;
-    float nextSpecial;
+    bool pointerGuard, padUpHeld;
     bool specialRequested, ultimateRequested, ultimateChordHeld, victoryPlaying;
     int SkillIndex => characterSelected ? CharacterIndex : id;
     bool characterSelected;
@@ -136,7 +136,8 @@ public class Scout : MonoBehaviour
         face = id == 0 ? 1 : -1;
         Health = maxHealth;
         Shield = shieldCapacity; Blocking = Charging = blockHeld = chargeHeld = false;
-        nextEnergyRegen = nextEvade = nextGrab = nextSpecial = 0;
+        nextEnergyRegen = nextEvade = nextGrab = 0;
+        pointerGuard = padUpHeld = false;
         UltimateUsed = ultimateChordHeld = victoryPlaying = false;
         slowedUntil = rootedUntil = 0; groundBody = null;
         nextParry = 0; shieldStarted = -10; shieldBrokenUntil = nextWard = nextDash = dashUntil = doubleJumpUntil = 0;
@@ -186,7 +187,7 @@ public class Scout : MonoBehaviour
             }
             var pad = game.GetGamepad(id);
             // Losing a held special cancels its charge rather than firing an unintended smash.
-            if (pad != previousGamepad && chargeHeld && !held) { Charging = false; chargeHeld = false; }
+            if (pad != previousGamepad) { if(previousGamepad!=null && Charging)CancelSpecialCharge();padUpHeld=false; }
             if (pad != previousGamepad) ultimateChordHeld = false;
             previousGamepad = pad;
             if (WoodlandGame.PadMenuChord(pad) && !held) { Charging = false; chargeHeld = false; }
@@ -201,10 +202,11 @@ public class Scout : MonoBehaviour
                     // The ultimate chord has priority over every ordinary button action.
                     jumpRequested = pushRequested = punchRequested = backstepRequested = dashRequested = specialRequested = false;
                 } else {
-                    jumpRequested |= pad.buttonSouth.wasPressedThisFrame;
+                    bool up=pad.dpad.up.isPressed || pad.leftStick.y.ReadValue()>.65f;
+                    jumpRequested |= up && !padUpHeld;padUpHeld=up;
                     punchRequested |= pad.buttonWest.wasPressedThisFrame;
                     pushRequested |= pad.buttonEast.wasPressedThisFrame;
-                    blockHeld |= pad.leftTrigger.isPressed;
+                    blockHeld |= pad.buttonSouth.isPressed || pad.leftTrigger.isPressed;
                     backstepRequested |= pad.leftShoulder.wasPressedThisFrame;
                     dashRequested |= pad.rightShoulder.wasPressedThisFrame;
                     specialRequested |= pad.buttonNorth.wasPressedThisFrame;
@@ -214,17 +216,18 @@ public class Scout : MonoBehaviour
             chargePressed |= held && !chargeHeld;
             chargeReleased |= !held && chargeHeld;
             chargeHeld = held;
-            if (pad == null) ultimateChordHeld = false;
+            if (pad == null) { ultimateChordHeld = false;padUpHeld=false; }
             else if (WoodlandGame.PadMenuChord(pad)) ultimateChordHeld = pad.leftTrigger.isPressed && pad.rightTrigger.isPressed;
         } else { axis = 0; blockHeld = chargeHeld = false; }
         if (game.playing && transform.position.y < game.fallBoundary) KnockOut();
-        SetBlock(blockHeld && game.playing);
+        if(Charging && (!CanAct || !game.playing))CancelSpecialCharge();
+        SetBlock((blockHeld || pointerGuard) && game.playing);
         if (Blocking) {
             Shield = Mathf.Max(0, Shield - shieldDrain * Time.deltaTime);
             if (Shield <= 0) BreakGuard();
             else if (Time.time >= nextWard) { nextWard = Time.time + .07f; WoodlandEffects.Instance?.Ward(Body.position, face, Element, Shield / shieldCapacity); }
-        } else if (Time.time >= shieldBrokenUntil && Time.time >= nextEnergyRegen) Shield = Mathf.Min(shieldCapacity, Shield + shieldRecovery * Time.deltaTime);
-        if (Charging && Time.time >= nextWard) { nextWard = Time.time + .08f; WoodlandEffects.Instance?.Windup(Body.position + Vector2.right * face * .45f, face, Element); }
+        } else if (!Charging && action!=3 && action!=5 && Time.time >= shieldBrokenUntil && Time.time >= nextEnergyRegen) Shield = Mathf.Min(shieldCapacity, Shield + shieldRecovery * Time.deltaTime);
+        if (Charging && Time.time >= nextWard) { nextWard = Time.time + .08f; WoodlandEffects.Instance?.ChargeAura(Body.position + Vector2.up*.15f, SkillIndex, Charge); }
         if (Charging && Charge >= 1) ReleaseSmash();
         string state = victoryPlaying ? "Victory" : KnockedOut ? "Knockout" : Time.time < hurtUntil ? "Hurt" : Blocking ? "Block" : Charging ? "Charge" : Time.time < dashUntil ? (AnimationState == "Backstep" ? "Backstep" : "Dash") : action != 0 ? actionAnimation : Time.time < doubleJumpUntil ? "DoubleJump" : !grounded && game.playing ? "Jump" : Mathf.Abs(axis) > .1f ? "Walk" : "Idle";
         PlayState(state);
@@ -442,7 +445,7 @@ public class Scout : MonoBehaviour
         if (!SpendStamina(10)) return false;
         nextDash = Time.time + dashCooldown; dashUntil = Time.time + .16f;
         Body.linearVelocity = new Vector2(face * dashSpeed, Mathf.Max(-2, Body.linearVelocity.y));
-        PlayState("Dash"); WoodlandEffects.Instance?.Dash(Body.position, face, Element);
+        PlayState("Dash"); WoodlandEffects.Instance?.Ghost(art,Element);WoodlandEffects.Instance?.Dash(Body.position, face, Element);
         return true;
     }
     public bool TryBackstep()
@@ -452,7 +455,7 @@ public class Scout : MonoBehaviour
         nextEvade = Time.time + .9f; dashUntil = Time.time + .14f;
         invulnerableUntil = Mathf.Max(invulnerableUntil, Time.time + .16f);
         Body.linearVelocity = new Vector2(-face * 7, Mathf.Max(-2, Body.linearVelocity.y));
-        PlayState("Backstep");
+        PlayState("Backstep");WoodlandEffects.Instance?.Ghost(art,Element);
         WoodlandEffects.Instance?.Dash(Body.position, -face, Color.Lerp(Element, Color.white, .5f));
         return true;
     }
@@ -478,7 +481,7 @@ public class Scout : MonoBehaviour
             other.Blocking = false;
             if (other.ReceiveHit(this, direction, false, .5f)) {
                 other.Body.AddForce(new Vector2(direction * 3, 2), ForceMode2D.Impulse);
-                WoodlandEffects.Instance?.ElementHit(other.Body.position, direction, Element, 1, id);
+                WoodlandEffects.Instance?.ElementHit(other.Body.position, direction, Element, 1, id, SkillIndex);
                 WoodlandEffects.Instance?.Impact(other.Body.position, direction, false, false);
             } else other.Blocking = guarded;
         }
@@ -497,26 +500,27 @@ public class Scout : MonoBehaviour
         Blocking = false; Shield = 0; shieldBrokenUntil = Time.time + 1.25f; hurtUntil = shieldBrokenUntil;
         WoodlandEffects.Instance?.GuardImpact(Body.position, face, Element, false, true);
     }
-    // Compatibility for existing callers; ordinary special input uses TrySpecial directly.
-    public bool BeginSmash()
-    {
-        if (!CanAct || Blocking || Charging || action != 0 || Time.time < dashUntil || Time.time < nextSpecial || Shield < 14) return false;
-        Charging = true; chargeStart = Time.time; PlayState("Charge");
-        return true;
-    }
+    public bool BeginSmash() => TrySpecial();
+    public void CancelSpecialCharge(){Charging=false;chargeHeld=false;chargePressed=chargeReleased=false;}
     public bool ReleaseSmash()
     {
-        if (!Charging) return false;
-        Charging = false;
-        return TrySpecial();
+        if(!Charging || Charge<1)return false;
+        if(!CanAct){CancelSpecialCharge();return false;}
+        Charging=false;StartCoroutine(RangedCast());return true;
     }
     public bool TrySpecial()
     {
-        if (!CanAct || Blocking || Charging || action != 0 || Time.time < dashUntil || Time.time < nextSpecial) return false;
-        if (!SpendStamina(14)) return false;
-        nextSpecial = Time.time + SpecialCooldown;
-        StartCoroutine(RangedCast());
+        if(!CanAct || Blocking || Charging || action!=0 || Time.time<dashUntil)return false;
+        if(!SpendStamina(14))return false;
+        Charging=true;chargeStart=Time.time;PlayState("Charge");
+        WoodlandEffects.Instance?.ChargeAura(Body.position,SkillIndex,0);
         return true;
+    }
+    public bool SetPointerGuard(bool held)
+    {
+        pointerGuard=held && CanAct && !Charging && action==0 && Time.time>=dashUntil;
+        if(!held)return SetBlock(blockHeld);
+        return SetBlock(pointerGuard);
     }
     IEnumerator RangedCast()
     {
@@ -536,8 +540,7 @@ public class Scout : MonoBehaviour
         for (int pulse = 0; pulse < 12; pulse++) {
             if (!game.playing || KnockedOut) yield break;
             Vector2 point = origin + Vector2.right * direction * (.6f + pulse * .6f);
-            Vector2 spray = skill == 0 ? Vector2.up : skill == 3 ? new Vector2(direction, .6f) : Vector2.right * direction;
-            WoodlandEffects.Instance?.Burst(point, spray, skill == 1 ? 10 : 6, Element, skill == 2 ? .8f : 1.4f);
+            WoodlandEffects.Instance?.RangedProjectile(point,direction,skill,1);
             float forward = (other.Body.position.x - origin.x) * direction;
             if (forward > 0 && forward <= 7.5f && Mathf.Abs(other.Body.position.x - point.x) < .65f && Mathf.Abs(other.Body.position.y - point.y) < 1.1f) {
                 float power = skill == 0 ? .95f : skill == 1 ? 1.05f : skill == 2 ? .85f : 1.1f;
@@ -574,7 +577,7 @@ public class Scout : MonoBehaviour
         UltimateActive = false;
         UltimateCinematic?.Invoke(this, false);
     }
-    void OnDisable() { CancelUltimate(); }
+    void OnDisable() { CancelUltimate();CancelSpecialCharge();pointerGuard=false; }
     bool UltimateHit(Scout other, float direction, float damage, float slow = 0, float root = 0, float lift = 0)
     {
         if (!CanAct || !other.ReceiveHit(this, direction, true, Mathf.Min(35, damage) / Mathf.Max(.01f, punchDamage))) return false;
@@ -592,8 +595,9 @@ public class Scout : MonoBehaviour
         int skill = SkillIndex;
         // The long tell gives the rival control and a chance to interrupt or escape.
         for (int i = 0; i < 5; i++) {
-            WoodlandEffects.Instance?.Windup(Body.position + Vector2.up * .25f, direction, Element);
-            yield return new WaitForSeconds(.11f);
+            WoodlandEffects.Instance?.ChargeAura(Body.position + Vector2.up * .25f, skill, i/4f);
+            WoodlandEffects.Instance?.Ghost(art,Element);
+            yield return new WaitForSeconds(.14f);
         }
         var game = WoodlandGame.Instance;
         var other = game.players[1 - id];
@@ -621,7 +625,7 @@ public class Scout : MonoBehaviour
             WoodlandEffects.Instance?.Burst(Body.position, Vector2.up, 26, Element, 3.5f);
             if (contact) UltimateHit(other, skill == 3 && Mathf.Abs(delta.x) > .01f ? Mathf.Sign(delta.x) : direction, skill == 3 ? 35 : 30, skill == 0 ? 1.1f : 0, skill == 0 ? .8f : 0, skill == 3 ? 4 : 0);
         }
-        yield return new WaitForSeconds(.3f);
+        yield return new WaitForSeconds(.45f);
         action = 0;
         CancelUltimate();
     }
@@ -659,7 +663,7 @@ public class Scout : MonoBehaviour
         // Grounded startup: punch .10 s / kick .12 s. Air startup: .18 s.
         bool groundedAttack = grounded;
         yield return new WaitForSeconds(groundedAttack ? (punch ? .10f : .12f) : .18f);
-        WoodlandEffects.Instance?.Swipe(Body.position, direction, punch,id);
+        WoodlandEffects.Instance?.Swipe(Body.position, direction, punch,id,SkillIndex);
         var game = WoodlandGame.Instance;
         Scout other = game.players[1 - id];
         Vector2 delta = other.Body.position - Body.position;
@@ -703,6 +707,7 @@ public class Scout : MonoBehaviour
         hurtUntil = Mathf.Max(hurtUntil, Time.time + (groundedCombo ? .16f : punch ? .28f : .24f));
         invulnerableUntil = Time.time + .22f;
         action = 0;
+        CancelSpecialCharge();pointerGuard=false;
         CancelUltimate();
         StopAllCoroutines();
         PlayState("Hurt");
@@ -711,6 +716,7 @@ public class Scout : MonoBehaviour
     }
     public void Stagger(float duration)
     {
+        pointerGuard=false;CancelSpecialCharge();
         CancelUltimate(); StopAllCoroutines(); action = 0; Blocking = Charging = false; comboCount = bufferedAttack = 0; comboUntil = 0;
         hurtUntil = Time.time + duration; PlayState("Hurt");
     }

@@ -18,3 +18,8 @@ Validate the final input map on two virtual gamepads, buffered combos, ranged re
 Remove the combat arena-name label and enlarge the centered VS emblem to 168 x 94 reference pixels. Spread the mirrored meters inward, keep each numeric value at its meter's exact center, and fit full character artwork into smaller circular portraits without stretching.
 
 Replace the controls footer with one Menu hint: Esc for keyboard, Options for PlayStation and the three-line Menu mark for Xbox. Add Move List to the paused match menu. Its two columns follow the selected fighters and assigned controllers, explain their moves, costs, combo sequence, cooldown and ultimate requirement, and return to the paused menu when closed.
+
+
+## v8 user corrections
+
+Remove upper PVP ledges. Controller Up jumps; Cross/A guards. Keep both triggers for the low-health ultimate. Replace ranged cooldowns with a paid, interruptible 0.85-second charge and distinct directional projectiles. Correct melee effect selection to follow character identity, replace speed streaks with sprite ghosts, and add animated ultimate cut-ins with cleanup. Use true neutral Luna/Bram idle sprites and one uniform visual scale per character.

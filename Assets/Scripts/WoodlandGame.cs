@@ -158,7 +158,7 @@ public class WoodlandGame : MonoBehaviour
     {
         if(plank){var hinge=plank.GetComponent<HingeJoint2D>();if(hinge)hinge.enabled=BalanceMode;plank.bodyType=BalanceMode?RigidbodyType2D.Dynamic:RigidbodyType2D.Kinematic;}
         ApplyPlatformArt();
-        foreach(var platform in arenaPlatforms)if(platform)platform.gameObject.SetActive(!BalanceMode);
+        foreach(var platform in arenaPlatforms)if(platform)platform.gameObject.SetActive(false);
         if(sphereArt)sphereArt.gameObject.SetActive(BalanceMode);
         if(WoodlandEffects.Instance)WoodlandEffects.Instance.SetArenaCamera(BalanceMode?4.5f:5.8f,new Vector3(0,BalanceMode?1:1.4f,-10));
     }
