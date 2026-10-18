@@ -5,7 +5,7 @@
 - [x] Fix character-specific melee effects, remove streaks and add ghost-based ultimate transitions.
 - [x] Match character body proportions and create true Luna/Bram idle portraits.
 - [x] Validate the revised combat and inspect captures. 101 combat/presentation checks and 28 combo checks passed; Windows build succeeded.
-- [ ] Publish and verify the v8 source archive.
+- [x] Publish and verify the v8 source archive. CRC checked, GitHub digest and 306,673,591-byte size matched, public download returned HTTP 200.
 
 - [x] Remove the arena label, enlarge VS, center meter values and zoom portraits out.
 - [x] Add device-specific Menu hints and a paused move list for both selected characters.

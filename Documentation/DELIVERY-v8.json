@@ -1,0 +1,13 @@
+{
+  "commit": "f11845c23a56ac19f6057fb2d7ca0ac68149927e",
+  "file": "Tilt-Rivals-Unity-v8.zip",
+  "bytes": 306673591,
+  "sha256": "84efdbc6323684979f534129fc13b23af48d499d79b84165cee8e1dab1a6c79f",
+  "zip_entries": 2110,
+  "crc_verified": true,
+  "text_comparison": "CRLF normalized to LF",
+  "release": "https://github.com/Zeref538/woodland-tumble/releases/tag/v8.0.0",
+  "public_head_status": 200,
+  "github_digest_matches": true,
+  "github_size_matches": true
+}
