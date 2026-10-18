@@ -3,7 +3,7 @@
 - [x] Remove the arena label, enlarge VS, center meter values and zoom portraits out.
 - [x] Add device-specific Menu hints and a paused move list for both selected characters.
 - [x] Verify the revised HUD and guide, inspect screenshots and build the update. Final fixture passed 213 checks; Windows build succeeded.
-- [ ] Publish the v7.1 source update and verify its archive.
+- [x] Publish the v7.1 source update and verify its archive. CRC checked; GitHub digest and 285,240,784-byte size match; public download returns HTTP 200.
 
 - [x] Connect dedicated PVP art slots, uniform platform sizing and original Balance geometry restoration. Unity passed 84 sizing checks across four map slots and three mode-switch cycles using generated test sprites. Production artwork is now integrated.
 - [x] Verify a naturally connecting grounded punch-punch-kick combo; reduce early knockback so the finisher stays in range. Silent Play Mode passed 28 checks including stamina, whiffs, guard and parry.
