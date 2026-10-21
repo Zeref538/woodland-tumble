@@ -90,10 +90,15 @@ public static class GameValidation
             UnityEngine.Object.DestroyImmediate(texture);
         }
     }
+    public static void RunBalanceOnly()
+    {
+        AudioListener.volume=0;GameSetup.PrepareBalanceOnly();
+        SessionState.SetBool("Woodland.BalanceOnly",true);Begin(true);
+    }
     static void Begin(bool exit)
     {
         if (EditorApplication.isPlaying) { EditorApplication.isPlaying = false; EditorApplication.delayCall += () => Begin(exit); return; }
-        EditorSceneManager.OpenScene("Assets/Scenes/WoodlandTumble.unity");
+        EditorSceneManager.OpenScene(SessionState.GetBool("Woodland.BalanceOnly",false)?"Assets/Scenes/BalanceOnly.unity":"Assets/Scenes/WoodlandTumble.unity");
         SessionState.SetBool("Woodland.ValidationExit", exit);
         SessionState.SetString("Woodland.Checks", "");
         SessionState.SetBool(Active, true);
@@ -114,6 +119,7 @@ public static class GameValidation
     static void Tick()
     {
         if (!SessionState.GetBool(Active, false) || !EditorApplication.isPlaying) return;
+        if(SessionState.GetBool("Woodland.BalanceOnly",false)){TickBalanceOnly();return;}
         if(SessionState.GetBool("Woodland.V8",false)){TickV8();return;}
         if(SessionState.GetBool("Woodland.MeleeOnly",false)) { TickMelee(); return; }
         if(SessionState.GetBool("Woodland.HudOnly",false)) { TickHUD(); return; }
@@ -1371,6 +1377,60 @@ public static class GameValidation
             }
         }catch(Exception error){Complete(false,error.ToString());}
     }
+    static void TickBalanceOnly()
+    {
+        try {
+            if(Elapsed>20)throw new Exception("Balance-only validation timed out.");
+            var game=WoodlandGame.Instance;if(!game)return;
+            var hud=game.hud;var a=game.players[0];var b=game.players[1];
+            int stage=SessionState.GetInt("Woodland.Stage",-1);
+            if(stage==-1 && Elapsed>.3f){
+                Check(game.balanceOnly && game.Screen==WoodlandGame.MenuScreen.Match,"Saved Balance scene boots straight into the match");
+                Check(game.BalanceMode && !game.SoloMode,"Direct match uses local two-player Balance rules");
+                Check(game.CharacterChoices.SequenceEqual(new[]{0,1}) && a.displayName=="Fern" && b.displayName=="Ember","Fixed Fern and Ember characters load without selection");
+                Check(game.ArenaIndex==0,"Fixed forest arena loads without a map screen");
+                Check(!hud.menuRoot && !hud.pauseMenu,"Selection and pause menu objects are absent from the saved scene");
+                Check(hud.matchHud.activeSelf,"Gameplay HUD is visible immediately");
+                Check(AudioListener.volume==0,"Automated run remains silent");
+                game.SelectArena(2);game.OpenMapSelection();game.ChooseMode(true);game.OpenSettings();game.PreviewCharacter(3);
+                Check(game.ArenaIndex==0 && game.Screen==WoodlandGame.MenuScreen.Match && !game.SoloMode,"Old menu and map entry points cannot change the direct match");
+                SetStage(0);
+            }else if(stage==0 && game.playing && Elapsed>2.4f){
+                Check(game.plank.simulated && game.plank.bodyType==RigidbodyType2D.Dynamic && game.plank.GetComponent<HingeJoint2D>().enabled,"Tilting plank remains dynamic and hinged");
+                Check(game.sphereArt.gameObject.activeSelf,"Balance sphere remains visible");
+                Check(game.players.All(p=>p.Body.simulated && !p.aiControlled && p.inputEnabled),"Both local players become playable after the countdown");
+                Check(a.transform.position.y>game.fallBoundary && b.transform.position.y>game.fallBoundary,"Both players survive and land in the Balance arena");
+                hud.Refresh();Capture("Documentation/Balance-only.png");
+                disabledPads=Gamepad.all.Where(p=>p.enabled).ToArray();foreach(var pad in disabledPads)InputSystem.DisableDevice(pad);
+                originalInputSettings=InputSystem.settings;validationInputSettings=UnityEngine.Object.Instantiate(originalInputSettings);
+                validationInputSettings.editorInputBehaviorInPlayMode=InputSettings.EditorInputBehaviorInPlayMode.AllDeviceInputAlwaysGoesToGameView;
+                validationInputSettings.backgroundBehavior=InputSettings.BackgroundBehavior.IgnoreFocus;InputSystem.settings=validationInputSettings;
+                testKeyboard=InputSystem.AddDevice<Keyboard>();InputSystem.onBeforeUpdate+=DriveTestInput;
+                heldKey=Key.Tab;SetStage(1);
+            }else if(stage==1 && Elapsed>.15f){
+                Check(game.ArenaIndex==0,"Actual Tab input cannot change the fixed map");heldKey=Key.Escape;SetStage(2);
+            }else if(stage==2 && Elapsed>.15f){
+                hud.Refresh();Check(game.Paused && Time.timeScale==0,"Escape input pauses gameplay");
+                Check(!hud.pauseMenu && hud.bannerText.text=="PAUSED","Pause displays a simple banner with no navigation menu");
+                Check(hud.MenuHint.StartsWith("PAUSE"),"Footer explains pause instead of advertising a menu");
+                heldKey=Key.None;SetStage(3);
+            }else if(stage==3 && Elapsed>.15f){heldKey=Key.Escape;SetStage(4);
+            }else if(stage==4 && Elapsed>.15f){
+                Check(!game.Paused && Time.timeScale==1,"A second Escape press resumes gameplay");heldKey=Key.None;
+                Arrange(game);
+                Check(a.TryAttack(true),"Punch starts in the direct Balance match");SetStage(5);
+            }else if(stage==5 && Elapsed>.3f){
+                Check(b.Health<b.maxHealth && a.ComboCount==1,"Punch connects and reduces the rival health in Balance mode");
+                game.RestartMatch();SetStage(6);
+            }else if(stage==6 && game.playing && Elapsed>2.4f){
+                Check(game.score.All(v=>v==0) && a.Health==100 && b.Health==100,"Replay restores scores and both health meters");
+                Check(game.Screen==WoodlandGame.MenuScreen.Match && game.BalanceMode && game.ArenaIndex==0,"Replay stays in Balance without opening selectors");
+                game.ReturnToMenu();
+                Check(game.Screen==WoodlandGame.MenuScreen.Match && !game.playing,"Title navigation becomes direct replay rather than showing a menu");
+                Complete(true,"BALANCE_ONLY_PASS: direct boot, fixed selections, physics, real pause input, combat and replay validated");
+            }
+        }catch(Exception e){Complete(false,e.ToString());}
+    }
     static void Complete(bool success, string status)
     {
         SessionState.SetBool(Active, false);
@@ -1394,7 +1454,8 @@ public static class GameValidation
         bool hudOnly=SessionState.GetBool("Woodland.HudOnly",false);
         SessionState.SetBool("Woodland.MeleeOnly",false);
         SessionState.SetBool("Woodland.HudOnly",false);
-        File.WriteAllText(v81?"Documentation/PLAYMODE-VALIDATION-v8.1.json":v8?"Documentation/PLAYMODE-VALIDATION-v8.json":hudOnly?"Documentation/HUD-VALIDATION-v7.1.json":meleeOnly?"Documentation/MELEE-VALIDATION-v8.1.json":"Documentation/PLAYMODE-VALIDATION-v7.json", JsonUtility.ToJson(report, true));
+        bool balanceOnly=SessionState.GetBool("Woodland.BalanceOnly",false);SessionState.SetBool("Woodland.BalanceOnly",false);
+        File.WriteAllText(balanceOnly?"Documentation/BALANCE-VALIDATION.json":v81?"Documentation/PLAYMODE-VALIDATION-v8.1.json":v8?"Documentation/PLAYMODE-VALIDATION-v8.json":hudOnly?"Documentation/HUD-VALIDATION-v7.1.json":meleeOnly?"Documentation/MELEE-VALIDATION-v8.1.json":"Documentation/PLAYMODE-VALIDATION-v7.json", JsonUtility.ToJson(report, true));
         if (success) Debug.Log(status);else Debug.LogError(status);
         EditorApplication.isPlaying = false;
         if (SessionState.GetBool("Woodland.ValidationExit", false)) EditorApplication.delayCall += () => EditorApplication.Exit(success ? 0 : 1);

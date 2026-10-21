@@ -111,3 +111,7 @@ If there are local changes or Git refuses the update, keep the work and resolve 
 ## Handoff for the next editor
 
 State the intended change, branch, editor version and exact files touched. Report what passed and what still needs a real device. Finish when the project opens, the changed behavior works, the move guide matches the controls, the diff contains only intended files, and the work is committed or its uncommitted state is clearly recorded.
+
+## Balance-only variant
+
+Open `Assets/Scenes/BalanceOnly.unity` for the fixed Fern/Ember forest Balance match without selection menus. `WoodlandTumble.unity` remains the full game. Read `BALANCE-ONLY.md` for the separate Windows build and direct-start rules.

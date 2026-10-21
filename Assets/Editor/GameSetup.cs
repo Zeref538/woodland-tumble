@@ -627,6 +627,30 @@ public static class GameSetup
         EditorSceneManager.SaveScene(EditorSceneManager.GetActiveScene());
         AssetDatabase.SaveAssets();
     }
+    [MenuItem("Woodland/Create Balance Only Scene")]
+    public static void PrepareBalanceOnly()
+    {
+        if(EditorApplication.isPlaying)throw new System.Exception("Stop Play Mode first.");
+        var scene=EditorSceneManager.OpenScene("Assets/Scenes/WoodlandTumble.unity");
+        var game=Object.FindAnyObjectByType<WoodlandGame>();
+        if(!game || !game.hud)throw new System.Exception("Saved game or HUD missing.");
+        game.balanceOnly=true;
+        if(game.hud.menuRoot)Object.DestroyImmediate(game.hud.menuRoot);
+        if(game.hud.pauseMenu)Object.DestroyImmediate(game.hud.pauseMenu);
+        EditorUtility.SetDirty(game);
+        EditorSceneManager.SaveScene(scene,"Assets/Scenes/BalanceOnly.unity");
+        AssetDatabase.SaveAssets();
+        Debug.Log("BALANCE_ONLY_READY: direct local match, fixed Fern/Ember and forest arena.");
+    }
+    public static void BuildBalanceWindows()
+    {
+        string product=PlayerSettings.productName;
+        try {
+            PlayerSettings.productName="Tilt Rivals Balance";
+            var report=BuildPipeline.BuildPlayer(new[]{"Assets/Scenes/BalanceOnly.unity"},"Build/BalanceWindows/TiltRivalsBalance.exe",BuildTarget.StandaloneWindows64,BuildOptions.None);
+            if(report.summary.result!=UnityEditor.Build.Reporting.BuildResult.Succeeded)throw new System.Exception("Balance Windows build failed.");
+        } finally {PlayerSettings.productName=product;AssetDatabase.SaveAssets();}
+    }
     public static void BuildWindows()
     {
         var report = BuildPipeline.BuildPlayer(EditorBuildSettings.scenes, "Build/Windows/WoodlandTumble.exe", BuildTarget.StandaloneWindows64, BuildOptions.None);

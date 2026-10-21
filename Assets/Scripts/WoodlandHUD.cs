@@ -151,7 +151,7 @@ public class WoodlandHUD : MonoBehaviour
         RefreshMenu();
         if (game.Screen != WoodlandGame.MenuScreen.Match || game.Paused) {
             ReleaseAllPointerGuards();
-            NavigateMenus();
+            if(!game.balanceOnly || MoveGuideOpen)NavigateMenus();
             return;
         }
         bool toggle = Keyboard.current != null && Keyboard.current.f1Key.wasPressedThisFrame;
@@ -170,6 +170,7 @@ public class WoodlandHUD : MonoBehaviour
         get {
             var pad=game?game.GetGamepad(0)??game.GetGamepad(1):null;
             string style=WoodlandGame.GamepadStyle(pad);
+            if(game && game.balanceOnly)return style=="PLAYSTATION"?"PAUSE [OPTIONS]":style=="XBOX"?"PAUSE [MENU]":pad!=null?"PAUSE [START]":"PAUSE [ESC]  /  REPLAY [R]";
             return style=="PLAYSTATION"?"MENU [OPTIONS]":style=="XBOX"?"MENU [≡]":pad!=null?"MENU [START]":"MENU [ESC]";
         }
     }
@@ -291,7 +292,7 @@ public class WoodlandHUD : MonoBehaviour
             var color=soundText.color;color.a=quiet?1:Mathf.Clamp01((audio.AudioNoticeUntil-Time.unscaledTime)*3);soundText.color=color;
         }
         if(arenaText) arenaText.text=game.ArenaName;
-        string text=game.Paused?"":game.message;
+        string text=game.Paused?(game.balanceOnly && !MoveGuideOpen?"PAUSED":""):game.message;
         if(bannerPanel) bannerPanel.SetActive(!string.IsNullOrEmpty(text));
         if(bannerText) bannerText.text=text;
     }
@@ -406,7 +407,8 @@ public class WoodlandHUD : MonoBehaviour
         if(mapMenu)mapMenu.SetActive(screen==WoodlandGame.MenuScreen.Maps);
         if(settingsMenu)settingsMenu.SetActive(screen==WoodlandGame.MenuScreen.Settings);
         if(matchHud)matchHud.SetActive(match);
-        if(pauseMenu)pauseMenu.SetActive(match && game.Paused && !MoveGuideOpen);
+        if(pauseMenu)pauseMenu.SetActive(!game.balanceOnly && match && game.Paused && !MoveGuideOpen);
+        if(game.balanceOnly)return;
         if(screen!=lastScreen){
             ReleaseAllPointerGuards();
             menuFocus=screen==WoodlandGame.MenuScreen.Rules && game.BalanceMode?1:0;nextNavigation=Time.unscaledTime+.12f;lastScreen=screen;if(helpPanel)helpPanel.SetActive(false);

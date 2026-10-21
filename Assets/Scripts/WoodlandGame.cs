@@ -4,6 +4,8 @@ using System.Collections;
 
 public class WoodlandGame : MonoBehaviour
 {
+    [Tooltip("Start directly in the fixed two-player Balance match, without selection menus.")]
+    public bool balanceOnly;
     public enum MenuScreen { Title, Rules, Characters, Maps, Settings, Match }
     public MenuScreen Screen { get; private set; } = MenuScreen.Title;
     public bool SoloMode { get; private set; }
@@ -39,6 +41,7 @@ public class WoodlandGame : MonoBehaviour
     public void SelectArena(int index)
     {
         if (index < 0 || index >= backgrounds.Length || !backgrounds[index] || !planks[index] || !spheres[index]) return;
+        if(balanceOnly && index!=0)return;
         bool changed=ArenaIndex!=index;ArenaIndex = index;
         if(changed)WoodlandEffects.Instance?.PlayCue(12,.18f);
         backgroundArt.sprite = backgrounds[index]; sphereArt.sprite = spheres[index];
@@ -105,7 +108,15 @@ public class WoodlandGame : MonoBehaviour
         var hinge = plank.GetComponent<HingeJoint2D>();
         if (hinge != null && hinge.connectedBody == null) hinge.connectedAnchor = plank.transform.TransformPoint(hinge.anchor);
         if(WoodlandEffects.Instance){WoodlandEffects.Instance.cameraShake=PlayerPrefs.GetInt("Woodland.CameraShake",1)==1;WoodlandEffects.Instance.effectIntensity=Mathf.Clamp(PlayerPrefs.GetFloat("Woodland.EffectsQuality",1.35f),.25f,2);}
-        ApplyRules();ReturnToMenu();
+        if(balanceOnly)StartBalanceOnly();
+        else {ApplyRules();ReturnToMenu();}
+    }
+    void StartBalanceOnly()
+    {
+        BalanceMode=true;SoloMode=false;PendingArena=0;CharacterChoices[0]=0;CharacterChoices[1]=1;
+        ApplyRules();ApplyCharacters();SelectArena(0);Screen=MenuScreen.Match;
+        if(hud)hud.RefreshMenu();
+        RestartMatch();
     }
     void FreezeMatch()
     {
@@ -119,6 +130,7 @@ public class WoodlandGame : MonoBehaviour
     }
     public void ChooseMode(bool solo)
     {
+        if(balanceOnly)return;
         FreezeMatch();SoloMode=solo;
         for(int i=0;i<players.Length;i++)players[i].aiControlled=solo && i==1;
         Screen=MenuScreen.Rules;
@@ -204,6 +216,7 @@ public class WoodlandGame : MonoBehaviour
     }
     public void OpenMapSelection()
     {
+        if(balanceOnly)return;
         FreezeMatch();Screen=MenuScreen.Maps;if(hud)hud.RefreshMenu();
     }
     public void MenuBack()
@@ -214,7 +227,7 @@ public class WoodlandGame : MonoBehaviour
         else if(Screen==MenuScreen.Rules||Screen==MenuScreen.Settings)Screen=MenuScreen.Title;
         if(hud)hud.RefreshMenu();
     }
-    public void OpenSettings(){FreezeMatch();Screen=MenuScreen.Settings;if(hud)hud.RefreshMenu();}
+    public void OpenSettings(){if(balanceOnly)return;FreezeMatch();Screen=MenuScreen.Settings;if(hud)hud.RefreshMenu();}
     public void StepVolume(float delta){if(WoodlandEffects.Instance)WoodlandEffects.Instance.SetVolume(SettingsVolume+delta);}
     public void ToggleFullscreen(){UnityEngine.Screen.fullScreen=!UnityEngine.Screen.fullScreen;}
     public void ToggleCameraShake(){if(WoodlandEffects.Instance){WoodlandEffects.Instance.cameraShake=!CameraShakeEnabled;PlayerPrefs.SetInt("Woodland.CameraShake",CameraShakeEnabled?1:0);}}
@@ -243,6 +256,7 @@ public class WoodlandGame : MonoBehaviour
     }
     public void ReturnToMenu()
     {
+        if(balanceOnly){RestartMatch();return;}
         FreezeMatch();Screen=MenuScreen.Title;
         if(hud)hud.RefreshMenu();
     }
@@ -319,7 +333,7 @@ public class WoodlandGame : MonoBehaviour
         var keyboard = Keyboard.current;
         bool pause = keyboard != null && keyboard.escapeKey.wasPressedThisFrame;
         bool restart = keyboard != null && keyboard.rKey.wasPressedThisFrame;
-        if (keyboard != null) {
+        if (keyboard != null && !balanceOnly) {
             if (keyboard.tabKey.wasPressedThisFrame) SelectArena((ArenaIndex + 1) % backgrounds.Length);
             if (keyboard.digit1Key.wasPressedThisFrame) SelectArena(0);
             if (keyboard.digit2Key.wasPressedThisFrame) SelectArena(1);
@@ -331,8 +345,8 @@ public class WoodlandGame : MonoBehaviour
             restart |= CanPlayAgain && pad.buttonSouth.wasPressedThisFrame;
             if (!PadMenuChord(pad)) continue;
             restart |= pad.buttonSouth.wasPressedThisFrame;
-            if (pad.rightShoulder.wasPressedThisFrame) SelectArena((ArenaIndex + 1) % backgrounds.Length);
-            if (pad.leftShoulder.wasPressedThisFrame) SelectArena((ArenaIndex + backgrounds.Length - 1) % backgrounds.Length);
+            if (!balanceOnly && pad.rightShoulder.wasPressedThisFrame) SelectArena((ArenaIndex + 1) % backgrounds.Length);
+            if (!balanceOnly && pad.leftShoulder.wasPressedThisFrame) SelectArena((ArenaIndex + backgrounds.Length - 1) % backgrounds.Length);
         }
         if (restart) RestartMatch();
         else if (pause) { if(hud && hud.MoveGuideOpen)hud.CloseMoveGuide();else TogglePause(); }

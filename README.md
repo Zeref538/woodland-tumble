@@ -2,6 +2,10 @@
 
 A fantasy pixel-art fighting game for **Unity 6000.5.10f1, Universal 2D / URP 2D**. The existing repository and scene retain their woodland-tumble names.
 
+## Balance-only version
+
+Open `Assets/Scenes/BalanceOnly.unity` for a fixed local Fern-versus-Ember match on the forest balancer. It starts directly with no selection or pause-navigation menus. The full game remains in `WoodlandTumble.unity`. See [BALANCE-ONLY.md](BALANCE-ONLY.md) for controls and rebuilding.
+
 ## Open on this PC
 
 The local project is already updated. In Unity Hub, choose **Add project from disk** and select this folder. Open `Assets/Scenes/WoodlandTumble.unity`, press Play and use the main menu.

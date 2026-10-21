@@ -1,0 +1,22 @@
+{
+  "editor": "6000.5.10f1",
+  "target": "StandaloneWindows64",
+  "scene": "Assets/Scenes/BalanceOnly.unity",
+  "rules": "local two-player Balance, forest, Fern and Ember",
+  "selection_menus": false,
+  "pause_navigation_menu": false,
+  "balance_checks": 22,
+  "full_game_regression_checks": 112,
+  "build_result": "Success",
+  "native_smoke": "Player launched silently and remained running until closed; no C# exceptions in player log",
+  "native_log_note": "DX12 info-queue interface warning observed; graphics initialization continued",
+  "physical_controllers": "Not tested physically",
+  "runtime_source_sha256": {
+    "Scout.cs": "9e4a264c68c970c216eb7a3115f057f979612b67816796c370189d23d61f4aae",
+    "ScoutAnimations.cs": "fba9d1724140943d12090e0ec9138939316e66208ba2f8180b4e8a1042c5c206",
+    "SpawnMarker.cs": "678414abd6028ca57f40f084c3f664ef2cbf663ea2d956523bd78c35ac2f02ff",
+    "WoodlandEffects.cs": "13b829a49675607549bc189d6c6367d2395e03c2b7097979c8a3028fd6a2264c",
+    "WoodlandGame.cs": "e688fea4ce4c36e86ec47efd3332828c0a51194b9eba0226594294ebf337bcae",
+    "WoodlandHUD.cs": "ca7c7f0baafdd98d950dc539bd592680d804f41244e5afd480a0899c6db51989"
+  }
+}

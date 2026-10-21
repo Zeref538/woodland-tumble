@@ -1,5 +1,9 @@
 # Agent Tasks
 
+- [x] Create a separate direct-start Balance scene without menus or selectors.
+- [x] Validate direct start, fixed arena/characters, pause, combat and replay: 22 targeted checks passed.
+- [x] Build and smoke-check the Windows player; copy it to D:/TiltRivals-Balance and verify all 178 runtime files by SHA-256.
+
 - [x] Add a Mac lab HANDOFF.md with editor version, controls and safe save/update commands.
 
 - [x] Add controller Play Again at match end and reduce damage by 15 percent.

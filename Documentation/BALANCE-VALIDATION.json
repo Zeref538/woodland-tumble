@@ -1,0 +1,28 @@
+{
+    "success": true,
+    "status": "BALANCE_ONLY_PASS: direct boot, fixed selections, physics, real pause input, combat and replay validated",
+    "checks": [
+        "Saved Balance scene boots straight into the match",
+        "Direct match uses local two-player Balance rules",
+        "Fixed Fern and Ember characters load without selection",
+        "Fixed forest arena loads without a map screen",
+        "Selection and pause menu objects are absent from the saved scene",
+        "Gameplay HUD is visible immediately",
+        "Automated run remains silent",
+        "Old menu and map entry points cannot change the direct match",
+        "Tilting plank remains dynamic and hinged",
+        "Balance sphere remains visible",
+        "Both local players become playable after the countdown",
+        "Both players survive and land in the Balance arena",
+        "Actual Tab input cannot change the fixed map",
+        "Escape input pauses gameplay",
+        "Pause displays a simple banner with no navigation menu",
+        "Footer explains pause instead of advertising a menu",
+        "A second Escape press resumes gameplay",
+        "Punch starts in the direct Balance match",
+        "Punch connects and reduces the rival health in Balance mode",
+        "Replay restores scores and both health meters",
+        "Replay stays in Balance without opening selectors",
+        "Title navigation becomes direct replay rather than showing a menu"
+    ]
+}
