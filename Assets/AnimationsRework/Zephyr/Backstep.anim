@@ -13,32 +13,7 @@ AnimationClip:
   m_UseHighQualityCurve: 1
   m_RotationCurves: []
   m_CompressedRotationCurves: []
-  m_EulerCurves:
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: {x: 0, y: 0, z: 0}
-        inSlope: {x: 0, y: 0, z: 0}
-        outSlope: {x: 0, y: 0, z: 0}
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: {x: 0.33333334, y: 0.33333334, z: 0}
-        outWeight: {x: 0.33333334, y: 0.33333334, z: 0}
-      - serializedVersion: 3
-        time: 0.1388889
-        value: {x: 0, y: 0, z: 0}
-        inSlope: {x: 0, y: 0, z: 0}
-        outSlope: {x: 0, y: 0, z: 0}
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: {x: 0.33333334, y: 0.33333334, z: 0}
-        outWeight: {x: 0.33333334, y: 0.33333334, z: 0}
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    path: 
+  m_EulerCurves: []
   m_PositionCurves: []
   m_ScaleCurves: []
   m_FloatCurves: []
@@ -78,8 +53,29 @@ AnimationClip:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 0, y: 0, z: 0}
   m_ClipBindingConstant:
-    genericBindings: []
-    pptrCurveMapping: []
+    genericBindings:
+    - serializedVersion: 2
+      path: 0
+      attribute: 0
+      script: {fileID: 0}
+      typeID: 212
+      customType: 23
+      isPPtrCurve: 1
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
+      metaData: 0
+    pptrCurveMapping:
+    - {fileID: 21300000, guid: 65a04847e90557159ad71d2c9edeb0aa, type: 3}
+    - {fileID: 21300000, guid: b9b927de700e5a589e17dddae30d7e4e, type: 3}
+    - {fileID: 21300000, guid: a925086da2a959ce883130786498ee4d, type: 3}
+    - {fileID: 21300000, guid: 8d5b0626dafb5735968068d3c484750a, type: 3}
+    - {fileID: 21300000, guid: 6b65fb93b260556484d6c292d585c002, type: 3}
+    - {fileID: 21300000, guid: 6e1fba9f96c25bb3b50188db6544e5f8, type: 3}
+    - {fileID: 21300000, guid: 6c06f9ab307e51c1acdb14bb15b6fe4e, type: 3}
+    - {fileID: 21300000, guid: 903669d66e8e58caa82d533df3c3c992, type: 3}
+    - {fileID: 21300000, guid: 7dc35c2103a650c8818f86171922f5ea, type: 3}
+    - {fileID: 21300000, guid: ecafafb70dd3572eaed210954ab662dd, type: 3}
+    - {fileID: 21300000, guid: ecafafb70dd3572eaed210954ab662dd, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
@@ -102,6 +98,6 @@ AnimationClip:
     m_Mirror: 0
   m_EditorCurves: []
   m_EulerEditorCurves: []
-  m_HasGenericRootTransform: 1
+  m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events: []

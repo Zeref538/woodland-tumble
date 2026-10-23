@@ -17,6 +17,7 @@ public class WoodlandGame : MonoBehaviour
     public string[] SkillNames={"Vine Bolt","Fire Bolt","Frost Wave","Stone Wave","Gale Crescent","Arc Lance","Dusk Orb","Prism Shard"};
     public string[] SkillDescriptions={"Fire a binding vine bolt. Last-square ultimate: Wildroot Prison.","Launch a fire bolt. Last-square ultimate: Phoenix Combo.","Send a slowing frost wave. Last-square ultimate: Moonfrost Seal.","Launch a rising stone wave. Last-square ultimate: World Shatter.","A wind crescent drives rivals back. Last-square ultimate: Tempest Spiral.","A fast arc lance interrupts approaches. Last-square ultimate: Thunder Rush.","A shadow orb binds rivals. Last-square ultimate: Eclipse Snare.","A crystal shard controls space. Last-square ultimate: Crystal Crown."};
     public Sprite[] CharacterPortraits=new Sprite[8];
+    public Sprite[] CharacterProfiles=new Sprite[8];
     public ScoutAnimations[] CharacterAnimationSets=new ScoutAnimations[8];
     public RuntimeAnimatorController[] CharacterControllers=new RuntimeAnimatorController[8];
     public Color[] CharacterColors={new Color(.38f,1,.68f),new Color(1,.48f,.18f),new Color(.45f,.72f,1),new Color(.85f,.68f,.4f),new Color(.55f,1,.85f),new Color(1,.85f,.25f),new Color(.7f,.4f,1),new Color(1,.55f,.8f)};
@@ -54,9 +55,11 @@ public class WoodlandGame : MonoBehaviour
     [Min(10)] public float roundDuration = 99;
     public float RoundTimeRemaining { get; private set; } = 99;
     public bool SuddenDeath { get; private set; }
-    public float SafeFloorHalfWidth { get; private set; } = 5;
+    public const float InitialSafeFloorHalfWidth=6.4f;
+    public const float ArenaOuterEdge=10f;
+    public float SafeFloorHalfWidth { get; private set; } = InitialSafeFloorHalfWidth;
     float suddenDeathTime;
-    public const float ArenaHalfWidth = 6.1f;
+    public const float ArenaHalfWidth = 9.4f;
     [Header("Breakable edge hatches")]
     public BoxCollider2D[] edgeHatches = new BoxCollider2D[2];
     public SpriteRenderer[] edgeHatchArt = new SpriteRenderer[2];
@@ -184,7 +187,7 @@ public class WoodlandGame : MonoBehaviour
         plankArt.enabled=false;
         plank.transform.localScale=Vector3.one;
         var box=plank.GetComponent<BoxCollider2D>();
-        if(box){box.size=new Vector2(10,.22f);box.offset=new Vector2(0,.04f);box.edgeRadius=.04f;}
+        if(box){box.size=new Vector2(InitialSafeFloorHalfWidth*2,.22f);box.offset=new Vector2(0,.04f);box.edgeRadius=.04f;}
     }
     void EnsureEdgeHatches()
     {
@@ -201,9 +204,9 @@ public class WoodlandGame : MonoBehaviour
                 edgeHatchArt[i]=visual.AddComponent<SpriteRenderer>();edgeHatchArt[i].sortingOrder=4;
             }
             var rect=edgeHatches[i].transform;
-            rect.position=new Vector3(plank.position.x+(i==0?-5.75f:5.75f),plank.position.y,0);
+            rect.position=new Vector3(plank.position.x+(i==0?-1:1)*(InitialSafeFloorHalfWidth+ArenaOuterEdge)*.5f,plank.position.y,0);
             rect.localScale=new Vector3(1/plank.transform.lossyScale.x,1/plank.transform.lossyScale.y,1);
-            edgeHatches[i].size=new Vector2(1.5f,.22f);edgeHatches[i].offset=new Vector2(0,.04f);
+            edgeHatches[i].size=new Vector2(ArenaOuterEdge-InitialSafeFloorHalfWidth,.22f);edgeHatches[i].offset=new Vector2(0,.04f);
         }
         ResetEdgeHatches();
     }
@@ -212,7 +215,7 @@ public class WoodlandGame : MonoBehaviour
         var renderer=edgeHatchArt[side];if(!renderer)return;
         bool open=HatchIsOpen(side);
         renderer.sprite=open?hatchOpenArt:hatchClosedArt;
-        if(renderer.sprite)renderer.transform.localScale=Vector3.one*(1.5f/renderer.sprite.bounds.size.x);
+        if(renderer.sprite)renderer.transform.localScale=Vector3.one*((ArenaOuterEdge-InitialSafeFloorHalfWidth)/renderer.sprite.bounds.size.x);
         renderer.color=open?Color.white:Color.Lerp(Color.white,new Color(1,.6f,.3f),hatchDamage[side]/(float)hatchDurability);
     }
     void ResetEdgeHatches()
@@ -303,7 +306,7 @@ public class WoodlandGame : MonoBehaviour
         WoodlandEffects.Instance?.ResetCameraPresentation();
         playing = false;
         RoundTimeRemaining = roundDuration;
-        SuddenDeath=false;suddenDeathTime=0;SafeFloorHalfWidth=5;ApplyPlatformArt();
+        SuddenDeath=false;suddenDeathTime=0;SafeFloorHalfWidth=InitialSafeFloorHalfWidth;ApplyPlatformArt();
         plank.simulated = false;
         plank.transform.SetPositionAndRotation(plankHome, Quaternion.Euler(0, 0, plankAngle));
         plank.position = plankHome;
@@ -329,7 +332,7 @@ public class WoodlandGame : MonoBehaviour
         if (!playing) return;
         playing = false;
         WoodlandEffects.Instance?.ResetCameraPresentation();
-        message = "KNOCKOUT!";
+        message = "RING OUT!";
         if (roundRoutine != null) StopCoroutine(roundRoutine);
         roundRoutine = StartCoroutine(ResolveRound(loser.id));
     }
@@ -379,13 +382,13 @@ public class WoodlandGame : MonoBehaviour
                     WoodlandEffects.Instance?.PlayCue(9,.7f);
                 }
                 suddenDeathTime+=Time.deltaTime;
-                SafeFloorHalfWidth=Mathf.Max(.15f,5-suddenDeathTime*.18f);
+                SafeFloorHalfWidth=Mathf.Max(.15f,InitialSafeFloorHalfWidth-suddenDeathTime*.22f);
                 var floor=plank.GetComponent<BoxCollider2D>();if(floor)floor.size=new Vector2(SafeFloorHalfWidth*2,.22f);
                 for(int side=0;side<2;side++) {
-                    float width=6.5f-SafeFloorHalfWidth;
+                    float width=ArenaOuterEdge-SafeFloorHalfWidth;
                     var art=edgeHatchArt[side];if(!art || !art.sprite)continue;
                     art.transform.position=new Vector3((side==0?-1:1)*(SafeFloorHalfWidth+width*.5f),plank.position.y,0);
-                    art.transform.localScale=new Vector3(width/art.sprite.bounds.size.x,1.5f/art.sprite.bounds.size.x,1);
+                    art.transform.localScale=new Vector3(width/art.sprite.bounds.size.x,(ArenaOuterEdge-InitialSafeFloorHalfWidth)/art.sprite.bounds.size.x,1);
                 }
                 if(suddenDeathTime>2)message="";
             }
@@ -411,8 +414,19 @@ public class WoodlandGame : MonoBehaviour
         if (restart) RestartMatch();
         else if (pause) { if(hud && hud.MoveGuideOpen)hud.CloseMoveGuide();else TogglePause(); }
     }
+    public void UpdateCameraViewport()
+    {
+        var camera=Camera.main;if(!camera)return;
+        int width=camera.targetTexture?camera.targetTexture.width:UnityEngine.Screen.width;
+        int height=camera.targetTexture?camera.targetTexture.height:UnityEngine.Screen.height;
+        if(width<=0 || height<=0)return;
+        const float designAspect=16f/9;float aspect=width/(float)height;
+        if(aspect>designAspect) {float w=designAspect/aspect;camera.rect=new Rect((1-w)*.5f,0,w,1);}
+        else {float h=aspect/designAspect;camera.rect=new Rect(0,(1-h)*.5f,1,h);}
+    }
     void LateUpdate()
     {
+        UpdateCameraViewport();
         if(Screen!=MenuScreen.Match)return;
         // Outer walls keep combat on screen; opened hatches inside them allow downward ring-outs.
         foreach(var fighter in players) {

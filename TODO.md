@@ -1,3 +1,14 @@
+## Presentation corrections in progress
+
+- [x] Center the front-end design canvas for wide/tall windows and center image pivots inside portrait/map frames.
+- [x] Add reusable framed card placeholders for fighters and stages.
+- [x] Remove whole-body animation rotation; make punch/kick play the matching poses throughout combos.
+- [x] Increase melee trail/impact VFX and check all eight native effect catalogs.
+- [x] Enlarge permanently open rune shafts to 3.6 units and move their centers to ±8.2 at the arena edges.
+- [x] Add a short sinking/fading ring-out sequence, contact removal, shaft-level particles and rumble.
+- [x] Rebuild, exercise natural punches/kicks for all eight fighters, inspect multi-aspect menus/portraits and native desktop captures. Expanded fixture passed 406 checks.
+- [ ] Save the verified presentation corrections to GitHub.
+
 # Rune Rumble: current tasks
 
 - [x] Rename the project to Rune Rumble and remove Balance selection/gameplay.

@@ -461,7 +461,10 @@ public class WoodlandEffects : MonoBehaviour
         PlayCue(0,.38f,punch?1.08f:.95f);
         character=character<0?CharacterForPlayer(player):character;
         var color=CharacterTint(character);
-        Vector2 contact=point+new Vector2(facing*.6f,punch?.16f:-.25f);
+        Vector2 contact=point+new Vector2(facing*.95f,punch?.2f:-.3f);
+        Emit(slash,contact,Vector2.right*facing*.7f,Color.white,.16f,new Vector2(punch?1.1f:1.5f,punch?1.35f:1.65f),Vector2.zero,0,12,facing<0?180:0);
+        Emit(slash,contact+Vector2.left*facing*.1f,Vector2.right*facing*.5f,color,.23f,new Vector2(punch?1.4f:1.8f,1.7f),Vector2.zero,0,11,facing<0?180:0);
+        Light(contact,color,1.2f,.18f);
         if(character<2)AnimatedSlash(contact,facing,character==0,punch?1.55f:1.85f,.22f);
         else if(character==2) {
             for(int i=0;i<3;i++)Emit(slash,contact+new Vector2(facing*i*.12f,i*.1f),Vector2.right*facing*.8f,
@@ -502,8 +505,8 @@ public class WoodlandEffects : MonoBehaviour
         if(character<0 || character>=8)return;
         var frames=finisher?comboFinishers[character]:comboHits[character];
         if(frames==null || frames.Length==0)return;
-        float size=finisher?2.15f:1.25f;
-        int index=Emit(frames[0],point,Vector2.right*facing*.22f,Color.white,finisher?.34f:.22f,Vector2.one*size,Vector2.one*size,0,11);
+        float size=finisher?3.0f:2.0f;
+        int index=Emit(frames[0],point,Vector2.right*facing*.22f,Color.white,finisher?.40f:.27f,Vector2.one*size,Vector2.one*size,0,11);
         pool[index].frames=frames;pool[index].art.flipX=facing<0;
         ComboAnimationsPlayed++;
     }
@@ -576,6 +579,16 @@ public class WoodlandEffects : MonoBehaviour
         Burst(point,new Vector2(facing,.4f),26,tint,4.5f);
         Emit(star,point,Vector2.zero,Color.white,.1f,Vector2.one*.65f,Vector2.zero,0,12,45);
         KickCamera(new Vector2(facing,.25f),.10f+power*.05f);FreezeImpact(.055f);
+    }
+    public void RingOut(Vector2 opening,Color tint)
+    {
+        PlayCue(10,.65f,.7f);KickCamera(Vector2.down,.09f);
+        Pulse(opening,new Color(.55f,.8f,.7f),2.2f,.5f,true);
+        for(int i=0;i<Count(22);i++) {
+            Vector2 offset=new Vector2(Random.Range(-1.1f,1.1f),Random.Range(.05f,.65f));
+            Emit(i%3==0?leaf:pixel,opening+offset,new Vector2(-offset.x*2,-1.4f),Color.Lerp(tint,new Color(.35f,.45f,.35f),.6f),Random.Range(.35f,.65f),Vector2.one*Random.Range(.08f,.16f),Vector2.zero,2,7,Random.Range(0,180),90);
+        }
+        Emit(glow,opening,Vector2.zero,new Color(.15f,.4f,.3f,.65f),.55f,new Vector2(2.4f,.55f),Vector2.zero,0,2);
     }
     public void Knockout(Vector2 point, Color tint)
     {

@@ -28,7 +28,7 @@ public static class GameValidation
         foreach(var text in hud.healthText)Debug.Log("HUD_METRICS: "+text.name+" text="+text.text+" preferred="+text.preferredWidth+"x"+text.preferredHeight+" rect="+text.rectTransform.rect.size+" font="+text.font.name+" size="+text.fontSize);
     }
     [MenuItem("Woodland/Validate Editable Game")]
-    public static void RunInEditor() {SessionState.SetBool("Woodland.Duel",true);Begin(false);}
+    public static void RunInEditor() {EditorApplication.ExecuteMenuItem("Window/General/Game");SessionState.SetBool("Woodland.Duel",true);Begin(false);}
     public static void Run() => RunDuelSaved();
     public static void RunDuelSaved(){AudioListener.volume=0;SessionState.SetBool("Woodland.Duel",true);Begin(true);}
     public static void RunSaved() => RunDuelSaved();
@@ -105,14 +105,22 @@ public static class GameValidation
                 Check(game.roundsToWin==3 && game.roundDuration==99,"Rounds are 99 seconds, first to three");
                 foreach(var catalog in game.CharacterAnimationSets)foreach(string state in new[]{"Walk","Jump","Hurt","Push","Punch","Kick","Knockout","Block","DoubleJump","Special","Dash","Backstep","Victory","Ultimate","Downed","GetUp"})Check(catalog.Get(state).Length==10 && catalog.Get(state).All(sprite=>sprite),"Complete native animation "+catalog.name+" / "+state);
                 game.ChooseMode(false);game.hud.RefreshMenu();Capture("Documentation/RuneRumble-CharacterSelect.png");
+                Capture("Documentation/RuneRumble-CharacterSelect-16x10.png",1440,900);
+                Capture("Documentation/RuneRumble-CharacterSelect-Ultrawide.png",1920,800);
+                Check(hud.menuRoot.GetComponent<RectTransform>().anchorMin==Vector2.one*.5f,"Menu design canvas is anchored at the screen center");
+                foreach(var card in hud.characterButtons)Check(card.transform.Find("Portrait Card Placeholder") && card.transform.Find("Frame Corner Horizontal 0"),"Fighter cards have framed placeholders");
+                foreach(var controller in game.CharacterControllers)foreach(var clip in controller.animationClips)Check(!AnimationUtility.GetCurveBindings(clip).Any(binding=>binding.type==typeof(Transform)),"Sprite clip has no artificial transform rotation: "+clip.name);
                 Check(hud.selectionPortraits.All(image=>image) && hud.characterButtons.Length==8,"Both player showcases and eight roster cards exist");
                 game.PreviewCharacter(4);game.ConfirmCharacter();game.PreviewCharacter(7);game.ConfirmCharacter();game.PreviewArena(5);hud.RefreshMenu();Capture("Documentation/RuneRumble-StageSelect.png");
                 Check(hud.mapPreview && hud.mapButtons.Length==6,"Large selected-stage preview and six cards exist");
+                Check(hud.mapPreview.rectTransform.pivot==Vector2.one*.5f,"Map preview images use a centered pivot");
+                Capture("Documentation/RuneRumble-StageSelect-Ultrawide.png",1920,800);
                 game.StartSelectedMatch();SetStage(0);
             } else if(stage==0 && game.playing && string.IsNullOrEmpty(game.message)) {
                 Check(game.plank.bodyType==RigidbodyType2D.Kinematic && !game.plankArt.enabled,"Ground is fixed with no floating platform art");
                 Check(game.RoundTimeRemaining>97 && hud.roundTimerText,"Round starts with a live 99-second timer");
                 Check(game.edgeHatches.All(h=>h && !h.enabled) && game.HatchIsOpen(0) && game.HatchIsOpen(1),"Both edge holes are open from round start");
+                Check(Mathf.Abs(game.edgeHatchArt[0].bounds.size.x-3.6f)<.03f && Mathf.Abs(game.edgeHatchArt[1].bounds.center.x-8.2f)<.03f,"Large rune shafts sit at the outer edges");
                 foreach(var fighter in game.players){fighter.aiControlled=false;fighter.inputEnabled=false;}
                 PlaceOnPvpBase(game,false);SetStage(1);
             } else if(stage==1 && SimElapsed>.4f) {
@@ -133,23 +141,66 @@ public static class GameValidation
                 else {Check(b.Downed && game.playing && !b.KnockedOut,"Fifth hit temporarily knocks down without ending the round");SetStage(5);}
             } else if(stage==5 && SimElapsed>3.4f) {
                 Check(!b.Downed && b.HitsRemaining==5,"Recovery restores five hit squares");
-                b.Body.gravityScale=1;b.Body.position=new Vector2(5.75f,game.plank.position.y+1.2f);b.Body.linearVelocity=Vector2.zero;SetStage(6);
+                b.Body.gravityScale=1;b.Body.position=new Vector2(8.2f,game.plank.position.y+1.2f);b.Body.linearVelocity=Vector2.zero;SetStage(6);
             } else if(stage==6 && b.KnockedOut) {
                 Check(!game.playing,"Falling into an open hole ends the round");SetStage(7);
             } else if(stage==7 && game.score[0]==1) {
                 Check(game.score[1]==0,"Ring-out awards one round to the rival");game.RestartMatch();SetStage(8);
             } else if(stage==8 && game.playing && string.IsNullOrEmpty(game.message)) {
-                Check(game.SafeFloorHalfWidth==5 && !game.SuddenDeath,"Restart restores full floor width");
+                Check(Mathf.Approximately(game.SafeFloorHalfWidth,WoodlandGame.InitialSafeFloorHalfWidth) && !game.SuddenDeath,"Restart restores full floor width");
                 typeof(WoodlandGame).GetProperty("RoundTimeRemaining").SetValue(game,.01f);SetStage(9);
             } else if(stage==9 && SimElapsed>1.5f) {
                 Check(game.SuddenDeath && game.playing && game.score.All(value=>value==0),"99-second timeout keeps the fight running in sudden death");
-                Check(game.SafeFloorHalfWidth<4.8f && game.plank.GetComponent<BoxCollider2D>().size.x<9.6f,"Both holes expand inward and shrink the safe collision floor");
+                Check(game.SafeFloorHalfWidth<WoodlandGame.InitialSafeFloorHalfWidth-.2f && game.plank.GetComponent<BoxCollider2D>().size.x<(WoodlandGame.InitialSafeFloorHalfWidth-.2f)*2,"Both holes expand inward and shrink the safe collision floor");
                 Capture("Documentation/RuneRumble-SuddenDeath.png");game.RestartMatch();SetStage(10);
             } else if(stage==10 && game.playing && string.IsNullOrEmpty(game.message)) {
-                Check(!game.SuddenDeath && Mathf.Approximately(game.SafeFloorHalfWidth,5),"Next round resets the expanding holes");
-                Complete(true,"DUEL_PASS: eight rosters, six maps, selection layouts, five-hit knockdown, recovery, ring-out, 99-second expansion and reset");
+                Check(!game.SuddenDeath && Mathf.Approximately(game.SafeFloorHalfWidth,WoodlandGame.InitialSafeFloorHalfWidth),"Next round resets the expanding holes");
+                SessionState.SetInt("Woodland.PresentationCharacter",0);PreparePresentationPair(game,0);SetStage(11);
+            } else if(stage==11 && SimElapsed>.4f) {
+                int c=SessionState.GetInt("Woodland.PresentationCharacter",0);
+                Check(a.Grounded && b.Grounded,"Presentation pair is grounded: "+c);
+                Check(WoodlandEffects.Instance.ComboFramesLoaded(c)==12,"Hit and finisher VFX loaded: "+c);
+                SessionState.SetInt("Woodland.PresentationVfx",WoodlandEffects.Instance.ComboAnimationsPlayed);
+                Check(a.TryAttack(true),"Natural punch starts: "+c);SetStage(12);
+            } else if(stage==12 && ((b.HitsRemaining<5 && SimElapsed>.11f) || SimElapsed>1)) {
+                int c=SessionState.GetInt("Woodland.PresentationCharacter",0);
+                Check(b.HitsRemaining==4,"Natural punch connects and removes one segment: "+c+" [hits="+b.HitsRemaining+", position="+a.Body.position+" / "+b.Body.position+", facing="+a.Facing+", state="+a.AnimationState+", ground="+a.Grounded+", playing="+game.playing+"]");
+                Check(WoodlandEffects.Instance.ComboAnimationsPlayed>SessionState.GetInt("Woodland.PresentationVfx",0),"Natural punch plays animated hit VFX: "+c);
+                Check(Quaternion.Angle(a.art.transform.localRotation,Quaternion.identity)<.1f,"Punch remains upright: "+c);
+                Capture("Documentation/RuneRumble-Punch-"+c+".png");SetStage(13);
+            } else if(stage==13 && SimElapsed>.45f) {
+                PreparePresentationPair(game,SessionState.GetInt("Woodland.PresentationCharacter",0));SetStage(14);
+            } else if(stage==14 && SimElapsed>.4f) {
+                Check(a.TryAttack(false),"Natural kick starts");SetStage(15);
+            } else if(stage==15 && ((b.HitsRemaining<5 && SimElapsed>.13f) || SimElapsed>1)) {
+                int c=SessionState.GetInt("Woodland.PresentationCharacter",0);
+                Check(b.HitsRemaining==4 && a.AnimationState=="Kick","Kick uses its own poses and connects: "+c);
+                Check(Quaternion.Angle(a.art.transform.localRotation,Quaternion.identity)<.1f,"Kick remains upright: "+c);
+                Capture("Documentation/RuneRumble-Kick-"+c+".png");SetStage(16);
+            } else if(stage==16 && SimElapsed>.45f) {
+                int c=SessionState.GetInt("Woodland.PresentationCharacter",0)+1;
+                if(c<8){SessionState.SetInt("Woodland.PresentationCharacter",c);PreparePresentationPair(game,c);SetStage(11);}
+                else {PreparePresentationPair(game,7);b.Body.position=new Vector2(8.2f,game.plank.position.y+.8f);b.Body.linearVelocity=Vector2.down;SetStage(17);}
+            } else if(stage==17 && b.RingOutFalling && SimElapsed>.2f) {
+                Check(!b.KnockedOut && !b.GetComponent<Collider2D>().enabled,"Ring-out presentation disables contact before scoring");
+                Capture("Documentation/RuneRumble-Fall.png");SetStage(18);
+            } else if(stage==18 && b.KnockedOut) {
+                Check(!b.art.enabled && !b.Body.simulated,"Fallen fighter disappears into the shaft");
+                Complete(true,"DUEL_PRESENTATION_PASS: centered responsive cards and portraits, upright natural attacks, all eight hit effects, large outer shafts and falling presentation");
             }
         } catch(Exception exception){Complete(false,exception.ToString());}
+    }
+    static void PreparePresentationPair(WoodlandGame game,int character)
+    {
+        game.CharacterChoices[0]=character;game.CharacterChoices[1]=(character+1)%8;
+        for(int side=0;side<2;side++) {
+            var actor=game.players[side];int c=game.CharacterChoices[side];
+            actor.SetCharacter(c,game.CharacterNames[c],game.CharacterAnimationSets[c],game.CharacterControllers[c],game.CharacterColors[c]);
+            actor.ResetScout();actor.inputEnabled=false;actor.aiControlled=false;
+            actor.Body.position=new Vector2(side==0?-.6f:.6f,game.plank.position.y+.15f+1.1875f);actor.transform.position=actor.Body.position;
+            actor.Body.simulated=true;actor.Body.gravityScale=1;
+        }
+        Physics2D.SyncTransforms();game.hud.Refresh();
     }
     static void Begin(bool exit)
     {
@@ -1202,7 +1253,7 @@ public static class GameValidation
         }
         Physics2D.SyncTransforms();
     }
-    static void Capture(string path)
+    static void Capture(string path,int width=1280,int height=720)
     {
         if(SessionState.GetBool("Woodland.V81",false)){
             if(path.EndsWith("charge-2-v8.png"))path="Documentation/HUD-v8.1.png";
@@ -1214,13 +1265,13 @@ public static class GameValidation
         var camera = Camera.main;
         var canvas = WoodlandGame.Instance.hud.GetComponent<Canvas>();
         var mode = canvas.renderMode;var previousCamera = canvas.worldCamera;float distance = canvas.planeDistance;int order=canvas.sortingOrder;
-        var rt = new RenderTexture(1280, 720, 24);
-        camera.targetTexture = rt;
+        var rt = new RenderTexture(width, height, 24);
+        camera.targetTexture = rt;WoodlandGame.Instance.UpdateCameraViewport();
         canvas.renderMode = RenderMode.ScreenSpaceCamera;canvas.worldCamera = camera;canvas.planeDistance = 1;canvas.sortingOrder=1000;
         Canvas.ForceUpdateCanvases();camera.Render();RenderTexture.active = rt;
-        var shot = new Texture2D(1280, 720, TextureFormat.RGB24, false);
-        shot.ReadPixels(new Rect(0, 0, 1280, 720), 0, 0);shot.Apply();File.WriteAllBytes(path, shot.EncodeToPNG());
-        camera.targetTexture = null;RenderTexture.active = null;
+        var shot = new Texture2D(width, height, TextureFormat.RGB24, false);
+        shot.ReadPixels(new Rect(0, 0, width, height), 0, 0);shot.Apply();File.WriteAllBytes(path, shot.EncodeToPNG());
+        camera.targetTexture = null;WoodlandGame.Instance.UpdateCameraViewport();RenderTexture.active = null;
         canvas.renderMode = mode;canvas.worldCamera = previousCamera;canvas.planeDistance = distance;canvas.sortingOrder=order;
         UnityEngine.Object.DestroyImmediate(shot);UnityEngine.Object.DestroyImmediate(rt);
     }

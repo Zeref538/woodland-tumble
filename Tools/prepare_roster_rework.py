@@ -226,6 +226,19 @@ def validate():
     return errors
 
 
+def profiles():
+    """Cut face-centered HUD portraits separately from full-body selection art."""
+    cfg=json.loads((WORK / "profile-calibration.json").read_text())
+    half=cfg["cropSize"]//2
+    for name,(x,y) in cfg["faceCentersInTrimmedIdle"].items():
+        image=Image.open(ART / name / "Idle/01.png").convert("RGBA")
+        image=image.crop(image.getchannel("A").getbbox())
+        out=ROOT / "Assets/Art/ProfilesRework" / (name+".png")
+        out.parent.mkdir(exist_ok=True)
+        image.crop((x-half,y-half,x+half,y+half)).save(out)
+        sprite_meta(out,100,(.5,.5))
+
+
 def previews():
     folder = WORK / "previews"
     folder.mkdir(exist_ok=True)
@@ -262,6 +275,7 @@ if __name__ == "__main__":
         manifest = json.loads((WORK / "generation-manifest.json").read_text())
         calibration = json.loads((WORK / "calibration.json").read_text())
         print("Extracted", len(extract(manifest, calibration)), "frames")
+        profiles()
     if args.preview:
         previews()
     errors = validate()

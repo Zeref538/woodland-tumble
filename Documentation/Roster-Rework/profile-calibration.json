@@ -1,0 +1,38 @@
+{
+  "faceCentersInTrimmedIdle": {
+    "Fern": [
+      65,
+      58
+    ],
+    "Ember": [
+      62,
+      55
+    ],
+    "Luna": [
+      84,
+      58
+    ],
+    "Bram": [
+      77,
+      55
+    ],
+    "Zephyr": [
+      93,
+      59
+    ],
+    "Volt": [
+      62,
+      57
+    ],
+    "Nyx": [
+      91,
+      61
+    ],
+    "Corin": [
+      56,
+      57
+    ]
+  },
+  "cropSize": 128,
+  "notes": "Square head-and-shoulder crops center the face in both HUD circles; selection continues to use the full body."
+}

@@ -259,7 +259,7 @@ public class WoodlandHUD : MonoBehaviour
 
             Color accent = scout.Element;
             int character=game.CharacterChoices[i];
-            if(fighterPortraits[i] && character>=0 && character<game.CharacterPortraits.Length)fighterPortraits[i].sprite=game.CharacterPortraits[character];
+            if(fighterPortraits[i] && character>=0 && character<game.CharacterPortraits.Length)fighterPortraits[i].sprite=character<game.CharacterProfiles.Length && game.CharacterProfiles[character]?game.CharacterProfiles[character]:game.CharacterPortraits[character];
             float ratio = Mathf.Clamp01(scout.Health / Mathf.Max(1, scout.maxHealth));
             bool reset = previousHealth[i] < 0 || scout.Health > previousHealth[i];
             if (scout.Health < previousHealth[i]) { ghostDelay[i] = .42f; punch[i] = 1; }

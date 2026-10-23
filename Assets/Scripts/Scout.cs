@@ -17,6 +17,9 @@ public class Scout : MonoBehaviour
     public const int HitsToKnockdown = 5;
     public int HitsRemaining { get; private set; } = HitsToKnockdown;
     public bool Downed { get; private set; }
+    public bool RingOutFalling { get; private set; }
+    float ringOutStarted;
+    int standingArtOrder;
     public float knockdownDuration = 3;
     public float KnockdownRemaining => Downed?Mathf.Max(0,knockedDownUntil-Time.time):0;
     bool recovering;
@@ -122,7 +125,7 @@ public class Scout : MonoBehaviour
         standingOffset=bodyCollider.offset;standingDirection=bodyCollider.direction;
         baseScale = art.transform.localScale;
         smoothScale = baseScale;
-        baseRotation = art.transform.localRotation;
+        baseRotation = Quaternion.identity;standingArtOrder=art.sortingOrder;
         face = id == 0 ? 1 : -1;
         textureBinding = new MaterialPropertyBlock();
     }
@@ -148,6 +151,7 @@ public class Scout : MonoBehaviour
         Body.linearVelocity = Vector2.zero;
         Body.angularVelocity = 0;
         face = id == 0 ? 1 : -1;
+        RingOutFalling=false;bodyCollider.enabled=true;art.sortingOrder=standingArtOrder;
         Downed=recovering=false;knockedDownUntil=0;HitsRemaining=HitsToKnockdown;RestoreStandingCollider();
         Health = maxHealth;
         Shield = shieldCapacity; Blocking = Charging = blockHeld = chargeHeld = false;
@@ -165,7 +169,7 @@ public class Scout : MonoBehaviour
         nextAIThink = aiBlockUntil = aiChargeUntil = 0; aiThreatSince = -1;
         AIDecisions = AIActionRequests = 0;
         previousGamepad = null;
-        art.color = Color.white;
+        art.enabled=true;art.color = Color.white;
         art.flipX = face < 0;
         art.transform.localScale = smoothScale = baseScale;
         art.transform.localRotation = baseRotation;
@@ -178,6 +182,17 @@ public class Scout : MonoBehaviour
         if (game == null || game.Paused) {
             if (aiControlled) ClearAIInput();
             return;
+        }
+        if(RingOutFalling) {
+            float t=Mathf.Clamp01((Time.time-ringOutStarted)/.65f);
+            art.transform.localScale=baseScale*Mathf.Lerp(1,.55f,t*t);
+            art.transform.localRotation=Quaternion.identity;
+            art.color=new Color(1,1,1,1-Mathf.SmoothStep(0,1,t));
+            return;
+        }
+        if(game.playing && !KnockedOut && Body.linearVelocity.y<-.25f && Mathf.Abs(Body.position.x)>game.SafeFloorHalfWidth-.05f
+            && Body.position.y<game.plank.position.y+standingSize.y*.5f-.1f) {
+            StartRingOut(game);return;
         }
         if (!game.playing && UltimateActive) { CancelUltimate(); StopAllCoroutines(); action = 0; }
         var keys = Keyboard.current;
@@ -248,8 +263,7 @@ public class Scout : MonoBehaviour
         PlayState(state);
         art.flipX = face < 0;
         art.color = Time.time < hurtUntil && !KnockedOut ? new Color(1, .72f, .62f) : Color.white;
-        float lean = KnockedOut ? 0 : action > 0 ? -face * 5 : -axis * 3;
-        art.transform.localRotation = Quaternion.Slerp(art.transform.localRotation, baseRotation * Quaternion.Euler(0, 0, lean), 1 - Mathf.Exp(-22 * Time.deltaTime));
+        art.transform.localRotation = baseRotation;
         Vector3 stretch = KnockedOut ? Vector3.one : Time.time < hurtUntil ? new Vector3(1.05f, .95f, 1) : !grounded && game.playing ? new Vector3(.97f, 1.03f, 1) : Vector3.one;
         smoothScale = Vector3.Lerp(smoothScale, Vector3.Scale(baseScale, stretch), 1 - Mathf.Exp(-18 * Time.deltaTime));
         art.transform.localScale = smoothScale;
@@ -402,7 +416,7 @@ public class Scout : MonoBehaviour
         if (Body.simulated && grounded && !wasGrounded && lastVerticalSpeed < -2)
             WoodlandEffects.Instance?.Land(Body.position + Vector2.down * 1.1875f, -lastVerticalSpeed);
         lastVerticalSpeed = Body.linearVelocity.y;
-        if (game == null || !game.playing || KnockedOut || Downed) { ClearRequests(); return; }
+        if (game == null || !game.playing || KnockedOut || Downed || RingOutFalling) { ClearRequests(); return; }
         if (Time.time >= hurtUntil) {
             if (action == 0 && !Charging && Time.time >= dashUntil) {
                 var rival=game.players[1-id];
@@ -441,7 +455,7 @@ public class Scout : MonoBehaviour
         ClearRequests();
     }
     void ClearRequests() { jumpRequested = pushRequested = punchRequested = dashRequested = backstepRequested = grabRequested = specialRequested = ultimateRequested = chargePressed = chargeReleased = false; }
-    bool CanAct => WoodlandGame.Instance != null && WoodlandGame.Instance.playing && !WoodlandGame.Instance.Paused && !KnockedOut && !Downed && Time.time >= hurtUntil && Time.time >= shieldBrokenUntil;
+    bool CanAct => WoodlandGame.Instance != null && WoodlandGame.Instance.playing && !WoodlandGame.Instance.Paused && !KnockedOut && !Downed && !RingOutFalling && Time.time >= hurtUntil && Time.time >= shieldBrokenUntil;
     bool SpendStamina(float cost)
     {
         if (Shield < cost) return false;
@@ -686,7 +700,7 @@ public class Scout : MonoBehaviour
     {
         action = punch ? 2 : 1;
         float direction = face;
-        actionAnimation = comboCount == 1 ? "Combo2" : comboCount == 2 ? "Combo3" : punch ? "Punch" : "Kick";
+        actionAnimation = punch ? "Punch" : "Kick";
         PlayState(actionAnimation);
         WoodlandEffects.Instance?.Windup(Body.position + new Vector2(direction * .55f, 0), direction, Element);
         // Grounded startup: punch .10 s / kick .12 s. Air startup: .18 s.
@@ -714,7 +728,7 @@ public class Scout : MonoBehaviour
     }
     public bool ReceiveHit(Scout attacker, float direction, bool punch, float power = 1)
     {
-        if (KnockedOut || Time.time < invulnerableUntil || (!Downed && !grounded && AirHitsTaken>=3)) return false;
+        if (KnockedOut || RingOutFalling || Time.time < invulnerableUntil || (!Downed && !grounded && AirHitsTaken>=3)) return false;
         if(Downed) {
             // Further hits push a downed body; they never extend its recovery timer.
             Body.AddForce(Vector2.right*direction*(punch?2.8f:3.6f),ForceMode2D.Impulse);
@@ -783,6 +797,22 @@ public class Scout : MonoBehaviour
         CancelUltimate(); StopAllCoroutines(); action = 0; Blocking = Charging = false; comboCount = bufferedAttack = 0; comboUntil = 0;
         hurtUntil = Time.time + duration; PlayState("Hurt");
     }
+    void StartRingOut(WoodlandGame game)
+    {
+        CancelUltimate();CancelSpecialCharge();StopAllCoroutines();ClearRequests();
+        RingOutFalling=true;ringOutStarted=Time.time;Downed=recovering=false;
+        axis=0;action=0;Blocking=Charging=blockHeld=chargeHeld=false;
+        bodyCollider.enabled=false;art.sortingOrder=3;
+        Body.linearVelocity=new Vector2(Body.linearVelocity.x*.12f,Mathf.Min(-1,Body.linearVelocity.y));
+        PlayState("Knockout");
+        WoodlandEffects.Instance?.RingOut(new Vector2(Body.position.x,game.plank.position.y+.12f),Element);
+        StartCoroutine(FinishRingOut());
+    }
+    IEnumerator FinishRingOut()
+    {
+        yield return new WaitForSeconds(.65f);
+        Body.simulated=false;art.enabled=false;KnockOut();
+    }
     public void KnockOut()
     {
         if (KnockedOut) return;
@@ -794,7 +824,7 @@ public class Scout : MonoBehaviour
         axis = 0;
         StopAllCoroutines();
         PlayState("Knockout");
-        WoodlandEffects.Instance?.Knockout(Body.position, Element);
+        if(!RingOutFalling)WoodlandEffects.Instance?.Knockout(Body.position, Element);
         WoodlandGame.Instance.RegisterKnockout(this);
     }
     void OnCollisionEnter2D(Collision2D collision)

@@ -1,5 +1,13 @@
 # Rune Rumble: Mac lab handoff
 
+## Latest presentation correction
+
+Matching Unity 6000.5.10f1 rebuilt the scene and passed **406 checks**. Menus and gameplay use a centered 1280×720 design area with aspect-preserving framing. Portrait/map images use centered pivots; selection cards have reusable framed placeholders. HUD circles now use separately calibrated square face crops from `Assets/Art/ProfilesRework`; full-body selection art remains separate. `Documentation/Roster-Rework/profile-calibration.json` records the cuts.
+
+Whole-body rotation curves and controller tilts are removed. Punch and kick use their own poses throughout strings. Natural contacts for all eight fighters verify hit segments and animated VFX, with captures `Documentation/RuneRumble-Punch-0.png` through `-7.png` and matching Kick images. Rune shafts are 3.6 units wide at x ±8.2; safe ground extends ±6.4. A short sinking/fading sequence disables contact and draws the fighter behind the hole, with shaft-level debris and rumble before ring-out scoring. Holes still expand after 99 seconds.
+
+Native Unity was opened and desktop screenshots were inspected. macOS Accessibility blocks automated clicks, so Unity's own Play Mode fixture drives interaction. Final verification evidence: `Documentation/DUEL-VALIDATION.json` and current menu, combat and fall captures. User requested saving before their usage reaches 6% remaining, then logging out of local GitHub and Codex accounts. The latest reported allowance was 13%; the agent cannot read the live account quota.
+
 ## Active Rune Rumble rework
 
 Use installed **Unity 6000.5.10f1**. The matching editor imported and rebuilt this project successfully. The new playable scene contains eight redesigned fighter catalogs, six grounded woodland stages, two-player character showcases, and a large-preview stage selector. `Documentation/RuneRumble-CharacterSelect.png` and `RuneRumble-StageSelect.png` are actual Unity captures; refresh them after layout changes.
