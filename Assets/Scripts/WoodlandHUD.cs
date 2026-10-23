@@ -217,9 +217,9 @@ public class WoodlandHUD : MonoBehaviour
             if(controlsText[i])controlsText[i].text=
                 "<b>"+punch+"   PUNCH</b>\n8 stamina. Start a close-range combo.\n"+
                 "<b>"+kick+"   KICK</b>\n6 stamina. Finish a string and launch.\n"+
-                "<b>"+punch+", "+punch+", "+kick+"   THREE-HIT COMBO</b>\nQueue during recovery. Third hit launches and cracks edge covers.\n"+
+                "<b>"+punch+", "+punch+", "+kick+"   THREE-HIT COMBO</b>\nConfirm P, P, K to launch. Repeated punches reset the route.\n"+
                 "<b>"+jump+"   JUMP / DOUBLE JUMP</b>\n4 stamina on ground; 6 for the aerial jump.\n"+
-                "<b>"+guard+"   GUARD / PARRY</b>\nFace the hit. A fresh guard parries. Grabs beat guard.\n"+
+                "<b>"+guard+"   GUARD / PARRY</b>\nBlock, then punish. Fresh guard parries; grabs beat guard.\n"+
                 "<b>"+dash+"   BACKDASH / FORWARD DASH</b>\n12 / 10 stamina. Backdash briefly avoids hits.\n"+
                 "<b>"+skill+"   "+actor.SkillName+"</b>\n14 stamina. 0.85s charge, then launch. "+ranged+"\n"+
                 "<b>"+ultimate+"   "+actor.UltimateName+"</b>\nOne hit square left. Once per round. "+finisher;
@@ -292,8 +292,9 @@ public class WoodlandHUD : MonoBehaviour
             previousCombo[i]=combo;
             comboPop[i]=Mathf.MoveTowards(comboPop[i],0,dt*2.6f);
             if(statusText[i]) {
-                statusText[i].text=scout.Downed?"DOWN!  "+scout.KnockdownRemaining.ToString("0.0")+"s":combo>1?combo+" HIT":"";
-                statusText[i].color=new Color(accent.r,accent.g,accent.b,scout.Downed?1:combo>1?Mathf.Clamp01(comboPop[i]*2):0);
+                string cue=scout.CombatCue;
+                statusText[i].text=cue.Length>0?cue:scout.Downed?"DOWN!  "+scout.KnockdownRemaining.ToString("0.0")+"s":combo>1?combo+" HIT":"";
+                statusText[i].color=new Color(accent.r,accent.g,accent.b,cue.Length>0 || scout.Downed?1:combo>1?Mathf.Clamp01(comboPop[i]*2):0);
                 var rect=statusText[i].rectTransform;
                 rect.anchorMin=rect.anchorMax=Vector2.one*.5f;
                 if(Camera.main) {

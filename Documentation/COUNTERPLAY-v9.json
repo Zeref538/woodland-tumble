@@ -1,0 +1,22 @@
+{
+    "success": true,
+    "status": "COUNTERPLAY_PASS: whiff recovery, block punishment, guard endurance, anti-mash route and natural finisher",
+    "checks": [
+        "Whiff probe starts",
+        "Missed punch remains punishable after 350ms",
+        "Whiff cannot cancel into kick, dash or guard",
+        "Whiff earns no route credit or damage",
+        "Defender establishes guard",
+        "Punch challenges established guard",
+        "Block denies hit-square loss and combo credit",
+        "One blocked punch does not drain a quarter of guard",
+        "Defender retaliates during blocked recovery",
+        "Block then punish wins a hit without trading",
+        "Repeated-punch probe starts",
+        "Three repeated punches never earn a finisher",
+        "Deliberate route starts",
+        "Confirmed punch-punch-kick earns the finisher naturally",
+        "Confirmed route spends exactly 22 stamina without attacking regeneration",
+        "Deliberate finisher launches toward an edge"
+    ]
+}

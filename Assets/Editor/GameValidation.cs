@@ -31,6 +31,7 @@ public static class GameValidation
     public static void RunInEditor() {EditorApplication.ExecuteMenuItem("Window/General/Game");SessionState.SetBool("Woodland.Duel",true);Begin(false);}
     public static void Run() => RunDuelSaved();
     public static void RunDuelSaved(){AudioListener.volume=0;SessionState.SetBool("Woodland.Duel",true);Begin(true);}
+    public static void RunCounterplay(){AudioListener.volume=0;SessionState.SetBool("Woodland.Counterplay",true);Begin(true);}
     public static void RunSaved() => RunDuelSaved();
     public static void RunHUD()
     {
@@ -92,6 +93,48 @@ public static class GameValidation
         }
     }
     // Current rules. Historical V7/V8 runners below remain available for their archived reports.
+    static void TickCounterplay()
+    {
+        try {
+            if(Elapsed>20)throw new Exception("Counterplay timeout stage "+SessionState.GetInt("Woodland.Stage",-1));
+            var game=WoodlandGame.Instance;if(!game)return;
+            var a=game.players[0];var b=game.players[1];int stage=SessionState.GetInt("Woodland.Stage",-1);
+            if(stage==-1 && Elapsed>.4f){
+                game.ChooseMode(false);game.ConfirmCharacter();game.ConfirmCharacter();game.StartSelectedMatch();SetStage(0);
+            }else if(stage==0 && game.playing && string.IsNullOrEmpty(game.message)){
+                PreparePresentationPair(game,0);a.Body.position=new Vector2(-3,game.plank.position.y+1.4f);b.Body.position=new Vector2(3,game.plank.position.y+1.4f);SetStage(1);
+            }else if(stage==1 && SimElapsed>.5f){Check(a.TryAttack(true),"Whiff probe starts");SetStage(2);
+            }else if(stage==2 && SimElapsed>.35f){
+                Check(a.ActionBusy,"Missed punch remains punishable after 350ms");
+                Check(!a.TryAttack(false) && !a.TryDash() && !a.SetBlock(true),"Whiff cannot cancel into kick, dash or guard");
+                Check(a.ComboCount==0 && b.HitsRemaining==5,"Whiff earns no route credit or damage");SetStage(3);
+            }else if(stage==3 && SimElapsed>.4f){PreparePresentationPair(game,0);SetStage(4);
+            }else if(stage==4 && SimElapsed>.5f){b.enabled=false;Check(b.SetBlock(true),"Defender establishes guard");SetStage(5);
+            }else if(stage==5 && SimElapsed>.2f){Check(a.TryAttack(true),"Punch challenges established guard");SetStage(6);
+            }else if(stage==6 && SimElapsed>.17f){
+                Check(b.HitsRemaining==5 && a.ComboCount==0,"Block denies hit-square loss and combo credit");
+                Check(b.Stamina>75,"One blocked punch does not drain a quarter of guard");
+                b.SetBlock(false);Check(b.TryAttack(true),"Defender retaliates during blocked recovery");SetStage(7);
+            }else if(stage==7 && SimElapsed>.17f){
+                Check(a.HitsRemaining==4 && b.HitsRemaining==5,"Block then punish wins a hit without trading");b.enabled=true;SetStage(8);
+            }else if(stage==8 && SimElapsed>.8f){PreparePresentationPair(game,0);SetStage(9);
+            }else if(stage==9 && SimElapsed>.5f){Check(a.TryAttack(true),"Repeated-punch probe starts");SetStage(10);
+            }else if(stage==10 && SimElapsed>.15f){a.TryAttack(true);SetStage(11);
+            }else if(stage==11 && SimElapsed>.28f){a.TryAttack(true);SetStage(12);
+            }else if(stage==12 && SimElapsed>.35f){
+                Check(a.ComboCount<3,"Three repeated punches never earn a finisher");
+                PreparePresentationPair(game,0);SetStage(13);
+            }else if(stage==13 && SimElapsed>.5f){Check(a.TryAttack(true),"Deliberate route starts");SetStage(14);
+            }else if(stage==14 && SimElapsed>.15f){a.TryAttack(true);SetStage(15);
+            }else if(stage==15 && SimElapsed>.28f){a.TryAttack(false);SetStage(16);
+            }else if(stage==16 && SimElapsed>.3f){
+                Check(a.ComboCount==3 && b.HitsRemaining==2,"Confirmed punch-punch-kick earns the finisher naturally");
+                Check(Mathf.Approximately(a.Stamina,78),"Confirmed route spends exactly 22 stamina without attacking regeneration");
+                Check(b.Body.linearVelocity.x>0,"Deliberate finisher launches toward an edge");
+                Capture("Documentation/Counterplay-v9.png");Complete(true,"COUNTERPLAY_PASS: whiff recovery, block punishment, guard endurance, anti-mash route and natural finisher");
+            }
+        }catch(Exception exception){Complete(false,exception.ToString());}
+    }
     static void TickDuel()
     {
         try {
@@ -226,6 +269,7 @@ public static class GameValidation
     static void Tick()
     {
         if (!SessionState.GetBool(Active, false) || !EditorApplication.isPlaying) return;
+        if(SessionState.GetBool("Woodland.Counterplay",false)){TickCounterplay();return;}
         if(SessionState.GetBool("Woodland.Duel",false)){TickDuel();return;}
         if(SessionState.GetBool("Woodland.V8",false)){TickV8();return;}
         if(SessionState.GetBool("Woodland.MeleeOnly",false)) { TickMelee(); return; }
@@ -1508,7 +1552,8 @@ public static class GameValidation
         SessionState.SetBool("Woodland.MeleeOnly",false);
         SessionState.SetBool("Woodland.HudOnly",false);
         bool duel=SessionState.GetBool("Woodland.Duel",false);SessionState.SetBool("Woodland.Duel",false);
-        File.WriteAllText(duel?"Documentation/DUEL-VALIDATION.json":v81?"Documentation/PLAYMODE-VALIDATION-v8.1.json":v8?"Documentation/PLAYMODE-VALIDATION-v8.json":hudOnly?"Documentation/HUD-VALIDATION-v7.1.json":meleeOnly?"Documentation/MELEE-VALIDATION-v8.1.json":"Documentation/PLAYMODE-VALIDATION-v7.json", JsonUtility.ToJson(report, true));
+        bool counterplay=SessionState.GetBool("Woodland.Counterplay",false);SessionState.SetBool("Woodland.Counterplay",false);
+        File.WriteAllText(counterplay?"Documentation/COUNTERPLAY-v9.json":duel?"Documentation/DUEL-VALIDATION.json":v81?"Documentation/PLAYMODE-VALIDATION-v8.1.json":v8?"Documentation/PLAYMODE-VALIDATION-v8.json":hudOnly?"Documentation/HUD-VALIDATION-v7.1.json":meleeOnly?"Documentation/MELEE-VALIDATION-v8.1.json":"Documentation/PLAYMODE-VALIDATION-v7.json", JsonUtility.ToJson(report, true));
         if (success) Debug.Log(status);else Debug.LogError(status);
         EditorApplication.isPlaying = false;
         if (SessionState.GetBool("Woodland.ValidationExit", false)) EditorApplication.delayCall += () => EditorApplication.Exit(success ? 0 : 1);

@@ -1,0 +1,7 @@
+{
+    "success": false,
+    "status": "System.Exception: Missed punch remains punishable after 350ms\r\n  at GameValidation.Check (System.Boolean ok, System.String message) [0x0002e] in C:\\Users\\johna\\OneDrive\\Documents\\Portfolio\\woodland-tumble\\Assets\\Editor\\GameValidation.cs:265 \r\n  at GameValidation.TickCounterplay () [0x00151] in C:\\Users\\johna\\OneDrive\\Documents\\Portfolio\\woodland-tumble\\Assets\\Editor\\GameValidation.cs:108 ",
+    "checks": [
+        "Whiff probe starts"
+    ]
+}

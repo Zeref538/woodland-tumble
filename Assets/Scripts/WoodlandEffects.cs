@@ -480,9 +480,9 @@ public class WoodlandEffects : MonoBehaviour
     public void Impact(Vector2 point, float facing, bool punch, bool finisher=false)
     {
         PlayCue(finisher?2:1,finisher?.70f:.60f,Random.Range(.94f,1.06f));
-        Light(point,Gold,1.8f);KickCamera(new Vector2(facing,.25f),punch?.10f:.06f);FreezeImpact(.035f);
+        Light(point,Gold,1.8f);KickCamera(new Vector2(facing,.25f),finisher?.10f:punch?.045f:.03f);FreezeImpact(finisher?.045f:.025f);
         Emit(slash,point,Vector2.zero,Color.white,.075f,new Vector2(.4f,.65f),new Vector2(.08f,.2f),0,12,45);
-        Burst(point,new Vector2(facing,.45f),punch?25:18,Gold,punch?4.5f:3.4f);
+        Burst(point,new Vector2(facing,.45f),finisher?20:8,Gold,punch?4.5f:3.4f);
         Pulse(point,punch?Gold:new Color(.72f,1,.58f),punch?1.5f:1.1f,.22f);
         Emit(star,point,Vector2.zero,new Color(1,.96f,.74f),.13f,Vector2.one*.6f,Vector2.one*.06f,0,11,45,180);
         for(int i=0;i<6;i++) {
@@ -490,6 +490,14 @@ public class WoodlandEffects : MonoBehaviour
             Emit(star,point,direction*4.5f,Gold,.2f,Vector2.one*.18f,Vector2.zero,0,10,angle,100);
         }
         shake=Mathf.Max(shake,punch?punchShake:pushShake);
+    }
+    public void TacticalImpact(Vector2 point,float facing,bool punish)
+    {
+        Color tint=punish?new Color(1,.78f,.35f):new Color(.8f,.95f,1);
+        Pulse(point,tint,punish?1.25f:.9f,.19f);
+        Emit(star,point,Vector2.zero,tint,.12f,new Vector2(.45f,.7f),Vector2.zero,0,12,45);
+        Burst(point,Vector2.right*facing,10,tint,2.5f);
+        FreezeImpact(.045f);
     }
     static Sprite[] LoadComboFrames(string character,string action)
     {

@@ -1,3 +1,20 @@
+# Current checkpoint, 2026-10-24
+
+- [x] Clone GitHub and recover the actual eight-fighter checkpoint from origin/lab-duel-roster.
+- [x] Preserve the earlier default-branch draft in Git stash and ../woodland-update-workbench.
+- [x] Install and push imagegen skill rules for concurrent batches and shared art direction.
+- [x] Keep the larger CharactersRework roster and remove runtime body stretching.
+- [x] Add punishable whiffs, blocked recovery, confirmed punch-punch-kick route and CPU pressure defense.
+- [x] Reproduce the whiff bug, then pass 16 targeted counterplay checks in Unity 6000.5.10f1.
+- [x] Generate comparison boards and record the user's choice: Arcade Aura menu/HUD, Ink & Motion effects.
+- [ ] Build the approved interface and effects using DESIGN.md and the two boards.
+- [ ] Refresh six maps within the approved direction; retain grounded collision and both open manholes.
+- [ ] Slice, inspect and integrate approved per-fighter animated effects. Earlier generated sets are drafts only.
+- [ ] Verify menu/card label placement at three aspect ratios, full eight-fighter/ring-out regression and Windows build.
+- [ ] Merge only after full regression and visual checks. No finished release or Windows build is claimed.
+
+Shutdown was requested when remaining usage reached 5 percent. That threshold was observed before presentation implementation finished. Continue from this checklist and HANDOFF-CURRENT.md.
+
 ## Presentation corrections in progress
 
 - [x] Center the front-end design canvas for wide/tall windows and center image pivots inside portrait/map frames.
