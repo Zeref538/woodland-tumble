@@ -5,5 +5,7 @@
   "status": "6000.2.2f1 isolated import passed after enabling built-in modules and using URP 17.2.0; not adopted",
   "package_changes": "Only in isolated 6000.2.2f1 test copy; original project remains on its matching editor and package versions",
   "selected_editor": "6000.5.10f1",
-  "selected_editor_path": "/Applications/Unity/Hub/Editor/6000.5.10f1/Unity.app/Contents/MacOS/Unity"
+  "selected_editor_path": "/Applications/Unity/Hub/Editor/6000.5.10f1/Unity.app/Contents/MacOS/Unity",
+  "selected_editor_validation": "Matching 6000.5.10f1 import, scene rebuild, and final 153-check duel validation passed",
+  "standalone_build": "Not produced: matching editor has no PlaybackEngines directory / desktop build support"
 }

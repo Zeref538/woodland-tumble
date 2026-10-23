@@ -10,7 +10,7 @@ Artwork: `Assets/Art/CharactersRework` contains 1,288 separate PNG sprites, with
 
 Current keyboard mapping: P1 A/D move, W jump, S defend, Q/E backdash/dash, T punch, Y kick, G ranged, H ultimate, F grab. P2 arrows move/jump/defend, U/P backdash/dash, I punch, O kick, K ranged, L ultimate, J grab.
 
-Current duel fixture: `GameValidation.RunDuelSaved` / `RunSaved`. The revised fixture passed 153 checks, including native catalogs, five-hit recovery, ring-out scoring and sudden-death floor shrinkage. The final larger-fighter/five-segment HUD pass also passed all 153 checks. Fighters use 80 pixels/unit (twice the initial rework size); standing colliders are 1.05 × 2.375 units, foot offsets 1.1875, and the grounded ray tracks that baseline. Do not cite old health/draw fixtures as validation of current rules. Git remote/history have been restored on `lab-duel-roster`; GitHub CLI is authenticated as Zeref538; the current checkpoint is being saved on `lab-duel-roster`.
+Current duel fixture: `GameValidation.RunDuelSaved` / `RunSaved`. The revised fixture passed 153 checks, including native catalogs, five-hit recovery, ring-out scoring and sudden-death floor shrinkage. The final larger-fighter/five-segment HUD pass also passed all 153 checks. Fighters use 80 pixels/unit (twice the initial rework size); standing colliders are 1.05 × 2.375 units, foot offsets 1.1875, and the grounded ray tracks that baseline. Do not cite old health/draw fixtures as validation of current rules. Git remote/history have been restored on `lab-duel-roster`; GitHub CLI is authenticated as Zeref538; the playable checkpoint is pushed to `lab-duel-roster`.
 
 The older release notes below are historical where they conflict with this section.
 

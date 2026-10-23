@@ -1,50 +1,29 @@
-## Current verified checkpoint
+# Rune Rumble: current tasks
 
-GitHub CLI is connected as Zeref538. Unity 6000.5.10f1 imported and rebuilt the scene; the revised duel fixture passed 153 checks including the final enlargement/HUD pass. Sprite padding audit: 1,288 separate sprites, zero output-edge touches and zero source-body clipping flags. Latest visual steering: enlarge gameplay fighters 2× uniformly, match collision/feet to art, use tightly cropped selection portraits, and restore the original Tilt Rivals HUD ordering (five connected hit segments in the old top-meter position, stamina below, names underneath). Rebuild and 153-check duel fixture passed after this pass.
+- [x] Rename the project to Rune Rumble and remove Balance selection/gameplay.
+- [x] Redesign Fern, Ember, Luna and Bram to match the approved Zephyr, Volt, Nyx and Corin designs.
+- [x] Create eight full sprite catalogs: sixteen actions × ten frames, plus Idle, per fighter (1,288 PNGs).
+- [x] Repair overlapping/clipped source figures; validate zero source-body edge cuts and zero output-edge touches.
+- [x] Integrate native Unity controllers, distinct elemental skills, new action medallions and new hit/finisher effects.
+- [x] Enlarge gameplay fighters to twice the initial rework size; match standing/downed colliders, ground checks and foot effects.
+- [x] Reuse the old Tilt Rivals HUD structure, with a five-segment hit meter, stamina, player names, circular portraits and original skill-circle layout.
+- [x] Add the centered Rune Rumble VS artwork, 99-second timer and first-to-three / best-of-five scoring.
+- [x] Add temporary three-second knockdown after five confirmed hits; refill segments on recovery and allow pushing downed rivals.
+- [x] Remap both keyboards and update the HUD prompts.
+- [x] Add Stormglass Causeway and Hollowroot Cistern; use full grounded scenery across all six arenas.
+- [x] Generate open woodland rune-stone shafts at both arena edges; keep them open from round start.
+- [x] Expand both holes inward after 99 seconds until a ring-out; restore full safe ground on the next round.
+- [x] Build two-player fighter showcases, an eight-card roster, selection markers and lock-in states.
+- [x] Build stage selection with a large selected-map preview and six illustrated cards.
+- [x] Import and rebuild using matching Unity 6000.5.10f1; preserve source/editor backups locally.
+- [x] Pass all 153 current duel validation checks and inspect Unity screenshots after the larger-fighter/HUD pass.
+- [x] Authenticate GitHub CLI as Zeref538, restore remote history and push the playable checkpoint to lab-duel-roster.
+- [ ] Check gameplay feel and physical keyboard/controller behavior with two people.
+- [ ] Install matching desktop build support before producing a standalone executable (this editor currently has no PlaybackEngines folder).
 
-## Latest selection and arena direction
+Current evidence: `Documentation/DUEL-VALIDATION.json`, `Documentation/Roster-Rework/sprite-padding-validation.json`, and the three `Documentation/RuneRumble-*.png` Unity captures. Runtime assets and calibration are backed up on GitHub. Large intermediate generation sheets and local scene backups stay in the local workbench.
 
-- [x] Build fighter selection with two large player showcases, eight portrait cards, player markers and lock-in states in the scene builder.
-- [x] Build arena selection with one large selected-stage preview and six illustrated thumbnail cards in the scene builder.
-- [x] Replace timeout draws with sudden death: holes are open from round start and expand inward after 99 seconds.
-- [x] Verify the selection layouts, open-hole placement, and timed expansion in Unity 6000.5.10f1.
-
-# Rune Rumble: current rework
-
-User direction: retain 2D pixel art; remove Balance and add Tekken-inspired combat. LATEST PRIORITY: focus on sprites first and generate independent small sheets concurrently. Latest mechanics: five hit squares replace the health bar; the fifth confirmed hit causes temporary knockout, recovery refills five squares, and rivals can push a downed fighter off the edge. Defer further gameplay changes until the sprite phase is complete. Earlier health/timeout work below is an intermediate prototype and must be replaced. Latest scope: user approves Zephyr, Volt, Nyx and Corin designs; redesign all four original fighters in that same style; reuse the existing project systems as the foundation for a new game direction; add two maps and breakable edge hatches/grates for falls. User confirmed falling through loses the round by ring-out.
-
-- [x] Read handoff, current task history, gameplay and asset architecture.
-- [x] Confirm 2D combat direction with the user.
-- [x] Check local editor: Unity 6000.2.2f1 installed; project requires 6000.5.10f1. Preserve ProjectVersion.txt.
-- [x] Connect GitHub CLI as Zeref538 and restore repository history safely without replacing local files.
-- [x] Record baseline file hashes before editing gameplay/assets.
-- [x] Remove Balance selection and tilting-plank gameplay; keep solo AI and local multiplayer.
-- [x] Implement first duel pass: automatic opponent facing, 99-second rounds, timeout and draw rules (Unity verification pending).
-- [ ] Revise the first pass enclosed-edge behavior for the newly requested breakable fall hazards.
-- [x] Remove health graphics from the HUD builder; preserve circular portraits, names and existing skill circles. Saved scene update and Unity visual check pending.
-- [x] Set 99-second rounds and retain first-to-three / best-of-five scoring. Timeout draws restart without health comparison.
-- [x] Rename visible game title, Unity product name and Windows output to Rune Rumble; preserve repository links.
-- [x] Generate and integrate a new centered VS emblem.
-- [x] Implement five confirmed-hit squares and 3-second temporary knockout/recovery in existing scripts; downed bodies can be pushed without extending the recovery timer. Unity verification pending.
-- [ ] Replace health/damage-based round wins with temporary knockdown, recovery and pushing to ring-out; remove health bar and rewrite move guide. Deferred while prioritizing sprites.
-- [ ] Generate assets in small reviewed batches: approve each character silhouette, then each action sequence, then UI/effects; reject large one-shot sheets.
-- [x] Remap keyboard inputs and HUD: P1 WASD, Q/E dashes, T/Y/G/H actions; P2 arrows, U/P dashes, I/O/K/L actions; F/J grab. Runtime verification pending.
-- [x] Create and receive user approval for Zephyr, Volt, Nyx and Corin character designs.
-- [x] Redesign Fern, Ember, Luna and Bram to match the approved new visual style while retaining their identities.
-- [x] Add two original maps with dedicated background and arena art.
-- [ ] Finish breakable rune hatch/cracked grate artwork and test ring-outs. Initial durability/collider/reset implementation is in existing scripts.
-- [x] Generate all eight animation sets in focused batches, at most four rows per image; inspect each before integration.
-- [ ] Inventory original fighter animation states, frame counts, clips, portraits, action covers, guard icons and effects.
-- [x] Create complete independent animation artwork for each new fighter with matching coverage and consistent foot pivots.
-- [ ] Create four new portrait/action/guard artwork sets and melee, ranged and ultimate effects.
-- [x] Integrate eight-character roster, navigation, native animation assets, skills and AI.
-- [x] Update saved editable scene and builder together; preserve a scene backup.
-- [x] Update existing validation fixtures for duel rules and all eight fighters.
-- [ ] Run Unity 6000.5.10f1 checks and build; inspect gameplay and artwork visually.
-- [ ] Update README, HANDOFF and current design documentation with verified results.
-- [ ] Review intended diff and commit to a dedicated GitHub branch; report remaining device checks.
-
-Completion requires real animation coverage and distinct skills/effects, not renamed copies or recolored substitutes. No new C# helper/editor files. Historical check counts below describe the previous release, not this rework.
+Historical completed tasks below describe older releases; their health, Balance, controller and build claims do not supersede the current rules or current verification.
 
 # Agent Tasks
 
