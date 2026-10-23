@@ -1,10 +1,8 @@
-# Tilt Rivals
+# Rune Rumble
+
+**Current rework:** eight redesigned fighters, six grounded woodland arenas, Tekken-inspired 2D duels and new fighter/stage selection screens. The five-segment hit meter replaces numerical health: five confirmed hits cause a three-second knockdown, then recovery restores the meter. Win by pushing a rival into either permanently open rune-stone edge shaft. After 99 seconds the shafts expand inward until a ring-out. First to three rounds wins. Balance mode is removed. See [TODO.md](TODO.md) for current verification and remaining polish.
 
 A fantasy pixel-art fighting game for **Unity 6000.5.10f1, Universal 2D / URP 2D**. The existing repository and scene retain their woodland-tumble names.
-
-## Balance-only version
-
-Open `Assets/Scenes/BalanceOnly.unity` for a fixed local Fern-versus-Ember match on the forest balancer. It starts directly with no selection or pause-navigation menus. The full game remains in `WoodlandTumble.unity`. See [BALANCE-ONLY.md](BALANCE-ONLY.md) for controls and rebuilding.
 
 ## Open on this PC
 
@@ -16,18 +14,22 @@ The local project is already updated. In Unity Hub, choose **Add project from di
 
 ## Choose a match
 
-**Single Player** plays against a CPU rival. **Multiplayer** supports two local players using keyboards or controllers. Choose **Arena PVP** for fixed platforms or **Balance** for the tilting plank, then choose characters and one of four maps. This is local play, not online multiplayer.
+**Single Player** plays against a CPU rival. **Multiplayer** supports two local players using keyboards or controllers. Choose characters and one of six grounded duel arenas. This is local play, not online multiplayer.
 
-| Scout | Ranged special | Low-health ultimate |
+| Scout | Ranged special | Last-segment ultimate |
 |---|---|---|
 | Fern | Vine Bolt: roots and slows | Wildroot Prison |
 | Ember | Fire Bolt: stronger flame contact | Phoenix Combo |
 | Luna | Frost Wave: slows on contact | Moonfrost Seal |
 | Bram | Stone Wave: launches on contact | World Shatter |
+| Zephyr | Gale Crescent: lift and push | Tempest Spiral |
+| Volt | Arc Lance: fast lightning | Thunder Rush |
+| Nyx | Dusk Orb: binding shadow | Eclipse Snare |
+| Corin | Prism Shard: slowing crystal | Crystal Crown |
 
-Each scout has an independent sprite catalog and native Unity animation controller. Ranged specials spend 14 stamina to begin a visible 0.85-second charge, then launch automatically. There is no ranged cooldown; charging and cast recovery prevent overlapping casts. A hit cancels the wind-up. Ultimates unlock at 25 health or below, can be used once per round and have a visible windup that allows counterplay. Bram's ultimate requires the ground. Solo mode picks a different CPU character automatically; local players select their characters in turn.
+Each scout has an independent sprite catalog and native Unity animation controller. Ranged specials spend 14 stamina to begin a visible 0.85-second charge, then launch automatically. There is no ranged cooldown; charging and cast recovery prevent overlapping casts. A hit cancels the wind-up. Ultimates unlock with one hit segment remaining, can be used once per round and have a visible windup that allows counterplay. Bram's ultimate requires the ground. Solo mode picks a different CPU character automatically; local players select their characters in turn.
 
-Maps: **Sunlit Hollow**, **Moonlit Lake**, **Ember Grove**, **Skyward Ruins**. Arena PVP uses one illustrated 14-unit base with no overhead ledges. Balance retains its original tilting board and sphere. Artwork scales uniformly.
+Maps: **Sunlit Hollow**, **Moonlit Lake**, **Ember Grove**, **Skyward Ruins**, **Stormglass Causeway**, **Hollowroot Cistern**. Each map uses continuous grounded scenery, an invisible floor collider and two open edge shafts. There are no floating platforms. All eight fighters share a common body scale and foot baseline.
 
 ## Controls
 
@@ -36,15 +38,15 @@ The HUD shows the assigned controller's face buttons. Connect one pad for player
 | Action | PlayStation | Xbox | P1 keyboard | P2 keyboard |
 |---|---|---|---|---|
 | Move | Stick / D-pad | Stick / D-pad | A / D | Left / Right |
-| Punch / combo | Square | X | G | L |
-| Kick / combo | Circle | B | F | K |
+| Punch / combo | Square | X | T | I |
+| Kick / combo | Circle | B | Y | O |
 | Hold block / parry | Cross or L2 | A or LT | S | Down |
-| Charged ranged special | Triangle | Y | H | J |
+| Charged ranged special | Triangle | Y | G | K |
 | Jump / double jump | D-pad Up / stick Up | D-pad Up / stick Up | W | Up |
 | Backstep | L1 | LB | Q | U |
-| Dash | R1 | RB | Left Shift | Right Shift |
-| Low-health ultimate | L2 + R2 together | LT + RT together | T | I |
-| Grab & toss | Keyboard only | Keyboard only | E | O |
+| Dash | R1 | RB | E | P |
+| Low-health ultimate | L2 + R2 together | LT + RT together | H | L |
+| Grab & toss | Keyboard only | Keyboard only | F | J |
 | Pause | Options | Menu | Escape | Escape |
 | Controls | Release Share | Release View | F1 | F1 |
 

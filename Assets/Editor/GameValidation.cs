@@ -28,9 +28,10 @@ public static class GameValidation
         foreach(var text in hud.healthText)Debug.Log("HUD_METRICS: "+text.name+" text="+text.text+" preferred="+text.preferredWidth+"x"+text.preferredHeight+" rect="+text.rectTransform.rect.size+" font="+text.font.name+" size="+text.fontSize);
     }
     [MenuItem("Woodland/Validate Editable Game")]
-    public static void RunInEditor() {SessionState.SetBool("Woodland.V81",true);SessionState.SetBool("Woodland.V8",true);Begin(false);}
-    public static void Run() => RunV8();
-    public static void RunSaved() { AudioListener.volume=0;SessionState.SetBool("Woodland.V81",true);SessionState.SetBool("Woodland.V8",true);Begin(true); }
+    public static void RunInEditor() {SessionState.SetBool("Woodland.Duel",true);Begin(false);}
+    public static void Run() => RunDuelSaved();
+    public static void RunDuelSaved(){AudioListener.volume=0;SessionState.SetBool("Woodland.Duel",true);Begin(true);}
+    public static void RunSaved() => RunDuelSaved();
     public static void RunHUD()
     {
         AudioListener.volume=0;
@@ -90,15 +91,70 @@ public static class GameValidation
             UnityEngine.Object.DestroyImmediate(texture);
         }
     }
-    public static void RunBalanceOnly()
+    // Current rules. Historical V7/V8 runners below remain available for their archived reports.
+    static void TickDuel()
     {
-        AudioListener.volume=0;GameSetup.PrepareBalanceOnly();
-        SessionState.SetBool("Woodland.BalanceOnly",true);Begin(true);
+        try {
+            if(Elapsed>35)throw new Exception("Duel validation timed out at stage "+SessionState.GetInt("Woodland.Stage",-1));
+            var game=WoodlandGame.Instance;if(!game)return;
+            var a=game.players[0];var b=game.players[1];var hud=game.hud;
+            int stage=SessionState.GetInt("Woodland.Stage",-1);
+            if(stage==-1 && Elapsed>.3f) {
+                Check(!game.BalanceMode && !hud.rulesMenu,"Balance and its selection menu are removed");
+                Check(game.CharacterNames.Length==8 && game.backgrounds.Length==6,"Eight fighters and six arenas are saved");
+                Check(game.roundsToWin==3 && game.roundDuration==99,"Rounds are 99 seconds, first to three");
+                foreach(var catalog in game.CharacterAnimationSets)foreach(string state in new[]{"Walk","Jump","Hurt","Push","Punch","Kick","Knockout","Block","DoubleJump","Special","Dash","Backstep","Victory","Ultimate","Downed","GetUp"})Check(catalog.Get(state).Length==10 && catalog.Get(state).All(sprite=>sprite),"Complete native animation "+catalog.name+" / "+state);
+                game.ChooseMode(false);game.hud.RefreshMenu();Capture("Documentation/RuneRumble-CharacterSelect.png");
+                Check(hud.selectionPortraits.All(image=>image) && hud.characterButtons.Length==8,"Both player showcases and eight roster cards exist");
+                game.PreviewCharacter(4);game.ConfirmCharacter();game.PreviewCharacter(7);game.ConfirmCharacter();game.PreviewArena(5);hud.RefreshMenu();Capture("Documentation/RuneRumble-StageSelect.png");
+                Check(hud.mapPreview && hud.mapButtons.Length==6,"Large selected-stage preview and six cards exist");
+                game.StartSelectedMatch();SetStage(0);
+            } else if(stage==0 && game.playing && string.IsNullOrEmpty(game.message)) {
+                Check(game.plank.bodyType==RigidbodyType2D.Kinematic && !game.plankArt.enabled,"Ground is fixed with no floating platform art");
+                Check(game.RoundTimeRemaining>97 && hud.roundTimerText,"Round starts with a live 99-second timer");
+                Check(game.edgeHatches.All(h=>h && !h.enabled) && game.HatchIsOpen(0) && game.HatchIsOpen(1),"Both edge holes are open from round start");
+                foreach(var fighter in game.players){fighter.aiControlled=false;fighter.inputEnabled=false;}
+                PlaceOnPvpBase(game,false);SetStage(1);
+            } else if(stage==1 && SimElapsed>.4f) {
+                Check(a.Grounded && b.Grounded,"Fighters stand on the central floor");
+                Check(a.Facing>0 && b.Facing<0,"Fighters face their rival");
+                SessionState.SetFloat("Woodland.DuelClock",game.RoundTimeRemaining);game.TogglePause();SetStage(2);
+            } else if(stage==2 && Elapsed>.35f) {
+                Check(Mathf.Approximately(game.RoundTimeRemaining,SessionState.GetFloat("Woodland.DuelClock",0)),"Pause freezes the timer");
+                game.ResumeMatch();SetStage(3);
+            } else if(stage==3 && SimElapsed>.35f) {
+                Check(game.RoundTimeRemaining<SessionState.GetFloat("Woodland.DuelClock",0)-.2f,"Timer resumes");
+                b.Body.gravityScale=1;b.Body.linearVelocity=Vector2.zero;
+                Check(b.ReceiveHit(a,1,true),"First confirmed hit connects");SetStage(4);
+            } else if(stage==4 && SimElapsed>.65f) {
+                b.Body.linearVelocity=Vector2.zero;b.Body.position=new Vector2(1,game.plank.position.y+1.4f);
+                int remaining=b.HitsRemaining;
+                if(remaining>0){Check(b.ReceiveHit(a,1,true),"Confirmed hit removes one square");SetStage(4);}
+                else {Check(b.Downed && game.playing && !b.KnockedOut,"Fifth hit temporarily knocks down without ending the round");SetStage(5);}
+            } else if(stage==5 && SimElapsed>3.4f) {
+                Check(!b.Downed && b.HitsRemaining==5,"Recovery restores five hit squares");
+                b.Body.gravityScale=1;b.Body.position=new Vector2(5.75f,game.plank.position.y+1.2f);b.Body.linearVelocity=Vector2.zero;SetStage(6);
+            } else if(stage==6 && b.KnockedOut) {
+                Check(!game.playing,"Falling into an open hole ends the round");SetStage(7);
+            } else if(stage==7 && game.score[0]==1) {
+                Check(game.score[1]==0,"Ring-out awards one round to the rival");game.RestartMatch();SetStage(8);
+            } else if(stage==8 && game.playing && string.IsNullOrEmpty(game.message)) {
+                Check(game.SafeFloorHalfWidth==5 && !game.SuddenDeath,"Restart restores full floor width");
+                typeof(WoodlandGame).GetProperty("RoundTimeRemaining").SetValue(game,.01f);SetStage(9);
+            } else if(stage==9 && SimElapsed>1.5f) {
+                Check(game.SuddenDeath && game.playing && game.score.All(value=>value==0),"99-second timeout keeps the fight running in sudden death");
+                Check(game.SafeFloorHalfWidth<4.8f && game.plank.GetComponent<BoxCollider2D>().size.x<9.6f,"Both holes expand inward and shrink the safe collision floor");
+                Capture("Documentation/RuneRumble-SuddenDeath.png");game.RestartMatch();SetStage(10);
+            } else if(stage==10 && game.playing && string.IsNullOrEmpty(game.message)) {
+                Check(!game.SuddenDeath && Mathf.Approximately(game.SafeFloorHalfWidth,5),"Next round resets the expanding holes");
+                Complete(true,"DUEL_PASS: eight rosters, six maps, selection layouts, five-hit knockdown, recovery, ring-out, 99-second expansion and reset");
+            }
+        } catch(Exception exception){Complete(false,exception.ToString());}
     }
     static void Begin(bool exit)
     {
         if (EditorApplication.isPlaying) { EditorApplication.isPlaying = false; EditorApplication.delayCall += () => Begin(exit); return; }
-        EditorSceneManager.OpenScene(SessionState.GetBool("Woodland.BalanceOnly",false)?"Assets/Scenes/BalanceOnly.unity":"Assets/Scenes/WoodlandTumble.unity");
+        EditorSceneManager.OpenScene("Assets/Scenes/WoodlandTumble.unity");
         SessionState.SetBool("Woodland.ValidationExit", exit);
         SessionState.SetString("Woodland.Checks", "");
         SessionState.SetBool(Active, true);
@@ -119,7 +175,7 @@ public static class GameValidation
     static void Tick()
     {
         if (!SessionState.GetBool(Active, false) || !EditorApplication.isPlaying) return;
-        if(SessionState.GetBool("Woodland.BalanceOnly",false)){TickBalanceOnly();return;}
+        if(SessionState.GetBool("Woodland.Duel",false)){TickDuel();return;}
         if(SessionState.GetBool("Woodland.V8",false)){TickV8();return;}
         if(SessionState.GetBool("Woodland.MeleeOnly",false)) { TickMelee(); return; }
         if(SessionState.GetBool("Woodland.HudOnly",false)) { TickHUD(); return; }
@@ -893,7 +949,7 @@ public static class GameValidation
         var box=game.plank.GetComponent<BoxCollider2D>();float top=game.plank.transform.TransformPoint(box.offset+Vector2.up*box.size.y*.5f).y;
         for(int i=0;i<2;i++){
             var scout=game.players[i];float x=i==0?0:(rivalBehind?-1.2f:1.2f);
-            scout.Body.position=new Vector2(game.plank.position.x+x,top+.625f);scout.transform.position=scout.Body.position;scout.Body.linearVelocity=Vector2.zero;scout.Body.gravityScale=1;scout.Body.simulated=true;
+            scout.Body.position=new Vector2(game.plank.position.x+x,top+1.1875f);scout.transform.position=scout.Body.position;scout.Body.linearVelocity=Vector2.zero;scout.Body.gravityScale=1;scout.Body.simulated=true;
         }
         Physics2D.SyncTransforms();
     }
@@ -1377,60 +1433,6 @@ public static class GameValidation
             }
         }catch(Exception error){Complete(false,error.ToString());}
     }
-    static void TickBalanceOnly()
-    {
-        try {
-            if(Elapsed>20)throw new Exception("Balance-only validation timed out.");
-            var game=WoodlandGame.Instance;if(!game)return;
-            var hud=game.hud;var a=game.players[0];var b=game.players[1];
-            int stage=SessionState.GetInt("Woodland.Stage",-1);
-            if(stage==-1 && Elapsed>.3f){
-                Check(game.balanceOnly && game.Screen==WoodlandGame.MenuScreen.Match,"Saved Balance scene boots straight into the match");
-                Check(game.BalanceMode && !game.SoloMode,"Direct match uses local two-player Balance rules");
-                Check(game.CharacterChoices.SequenceEqual(new[]{0,1}) && a.displayName=="Fern" && b.displayName=="Ember","Fixed Fern and Ember characters load without selection");
-                Check(game.ArenaIndex==0,"Fixed forest arena loads without a map screen");
-                Check(!hud.menuRoot && !hud.pauseMenu,"Selection and pause menu objects are absent from the saved scene");
-                Check(hud.matchHud.activeSelf,"Gameplay HUD is visible immediately");
-                Check(AudioListener.volume==0,"Automated run remains silent");
-                game.SelectArena(2);game.OpenMapSelection();game.ChooseMode(true);game.OpenSettings();game.PreviewCharacter(3);
-                Check(game.ArenaIndex==0 && game.Screen==WoodlandGame.MenuScreen.Match && !game.SoloMode,"Old menu and map entry points cannot change the direct match");
-                SetStage(0);
-            }else if(stage==0 && game.playing && Elapsed>2.4f){
-                Check(game.plank.simulated && game.plank.bodyType==RigidbodyType2D.Dynamic && game.plank.GetComponent<HingeJoint2D>().enabled,"Tilting plank remains dynamic and hinged");
-                Check(game.sphereArt.gameObject.activeSelf,"Balance sphere remains visible");
-                Check(game.players.All(p=>p.Body.simulated && !p.aiControlled && p.inputEnabled),"Both local players become playable after the countdown");
-                Check(a.transform.position.y>game.fallBoundary && b.transform.position.y>game.fallBoundary,"Both players survive and land in the Balance arena");
-                hud.Refresh();Capture("Documentation/Balance-only.png");
-                disabledPads=Gamepad.all.Where(p=>p.enabled).ToArray();foreach(var pad in disabledPads)InputSystem.DisableDevice(pad);
-                originalInputSettings=InputSystem.settings;validationInputSettings=UnityEngine.Object.Instantiate(originalInputSettings);
-                validationInputSettings.editorInputBehaviorInPlayMode=InputSettings.EditorInputBehaviorInPlayMode.AllDeviceInputAlwaysGoesToGameView;
-                validationInputSettings.backgroundBehavior=InputSettings.BackgroundBehavior.IgnoreFocus;InputSystem.settings=validationInputSettings;
-                testKeyboard=InputSystem.AddDevice<Keyboard>();InputSystem.onBeforeUpdate+=DriveTestInput;
-                heldKey=Key.Tab;SetStage(1);
-            }else if(stage==1 && Elapsed>.15f){
-                Check(game.ArenaIndex==0,"Actual Tab input cannot change the fixed map");heldKey=Key.Escape;SetStage(2);
-            }else if(stage==2 && Elapsed>.15f){
-                hud.Refresh();Check(game.Paused && Time.timeScale==0,"Escape input pauses gameplay");
-                Check(!hud.pauseMenu && hud.bannerText.text=="PAUSED","Pause displays a simple banner with no navigation menu");
-                Check(hud.MenuHint.StartsWith("PAUSE"),"Footer explains pause instead of advertising a menu");
-                heldKey=Key.None;SetStage(3);
-            }else if(stage==3 && Elapsed>.15f){heldKey=Key.Escape;SetStage(4);
-            }else if(stage==4 && Elapsed>.15f){
-                Check(!game.Paused && Time.timeScale==1,"A second Escape press resumes gameplay");heldKey=Key.None;
-                Arrange(game);
-                Check(a.TryAttack(true),"Punch starts in the direct Balance match");SetStage(5);
-            }else if(stage==5 && Elapsed>.3f){
-                Check(b.Health<b.maxHealth && a.ComboCount==1,"Punch connects and reduces the rival health in Balance mode");
-                game.RestartMatch();SetStage(6);
-            }else if(stage==6 && game.playing && Elapsed>2.4f){
-                Check(game.score.All(v=>v==0) && a.Health==100 && b.Health==100,"Replay restores scores and both health meters");
-                Check(game.Screen==WoodlandGame.MenuScreen.Match && game.BalanceMode && game.ArenaIndex==0,"Replay stays in Balance without opening selectors");
-                game.ReturnToMenu();
-                Check(game.Screen==WoodlandGame.MenuScreen.Match && !game.playing,"Title navigation becomes direct replay rather than showing a menu");
-                Complete(true,"BALANCE_ONLY_PASS: direct boot, fixed selections, physics, real pause input, combat and replay validated");
-            }
-        }catch(Exception e){Complete(false,e.ToString());}
-    }
     static void Complete(bool success, string status)
     {
         SessionState.SetBool(Active, false);
@@ -1454,8 +1456,8 @@ public static class GameValidation
         bool hudOnly=SessionState.GetBool("Woodland.HudOnly",false);
         SessionState.SetBool("Woodland.MeleeOnly",false);
         SessionState.SetBool("Woodland.HudOnly",false);
-        bool balanceOnly=SessionState.GetBool("Woodland.BalanceOnly",false);SessionState.SetBool("Woodland.BalanceOnly",false);
-        File.WriteAllText(balanceOnly?"Documentation/BALANCE-VALIDATION.json":v81?"Documentation/PLAYMODE-VALIDATION-v8.1.json":v8?"Documentation/PLAYMODE-VALIDATION-v8.json":hudOnly?"Documentation/HUD-VALIDATION-v7.1.json":meleeOnly?"Documentation/MELEE-VALIDATION-v8.1.json":"Documentation/PLAYMODE-VALIDATION-v7.json", JsonUtility.ToJson(report, true));
+        bool duel=SessionState.GetBool("Woodland.Duel",false);SessionState.SetBool("Woodland.Duel",false);
+        File.WriteAllText(duel?"Documentation/DUEL-VALIDATION.json":v81?"Documentation/PLAYMODE-VALIDATION-v8.1.json":v8?"Documentation/PLAYMODE-VALIDATION-v8.json":hudOnly?"Documentation/HUD-VALIDATION-v7.1.json":meleeOnly?"Documentation/MELEE-VALIDATION-v8.1.json":"Documentation/PLAYMODE-VALIDATION-v7.json", JsonUtility.ToJson(report, true));
         if (success) Debug.Log(status);else Debug.LogError(status);
         EditorApplication.isPlaying = false;
         if (SessionState.GetBool("Woodland.ValidationExit", false)) EditorApplication.delayCall += () => EditorApplication.Exit(success ? 0 : 1);

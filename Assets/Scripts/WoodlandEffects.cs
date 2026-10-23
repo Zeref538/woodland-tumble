@@ -25,9 +25,9 @@ public class WoodlandEffects : MonoBehaviour
     public float footstepInterval = .16f;
     [Header("Elemental sprite animation")]
     public Sprite[] fernSlash=new Sprite[8],emberSlash=new Sprite[8];
-    readonly Sprite[][] comboHits=new Sprite[4][],comboFinishers=new Sprite[4][];
+    readonly Sprite[][] comboHits=new Sprite[8][],comboFinishers=new Sprite[8][];
     public int ComboAnimationsPlayed { get; private set; }
-    public int ComboFramesLoaded(int character)=>character>=0&&character<4?(comboHits[character]?.Length??0)+(comboFinishers[character]?.Length??0):0;
+    public int ComboFramesLoaded(int character)=>character>=0&&character<8?(comboHits[character]?.Length??0)+(comboFinishers[character]?.Length??0):0;
     [Header("Action sound mix")]
     public AudioClip[] soundBank = new AudioClip[13];
     [Range(0,1)] public float masterVolume = .65f;
@@ -92,7 +92,7 @@ public class WoodlandEffects : MonoBehaviour
         glow = SoftGlow();
         glowMaterial = new Material(material); glowMaterial.SetColor("_Color", new Color(2.4f,2.4f,2.4f,1));
         material.mainTexture = pixel.texture;
-        string[] characters={"Fern","Ember","Luna","Bram"};
+        string[] characters={"Fern","Ember","Luna","Bram","Zephyr","Volt","Nyx","Corin"};
         for(int character=0;character<characters.Length;character++) {
             comboHits[character]=LoadComboFrames(characters[character],"Hit");
             comboFinishers[character]=LoadComboFrames(characters[character],"Finisher");
@@ -361,6 +361,21 @@ public class WoodlandEffects : MonoBehaviour
         Color tint=CharacterTint(character);charge=Mathf.Clamp01(charge);
         float size=.9f+charge*.25f;
         Light(point,tint,1.6f,.15f);
+        if(character>=4) {
+            if(character==4) {
+                for(int i=0;i<3;i++)Emit(slash,point+Vector2.left*direction*i*.14f,Vector2.right*direction*2,Color.Lerp(Color.white,tint,i*.3f),.16f,new Vector2(.55f,1.05f-i*.15f)*size,Vector2.zero,0,11,direction<0?180:0);
+                Pulse(point,tint,1.1f,.18f);
+            } else if(character==5) {
+                for(int i=0;i<6;i++)Emit(pixel,point+new Vector2(-direction*i*.15f,(i%2==0?1:-1)*.13f),Vector2.right*direction*3,Color.Lerp(Color.white,tint,i*.12f),.12f,new Vector2(.32f,.08f)*size,Vector2.zero,0,11,i%2==0?25:-25);
+            } else if(character==6) {
+                Emit(glow,point,Vector2.right*direction,tint,.2f,Vector2.one*.7f,Vector2.zero,0,10);
+                Emit(ring,point,Vector2.right*direction,tint,.2f,Vector2.one*.6f,Vector2.zero,0,11,0,180);
+                Emit(star,point,Vector2.right*direction,Color.white,.13f,Vector2.one*.18f,Vector2.zero,0,12,45,90);
+            } else {
+                for(int i=0;i<3;i++)Emit(star,point+new Vector2(-direction*i*.2f,(i-1)*.15f),Vector2.right*direction*2,Color.Lerp(Color.white,tint,i*.35f),.18f,new Vector2(.22f,.45f)*size,Vector2.zero,0,11,45);
+            }
+            return;
+        }
         if(character==0) {
             // A braided root lance, with leaves flowing behind its tip.
             for(int i=0;i<6;i++) {
@@ -434,6 +449,10 @@ public class WoodlandEffects : MonoBehaviour
             case 1:return new Color(1,.38f,.12f);
             case 2:return new Color(.56f,.76f,1);
             case 3:return new Color(1,.76f,.32f);
+            case 4:return new Color(.5f,1,.85f);
+            case 5:return new Color(1,.85f,.2f);
+            case 6:return new Color(.7f,.4f,1);
+            case 7:return new Color(1,.5f,.8f);
             default:return new Color(.38f,1,.68f);
         }
     }
@@ -480,7 +499,7 @@ public class WoodlandEffects : MonoBehaviour
     }
     public void ComboImpact(Vector2 point,float facing,int character,bool finisher)
     {
-        if(character<0 || character>=4)return;
+        if(character<0 || character>=8)return;
         var frames=finisher?comboFinishers[character]:comboHits[character];
         if(frames==null || frames.Length==0)return;
         float size=finisher?2.15f:1.25f;

@@ -5,7 +5,7 @@ using UnityEngine.EventSystems;
 
 public class WoodlandHUD : MonoBehaviour
 {
-    public const float FighterHudScale=.8f;
+    public const float FighterHudScale=.9f;
     public const float FighterHudHeight=154;
     public const float ActionDiamondHeight=230;
     public const float ActionButtonDiameter=80;
@@ -15,6 +15,7 @@ public class WoodlandHUD : MonoBehaviour
     public Text[] statusText = new Text[2];
     public Text[] damageText = new Text[2];
     public Image[] healthFill = new Image[2];
+    public Image[] hitSquares = new Image[10];
     public Image[] pushFill = new Image[2];
     public Image[] punchFill = new Image[2];
     public Image[] actionDiscs = new Image[8];
@@ -41,11 +42,12 @@ public class WoodlandHUD : MonoBehaviour
 
     public GameObject[] actionTooltipPanels = new GameObject[2];
     public Text[] actionTooltips = new Text[2];
-    public Sprite[] characterActionCovers = new Sprite[16];
-    public Sprite[] characterGuardCovers=new Sprite[4];
+    public Sprite[] characterActionCovers = new Sprite[32];
+    public Sprite[] characterGuardCovers=new Sprite[8];
     public Sprite[] playstationIcons = new Sprite[4];
     public Sprite[] neutralIcons = new Sprite[4];
     public Text arenaText;
+    public Text roundTimerText;
     public Text soundText;
     public Text helpHint;
     public Text[] deviceText = new Text[2];
@@ -68,6 +70,9 @@ public class WoodlandHUD : MonoBehaviour
     public Button startButton, backButton;
     public Text modeText, mapDescription;
     public Image mapPreview;
+    public Image[] selectionPortraits=new Image[2];
+    public Text[] selectionNames=new Text[2], selectionSkills=new Text[2], selectionStates=new Text[2];
+    public Text selectedArenaName;
     public GameObject helpPanel;
     public Text[] guideNames=new Text[2];
     public Button guideCloseButton;
@@ -103,6 +108,19 @@ public class WoodlandHUD : MonoBehaviour
     float nextNavigation;
     void Awake()
     {
+        if(!roundTimerText && matchHud && bannerText) {
+            var timer=new GameObject("Round Timer",typeof(RectTransform),typeof(CanvasRenderer),typeof(Text));
+            timer.transform.SetParent(matchHud.transform,false);
+            roundTimerText=timer.GetComponent<Text>();roundTimerText.font=bannerText.font;
+            roundTimerText.fontSize=28;roundTimerText.alignment=TextAnchor.UpperCenter;roundTimerText.supportRichText=true;
+            roundTimerText.raycastTarget=false;
+            var rect=roundTimerText.rectTransform;rect.anchorMin=rect.anchorMax=new Vector2(.5f,1);
+            rect.pivot=new Vector2(.5f,1);rect.anchoredPosition=new Vector2(0,-110);rect.sizeDelta=new Vector2(150,70);
+        }
+        // Old saved HUDs may still contain health graphics; retain portrait/name/skill controls.
+        foreach(var plate in fighterPlates)if(plate)foreach(var child in plate.GetComponentsInChildren<Transform>(true))
+            if(child.name=="Health Rail" || child.name=="Health Fill" || child.name=="Health Number" || child.name=="Damage Echo")child.gameObject.SetActive(false);
+        foreach(var value in damageText)if(value)value.gameObject.SetActive(false);
         // Scene-built buttons bind at runtime because AddListener calls made by an editor builder are not serialized.
         if(modeButtons.Length>0 && modeButtons[0])modeButtons[0].onClick.AddListener(()=>game.ChooseMode(true));
         if(modeButtons.Length>1 && modeButtons[1])modeButtons[1].onClick.AddListener(()=>game.ChooseMode(false));
@@ -151,7 +169,7 @@ public class WoodlandHUD : MonoBehaviour
         RefreshMenu();
         if (game.Screen != WoodlandGame.MenuScreen.Match || game.Paused) {
             ReleaseAllPointerGuards();
-            if(!game.balanceOnly || MoveGuideOpen)NavigateMenus();
+            NavigateMenus();
             return;
         }
         bool toggle = Keyboard.current != null && Keyboard.current.f1Key.wasPressedThisFrame;
@@ -170,7 +188,6 @@ public class WoodlandHUD : MonoBehaviour
         get {
             var pad=game?game.GetGamepad(0)??game.GetGamepad(1):null;
             string style=WoodlandGame.GamepadStyle(pad);
-            if(game && game.balanceOnly)return style=="PLAYSTATION"?"PAUSE [OPTIONS]":style=="XBOX"?"PAUSE [MENU]":pad!=null?"PAUSE [START]":"PAUSE [ESC]  /  REPLAY [R]";
             return style=="PLAYSTATION"?"MENU [OPTIONS]":style=="XBOX"?"MENU [≡]":pad!=null?"MENU [START]":"MENU [ESC]";
         }
     }
@@ -187,25 +204,25 @@ public class WoodlandHUD : MonoBehaviour
             if(game.players.Length<=i || !game.players[i])continue;
             var actor=game.players[i];var pad=game.GetGamepad(i);string style=WoodlandGame.GamepadStyle(pad);
             bool ps=style=="PLAYSTATION", xbox=style=="XBOX";
-            string punch=ps?"SQUARE":xbox?"X":pad!=null?"WEST":i==0?"G":"L";
-            string kick=ps?"CIRCLE":xbox?"B":pad!=null?"EAST":i==0?"F":"K";
+            string punch=ps?"SQUARE":xbox?"X":pad!=null?"WEST":i==0?"T":"I";
+            string kick=ps?"CIRCLE":xbox?"B":pad!=null?"EAST":i==0?"Y":"O";
             string jump=pad!=null?"D-PAD UP / STICK UP":i==0?"W":"UP";
-            string skill=ps?"TRIANGLE":xbox?"Y":pad!=null?"NORTH":i==0?"H":"J";
+            string skill=ps?"TRIANGLE":xbox?"Y":pad!=null?"NORTH":i==0?"G":"K";
             string guard=ps?"HOLD CROSS / L2":xbox?"HOLD A / LT":pad!=null?"HOLD SOUTH / LEFT TRIGGER":i==0?"HOLD S":"HOLD DOWN";
-            string dash=ps?"L1 / R1":xbox?"LB / RB":pad!=null?"LEFT / RIGHT SHOULDER":i==0?"Q / SHIFT":"U / R SHIFT";
-            string ultimate=ps?"L2 + R2":xbox?"LT + RT":pad!=null?"BOTH TRIGGERS":i==0?"T":"I";
+            string dash=ps?"L1 / R1":xbox?"LB / RB":pad!=null?"LEFT / RIGHT SHOULDER":i==0?"Q / E":"U / P";
+            string ultimate=ps?"L2 + R2":xbox?"LT + RT":pad!=null?"BOTH TRIGGERS":i==0?"H":"L";
             string ranged=actor.CharacterIndex==0?"Roots and slows a rival at range.":actor.CharacterIndex==1?"A stronger fire hit from a safe distance.":actor.CharacterIndex==2?"A moonfrost shot that slows its target.":"A stone shot that launches its target.";
-            string finisher=actor.CharacterIndex==0?(30*Scout.DamageScale).ToString("0.#")+" damage with a rooting leaf prison.":actor.CharacterIndex==1?"Three flame contacts, "+(10*Scout.DamageScale).ToString("0.#")+" damage each.":actor.CharacterIndex==2?(26*Scout.DamageScale).ToString("0.#")+" damage with a freezing moon seal.":(35*Scout.DamageScale).ToString("0.#")+" damage ground shock. Must be grounded.";
+            string finisher="Five confirmed hits cause a 3s knockdown. Push a downed rival into an open edge hatch for a ring-out.";
             if(guideNames[i]){guideNames[i].text=(i==1 && game.SoloMode?"CPU":"P"+(i+1))+"  "+actor.displayName.ToUpper();guideNames[i].color=actor.Element;}
             if(controlsText[i])controlsText[i].text=
                 "<b>"+punch+"   PUNCH</b>\n8 stamina. Start a close-range combo.\n"+
                 "<b>"+kick+"   KICK</b>\n6 stamina. Finish a string and launch.\n"+
-                "<b>"+punch+", "+punch+", "+kick+"   THREE-HIT COMBO</b>\nQueue during recovery. Third hit: 1.4x damage.\n"+
+                "<b>"+punch+", "+punch+", "+kick+"   THREE-HIT COMBO</b>\nQueue during recovery. Third hit launches and cracks edge covers.\n"+
                 "<b>"+jump+"   JUMP / DOUBLE JUMP</b>\n4 stamina on ground; 6 for the aerial jump.\n"+
                 "<b>"+guard+"   GUARD / PARRY</b>\nFace the hit. A fresh guard parries. Grabs beat guard.\n"+
                 "<b>"+dash+"   BACKDASH / FORWARD DASH</b>\n12 / 10 stamina. Backdash briefly avoids hits.\n"+
                 "<b>"+skill+"   "+actor.SkillName+"</b>\n14 stamina. 0.85s charge, then launch. "+ranged+"\n"+
-                "<b>"+ultimate+"   "+actor.UltimateName+"</b>\n25 HP or less. Once per round. "+finisher;
+                "<b>"+ultimate+"   "+actor.UltimateName+"</b>\nOne hit square left. Once per round. "+finisher;
         }
     }
     bool menuChordUsed;
@@ -247,6 +264,10 @@ public class WoodlandHUD : MonoBehaviour
             bool reset = previousHealth[i] < 0 || scout.Health > previousHealth[i];
             if (scout.Health < previousHealth[i]) { ghostDelay[i] = .42f; punch[i] = 1; }
             previousHealth[i] = scout.Health;
+            for(int hit=0;hit<Scout.HitsToKnockdown;hit++) {
+                var square=hitSquares[i*Scout.HitsToKnockdown+hit];if(!square)continue;
+                square.color=hit<scout.HitsRemaining?accent:scout.Downed?new Color(.55f,.25f,.23f):new Color(.2f,.26f,.28f);
+            }
             if(names[i]) {names[i].text = (i==1 && game.SoloMode?"CPU":"P"+(i+1))+"  "+scout.displayName.ToUpper();names[i].color=accent;}
             if(healthText[i]) healthText[i].text = Mathf.CeilToInt(scout.Health)+" / "+Mathf.RoundToInt(scout.maxHealth);
             if(healthFill[i]) {
@@ -261,7 +282,7 @@ public class WoodlandHUD : MonoBehaviour
             punch[i] = Mathf.MoveTowards(punch[i],0,dt*5);
             if(fighterPlates[i]) fighterPlates[i].localScale=Vector3.one*(FighterHudScale*(1+.035f*punch[i]));
             if(damageText[i]) damageText[i].text="+"+Mathf.RoundToInt((1-ratio)*scout.damageKnockbackMultiplier*100)+"% KB";
-            if(shieldText[i]) {shieldText[i].text=Mathf.CeilToInt(scout.Stamina)+" / "+Mathf.RoundToInt(scout.StaminaCapacity);shieldText[i].color=scout.Stamina<20?new Color(1,.75f,.57f):new Color(.96f,.97f,.88f);}
+            if(shieldText[i]) {shieldText[i].text="STAMINA";shieldText[i].color=scout.Stamina<20?new Color(1,.75f,.57f):new Color(.96f,.97f,.88f);}
             if(shieldFill[i]) shieldFill[i].fillAmount=Mathf.Lerp(shieldFill[i].fillAmount,scout.Stamina/Mathf.Max(1,scout.StaminaCapacity),1-Mathf.Exp(-14*dt));
             if(pushFill[i]) pushFill[i].fillAmount=scout.PushReady;
             if(punchFill[i]) punchFill[i].fillAmount=scout.PunchReady;
@@ -271,8 +292,8 @@ public class WoodlandHUD : MonoBehaviour
             previousCombo[i]=combo;
             comboPop[i]=Mathf.MoveTowards(comboPop[i],0,dt*2.6f);
             if(statusText[i]) {
-                statusText[i].text=combo>1?combo+" HIT":"";
-                statusText[i].color=new Color(accent.r,accent.g,accent.b,combo>1?Mathf.Clamp01(comboPop[i]*2):0);
+                statusText[i].text=scout.Downed?"DOWN!  "+scout.KnockdownRemaining.ToString("0.0")+"s":combo>1?combo+" HIT":"";
+                statusText[i].color=new Color(accent.r,accent.g,accent.b,scout.Downed?1:combo>1?Mathf.Clamp01(comboPop[i]*2):0);
                 var rect=statusText[i].rectTransform;
                 rect.anchorMin=rect.anchorMax=Vector2.one*.5f;
                 if(Camera.main) {
@@ -291,8 +312,12 @@ public class WoodlandHUD : MonoBehaviour
             soundText.text=audio.Muted?"SOUND MUTED  /  M TO RESTORE":audio.SfxVolume<=0?"SOUND 0%  /  + TO RESTORE":"SOUND  "+Mathf.RoundToInt(audio.SfxVolume*100)+"%";
             var color=soundText.color;color.a=quiet?1:Mathf.Clamp01((audio.AudioNoticeUntil-Time.unscaledTime)*3);soundText.color=color;
         }
+        if(roundTimerText) {
+            roundTimerText.text=(game.SuddenDeath?"!!":Mathf.CeilToInt(game.RoundTimeRemaining).ToString("00"))+"\n<size=11>BEST OF 5</size>";
+            roundTimerText.color=game.RoundTimeRemaining<=10?new Color(1,.35f,.25f):new Color(1,.94f,.8f);
+        }
         if(arenaText) arenaText.text=game.ArenaName;
-        string text=game.Paused?(game.balanceOnly && !MoveGuideOpen?"PAUSED":""):game.message;
+        string text=game.Paused?"":game.message;
         if(bannerPanel) bannerPanel.SetActive(!string.IsNullOrEmpty(text));
         if(bannerText) bannerText.text=text;
     }
@@ -347,11 +372,11 @@ public class WoodlandHUD : MonoBehaviour
     {
         bool cpu=player==1 && game.SoloMode;
         bool ps=pad!=null && style=="PLAYSTATION";
-        string[] letters=pad==null?(player==0?new[]{"S","G","F","H"}:new[]{"DOWN","L","K","J"}):style=="XBOX"?new[]{"A","X","B","Y"}:new[]{"S","W","E","N"};
+        string[] letters=pad==null?(player==0?new[]{"S","T","Y","G"}:new[]{"DOWN","I","O","K"}):style=="XBOX"?new[]{"A","X","B","Y"}:new[]{"S","W","E","N"};
         float dt=Time.unscaledDeltaTime,ease=1-Mathf.Exp(-24*dt);
         ObserveAcceptedActions(player,scout);
         for(int a=0;a<4;a++){
-            int slot=player*4+a,coverIndex=Mathf.Clamp(scout.CharacterIndex,0,3)*4+a;
+            int slot=player*4+a,coverIndex=Mathf.Clamp(scout.CharacterIndex,0,game.CharacterNames.Length-1)*4+a;
             if(actionCovers[slot]){
                 int character=Mathf.Clamp(scout.CharacterIndex,0,game.CharacterAnimationSets.Length-1);
                 var set=game.CharacterAnimationSets[character];
@@ -362,7 +387,7 @@ public class WoodlandHUD : MonoBehaviour
             if(actionGlyphs[slot]){actionGlyphs[slot].text=cpu?"CPU":ps?"":letters[a];actionGlyphs[slot].fontSize=cpu?11:letters[a].Length>2?10:letters[a].Length>1?13:18;actionGlyphs[slot].color=pad==null?new Color(.91f,.95f,.86f):a==0?new Color(.51f,.89f,.53f):a==1?new Color(.44f,.71f,1):a==2?new Color(1,.48f,.43f):new Color(1,.82f,.35f);}
             bool pressed=false,rawPress=false;
             if(!cpu && pad!=null){var button=a==0?pad.buttonSouth:a==1?pad.buttonWest:a==2?pad.buttonEast:pad.buttonNorth;pressed=button.isPressed;rawPress=button.wasPressedThisFrame;}
-            else if(!cpu && Keyboard.current!=null){var keys=Keyboard.current;var button=player==0?(a==0?keys.sKey:a==1?keys.gKey:a==2?keys.fKey:keys.hKey):(a==0?keys.downArrowKey:a==1?keys.lKey:a==2?keys.kKey:keys.jKey);pressed=button.isPressed;rawPress=button.wasPressedThisFrame;}
+            else if(!cpu && Keyboard.current!=null){var keys=Keyboard.current;var button=player==0?(a==0?keys.sKey:a==1?keys.tKey:a==2?keys.yKey:keys.gKey):(a==0?keys.downArrowKey:a==1?keys.iKey:a==2?keys.oKey:keys.kKey);pressed=button.isPressed;rawPress=button.wasPressedThisFrame;}
             if(a==0)pressed|=pointerGuardHeld[player] || scout.Blocking;
             if(a==3)pressed|=scout.Charging;
             if(rawPress){recentAction[player]=a;tooltipUntil[player]=Time.unscaledTime+.7f;if(Time.unscaledTime-lastAcceptedAt[slot]>.05f)pendingAttemptUntil[slot]=Time.unscaledTime+.48f;}
@@ -389,13 +414,13 @@ public class WoodlandHUD : MonoBehaviour
         bool ultimate=scout.UltimateReady || scout.UltimateActive;
         if(ultimatePanels[player])ultimatePanels[player].SetActive(ultimate);
         if(ultimateLabels[player]){
-            string binding=cpu?"CPU":pad==null?(player==0?"T":"I"):ps?"L2 + R2":style=="XBOX"?"LT + RT":"BOTH TRIGGERS";
+            string binding=cpu?"CPU":pad==null?(player==0?"H":"L"):ps?"L2 + R2":style=="XBOX"?"LT + RT":"BOTH TRIGGERS";
             ultimateLabels[player].text=scout.UltimateActive?scout.UltimateName.ToUpper():"ULTIMATE READY: "+scout.UltimateName.ToUpper()+" ["+binding+"]";
             var color=new Color(1,.86f,.48f);color.a=scout.UltimateActive?1:.86f+Mathf.Sin(Time.unscaledTime*4)*.14f;ultimateLabels[player].color=color;
         }
         if(fighterPortraitRings[player]){var color=ultimate?Color.Lerp(scout.Element,new Color(1,.85f,.4f),.5f+.25f*Mathf.Sin(Time.unscaledTime*4)):scout.Element;color.a=ultimate?.95f:.7f;fighterPortraitRings[player].color=color;}
     }
-    static readonly string[] mapDescriptions={"Warm light. Old roots. A friendly rivalry.","Moonstone, falling water and a silver edge.","Glowing embers. A battle under red leaves.","Ancient sky ruins. A fight above the clouds."};
+    static readonly string[] mapDescriptions={"Warm light. Old roots. A friendly rivalry.","Moonstone, falling water and a silver edge.","Glowing embers. A battle under red leaves.","Ancient sky ruins. A fight above the clouds.","Stormglass towers. Open rune shafts guard both edges.","Ancient roots and dark cisterns. Open shafts widen after 99 seconds."};
     public void RefreshMenu()
     {
         if(!game) return;
@@ -407,8 +432,7 @@ public class WoodlandHUD : MonoBehaviour
         if(mapMenu)mapMenu.SetActive(screen==WoodlandGame.MenuScreen.Maps);
         if(settingsMenu)settingsMenu.SetActive(screen==WoodlandGame.MenuScreen.Settings);
         if(matchHud)matchHud.SetActive(match);
-        if(pauseMenu)pauseMenu.SetActive(!game.balanceOnly && match && game.Paused && !MoveGuideOpen);
-        if(game.balanceOnly)return;
+        if(pauseMenu)pauseMenu.SetActive(match && game.Paused && !MoveGuideOpen);
         if(screen!=lastScreen){
             ReleaseAllPointerGuards();
             menuFocus=screen==WoodlandGame.MenuScreen.Rules && game.BalanceMode?1:0;nextNavigation=Time.unscaledTime+.12f;lastScreen=screen;if(helpPanel)helpPanel.SetActive(false);
@@ -417,7 +441,7 @@ public class WoodlandHUD : MonoBehaviour
         }
         if(game.Paused && !wasPaused){pauseFocus=0;nextNavigation=Time.unscaledTime+.12f;if(helpPanel)helpPanel.SetActive(false);}
         wasPaused=game.Paused;
-        string rules=game.BalanceMode?"BALANCE":"ARENA PVP";
+        string rules="DUEL";
         if(modeText)modeText.text=(game.SoloMode?"SINGLE PLAYER":"LOCAL MULTIPLAYER")+"  /  "+rules;
         int arena=Mathf.Clamp(game.PendingArena,0,mapDescriptions.Length-1);
         if(mapDescription)mapDescription.text=mapDescriptions[arena];
@@ -426,12 +450,22 @@ public class WoodlandHUD : MonoBehaviour
         for(int i=0;i<ruleButtons.Length;i++)MarkButton(ruleButtons[i],i==menuFocus,i==0?fernColor:emberColor);
         for(int i=0;i<mapButtons.Length;i++)MarkButton(mapButtons[i],i==arena,i==0?fernColor:i==1?new Color(.45f,.78f,1):emberColor);
         for(int i=0;i<pauseButtons.Length;i++)MarkButton(pauseButtons[i],i==pauseFocus,fernColor);
-        int scout=Mathf.Clamp(game.PendingCharacter,0,3);
-        if(characterHeading)characterHeading.text="PLAYER "+(game.ChoosingPlayer+1)+": CHOOSE YOUR SCOUT";
+        int scout=Mathf.Clamp(game.PendingCharacter,0,game.CharacterNames.Length-1);
+        if(characterHeading)characterHeading.text="PLAYER "+(game.ChoosingPlayer+1)+" / CHOOSE YOUR FIGHTER";
+        if(selectedArenaName)selectedArenaName.text=game.arenaNames[arena];
+        for(int side=0;side<2;side++) {
+            bool choosing=side==game.ChoosingPlayer;
+            int selected=choosing?scout:Mathf.Clamp(game.CharacterChoices[side],0,game.CharacterNames.Length-1);
+            if(selectionPortraits.Length>side && selectionPortraits[side]) {selectionPortraits[side].sprite=game.CharacterPortraits[selected];selectionPortraits[side].color=Color.white;}
+            if(selectionNames.Length>side && selectionNames[side]){selectionNames[side].text=game.CharacterNames[selected].ToUpper();selectionNames[side].color=game.CharacterColors[selected];}
+            if(selectionSkills.Length>side && selectionSkills[side])selectionSkills[side].text=game.SkillNames[selected];
+            if(selectionStates.Length>side && selectionStates[side])selectionStates[side].text=choosing?"SELECTING":side<game.ChoosingPlayer?"LOCKED IN":game.SoloMode?"CPU RIVAL":"AWAITING PLAYER";
+        }
         if(characterDetail)characterDetail.text=game.CharacterNames[scout]+" / "+game.SkillNames[scout]+"\n"+game.SkillDescriptions[scout];
         for(int i=0;i<characterButtons.Length;i++){
             if(!characterButtons[i])continue;bool available=game.CharacterAvailable(i);characterButtons[i].interactable=available;
-            MarkButton(characterButtons[i],i==scout,i==0?fernColor:i==1?emberColor:i==2?new Color(.65f,.73f,1):new Color(.82f,.7f,.52f));
+            MarkButton(characterButtons[i],i==scout,game.CharacterColors[i]);
+            for(int side=0;side<2;side++) {var marker=characterButtons[i].transform.Find(side==0?"P1 Marker":"P2 Marker");if(marker)marker.gameObject.SetActive(i==(side==game.ChoosingPlayer?scout:game.CharacterChoices[side]));}
             var image=characterButtons[i].transform.Find("Scout Portrait");if(image){var portrait=image.GetComponent<Image>();if(portrait)portrait.color=available?Color.white:new Color(.35f,.4f,.39f,.7f);}
         }
         if(confirmCharacterButton)confirmCharacterButton.interactable=game.CharacterAvailable(scout);
@@ -482,7 +516,7 @@ public class WoodlandHUD : MonoBehaviour
             else if(game.Screen==WoodlandGame.MenuScreen.Rules)menuFocus=(menuFocus+direction+2)%2;
             else if(game.Screen==WoodlandGame.MenuScreen.Characters){
                 int candidate=game.PendingCharacter;
-                for(int n=0;n<4;n++){candidate=(candidate+direction+4)%4;if(game.CharacterAvailable(candidate)){game.PreviewCharacter(candidate);break;}}
+                for(int n=0;n<game.CharacterNames.Length;n++){candidate=(candidate+direction+game.CharacterNames.Length)%game.CharacterNames.Length;if(game.CharacterAvailable(candidate)){game.PreviewCharacter(candidate);break;}}
             }
             else if(game.Screen==WoodlandGame.MenuScreen.Maps)game.PreviewArena((game.PendingArena+direction+mapButtons.Length)%mapButtons.Length);
             else if(game.Screen==WoodlandGame.MenuScreen.Settings)menuFocus=(menuFocus+direction+settingsButtons.Length)%settingsButtons.Length;

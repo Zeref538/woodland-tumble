@@ -17,3 +17,8 @@ MemoryCaptures/
 Recordings/
 
 Documentation/Backups/WoodlandTumble-before-rebuild.unity.txt
+
+# Local generation drafts; runtime sprites and calibration remain versioned.
+Documentation/Roster-Rework/*-source.png
+Documentation/Roster-Rework/previews/*.gif
+Documentation/Backups/

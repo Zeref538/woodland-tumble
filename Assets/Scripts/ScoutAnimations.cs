@@ -3,6 +3,8 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Woodland/Scout Animations")]
 public class ScoutAnimations : ScriptableObject
 {
+    public Sprite[] downed = new Sprite[10];
+    public Sprite[] getUp = new Sprite[10];
     public Sprite[] block = new Sprite[10];
     public Sprite[] doubleJump = new Sprite[10];
     public Sprite[] walk = new Sprite[10];
@@ -18,7 +20,7 @@ public class ScoutAnimations : ScriptableObject
     public Sprite[] punch = new Sprite[10];
     public Sprite[] knockout = new Sprite[10];
     public Sprite[] Get(string state) => state switch {
-        "Block" => block, "DoubleJump" => doubleJump, "Walk" => walk, "Jump" => jump, "Hurt" => hurt,
+        "Downed" => downed, "GetUp" => getUp, "Block" => block, "DoubleJump" => doubleJump, "Walk" => walk, "Jump" => jump, "Hurt" => hurt,
         "Push" => push, "Kick" => kick, "Smash" => special, "Special" => special, "Dash" => dash, "Backstep" => backstep, "Victory" => victory, "Ultimate" => ultimate, "Punch" => punch, "Knockout" => knockout, _ => walk
     };
 }

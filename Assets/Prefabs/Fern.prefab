@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 2087473847761621519}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.7, y: 0.3, z: 0}
+  m_LocalPosition: {x: -2.7, y: -0.6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -97,7 +97,7 @@ CapsuleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.64, y: 1.25}
+  m_Size: {x: 1.05, y: 2.375}
   m_Direction: 0
 --- !u!114 &5206791722114264058
 MonoBehaviour:
@@ -109,15 +109,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6a1da84a655aa4d088230d0f925ac4a2, type: 3}
-  m_Name:
+  m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Scout
   id: 0
   displayName: Fern
+  knockdownDuration: 3
   inputEnabled: 1
   aiControlled: 0
   art: {fileID: 4697976862626804864}
   animator: {fileID: 1945593596417772642}
-  animations: {fileID: 11400000, guid: a7a5c0387187142c89afd15678e8cad6, type: 2}
+  animations: {fileID: 11400000, guid: b8a1d9acb0526484eb180cfa5e378b8b, type: 2}
   spawnPoint: {fileID: 0}
   moveSpeed: 4.4
   jumpSpeed: 8.7
@@ -166,7 +167,7 @@ Transform:
   m_GameObject: {fileID: 3549746565867829804}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.625, z: 0}
+  m_LocalPosition: {x: 0, y: -1.1875, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -221,12 +222,12 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 5
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: 1d8f17a0aa1af4e15b6e04bf9a017f30, type: 3}
+  m_Sprite: {fileID: 21300000, guid: af20eb741c9f579784a38914b41f1449, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.6, y: 1.6}
+  m_Size: {x: 4.8, y: 3.2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -242,14 +243,14 @@ Animator:
   m_GameObject: {fileID: 3549746565867829804}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 28760ce5df5684245b62918e14b0175d, type: 2}
+  m_Controller: {fileID: 9100000, guid: 984bf92e3f24f45a09eb96ea3e16ac4c, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_AnimatePhysics: 0
-  m_WarningMessage:
+  m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0

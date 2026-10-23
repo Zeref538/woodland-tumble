@@ -1,8 +1,22 @@
-# Tilt Rivals: Mac lab handoff
+# Rune Rumble: Mac lab handoff
+
+## Active Rune Rumble rework
+
+Use installed **Unity 6000.5.10f1**. The matching editor imported and rebuilt this project successfully. The new playable scene contains eight redesigned fighter catalogs, six grounded woodland stages, two-player character showcases, and a large-preview stage selector. `Documentation/RuneRumble-CharacterSelect.png` and `RuneRumble-StageSelect.png` are actual Unity captures; refresh them after layout changes.
+
+Latest rules: five confirmed-hit squares, three-second temporary knockdown, pushing and ring-out wins, first to three rounds. Both mossy rune-stone holes are **open for the entire round**. At 99 seconds the fight continues and both holes expand inward, reducing the safe floor. The next round resets the holes. There is no Balance selection, health bar, floating platform, or health-based timeout result. Preserve the original circular skill controls and original four action icon sets.
+
+Artwork: `Assets/Art/CharactersRework` contains 1,288 separate PNG sprites, with uniform per-sheet body scale and foot pivots; native catalogs/controllers live in `Assets/AnimationsRework`. Sources and calibration are in `Documentation/Roster-Rework`; source images are local workbench assets and must not be mistaken for runtime sheets. `Tools/prepare_roster_rework.py` extracts and validates catalogs. Never override generated sprite pivots with a common pivot when canvas heights differ.
+
+Current keyboard mapping: P1 A/D move, W jump, S defend, Q/E backdash/dash, T punch, Y kick, G ranged, H ultimate, F grab. P2 arrows move/jump/defend, U/P backdash/dash, I punch, O kick, K ranged, L ultimate, J grab.
+
+Current duel fixture: `GameValidation.RunDuelSaved` / `RunSaved`. The revised fixture passed 153 checks, including native catalogs, five-hit recovery, ring-out scoring and sudden-death floor shrinkage. The final larger-fighter/five-segment HUD pass also passed all 153 checks. Fighters use 80 pixels/unit (twice the initial rework size); standing colliders are 1.05 × 2.375 units, foot offsets 1.1875, and the grounded ray tracks that baseline. Do not cite old health/draw fixtures as validation of current rules. Git remote/history have been restored on `lab-duel-roster`; GitHub CLI is authenticated as Zeref538; the current checkpoint is being saved on `lab-duel-roster`.
+
+The older release notes below are historical where they conflict with this section.
 
 ## Goal and project
 
-Continue editing Tilt Rivals at the Mac lab, keep the working game intact, and bring the changes back through GitHub.
+Continue editing Rune Rumble at the Mac lab, keep the working game intact, and bring the changes back through GitHub.
 
 Repository: https://github.com/Zeref538/woodland-tumble
 Artwork and original sheets: https://github.com/Zeref538/Woodland-Scouts/tree/main/tumble
@@ -111,7 +125,3 @@ If there are local changes or Git refuses the update, keep the work and resolve 
 ## Handoff for the next editor
 
 State the intended change, branch, editor version and exact files touched. Report what passed and what still needs a real device. Finish when the project opens, the changed behavior works, the move guide matches the controls, the diff contains only intended files, and the work is committed or its uncommitted state is clearly recorded.
-
-## Balance-only variant
-
-Open `Assets/Scenes/BalanceOnly.unity` for the fixed Fern/Ember forest Balance match without selection menus. `WoodlandTumble.unity` remains the full game. Read `BALANCE-ONLY.md` for the separate Windows build and direct-start rules.

@@ -1,0 +1,718 @@
+{
+  "fernIdleV2": {
+    "character": "Fern",
+    "idle": true,
+    "reviewed": true
+  },
+  "fernWalkJump": {
+    "character": "Fern",
+    "states": [
+      "Walk",
+      "Jump"
+    ],
+    "reference": 0,
+    "isolate": true,
+    "reviewed": true
+  },
+  "fernHurtPush": {
+    "character": "Fern",
+    "states": [
+      "Hurt",
+      "Push"
+    ],
+    "reference": 9,
+    "isolate": true,
+    "reviewed": true
+  },
+  "fernPunchKick": {
+    "character": "Fern",
+    "states": [
+      "Punch",
+      "Kick"
+    ],
+    "reference": 0,
+    "isolate": true,
+    "reviewed": true
+  },
+  "fernKnockoutBlock": {
+    "character": "Fern",
+    "states": [
+      "Knockout",
+      "Block"
+    ],
+    "reference": 10,
+    "isolate": true,
+    "reviewed": true
+  },
+  "fernDoubleJumpSpecial": {
+    "character": "Fern",
+    "states": [
+      "DoubleJump",
+      "Special"
+    ],
+    "reference": 19,
+    "isolate": true,
+    "reviewed": true
+  },
+  "fernDashBackstep": {
+    "character": "Fern",
+    "states": [
+      "Dash",
+      "Backstep"
+    ],
+    "reference": 0,
+    "isolate": true,
+    "reviewed": true
+  },
+  "fernVictoryUltimate": {
+    "character": "Fern",
+    "states": [
+      "Victory",
+      "Ultimate"
+    ],
+    "reference": 0,
+    "isolate": true,
+    "reviewed": true
+  },
+  "fernDownedGetUp": {
+    "character": "Fern",
+    "states": [
+      "Downed",
+      "GetUp"
+    ],
+    "reference": 19,
+    "isolate": true,
+    "reviewed": true
+  },
+  "emberIdleV2": {
+    "character": "Ember",
+    "idle": true,
+    "reviewed": true
+  },
+  "emberWalkJump": {
+    "character": "Ember",
+    "states": [
+      "Walk",
+      "Jump"
+    ],
+    "reference": 0,
+    "isolate": true,
+    "reviewed": true
+  },
+  "emberPunchKick": {
+    "character": "Ember",
+    "states": [
+      "Punch",
+      "Kick"
+    ],
+    "reference": 0,
+    "isolate": true,
+    "reviewed": true
+  },
+  "emberKnockoutBlock": {
+    "character": "Ember",
+    "states": [
+      "Knockout",
+      "Block"
+    ],
+    "reference": 10,
+    "isolate": true,
+    "reviewed": true
+  },
+  "emberDoubleJumpSpecial": {
+    "character": "Ember",
+    "states": [
+      "DoubleJump",
+      "Special"
+    ],
+    "reference": 19,
+    "isolate": true,
+    "reviewed": true
+  },
+  "emberDashBackstep": {
+    "character": "Ember",
+    "states": [
+      "Dash",
+      "Backstep"
+    ],
+    "reference": 0,
+    "isolate": true,
+    "reviewed": true
+  },
+  "emberVictoryUltimate": {
+    "character": "Ember",
+    "states": [
+      "Victory",
+      "Ultimate"
+    ],
+    "reference": 0,
+    "isolate": true,
+    "reviewed": true
+  },
+  "emberDownedGetUp": {
+    "character": "Ember",
+    "states": [
+      "Downed",
+      "GetUp"
+    ],
+    "reference": 19,
+    "isolate": true,
+    "reviewed": true
+  },
+  "lunaIdleV2": {
+    "character": "Luna",
+    "idle": true,
+    "reviewed": true
+  },
+  "lunaWalkJump": {
+    "character": "Luna",
+    "states": [
+      "Walk",
+      "Jump"
+    ],
+    "reference": 0,
+    "isolate": true,
+    "reviewed": true
+  },
+  "lunaPunchKick": {
+    "character": "Luna",
+    "states": [
+      "Punch",
+      "Kick"
+    ],
+    "reference": 0,
+    "isolate": true,
+    "reviewed": true
+  },
+  "lunaKnockoutBlock": {
+    "character": "Luna",
+    "states": [
+      "Knockout",
+      "Block"
+    ],
+    "reference": 10,
+    "isolate": true,
+    "reviewed": true
+  },
+  "lunaDoubleJumpSpecial": {
+    "character": "Luna",
+    "states": [
+      "DoubleJump",
+      "Special"
+    ],
+    "reference": 19,
+    "isolate": true,
+    "reviewed": true
+  },
+  "lunaDashBackstep": {
+    "character": "Luna",
+    "states": [
+      "Dash",
+      "Backstep"
+    ],
+    "reference": 0,
+    "isolate": true,
+    "reviewed": true
+  },
+  "lunaVictoryUltimate": {
+    "character": "Luna",
+    "states": [
+      "Victory",
+      "Ultimate"
+    ],
+    "reference": 0,
+    "isolate": true,
+    "reviewed": true
+  },
+  "lunaDownedGetUp": {
+    "character": "Luna",
+    "states": [
+      "Downed",
+      "GetUp"
+    ],
+    "reference": 19,
+    "isolate": true,
+    "reviewed": true
+  },
+  "bramIdleV2": {
+    "character": "Bram",
+    "idle": true,
+    "reviewed": true
+  },
+  "bramWalkJump": {
+    "character": "Bram",
+    "states": [
+      "Walk",
+      "Jump"
+    ],
+    "reference": 0,
+    "isolate": true,
+    "reviewed": true
+  },
+  "bramHurtPush": {
+    "character": "Bram",
+    "states": [
+      "Hurt",
+      "Push"
+    ],
+    "reference": 9,
+    "isolate": true,
+    "reviewed": true
+  },
+  "bramPunchKick": {
+    "character": "Bram",
+    "states": [
+      "Punch",
+      "Kick"
+    ],
+    "reference": 0,
+    "isolate": true,
+    "reviewed": true
+  },
+  "bramKnockoutBlock": {
+    "character": "Bram",
+    "states": [
+      "Knockout",
+      "Block"
+    ],
+    "reference": 10,
+    "isolate": true,
+    "reviewed": true
+  },
+  "bramDoubleJumpSpecial": {
+    "character": "Bram",
+    "states": [
+      "DoubleJump",
+      "Special"
+    ],
+    "reference": 19,
+    "isolate": true,
+    "reviewed": true
+  },
+  "bramDashBackstep": {
+    "character": "Bram",
+    "states": [
+      "Dash",
+      "Backstep"
+    ],
+    "reference": 0,
+    "isolate": true,
+    "reviewed": true
+  },
+  "bramVictoryUltimate": {
+    "character": "Bram",
+    "states": [
+      "Victory",
+      "Ultimate"
+    ],
+    "reference": 0,
+    "isolate": true,
+    "reviewed": true
+  },
+  "zephyrIdle": {
+    "character": "Zephyr",
+    "idle": true,
+    "reviewed": true
+  },
+  "zephyrWalk": {
+    "character": "Zephyr",
+    "states": [
+      "Walk"
+    ],
+    "reference": 0,
+    "isolate": true,
+    "reviewed": true
+  },
+  "zephyrJumpHurt": {
+    "character": "Zephyr",
+    "states": [
+      "Jump",
+      "Hurt"
+    ],
+    "reference": 19,
+    "isolate": true,
+    "reviewed": true
+  },
+  "zephyrHurtPush": {
+    "character": "Zephyr",
+    "states": [
+      "Hurt",
+      "Push"
+    ],
+    "reference": 9,
+    "isolate": true,
+    "reviewed": true
+  },
+  "zephyrPunchKick": {
+    "character": "Zephyr",
+    "states": [
+      "Punch",
+      "Kick"
+    ],
+    "reference": 0,
+    "isolate": true,
+    "reviewed": true
+  },
+  "zephyrKnockoutBlock": {
+    "character": "Zephyr",
+    "states": [
+      "Knockout",
+      "Block"
+    ],
+    "reference": 10,
+    "isolate": true,
+    "reviewed": true
+  },
+  "zephyrDoubleJumpSpecial": {
+    "character": "Zephyr",
+    "states": [
+      "DoubleJump",
+      "Special"
+    ],
+    "reference": 19,
+    "isolate": true,
+    "reviewed": true
+  },
+  "zephyrDashBackstep": {
+    "character": "Zephyr",
+    "states": [
+      "Dash",
+      "Backstep"
+    ],
+    "reference": 0,
+    "isolate": true,
+    "reviewed": true
+  },
+  "zephyrVictoryUltimate": {
+    "character": "Zephyr",
+    "states": [
+      "Victory",
+      "Ultimate"
+    ],
+    "reference": 0,
+    "isolate": true,
+    "reviewed": true
+  },
+  "zephyrDownedGetUp": {
+    "character": "Zephyr",
+    "states": [
+      "Downed",
+      "GetUp"
+    ],
+    "reference": 19,
+    "isolate": true,
+    "reviewed": true
+  },
+  "voltIdle": {
+    "character": "Volt",
+    "idle": true,
+    "reviewed": true
+  },
+  "voltWalk": {
+    "character": "Volt",
+    "states": [
+      "Walk"
+    ],
+    "reference": 0,
+    "isolate": true,
+    "reviewed": true
+  },
+  "voltJumpHurt": {
+    "character": "Volt",
+    "states": [
+      "Jump",
+      "Hurt"
+    ],
+    "reference": 19,
+    "isolate": true,
+    "reviewed": true
+  },
+  "voltHurtPush": {
+    "character": "Volt",
+    "states": [
+      "Hurt",
+      "Push"
+    ],
+    "reference": 9,
+    "isolate": true,
+    "reviewed": true
+  },
+  "voltPunchKick": {
+    "character": "Volt",
+    "states": [
+      "Punch",
+      "Kick"
+    ],
+    "reference": 0,
+    "isolate": true,
+    "reviewed": true
+  },
+  "voltKnockoutBlock": {
+    "character": "Volt",
+    "states": [
+      "Knockout",
+      "Block"
+    ],
+    "reference": 10,
+    "isolate": true,
+    "reviewed": true
+  },
+  "voltDoubleJumpSpecial": {
+    "character": "Volt",
+    "states": [
+      "DoubleJump",
+      "Special"
+    ],
+    "reference": 19,
+    "isolate": true,
+    "reviewed": true
+  },
+  "voltVictoryUltimate": {
+    "character": "Volt",
+    "states": [
+      "Victory",
+      "Ultimate"
+    ],
+    "reference": 0,
+    "isolate": true,
+    "reviewed": true
+  },
+  "voltDownedGetUp": {
+    "character": "Volt",
+    "states": [
+      "Downed",
+      "GetUp"
+    ],
+    "reference": 19,
+    "isolate": true,
+    "reviewed": true
+  },
+  "nyxIdle": {
+    "character": "Nyx",
+    "idle": true,
+    "reviewed": true
+  },
+  "nyxWalk": {
+    "character": "Nyx",
+    "states": [
+      "Walk"
+    ],
+    "reference": 0,
+    "isolate": true,
+    "reviewed": true
+  },
+  "nyxJumpHurt": {
+    "character": "Nyx",
+    "states": [
+      "Jump",
+      "Hurt"
+    ],
+    "reference": 19,
+    "isolate": true,
+    "reviewed": true
+  },
+  "nyxHurtPush": {
+    "character": "Nyx",
+    "states": [
+      "Hurt",
+      "Push"
+    ],
+    "reference": 9,
+    "isolate": true,
+    "reviewed": true
+  },
+  "nyxPunchKick": {
+    "character": "Nyx",
+    "states": [
+      "Punch",
+      "Kick"
+    ],
+    "reference": 0,
+    "isolate": true,
+    "reviewed": true
+  },
+  "nyxKnockoutBlock": {
+    "character": "Nyx",
+    "states": [
+      "Knockout",
+      "Block"
+    ],
+    "reference": 10,
+    "isolate": true,
+    "reviewed": true
+  },
+  "nyxDoubleJumpSpecial": {
+    "character": "Nyx",
+    "states": [
+      "DoubleJump",
+      "Special"
+    ],
+    "reference": 19,
+    "isolate": true,
+    "reviewed": true
+  },
+  "nyxDashBackstep": {
+    "character": "Nyx",
+    "states": [
+      "Dash",
+      "Backstep"
+    ],
+    "reference": 0,
+    "isolate": true,
+    "reviewed": true
+  },
+  "nyxVictoryUltimate": {
+    "character": "Nyx",
+    "states": [
+      "Victory",
+      "Ultimate"
+    ],
+    "reference": 0,
+    "isolate": true,
+    "reviewed": true
+  },
+  "nyxDownedGetUp": {
+    "character": "Nyx",
+    "states": [
+      "Downed",
+      "GetUp"
+    ],
+    "reference": 19,
+    "isolate": true,
+    "reviewed": true
+  },
+  "corinIdle": {
+    "character": "Corin",
+    "idle": true,
+    "reviewed": true
+  },
+  "corinWalkV3": {
+    "character": "Corin",
+    "states": [
+      "Walk"
+    ],
+    "reference": 0,
+    "isolate": true,
+    "reviewed": true
+  },
+  "corinHurtPush": {
+    "character": "Corin",
+    "states": [
+      "Hurt",
+      "Push"
+    ],
+    "reference": 9,
+    "isolate": true,
+    "reviewed": true
+  },
+  "corinPunchKick": {
+    "character": "Corin",
+    "states": [
+      "Punch",
+      "Kick"
+    ],
+    "reference": 0,
+    "isolate": true,
+    "reviewed": true
+  },
+  "corinKnockoutBlock": {
+    "character": "Corin",
+    "states": [
+      "Knockout",
+      "Block"
+    ],
+    "reference": 10,
+    "isolate": true,
+    "reviewed": true
+  },
+  "corinDoubleJumpSpecial": {
+    "character": "Corin",
+    "states": [
+      "DoubleJump",
+      "Special"
+    ],
+    "reference": 19,
+    "isolate": true,
+    "reviewed": true
+  },
+  "corinDashBackstep": {
+    "character": "Corin",
+    "states": [
+      "Dash",
+      "Backstep"
+    ],
+    "reference": 0,
+    "isolate": true,
+    "reviewed": true
+  },
+  "corinDownedGetUp": {
+    "character": "Corin",
+    "states": [
+      "Downed",
+      "GetUp"
+    ],
+    "reference": 19,
+    "isolate": true,
+    "reviewed": true
+  },
+  "emberHurtPushRepair": {
+    "character": "Ember",
+    "states": [
+      "Hurt",
+      "Push"
+    ],
+    "reference": 9,
+    "isolate": true,
+    "reviewed": true
+  },
+  "lunaHurtPushRepair": {
+    "character": "Luna",
+    "states": [
+      "Hurt",
+      "Push"
+    ],
+    "reference": 9,
+    "isolate": true,
+    "reviewed": true
+  },
+  "voltDashBackstepRepair": {
+    "character": "Volt",
+    "states": [
+      "Dash",
+      "Backstep"
+    ],
+    "reference": 0,
+    "isolate": true,
+    "reviewed": true
+  },
+  "corinJumpHurtRepair": {
+    "character": "Corin",
+    "states": [
+      "Jump",
+      "Hurt"
+    ],
+    "reference": 19,
+    "isolate": true,
+    "reviewed": true
+  },
+  "corinVictoryUltimateRepair": {
+    "character": "Corin",
+    "states": [
+      "Victory",
+      "Ultimate"
+    ],
+    "reference": 0,
+    "isolate": true,
+    "reviewed": true
+  },
+  "bramDownedGetUpTransparent": {
+    "character": "Bram",
+    "states": [
+      "Downed",
+      "GetUp"
+    ],
+    "reference": 19,
+    "isolate": true,
+    "reviewed": true
+  }
+}
