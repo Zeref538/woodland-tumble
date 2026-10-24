@@ -58,6 +58,6 @@ Use Unity batch mode with `-projectPath` pointing to this folder and `-executeMe
 
 Add `-silent-test` for muted verification and `-logFile` for a log. Use `-quit` with Prepare and BuildWindows. The validation methods close Unity themselves after writing their JSON reports.
 
-Current evidence and remaining work are listed in [TODO.md](TODO.md). Historical v7/v8 reports describe earlier rules and art, not this version. The approved design and import calibrations live in [DESIGN.md](DESIGN.md) and [art direction](Documentation/ART-DIRECTION.md).
+Current saved-scene verification passed 504 checks; counterplay passed 16 checks. The Windows build was produced and launched once without logged script exceptions. These checks do not replace a physical two-player/controller playtest. See [build evidence](Documentation/BUILD-WINDOWS-v9.json) and [TODO.md](TODO.md). Historical v7/v8 reports describe earlier rules and art, not this version. The approved design and import calibrations live in [DESIGN.md](DESIGN.md) and [art direction](Documentation/ART-DIRECTION.md).
 
 Bangers is bundled under the SIL Open Font License; see `Assets/Fonts/Bangers-OFL.txt`. Small interface text uses Unity's built-in body font.

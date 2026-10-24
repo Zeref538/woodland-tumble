@@ -274,10 +274,11 @@ public static class GameSetup
         var versus=Label("Versus Emblem",match,"VS",new Rect(0,0,120,44),32,gold,TextAnchor.MiddleCenter);
         var vsRect=versus.rectTransform;vsRect.anchorMin=vsRect.anchorMax=new Vector2(.5f,1);vsRect.pivot=new Vector2(.5f,1);vsRect.anchoredPosition=new Vector2(0,-92);
         font=pixel;
-        hud.roundTimerText=Label("Round Timer",match,"99\n<size=11>BEST OF 5</size>",new Rect(0,0,150,85),48,white,TextAnchor.UpperCenter);
-        hud.roundTimerText.supportRichText=true;
+        hud.roundTimerText=Label("Round Timer",match,"99",new Rect(0,0,150,66),48,white,TextAnchor.UpperCenter);
+        hud.roundTimerText.supportRichText=false;
         var timerRect=hud.roundTimerText.rectTransform;timerRect.anchorMin=timerRect.anchorMax=new Vector2(.5f,1);
         timerRect.pivot=new Vector2(.5f,1);timerRect.anchoredPosition=new Vector2(0,-20);
+        LabelAnchored("Round Format",match,"FIRST TO 3",new Vector2(.5f,1),new Vector2(0,-82),new Vector2(150,20),12,white);
         font=pixel;
         for(int a=0;a<4;a++){hud.playstationIcons[a]=SpriteAt("Assets/Art/UI/PSAction"+a+".png");hud.neutralIcons[a]=SpriteAt("Assets/Art/UI/CPUAction"+a+".png");}
         for(int c=0;c<game.CharacterNames.Length;c++){

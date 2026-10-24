@@ -9,7 +9,7 @@ public class Scout : MonoBehaviour
     [Range(0, 1)] public int id;
     public string displayName = "Fern";
     public int CharacterIndex { get; private set; }
-    public string SkillName => new[]{"VINE BOLT","FIRE BOLT","FROST WAVE","STONE WAVE","GALE CRESCENT","ARC LANCE","DUSK ORB","PRISM SHARD"}[Mathf.Clamp(SkillIndex,0,7)];
+    public string SkillName => new[]{"VINE BOLT","FIRE BOLT","FROST WAVE","STONE WAVE","GALE CRESCENT","ARC LANCE","DUSK ORB","PRISM ARC"}[Mathf.Clamp(SkillIndex,0,7)];
     public string UltimateName => new[]{"WILDROOT PRISON","PHOENIX COMBO","MOONFROST SEAL","WORLD SHATTER","TEMPEST SPIRAL","THUNDER RUSH","ECLIPSE SNARE","CRYSTAL CROWN"}[Mathf.Clamp(SkillIndex,0,7)];
     public const float SpecialCooldown = 0;
     public float SpecialCooldownRemaining => 0;

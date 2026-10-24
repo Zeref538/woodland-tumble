@@ -1,0 +1,15 @@
+{
+  "recordedAtUtc": "2026-10-24T11:49:25.507270+00:00",
+  "platform": "Windows x64",
+  "unity": "6000.5.10f1",
+  "binary": "Build/Windows/RuneRumble.exe",
+  "files": 179,
+  "directoryBytes": 716068764,
+  "assemblySha256": "b0e5a672f255b525f7898bd4e5a7d723a581e67d6681ad2dede9170b6a2598aa",
+  "containsCurrentSkillLabel": true,
+  "containsCurrentTimerFormat": true,
+  "startupLaunches": 1,
+  "startupScriptExceptions": [],
+  "duelChecks": 504,
+  "counterplayChecks": 16
+}

@@ -115,10 +115,10 @@ public class WoodlandHUD : MonoBehaviour
             var timer=new GameObject("Round Timer",typeof(RectTransform),typeof(CanvasRenderer),typeof(Text));
             timer.transform.SetParent(matchHud.transform,false);
             roundTimerText=timer.GetComponent<Text>();roundTimerText.font=bannerText.font;
-            roundTimerText.fontSize=28;roundTimerText.alignment=TextAnchor.UpperCenter;roundTimerText.supportRichText=true;
+            roundTimerText.fontSize=48;roundTimerText.alignment=TextAnchor.UpperCenter;roundTimerText.supportRichText=false;
             roundTimerText.raycastTarget=false;
             var rect=roundTimerText.rectTransform;rect.anchorMin=rect.anchorMax=new Vector2(.5f,1);
-            rect.pivot=new Vector2(.5f,1);rect.anchoredPosition=new Vector2(0,-110);rect.sizeDelta=new Vector2(150,70);
+            rect.pivot=new Vector2(.5f,1);rect.anchoredPosition=new Vector2(0,-20);rect.sizeDelta=new Vector2(150,66);
         }
         // Old saved HUDs may still contain health graphics; retain portrait/name/skill controls.
         foreach(var plate in fighterPlates)if(plate)foreach(var child in plate.GetComponentsInChildren<Transform>(true))
@@ -318,7 +318,7 @@ public class WoodlandHUD : MonoBehaviour
             var color=soundText.color;color.a=quiet?1:Mathf.Clamp01((audio.AudioNoticeUntil-Time.unscaledTime)*3);soundText.color=color;
         }
         if(roundTimerText) {
-            roundTimerText.text=(game.SuddenDeath?"!!":Mathf.CeilToInt(game.RoundTimeRemaining).ToString("00"))+"\n<size=11>BEST OF 5</size>";
+            roundTimerText.text=(game.SuddenDeath?"!!":Mathf.CeilToInt(game.RoundTimeRemaining).ToString("00"));
             roundTimerText.color=game.RoundTimeRemaining<=10?new Color(1,.35f,.25f):new Color(1,.94f,.8f);
         }
         if(arenaText) arenaText.text=game.ArenaName;
@@ -377,7 +377,7 @@ public class WoodlandHUD : MonoBehaviour
     {
         bool cpu=player==1 && game.SoloMode;
         bool ps=pad!=null && style=="PLAYSTATION";
-        string[] letters=pad==null?(player==0?new[]{"S","T","Y","G"}:new[]{"DOWN","I","O","K"}):style=="XBOX"?new[]{"A","X","B","Y"}:new[]{"S","W","E","N"};
+        string[] letters=pad==null?(player==0?new[]{"S","T","Y","G"}:new[]{"DN","I","O","K"}):style=="XBOX"?new[]{"A","X","B","Y"}:new[]{"S","W","E","N"};
         float dt=Time.unscaledDeltaTime,ease=1-Mathf.Exp(-24*dt);
         ObserveAcceptedActions(player,scout);
         for(int a=0;a<4;a++){

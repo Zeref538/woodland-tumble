@@ -27,3 +27,6 @@ Documentation/Roster-Rework/previews/
 
 # Optional Python art tools
 __pycache__/
+
+# Raw Unity logs remain local; JSON reports record verification.
+Documentation/*.log

@@ -161,6 +161,7 @@ public static class GameValidation
                 hud.characterButtons[4].onClick.Invoke();hud.confirmCharacterButton.onClick.Invoke();hud.characterButtons[7].onClick.Invoke();hud.confirmCharacterButton.onClick.Invoke();hud.mapButtons[5].onClick.Invoke();hud.RefreshMenu();Check(game.CharacterChoices[0]==4 && game.CharacterChoices[1]==7 && game.PendingArena==5,"Saved roster, lock-in and map buttons select the requested match");CheckLiveLabels(hud.mapMenu);Capture("Documentation/RuneRumble-StageSelect.png");
                 Check(hud.mapPreview && hud.mapButtons.Length==6,"Large selected-stage preview and six cards exist");
                 Check(hud.mapPreview.rectTransform.pivot==Vector2.one*.5f,"Map preview images use a centered pivot");
+                Capture("Documentation/RuneRumble-StageSelect-16x10.png",1440,900);
                 Capture("Documentation/RuneRumble-StageSelect-Ultrawide.png",1920,800);
                 hud.startButton.onClick.Invoke();SetStage(0);
             } else if(stage==0 && game.playing && string.IsNullOrEmpty(game.message)) {
@@ -251,6 +252,7 @@ public static class GameValidation
         Canvas.ForceUpdateCanvases();
         foreach(var text in screen.GetComponentsInChildren<Text>()) {
             if(!text.gameObject.activeInHierarchy || string.IsNullOrWhiteSpace(text.text))continue;
+            if(text.name=="Device Letter")Check(text.preferredWidth<=text.rectTransform.rect.width,"Input badge stays on one line: "+text.text);
             Check(text.preferredHeight<=text.rectTransform.rect.height+1,"Visible label fits its height: "+screen.name+" / "+text.name+" ["+text.preferredHeight+" <= "+text.rectTransform.rect.height+"]");
         }
     }
