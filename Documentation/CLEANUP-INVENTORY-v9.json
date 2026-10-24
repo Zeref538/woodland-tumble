@@ -1,0 +1,2543 @@
+[
+  {
+    "folder": "Assets/Art/Characters",
+    "files": 524,
+    "bytes": 28889207,
+    "references": {
+      "Assets\\Art\\Characters\\Ember.mat": [
+        "Assets\\Prefabs\\Ember.prefab"
+      ],
+      "Assets\\Art\\Characters\\Fern.mat": [
+        "Assets\\Prefabs\\Fern.prefab"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Backstep\\01.png": [
+        "Assets\\Animations\\Luna\\Backstep.anim",
+        "Assets\\Animations\\Luna\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Backstep\\02.png": [
+        "Assets\\Animations\\Luna\\Backstep.anim",
+        "Assets\\Animations\\Luna\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Backstep\\03.png": [
+        "Assets\\Animations\\Luna\\Backstep.anim",
+        "Assets\\Animations\\Luna\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Backstep\\04.png": [
+        "Assets\\Animations\\Luna\\Backstep.anim",
+        "Assets\\Animations\\Luna\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Backstep\\05.png": [
+        "Assets\\Animations\\Luna\\Backstep.anim",
+        "Assets\\Animations\\Luna\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Backstep\\06.png": [
+        "Assets\\Animations\\Luna\\Backstep.anim",
+        "Assets\\Animations\\Luna\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Backstep\\07.png": [
+        "Assets\\Animations\\Luna\\Backstep.anim",
+        "Assets\\Animations\\Luna\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Backstep\\08.png": [
+        "Assets\\Animations\\Luna\\Backstep.anim",
+        "Assets\\Animations\\Luna\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Backstep\\09.png": [
+        "Assets\\Animations\\Luna\\Backstep.anim",
+        "Assets\\Animations\\Luna\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Backstep\\10.png": [
+        "Assets\\Animations\\Luna\\Backstep.anim",
+        "Assets\\Animations\\Luna\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Block\\01.png": [
+        "Assets\\Animations\\Luna\\Block.anim",
+        "Assets\\Animations\\Luna\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Block\\02.png": [
+        "Assets\\Animations\\Luna\\Block.anim",
+        "Assets\\Animations\\Luna\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Block\\03.png": [
+        "Assets\\Animations\\Luna\\Block.anim",
+        "Assets\\Animations\\Luna\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Block\\04.png": [
+        "Assets\\Animations\\Luna\\Block.anim",
+        "Assets\\Animations\\Luna\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Block\\05.png": [
+        "Assets\\Animations\\Luna\\Block.anim",
+        "Assets\\Animations\\Luna\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Block\\06.png": [
+        "Assets\\Animations\\Luna\\Block.anim",
+        "Assets\\Animations\\Luna\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Block\\07.png": [
+        "Assets\\Animations\\Luna\\Block.anim",
+        "Assets\\Animations\\Luna\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Block\\08.png": [
+        "Assets\\Animations\\Luna\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Block\\09.png": [
+        "Assets\\Animations\\Luna\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Block\\10.png": [
+        "Assets\\Animations\\Luna\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Dash\\01.png": [
+        "Assets\\Animations\\Luna\\Dash.anim",
+        "Assets\\Animations\\Luna\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Dash\\02.png": [
+        "Assets\\Animations\\Luna\\Dash.anim",
+        "Assets\\Animations\\Luna\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Dash\\03.png": [
+        "Assets\\Animations\\Luna\\Dash.anim",
+        "Assets\\Animations\\Luna\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Dash\\04.png": [
+        "Assets\\Animations\\Luna\\Dash.anim",
+        "Assets\\Animations\\Luna\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Dash\\05.png": [
+        "Assets\\Animations\\Luna\\Dash.anim",
+        "Assets\\Animations\\Luna\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Dash\\06.png": [
+        "Assets\\Animations\\Luna\\Dash.anim",
+        "Assets\\Animations\\Luna\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Dash\\07.png": [
+        "Assets\\Animations\\Luna\\Dash.anim",
+        "Assets\\Animations\\Luna\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Dash\\08.png": [
+        "Assets\\Animations\\Luna\\Dash.anim",
+        "Assets\\Animations\\Luna\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Dash\\09.png": [
+        "Assets\\Animations\\Luna\\Dash.anim",
+        "Assets\\Animations\\Luna\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Dash\\10.png": [
+        "Assets\\Animations\\Luna\\Dash.anim",
+        "Assets\\Animations\\Luna\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Hurt\\01.png": [
+        "Assets\\Animations\\Luna\\Frames.asset",
+        "Assets\\Animations\\Luna\\Hurt.anim"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Hurt\\02.png": [
+        "Assets\\Animations\\Luna\\Frames.asset",
+        "Assets\\Animations\\Luna\\Hurt.anim"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Hurt\\03.png": [
+        "Assets\\Animations\\Luna\\Frames.asset",
+        "Assets\\Animations\\Luna\\Hurt.anim"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Hurt\\04.png": [
+        "Assets\\Animations\\Luna\\Frames.asset",
+        "Assets\\Animations\\Luna\\Hurt.anim"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Hurt\\05.png": [
+        "Assets\\Animations\\Luna\\Frames.asset",
+        "Assets\\Animations\\Luna\\Hurt.anim"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Hurt\\06.png": [
+        "Assets\\Animations\\Luna\\Frames.asset",
+        "Assets\\Animations\\Luna\\Hurt.anim"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Hurt\\07.png": [
+        "Assets\\Animations\\Luna\\Frames.asset",
+        "Assets\\Animations\\Luna\\Hurt.anim"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Hurt\\08.png": [
+        "Assets\\Animations\\Luna\\Frames.asset",
+        "Assets\\Animations\\Luna\\Hurt.anim"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Hurt\\09.png": [
+        "Assets\\Animations\\Luna\\Frames.asset",
+        "Assets\\Animations\\Luna\\Hurt.anim"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Hurt\\10.png": [
+        "Assets\\Animations\\Luna\\Frames.asset",
+        "Assets\\Animations\\Luna\\Hurt.anim"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Idle\\01.png": [
+        "Assets\\Animations\\Luna\\Idle.anim"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Jump\\01.png": [
+        "Assets\\Animations\\Luna\\DoubleJump.anim",
+        "Assets\\Animations\\Luna\\Frames.asset",
+        "Assets\\Animations\\Luna\\Jump.anim"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Jump\\02.png": [
+        "Assets\\Animations\\Luna\\DoubleJump.anim",
+        "Assets\\Animations\\Luna\\Frames.asset",
+        "Assets\\Animations\\Luna\\Jump.anim"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Jump\\03.png": [
+        "Assets\\Animations\\Luna\\DoubleJump.anim",
+        "Assets\\Animations\\Luna\\Frames.asset",
+        "Assets\\Animations\\Luna\\Jump.anim"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Jump\\04.png": [
+        "Assets\\Animations\\Luna\\DoubleJump.anim",
+        "Assets\\Animations\\Luna\\Frames.asset",
+        "Assets\\Animations\\Luna\\Jump.anim"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Jump\\05.png": [
+        "Assets\\Animations\\Luna\\DoubleJump.anim",
+        "Assets\\Animations\\Luna\\Frames.asset",
+        "Assets\\Animations\\Luna\\Jump.anim"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Jump\\06.png": [
+        "Assets\\Animations\\Luna\\DoubleJump.anim",
+        "Assets\\Animations\\Luna\\Frames.asset",
+        "Assets\\Animations\\Luna\\Jump.anim"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Jump\\07.png": [
+        "Assets\\Animations\\Luna\\DoubleJump.anim",
+        "Assets\\Animations\\Luna\\Frames.asset",
+        "Assets\\Animations\\Luna\\Jump.anim"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Jump\\08.png": [
+        "Assets\\Animations\\Luna\\DoubleJump.anim",
+        "Assets\\Animations\\Luna\\Frames.asset",
+        "Assets\\Animations\\Luna\\Jump.anim"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Jump\\09.png": [
+        "Assets\\Animations\\Luna\\DoubleJump.anim",
+        "Assets\\Animations\\Luna\\Frames.asset",
+        "Assets\\Animations\\Luna\\Jump.anim"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Jump\\10.png": [
+        "Assets\\Animations\\Luna\\DoubleJump.anim",
+        "Assets\\Animations\\Luna\\Frames.asset",
+        "Assets\\Animations\\Luna\\Jump.anim"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Kick\\01.png": [
+        "Assets\\Animations\\Luna\\Combo2.anim",
+        "Assets\\Animations\\Luna\\Frames.asset",
+        "Assets\\Animations\\Luna\\Kick.anim"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Kick\\02.png": [
+        "Assets\\Animations\\Luna\\Combo2.anim",
+        "Assets\\Animations\\Luna\\Frames.asset",
+        "Assets\\Animations\\Luna\\Kick.anim"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Kick\\03.png": [
+        "Assets\\Animations\\Luna\\Combo2.anim",
+        "Assets\\Animations\\Luna\\Frames.asset",
+        "Assets\\Animations\\Luna\\Kick.anim"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Kick\\04.png": [
+        "Assets\\Animations\\Luna\\Combo2.anim",
+        "Assets\\Animations\\Luna\\Frames.asset",
+        "Assets\\Animations\\Luna\\Kick.anim"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Kick\\05.png": [
+        "Assets\\Animations\\Luna\\Combo2.anim",
+        "Assets\\Animations\\Luna\\Frames.asset",
+        "Assets\\Animations\\Luna\\Kick.anim"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Kick\\06.png": [
+        "Assets\\Animations\\Luna\\Combo2.anim",
+        "Assets\\Animations\\Luna\\Frames.asset",
+        "Assets\\Animations\\Luna\\Kick.anim"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Kick\\07.png": [
+        "Assets\\Animations\\Luna\\Combo2.anim",
+        "Assets\\Animations\\Luna\\Frames.asset",
+        "Assets\\Animations\\Luna\\Kick.anim"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Kick\\08.png": [
+        "Assets\\Animations\\Luna\\Combo2.anim",
+        "Assets\\Animations\\Luna\\Frames.asset",
+        "Assets\\Animations\\Luna\\Kick.anim"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Kick\\09.png": [
+        "Assets\\Animations\\Luna\\Combo2.anim",
+        "Assets\\Animations\\Luna\\Frames.asset",
+        "Assets\\Animations\\Luna\\Kick.anim"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Kick\\10.png": [
+        "Assets\\Animations\\Luna\\Combo2.anim",
+        "Assets\\Animations\\Luna\\Frames.asset",
+        "Assets\\Animations\\Luna\\Kick.anim"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Knockout\\01.png": [
+        "Assets\\Animations\\Luna\\Frames.asset",
+        "Assets\\Animations\\Luna\\Knockout.anim"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Knockout\\02.png": [
+        "Assets\\Animations\\Luna\\Frames.asset",
+        "Assets\\Animations\\Luna\\Knockout.anim"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Knockout\\03.png": [
+        "Assets\\Animations\\Luna\\Frames.asset",
+        "Assets\\Animations\\Luna\\Knockout.anim"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Knockout\\04.png": [
+        "Assets\\Animations\\Luna\\Frames.asset",
+        "Assets\\Animations\\Luna\\Knockout.anim"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Knockout\\05.png": [
+        "Assets\\Animations\\Luna\\Frames.asset",
+        "Assets\\Animations\\Luna\\Knockout.anim"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Knockout\\06.png": [
+        "Assets\\Animations\\Luna\\Frames.asset",
+        "Assets\\Animations\\Luna\\Knockout.anim"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Knockout\\07.png": [
+        "Assets\\Animations\\Luna\\Frames.asset",
+        "Assets\\Animations\\Luna\\Knockout.anim"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Knockout\\08.png": [
+        "Assets\\Animations\\Luna\\Frames.asset",
+        "Assets\\Animations\\Luna\\Knockout.anim"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Knockout\\09.png": [
+        "Assets\\Animations\\Luna\\Frames.asset",
+        "Assets\\Animations\\Luna\\Knockout.anim"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Knockout\\10.png": [
+        "Assets\\Animations\\Luna\\Frames.asset",
+        "Assets\\Animations\\Luna\\Knockout.anim"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Punch\\01.png": [
+        "Assets\\Animations\\Luna\\Combo3.anim",
+        "Assets\\Animations\\Luna\\Frames.asset",
+        "Assets\\Animations\\Luna\\Grab.anim",
+        "Assets\\Animations\\Luna\\Punch.anim",
+        "Assets\\Animations\\Luna\\Push.anim"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Punch\\02.png": [
+        "Assets\\Animations\\Luna\\Combo3.anim",
+        "Assets\\Animations\\Luna\\Frames.asset",
+        "Assets\\Animations\\Luna\\Grab.anim",
+        "Assets\\Animations\\Luna\\Punch.anim",
+        "Assets\\Animations\\Luna\\Push.anim"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Punch\\03.png": [
+        "Assets\\Animations\\Luna\\Combo3.anim",
+        "Assets\\Animations\\Luna\\Frames.asset",
+        "Assets\\Animations\\Luna\\Grab.anim",
+        "Assets\\Animations\\Luna\\Punch.anim",
+        "Assets\\Animations\\Luna\\Push.anim"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Punch\\04.png": [
+        "Assets\\Animations\\Luna\\Combo3.anim",
+        "Assets\\Animations\\Luna\\Frames.asset",
+        "Assets\\Animations\\Luna\\Grab.anim",
+        "Assets\\Animations\\Luna\\Punch.anim",
+        "Assets\\Animations\\Luna\\Push.anim"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Punch\\05.png": [
+        "Assets\\Animations\\Luna\\Combo3.anim",
+        "Assets\\Animations\\Luna\\Frames.asset",
+        "Assets\\Animations\\Luna\\Grab.anim",
+        "Assets\\Animations\\Luna\\Punch.anim",
+        "Assets\\Animations\\Luna\\Push.anim"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Punch\\06.png": [
+        "Assets\\Animations\\Luna\\Combo3.anim",
+        "Assets\\Animations\\Luna\\Frames.asset",
+        "Assets\\Animations\\Luna\\Grab.anim",
+        "Assets\\Animations\\Luna\\Punch.anim",
+        "Assets\\Animations\\Luna\\Push.anim"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Punch\\07.png": [
+        "Assets\\Animations\\Luna\\Combo3.anim",
+        "Assets\\Animations\\Luna\\Frames.asset",
+        "Assets\\Animations\\Luna\\Grab.anim",
+        "Assets\\Animations\\Luna\\Punch.anim",
+        "Assets\\Animations\\Luna\\Push.anim"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Punch\\08.png": [
+        "Assets\\Animations\\Luna\\Combo3.anim",
+        "Assets\\Animations\\Luna\\Frames.asset",
+        "Assets\\Animations\\Luna\\Grab.anim",
+        "Assets\\Animations\\Luna\\Punch.anim",
+        "Assets\\Animations\\Luna\\Push.anim"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Punch\\09.png": [
+        "Assets\\Animations\\Luna\\Combo3.anim",
+        "Assets\\Animations\\Luna\\Frames.asset",
+        "Assets\\Animations\\Luna\\Grab.anim",
+        "Assets\\Animations\\Luna\\Punch.anim",
+        "Assets\\Animations\\Luna\\Push.anim"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Punch\\10.png": [
+        "Assets\\Animations\\Luna\\Combo3.anim",
+        "Assets\\Animations\\Luna\\Frames.asset",
+        "Assets\\Animations\\Luna\\Grab.anim",
+        "Assets\\Animations\\Luna\\Punch.anim",
+        "Assets\\Animations\\Luna\\Push.anim"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Special\\01.png": [
+        "Assets\\Animations\\Luna\\Charge.anim",
+        "Assets\\Animations\\Luna\\Frames.asset",
+        "Assets\\Animations\\Luna\\Smash.anim"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Special\\02.png": [
+        "Assets\\Animations\\Luna\\Charge.anim",
+        "Assets\\Animations\\Luna\\Frames.asset",
+        "Assets\\Animations\\Luna\\Smash.anim"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Special\\03.png": [
+        "Assets\\Animations\\Luna\\Charge.anim",
+        "Assets\\Animations\\Luna\\Frames.asset",
+        "Assets\\Animations\\Luna\\Smash.anim"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Special\\04.png": [
+        "Assets\\Animations\\Luna\\Frames.asset",
+        "Assets\\Animations\\Luna\\Smash.anim"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Special\\05.png": [
+        "Assets\\Animations\\Luna\\Frames.asset",
+        "Assets\\Animations\\Luna\\Smash.anim"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Special\\06.png": [
+        "Assets\\Animations\\Luna\\Frames.asset",
+        "Assets\\Animations\\Luna\\Smash.anim"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Special\\07.png": [
+        "Assets\\Animations\\Luna\\Frames.asset",
+        "Assets\\Animations\\Luna\\Smash.anim"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Special\\08.png": [
+        "Assets\\Animations\\Luna\\Frames.asset",
+        "Assets\\Animations\\Luna\\Smash.anim"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Special\\09.png": [
+        "Assets\\Animations\\Luna\\Frames.asset",
+        "Assets\\Animations\\Luna\\Smash.anim"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Special\\10.png": [
+        "Assets\\Animations\\Luna\\Frames.asset",
+        "Assets\\Animations\\Luna\\Smash.anim"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Ultimate\\01.png": [
+        "Assets\\Animations\\Luna\\Frames.asset",
+        "Assets\\Animations\\Luna\\Ultimate.anim"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Ultimate\\02.png": [
+        "Assets\\Animations\\Luna\\Frames.asset",
+        "Assets\\Animations\\Luna\\Ultimate.anim"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Ultimate\\03.png": [
+        "Assets\\Animations\\Luna\\Frames.asset",
+        "Assets\\Animations\\Luna\\Ultimate.anim"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Ultimate\\04.png": [
+        "Assets\\Animations\\Luna\\Frames.asset",
+        "Assets\\Animations\\Luna\\Ultimate.anim"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Ultimate\\05.png": [
+        "Assets\\Animations\\Luna\\Frames.asset",
+        "Assets\\Animations\\Luna\\Ultimate.anim"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Ultimate\\06.png": [
+        "Assets\\Animations\\Luna\\Frames.asset",
+        "Assets\\Animations\\Luna\\Ultimate.anim"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Ultimate\\07.png": [
+        "Assets\\Animations\\Luna\\Frames.asset",
+        "Assets\\Animations\\Luna\\Ultimate.anim"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Ultimate\\08.png": [
+        "Assets\\Animations\\Luna\\Frames.asset",
+        "Assets\\Animations\\Luna\\Ultimate.anim"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Ultimate\\09.png": [
+        "Assets\\Animations\\Luna\\Frames.asset",
+        "Assets\\Animations\\Luna\\Ultimate.anim"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Ultimate\\10.png": [
+        "Assets\\Animations\\Luna\\Frames.asset",
+        "Assets\\Animations\\Luna\\Ultimate.anim"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Victory\\01.png": [
+        "Assets\\Animations\\Luna\\Frames.asset",
+        "Assets\\Animations\\Luna\\Victory.anim"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Victory\\02.png": [
+        "Assets\\Animations\\Luna\\Frames.asset",
+        "Assets\\Animations\\Luna\\Victory.anim"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Victory\\03.png": [
+        "Assets\\Animations\\Luna\\Frames.asset",
+        "Assets\\Animations\\Luna\\Victory.anim"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Victory\\04.png": [
+        "Assets\\Animations\\Luna\\Frames.asset",
+        "Assets\\Animations\\Luna\\Victory.anim"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Victory\\05.png": [
+        "Assets\\Animations\\Luna\\Frames.asset",
+        "Assets\\Animations\\Luna\\Victory.anim"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Victory\\06.png": [
+        "Assets\\Animations\\Luna\\Frames.asset",
+        "Assets\\Animations\\Luna\\Victory.anim"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Victory\\07.png": [
+        "Assets\\Animations\\Luna\\Frames.asset",
+        "Assets\\Animations\\Luna\\Victory.anim"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Victory\\08.png": [
+        "Assets\\Animations\\Luna\\Frames.asset",
+        "Assets\\Animations\\Luna\\Victory.anim"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Victory\\09.png": [
+        "Assets\\Animations\\Luna\\Frames.asset",
+        "Assets\\Animations\\Luna\\Victory.anim"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Victory\\10.png": [
+        "Assets\\Animations\\Luna\\Frames.asset",
+        "Assets\\Animations\\Luna\\Victory.anim"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Walk\\01.png": [
+        "Assets\\Animations\\Luna\\Frames.asset",
+        "Assets\\Animations\\Luna\\Walk.anim"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Walk\\02.png": [
+        "Assets\\Animations\\Luna\\Frames.asset",
+        "Assets\\Animations\\Luna\\Walk.anim"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Walk\\03.png": [
+        "Assets\\Animations\\Luna\\Frames.asset",
+        "Assets\\Animations\\Luna\\Walk.anim"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Walk\\04.png": [
+        "Assets\\Animations\\Luna\\Frames.asset",
+        "Assets\\Animations\\Luna\\Walk.anim"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Walk\\05.png": [
+        "Assets\\Animations\\Luna\\Frames.asset",
+        "Assets\\Animations\\Luna\\Walk.anim"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Walk\\06.png": [
+        "Assets\\Animations\\Luna\\Frames.asset",
+        "Assets\\Animations\\Luna\\Walk.anim"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Walk\\07.png": [
+        "Assets\\Animations\\Luna\\Frames.asset",
+        "Assets\\Animations\\Luna\\Walk.anim"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Walk\\08.png": [
+        "Assets\\Animations\\Luna\\Frames.asset",
+        "Assets\\Animations\\Luna\\Walk.anim"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Walk\\09.png": [
+        "Assets\\Animations\\Luna\\Frames.asset",
+        "Assets\\Animations\\Luna\\Walk.anim"
+      ],
+      "Assets\\Art\\Characters\\Luna\\Walk\\10.png": [
+        "Assets\\Animations\\Luna\\Frames.asset",
+        "Assets\\Animations\\Luna\\Walk.anim"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Backstep\\01.png": [
+        "Assets\\Animations\\Fern\\Backstep.anim",
+        "Assets\\Animations\\Fern\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Backstep\\02.png": [
+        "Assets\\Animations\\Fern\\Backstep.anim",
+        "Assets\\Animations\\Fern\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Backstep\\03.png": [
+        "Assets\\Animations\\Fern\\Backstep.anim",
+        "Assets\\Animations\\Fern\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Backstep\\04.png": [
+        "Assets\\Animations\\Fern\\Backstep.anim",
+        "Assets\\Animations\\Fern\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Backstep\\05.png": [
+        "Assets\\Animations\\Fern\\Backstep.anim",
+        "Assets\\Animations\\Fern\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Backstep\\06.png": [
+        "Assets\\Animations\\Fern\\Backstep.anim",
+        "Assets\\Animations\\Fern\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Backstep\\07.png": [
+        "Assets\\Animations\\Fern\\Backstep.anim",
+        "Assets\\Animations\\Fern\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Backstep\\08.png": [
+        "Assets\\Animations\\Fern\\Backstep.anim",
+        "Assets\\Animations\\Fern\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Backstep\\09.png": [
+        "Assets\\Animations\\Fern\\Backstep.anim",
+        "Assets\\Animations\\Fern\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Backstep\\10.png": [
+        "Assets\\Animations\\Fern\\Backstep.anim",
+        "Assets\\Animations\\Fern\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Block\\01.png": [
+        "Assets\\Animations\\Fern\\Block.anim",
+        "Assets\\Animations\\Fern\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Block\\02.png": [
+        "Assets\\Animations\\Fern\\Block.anim",
+        "Assets\\Animations\\Fern\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Block\\03.png": [
+        "Assets\\Animations\\Fern\\Block.anim",
+        "Assets\\Animations\\Fern\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Block\\04.png": [
+        "Assets\\Animations\\Fern\\Block.anim",
+        "Assets\\Animations\\Fern\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Block\\05.png": [
+        "Assets\\Animations\\Fern\\Block.anim",
+        "Assets\\Animations\\Fern\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Block\\06.png": [
+        "Assets\\Animations\\Fern\\Block.anim",
+        "Assets\\Animations\\Fern\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Block\\07.png": [
+        "Assets\\Animations\\Fern\\Block.anim",
+        "Assets\\Animations\\Fern\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Block\\08.png": [
+        "Assets\\Animations\\Fern\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Block\\09.png": [
+        "Assets\\Animations\\Fern\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Block\\10.png": [
+        "Assets\\Animations\\Fern\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Dash\\01.png": [
+        "Assets\\Animations\\Fern\\Dash.anim",
+        "Assets\\Animations\\Fern\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Dash\\02.png": [
+        "Assets\\Animations\\Fern\\Dash.anim",
+        "Assets\\Animations\\Fern\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Dash\\03.png": [
+        "Assets\\Animations\\Fern\\Dash.anim",
+        "Assets\\Animations\\Fern\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Dash\\04.png": [
+        "Assets\\Animations\\Fern\\Dash.anim",
+        "Assets\\Animations\\Fern\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Dash\\05.png": [
+        "Assets\\Animations\\Fern\\Dash.anim",
+        "Assets\\Animations\\Fern\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Dash\\06.png": [
+        "Assets\\Animations\\Fern\\Dash.anim",
+        "Assets\\Animations\\Fern\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Dash\\07.png": [
+        "Assets\\Animations\\Fern\\Dash.anim",
+        "Assets\\Animations\\Fern\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Dash\\08.png": [
+        "Assets\\Animations\\Fern\\Dash.anim",
+        "Assets\\Animations\\Fern\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Dash\\09.png": [
+        "Assets\\Animations\\Fern\\Dash.anim",
+        "Assets\\Animations\\Fern\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Dash\\10.png": [
+        "Assets\\Animations\\Fern\\Dash.anim",
+        "Assets\\Animations\\Fern\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Fern\\DoubleJump\\01.png": [
+        "Assets\\Animations\\Fern\\DoubleJump.anim",
+        "Assets\\Animations\\Fern\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Fern\\DoubleJump\\02.png": [
+        "Assets\\Animations\\Fern\\DoubleJump.anim",
+        "Assets\\Animations\\Fern\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Fern\\DoubleJump\\03.png": [
+        "Assets\\Animations\\Fern\\DoubleJump.anim",
+        "Assets\\Animations\\Fern\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Fern\\DoubleJump\\04.png": [
+        "Assets\\Animations\\Fern\\DoubleJump.anim",
+        "Assets\\Animations\\Fern\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Fern\\DoubleJump\\05.png": [
+        "Assets\\Animations\\Fern\\DoubleJump.anim",
+        "Assets\\Animations\\Fern\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Fern\\DoubleJump\\06.png": [
+        "Assets\\Animations\\Fern\\DoubleJump.anim",
+        "Assets\\Animations\\Fern\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Fern\\DoubleJump\\07.png": [
+        "Assets\\Animations\\Fern\\DoubleJump.anim",
+        "Assets\\Animations\\Fern\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Fern\\DoubleJump\\08.png": [
+        "Assets\\Animations\\Fern\\DoubleJump.anim",
+        "Assets\\Animations\\Fern\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Fern\\DoubleJump\\09.png": [
+        "Assets\\Animations\\Fern\\DoubleJump.anim",
+        "Assets\\Animations\\Fern\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Fern\\DoubleJump\\10.png": [
+        "Assets\\Animations\\Fern\\DoubleJump.anim",
+        "Assets\\Animations\\Fern\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Hurt\\01.png": [
+        "Assets\\Animations\\Fern\\Frames.asset",
+        "Assets\\Animations\\Fern\\Hurt.anim"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Hurt\\02.png": [
+        "Assets\\Animations\\Fern\\Frames.asset",
+        "Assets\\Animations\\Fern\\Hurt.anim"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Hurt\\03.png": [
+        "Assets\\Animations\\Fern\\Frames.asset",
+        "Assets\\Animations\\Fern\\Hurt.anim"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Hurt\\04.png": [
+        "Assets\\Animations\\Fern\\Frames.asset",
+        "Assets\\Animations\\Fern\\Hurt.anim"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Hurt\\05.png": [
+        "Assets\\Animations\\Fern\\Frames.asset",
+        "Assets\\Animations\\Fern\\Hurt.anim"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Hurt\\06.png": [
+        "Assets\\Animations\\Fern\\Frames.asset",
+        "Assets\\Animations\\Fern\\Hurt.anim"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Hurt\\07.png": [
+        "Assets\\Animations\\Fern\\Frames.asset",
+        "Assets\\Animations\\Fern\\Hurt.anim"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Hurt\\08.png": [
+        "Assets\\Animations\\Fern\\Frames.asset",
+        "Assets\\Animations\\Fern\\Hurt.anim"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Hurt\\09.png": [
+        "Assets\\Animations\\Fern\\Frames.asset",
+        "Assets\\Animations\\Fern\\Hurt.anim"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Hurt\\10.png": [
+        "Assets\\Animations\\Fern\\Frames.asset",
+        "Assets\\Animations\\Fern\\Hurt.anim"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Jump\\01.png": [
+        "Assets\\Animations\\Fern\\Frames.asset",
+        "Assets\\Animations\\Fern\\Jump.anim"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Jump\\02.png": [
+        "Assets\\Animations\\Fern\\Frames.asset",
+        "Assets\\Animations\\Fern\\Jump.anim"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Jump\\03.png": [
+        "Assets\\Animations\\Fern\\Frames.asset",
+        "Assets\\Animations\\Fern\\Jump.anim"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Jump\\04.png": [
+        "Assets\\Animations\\Fern\\Frames.asset",
+        "Assets\\Animations\\Fern\\Jump.anim"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Jump\\05.png": [
+        "Assets\\Animations\\Fern\\Frames.asset",
+        "Assets\\Animations\\Fern\\Jump.anim"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Jump\\06.png": [
+        "Assets\\Animations\\Fern\\Frames.asset",
+        "Assets\\Animations\\Fern\\Jump.anim"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Jump\\07.png": [
+        "Assets\\Animations\\Fern\\Frames.asset",
+        "Assets\\Animations\\Fern\\Jump.anim"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Jump\\08.png": [
+        "Assets\\Animations\\Fern\\Frames.asset",
+        "Assets\\Animations\\Fern\\Jump.anim"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Jump\\09.png": [
+        "Assets\\Animations\\Fern\\Frames.asset",
+        "Assets\\Animations\\Fern\\Jump.anim"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Jump\\10.png": [
+        "Assets\\Animations\\Fern\\Frames.asset",
+        "Assets\\Animations\\Fern\\Jump.anim"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Kick\\01.png": [
+        "Assets\\Animations\\Fern\\Frames.asset",
+        "Assets\\Animations\\Fern\\Kick.anim"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Kick\\02.png": [
+        "Assets\\Animations\\Fern\\Frames.asset",
+        "Assets\\Animations\\Fern\\Kick.anim"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Kick\\03.png": [
+        "Assets\\Animations\\Fern\\Frames.asset",
+        "Assets\\Animations\\Fern\\Kick.anim"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Kick\\04.png": [
+        "Assets\\Animations\\Fern\\Frames.asset",
+        "Assets\\Animations\\Fern\\Kick.anim"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Kick\\05.png": [
+        "Assets\\Animations\\Fern\\Frames.asset",
+        "Assets\\Animations\\Fern\\Kick.anim"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Kick\\06.png": [
+        "Assets\\Animations\\Fern\\Frames.asset",
+        "Assets\\Animations\\Fern\\Kick.anim"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Kick\\07.png": [
+        "Assets\\Animations\\Fern\\Frames.asset",
+        "Assets\\Animations\\Fern\\Kick.anim"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Kick\\08.png": [
+        "Assets\\Animations\\Fern\\Frames.asset",
+        "Assets\\Animations\\Fern\\Kick.anim"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Kick\\09.png": [
+        "Assets\\Animations\\Fern\\Frames.asset",
+        "Assets\\Animations\\Fern\\Kick.anim"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Kick\\10.png": [
+        "Assets\\Animations\\Fern\\Frames.asset",
+        "Assets\\Animations\\Fern\\Kick.anim"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Knockout\\01.png": [
+        "Assets\\Animations\\Fern\\Frames.asset",
+        "Assets\\Animations\\Fern\\Knockout.anim"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Knockout\\02.png": [
+        "Assets\\Animations\\Fern\\Frames.asset",
+        "Assets\\Animations\\Fern\\Knockout.anim"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Knockout\\03.png": [
+        "Assets\\Animations\\Fern\\Frames.asset",
+        "Assets\\Animations\\Fern\\Knockout.anim"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Knockout\\04.png": [
+        "Assets\\Animations\\Fern\\Frames.asset",
+        "Assets\\Animations\\Fern\\Knockout.anim"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Knockout\\05.png": [
+        "Assets\\Animations\\Fern\\Frames.asset",
+        "Assets\\Animations\\Fern\\Knockout.anim"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Knockout\\06.png": [
+        "Assets\\Animations\\Fern\\Frames.asset",
+        "Assets\\Animations\\Fern\\Knockout.anim"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Knockout\\07.png": [
+        "Assets\\Animations\\Fern\\Frames.asset",
+        "Assets\\Animations\\Fern\\Knockout.anim"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Knockout\\08.png": [
+        "Assets\\Animations\\Fern\\Frames.asset",
+        "Assets\\Animations\\Fern\\Knockout.anim"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Knockout\\09.png": [
+        "Assets\\Animations\\Fern\\Frames.asset",
+        "Assets\\Animations\\Fern\\Knockout.anim"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Knockout\\10.png": [
+        "Assets\\Animations\\Fern\\Frames.asset",
+        "Assets\\Animations\\Fern\\Knockout.anim"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Punch\\01.png": [
+        "Assets\\Animations\\Fern\\Combo2.anim",
+        "Assets\\Animations\\Fern\\Frames.asset",
+        "Assets\\Animations\\Fern\\Grab.anim",
+        "Assets\\Animations\\Fern\\Punch.anim"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Punch\\02.png": [
+        "Assets\\Animations\\Fern\\Combo2.anim",
+        "Assets\\Animations\\Fern\\Frames.asset",
+        "Assets\\Animations\\Fern\\Grab.anim",
+        "Assets\\Animations\\Fern\\Punch.anim"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Punch\\03.png": [
+        "Assets\\Animations\\Fern\\Combo2.anim",
+        "Assets\\Animations\\Fern\\Frames.asset",
+        "Assets\\Animations\\Fern\\Grab.anim",
+        "Assets\\Animations\\Fern\\Punch.anim"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Punch\\04.png": [
+        "Assets\\Animations\\Fern\\Combo2.anim",
+        "Assets\\Animations\\Fern\\Frames.asset",
+        "Assets\\Animations\\Fern\\Grab.anim",
+        "Assets\\Animations\\Fern\\Punch.anim"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Punch\\05.png": [
+        "Assets\\Animations\\Fern\\Combo2.anim",
+        "Assets\\Animations\\Fern\\Frames.asset",
+        "Assets\\Animations\\Fern\\Grab.anim",
+        "Assets\\Animations\\Fern\\Punch.anim"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Punch\\06.png": [
+        "Assets\\Animations\\Fern\\Combo2.anim",
+        "Assets\\Animations\\Fern\\Frames.asset",
+        "Assets\\Animations\\Fern\\Grab.anim",
+        "Assets\\Animations\\Fern\\Punch.anim"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Punch\\07.png": [
+        "Assets\\Animations\\Fern\\Combo2.anim",
+        "Assets\\Animations\\Fern\\Frames.asset",
+        "Assets\\Animations\\Fern\\Grab.anim",
+        "Assets\\Animations\\Fern\\Punch.anim"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Punch\\08.png": [
+        "Assets\\Animations\\Fern\\Combo2.anim",
+        "Assets\\Animations\\Fern\\Frames.asset",
+        "Assets\\Animations\\Fern\\Grab.anim",
+        "Assets\\Animations\\Fern\\Punch.anim"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Punch\\09.png": [
+        "Assets\\Animations\\Fern\\Combo2.anim",
+        "Assets\\Animations\\Fern\\Frames.asset",
+        "Assets\\Animations\\Fern\\Grab.anim",
+        "Assets\\Animations\\Fern\\Punch.anim"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Punch\\10.png": [
+        "Assets\\Animations\\Fern\\Combo2.anim",
+        "Assets\\Animations\\Fern\\Frames.asset",
+        "Assets\\Animations\\Fern\\Grab.anim",
+        "Assets\\Animations\\Fern\\Punch.anim"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Push\\01.png": [
+        "Assets\\Animations\\Fern\\Combo3.anim",
+        "Assets\\Animations\\Fern\\Frames.asset",
+        "Assets\\Animations\\Fern\\Push.anim"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Push\\02.png": [
+        "Assets\\Animations\\Fern\\Combo3.anim",
+        "Assets\\Animations\\Fern\\Frames.asset",
+        "Assets\\Animations\\Fern\\Push.anim"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Push\\03.png": [
+        "Assets\\Animations\\Fern\\Combo3.anim",
+        "Assets\\Animations\\Fern\\Frames.asset",
+        "Assets\\Animations\\Fern\\Push.anim"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Push\\04.png": [
+        "Assets\\Animations\\Fern\\Combo3.anim",
+        "Assets\\Animations\\Fern\\Frames.asset",
+        "Assets\\Animations\\Fern\\Push.anim"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Push\\05.png": [
+        "Assets\\Animations\\Fern\\Combo3.anim",
+        "Assets\\Animations\\Fern\\Frames.asset",
+        "Assets\\Animations\\Fern\\Push.anim"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Push\\06.png": [
+        "Assets\\Animations\\Fern\\Combo3.anim",
+        "Assets\\Animations\\Fern\\Frames.asset",
+        "Assets\\Animations\\Fern\\Push.anim"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Push\\07.png": [
+        "Assets\\Animations\\Fern\\Combo3.anim",
+        "Assets\\Animations\\Fern\\Frames.asset",
+        "Assets\\Animations\\Fern\\Push.anim"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Push\\08.png": [
+        "Assets\\Animations\\Fern\\Combo3.anim",
+        "Assets\\Animations\\Fern\\Frames.asset",
+        "Assets\\Animations\\Fern\\Push.anim"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Push\\09.png": [
+        "Assets\\Animations\\Fern\\Combo3.anim",
+        "Assets\\Animations\\Fern\\Frames.asset",
+        "Assets\\Animations\\Fern\\Push.anim"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Push\\10.png": [
+        "Assets\\Animations\\Fern\\Combo3.anim",
+        "Assets\\Animations\\Fern\\Frames.asset",
+        "Assets\\Animations\\Fern\\Push.anim"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Special\\01.png": [
+        "Assets\\Animations\\Fern\\Charge.anim",
+        "Assets\\Animations\\Fern\\Frames.asset",
+        "Assets\\Animations\\Fern\\Smash.anim"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Special\\02.png": [
+        "Assets\\Animations\\Fern\\Charge.anim",
+        "Assets\\Animations\\Fern\\Frames.asset",
+        "Assets\\Animations\\Fern\\Smash.anim"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Special\\03.png": [
+        "Assets\\Animations\\Fern\\Charge.anim",
+        "Assets\\Animations\\Fern\\Frames.asset",
+        "Assets\\Animations\\Fern\\Smash.anim"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Special\\04.png": [
+        "Assets\\Animations\\Fern\\Frames.asset",
+        "Assets\\Animations\\Fern\\Smash.anim"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Special\\05.png": [
+        "Assets\\Animations\\Fern\\Frames.asset",
+        "Assets\\Animations\\Fern\\Smash.anim"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Special\\06.png": [
+        "Assets\\Animations\\Fern\\Frames.asset",
+        "Assets\\Animations\\Fern\\Smash.anim"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Special\\07.png": [
+        "Assets\\Animations\\Fern\\Frames.asset",
+        "Assets\\Animations\\Fern\\Smash.anim"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Special\\08.png": [
+        "Assets\\Animations\\Fern\\Frames.asset",
+        "Assets\\Animations\\Fern\\Smash.anim"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Special\\09.png": [
+        "Assets\\Animations\\Fern\\Frames.asset",
+        "Assets\\Animations\\Fern\\Smash.anim"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Special\\10.png": [
+        "Assets\\Animations\\Fern\\Frames.asset",
+        "Assets\\Animations\\Fern\\Smash.anim"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Ultimate\\01.png": [
+        "Assets\\Animations\\Fern\\Frames.asset",
+        "Assets\\Animations\\Fern\\Ultimate.anim"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Ultimate\\02.png": [
+        "Assets\\Animations\\Fern\\Frames.asset",
+        "Assets\\Animations\\Fern\\Ultimate.anim"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Ultimate\\03.png": [
+        "Assets\\Animations\\Fern\\Frames.asset",
+        "Assets\\Animations\\Fern\\Ultimate.anim"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Ultimate\\04.png": [
+        "Assets\\Animations\\Fern\\Frames.asset",
+        "Assets\\Animations\\Fern\\Ultimate.anim"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Ultimate\\05.png": [
+        "Assets\\Animations\\Fern\\Frames.asset",
+        "Assets\\Animations\\Fern\\Ultimate.anim"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Ultimate\\06.png": [
+        "Assets\\Animations\\Fern\\Frames.asset",
+        "Assets\\Animations\\Fern\\Ultimate.anim"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Ultimate\\07.png": [
+        "Assets\\Animations\\Fern\\Frames.asset",
+        "Assets\\Animations\\Fern\\Ultimate.anim"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Ultimate\\08.png": [
+        "Assets\\Animations\\Fern\\Frames.asset",
+        "Assets\\Animations\\Fern\\Ultimate.anim"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Ultimate\\09.png": [
+        "Assets\\Animations\\Fern\\Frames.asset",
+        "Assets\\Animations\\Fern\\Ultimate.anim"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Ultimate\\10.png": [
+        "Assets\\Animations\\Fern\\Frames.asset",
+        "Assets\\Animations\\Fern\\Ultimate.anim"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Victory\\01.png": [
+        "Assets\\Animations\\Fern\\Frames.asset",
+        "Assets\\Animations\\Fern\\Victory.anim"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Victory\\02.png": [
+        "Assets\\Animations\\Fern\\Frames.asset",
+        "Assets\\Animations\\Fern\\Victory.anim"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Victory\\03.png": [
+        "Assets\\Animations\\Fern\\Frames.asset",
+        "Assets\\Animations\\Fern\\Victory.anim"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Victory\\04.png": [
+        "Assets\\Animations\\Fern\\Frames.asset",
+        "Assets\\Animations\\Fern\\Victory.anim"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Victory\\05.png": [
+        "Assets\\Animations\\Fern\\Frames.asset",
+        "Assets\\Animations\\Fern\\Victory.anim"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Victory\\06.png": [
+        "Assets\\Animations\\Fern\\Frames.asset",
+        "Assets\\Animations\\Fern\\Victory.anim"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Victory\\07.png": [
+        "Assets\\Animations\\Fern\\Frames.asset",
+        "Assets\\Animations\\Fern\\Victory.anim"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Victory\\08.png": [
+        "Assets\\Animations\\Fern\\Frames.asset",
+        "Assets\\Animations\\Fern\\Victory.anim"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Victory\\09.png": [
+        "Assets\\Animations\\Fern\\Frames.asset",
+        "Assets\\Animations\\Fern\\Victory.anim"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Victory\\10.png": [
+        "Assets\\Animations\\Fern\\Frames.asset",
+        "Assets\\Animations\\Fern\\Victory.anim"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Walk\\01.png": [
+        "Assets\\Animations\\Fern\\Frames.asset",
+        "Assets\\Animations\\Fern\\Idle.anim",
+        "Assets\\Animations\\Fern\\Walk.anim"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Walk\\02.png": [
+        "Assets\\Animations\\Fern\\Frames.asset",
+        "Assets\\Animations\\Fern\\Walk.anim"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Walk\\03.png": [
+        "Assets\\Animations\\Fern\\Frames.asset",
+        "Assets\\Animations\\Fern\\Walk.anim"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Walk\\04.png": [
+        "Assets\\Animations\\Fern\\Frames.asset",
+        "Assets\\Animations\\Fern\\Walk.anim"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Walk\\05.png": [
+        "Assets\\Animations\\Fern\\Frames.asset",
+        "Assets\\Animations\\Fern\\Walk.anim"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Walk\\06.png": [
+        "Assets\\Animations\\Fern\\Frames.asset",
+        "Assets\\Animations\\Fern\\Walk.anim"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Walk\\07.png": [
+        "Assets\\Animations\\Fern\\Frames.asset",
+        "Assets\\Animations\\Fern\\Walk.anim"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Walk\\08.png": [
+        "Assets\\Animations\\Fern\\Frames.asset",
+        "Assets\\Animations\\Fern\\Walk.anim"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Walk\\09.png": [
+        "Assets\\Animations\\Fern\\Frames.asset",
+        "Assets\\Animations\\Fern\\Walk.anim"
+      ],
+      "Assets\\Art\\Characters\\Fern\\Walk\\10.png": [
+        "Assets\\Animations\\Fern\\Frames.asset",
+        "Assets\\Animations\\Fern\\Walk.anim"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Backstep\\01.png": [
+        "Assets\\Animations\\Ember\\Backstep.anim",
+        "Assets\\Animations\\Ember\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Backstep\\02.png": [
+        "Assets\\Animations\\Ember\\Backstep.anim",
+        "Assets\\Animations\\Ember\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Backstep\\03.png": [
+        "Assets\\Animations\\Ember\\Backstep.anim",
+        "Assets\\Animations\\Ember\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Backstep\\04.png": [
+        "Assets\\Animations\\Ember\\Backstep.anim",
+        "Assets\\Animations\\Ember\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Backstep\\05.png": [
+        "Assets\\Animations\\Ember\\Backstep.anim",
+        "Assets\\Animations\\Ember\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Backstep\\06.png": [
+        "Assets\\Animations\\Ember\\Backstep.anim",
+        "Assets\\Animations\\Ember\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Backstep\\07.png": [
+        "Assets\\Animations\\Ember\\Backstep.anim",
+        "Assets\\Animations\\Ember\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Backstep\\08.png": [
+        "Assets\\Animations\\Ember\\Backstep.anim",
+        "Assets\\Animations\\Ember\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Backstep\\09.png": [
+        "Assets\\Animations\\Ember\\Backstep.anim",
+        "Assets\\Animations\\Ember\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Backstep\\10.png": [
+        "Assets\\Animations\\Ember\\Backstep.anim",
+        "Assets\\Animations\\Ember\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Block\\01.png": [
+        "Assets\\Animations\\Ember\\Block.anim",
+        "Assets\\Animations\\Ember\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Block\\02.png": [
+        "Assets\\Animations\\Ember\\Block.anim",
+        "Assets\\Animations\\Ember\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Block\\03.png": [
+        "Assets\\Animations\\Ember\\Block.anim",
+        "Assets\\Animations\\Ember\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Block\\04.png": [
+        "Assets\\Animations\\Ember\\Block.anim",
+        "Assets\\Animations\\Ember\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Block\\05.png": [
+        "Assets\\Animations\\Ember\\Block.anim",
+        "Assets\\Animations\\Ember\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Block\\06.png": [
+        "Assets\\Animations\\Ember\\Block.anim",
+        "Assets\\Animations\\Ember\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Block\\07.png": [
+        "Assets\\Animations\\Ember\\Block.anim",
+        "Assets\\Animations\\Ember\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Block\\08.png": [
+        "Assets\\Animations\\Ember\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Block\\09.png": [
+        "Assets\\Animations\\Ember\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Block\\10.png": [
+        "Assets\\Animations\\Ember\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Dash\\01.png": [
+        "Assets\\Animations\\Ember\\Dash.anim",
+        "Assets\\Animations\\Ember\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Dash\\02.png": [
+        "Assets\\Animations\\Ember\\Dash.anim",
+        "Assets\\Animations\\Ember\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Dash\\03.png": [
+        "Assets\\Animations\\Ember\\Dash.anim",
+        "Assets\\Animations\\Ember\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Dash\\04.png": [
+        "Assets\\Animations\\Ember\\Dash.anim",
+        "Assets\\Animations\\Ember\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Dash\\05.png": [
+        "Assets\\Animations\\Ember\\Dash.anim",
+        "Assets\\Animations\\Ember\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Dash\\06.png": [
+        "Assets\\Animations\\Ember\\Dash.anim",
+        "Assets\\Animations\\Ember\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Dash\\07.png": [
+        "Assets\\Animations\\Ember\\Dash.anim",
+        "Assets\\Animations\\Ember\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Dash\\08.png": [
+        "Assets\\Animations\\Ember\\Dash.anim",
+        "Assets\\Animations\\Ember\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Dash\\09.png": [
+        "Assets\\Animations\\Ember\\Dash.anim",
+        "Assets\\Animations\\Ember\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Dash\\10.png": [
+        "Assets\\Animations\\Ember\\Dash.anim",
+        "Assets\\Animations\\Ember\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Ember\\DoubleJump\\01.png": [
+        "Assets\\Animations\\Ember\\DoubleJump.anim",
+        "Assets\\Animations\\Ember\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Ember\\DoubleJump\\02.png": [
+        "Assets\\Animations\\Ember\\DoubleJump.anim",
+        "Assets\\Animations\\Ember\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Ember\\DoubleJump\\03.png": [
+        "Assets\\Animations\\Ember\\DoubleJump.anim",
+        "Assets\\Animations\\Ember\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Ember\\DoubleJump\\04.png": [
+        "Assets\\Animations\\Ember\\DoubleJump.anim",
+        "Assets\\Animations\\Ember\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Ember\\DoubleJump\\05.png": [
+        "Assets\\Animations\\Ember\\DoubleJump.anim",
+        "Assets\\Animations\\Ember\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Ember\\DoubleJump\\06.png": [
+        "Assets\\Animations\\Ember\\DoubleJump.anim",
+        "Assets\\Animations\\Ember\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Ember\\DoubleJump\\07.png": [
+        "Assets\\Animations\\Ember\\DoubleJump.anim",
+        "Assets\\Animations\\Ember\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Ember\\DoubleJump\\08.png": [
+        "Assets\\Animations\\Ember\\DoubleJump.anim",
+        "Assets\\Animations\\Ember\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Ember\\DoubleJump\\09.png": [
+        "Assets\\Animations\\Ember\\DoubleJump.anim",
+        "Assets\\Animations\\Ember\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Ember\\DoubleJump\\10.png": [
+        "Assets\\Animations\\Ember\\DoubleJump.anim",
+        "Assets\\Animations\\Ember\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Hurt\\01.png": [
+        "Assets\\Animations\\Ember\\Frames.asset",
+        "Assets\\Animations\\Ember\\Hurt.anim"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Hurt\\02.png": [
+        "Assets\\Animations\\Ember\\Frames.asset",
+        "Assets\\Animations\\Ember\\Hurt.anim"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Hurt\\03.png": [
+        "Assets\\Animations\\Ember\\Frames.asset",
+        "Assets\\Animations\\Ember\\Hurt.anim"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Hurt\\04.png": [
+        "Assets\\Animations\\Ember\\Frames.asset",
+        "Assets\\Animations\\Ember\\Hurt.anim"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Hurt\\05.png": [
+        "Assets\\Animations\\Ember\\Frames.asset",
+        "Assets\\Animations\\Ember\\Hurt.anim"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Hurt\\06.png": [
+        "Assets\\Animations\\Ember\\Frames.asset",
+        "Assets\\Animations\\Ember\\Hurt.anim"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Hurt\\07.png": [
+        "Assets\\Animations\\Ember\\Frames.asset",
+        "Assets\\Animations\\Ember\\Hurt.anim"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Hurt\\08.png": [
+        "Assets\\Animations\\Ember\\Frames.asset",
+        "Assets\\Animations\\Ember\\Hurt.anim"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Hurt\\09.png": [
+        "Assets\\Animations\\Ember\\Frames.asset",
+        "Assets\\Animations\\Ember\\Hurt.anim"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Hurt\\10.png": [
+        "Assets\\Animations\\Ember\\Frames.asset",
+        "Assets\\Animations\\Ember\\Hurt.anim"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Jump\\01.png": [
+        "Assets\\Animations\\Ember\\Frames.asset",
+        "Assets\\Animations\\Ember\\Jump.anim"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Jump\\02.png": [
+        "Assets\\Animations\\Ember\\Frames.asset",
+        "Assets\\Animations\\Ember\\Jump.anim"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Jump\\03.png": [
+        "Assets\\Animations\\Ember\\Frames.asset",
+        "Assets\\Animations\\Ember\\Jump.anim"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Jump\\04.png": [
+        "Assets\\Animations\\Ember\\Frames.asset",
+        "Assets\\Animations\\Ember\\Jump.anim"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Jump\\05.png": [
+        "Assets\\Animations\\Ember\\Frames.asset",
+        "Assets\\Animations\\Ember\\Jump.anim"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Jump\\06.png": [
+        "Assets\\Animations\\Ember\\Frames.asset",
+        "Assets\\Animations\\Ember\\Jump.anim"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Jump\\07.png": [
+        "Assets\\Animations\\Ember\\Frames.asset",
+        "Assets\\Animations\\Ember\\Jump.anim"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Jump\\08.png": [
+        "Assets\\Animations\\Ember\\Frames.asset",
+        "Assets\\Animations\\Ember\\Jump.anim"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Jump\\09.png": [
+        "Assets\\Animations\\Ember\\Frames.asset",
+        "Assets\\Animations\\Ember\\Jump.anim"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Jump\\10.png": [
+        "Assets\\Animations\\Ember\\Frames.asset",
+        "Assets\\Animations\\Ember\\Jump.anim"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Kick\\01.png": [
+        "Assets\\Animations\\Ember\\Combo2.anim",
+        "Assets\\Animations\\Ember\\Frames.asset",
+        "Assets\\Animations\\Ember\\Kick.anim"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Kick\\02.png": [
+        "Assets\\Animations\\Ember\\Combo2.anim",
+        "Assets\\Animations\\Ember\\Frames.asset",
+        "Assets\\Animations\\Ember\\Kick.anim"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Kick\\03.png": [
+        "Assets\\Animations\\Ember\\Combo2.anim",
+        "Assets\\Animations\\Ember\\Frames.asset",
+        "Assets\\Animations\\Ember\\Kick.anim"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Kick\\04.png": [
+        "Assets\\Animations\\Ember\\Combo2.anim",
+        "Assets\\Animations\\Ember\\Frames.asset",
+        "Assets\\Animations\\Ember\\Kick.anim"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Kick\\05.png": [
+        "Assets\\Animations\\Ember\\Combo2.anim",
+        "Assets\\Animations\\Ember\\Frames.asset",
+        "Assets\\Animations\\Ember\\Kick.anim"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Kick\\06.png": [
+        "Assets\\Animations\\Ember\\Combo2.anim",
+        "Assets\\Animations\\Ember\\Frames.asset",
+        "Assets\\Animations\\Ember\\Kick.anim"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Kick\\07.png": [
+        "Assets\\Animations\\Ember\\Combo2.anim",
+        "Assets\\Animations\\Ember\\Frames.asset",
+        "Assets\\Animations\\Ember\\Kick.anim"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Kick\\08.png": [
+        "Assets\\Animations\\Ember\\Combo2.anim",
+        "Assets\\Animations\\Ember\\Frames.asset",
+        "Assets\\Animations\\Ember\\Kick.anim"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Kick\\09.png": [
+        "Assets\\Animations\\Ember\\Combo2.anim",
+        "Assets\\Animations\\Ember\\Frames.asset",
+        "Assets\\Animations\\Ember\\Kick.anim"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Kick\\10.png": [
+        "Assets\\Animations\\Ember\\Combo2.anim",
+        "Assets\\Animations\\Ember\\Frames.asset",
+        "Assets\\Animations\\Ember\\Kick.anim"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Knockout\\01.png": [
+        "Assets\\Animations\\Ember\\Frames.asset",
+        "Assets\\Animations\\Ember\\Knockout.anim"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Knockout\\02.png": [
+        "Assets\\Animations\\Ember\\Frames.asset",
+        "Assets\\Animations\\Ember\\Knockout.anim"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Knockout\\03.png": [
+        "Assets\\Animations\\Ember\\Frames.asset",
+        "Assets\\Animations\\Ember\\Knockout.anim"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Knockout\\04.png": [
+        "Assets\\Animations\\Ember\\Frames.asset",
+        "Assets\\Animations\\Ember\\Knockout.anim"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Knockout\\05.png": [
+        "Assets\\Animations\\Ember\\Frames.asset",
+        "Assets\\Animations\\Ember\\Knockout.anim"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Knockout\\06.png": [
+        "Assets\\Animations\\Ember\\Frames.asset",
+        "Assets\\Animations\\Ember\\Knockout.anim"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Knockout\\07.png": [
+        "Assets\\Animations\\Ember\\Frames.asset",
+        "Assets\\Animations\\Ember\\Knockout.anim"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Knockout\\08.png": [
+        "Assets\\Animations\\Ember\\Frames.asset",
+        "Assets\\Animations\\Ember\\Knockout.anim"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Knockout\\09.png": [
+        "Assets\\Animations\\Ember\\Frames.asset",
+        "Assets\\Animations\\Ember\\Knockout.anim"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Knockout\\10.png": [
+        "Assets\\Animations\\Ember\\Frames.asset",
+        "Assets\\Animations\\Ember\\Knockout.anim"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Punch\\01.png": [
+        "Assets\\Animations\\Ember\\Combo3.anim",
+        "Assets\\Animations\\Ember\\Frames.asset",
+        "Assets\\Animations\\Ember\\Grab.anim",
+        "Assets\\Animations\\Ember\\Punch.anim"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Punch\\02.png": [
+        "Assets\\Animations\\Ember\\Combo3.anim",
+        "Assets\\Animations\\Ember\\Frames.asset",
+        "Assets\\Animations\\Ember\\Grab.anim",
+        "Assets\\Animations\\Ember\\Punch.anim"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Punch\\03.png": [
+        "Assets\\Animations\\Ember\\Combo3.anim",
+        "Assets\\Animations\\Ember\\Frames.asset",
+        "Assets\\Animations\\Ember\\Grab.anim",
+        "Assets\\Animations\\Ember\\Punch.anim"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Punch\\04.png": [
+        "Assets\\Animations\\Ember\\Combo3.anim",
+        "Assets\\Animations\\Ember\\Frames.asset",
+        "Assets\\Animations\\Ember\\Grab.anim",
+        "Assets\\Animations\\Ember\\Punch.anim"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Punch\\05.png": [
+        "Assets\\Animations\\Ember\\Combo3.anim",
+        "Assets\\Animations\\Ember\\Frames.asset",
+        "Assets\\Animations\\Ember\\Grab.anim",
+        "Assets\\Animations\\Ember\\Punch.anim"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Punch\\06.png": [
+        "Assets\\Animations\\Ember\\Combo3.anim",
+        "Assets\\Animations\\Ember\\Frames.asset",
+        "Assets\\Animations\\Ember\\Grab.anim",
+        "Assets\\Animations\\Ember\\Punch.anim"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Punch\\07.png": [
+        "Assets\\Animations\\Ember\\Combo3.anim",
+        "Assets\\Animations\\Ember\\Frames.asset",
+        "Assets\\Animations\\Ember\\Grab.anim",
+        "Assets\\Animations\\Ember\\Punch.anim"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Punch\\08.png": [
+        "Assets\\Animations\\Ember\\Combo3.anim",
+        "Assets\\Animations\\Ember\\Frames.asset",
+        "Assets\\Animations\\Ember\\Grab.anim",
+        "Assets\\Animations\\Ember\\Punch.anim"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Punch\\09.png": [
+        "Assets\\Animations\\Ember\\Combo3.anim",
+        "Assets\\Animations\\Ember\\Frames.asset",
+        "Assets\\Animations\\Ember\\Grab.anim",
+        "Assets\\Animations\\Ember\\Punch.anim"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Punch\\10.png": [
+        "Assets\\Animations\\Ember\\Combo3.anim",
+        "Assets\\Animations\\Ember\\Frames.asset",
+        "Assets\\Animations\\Ember\\Grab.anim",
+        "Assets\\Animations\\Ember\\Punch.anim"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Push\\01.png": [
+        "Assets\\Animations\\Ember\\Frames.asset",
+        "Assets\\Animations\\Ember\\Push.anim"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Push\\02.png": [
+        "Assets\\Animations\\Ember\\Frames.asset",
+        "Assets\\Animations\\Ember\\Push.anim"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Push\\03.png": [
+        "Assets\\Animations\\Ember\\Frames.asset",
+        "Assets\\Animations\\Ember\\Push.anim"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Push\\04.png": [
+        "Assets\\Animations\\Ember\\Frames.asset",
+        "Assets\\Animations\\Ember\\Push.anim"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Push\\05.png": [
+        "Assets\\Animations\\Ember\\Frames.asset",
+        "Assets\\Animations\\Ember\\Push.anim"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Push\\06.png": [
+        "Assets\\Animations\\Ember\\Frames.asset",
+        "Assets\\Animations\\Ember\\Push.anim"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Push\\07.png": [
+        "Assets\\Animations\\Ember\\Frames.asset",
+        "Assets\\Animations\\Ember\\Push.anim"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Push\\08.png": [
+        "Assets\\Animations\\Ember\\Frames.asset",
+        "Assets\\Animations\\Ember\\Push.anim"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Push\\09.png": [
+        "Assets\\Animations\\Ember\\Frames.asset",
+        "Assets\\Animations\\Ember\\Push.anim"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Push\\10.png": [
+        "Assets\\Animations\\Ember\\Frames.asset",
+        "Assets\\Animations\\Ember\\Push.anim"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Special\\01.png": [
+        "Assets\\Animations\\Ember\\Charge.anim",
+        "Assets\\Animations\\Ember\\Frames.asset",
+        "Assets\\Animations\\Ember\\Smash.anim"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Special\\02.png": [
+        "Assets\\Animations\\Ember\\Charge.anim",
+        "Assets\\Animations\\Ember\\Frames.asset",
+        "Assets\\Animations\\Ember\\Smash.anim"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Special\\03.png": [
+        "Assets\\Animations\\Ember\\Charge.anim",
+        "Assets\\Animations\\Ember\\Frames.asset",
+        "Assets\\Animations\\Ember\\Smash.anim"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Special\\04.png": [
+        "Assets\\Animations\\Ember\\Frames.asset",
+        "Assets\\Animations\\Ember\\Smash.anim"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Special\\05.png": [
+        "Assets\\Animations\\Ember\\Frames.asset",
+        "Assets\\Animations\\Ember\\Smash.anim"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Special\\06.png": [
+        "Assets\\Animations\\Ember\\Frames.asset",
+        "Assets\\Animations\\Ember\\Smash.anim"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Special\\07.png": [
+        "Assets\\Animations\\Ember\\Frames.asset",
+        "Assets\\Animations\\Ember\\Smash.anim"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Special\\08.png": [
+        "Assets\\Animations\\Ember\\Frames.asset",
+        "Assets\\Animations\\Ember\\Smash.anim"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Special\\09.png": [
+        "Assets\\Animations\\Ember\\Frames.asset",
+        "Assets\\Animations\\Ember\\Smash.anim"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Special\\10.png": [
+        "Assets\\Animations\\Ember\\Frames.asset",
+        "Assets\\Animations\\Ember\\Smash.anim"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Ultimate\\01.png": [
+        "Assets\\Animations\\Ember\\Frames.asset",
+        "Assets\\Animations\\Ember\\Ultimate.anim"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Ultimate\\02.png": [
+        "Assets\\Animations\\Ember\\Frames.asset",
+        "Assets\\Animations\\Ember\\Ultimate.anim"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Ultimate\\03.png": [
+        "Assets\\Animations\\Ember\\Frames.asset",
+        "Assets\\Animations\\Ember\\Ultimate.anim"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Ultimate\\04.png": [
+        "Assets\\Animations\\Ember\\Frames.asset",
+        "Assets\\Animations\\Ember\\Ultimate.anim"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Ultimate\\05.png": [
+        "Assets\\Animations\\Ember\\Frames.asset",
+        "Assets\\Animations\\Ember\\Ultimate.anim"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Ultimate\\06.png": [
+        "Assets\\Animations\\Ember\\Frames.asset",
+        "Assets\\Animations\\Ember\\Ultimate.anim"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Ultimate\\07.png": [
+        "Assets\\Animations\\Ember\\Frames.asset",
+        "Assets\\Animations\\Ember\\Ultimate.anim"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Ultimate\\08.png": [
+        "Assets\\Animations\\Ember\\Frames.asset",
+        "Assets\\Animations\\Ember\\Ultimate.anim"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Ultimate\\09.png": [
+        "Assets\\Animations\\Ember\\Frames.asset",
+        "Assets\\Animations\\Ember\\Ultimate.anim"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Ultimate\\10.png": [
+        "Assets\\Animations\\Ember\\Frames.asset",
+        "Assets\\Animations\\Ember\\Ultimate.anim"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Victory\\01.png": [
+        "Assets\\Animations\\Ember\\Frames.asset",
+        "Assets\\Animations\\Ember\\Victory.anim"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Victory\\02.png": [
+        "Assets\\Animations\\Ember\\Frames.asset",
+        "Assets\\Animations\\Ember\\Victory.anim"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Victory\\03.png": [
+        "Assets\\Animations\\Ember\\Frames.asset",
+        "Assets\\Animations\\Ember\\Victory.anim"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Victory\\04.png": [
+        "Assets\\Animations\\Ember\\Frames.asset",
+        "Assets\\Animations\\Ember\\Victory.anim"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Victory\\05.png": [
+        "Assets\\Animations\\Ember\\Frames.asset",
+        "Assets\\Animations\\Ember\\Victory.anim"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Victory\\06.png": [
+        "Assets\\Animations\\Ember\\Frames.asset",
+        "Assets\\Animations\\Ember\\Victory.anim"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Victory\\07.png": [
+        "Assets\\Animations\\Ember\\Frames.asset",
+        "Assets\\Animations\\Ember\\Victory.anim"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Victory\\08.png": [
+        "Assets\\Animations\\Ember\\Frames.asset",
+        "Assets\\Animations\\Ember\\Victory.anim"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Victory\\09.png": [
+        "Assets\\Animations\\Ember\\Frames.asset",
+        "Assets\\Animations\\Ember\\Victory.anim"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Victory\\10.png": [
+        "Assets\\Animations\\Ember\\Frames.asset",
+        "Assets\\Animations\\Ember\\Victory.anim"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Walk\\01.png": [
+        "Assets\\Animations\\Ember\\Frames.asset",
+        "Assets\\Animations\\Ember\\Idle.anim",
+        "Assets\\Animations\\Ember\\Walk.anim"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Walk\\02.png": [
+        "Assets\\Animations\\Ember\\Frames.asset",
+        "Assets\\Animations\\Ember\\Walk.anim"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Walk\\03.png": [
+        "Assets\\Animations\\Ember\\Frames.asset",
+        "Assets\\Animations\\Ember\\Walk.anim"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Walk\\04.png": [
+        "Assets\\Animations\\Ember\\Frames.asset",
+        "Assets\\Animations\\Ember\\Walk.anim"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Walk\\05.png": [
+        "Assets\\Animations\\Ember\\Frames.asset",
+        "Assets\\Animations\\Ember\\Walk.anim"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Walk\\06.png": [
+        "Assets\\Animations\\Ember\\Frames.asset",
+        "Assets\\Animations\\Ember\\Walk.anim"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Walk\\07.png": [
+        "Assets\\Animations\\Ember\\Frames.asset",
+        "Assets\\Animations\\Ember\\Walk.anim"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Walk\\08.png": [
+        "Assets\\Animations\\Ember\\Frames.asset",
+        "Assets\\Animations\\Ember\\Walk.anim"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Walk\\09.png": [
+        "Assets\\Animations\\Ember\\Frames.asset",
+        "Assets\\Animations\\Ember\\Walk.anim"
+      ],
+      "Assets\\Art\\Characters\\Ember\\Walk\\10.png": [
+        "Assets\\Animations\\Ember\\Frames.asset",
+        "Assets\\Animations\\Ember\\Walk.anim"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Backstep\\01.png": [
+        "Assets\\Animations\\Bram\\Backstep.anim",
+        "Assets\\Animations\\Bram\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Backstep\\02.png": [
+        "Assets\\Animations\\Bram\\Backstep.anim",
+        "Assets\\Animations\\Bram\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Backstep\\03.png": [
+        "Assets\\Animations\\Bram\\Backstep.anim",
+        "Assets\\Animations\\Bram\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Backstep\\04.png": [
+        "Assets\\Animations\\Bram\\Backstep.anim",
+        "Assets\\Animations\\Bram\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Backstep\\05.png": [
+        "Assets\\Animations\\Bram\\Backstep.anim",
+        "Assets\\Animations\\Bram\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Backstep\\06.png": [
+        "Assets\\Animations\\Bram\\Backstep.anim",
+        "Assets\\Animations\\Bram\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Backstep\\07.png": [
+        "Assets\\Animations\\Bram\\Backstep.anim",
+        "Assets\\Animations\\Bram\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Backstep\\08.png": [
+        "Assets\\Animations\\Bram\\Backstep.anim",
+        "Assets\\Animations\\Bram\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Backstep\\09.png": [
+        "Assets\\Animations\\Bram\\Backstep.anim",
+        "Assets\\Animations\\Bram\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Backstep\\10.png": [
+        "Assets\\Animations\\Bram\\Backstep.anim",
+        "Assets\\Animations\\Bram\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Block\\01.png": [
+        "Assets\\Animations\\Bram\\Block.anim",
+        "Assets\\Animations\\Bram\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Block\\02.png": [
+        "Assets\\Animations\\Bram\\Block.anim",
+        "Assets\\Animations\\Bram\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Block\\03.png": [
+        "Assets\\Animations\\Bram\\Block.anim",
+        "Assets\\Animations\\Bram\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Block\\04.png": [
+        "Assets\\Animations\\Bram\\Block.anim",
+        "Assets\\Animations\\Bram\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Block\\05.png": [
+        "Assets\\Animations\\Bram\\Block.anim",
+        "Assets\\Animations\\Bram\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Block\\06.png": [
+        "Assets\\Animations\\Bram\\Block.anim",
+        "Assets\\Animations\\Bram\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Block\\07.png": [
+        "Assets\\Animations\\Bram\\Block.anim",
+        "Assets\\Animations\\Bram\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Block\\08.png": [
+        "Assets\\Animations\\Bram\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Block\\09.png": [
+        "Assets\\Animations\\Bram\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Block\\10.png": [
+        "Assets\\Animations\\Bram\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Dash\\01.png": [
+        "Assets\\Animations\\Bram\\Dash.anim",
+        "Assets\\Animations\\Bram\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Dash\\02.png": [
+        "Assets\\Animations\\Bram\\Dash.anim",
+        "Assets\\Animations\\Bram\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Dash\\03.png": [
+        "Assets\\Animations\\Bram\\Dash.anim",
+        "Assets\\Animations\\Bram\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Dash\\04.png": [
+        "Assets\\Animations\\Bram\\Dash.anim",
+        "Assets\\Animations\\Bram\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Dash\\05.png": [
+        "Assets\\Animations\\Bram\\Dash.anim",
+        "Assets\\Animations\\Bram\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Dash\\06.png": [
+        "Assets\\Animations\\Bram\\Dash.anim",
+        "Assets\\Animations\\Bram\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Dash\\07.png": [
+        "Assets\\Animations\\Bram\\Dash.anim",
+        "Assets\\Animations\\Bram\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Dash\\08.png": [
+        "Assets\\Animations\\Bram\\Dash.anim",
+        "Assets\\Animations\\Bram\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Dash\\09.png": [
+        "Assets\\Animations\\Bram\\Dash.anim",
+        "Assets\\Animations\\Bram\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Dash\\10.png": [
+        "Assets\\Animations\\Bram\\Dash.anim",
+        "Assets\\Animations\\Bram\\Frames.asset"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Hurt\\01.png": [
+        "Assets\\Animations\\Bram\\Frames.asset",
+        "Assets\\Animations\\Bram\\Hurt.anim"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Hurt\\02.png": [
+        "Assets\\Animations\\Bram\\Frames.asset",
+        "Assets\\Animations\\Bram\\Hurt.anim"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Hurt\\03.png": [
+        "Assets\\Animations\\Bram\\Frames.asset",
+        "Assets\\Animations\\Bram\\Hurt.anim"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Hurt\\04.png": [
+        "Assets\\Animations\\Bram\\Frames.asset",
+        "Assets\\Animations\\Bram\\Hurt.anim"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Hurt\\05.png": [
+        "Assets\\Animations\\Bram\\Frames.asset",
+        "Assets\\Animations\\Bram\\Hurt.anim"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Hurt\\06.png": [
+        "Assets\\Animations\\Bram\\Frames.asset",
+        "Assets\\Animations\\Bram\\Hurt.anim"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Hurt\\07.png": [
+        "Assets\\Animations\\Bram\\Frames.asset",
+        "Assets\\Animations\\Bram\\Hurt.anim"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Hurt\\08.png": [
+        "Assets\\Animations\\Bram\\Frames.asset",
+        "Assets\\Animations\\Bram\\Hurt.anim"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Hurt\\09.png": [
+        "Assets\\Animations\\Bram\\Frames.asset",
+        "Assets\\Animations\\Bram\\Hurt.anim"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Hurt\\10.png": [
+        "Assets\\Animations\\Bram\\Frames.asset",
+        "Assets\\Animations\\Bram\\Hurt.anim"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Idle\\01.png": [
+        "Assets\\Animations\\Bram\\Idle.anim"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Jump\\01.png": [
+        "Assets\\Animations\\Bram\\DoubleJump.anim",
+        "Assets\\Animations\\Bram\\Frames.asset",
+        "Assets\\Animations\\Bram\\Jump.anim"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Jump\\02.png": [
+        "Assets\\Animations\\Bram\\DoubleJump.anim",
+        "Assets\\Animations\\Bram\\Frames.asset",
+        "Assets\\Animations\\Bram\\Jump.anim"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Jump\\03.png": [
+        "Assets\\Animations\\Bram\\DoubleJump.anim",
+        "Assets\\Animations\\Bram\\Frames.asset",
+        "Assets\\Animations\\Bram\\Jump.anim"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Jump\\04.png": [
+        "Assets\\Animations\\Bram\\DoubleJump.anim",
+        "Assets\\Animations\\Bram\\Frames.asset",
+        "Assets\\Animations\\Bram\\Jump.anim"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Jump\\05.png": [
+        "Assets\\Animations\\Bram\\DoubleJump.anim",
+        "Assets\\Animations\\Bram\\Frames.asset",
+        "Assets\\Animations\\Bram\\Jump.anim"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Jump\\06.png": [
+        "Assets\\Animations\\Bram\\DoubleJump.anim",
+        "Assets\\Animations\\Bram\\Frames.asset",
+        "Assets\\Animations\\Bram\\Jump.anim"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Jump\\07.png": [
+        "Assets\\Animations\\Bram\\DoubleJump.anim",
+        "Assets\\Animations\\Bram\\Frames.asset",
+        "Assets\\Animations\\Bram\\Jump.anim"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Jump\\08.png": [
+        "Assets\\Animations\\Bram\\DoubleJump.anim",
+        "Assets\\Animations\\Bram\\Frames.asset",
+        "Assets\\Animations\\Bram\\Jump.anim"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Jump\\09.png": [
+        "Assets\\Animations\\Bram\\DoubleJump.anim",
+        "Assets\\Animations\\Bram\\Frames.asset",
+        "Assets\\Animations\\Bram\\Jump.anim"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Jump\\10.png": [
+        "Assets\\Animations\\Bram\\DoubleJump.anim",
+        "Assets\\Animations\\Bram\\Frames.asset",
+        "Assets\\Animations\\Bram\\Jump.anim"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Kick\\01.png": [
+        "Assets\\Animations\\Bram\\Combo2.anim",
+        "Assets\\Animations\\Bram\\Frames.asset",
+        "Assets\\Animations\\Bram\\Kick.anim"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Kick\\02.png": [
+        "Assets\\Animations\\Bram\\Combo2.anim",
+        "Assets\\Animations\\Bram\\Frames.asset",
+        "Assets\\Animations\\Bram\\Kick.anim"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Kick\\03.png": [
+        "Assets\\Animations\\Bram\\Combo2.anim",
+        "Assets\\Animations\\Bram\\Frames.asset",
+        "Assets\\Animations\\Bram\\Kick.anim"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Kick\\04.png": [
+        "Assets\\Animations\\Bram\\Combo2.anim",
+        "Assets\\Animations\\Bram\\Frames.asset",
+        "Assets\\Animations\\Bram\\Kick.anim"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Kick\\05.png": [
+        "Assets\\Animations\\Bram\\Combo2.anim",
+        "Assets\\Animations\\Bram\\Frames.asset",
+        "Assets\\Animations\\Bram\\Kick.anim"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Kick\\06.png": [
+        "Assets\\Animations\\Bram\\Combo2.anim",
+        "Assets\\Animations\\Bram\\Frames.asset",
+        "Assets\\Animations\\Bram\\Kick.anim"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Kick\\07.png": [
+        "Assets\\Animations\\Bram\\Combo2.anim",
+        "Assets\\Animations\\Bram\\Frames.asset",
+        "Assets\\Animations\\Bram\\Kick.anim"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Kick\\08.png": [
+        "Assets\\Animations\\Bram\\Combo2.anim",
+        "Assets\\Animations\\Bram\\Frames.asset",
+        "Assets\\Animations\\Bram\\Kick.anim"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Kick\\09.png": [
+        "Assets\\Animations\\Bram\\Combo2.anim",
+        "Assets\\Animations\\Bram\\Frames.asset",
+        "Assets\\Animations\\Bram\\Kick.anim"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Kick\\10.png": [
+        "Assets\\Animations\\Bram\\Combo2.anim",
+        "Assets\\Animations\\Bram\\Frames.asset",
+        "Assets\\Animations\\Bram\\Kick.anim"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Knockout\\01.png": [
+        "Assets\\Animations\\Bram\\Frames.asset",
+        "Assets\\Animations\\Bram\\Knockout.anim"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Knockout\\02.png": [
+        "Assets\\Animations\\Bram\\Frames.asset",
+        "Assets\\Animations\\Bram\\Knockout.anim"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Knockout\\03.png": [
+        "Assets\\Animations\\Bram\\Frames.asset",
+        "Assets\\Animations\\Bram\\Knockout.anim"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Knockout\\04.png": [
+        "Assets\\Animations\\Bram\\Frames.asset",
+        "Assets\\Animations\\Bram\\Knockout.anim"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Knockout\\05.png": [
+        "Assets\\Animations\\Bram\\Frames.asset",
+        "Assets\\Animations\\Bram\\Knockout.anim"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Knockout\\06.png": [
+        "Assets\\Animations\\Bram\\Frames.asset",
+        "Assets\\Animations\\Bram\\Knockout.anim"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Knockout\\07.png": [
+        "Assets\\Animations\\Bram\\Frames.asset",
+        "Assets\\Animations\\Bram\\Knockout.anim"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Knockout\\08.png": [
+        "Assets\\Animations\\Bram\\Frames.asset",
+        "Assets\\Animations\\Bram\\Knockout.anim"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Knockout\\09.png": [
+        "Assets\\Animations\\Bram\\Frames.asset",
+        "Assets\\Animations\\Bram\\Knockout.anim"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Knockout\\10.png": [
+        "Assets\\Animations\\Bram\\Frames.asset",
+        "Assets\\Animations\\Bram\\Knockout.anim"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Punch\\01.png": [
+        "Assets\\Animations\\Bram\\Combo3.anim",
+        "Assets\\Animations\\Bram\\Frames.asset",
+        "Assets\\Animations\\Bram\\Grab.anim",
+        "Assets\\Animations\\Bram\\Punch.anim",
+        "Assets\\Animations\\Bram\\Push.anim"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Punch\\02.png": [
+        "Assets\\Animations\\Bram\\Combo3.anim",
+        "Assets\\Animations\\Bram\\Frames.asset",
+        "Assets\\Animations\\Bram\\Grab.anim",
+        "Assets\\Animations\\Bram\\Punch.anim",
+        "Assets\\Animations\\Bram\\Push.anim"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Punch\\03.png": [
+        "Assets\\Animations\\Bram\\Combo3.anim",
+        "Assets\\Animations\\Bram\\Frames.asset",
+        "Assets\\Animations\\Bram\\Grab.anim",
+        "Assets\\Animations\\Bram\\Punch.anim",
+        "Assets\\Animations\\Bram\\Push.anim"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Punch\\04.png": [
+        "Assets\\Animations\\Bram\\Combo3.anim",
+        "Assets\\Animations\\Bram\\Frames.asset",
+        "Assets\\Animations\\Bram\\Grab.anim",
+        "Assets\\Animations\\Bram\\Punch.anim",
+        "Assets\\Animations\\Bram\\Push.anim"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Punch\\05.png": [
+        "Assets\\Animations\\Bram\\Combo3.anim",
+        "Assets\\Animations\\Bram\\Frames.asset",
+        "Assets\\Animations\\Bram\\Grab.anim",
+        "Assets\\Animations\\Bram\\Punch.anim",
+        "Assets\\Animations\\Bram\\Push.anim"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Punch\\06.png": [
+        "Assets\\Animations\\Bram\\Combo3.anim",
+        "Assets\\Animations\\Bram\\Frames.asset",
+        "Assets\\Animations\\Bram\\Grab.anim",
+        "Assets\\Animations\\Bram\\Punch.anim",
+        "Assets\\Animations\\Bram\\Push.anim"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Punch\\07.png": [
+        "Assets\\Animations\\Bram\\Combo3.anim",
+        "Assets\\Animations\\Bram\\Frames.asset",
+        "Assets\\Animations\\Bram\\Grab.anim",
+        "Assets\\Animations\\Bram\\Punch.anim",
+        "Assets\\Animations\\Bram\\Push.anim"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Punch\\08.png": [
+        "Assets\\Animations\\Bram\\Combo3.anim",
+        "Assets\\Animations\\Bram\\Frames.asset",
+        "Assets\\Animations\\Bram\\Grab.anim",
+        "Assets\\Animations\\Bram\\Punch.anim",
+        "Assets\\Animations\\Bram\\Push.anim"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Punch\\09.png": [
+        "Assets\\Animations\\Bram\\Combo3.anim",
+        "Assets\\Animations\\Bram\\Frames.asset",
+        "Assets\\Animations\\Bram\\Grab.anim",
+        "Assets\\Animations\\Bram\\Punch.anim",
+        "Assets\\Animations\\Bram\\Push.anim"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Punch\\10.png": [
+        "Assets\\Animations\\Bram\\Combo3.anim",
+        "Assets\\Animations\\Bram\\Frames.asset",
+        "Assets\\Animations\\Bram\\Grab.anim",
+        "Assets\\Animations\\Bram\\Punch.anim",
+        "Assets\\Animations\\Bram\\Push.anim"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Special\\01.png": [
+        "Assets\\Animations\\Bram\\Charge.anim",
+        "Assets\\Animations\\Bram\\Frames.asset",
+        "Assets\\Animations\\Bram\\Smash.anim"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Special\\02.png": [
+        "Assets\\Animations\\Bram\\Charge.anim",
+        "Assets\\Animations\\Bram\\Frames.asset",
+        "Assets\\Animations\\Bram\\Smash.anim"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Special\\03.png": [
+        "Assets\\Animations\\Bram\\Charge.anim",
+        "Assets\\Animations\\Bram\\Frames.asset",
+        "Assets\\Animations\\Bram\\Smash.anim"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Special\\04.png": [
+        "Assets\\Animations\\Bram\\Frames.asset",
+        "Assets\\Animations\\Bram\\Smash.anim"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Special\\05.png": [
+        "Assets\\Animations\\Bram\\Frames.asset",
+        "Assets\\Animations\\Bram\\Smash.anim"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Special\\06.png": [
+        "Assets\\Animations\\Bram\\Frames.asset",
+        "Assets\\Animations\\Bram\\Smash.anim"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Special\\07.png": [
+        "Assets\\Animations\\Bram\\Frames.asset",
+        "Assets\\Animations\\Bram\\Smash.anim"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Special\\08.png": [
+        "Assets\\Animations\\Bram\\Frames.asset",
+        "Assets\\Animations\\Bram\\Smash.anim"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Special\\09.png": [
+        "Assets\\Animations\\Bram\\Frames.asset",
+        "Assets\\Animations\\Bram\\Smash.anim"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Special\\10.png": [
+        "Assets\\Animations\\Bram\\Frames.asset",
+        "Assets\\Animations\\Bram\\Smash.anim"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Ultimate\\01.png": [
+        "Assets\\Animations\\Bram\\Frames.asset",
+        "Assets\\Animations\\Bram\\Ultimate.anim"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Ultimate\\02.png": [
+        "Assets\\Animations\\Bram\\Frames.asset",
+        "Assets\\Animations\\Bram\\Ultimate.anim"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Ultimate\\03.png": [
+        "Assets\\Animations\\Bram\\Frames.asset",
+        "Assets\\Animations\\Bram\\Ultimate.anim"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Ultimate\\04.png": [
+        "Assets\\Animations\\Bram\\Frames.asset",
+        "Assets\\Animations\\Bram\\Ultimate.anim"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Ultimate\\05.png": [
+        "Assets\\Animations\\Bram\\Frames.asset",
+        "Assets\\Animations\\Bram\\Ultimate.anim"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Ultimate\\06.png": [
+        "Assets\\Animations\\Bram\\Frames.asset",
+        "Assets\\Animations\\Bram\\Ultimate.anim"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Ultimate\\07.png": [
+        "Assets\\Animations\\Bram\\Frames.asset",
+        "Assets\\Animations\\Bram\\Ultimate.anim"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Ultimate\\08.png": [
+        "Assets\\Animations\\Bram\\Frames.asset",
+        "Assets\\Animations\\Bram\\Ultimate.anim"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Ultimate\\09.png": [
+        "Assets\\Animations\\Bram\\Frames.asset",
+        "Assets\\Animations\\Bram\\Ultimate.anim"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Ultimate\\10.png": [
+        "Assets\\Animations\\Bram\\Frames.asset",
+        "Assets\\Animations\\Bram\\Ultimate.anim"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Victory\\01.png": [
+        "Assets\\Animations\\Bram\\Frames.asset",
+        "Assets\\Animations\\Bram\\Victory.anim"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Victory\\02.png": [
+        "Assets\\Animations\\Bram\\Frames.asset",
+        "Assets\\Animations\\Bram\\Victory.anim"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Victory\\03.png": [
+        "Assets\\Animations\\Bram\\Frames.asset",
+        "Assets\\Animations\\Bram\\Victory.anim"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Victory\\04.png": [
+        "Assets\\Animations\\Bram\\Frames.asset",
+        "Assets\\Animations\\Bram\\Victory.anim"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Victory\\05.png": [
+        "Assets\\Animations\\Bram\\Frames.asset",
+        "Assets\\Animations\\Bram\\Victory.anim"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Victory\\06.png": [
+        "Assets\\Animations\\Bram\\Frames.asset",
+        "Assets\\Animations\\Bram\\Victory.anim"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Victory\\07.png": [
+        "Assets\\Animations\\Bram\\Frames.asset",
+        "Assets\\Animations\\Bram\\Victory.anim"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Victory\\08.png": [
+        "Assets\\Animations\\Bram\\Frames.asset",
+        "Assets\\Animations\\Bram\\Victory.anim"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Victory\\09.png": [
+        "Assets\\Animations\\Bram\\Frames.asset",
+        "Assets\\Animations\\Bram\\Victory.anim"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Victory\\10.png": [
+        "Assets\\Animations\\Bram\\Frames.asset",
+        "Assets\\Animations\\Bram\\Victory.anim"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Walk\\01.png": [
+        "Assets\\Animations\\Bram\\Frames.asset",
+        "Assets\\Animations\\Bram\\Walk.anim"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Walk\\02.png": [
+        "Assets\\Animations\\Bram\\Frames.asset",
+        "Assets\\Animations\\Bram\\Walk.anim"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Walk\\03.png": [
+        "Assets\\Animations\\Bram\\Frames.asset",
+        "Assets\\Animations\\Bram\\Walk.anim"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Walk\\04.png": [
+        "Assets\\Animations\\Bram\\Frames.asset",
+        "Assets\\Animations\\Bram\\Walk.anim"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Walk\\05.png": [
+        "Assets\\Animations\\Bram\\Frames.asset",
+        "Assets\\Animations\\Bram\\Walk.anim"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Walk\\06.png": [
+        "Assets\\Animations\\Bram\\Frames.asset",
+        "Assets\\Animations\\Bram\\Walk.anim"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Walk\\07.png": [
+        "Assets\\Animations\\Bram\\Frames.asset",
+        "Assets\\Animations\\Bram\\Walk.anim"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Walk\\08.png": [
+        "Assets\\Animations\\Bram\\Frames.asset",
+        "Assets\\Animations\\Bram\\Walk.anim"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Walk\\09.png": [
+        "Assets\\Animations\\Bram\\Frames.asset",
+        "Assets\\Animations\\Bram\\Walk.anim"
+      ],
+      "Assets\\Art\\Characters\\Bram\\Walk\\10.png": [
+        "Assets\\Animations\\Bram\\Frames.asset",
+        "Assets\\Animations\\Bram\\Walk.anim"
+      ]
+    }
+  },
+  {
+    "folder": "Assets/Animations",
+    "files": 84,
+    "bytes": 409263,
+    "references": {
+      "Assets\\Animations\\Bram\\Backstep.anim": [
+        "Assets\\Animations\\Bram\\Bram.controller"
+      ],
+      "Assets\\Animations\\Bram\\Block.anim": [
+        "Assets\\Animations\\Bram\\Bram.controller"
+      ],
+      "Assets\\Animations\\Bram\\Charge.anim": [
+        "Assets\\Animations\\Bram\\Bram.controller"
+      ],
+      "Assets\\Animations\\Bram\\Combo2.anim": [
+        "Assets\\Animations\\Bram\\Bram.controller"
+      ],
+      "Assets\\Animations\\Bram\\Combo3.anim": [
+        "Assets\\Animations\\Bram\\Bram.controller"
+      ],
+      "Assets\\Animations\\Bram\\Dash.anim": [
+        "Assets\\Animations\\Bram\\Bram.controller"
+      ],
+      "Assets\\Animations\\Bram\\DoubleJump.anim": [
+        "Assets\\Animations\\Bram\\Bram.controller"
+      ],
+      "Assets\\Animations\\Bram\\Grab.anim": [
+        "Assets\\Animations\\Bram\\Bram.controller"
+      ],
+      "Assets\\Animations\\Bram\\Hurt.anim": [
+        "Assets\\Animations\\Bram\\Bram.controller"
+      ],
+      "Assets\\Animations\\Bram\\Idle.anim": [
+        "Assets\\Animations\\Bram\\Bram.controller"
+      ],
+      "Assets\\Animations\\Bram\\Jump.anim": [
+        "Assets\\Animations\\Bram\\Bram.controller"
+      ],
+      "Assets\\Animations\\Bram\\Kick.anim": [
+        "Assets\\Animations\\Bram\\Bram.controller"
+      ],
+      "Assets\\Animations\\Bram\\Knockout.anim": [
+        "Assets\\Animations\\Bram\\Bram.controller"
+      ],
+      "Assets\\Animations\\Bram\\Punch.anim": [
+        "Assets\\Animations\\Bram\\Bram.controller"
+      ],
+      "Assets\\Animations\\Bram\\Push.anim": [
+        "Assets\\Animations\\Bram\\Bram.controller"
+      ],
+      "Assets\\Animations\\Bram\\Smash.anim": [
+        "Assets\\Animations\\Bram\\Bram.controller"
+      ],
+      "Assets\\Animations\\Bram\\Ultimate.anim": [
+        "Assets\\Animations\\Bram\\Bram.controller"
+      ],
+      "Assets\\Animations\\Bram\\Victory.anim": [
+        "Assets\\Animations\\Bram\\Bram.controller"
+      ],
+      "Assets\\Animations\\Bram\\Walk.anim": [
+        "Assets\\Animations\\Bram\\Bram.controller"
+      ],
+      "Assets\\Animations\\Ember\\Backstep.anim": [
+        "Assets\\Animations\\Ember\\Ember.controller"
+      ],
+      "Assets\\Animations\\Ember\\Block.anim": [
+        "Assets\\Animations\\Ember\\Ember.controller"
+      ],
+      "Assets\\Animations\\Ember\\Charge.anim": [
+        "Assets\\Animations\\Ember\\Ember.controller"
+      ],
+      "Assets\\Animations\\Ember\\Combo2.anim": [
+        "Assets\\Animations\\Ember\\Ember.controller"
+      ],
+      "Assets\\Animations\\Ember\\Combo3.anim": [
+        "Assets\\Animations\\Ember\\Ember.controller"
+      ],
+      "Assets\\Animations\\Ember\\Dash.anim": [
+        "Assets\\Animations\\Ember\\Ember.controller"
+      ],
+      "Assets\\Animations\\Ember\\DoubleJump.anim": [
+        "Assets\\Animations\\Ember\\Ember.controller"
+      ],
+      "Assets\\Animations\\Ember\\Grab.anim": [
+        "Assets\\Animations\\Ember\\Ember.controller"
+      ],
+      "Assets\\Animations\\Ember\\Hurt.anim": [
+        "Assets\\Animations\\Ember\\Ember.controller"
+      ],
+      "Assets\\Animations\\Ember\\Idle.anim": [
+        "Assets\\Animations\\Ember\\Ember.controller"
+      ],
+      "Assets\\Animations\\Ember\\Jump.anim": [
+        "Assets\\Animations\\Ember\\Ember.controller"
+      ],
+      "Assets\\Animations\\Ember\\Kick.anim": [
+        "Assets\\Animations\\Ember\\Ember.controller"
+      ],
+      "Assets\\Animations\\Ember\\Knockout.anim": [
+        "Assets\\Animations\\Ember\\Ember.controller"
+      ],
+      "Assets\\Animations\\Ember\\Punch.anim": [
+        "Assets\\Animations\\Ember\\Ember.controller"
+      ],
+      "Assets\\Animations\\Ember\\Push.anim": [
+        "Assets\\Animations\\Ember\\Ember.controller"
+      ],
+      "Assets\\Animations\\Ember\\Smash.anim": [
+        "Assets\\Animations\\Ember\\Ember.controller"
+      ],
+      "Assets\\Animations\\Ember\\Ultimate.anim": [
+        "Assets\\Animations\\Ember\\Ember.controller"
+      ],
+      "Assets\\Animations\\Ember\\Victory.anim": [
+        "Assets\\Animations\\Ember\\Ember.controller"
+      ],
+      "Assets\\Animations\\Ember\\Walk.anim": [
+        "Assets\\Animations\\Ember\\Ember.controller"
+      ],
+      "Assets\\Animations\\Fern\\Backstep.anim": [
+        "Assets\\Animations\\Fern\\Fern.controller"
+      ],
+      "Assets\\Animations\\Fern\\Block.anim": [
+        "Assets\\Animations\\Fern\\Fern.controller"
+      ],
+      "Assets\\Animations\\Fern\\Charge.anim": [
+        "Assets\\Animations\\Fern\\Fern.controller"
+      ],
+      "Assets\\Animations\\Fern\\Combo2.anim": [
+        "Assets\\Animations\\Fern\\Fern.controller"
+      ],
+      "Assets\\Animations\\Fern\\Combo3.anim": [
+        "Assets\\Animations\\Fern\\Fern.controller"
+      ],
+      "Assets\\Animations\\Fern\\Dash.anim": [
+        "Assets\\Animations\\Fern\\Fern.controller"
+      ],
+      "Assets\\Animations\\Fern\\DoubleJump.anim": [
+        "Assets\\Animations\\Fern\\Fern.controller"
+      ],
+      "Assets\\Animations\\Fern\\Grab.anim": [
+        "Assets\\Animations\\Fern\\Fern.controller"
+      ],
+      "Assets\\Animations\\Fern\\Hurt.anim": [
+        "Assets\\Animations\\Fern\\Fern.controller"
+      ],
+      "Assets\\Animations\\Fern\\Idle.anim": [
+        "Assets\\Animations\\Fern\\Fern.controller"
+      ],
+      "Assets\\Animations\\Fern\\Jump.anim": [
+        "Assets\\Animations\\Fern\\Fern.controller"
+      ],
+      "Assets\\Animations\\Fern\\Kick.anim": [
+        "Assets\\Animations\\Fern\\Fern.controller"
+      ],
+      "Assets\\Animations\\Fern\\Knockout.anim": [
+        "Assets\\Animations\\Fern\\Fern.controller"
+      ],
+      "Assets\\Animations\\Fern\\Punch.anim": [
+        "Assets\\Animations\\Fern\\Fern.controller"
+      ],
+      "Assets\\Animations\\Fern\\Push.anim": [
+        "Assets\\Animations\\Fern\\Fern.controller"
+      ],
+      "Assets\\Animations\\Fern\\Smash.anim": [
+        "Assets\\Animations\\Fern\\Fern.controller"
+      ],
+      "Assets\\Animations\\Fern\\Ultimate.anim": [
+        "Assets\\Animations\\Fern\\Fern.controller"
+      ],
+      "Assets\\Animations\\Fern\\Victory.anim": [
+        "Assets\\Animations\\Fern\\Fern.controller"
+      ],
+      "Assets\\Animations\\Fern\\Walk.anim": [
+        "Assets\\Animations\\Fern\\Fern.controller"
+      ],
+      "Assets\\Animations\\Luna\\Backstep.anim": [
+        "Assets\\Animations\\Luna\\Luna.controller"
+      ],
+      "Assets\\Animations\\Luna\\Block.anim": [
+        "Assets\\Animations\\Luna\\Luna.controller"
+      ],
+      "Assets\\Animations\\Luna\\Charge.anim": [
+        "Assets\\Animations\\Luna\\Luna.controller"
+      ],
+      "Assets\\Animations\\Luna\\Combo2.anim": [
+        "Assets\\Animations\\Luna\\Luna.controller"
+      ],
+      "Assets\\Animations\\Luna\\Combo3.anim": [
+        "Assets\\Animations\\Luna\\Luna.controller"
+      ],
+      "Assets\\Animations\\Luna\\Dash.anim": [
+        "Assets\\Animations\\Luna\\Luna.controller"
+      ],
+      "Assets\\Animations\\Luna\\DoubleJump.anim": [
+        "Assets\\Animations\\Luna\\Luna.controller"
+      ],
+      "Assets\\Animations\\Luna\\Grab.anim": [
+        "Assets\\Animations\\Luna\\Luna.controller"
+      ],
+      "Assets\\Animations\\Luna\\Hurt.anim": [
+        "Assets\\Animations\\Luna\\Luna.controller"
+      ],
+      "Assets\\Animations\\Luna\\Idle.anim": [
+        "Assets\\Animations\\Luna\\Luna.controller"
+      ],
+      "Assets\\Animations\\Luna\\Jump.anim": [
+        "Assets\\Animations\\Luna\\Luna.controller"
+      ],
+      "Assets\\Animations\\Luna\\Kick.anim": [
+        "Assets\\Animations\\Luna\\Luna.controller"
+      ],
+      "Assets\\Animations\\Luna\\Knockout.anim": [
+        "Assets\\Animations\\Luna\\Luna.controller"
+      ],
+      "Assets\\Animations\\Luna\\Punch.anim": [
+        "Assets\\Animations\\Luna\\Luna.controller"
+      ],
+      "Assets\\Animations\\Luna\\Push.anim": [
+        "Assets\\Animations\\Luna\\Luna.controller"
+      ],
+      "Assets\\Animations\\Luna\\Smash.anim": [
+        "Assets\\Animations\\Luna\\Luna.controller"
+      ],
+      "Assets\\Animations\\Luna\\Ultimate.anim": [
+        "Assets\\Animations\\Luna\\Luna.controller"
+      ],
+      "Assets\\Animations\\Luna\\Victory.anim": [
+        "Assets\\Animations\\Luna\\Luna.controller"
+      ],
+      "Assets\\Animations\\Luna\\Walk.anim": [
+        "Assets\\Animations\\Luna\\Luna.controller"
+      ]
+    }
+  },
+  {
+    "folder": "Assets/Art/Menu",
+    "files": 3,
+    "bytes": 7838856,
+    "references": {
+      "Assets\\Art\\Menu\\SelectionHall.png": [
+        "Assets\\Scenes\\WoodlandTumble.unity"
+      ],
+      "Assets\\Art\\Menu\\TitleBackdrop.png": [
+        "Assets\\Scenes\\WoodlandTumble.unity"
+      ]
+    }
+  },
+  {
+    "folder": "Assets/Resources/Art/Combo",
+    "files": 96,
+    "bytes": 2245294,
+    "references": {}
+  },
+  {
+    "folder": "Assets/Resources/Art/Grounded",
+    "files": 6,
+    "bytes": 15952341,
+    "references": {
+      "Assets\\Resources\\Art\\Grounded\\Ember.png": [
+        "Assets\\Scenes\\WoodlandTumble.unity"
+      ],
+      "Assets\\Resources\\Art\\Grounded\\Forest.png": [
+        "Assets\\Scenes\\WoodlandTumble.unity",
+        "Assets\\Art\\Arena\\GroundedWoodlandArena.mat"
+      ],
+      "Assets\\Resources\\Art\\Grounded\\Hollowroot.png": [
+        "Assets\\Scenes\\WoodlandTumble.unity"
+      ],
+      "Assets\\Resources\\Art\\Grounded\\Moonlit.png": [
+        "Assets\\Scenes\\WoodlandTumble.unity"
+      ],
+      "Assets\\Resources\\Art\\Grounded\\Skyward.png": [
+        "Assets\\Scenes\\WoodlandTumble.unity"
+      ],
+      "Assets\\Resources\\Art\\Grounded\\Stormglass.png": [
+        "Assets\\Scenes\\WoodlandTumble.unity"
+      ]
+    }
+  }
+]

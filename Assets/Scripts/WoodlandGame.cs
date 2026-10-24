@@ -14,8 +14,8 @@ public class WoodlandGame : MonoBehaviour
     public int PendingCharacter { get; private set; }
     public int[] CharacterChoices = {0,1};
     public string[] CharacterNames={"Fern","Ember","Luna","Bram","Zephyr","Volt","Nyx","Corin"};
-    public string[] SkillNames={"Vine Bolt","Fire Bolt","Frost Wave","Stone Wave","Gale Crescent","Arc Lance","Dusk Orb","Prism Shard"};
-    public string[] SkillDescriptions={"Fire a binding vine bolt. Last-square ultimate: Wildroot Prison.","Launch a fire bolt. Last-square ultimate: Phoenix Combo.","Send a slowing frost wave. Last-square ultimate: Moonfrost Seal.","Launch a rising stone wave. Last-square ultimate: World Shatter.","A wind crescent drives rivals back. Last-square ultimate: Tempest Spiral.","A fast arc lance interrupts approaches. Last-square ultimate: Thunder Rush.","A shadow orb binds rivals. Last-square ultimate: Eclipse Snare.","A crystal shard controls space. Last-square ultimate: Crystal Crown."};
+    public string[] SkillNames={"Vine Bolt","Fire Bolt","Frost Wave","Stone Wave","Gale Crescent","Arc Lance","Dusk Orb","Prism Arc"};
+    public string[] SkillDescriptions={"Fire a binding vine bolt. Last-square ultimate: Wildroot Prison.","Launch a fire bolt. Last-square ultimate: Phoenix Combo.","Send a slowing frost wave. Last-square ultimate: Moonfrost Seal.","Launch a rising stone wave. Last-square ultimate: World Shatter.","A wind crescent drives rivals back. Last-square ultimate: Tempest Spiral.","A fast arc lance interrupts approaches. Last-square ultimate: Thunder Rush.","A shadow orb binds rivals. Last-square ultimate: Eclipse Snare.","A prism arc controls space. Last-square ultimate: Crystal Crown."};
     public Sprite[] CharacterPortraits=new Sprite[8];
     public Sprite[] CharacterProfiles=new Sprite[8];
     public ScoutAnimations[] CharacterAnimationSets=new ScoutAnimations[8];
@@ -47,6 +47,7 @@ public class WoodlandGame : MonoBehaviour
         ApplyPlatformArt();EnsureEdgeHatches();
         float scale = Mathf.Max(22 / backgroundArt.sprite.bounds.size.x, 12.5f / backgroundArt.sprite.bounds.size.y);
         backgroundArt.transform.localScale = Vector3.one * scale;
+        backgroundArt.transform.position=new Vector3(0,plank.position.y+.15f+backgroundArt.sprite.bounds.size.y*scale*.10f,0);
         if (WoodlandEffects.Instance) WoodlandEffects.Instance.ambientTint = index == 1 ? new Color(.3f,1,.85f) : index == 2 ? new Color(1,.4f,.12f) : new Color(1,.86f,.42f);
     }
     [Header("Match rules")]
@@ -179,7 +180,7 @@ public class WoodlandGame : MonoBehaviour
         ApplyPlatformArt();EnsureEdgeHatches();
         foreach(var platform in arenaPlatforms)if(platform)platform.gameObject.SetActive(false);
         if(sphereArt)sphereArt.gameObject.SetActive(false);
-        if(WoodlandEffects.Instance)WoodlandEffects.Instance.SetArenaCamera(5.8f,new Vector3(0,1.4f,-10));
+        if(WoodlandEffects.Instance)WoodlandEffects.Instance.SetArenaCamera(5.8f,new Vector3(0,-.45f,-10));
     }
     void ApplyPlatformArt()
     {
@@ -191,13 +192,12 @@ public class WoodlandGame : MonoBehaviour
     }
     void EnsureEdgeHatches()
     {
-        if(!hatchClosedArt)hatchClosedArt=Resources.Load<Sprite>("Art/Hatches/Closed");
-        if(!hatchOpenArt)hatchOpenArt=Resources.Load<Sprite>("Art/Hatches/RuneHole");
+        if(!hatchOpenArt)hatchOpenArt=Resources.Load<Sprite>("Art/Arcade/OpenManhole");
         if(edgeHatches==null || edgeHatches.Length!=2)edgeHatches=new BoxCollider2D[2];
         if(edgeHatchArt==null || edgeHatchArt.Length!=2)edgeHatchArt=new SpriteRenderer[2];
         for(int i=0;i<2;i++) {
             if(!edgeHatches[i]) {
-                var cover=new GameObject(i==0?"Left Rune Hatch":"Right Rune Hatch");
+                var cover=new GameObject(i==0?"Left Open Manhole":"Right Open Manhole");
                 cover.transform.SetParent(plank.transform,false);
                 edgeHatches[i]=cover.AddComponent<BoxCollider2D>();
                 var visual=new GameObject("Hatch Artwork");visual.transform.SetParent(cover.transform,false);

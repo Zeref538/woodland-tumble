@@ -1,0 +1,122 @@
+{
+  "style": "Rune Rumble game production art. Approved Arcade Aura interface with Ink & Motion attacks. Midnight purple with vivid cyan, coral pink, amber and acid lime. Clear comic display shapes, calm readable label fields, confident illustrated brush bands. Attack effects are broad directional ink-brush sweeps, pale contact cores, teal or fighter element color, short controlled paint fragments. Keep the detailed existing fighters and preserve their proportions. Avoid wood ornaments, crystal shards, rune glyph decoration, glossy mobile-game bevels, narrow spikes, liquid blobs. Hand-painted pixel-informed arcade game art with deliberate silhouette and limited lighting; not generic fantasy decoration.",
+  "assets": [
+    {
+      "name": "TitleBackdrop",
+      "alpha": false,
+      "detail": "Create a finished landscape 16:9 TITLE BACKGROUND illustration only, no text, no UI, no logos. Use first board's vibrant purple night ruined-city fighting courtyard. Keep LEFT 44% quiet midnight purple reading area. RIGHT half shows the two reference fighters Fern green and Ember orange in dynamic opposing fight poses, full boots visible, larger detailed youthful proportions matching their reference sprites. Cyan/lime brush orbit for Fern, coral/amber for Ember. Architecture silhouettes, hanging lamps, foreground stone, subtle graphic halftone texture. Color-separate fighters from background. No fake interface."
+    },
+    {
+      "name": "SelectionHall",
+      "alpha": false,
+      "detail": "Landscape 16:9 quiet fighter selection BACKGROUND only. Midnight purple abandoned arcade courtyard, layered shallow arches, cyan lanterns at edges, faint coral horizon, shadowed ground, subtle hand-painted halftone. Entire middle is dark and uncluttered for live portraits/cards. No fighters, no writing, no UI boxes, no runes, no wood."
+    },
+    {
+      "name": "TitleLogo",
+      "alpha": true,
+      "detail": "Transparent background isolated game title logo only. Exact text RUNE above RUMBLE in strong legible hand-painted brush comic letters, like top-left first board. RUNE pale cream fading to cyan; RUMBLE amber into coral. Wide cyan/lime brush underline. Bold controlled strokes, no spikes or crystal shapes. Tight composition, 3:2, no extra writing."
+    },
+    {
+      "name": "BrushBand",
+      "alpha": true,
+      "detail": "Single reusable WIDE horizontal painted UI button band on genuine transparent background, aspect 6:1. White/cream flat dry-brush interior, few restrained irregular bristle edges, mostly opaque quiet rectangle center 85%, asymmetric short painterly ends. No text, no icons, no shadows. Must be color-tintable by Unity. Entire band visible with 3% transparent margin. Like first board's Single Player brush, but white neutral."
+    },
+    {
+      "name": "OpenManhole",
+      "alpha": true,
+      "detail": "Single isolated open cast-iron street manhole for side-on 2D fighting game. Transparent background. Wide shallow horizontal elliptical dark opening, charcoal rim with small cyan reflection, lid tipped away to right but DOES NOT cover hole. Opening reads as dangerous empty black shaft. 3:1 object aspect with full rim visible. Neutral smooth metal, no runes, no gold, no magical crystal. Side-view foreshortening matching first board's gameplay sewer hole."
+    },
+    {
+      "name": "Map-Forest",
+      "alpha": false,
+      "detail": "Finished landscape 16:9 side-on 2D fighting game arena background, no characters, no UI, no writing, no holes baked in. Theme Sunlit Hollow: overgrown old city courtyard, ivy along distant stone arches, warm amber lanterns, lime canopy against cobalt dusk. Strong layered hand-painted architecture, middle-distance depth, NOT a floating platform. Straight level horizontal top edge of foreground stone floor EXACTLY 60% down image; floor occupies bottom40%. Fighting lane uninterrupted from left edge to right edge, flat with no raised collision obstacles. Calm dark center to silhouette colorful fighters. Bottom25% dark subdued foreground so controls remain readable. Objects behind walk line only. Rich vibrant accents in background edges, readable quiet center."
+    },
+    {
+      "name": "Map-Moonlit",
+      "alpha": false,
+      "detail": "Finished landscape 16:9 side-on 2D fighting game arena background, no characters, no UI, no writing, no holes baked in. Theme Moonlit Lake: lakeside terrace, huge pale moon, willow silhouettes and cyan reflections, violet bridges and distant castle. Strong layered hand-painted architecture, middle-distance depth, NOT a floating platform. Straight level horizontal top edge of foreground stone floor EXACTLY 60% down image; floor occupies bottom40%. Fighting lane uninterrupted from left edge to right edge, flat with no raised collision obstacles. Calm dark center to silhouette colorful fighters. Bottom25% dark subdued foreground so controls remain readable. Objects behind walk line only. Rich vibrant accents in background edges, readable quiet center."
+    },
+    {
+      "name": "Map-Ember",
+      "alpha": false,
+      "detail": "Finished landscape 16:9 side-on 2D fighting game arena background, no characters, no UI, no writing, no holes baked in. Theme Ember Grove: ash-black courtyard at a volcano shrine, warm coral lava channels far behind fighting floor, ember lanterns and indigo smoke. Strong layered hand-painted architecture, middle-distance depth, NOT a floating platform. Straight level horizontal top edge of foreground stone floor EXACTLY 60% down image; floor occupies bottom40%. Fighting lane uninterrupted from left edge to right edge, flat with no raised collision obstacles. Calm dark center to silhouette colorful fighters. Bottom25% dark subdued foreground so controls remain readable. Objects behind walk line only. Rich vibrant accents in background edges, readable quiet center."
+    },
+    {
+      "name": "Map-Skyward",
+      "alpha": false,
+      "detail": "Finished landscape 16:9 side-on 2D fighting game arena background, no characters, no UI, no writing, no holes baked in. Theme Skyward Ruins: high mountain stone terrace, cyan cloud sea, pale cream sunrise, ruined arch bridges, coral prayer pennants. Strong layered hand-painted architecture, middle-distance depth, NOT a floating platform. Straight level horizontal top edge of foreground stone floor EXACTLY 60% down image; floor occupies bottom40%. Fighting lane uninterrupted from left edge to right edge, flat with no raised collision obstacles. Calm dark center to silhouette colorful fighters. Bottom25% dark subdued foreground so controls remain readable. Objects behind walk line only. Rich vibrant accents in background edges, readable quiet center."
+    },
+    {
+      "name": "Map-Stormglass",
+      "alpha": false,
+      "detail": "Finished landscape 16:9 side-on 2D fighting game arena background, no characters, no UI, no writing, no holes baked in. Theme Stormglass Causeway: stormy rain-wet city bridge, distant cyan lightning, purple clouds, golden windows, dark reflective slate. Strong layered hand-painted architecture, middle-distance depth, NOT a floating platform. Straight level horizontal top edge of foreground stone floor EXACTLY 60% down image; floor occupies bottom40%. Fighting lane uninterrupted from left edge to right edge, flat with no raised collision obstacles. Calm dark center to silhouette colorful fighters. Bottom25% dark subdued foreground so controls remain readable. Objects behind walk line only. Rich vibrant accents in background edges, readable quiet center."
+    },
+    {
+      "name": "Map-Hollowroot",
+      "alpha": false,
+      "detail": "Finished landscape 16:9 side-on 2D fighting game arena background, no characters, no UI, no writing, no holes baked in. Theme Hollowroot Cistern: underground brick cistern, luminous mint water beneath background arches, deep violet shadows, coral lamps and hanging roots. Strong layered hand-painted architecture, middle-distance depth, NOT a floating platform. Straight level horizontal top edge of foreground stone floor EXACTLY 60% down image; floor occupies bottom40%. Fighting lane uninterrupted from left edge to right edge, flat with no raised collision obstacles. Calm dark center to silhouette colorful fighters. Bottom25% dark subdued foreground so controls remain readable. Objects behind walk line only. Rich vibrant accents in background edges, readable quiet center."
+    },
+    {
+      "name": "FX-Fern",
+      "alpha": true,
+      "detail": "Production transparent SPRITE SHEET, landscape 1536x1024, exact6 columns x4 rows of256x256 equal cells, no text, no gridlines. Fern's elemental attacks: mint and acid lime, leaflike curved brush ribbons. Each row one six-frame animation left to right: ROW1 broad crescent slash swing; ROW2 compact confirmed-hit ink splash; ROW3 larger sweeping finisher ring impact; ROW4 curved frontal brush guard/parry. Frame timing stages: 1 small anticipation,2 developing,3 peak,4 expanding,5 fragmenting,6 fading. Keep each effect centered in its own cell, all pixels contained inside central224x224 with16px CLEAR TRANSPARENT gutter on ALL SIDES of every cell. Effect center does not wander. No characters, weapons, swords, UI, writing, runes or crystal shards. Big smooth brush silhouettes with opaque colored core and dry-bristle edge. Not skinny spiky energy. Genuine transparent alpha."
+    },
+    {
+      "name": "FX-Ember",
+      "alpha": true,
+      "detail": "Production transparent SPRITE SHEET, landscape 1536x1024, exact6 columns x4 rows of256x256 equal cells, no text, no gridlines. Ember's elemental attacks: coral and amber, burning vermilion brush curls. Each row one six-frame animation left to right: ROW1 broad crescent slash swing; ROW2 compact confirmed-hit ink splash; ROW3 larger sweeping finisher ring impact; ROW4 curved frontal brush guard/parry. Frame timing stages: 1 small anticipation,2 developing,3 peak,4 expanding,5 fragmenting,6 fading. Keep each effect centered in its own cell, all pixels contained inside central224x224 with16px CLEAR TRANSPARENT gutter on ALL SIDES of every cell. Effect center does not wander. No characters, weapons, swords, UI, writing, runes or crystal shards. Big smooth brush silhouettes with opaque colored core and dry-bristle edge. Not skinny spiky energy. Genuine transparent alpha."
+    },
+    {
+      "name": "FX-Luna",
+      "alpha": true,
+      "detail": "Production transparent SPRITE SHEET, landscape 1536x1024, exact6 columns x4 rows of256x256 equal cells, no text, no gridlines. Luna's elemental attacks: ice cyan and pale blue, cool moonlit crescent brush strokes. Each row one six-frame animation left to right: ROW1 broad crescent slash swing; ROW2 compact confirmed-hit ink splash; ROW3 larger sweeping finisher ring impact; ROW4 curved frontal brush guard/parry. Frame timing stages: 1 small anticipation,2 developing,3 peak,4 expanding,5 fragmenting,6 fading. Keep each effect centered in its own cell, all pixels contained inside central224x224 with16px CLEAR TRANSPARENT gutter on ALL SIDES of every cell. Effect center does not wander. No characters, weapons, swords, UI, writing, runes or crystal shards. Big smooth brush silhouettes with opaque colored core and dry-bristle edge. Not skinny spiky energy. Genuine transparent alpha."
+    },
+    {
+      "name": "FX-Bram",
+      "alpha": true,
+      "detail": "Production transparent SPRITE SHEET, landscape 1536x1024, exact6 columns x4 rows of256x256 equal cells, no text, no gridlines. Bram's elemental attacks: ochre and warm cream, heavy earthen sumi brush sweeps. Each row one six-frame animation left to right: ROW1 broad crescent slash swing; ROW2 compact confirmed-hit ink splash; ROW3 larger sweeping finisher ring impact; ROW4 curved frontal brush guard/parry. Frame timing stages: 1 small anticipation,2 developing,3 peak,4 expanding,5 fragmenting,6 fading. Keep each effect centered in its own cell, all pixels contained inside central224x224 with16px CLEAR TRANSPARENT gutter on ALL SIDES of every cell. Effect center does not wander. No characters, weapons, swords, UI, writing, runes or crystal shards. Big smooth brush silhouettes with opaque colored core and dry-bristle edge. Not skinny spiky energy. Genuine transparent alpha."
+    },
+    {
+      "name": "FX-Zephyr",
+      "alpha": true,
+      "detail": "Production transparent SPRITE SHEET, landscape 1536x1024, exact6 columns x4 rows of256x256 equal cells, no text, no gridlines. Zephyr's elemental attacks: mint and cream, light windswept circular ink ribbons. Each row one six-frame animation left to right: ROW1 broad crescent slash swing; ROW2 compact confirmed-hit ink splash; ROW3 larger sweeping finisher ring impact; ROW4 curved frontal brush guard/parry. Frame timing stages: 1 small anticipation,2 developing,3 peak,4 expanding,5 fragmenting,6 fading. Keep each effect centered in its own cell, all pixels contained inside central224x224 with16px CLEAR TRANSPARENT gutter on ALL SIDES of every cell. Effect center does not wander. No characters, weapons, swords, UI, writing, runes or crystal shards. Big smooth brush silhouettes with opaque colored core and dry-bristle edge. Not skinny spiky energy. Genuine transparent alpha."
+    },
+    {
+      "name": "FX-Volt",
+      "alpha": true,
+      "detail": "Production transparent SPRITE SHEET, landscape 1536x1024, exact6 columns x4 rows of256x256 equal cells, no text, no gridlines. Volt's elemental attacks: amber and near-white, fast electric zigzag BRUSH ribbons with broad smooth curves. Each row one six-frame animation left to right: ROW1 broad crescent slash swing; ROW2 compact confirmed-hit ink splash; ROW3 larger sweeping finisher ring impact; ROW4 curved frontal brush guard/parry. Frame timing stages: 1 small anticipation,2 developing,3 peak,4 expanding,5 fragmenting,6 fading. Keep each effect centered in its own cell, all pixels contained inside central224x224 with16px CLEAR TRANSPARENT gutter on ALL SIDES of every cell. Effect center does not wander. No characters, weapons, swords, UI, writing, runes or crystal shards. Big smooth brush silhouettes with opaque colored core and dry-bristle edge. Not skinny spiky energy. Genuine transparent alpha."
+    },
+    {
+      "name": "FX-Nyx",
+      "alpha": true,
+      "detail": "Production transparent SPRITE SHEET, landscape 1536x1024, exact6 columns x4 rows of256x256 equal cells, no text, no gridlines. Nyx's elemental attacks: violet and pale lavender, smoky dark-violet ink crescents. Each row one six-frame animation left to right: ROW1 broad crescent slash swing; ROW2 compact confirmed-hit ink splash; ROW3 larger sweeping finisher ring impact; ROW4 curved frontal brush guard/parry. Frame timing stages: 1 small anticipation,2 developing,3 peak,4 expanding,5 fragmenting,6 fading. Keep each effect centered in its own cell, all pixels contained inside central224x224 with16px CLEAR TRANSPARENT gutter on ALL SIDES of every cell. Effect center does not wander. No characters, weapons, swords, UI, writing, runes or crystal shards. Big smooth brush silhouettes with opaque colored core and dry-bristle edge. Not skinny spiky energy. Genuine transparent alpha."
+    },
+    {
+      "name": "FX-Corin",
+      "alpha": true,
+      "detail": "Production transparent SPRITE SHEET, landscape 1536x1024, exact6 columns x4 rows of256x256 equal cells, no text, no gridlines. Corin's elemental attacks: coral pink and near-white, rose-colored wind brush curls. Each row one six-frame animation left to right: ROW1 broad crescent slash swing; ROW2 compact confirmed-hit ink splash; ROW3 larger sweeping finisher ring impact; ROW4 curved frontal brush guard/parry. Frame timing stages: 1 small anticipation,2 developing,3 peak,4 expanding,5 fragmenting,6 fading. Keep each effect centered in its own cell, all pixels contained inside central224x224 with16px CLEAR TRANSPARENT gutter on ALL SIDES of every cell. Effect center does not wander. No characters, weapons, swords, UI, writing, runes or crystal shards. Big smooth brush silhouettes with opaque colored core and dry-bristle edge. Not skinny spiky energy. Genuine transparent alpha."
+    }
+  ],
+  "repair": {
+    "asset": "FX-Nyx-v9.png",
+    "change": "Separate smoke between animation cells; keep purple ink strokes and pale cores. Transparent 6 by 4 sheet."
+  },
+  "import": {
+    "frames": 192,
+    "cells": [
+      256,
+      256
+    ],
+    "paddingCanvas": [
+      352,
+      352
+    ],
+    "grid": "Measured alpha gutters",
+    "brushBandCrop": [
+      62,
+      197,
+      2077,
+      532
+    ]
+  }
+}

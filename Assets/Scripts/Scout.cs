@@ -549,7 +549,7 @@ public class Scout : MonoBehaviour
     void BreakGuard()
     {
         Blocking = false; Shield = 0; shieldBrokenUntil = Time.time + 1.25f; hurtUntil = shieldBrokenUntil;
-        WoodlandEffects.Instance?.GuardImpact(Body.position, face, Element, false, true);
+        WoodlandEffects.Instance?.GuardImpact(Body.position, face, Element, false, true,CharacterIndex);
     }
     public bool BeginSmash() => TrySpecial();
     public void CancelSpecialCharge(){Charging=false;chargeHeld=false;chargePressed=chargeReleased=false;}
@@ -764,7 +764,7 @@ public class Scout : MonoBehaviour
         bool frontal = (attacker.Body.position.x - Body.position.x) * face > 0;
         if (Blocking && frontal) {
             bool parry = Time.time - shieldStarted <= parryWindow;
-            WoodlandEffects.Instance?.GuardImpact(Body.position, face, Element, parry, false);
+            WoodlandEffects.Instance?.GuardImpact(Body.position, face, Element, parry, false,CharacterIndex);
             if (parry) { attacker.Stagger(.4f); Shield = Mathf.Min(shieldCapacity, Shield + 8);ShowCombatCue("PARRY"); }
             else { Shield = Mathf.Max(0, Shield - damage * .8f); Body.AddForce(Vector2.right * direction * .35f, ForceMode2D.Impulse);blockStunUntil=Time.time+.055f;nextEnergyRegen=Time.time+.65f; if (Shield <= 0) BreakGuard(); }
             return false;

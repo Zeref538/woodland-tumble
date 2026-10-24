@@ -14,13 +14,13 @@ public static class GameSetup
 {
     static readonly string[] States = { "Walk", "Jump", "Hurt", "Push", "Punch", "Kick", "Knockout" };
     static Font font;
-    static Sprite panelSprite;
     static Color cream = new Color(1, .91f, .71f);
-    static Color gold = new Color(.80f, .66f, .34f);
+    static Color gold = new Color(.75f, 1, .24f);
+    const string ArcadeArt="Assets/Art/Arcade/";
     public static void ImportComboArtwork()
     {
         AssetDatabase.Refresh(ImportAssetOptions.ForceSynchronousImport);
-        foreach(var file in Directory.GetFiles("Assets/Resources/Art/Combo","*.png",SearchOption.AllDirectories))
+        foreach(var file in Directory.GetFiles("Assets/Resources/Art/CombatV9","*.png",SearchOption.AllDirectories))
             ImportSprite(file.Replace('\\','/'),256);
         AssetDatabase.SaveAssets();
     }
@@ -32,6 +32,8 @@ public static class GameSetup
         AssetDatabase.Refresh(ImportAssetOptions.ForceSynchronousImport);
         foreach (var file in Directory.GetFiles("Assets/Resources/Art", "*.png")) ImportSprite(file, 100);
         ImportComboArtwork();
+        foreach(var file in Directory.GetFiles(ArcadeArt,"*.png",SearchOption.AllDirectories))ImportSprite(file.Replace('\\','/'),100);
+        ImportSprite("Assets/Resources/Art/Arcade/OpenManhole.png",100);
         AssetDatabase.StartAssetEditing();
         try { foreach (var file in Directory.GetFiles("Assets/Art/CharactersRework", "*.png", SearchOption.AllDirectories)) {
             string normalized=file.Replace('\\','/');
@@ -40,19 +42,11 @@ public static class GameSetup
         }} finally {AssetDatabase.StopAssetEditing();}
         foreach(var file in Directory.GetFiles("Assets/Art/PortraitsRework","*.png"))ImportSprite(file,100);
         foreach(var file in Directory.GetFiles("Assets/Art/ProfilesRework","*.png"))ImportSprite(file,100);
-        foreach (var file in Directory.GetFiles("Assets/Art/VFX", "*.png", SearchOption.AllDirectories)) ImportSprite(file.Replace('\\','/'),256);
         foreach (var file in Directory.GetFiles("Assets/Art/Arena", "*.png", SearchOption.AllDirectories)) ImportSprite(file, 100);
         if (Directory.Exists("Assets/Art/Menu")) foreach (var file in Directory.GetFiles("Assets/Art/Menu", "*.png")) ImportSprite(file, 100);
-        ImportSprite("Assets/Art/UI/WoodlandPanel.png", 100, null, new Vector4(12, 12, 12, 12));
         ImportSprite("Assets/Art/UI/Solid.png", 100);
-        CreateFighterPlate();
         CreateActionGlyphs();
         CreateControlRipple();
-        ImportSprite("Assets/Art/UI/Versus-RuneRumble.png",100);
-        foreach(var file in Directory.GetFiles("Assets/Art/UI/Actions","*.png",SearchOption.AllDirectories)) {
-            ImportSprite(file.Replace('\\','/'),256);
-            var actionImporter=(TextureImporter)AssetImporter.GetAtPath(file.Replace('\\','/'));actionImporter.filterMode=FilterMode.Point;actionImporter.SaveAndReimport();
-        }
         string shadePath="Assets/Art/UI/HeaderShade.png";
         if(!File.Exists(shadePath)) {
             var shade=new Texture2D(2,64,TextureFormat.RGBA32,false);
@@ -60,18 +54,18 @@ public static class GameSetup
             shade.Apply();File.WriteAllBytes(shadePath,shade.EncodeToPNG());Object.DestroyImmediate(shade);AssetDatabase.Refresh();
         }
         ImportSprite(shadePath,100);var shadeImporter=(TextureImporter)AssetImporter.GetAtPath(shadePath);shadeImporter.filterMode=FilterMode.Bilinear;shadeImporter.SaveAndReimport();
-        font = AssetDatabase.LoadAssetAtPath<Font>("Assets/Fonts/PressStart2P-Regular.ttf");
-        panelSprite = SpriteAt("Assets/Art/UI/WoodlandPanel.png");
+        font = AssetDatabase.LoadAssetAtPath<Font>("Assets/Fonts/Bangers-Regular.ttf");
         GraphicsSettings.defaultRenderPipeline = AssetDatabase.LoadAssetAtPath<RenderPipelineAsset>("Assets/Settings/UniversalRP.asset");
         EditorSettings.serializationMode = SerializationMode.ForceText;
         EditorSettings.enterPlayModeOptionsEnabled = false;
         string path = "Assets/Scenes/WoodlandTumble.unity";
+        Directory.CreateDirectory("Documentation/Backups");
         if (File.Exists(path)) File.Copy(path, "Documentation/Backups/WoodlandTumble-before-rebuild.unity.txt", true);
         var scene = EditorSceneManager.NewScene(NewSceneSetup.EmptyScene, NewSceneMode.Single);
         var camera = new GameObject("Main Camera").AddComponent<Camera>();
         camera.tag = "MainCamera";
         camera.orthographic = true; camera.orthographicSize = 5.8f; camera.allowHDR = true;
-        camera.transform.position = new Vector3(0, 1.4f, -10);
+        camera.transform.position = new Vector3(0, -.45f, -10);
         camera.backgroundColor = new Color(.035f, .10f, .12f);
         camera.gameObject.AddComponent<AudioListener>();
         camera.gameObject.AddComponent<UniversalAdditionalCameraData>().renderPostProcessing = true;
@@ -84,37 +78,28 @@ public static class GameSetup
         var game = new GameObject("Woodland Game - Match Rules").AddComponent<WoodlandGame>();
         var effects = new GameObject("Effects - Trails and Splashes").AddComponent<WoodlandEffects>();effects.effectIntensity=1.35f;
         string[] cues={"swing","hit_light","hit_heavy","jump","double_jump","dash","land","block","parry","guard_break","knockout","victory","ui_click"};
-        effects.fernSlash=Enumerable.Range(1,8).Select(i=>SpriteAt("Assets/Art/VFX/Fern/"+i.ToString("00")+".png")).ToArray();
-        effects.emberSlash=Enumerable.Range(1,8).Select(i=>SpriteAt("Assets/Art/VFX/Ember/"+i.ToString("00")+".png")).ToArray();
         effects.soundBank=cues.Select(cue=>AssetDatabase.LoadAssetAtPath<AudioClip>("Assets/Audio/Combat/"+cue+".ogg")).ToArray();
         if(effects.soundBank.Any(clip=>!clip))throw new System.Exception("Missing action sound effect");
         var environment = new GameObject("Environment - Edit These Objects").transform;
-        var bg = Visual("Grounded Woodland Arena", SpriteAt("Assets/Resources/Art/Grounded/Forest.png"), new Vector2(0, 1), -20, environment);
+        var bg = Visual("Grounded Woodland Arena", SpriteAt(ArcadeArt+"Maps/Forest.png"), new Vector2(0, 1), -20, environment);
         Fit(bg, 22, 12.5f);
-        var ball = Visual("Runewood Balancing Sphere", SpriteAt("Assets/Art/Arena/RunewoodSphere.png"), new Vector2(0, -1.56f), 1, environment);
-        Fit(ball, 1.85f, 1.85f);
-        var beam = Visual("Arena Floor Collision", SpriteAt("Assets/Art/Arena/MossboundPlank.png"), new Vector2(0, -1.7f), 3, environment);
-        beam.GetComponent<SpriteRenderer>().enabled=false;ball.SetActive(false);
+        var beam = Visual("Arena Floor Collision", SpriteAt("Assets/Art/UI/Solid.png"), new Vector2(0, -1.7f), 3, environment);
+        beam.GetComponent<SpriteRenderer>().enabled=false;
         beam.transform.localScale=Vector3.one;
-        var rb = beam.AddComponent<Rigidbody2D>();rb.mass = 6;rb.angularDamping = 2;rb.interpolation = RigidbodyInterpolation2D.Interpolate;
+        var rb = beam.AddComponent<Rigidbody2D>();rb.bodyType=RigidbodyType2D.Kinematic;rb.mass = 6;rb.angularDamping = 2;rb.interpolation = RigidbodyInterpolation2D.Interpolate;
         var grip = AssetDatabase.LoadAssetAtPath<PhysicsMaterial2D>("Assets/Art/Arena/WoodGrip.physicsMaterial2D");
-        if (grip == null) { grip = new PhysicsMaterial2D("Wood Grip") { friction = .65f }; AssetDatabase.CreateAsset(grip, "Assets/Art/Arena/WoodGrip.physicsMaterial2D"); }
+        if (grip == null) { grip = new PhysicsMaterial2D("Ground Grip") { friction = .65f }; AssetDatabase.CreateAsset(grip, "Assets/Art/Arena/WoodGrip.physicsMaterial2D"); }
         var box = beam.AddComponent<BoxCollider2D>();
         // The mushrooms and hanging vines are decorative; this flat collider matches the moss walking surface.
-        box.size = new Vector2(9.9f / beam.transform.localScale.x, .22f / beam.transform.localScale.y);
+        box.size = new Vector2(WoodlandGame.InitialSafeFloorHalfWidth*2, .22f);
         box.offset = new Vector2(0, .04f / beam.transform.localScale.y);
         box.sharedMaterial = grip;
         box.edgeRadius = .04f / beam.transform.localScale.x;
-        var hinge = beam.AddComponent<HingeJoint2D>();hinge.autoConfigureConnectedAnchor = false;hinge.connectedAnchor = beam.transform.position;hinge.useLimits = true;hinge.limits = new JointAngleLimits2D { min = -25, max = 25 };
         game.plank = rb;
-        game.backgroundArt = bg.GetComponent<SpriteRenderer>(); game.plankArt = beam.GetComponent<SpriteRenderer>(); game.sphereArt = ball.GetComponent<SpriteRenderer>();
-        game.backgrounds = new[]{"Forest","Moonlit","Ember","Skyward","Stormglass","Hollowroot"}.Select(theme=>SpriteAt("Assets/Resources/Art/Grounded/"+theme+".png")).ToArray();
-        game.planks = new[] { SpriteAt("Assets/Art/Arena/MossboundPlank.png"), SpriteAt("Assets/Art/Arena/MoonlitPlank.png"), SpriteAt("Assets/Art/Arena/EmberPlank.png"), SpriteAt("Assets/Art/Arena/SkywardPlank.png") };
-        game.spheres = new[] { SpriteAt("Assets/Art/Arena/RunewoodSphere.png"), SpriteAt("Assets/Art/Arena/MoonstoneSphere.png"), SpriteAt("Assets/Art/Arena/ObsidianSphere.png"), SpriteAt("Assets/Art/Arena/CrystalSphere.png") };
-        string[] pvpThemes={"Forest","Moonlit","Ember","Skyward"};
-        game.PvpBases=pvpThemes.Select(theme=>SpriteAt("Assets/Art/Arena/PVP/"+theme+"/Base.png")).ToArray();
-        game.PvpLedges=pvpThemes.Select(theme=>SpriteAt("Assets/Art/Arena/PVP/"+theme+"/Ledge.png")).ToArray();
-        if(game.PvpBases.Any(sprite=>!sprite)||game.PvpLedges.Any(sprite=>!sprite))throw new System.Exception("Missing dedicated Arena PVP base or ledge artwork");
+        game.backgroundArt = bg.GetComponent<SpriteRenderer>(); game.plankArt = beam.GetComponent<SpriteRenderer>();
+        game.backgrounds = new[]{"Forest","Moonlit","Ember","Skyward","Stormglass","Hollowroot"}.Select(theme=>SpriteAt(ArcadeArt+"Maps/"+theme+".png")).ToArray();
+        game.hatchOpenArt=SpriteAt("Assets/Resources/Art/Arcade/OpenManhole.png");
+        game.planks=game.spheres=game.PvpBases=game.PvpLedges=new Sprite[0];
         game.arenaPlatforms = new Rigidbody2D[0];
         for(int i=0;i<game.CharacterNames.Length;i++) {
             string identity=game.CharacterNames[i];
@@ -151,7 +136,7 @@ public static class GameSetup
         uiInput.move=null;uiInput.submit=null;uiInput.cancel=null;
         EditorSceneManager.SaveScene(scene, path);
         EditorBuildSettings.scenes = new[] { new EditorBuildSettingsScene(path, true) };
-        PlayerSettings.companyName = "Woodland Games";PlayerSettings.productName = "Rune Rumble";PlayerSettings.bundleVersion="8.1.0";
+        PlayerSettings.companyName = "Woodland Games";PlayerSettings.productName = "Rune Rumble";PlayerSettings.bundleVersion="9.0.0";
         PlayerSettings.defaultScreenWidth = 1280;PlayerSettings.defaultScreenHeight = 720;PlayerSettings.runInBackground = true;
         AssetDatabase.SaveAssets();
         Selection.activeGameObject = beam;
@@ -164,8 +149,7 @@ public static class GameSetup
         var scene=EditorSceneManager.OpenScene("Assets/Scenes/WoodlandTumble.unity");
         var game=Object.FindAnyObjectByType<WoodlandGame>();
         if(!game)throw new System.Exception("Saved game scene is missing its game component.");
-        font=AssetDatabase.LoadAssetAtPath<Font>("Assets/Fonts/PressStart2P-Regular.ttf");
-        panelSprite=SpriteAt("Assets/Art/UI/WoodlandPanel.png");
+        font=AssetDatabase.LoadAssetAtPath<Font>("Assets/Fonts/Bangers-Regular.ttf");
         if(game.hud)Object.DestroyImmediate(game.hud.gameObject);
         CreateHUD(game);EditorSceneManager.SaveScene(scene);AssetDatabase.SaveAssets();
     }
@@ -189,7 +173,9 @@ public static class GameSetup
     {
         var go = new GameObject(name);go.transform.SetParent(parent, false);go.transform.position = pos;
         var sr = go.AddComponent<SpriteRenderer>();sr.sprite = sprite;sr.sortingOrder = order;
-        string materialPath = "Assets/Art/" + (name.StartsWith("Character") ? "Characters/" + (parent.name.StartsWith("Fern") ? "Fern" : "Ember") : "Arena/" + name.Replace(" ", "")) + ".mat";
+        string materialDirectory=ArcadeArt+"Materials";Directory.CreateDirectory(materialDirectory);AssetDatabase.Refresh();
+        string materialPath=materialDirectory+"/"+(name.StartsWith("Character")?(parent.name.StartsWith("Fern")?"Fern":"Ember"):name.Replace(" ",""))+".mat";
+
         // Character sprites each have their own texture, so animation must bind _MainTex per frame.
         // SpriteRenderer supplies this via its per-renderer properties; distinct renderer materials also avoid URP texture sharing.
         var mat = AssetDatabase.LoadAssetAtPath<Material>(materialPath);
@@ -281,25 +267,26 @@ public static class GameSetup
         match.anchorMin=match.anchorMax=Vector2.one*.5f;match.pivot=Vector2.one*.5f;
         match.sizeDelta=new Vector2(1280,720);match.anchoredPosition=Vector2.zero;
         var pixel = font; var body = Resources.GetBuiltinResource<Font>("LegacyRuntime.ttf");
-        Color ink = new Color(.025f,.055f,.065f,1), track = new Color(.12f,.19f,.2f), white = new Color(.92f,.96f,.91f);
+        Color ink = new Color(.055f,.035f,.14f,1), track = new Color(.15f,.10f,.24f), white = new Color(1,.97f,.85f);
         var header=Flat("Header Contrast Fade",match,new Rect(0,0,1280,110),new Color(1,1,1,.25f));header.sprite=SpriteAt("Assets/Art/UI/HeaderShade.png");
         header.rectTransform.anchorMin=new Vector2(0,1);header.rectTransform.anchorMax=new Vector2(1,1);header.rectTransform.pivot=new Vector2(.5f,1);header.rectTransform.anchoredPosition=Vector2.zero;header.rectTransform.sizeDelta=new Vector2(0,110);
         font = body;
-        var versus=Flat("Versus Emblem",match,new Rect(0,0,168,94),Color.white);versus.sprite=SpriteAt("Assets/Art/UI/Versus-RuneRumble.png");versus.preserveAspect=true;var vsRect=versus.rectTransform;vsRect.anchorMin=vsRect.anchorMax=new Vector2(.5f,1);vsRect.pivot=new Vector2(.5f,1);vsRect.anchoredPosition=new Vector2(0,-18);
+        var versus=Label("Versus Emblem",match,"VS",new Rect(0,0,120,44),32,gold,TextAnchor.MiddleCenter);
+        var vsRect=versus.rectTransform;vsRect.anchorMin=vsRect.anchorMax=new Vector2(.5f,1);vsRect.pivot=new Vector2(.5f,1);vsRect.anchoredPosition=new Vector2(0,-92);
         font=pixel;
-        hud.roundTimerText=Label("Round Timer",match,"99\n<size=11>BEST OF 5</size>",new Rect(0,0,150,70),28,white,TextAnchor.UpperCenter);
+        hud.roundTimerText=Label("Round Timer",match,"99\n<size=11>BEST OF 5</size>",new Rect(0,0,150,85),48,white,TextAnchor.UpperCenter);
         hud.roundTimerText.supportRichText=true;
         var timerRect=hud.roundTimerText.rectTransform;timerRect.anchorMin=timerRect.anchorMax=new Vector2(.5f,1);
-        timerRect.pivot=new Vector2(.5f,1);timerRect.anchoredPosition=new Vector2(0,-110);
-        font=body;
+        timerRect.pivot=new Vector2(.5f,1);timerRect.anchoredPosition=new Vector2(0,-20);
+        font=pixel;
         for(int a=0;a<4;a++){hud.playstationIcons[a]=SpriteAt("Assets/Art/UI/PSAction"+a+".png");hud.neutralIcons[a]=SpriteAt("Assets/Art/UI/CPUAction"+a+".png");}
         for(int c=0;c<game.CharacterNames.Length;c++){
-            hud.characterGuardCovers[c]=SpriteAt("Assets/Art/UI/Actions/"+game.CharacterNames[c]+"/Guard.png");
-            if(!hud.characterGuardCovers[c])throw new System.Exception("Missing pixel shield icon: "+game.CharacterNames[c]);
+            hud.characterGuardCovers[c]=SpriteAt("Assets/Resources/Art/CombatV9/"+game.CharacterNames[c]+"/Guard/03.png");
+            if(!hud.characterGuardCovers[c])throw new System.Exception("Missing painted guard icon: "+game.CharacterNames[c]);
         }
-        string[] actionNames={"Jump","Punch","Kick","Special"};
+        string[] actionNames={"Slash","Hit","Slash","Finisher"};
         for(int character=0;character<game.CharacterNames.Length;character++)for(int action=0;action<4;action++) {
-            var cover=SpriteAt("Assets/Art/UI/Actions/"+game.CharacterNames[character]+"/"+actionNames[action]+".png");
+            var cover=SpriteAt("Assets/Resources/Art/CombatV9/"+game.CharacterNames[character]+"/"+actionNames[action]+"/03.png");
             if(!cover)throw new System.Exception("Missing character action cover: "+game.CharacterNames[character]+"/"+actionNames[action]);
             hud.characterActionCovers[character*4+action]=cover;
         }
@@ -308,6 +295,7 @@ public static class GameSetup
             var plate = new GameObject(i==0?"Fern Fighter Plate":"Ember Fighter Plate",typeof(RectTransform)).GetComponent<RectTransform>();
             plate.SetParent(match,false);plate.anchorMin=plate.anchorMax=new Vector2(i,1);plate.pivot=new Vector2(i,1);plate.anchoredPosition=new Vector2(i==0?24:-24,-18);plate.sizeDelta=new Vector2(590,WoodlandHUD.FighterHudHeight);plate.localScale=Vector3.one*WoodlandHUD.FighterHudScale;
             hud.fighterPlates[i]=plate;
+            Paint("Fighter Brush Backing",plate,new Rect(-10,0,610,146),new Color(.065f,.04f,.16f,.94f));
             float portraitX=i==0?0:490,meterX=i==0?120:18;TextAnchor side=i==0?TextAnchor.MiddleLeft:TextAnchor.MiddleRight;
             var portraitMask=Box("Circular Portrait Mask",plate,new Rect(portraitX,5,100,100));
             var maskImage=portraitMask.gameObject.AddComponent<Image>();maskImage.sprite=SpriteAt("Assets/Art/UI/ControlDisc.png");maskImage.raycastTarget=false;
@@ -316,7 +304,7 @@ public static class GameSetup
             if(i==1)portrait.rectTransform.localScale=new Vector3(-1,1,1);
             hud.fighterPortraitRings[i]=Flat("Portrait Fine Ring",plate,new Rect(portraitX-5,0,110,110),new Color(accent.r,accent.g,accent.b,.72f));hud.fighterPortraitRings[i].sprite=SpriteAt("Assets/Art/UI/ControlRipple.png");
             Flat("Stamina Rail",plate,new Rect(meterX-2,65,456,25),new Color(.07f,.075f,.045f,.82f));
-            hud.shieldFill[i]=Flat("Stamina Fill",plate,new Rect(meterX,67,452,21),new Color(.94f,.78f,.39f));hud.shieldFill[i].type=Image.Type.Filled;hud.shieldFill[i].fillMethod=Image.FillMethod.Horizontal;hud.shieldFill[i].fillOrigin=i;
+            hud.shieldFill[i]=Flat("Stamina Fill",plate,new Rect(meterX,67,452,21),new Color(.94f,.78f,.39f));hud.shieldFill[i].sprite=SpriteAt(ArcadeArt+"BrushBand.png");hud.shieldFill[i].type=Image.Type.Filled;hud.shieldFill[i].fillMethod=Image.FillMethod.Horizontal;hud.shieldFill[i].fillOrigin=i;
             hud.shieldText[i]=Label("Stamina Number",plate,"STAMINA",new Rect(meterX,67,452,21),12,white,TextAnchor.MiddleCenter);hud.shieldText[i].fontStyle=FontStyle.Bold;
             var staminaOutline=hud.shieldText[i].gameObject.AddComponent<Outline>();staminaOutline.effectColor=new Color(.08f,.065f,.02f,1);staminaOutline.effectDistance=new Vector2(1,-1);
             hud.names[i]=Label("Player Name",plate,i==0?"P1  FERN":"P2  EMBER",new Rect(meterX,95,452,30),22,accent,side);
@@ -324,11 +312,12 @@ public static class GameSetup
             for(int hit=0;hit<Scout.HitsToKnockdown;hit++) {
                 float squareX=i==0?meterX+hit*91.2f:meterX+452-87.2f-hit*91.2f;
                 hud.hitSquares[i*Scout.HitsToKnockdown+hit]=Flat("Hit Square P"+(i+1)+" "+(hit+1),plate,new Rect(squareX,18,87.2f,36),accent);
+                hud.hitSquares[i*Scout.HitsToKnockdown+hit].sprite=SpriteAt(ArcadeArt+"BrushBand.png");
             }
             for(int j=0;j<3;j++){hud.roundPips[i*3+j]=Flat("Round "+(j+1),plate,new Rect(i==0?516+j*19:18+j*19,106,11,11),accent);hud.roundPips[i*3+j].rectTransform.localRotation=Quaternion.Euler(0,0,45);}
             hud.deviceText[i]=Label("Input Device",plate,"KEYBOARD",new Rect(meterX,130,452,20),14,new Color(.84f,.91f,.85f),side);
             var ultimatePanel=Box("Ultimate Ready Callout",plate,new Rect(0,160,410,34));
-            Flat("Ultimate Rail",ultimatePanel,new Rect(0,0,410,34),new Color(.035f,.055f,.06f,.75f));
+            Flat("Ultimate Rail",ultimatePanel,new Rect(0,0,410,34),new Color(.09f,.045f,.18f,.92f));
             hud.ultimateLabels[i]=Label("Ultimate State",ultimatePanel,"",new Rect(7,3,396,28),15,new Color(1,.87f,.52f),TextAnchor.MiddleCenter);hud.ultimatePanels[i]=ultimatePanel.gameObject;
             var cutin=Box("Ultimate Character Cut-in",match,new Rect(i==0?35:925,178,320,270));
             var cutinGroup=cutin.gameObject.AddComponent<CanvasGroup>();cutinGroup.interactable=false;cutinGroup.blocksRaycasts=false;
@@ -344,7 +333,9 @@ public static class GameSetup
                 int slot=i*4+a;var position=buttonPositions[a];
                 var disc=Flat("Face Button "+captions[a],diamond,new Rect(position.x,position.y,WoodlandHUD.ActionButtonDiameter,WoodlandHUD.ActionButtonDiameter),Color.white);disc.sprite=SpriteAt("Assets/Art/UI/ControlDisc.png");disc.raycastTarget=true;disc.alphaHitTestMinimumThreshold=.1f;disc.rectTransform.pivot=Vector2.one*.5f;disc.rectTransform.anchoredPosition+=new Vector2(40,-40);hud.actionDiscs[slot]=disc;
                 var button=disc.gameObject.AddComponent<Button>();button.targetGraphic=disc;button.transition=Selectable.Transition.None;button.navigation=new Navigation{mode=Navigation.Mode.None};hud.actionButtons[slot]=button;
-                hud.actionCovers[slot]=Flat("Illustrated "+captions[a],disc.transform,new Rect(0,0,80,80),Color.white);hud.actionCovers[slot].sprite=a==0?hud.characterGuardCovers[i]:hud.characterActionCovers[i*4+a];hud.actionCovers[slot].preserveAspect=true;
+                hud.actionCovers[slot]=Flat("Illustrated "+captions[a],disc.transform,new Rect(6,0,68,64),Color.white);hud.actionCovers[slot].sprite=a==0?hud.characterGuardCovers[i]:hud.characterActionCovers[i*4+a];hud.actionCovers[slot].preserveAspect=true;
+                Flat("Action Caption Backing",disc.transform,new Rect(6,60,68,18),new Color(.035f,.02f,.095f,.96f));
+                Label("Action Caption",disc.transform,captions[a].ToUpper(),new Rect(6,60,68,18),12,new Color(1,.97f,.85f),TextAnchor.MiddleCenter);
                 if(a==3){
                     hud.specialCooldown[i]=Flat("Ranged Cooldown Sweep",disc.transform,new Rect(0,0,80,80),new Color(.018f,.03f,.035f,.8f));hud.specialCooldown[i].sprite=SpriteAt("Assets/Art/UI/ControlDisc.png");hud.specialCooldown[i].type=Image.Type.Filled;hud.specialCooldown[i].fillMethod=Image.FillMethod.Radial360;hud.specialCooldown[i].fillOrigin=(int)Image.Origin360.Top;hud.specialCooldown[i].fillClockwise=false;
                     hud.specialCooldownText[i]=Label("Ranged Cooldown Seconds",disc.transform,"",new Rect(0,19,80,43),29,white,TextAnchor.MiddleCenter);hud.specialCooldownText[i].fontStyle=FontStyle.Bold;
@@ -369,7 +360,7 @@ public static class GameSetup
         }
         var hintRect=hud.helpHint.rectTransform;hintRect.anchorMin=hintRect.anchorMax=new Vector2(.5f,0);hintRect.pivot=Vector2.one*.5f;hintRect.anchoredPosition=new Vector2(0,23);
         var banner = new GameObject("Round Announcement",typeof(RectTransform)).GetComponent<RectTransform>();banner.SetParent(match,false);banner.anchorMin=banner.anchorMax=Vector2.one*.5f;banner.pivot=Vector2.one*.5f;banner.sizeDelta=new Vector2(520,100);banner.anchoredPosition=new Vector2(0,130);
-        Flat("Announcement Backing",banner,new Rect(0,0,520,100),new Color(.025f,.055f,.065f,.90f));Flat("Announcement Rule",banner,new Rect(160,0,200,2),gold);
+        Paint("Announcement Backing",banner,new Rect(0,0,520,100),new Color(.075f,.035f,.16f,.98f));Flat("Announcement Rule",banner,new Rect(160,0,200,2),gold);
         hud.bannerPanel=banner.gameObject;hud.bannerText=Label("Announcement",banner,"GET READY",new Rect(10,8,500,84),30,white,TextAnchor.MiddleCenter);banner.gameObject.SetActive(false);
         var help = new GameObject("F1 Controls Overlay",typeof(RectTransform)).GetComponent<RectTransform>();help.SetParent(root.transform,false);help.anchorMin=help.anchorMax=Vector2.one*.5f;help.pivot=Vector2.one*.5f;help.sizeDelta=new Vector2(1140,636);
         Flat("Guide Surface",help,new Rect(0,0,1140,636),new Color(.02f,.045f,.055f,1));Flat("Guide Rule",help,new Rect(32,22,1076,2),gold);
@@ -400,33 +391,33 @@ public static class GameSetup
     }
     static Button MenuButton(string name,Transform parent,Rect bounds,string title,string subtitle,Color accent)
     {
-        var face=Flat(name,parent,bounds,new Color(.035f,.075f,.075f,.97f));face.raycastTarget=true;
-        var outline=face.gameObject.AddComponent<Outline>();outline.effectDistance=new Vector2(1,-1);outline.effectColor=new Color(.32f,.4f,.34f,.8f);
-        Flat("Upper Seam",face.transform,new Rect(14,0,bounds.width-28,1),new Color(accent.r,accent.g,accent.b,.48f));
-        Label("Choice",face.transform,title,new Rect(24,subtitle.Length>0?13:9,bounds.width-48,30),22,new Color(.94f,.95f,.85f));
-        if(subtitle.Length>0)Label("Description",face.transform,subtitle,new Rect(24,46,bounds.width-48,23),15,new Color(.67f,.76f,.69f));
+        bool card=title.Length==0;
+        var face=Flat(name,parent,bounds,new Color(.11f,.065f,.23f,.98f));face.raycastTarget=true;
+        if(!card)face.sprite=SpriteAt(ArcadeArt+"BrushBand.png");
+        var outline=face.gameObject.AddComponent<Outline>();outline.effectDistance=new Vector2(1,-1);outline.effectColor=new Color(.32f,.22f,.49f,.8f);
+        Label("Choice",face.transform,title,new Rect(24,subtitle.Length>0?7:5,bounds.width-48,36),28,new Color(1,.97f,.85f));
+        if(subtitle.Length>0)Label("Description",face.transform,subtitle,new Rect(24,44,bounds.width-48,24),17,new Color(.78f,.81f,.94f));
         var button=face.gameObject.AddComponent<Button>();button.targetGraphic=face;
         button.navigation=new Navigation{mode=Navigation.Mode.None};var colors=button.colors;colors.normalColor=Color.white;colors.highlightedColor=new Color(1.25f,1.25f,1.2f);colors.pressedColor=new Color(.6f,.8f,.68f);colors.selectedColor=Color.white;colors.fadeDuration=.10f;button.colors=colors;
         return button;
     }
     static void CreateMenus(WoodlandHUD hud,Transform canvas,Font body,Font pixel)
     {
-        Color white=new Color(.94f,.95f,.86f), muted=new Color(.7f,.78f,.69f), brass=new Color(.76f,.64f,.38f);
+        Color white=new Color(1,.97f,.85f), muted=new Color(.78f,.81f,.94f), brass=new Color(.38f,.91f,1);
         Color[] identities=hud.game.CharacterColors;
-        font=body;
+        font=pixel;
         var menu=MenuLayer("Woodland Front End",canvas);hud.menuRoot=menu.gameObject;
         menu.anchorMin=menu.anchorMax=Vector2.one*.5f;menu.pivot=Vector2.one*.5f;
         menu.sizeDelta=new Vector2(1280,720);menu.anchoredPosition=Vector2.zero;
         var title=MenuLayer("Title Screen",menu);hud.titleMenu=title.gameObject;
-        MenuBackdrop("Illustrated Woodland",title,"Assets/Art/Menu/TitleBackdrop.png");
-        Flat("Left Reading Field",title,new Rect(0,0,570,720),new Color(.018f,.045f,.042f,.83f));
-        Flat("Lower Reading Field",title,new Rect(0,650,1280,70),new Color(.018f,.045f,.042f,.9f));
-        Flat("Fine Brass Line",title,new Rect(72,115,320,1),brass);
-        font=pixel;var titleText=Label("Rune Rumble Title",title,"RUNE\nRUMBLE",new Rect(72,144,490,130),38,white);titleText.lineSpacing=1.25f;font=body;
-        Label("Title Description",title,"Eight fighters. One arena rivalry.\nChoose a rival. Make the woodland yours.",new Rect(76,295,430,64),21,muted);
+        MenuBackdrop("Illustrated Woodland",title,ArcadeArt+"TitleBackdrop.png");
+        Flat("Left Reading Field",title,new Rect(0,0,570,720),new Color(.035f,.015f,.10f,.18f));
+        Flat("Lower Reading Field",title,new Rect(0,650,1280,70),new Color(.045f,.02f,.105f,.92f));
+        var logo=Flat("Rune Rumble Title",title,new Rect(45,62,490,250),Color.white);logo.sprite=SpriteAt(ArcadeArt+"TitleLogo.png");logo.preserveAspect=true;
+        Label("Title Description",title,"READ YOUR RIVAL. CLAIM THE EDGE.",new Rect(76,310,455,42),24,white);
         hud.modeButtons=new Button[4];
-        hud.modeButtons[0]=MenuButton("Single Player",title,new Rect(76,382,410,76),"SINGLE PLAYER","Face a CPU rival with your chosen scout.",hud.fernColor);
-        hud.modeButtons[1]=MenuButton("Multiplayer",title,new Rect(76,473,410,76),"MULTIPLAYER","Share a keyboard or connect two controllers.",hud.emberColor);
+        hud.modeButtons[0]=MenuButton("Single Player",title,new Rect(64,382,454,76),"SINGLE PLAYER","Learn their habits. Punish their mistakes.",hud.fernColor);
+        hud.modeButtons[1]=MenuButton("Multiplayer",title,new Rect(64,473,454,76),"LOCAL VERSUS","Share a keyboard or connect two controllers.",hud.emberColor);
         hud.modeButtons[2]=MenuButton("Settings",title,new Rect(76,569,195,52),"SETTINGS","",brass);
         hud.modeButtons[3]=MenuButton("Exit",title,new Rect(291,569,195,52),"EXIT","",brass);
         Label("Title Footer",title,"ARROWS / STICK  choose     ENTER / SOUTH  confirm",new Rect(76,669,670,27),15,muted);
@@ -435,18 +426,18 @@ public static class GameSetup
         hud.ruleButtons=new Button[0];
 
         var roster=MenuLayer("Choose Scout",menu);hud.characterMenu=roster.gameObject;
-        MenuBackdrop("Rune Hall",roster,"Assets/Art/Menu/SelectionHall.png");
-        Flat("Roster Atmosphere",roster,new Rect(0,0,1280,720),new Color(.01f,.025f,.035f,.68f));
+        MenuBackdrop("Rune Hall",roster,ArcadeArt+"SelectionHall.png");
+        Flat("Roster Atmosphere",roster,new Rect(0,0,1280,720),new Color(.04f,.018f,.10f,.28f));
         Flat("Roster Header",roster,new Rect(0,0,1280,98),new Color(.015f,.035f,.045f,.9f));
-        font=pixel;hud.characterHeading=Label("Choosing Player",roster,"CHOOSE YOUR FIGHTER",new Rect(60,32,1160,42),26,white,TextAnchor.MiddleCenter);font=body;
+        font=pixel;hud.characterHeading=Label("Choosing Player",roster,"CHOOSE YOUR FIGHTER",new Rect(60,32,1160,42),26,white,TextAnchor.MiddleCenter);font=pixel;
         Label("Roster Subtitle",roster,"RUNE RUMBLE   /   EIGHT RIVALS. ONE VICTOR.",new Rect(300,88,680,28),15,brass,TextAnchor.MiddleCenter);
         hud.selectionPortraits=new Image[2];hud.selectionNames=new Text[2];hud.selectionSkills=new Text[2];hud.selectionStates=new Text[2];
         for(int side=0;side<2;side++) {
             float x=side==0?24:1000;Color accent=side==0?hud.fernColor:hud.emberColor;
             var panel=Box("Player "+(side+1)+" Showcase",roster,new Rect(x,133,256,430));
-            Flat("Showcase Shade",panel,new Rect(0,0,256,430),new Color(.015f,.04f,.05f,.72f));
-            Flat("Player Accent",panel,new Rect(0,0,256,3),accent);
-            Label("Player Badge",panel,"PLAYER "+(side+1),new Rect(16,16,224,28),18,accent,TextAnchor.MiddleCenter);
+            Flat("Showcase Shade",panel,new Rect(0,0,256,430),new Color(.065f,.035f,.14f,.82f));
+            Paint("Player Accent",panel,new Rect(-5,0,266,38),accent);
+            Label("Player Badge",panel,"PLAYER "+(side+1),new Rect(16,3,224,28),23,new Color(.04f,.025f,.10f),TextAnchor.MiddleCenter);
             hud.selectionPortraits[side]=Flat("Full Fighter Preview",panel,new Rect(10,48,236,264),Color.white);hud.selectionPortraits[side].preserveAspect=true;
             var showcaseRect=hud.selectionPortraits[side].rectTransform;
             showcaseRect.pivot=new Vector2(.5f,.5f);showcaseRect.anchoredPosition=new Vector2(128,-180);
@@ -461,8 +452,8 @@ public static class GameSetup
             Flat("Identity Wash",card.transform,new Rect(4,4,154,126),new Color(identities[j].r*.12f,identities[j].g*.12f,identities[j].b*.12f,.9f));
             FrameSelectionCard(card,identities[j],162,162);
             var portrait=Flat("Scout Portrait",card.transform,new Rect(19,7,124,124),Color.white);portrait.sprite=hud.game.CharacterPortraits[j];portrait.preserveAspect=true;CenterImage(portrait);
-            Flat("Identity Line",card.transform,new Rect(9,132,144,2),identities[j]);
-            Label("Scout Name",card.transform,hud.game.CharacterNames[j].ToUpper(),new Rect(4,136,154,23),17,white,TextAnchor.MiddleCenter);
+            Paint("Identity Line",card.transform,new Rect(0,129,162,32),identities[j]);
+            Label("Scout Name",card.transform,hud.game.CharacterNames[j].ToUpper(),new Rect(4,134,154,25),23,new Color(.035f,.02f,.085f),TextAnchor.MiddleCenter);
             Label("P1 Marker",card.transform,"P1",new Rect(4,4,35,23),14,hud.fernColor).gameObject.SetActive(false);
             Label("P2 Marker",card.transform,"P2",new Rect(123,4,35,23),14,hud.emberColor).gameObject.SetActive(false);
         }
@@ -473,9 +464,9 @@ public static class GameSetup
         Label("Roster Footer",roster,"ARROWS / WASD  SELECT    ENTER / SOUTH  LOCK IN",new Rect(250,638,720,30),16,muted,TextAnchor.MiddleCenter);
 
         var maps=MenuLayer("Stage Select",menu);hud.mapMenu=maps.gameObject;
-        MenuBackdrop("Rune Hall",maps,"Assets/Art/Menu/SelectionHall.png");
-        Flat("Stage Scrim",maps,new Rect(0,0,1280,720),new Color(.01f,.025f,.035f,.8f));
-        font=pixel;Label("Stage Heading",maps,"SELECT YOUR ARENA",new Rect(40,25,1200,42),27,white,TextAnchor.MiddleCenter);font=body;
+        MenuBackdrop("Rune Hall",maps,ArcadeArt+"SelectionHall.png");
+        Flat("Stage Scrim",maps,new Rect(0,0,1280,720),new Color(.04f,.018f,.10f,.45f));
+        font=pixel;Label("Stage Heading",maps,"SELECT YOUR ARENA",new Rect(40,25,1200,42),27,white,TextAnchor.MiddleCenter);font=pixel;
         hud.modeText=Label("Match Type",maps,"",new Rect(40,77,1200,27),16,brass,TextAnchor.MiddleCenter);
         var stageWindow=Box("Selected Arena Window",maps,new Rect(220,119,840,322));stageWindow.gameObject.AddComponent<RectMask2D>();
         hud.mapPreview=Flat("Selected Arena",stageWindow,new Rect(0,0,840,322),Color.white);CenterImage(hud.mapPreview);
@@ -497,8 +488,8 @@ public static class GameSetup
         Label("Atlas Footer",maps,"LEFT / RIGHT  SELECT    ENTER / SOUTH  FIGHT",new Rect(240,652,730,26),16,muted,TextAnchor.MiddleCenter);
 
         var settings=MenuLayer("Settings",menu);hud.settingsMenu=settings.gameObject;
-        MenuBackdrop("Settings Woodland",settings,"Assets/Art/Menu/TitleBackdrop.png");Flat("Settings Reading Field",settings,new Rect(0,0,1280,720),new Color(.015f,.035f,.035f,.94f));
-        font=pixel;Label("Settings Heading",settings,"SETTINGS",new Rect(284,58,710,48),28,white);font=body;
+        MenuBackdrop("Settings Woodland",settings,ArcadeArt+"TitleBackdrop.png");Flat("Settings Reading Field",settings,new Rect(0,0,1280,720),new Color(.015f,.035f,.035f,.94f));
+        font=pixel;Label("Settings Heading",settings,"SETTINGS",new Rect(284,58,710,48),28,white);font=pixel;
         hud.settingsSummary=Label("Settings Summary",settings,"",new Rect(288,125,710,36),21,muted);
         hud.settingsButtons=new Button[5];
         hud.settingsButtons[0]=MenuButton("Lower Volume",settings,new Rect(286,185,338,60),"VOLUME -","",brass);
@@ -534,15 +525,6 @@ public static class GameSetup
     }
     static void CreateActionGlyphs()
     {
-        var connector=new Texture2D(146,146,TextureFormat.RGBA32,false);
-        for(int y=0;y<146;y++)for(int x=0;x<146;x++) {
-            float edge=48-(Mathf.Abs(x+.5f-73)+Mathf.Abs(y+.5f-73));
-            Color ink=edge<2?new Color(.54f,.58f,.47f):new Color(.025f,.065f,.06f);
-            ink.a=Mathf.Clamp01(edge+.75f)*.96f;connector.SetPixel(x,y,ink);
-        }
-        connector.Apply();const string connectorPath="Assets/Art/UI/ActionDiamond.png";
-        File.WriteAllBytes(connectorPath,connector.EncodeToPNG());Object.DestroyImmediate(connector);AssetDatabase.ImportAsset(connectorPath,ImportAssetOptions.ForceSynchronousImport);ImportSprite(connectorPath,146);
-        var connectorImporter=(TextureImporter)AssetImporter.GetAtPath(connectorPath);connectorImporter.filterMode=FilterMode.Bilinear;connectorImporter.SaveAndReimport();
         // Small native UI marks use analytic strokes, keeping device symbols sharp and editable in this builder.
         for(int glyph=-1;glyph<8;glyph++){
             var texture=new Texture2D(64,64,TextureFormat.RGBA32,false);
@@ -550,8 +532,8 @@ public static class GameSetup
             for(int y=0;y<64;y++)for(int x=0;x<64;x++){
                 Vector2 p=new Vector2(x+.5f,y+.5f);float radius=Vector2.Distance(p,new Vector2(32,32));Color color=Color.clear;
                 if(glyph==-1){
-                    float alpha=1-Mathf.SmoothStep(0,1,Mathf.InverseLerp(29.8f,31,radius));color=Color.Lerp(new Color(.055f,.095f,.10f),new Color(.16f,.22f,.23f),y/64f);
-                    if(radius>28)color=new Color(.41f,.49f,.47f);color.a=alpha;
+                    float alpha=1-Mathf.SmoothStep(0,1,Mathf.InverseLerp(29.8f,31,radius));color=Color.Lerp(new Color(.055f,.035f,.12f),new Color(.16f,.10f,.25f),y/64f);
+                    if(radius>28)color=new Color(.32f,.26f,.5f);color.a=alpha;
                 } else {
                     p=(p-new Vector2(32,32))/1.5f+new Vector2(32,32);radius=Vector2.Distance(p,new Vector2(32,32));
                     int shape=glyph%4;float d=100;
@@ -580,29 +562,6 @@ public static class GameSetup
             var importer=(TextureImporter)AssetImporter.GetAtPath(path);importer.filterMode=FilterMode.Bilinear;importer.SaveAndReimport();
         }
     }
-    static void CreateFighterPlate()
-    {
-        const string path="Assets/Art/UI/ScoutPlate.png";
-        int height=(int)WoodlandHUD.FighterHudHeight;
-        var texture=new Texture2D(410,height,TextureFormat.RGBA32,false);
-        for(int y=0;y<height;y++)for(int x=0;x<410;x++) {
-            int edge=Mathf.Min(Mathf.Min(x,409-x),Mathf.Min(y,height-1-y));
-            int corner=Mathf.Min(x,409-x)+Mathf.Min(y,height-1-y);
-            bool visible=corner>=12;
-            Color surface=Color.Lerp(new Color(.025f,.055f,.065f),new Color(.065f,.115f,.125f),y/(float)(height-1));
-            if(edge==0||corner==12)surface=new Color(.38f,.46f,.43f);
-            if(edge==2||corner==16)surface=new Color(.12f,.2f,.21f);
-            texture.SetPixel(x,y,visible?surface:Color.clear);
-        }
-        texture.Apply();File.WriteAllBytes(path,texture.EncodeToPNG());Object.DestroyImmediate(texture);
-        AssetDatabase.ImportAsset(path,ImportAssetOptions.ForceSynchronousImport);ImportSprite(path,100);
-    }
-    static RectTransform Panel(string name, Transform parent, Vector2 anchor, Vector2 position, Vector2 size)
-    {
-        var go = new GameObject(name, typeof(RectTransform), typeof(Image));var rect = go.GetComponent<RectTransform>();rect.SetParent(parent, false);rect.anchorMin = rect.anchorMax = anchor;rect.pivot = new Vector2(.5f, 1);rect.sizeDelta = size;rect.anchoredPosition = position;
-        var image = go.GetComponent<Image>();image.sprite = panelSprite;image.type = Image.Type.Sliced;image.raycastTarget = false;
-        return rect;
-    }
     static void CenterImage(Image image)
     {
         var rect=image.rectTransform;
@@ -613,12 +572,12 @@ public static class GameSetup
     {
         var outline=card.GetComponent<Outline>();outline.effectDistance=new Vector2(2,-2);
         Flat("Portrait Card Placeholder",card.transform,new Rect(6,6,width-12,height-38),new Color(.025f,.045f,.06f,.95f)).transform.SetAsFirstSibling();
-        for(int corner=0;corner<4;corner++) {
-            float x=corner%2==0?0:width-17,y=corner<2?0:height-3;
-            Flat("Frame Corner Horizontal "+corner,card.transform,new Rect(x,y,17,3),accent);
-            Flat("Frame Corner Vertical "+corner,card.transform,new Rect(corner%2==0?0:width-3,corner<2?0:height-17,3,17),accent);
-        }
+        Paint("Painted Card Frame",card.transform,new Rect(-3,-4,width+6,14),accent);
         Flat("Card Caption Plate",card.transform,new Rect(4,height-30,width-8,26),new Color(.015f,.03f,.04f,.92f));
+    }
+    static Image Paint(string name,Transform parent,Rect bounds,Color tint)
+    {
+        var image=Flat(name,parent,bounds,tint);image.sprite=SpriteAt(ArcadeArt+"BrushBand.png");return image;
     }
     static RectTransform Box(string name, Transform parent, Rect bounds)
     {
@@ -626,7 +585,7 @@ public static class GameSetup
     }
     static Text Label(string name, Transform parent, string value, Rect bounds, int size, Color color, TextAnchor alignment = TextAnchor.MiddleLeft)
     {
-        var rect = Box(name, parent, bounds);var text = rect.gameObject.AddComponent<Text>();text.font = font;text.text = value;text.fontSize = size;text.color = color;text.alignment = alignment;text.raycastTarget = false;text.horizontalOverflow = HorizontalWrapMode.Wrap;text.verticalOverflow = VerticalWrapMode.Truncate;
+        var rect = Box(name, parent, bounds);var text = rect.gameObject.AddComponent<Text>();text.font = size<=18?Resources.GetBuiltinResource<Font>("LegacyRuntime.ttf"):font;text.text = value;text.fontSize = size;text.color = color;text.alignment = alignment;text.raycastTarget = false;text.horizontalOverflow = HorizontalWrapMode.Wrap;text.verticalOverflow = VerticalWrapMode.Truncate;
         return text;
     }
     static void LabelAnchored(string name, Transform parent, string value, Vector2 anchor, Vector2 position, Vector2 size, int fontSize, Color color)
@@ -669,13 +628,56 @@ public static class GameSetup
         EditorSceneManager.SaveScene(EditorSceneManager.GetActiveScene());AssetDatabase.SaveAssets();
         Debug.Log("PHYSICS_TUNING_APPLIED");
     }
-    public static void FinishLayout()
+    [System.Serializable] class CleanupReport
     {
-        EditorSceneManager.OpenScene("Assets/Scenes/WoodlandTumble.unity");
-        GameObject.Find("Runewood Balancing Sphere").transform.position = new Vector3(0, -1.56f, 0);
-        AssetDatabase.ImportAsset("Assets/Art/UI/WoodlandPanel.png", ImportAssetOptions.ForceUpdate);
-        EditorSceneManager.SaveScene(EditorSceneManager.GetActiveScene());
-        AssetDatabase.SaveAssets();
+        public int removedFiles; public long removedBytes; public string[] removed, retained; public string backup;
+    }
+    public static void CleanupLegacyArt()
+    {
+        if(EditorApplication.isPlaying)throw new System.Exception("Stop Play Mode before asset cleanup.");
+        string[] roots={"Assets/Scenes/WoodlandTumble.unity","Assets/Prefabs/Fern.prefab","Assets/Prefabs/Ember.prefab"};
+        var keep=new System.Collections.Generic.HashSet<string>(AssetDatabase.GetDependencies(roots,true));
+        // Resources.Load paths are not represented by the scene dependency graph.
+        foreach(var file in Directory.GetFiles("Assets/Resources/Art/CombatV9","*.png",SearchOption.AllDirectories))keep.Add(file.Replace('\\','/'));
+        // Protect source assets required when rebuilding the scene, even if generated UI is currently hidden.
+        foreach(var source in Directory.GetFiles("Assets","*.cs",SearchOption.AllDirectories))
+            foreach(System.Text.RegularExpressions.Match match in System.Text.RegularExpressions.Regex.Matches(File.ReadAllText(source),"\"(Assets/[^\"]+)\""))
+                if(File.Exists(match.Groups[1].Value))keep.Add(match.Groups[1].Value);
+        string[] folders={"Assets/Art/Characters","Assets/Animations","Assets/Art/Menu","Assets/Art/VFX","Assets/Art/Arena","Assets/Art/UI","Assets/Resources/Art"};
+        string workspace=Path.GetFullPath(".")+Path.DirectorySeparatorChar;
+        string backup=Path.GetFullPath("../woodland-update-workbench/removed-v9");Directory.CreateDirectory(backup);
+        var removed=new System.Collections.Generic.List<string>();var retained=new System.Collections.Generic.List<string>();long bytes=0;
+        const string reportPath="Documentation/ASSET-CLEANUP-v9.json";
+        if(File.Exists(reportPath)){var previous=JsonUtility.FromJson<CleanupReport>(File.ReadAllText(reportPath));removed.AddRange(previous.removed);bytes=previous.removedBytes;}
+        foreach(string folder in folders) {
+            if(!Directory.Exists(folder))continue;
+            foreach(string file in Directory.GetFiles(folder,"*",SearchOption.AllDirectories)) {
+                string asset=file.Replace('\\','/');if(asset.EndsWith(".meta"))continue;
+                if(keep.Contains(asset)){retained.Add(asset);continue;}
+                string full=Path.GetFullPath(asset);
+                if(!full.StartsWith(workspace,System.StringComparison.OrdinalIgnoreCase))throw new System.Exception("Cleanup target escapes project: "+asset);
+                string saved=Path.Combine(backup,asset);Directory.CreateDirectory(Path.GetDirectoryName(saved));File.Copy(full,saved,true);
+                if(File.Exists(full+".meta"))File.Copy(full+".meta",saved+".meta",true);
+                bytes+=new FileInfo(full).Length;
+                if(!AssetDatabase.DeleteAsset(asset))throw new System.Exception("Unable to remove unused asset: "+asset);
+                removed.Add(asset);
+            }
+        }
+        if(File.Exists("Assets/Scenes/SampleScene.unity"))AssetDatabase.DeleteAsset("Assets/Scenes/SampleScene.unity");
+        foreach(string directory in Directory.GetDirectories("Assets","*",SearchOption.AllDirectories).OrderByDescending(path=>path.Length)) {
+            if(Directory.GetFileSystemEntries(directory).Length==0)AssetDatabase.DeleteAsset(directory.Replace('\\','/'));
+        }
+        AssetDatabase.Refresh();
+        foreach(string dependency in AssetDatabase.GetDependencies(roots,true)) {
+            if(!dependency.StartsWith("Assets/") || !File.Exists(dependency))continue;
+            if(!new[]{".unity",".prefab",".asset",".mat",".anim",".controller"}.Contains(Path.GetExtension(dependency)))continue;
+            foreach(System.Text.RegularExpressions.Match match in System.Text.RegularExpressions.Regex.Matches(File.ReadAllText(dependency),"guid: ([a-f0-9]{32})")) {
+                string guid=match.Groups[1].Value;if(guid.StartsWith("00000000"))continue;
+                if(string.IsNullOrEmpty(AssetDatabase.GUIDToAssetPath(guid)))throw new System.Exception("Missing asset reference in "+dependency+": "+guid);
+            }
+        }
+        File.WriteAllText(reportPath,JsonUtility.ToJson(new CleanupReport{removedFiles=removed.Count,removedBytes=bytes,removed=removed.ToArray(),retained=retained.ToArray(),backup=backup},true));
+        AssetDatabase.SaveAssets();Debug.Log("ARCADE_CLEANUP_PASS: removed "+removed.Count+" unused files; active dependencies resolve.");
     }
     public static void BuildWindows()
     {

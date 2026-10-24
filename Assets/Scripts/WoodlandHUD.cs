@@ -106,6 +106,9 @@ public class WoodlandHUD : MonoBehaviour
     WoodlandGame.MenuScreen lastScreen = (WoodlandGame.MenuScreen)(-1);
     bool wasPaused;
     float nextNavigation;
+    float screenEnteredAt;
+    GameObject enteringScreen;
+    CanvasGroup enteringGroup;
     void Awake()
     {
         if(!roundTimerText && matchHud && bannerText) {
@@ -167,6 +170,7 @@ public class WoodlandHUD : MonoBehaviour
         if (!game) return;
         for(int player=0;player<2;player++)if(oneShotGuard[player] && !pointerGuardHeld[player])ReleasePointerGuard(player);
         RefreshMenu();
+        AnimateFrontEnd();
         if (game.Screen != WoodlandGame.MenuScreen.Match || game.Paused) {
             ReleaseAllPointerGuards();
             NavigateMenus();
@@ -211,7 +215,7 @@ public class WoodlandHUD : MonoBehaviour
             string guard=ps?"HOLD CROSS / L2":xbox?"HOLD A / LT":pad!=null?"HOLD SOUTH / LEFT TRIGGER":i==0?"HOLD S":"HOLD DOWN";
             string dash=ps?"L1 / R1":xbox?"LB / RB":pad!=null?"LEFT / RIGHT SHOULDER":i==0?"Q / E":"U / P";
             string ultimate=ps?"L2 + R2":xbox?"LT + RT":pad!=null?"BOTH TRIGGERS":i==0?"H":"L";
-            string ranged=actor.CharacterIndex==0?"Roots and slows a rival at range.":actor.CharacterIndex==1?"A stronger fire hit from a safe distance.":actor.CharacterIndex==2?"A moonfrost shot that slows its target.":"A stone shot that launches its target.";
+            string ranged=game.SkillDescriptions[Mathf.Clamp(actor.CharacterIndex,0,game.SkillDescriptions.Length-1)].Split('.')[0]+".";
             string finisher="Five confirmed hits cause a 3s knockdown. Push a downed rival into an open edge hatch for a ring-out.";
             if(guideNames[i]){guideNames[i].text=(i==1 && game.SoloMode?"CPU":"P"+(i+1))+"  "+actor.displayName.ToUpper();guideNames[i].color=actor.Element;}
             if(controlsText[i])controlsText[i].text=
@@ -219,7 +223,7 @@ public class WoodlandHUD : MonoBehaviour
                 "<b>"+kick+"   KICK</b>\n6 stamina. Finish a string and launch.\n"+
                 "<b>"+punch+", "+punch+", "+kick+"   THREE-HIT COMBO</b>\nConfirm P, P, K to launch. Repeated punches reset the route.\n"+
                 "<b>"+jump+"   JUMP / DOUBLE JUMP</b>\n4 stamina on ground; 6 for the aerial jump.\n"+
-                "<b>"+guard+"   GUARD / PARRY</b>\nBlock, then punish. Fresh guard parries; grabs beat guard.\n"+
+                "<b>"+guard+"   GUARD / PARRY</b>\nBlock, then punish. Fresh guard parries; "+(i==0?"F":"J")+" grabs guards.\n"+
                 "<b>"+dash+"   BACKDASH / FORWARD DASH</b>\n12 / 10 stamina. Backdash briefly avoids hits.\n"+
                 "<b>"+skill+"   "+actor.SkillName+"</b>\n14 stamina. 0.85s charge, then launch. "+ranged+"\n"+
                 "<b>"+ultimate+"   "+actor.UltimateName+"</b>\nOne hit square left. Once per round. "+finisher;
@@ -435,6 +439,12 @@ public class WoodlandHUD : MonoBehaviour
         if(matchHud)matchHud.SetActive(match);
         if(pauseMenu)pauseMenu.SetActive(match && game.Paused && !MoveGuideOpen);
         if(screen!=lastScreen){
+            if(enteringGroup)enteringGroup.alpha=1;
+            if(enteringScreen)enteringScreen.transform.localScale=Vector3.one;
+            enteringScreen=screen==WoodlandGame.MenuScreen.Title?titleMenu:screen==WoodlandGame.MenuScreen.Characters?characterMenu:screen==WoodlandGame.MenuScreen.Maps?mapMenu:screen==WoodlandGame.MenuScreen.Settings?settingsMenu:null;
+            enteringGroup=enteringScreen?enteringScreen.GetComponent<CanvasGroup>():null;
+            if(enteringScreen && !enteringGroup)enteringGroup=enteringScreen.AddComponent<CanvasGroup>();
+            screenEnteredAt=Time.unscaledTime;
             ReleaseAllPointerGuards();
             menuFocus=screen==WoodlandGame.MenuScreen.Rules && game.BalanceMode?1:0;nextNavigation=Time.unscaledTime+.12f;lastScreen=screen;if(helpPanel)helpPanel.SetActive(false);
             for(int i=0;i<2;i++){hoveredAction[i]=recentAction[i]=-1;tooltipUntil[i]=0;observationsReady[i]=false;}
@@ -476,6 +486,14 @@ public class WoodlandHUD : MonoBehaviour
         if(settingsButtons.Length>4)SetButtonTitle(settingsButtons[4],"EFFECTS QUALITY  /  "+game.EffectsQualityName.ToUpper());
         for(int i=0;i<settingsButtons.Length;i++)MarkButton(settingsButtons[i],i==menuFocus,fernColor);
     }
+    void AnimateFrontEnd()
+    {
+        if(!enteringScreen || !enteringGroup)return;
+        float progress=Mathf.Clamp01((Time.unscaledTime-screenEnteredAt)/.26f);
+        float ease=1-Mathf.Pow(1-progress,3);
+        enteringGroup.alpha=Mathf.Lerp(.78f,1,ease);
+        enteringScreen.transform.localScale=Vector3.one*Mathf.Lerp(.985f,1,ease);
+    }
     static void SetButtonTitle(Button button,string value)
     {
         if(!button)return;var child=button.transform.Find("Choice");if(child){var text=child.GetComponent<Text>();if(text)text.text=value;}
@@ -483,10 +501,12 @@ public class WoodlandHUD : MonoBehaviour
     static void MarkButton(Button button,bool chosen,Color accent)
     {
         if(!button) return;
-        button.image.color=chosen?new Color(.095f,.17f,.14f,1):new Color(.03f,.065f,.063f,.97f);
-        var outline=button.GetComponent<Outline>();if(outline)outline.effectColor=chosen?accent:new Color(.28f,.36f,.31f,.85f);
+        bool card=button.transform.Find("Painted Card Frame");
+        button.image.color=chosen?(card?new Color(.20f,.12f,.35f,1):new Color(.78f,1,.25f,1)):new Color(.105f,.06f,.22f,.98f);
+        var outline=button.GetComponent<Outline>();if(outline)outline.effectColor=chosen?accent:new Color(.32f,.23f,.47f,.85f);
         // Choice text belongs to this button, leaving all illustration and native layout editable.
-        var text=button.transform.Find("Choice");if(text){var label=text.GetComponent<Text>();if(label)label.color=chosen?new Color(.99f,.96f,.8f):new Color(.8f,.86f,.77f);}
+        var description=button.transform.Find("Description");if(description){var label=description.GetComponent<Text>();if(label)label.color=chosen?new Color(.08f,.11f,.12f):new Color(.78f,.81f,.94f);}
+        var text=button.transform.Find("Choice");if(text){var label=text.GetComponent<Text>();if(label)label.color=chosen?new Color(.035f,.025f,.08f):new Color(1,.97f,.85f);}
     }
     void NavigateMenus()
     {

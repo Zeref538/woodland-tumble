@@ -1,0 +1,1001 @@
+fileFormatVersion: 2
+guid: 8c9e18da9bd4d1e41acb442e6035f023
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5119722616463373407
+    second: BrushBand_0
+  - first:
+      213: 806226032806329328
+    second: BrushBand_1
+  - first:
+      213: 8919313284191729571
+    second: BrushBand_2
+  - first:
+      213: 8147384759045381410
+    second: BrushBand_3
+  - first:
+      213: -2624783399699645484
+    second: BrushBand_4
+  - first:
+      213: -4855901494929668174
+    second: BrushBand_5
+  - first:
+      213: -3454302934435898480
+    second: BrushBand_6
+  - first:
+      213: 489065654153629473
+    second: BrushBand_7
+  - first:
+      213: 6083005084755798877
+    second: BrushBand_8
+  - first:
+      213: -7034809222733374873
+    second: BrushBand_9
+  - first:
+      213: 2211835935748125553
+    second: BrushBand_10
+  - first:
+      213: 7638402224251048905
+    second: BrushBand_11
+  - first:
+      213: 8486005397385914936
+    second: BrushBand_12
+  - first:
+      213: -2155437340473072181
+    second: BrushBand_13
+  - first:
+      213: -617997367844974138
+    second: BrushBand_14
+  - first:
+      213: -1354138063572693458
+    second: BrushBand_15
+  - first:
+      213: -1016406438383699156
+    second: BrushBand_16
+  - first:
+      213: 5609729117378742310
+    second: BrushBand_17
+  - first:
+      213: -2066771097025770361
+    second: BrushBand_18
+  - first:
+      213: 4273967152594183638
+    second: BrushBand_19
+  - first:
+      213: 502390594899969975
+    second: BrushBand_20
+  - first:
+      213: 3501793904966107758
+    second: BrushBand_21
+  - first:
+      213: -916596264379445571
+    second: BrushBand_22
+  - first:
+      213: -6272807039885945385
+    second: BrushBand_23
+  - first:
+      213: 5354656931026529415
+    second: BrushBand_24
+  - first:
+      213: 2492648873394314232
+    second: BrushBand_25
+  - first:
+      213: 233165517524054364
+    second: BrushBand_26
+  - first:
+      213: 5325284409493108474
+    second: BrushBand_27
+  - first:
+      213: -6325878949708439875
+    second: BrushBand_28
+  - first:
+      213: -170492675644499462
+    second: BrushBand_29
+  - first:
+      213: -3445767573209643884
+    second: BrushBand_30
+  - first:
+      213: -7976199669531479766
+    second: BrushBand_31
+  - first:
+      213: 3474736853708794206
+    second: BrushBand_32
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 1
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 9
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: BrushBand_0
+      rect:
+        serializedVersion: 2
+        x: 1231
+        y: 657
+        width: 15
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1abca21e76713f8b0800000000000000
+      internalID: -5119722616463373407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrushBand_1
+      rect:
+        serializedVersion: 2
+        x: 1323
+        y: 648
+        width: 29
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0fbf7162e4a403b00800000000000000
+      internalID: 806226032806329328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrushBand_2
+      rect:
+        serializedVersion: 2
+        x: 1472
+        y: 709
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a7bba8ec24c7cb70800000000000000
+      internalID: 8919313284191729571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrushBand_3
+      rect:
+        serializedVersion: 2
+        x: 1478
+        y: 669
+        width: 84
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22dd45b8543511170800000000000000
+      internalID: 8147384759045381410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrushBand_4
+      rect:
+        serializedVersion: 2
+        x: 1577
+        y: 685
+        width: 61
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4db7f889765e29bd0800000000000000
+      internalID: -2624783399699645484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrushBand_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 2153
+        height: 702
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b7cd6a615f5c9cb0800000000000000
+      internalID: -4855901494929668174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrushBand_6
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 693
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09bdb5668c9df00d0800000000000000
+      internalID: -3454302934435898480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrushBand_7
+      rect:
+        serializedVersion: 2
+        x: 1188
+        y: 683
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12fcbab0f9289c600800000000000000
+      internalID: 489065654153629473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrushBand_8
+      rect:
+        serializedVersion: 2
+        x: 1713
+        y: 652
+        width: 42
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5ba3cb35ec2b6450800000000000000
+      internalID: 6083005084755798877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrushBand_9
+      rect:
+        serializedVersion: 2
+        x: 1022
+        y: 659
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76ad550b8465f5e90800000000000000
+      internalID: -7034809222733374873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrushBand_10
+      rect:
+        serializedVersion: 2
+        x: 1028
+        y: 658
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 173f5b3901502be10800000000000000
+      internalID: 2211835935748125553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrushBand_11
+      rect:
+        serializedVersion: 2
+        x: 1585
+        y: 649
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c3990c5a5e010a60800000000000000
+      internalID: 7638402224251048905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrushBand_12
+      rect:
+        serializedVersion: 2
+        x: 891
+        y: 642
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83a2c39b2f854c570800000000000000
+      internalID: 8486005397385914936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrushBand_13
+      rect:
+        serializedVersion: 2
+        x: 925
+        y: 638
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc56d79a8295612e0800000000000000
+      internalID: -2155437340473072181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrushBand_14
+      rect:
+        serializedVersion: 2
+        x: 937
+        y: 634
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c159711bae6c67f0800000000000000
+      internalID: -617997367844974138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrushBand_15
+      rect:
+        serializedVersion: 2
+        x: 1156
+        y: 634
+        width: 14
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2e0aef0b92253de0800000000000000
+      internalID: -1354138063572693458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrushBand_16
+      rect:
+        serializedVersion: 2
+        x: 1890
+        y: 642
+        width: 10
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2b38bcbabff4e1f0800000000000000
+      internalID: -1016406438383699156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrushBand_17
+      rect:
+        serializedVersion: 2
+        x: 758
+        y: 626
+        width: 17
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 628868f19e2c9dd40800000000000000
+      internalID: 5609729117378742310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrushBand_18
+      rect:
+        serializedVersion: 2
+        x: 778
+        y: 626
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78c0cb133aa5153e0800000000000000
+      internalID: -2066771097025770361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrushBand_19
+      rect:
+        serializedVersion: 2
+        x: 926
+        y: 630
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d560181b7e205b30800000000000000
+      internalID: 4273967152594183638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrushBand_20
+      rect:
+        serializedVersion: 2
+        x: 972
+        y: 628
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b782839599d8f600800000000000000
+      internalID: 502390594899969975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrushBand_21
+      rect:
+        serializedVersion: 2
+        x: 1028
+        y: 626
+        width: 17
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e620226d00fd89030800000000000000
+      internalID: 3501793904966107758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrushBand_22
+      rect:
+        serializedVersion: 2
+        x: 1135
+        y: 630
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbe863bcd889743f0800000000000000
+      internalID: -916596264379445571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrushBand_23
+      rect:
+        serializedVersion: 2
+        x: 2086
+        y: 352
+        width: 43
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d557036b3382f8a0800000000000000
+      internalID: -6272807039885945385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrushBand_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 313
+        width: 5
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78c6bebcb109f4a40800000000000000
+      internalID: 5354656931026529415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrushBand_25
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 160
+        width: 33
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fb127891faa79220800000000000000
+      internalID: 2492648873394314232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrushBand_26
+      rect:
+        serializedVersion: 2
+        x: 941
+        y: 61
+        width: 31
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5134e58dce5c3300800000000000000
+      internalID: 233165517524054364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrushBand_27
+      rect:
+        serializedVersion: 2
+        x: 1166
+        y: 82
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af633c3b4f537e940800000000000000
+      internalID: 5325284409493108474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrushBand_28
+      rect:
+        serializedVersion: 2
+        x: 1185
+        y: 87
+        width: 21
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbed1867c96f538a0800000000000000
+      internalID: -6325878949708439875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrushBand_29
+      rect:
+        serializedVersion: 2
+        x: 979
+        y: 51
+        width: 20
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af9576790d942adf0800000000000000
+      internalID: -170492675644499462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrushBand_30
+      rect:
+        serializedVersion: 2
+        x: 1448
+        y: 71
+        width: 7
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 494874c06ac2e20d0800000000000000
+      internalID: -3445767573209643884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrushBand_31
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 33
+        width: 13
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a21fcf709a8de4190800000000000000
+      internalID: -7976199669531479766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrushBand_32
+      rect:
+        serializedVersion: 2
+        x: 802
+        y: 25
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e59654d22ceb83030800000000000000
+      internalID: 3474736853708794206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      BrushBand_0: -5119722616463373407
+      BrushBand_1: 806226032806329328
+      BrushBand_10: 2211835935748125553
+      BrushBand_11: 7638402224251048905
+      BrushBand_12: 8486005397385914936
+      BrushBand_13: -2155437340473072181
+      BrushBand_14: -617997367844974138
+      BrushBand_15: -1354138063572693458
+      BrushBand_16: -1016406438383699156
+      BrushBand_17: 5609729117378742310
+      BrushBand_18: -2066771097025770361
+      BrushBand_19: 4273967152594183638
+      BrushBand_2: 8919313284191729571
+      BrushBand_20: 502390594899969975
+      BrushBand_21: 3501793904966107758
+      BrushBand_22: -916596264379445571
+      BrushBand_23: -6272807039885945385
+      BrushBand_24: 5354656931026529415
+      BrushBand_25: 2492648873394314232
+      BrushBand_26: 233165517524054364
+      BrushBand_27: 5325284409493108474
+      BrushBand_28: -6325878949708439875
+      BrushBand_29: -170492675644499462
+      BrushBand_3: 8147384759045381410
+      BrushBand_30: -3445767573209643884
+      BrushBand_31: -7976199669531479766
+      BrushBand_32: 3474736853708794206
+      BrushBand_4: -2624783399699645484
+      BrushBand_5: -4855901494929668174
+      BrushBand_6: -3454302934435898480
+      BrushBand_7: 489065654153629473
+      BrushBand_8: 6083005084755798877
+      BrushBand_9: -7034809222733374873
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -30,7 +30,7 @@ def guid(path):
 
 
 def sprite_meta(path, ppu=80, pivot=(.5, .09375)):
-    template = (ROOT / "Assets/Art/Characters/Fern/Walk/01.png.meta").read_text()
+    template = (ROOT / "Assets/Art/CharactersRework/Fern/Walk/01.png.meta").read_text()
     template = re.sub(r"^guid: \w+", "guid: " + guid(path.relative_to(ROOT)), template, flags=re.M)
     template = re.sub(r"spritePixelsToUnits: [\d.]+", f"spritePixelsToUnits: {ppu}", template)
     template = re.sub(r"spritePivot: \{[^}]+\}", f"spritePivot: {{x: {pivot[0]}, y: {pivot[1]}}}", template)

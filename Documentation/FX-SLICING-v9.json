@@ -1,0 +1,2314 @@
+{
+  "frames": 192,
+  "cellSize": 256,
+  "sourceSheets": 8,
+  "method": "Adaptive transparent gutters, common 352-pixel padded canvas, uniform 256-pixel import",
+  "framesTouchingOutputEdge": 0,
+  "minimumOutputMargin": 22,
+  "cells": [
+    {
+      "fighter": "Bram",
+      "action": "Slash",
+      "frame": 1,
+      "sourceCrop": [
+        0,
+        0,
+        256,
+        256
+      ],
+      "importMargin": 35
+    },
+    {
+      "fighter": "Bram",
+      "action": "Slash",
+      "frame": 2,
+      "sourceCrop": [
+        256,
+        0,
+        502,
+        256
+      ],
+      "importMargin": 37
+    },
+    {
+      "fighter": "Bram",
+      "action": "Slash",
+      "frame": 3,
+      "sourceCrop": [
+        502,
+        0,
+        776,
+        256
+      ],
+      "importMargin": 28
+    },
+    {
+      "fighter": "Bram",
+      "action": "Slash",
+      "frame": 4,
+      "sourceCrop": [
+        776,
+        0,
+        1029,
+        256
+      ],
+      "importMargin": 35
+    },
+    {
+      "fighter": "Bram",
+      "action": "Slash",
+      "frame": 5,
+      "sourceCrop": [
+        1029,
+        0,
+        1280,
+        256
+      ],
+      "importMargin": 35
+    },
+    {
+      "fighter": "Bram",
+      "action": "Slash",
+      "frame": 6,
+      "sourceCrop": [
+        1280,
+        0,
+        1536,
+        256
+      ],
+      "importMargin": 36
+    },
+    {
+      "fighter": "Bram",
+      "action": "Hit",
+      "frame": 1,
+      "sourceCrop": [
+        0,
+        256,
+        256,
+        512
+      ],
+      "importMargin": 47
+    },
+    {
+      "fighter": "Bram",
+      "action": "Hit",
+      "frame": 2,
+      "sourceCrop": [
+        256,
+        256,
+        507,
+        512
+      ],
+      "importMargin": 38
+    },
+    {
+      "fighter": "Bram",
+      "action": "Hit",
+      "frame": 3,
+      "sourceCrop": [
+        507,
+        256,
+        770,
+        512
+      ],
+      "importMargin": 32
+    },
+    {
+      "fighter": "Bram",
+      "action": "Hit",
+      "frame": 4,
+      "sourceCrop": [
+        770,
+        256,
+        1025,
+        512
+      ],
+      "importMargin": 35
+    },
+    {
+      "fighter": "Bram",
+      "action": "Hit",
+      "frame": 5,
+      "sourceCrop": [
+        1025,
+        256,
+        1280,
+        512
+      ],
+      "importMargin": 35
+    },
+    {
+      "fighter": "Bram",
+      "action": "Hit",
+      "frame": 6,
+      "sourceCrop": [
+        1280,
+        256,
+        1536,
+        512
+      ],
+      "importMargin": 46
+    },
+    {
+      "fighter": "Bram",
+      "action": "Finisher",
+      "frame": 1,
+      "sourceCrop": [
+        0,
+        512,
+        256,
+        755
+      ],
+      "importMargin": 47
+    },
+    {
+      "fighter": "Bram",
+      "action": "Finisher",
+      "frame": 2,
+      "sourceCrop": [
+        256,
+        512,
+        506,
+        755
+      ],
+      "importMargin": 37
+    },
+    {
+      "fighter": "Bram",
+      "action": "Finisher",
+      "frame": 3,
+      "sourceCrop": [
+        506,
+        512,
+        777,
+        755
+      ],
+      "importMargin": 29
+    },
+    {
+      "fighter": "Bram",
+      "action": "Finisher",
+      "frame": 4,
+      "sourceCrop": [
+        777,
+        512,
+        1045,
+        755
+      ],
+      "importMargin": 30
+    },
+    {
+      "fighter": "Bram",
+      "action": "Finisher",
+      "frame": 5,
+      "sourceCrop": [
+        1045,
+        512,
+        1289,
+        755
+      ],
+      "importMargin": 39
+    },
+    {
+      "fighter": "Bram",
+      "action": "Finisher",
+      "frame": 6,
+      "sourceCrop": [
+        1289,
+        512,
+        1536,
+        755
+      ],
+      "importMargin": 38
+    },
+    {
+      "fighter": "Bram",
+      "action": "Guard",
+      "frame": 1,
+      "sourceCrop": [
+        0,
+        755,
+        254,
+        1024
+      ],
+      "importMargin": 35
+    },
+    {
+      "fighter": "Bram",
+      "action": "Guard",
+      "frame": 2,
+      "sourceCrop": [
+        254,
+        755,
+        502,
+        1024
+      ],
+      "importMargin": 36
+    },
+    {
+      "fighter": "Bram",
+      "action": "Guard",
+      "frame": 3,
+      "sourceCrop": [
+        502,
+        755,
+        792,
+        1024
+      ],
+      "importMargin": 22
+    },
+    {
+      "fighter": "Bram",
+      "action": "Guard",
+      "frame": 4,
+      "sourceCrop": [
+        792,
+        755,
+        1053,
+        1024
+      ],
+      "importMargin": 30
+    },
+    {
+      "fighter": "Bram",
+      "action": "Guard",
+      "frame": 5,
+      "sourceCrop": [
+        1053,
+        755,
+        1280,
+        1024
+      ],
+      "importMargin": 42
+    },
+    {
+      "fighter": "Bram",
+      "action": "Guard",
+      "frame": 6,
+      "sourceCrop": [
+        1280,
+        755,
+        1536,
+        1024
+      ],
+      "importMargin": 50
+    },
+    {
+      "fighter": "Corin",
+      "action": "Slash",
+      "frame": 1,
+      "sourceCrop": [
+        0,
+        0,
+        256,
+        256
+      ],
+      "importMargin": 46
+    },
+    {
+      "fighter": "Corin",
+      "action": "Slash",
+      "frame": 2,
+      "sourceCrop": [
+        256,
+        0,
+        510,
+        256
+      ],
+      "importMargin": 35
+    },
+    {
+      "fighter": "Corin",
+      "action": "Slash",
+      "frame": 3,
+      "sourceCrop": [
+        510,
+        0,
+        768,
+        256
+      ],
+      "importMargin": 34
+    },
+    {
+      "fighter": "Corin",
+      "action": "Slash",
+      "frame": 4,
+      "sourceCrop": [
+        768,
+        0,
+        1043,
+        256
+      ],
+      "importMargin": 27
+    },
+    {
+      "fighter": "Corin",
+      "action": "Slash",
+      "frame": 5,
+      "sourceCrop": [
+        1043,
+        0,
+        1285,
+        256
+      ],
+      "importMargin": 40
+    },
+    {
+      "fighter": "Corin",
+      "action": "Slash",
+      "frame": 6,
+      "sourceCrop": [
+        1285,
+        0,
+        1536,
+        256
+      ],
+      "importMargin": 36
+    },
+    {
+      "fighter": "Corin",
+      "action": "Hit",
+      "frame": 1,
+      "sourceCrop": [
+        0,
+        256,
+        256,
+        512
+      ],
+      "importMargin": 48
+    },
+    {
+      "fighter": "Corin",
+      "action": "Hit",
+      "frame": 2,
+      "sourceCrop": [
+        256,
+        256,
+        507,
+        512
+      ],
+      "importMargin": 37
+    },
+    {
+      "fighter": "Corin",
+      "action": "Hit",
+      "frame": 3,
+      "sourceCrop": [
+        507,
+        256,
+        768,
+        512
+      ],
+      "importMargin": 32
+    },
+    {
+      "fighter": "Corin",
+      "action": "Hit",
+      "frame": 4,
+      "sourceCrop": [
+        768,
+        256,
+        1026,
+        512
+      ],
+      "importMargin": 34
+    },
+    {
+      "fighter": "Corin",
+      "action": "Hit",
+      "frame": 5,
+      "sourceCrop": [
+        1026,
+        256,
+        1280,
+        512
+      ],
+      "importMargin": 35
+    },
+    {
+      "fighter": "Corin",
+      "action": "Hit",
+      "frame": 6,
+      "sourceCrop": [
+        1280,
+        256,
+        1536,
+        512
+      ],
+      "importMargin": 42
+    },
+    {
+      "fighter": "Corin",
+      "action": "Finisher",
+      "frame": 1,
+      "sourceCrop": [
+        0,
+        512,
+        256,
+        750
+      ],
+      "importMargin": 44
+    },
+    {
+      "fighter": "Corin",
+      "action": "Finisher",
+      "frame": 2,
+      "sourceCrop": [
+        256,
+        512,
+        508,
+        750
+      ],
+      "importMargin": 36
+    },
+    {
+      "fighter": "Corin",
+      "action": "Finisher",
+      "frame": 3,
+      "sourceCrop": [
+        508,
+        512,
+        773,
+        750
+      ],
+      "importMargin": 31
+    },
+    {
+      "fighter": "Corin",
+      "action": "Finisher",
+      "frame": 4,
+      "sourceCrop": [
+        773,
+        512,
+        1041,
+        750
+      ],
+      "importMargin": 30
+    },
+    {
+      "fighter": "Corin",
+      "action": "Finisher",
+      "frame": 5,
+      "sourceCrop": [
+        1041,
+        512,
+        1285,
+        750
+      ],
+      "importMargin": 39
+    },
+    {
+      "fighter": "Corin",
+      "action": "Finisher",
+      "frame": 6,
+      "sourceCrop": [
+        1285,
+        512,
+        1536,
+        750
+      ],
+      "importMargin": 36
+    },
+    {
+      "fighter": "Corin",
+      "action": "Guard",
+      "frame": 1,
+      "sourceCrop": [
+        0,
+        750,
+        256,
+        1024
+      ],
+      "importMargin": 53
+    },
+    {
+      "fighter": "Corin",
+      "action": "Guard",
+      "frame": 2,
+      "sourceCrop": [
+        256,
+        750,
+        500,
+        1024
+      ],
+      "importMargin": 39
+    },
+    {
+      "fighter": "Corin",
+      "action": "Guard",
+      "frame": 3,
+      "sourceCrop": [
+        500,
+        750,
+        771,
+        1024
+      ],
+      "importMargin": 28
+    },
+    {
+      "fighter": "Corin",
+      "action": "Guard",
+      "frame": 4,
+      "sourceCrop": [
+        771,
+        750,
+        1024,
+        1024
+      ],
+      "importMargin": 30
+    },
+    {
+      "fighter": "Corin",
+      "action": "Guard",
+      "frame": 5,
+      "sourceCrop": [
+        1024,
+        750,
+        1280,
+        1024
+      ],
+      "importMargin": 36
+    },
+    {
+      "fighter": "Corin",
+      "action": "Guard",
+      "frame": 6,
+      "sourceCrop": [
+        1280,
+        750,
+        1536,
+        1024
+      ],
+      "importMargin": 42
+    },
+    {
+      "fighter": "Ember",
+      "action": "Slash",
+      "frame": 1,
+      "sourceCrop": [
+        0,
+        0,
+        256,
+        258
+      ],
+      "importMargin": 55
+    },
+    {
+      "fighter": "Ember",
+      "action": "Slash",
+      "frame": 2,
+      "sourceCrop": [
+        256,
+        0,
+        512,
+        258
+      ],
+      "importMargin": 43
+    },
+    {
+      "fighter": "Ember",
+      "action": "Slash",
+      "frame": 3,
+      "sourceCrop": [
+        512,
+        0,
+        768,
+        258
+      ],
+      "importMargin": 34
+    },
+    {
+      "fighter": "Ember",
+      "action": "Slash",
+      "frame": 4,
+      "sourceCrop": [
+        768,
+        0,
+        1024,
+        258
+      ],
+      "importMargin": 35
+    },
+    {
+      "fighter": "Ember",
+      "action": "Slash",
+      "frame": 5,
+      "sourceCrop": [
+        1024,
+        0,
+        1280,
+        258
+      ],
+      "importMargin": 42
+    },
+    {
+      "fighter": "Ember",
+      "action": "Slash",
+      "frame": 6,
+      "sourceCrop": [
+        1280,
+        0,
+        1536,
+        258
+      ],
+      "importMargin": 47
+    },
+    {
+      "fighter": "Ember",
+      "action": "Hit",
+      "frame": 1,
+      "sourceCrop": [
+        0,
+        258,
+        256,
+        514
+      ],
+      "importMargin": 77
+    },
+    {
+      "fighter": "Ember",
+      "action": "Hit",
+      "frame": 2,
+      "sourceCrop": [
+        256,
+        258,
+        508,
+        514
+      ],
+      "importMargin": 48
+    },
+    {
+      "fighter": "Ember",
+      "action": "Hit",
+      "frame": 3,
+      "sourceCrop": [
+        508,
+        258,
+        768,
+        514
+      ],
+      "importMargin": 34
+    },
+    {
+      "fighter": "Ember",
+      "action": "Hit",
+      "frame": 4,
+      "sourceCrop": [
+        768,
+        258,
+        1024,
+        514
+      ],
+      "importMargin": 40
+    },
+    {
+      "fighter": "Ember",
+      "action": "Hit",
+      "frame": 5,
+      "sourceCrop": [
+        1024,
+        258,
+        1280,
+        514
+      ],
+      "importMargin": 46
+    },
+    {
+      "fighter": "Ember",
+      "action": "Hit",
+      "frame": 6,
+      "sourceCrop": [
+        1280,
+        258,
+        1536,
+        514
+      ],
+      "importMargin": 47
+    },
+    {
+      "fighter": "Ember",
+      "action": "Finisher",
+      "frame": 1,
+      "sourceCrop": [
+        0,
+        514,
+        256,
+        759
+      ],
+      "importMargin": 59
+    },
+    {
+      "fighter": "Ember",
+      "action": "Finisher",
+      "frame": 2,
+      "sourceCrop": [
+        256,
+        514,
+        496,
+        759
+      ],
+      "importMargin": 41
+    },
+    {
+      "fighter": "Ember",
+      "action": "Finisher",
+      "frame": 3,
+      "sourceCrop": [
+        496,
+        514,
+        768,
+        759
+      ],
+      "importMargin": 29
+    },
+    {
+      "fighter": "Ember",
+      "action": "Finisher",
+      "frame": 4,
+      "sourceCrop": [
+        768,
+        514,
+        1026,
+        759
+      ],
+      "importMargin": 34
+    },
+    {
+      "fighter": "Ember",
+      "action": "Finisher",
+      "frame": 5,
+      "sourceCrop": [
+        1026,
+        514,
+        1280,
+        759
+      ],
+      "importMargin": 36
+    },
+    {
+      "fighter": "Ember",
+      "action": "Finisher",
+      "frame": 6,
+      "sourceCrop": [
+        1280,
+        514,
+        1536,
+        759
+      ],
+      "importMargin": 45
+    },
+    {
+      "fighter": "Ember",
+      "action": "Guard",
+      "frame": 1,
+      "sourceCrop": [
+        0,
+        759,
+        256,
+        1024
+      ],
+      "importMargin": 53
+    },
+    {
+      "fighter": "Ember",
+      "action": "Guard",
+      "frame": 2,
+      "sourceCrop": [
+        256,
+        759,
+        512,
+        1024
+      ],
+      "importMargin": 34
+    },
+    {
+      "fighter": "Ember",
+      "action": "Guard",
+      "frame": 3,
+      "sourceCrop": [
+        512,
+        759,
+        768,
+        1024
+      ],
+      "importMargin": 31
+    },
+    {
+      "fighter": "Ember",
+      "action": "Guard",
+      "frame": 4,
+      "sourceCrop": [
+        768,
+        759,
+        1024,
+        1024
+      ],
+      "importMargin": 34
+    },
+    {
+      "fighter": "Ember",
+      "action": "Guard",
+      "frame": 5,
+      "sourceCrop": [
+        1024,
+        759,
+        1280,
+        1024
+      ],
+      "importMargin": 41
+    },
+    {
+      "fighter": "Ember",
+      "action": "Guard",
+      "frame": 6,
+      "sourceCrop": [
+        1280,
+        759,
+        1536,
+        1024
+      ],
+      "importMargin": 51
+    },
+    {
+      "fighter": "Fern",
+      "action": "Slash",
+      "frame": 1,
+      "sourceCrop": [
+        0,
+        0,
+        256,
+        256
+      ],
+      "importMargin": 57
+    },
+    {
+      "fighter": "Fern",
+      "action": "Slash",
+      "frame": 2,
+      "sourceCrop": [
+        256,
+        0,
+        504,
+        256
+      ],
+      "importMargin": 37
+    },
+    {
+      "fighter": "Fern",
+      "action": "Slash",
+      "frame": 3,
+      "sourceCrop": [
+        504,
+        0,
+        768,
+        256
+      ],
+      "importMargin": 32
+    },
+    {
+      "fighter": "Fern",
+      "action": "Slash",
+      "frame": 4,
+      "sourceCrop": [
+        768,
+        0,
+        1036,
+        256
+      ],
+      "importMargin": 30
+    },
+    {
+      "fighter": "Fern",
+      "action": "Slash",
+      "frame": 5,
+      "sourceCrop": [
+        1036,
+        0,
+        1286,
+        256
+      ],
+      "importMargin": 37
+    },
+    {
+      "fighter": "Fern",
+      "action": "Slash",
+      "frame": 6,
+      "sourceCrop": [
+        1286,
+        0,
+        1536,
+        256
+      ],
+      "importMargin": 37
+    },
+    {
+      "fighter": "Fern",
+      "action": "Hit",
+      "frame": 1,
+      "sourceCrop": [
+        0,
+        256,
+        256,
+        512
+      ],
+      "importMargin": 66
+    },
+    {
+      "fighter": "Fern",
+      "action": "Hit",
+      "frame": 2,
+      "sourceCrop": [
+        256,
+        256,
+        508,
+        512
+      ],
+      "importMargin": 36
+    },
+    {
+      "fighter": "Fern",
+      "action": "Hit",
+      "frame": 3,
+      "sourceCrop": [
+        508,
+        256,
+        768,
+        512
+      ],
+      "importMargin": 33
+    },
+    {
+      "fighter": "Fern",
+      "action": "Hit",
+      "frame": 4,
+      "sourceCrop": [
+        768,
+        256,
+        1031,
+        512
+      ],
+      "importMargin": 32
+    },
+    {
+      "fighter": "Fern",
+      "action": "Hit",
+      "frame": 5,
+      "sourceCrop": [
+        1031,
+        256,
+        1280,
+        512
+      ],
+      "importMargin": 37
+    },
+    {
+      "fighter": "Fern",
+      "action": "Hit",
+      "frame": 6,
+      "sourceCrop": [
+        1280,
+        256,
+        1536,
+        512
+      ],
+      "importMargin": 65
+    },
+    {
+      "fighter": "Fern",
+      "action": "Finisher",
+      "frame": 1,
+      "sourceCrop": [
+        0,
+        512,
+        256,
+        765
+      ],
+      "importMargin": 69
+    },
+    {
+      "fighter": "Fern",
+      "action": "Finisher",
+      "frame": 2,
+      "sourceCrop": [
+        256,
+        512,
+        502,
+        765
+      ],
+      "importMargin": 42
+    },
+    {
+      "fighter": "Fern",
+      "action": "Finisher",
+      "frame": 3,
+      "sourceCrop": [
+        502,
+        512,
+        768,
+        765
+      ],
+      "importMargin": 31
+    },
+    {
+      "fighter": "Fern",
+      "action": "Finisher",
+      "frame": 4,
+      "sourceCrop": [
+        768,
+        512,
+        1034,
+        765
+      ],
+      "importMargin": 31
+    },
+    {
+      "fighter": "Fern",
+      "action": "Finisher",
+      "frame": 5,
+      "sourceCrop": [
+        1034,
+        512,
+        1280,
+        765
+      ],
+      "importMargin": 38
+    },
+    {
+      "fighter": "Fern",
+      "action": "Finisher",
+      "frame": 6,
+      "sourceCrop": [
+        1280,
+        512,
+        1536,
+        765
+      ],
+      "importMargin": 55
+    },
+    {
+      "fighter": "Fern",
+      "action": "Guard",
+      "frame": 1,
+      "sourceCrop": [
+        0,
+        765,
+        256,
+        1024
+      ],
+      "importMargin": 70
+    },
+    {
+      "fighter": "Fern",
+      "action": "Guard",
+      "frame": 2,
+      "sourceCrop": [
+        256,
+        765,
+        512,
+        1024
+      ],
+      "importMargin": 40
+    },
+    {
+      "fighter": "Fern",
+      "action": "Guard",
+      "frame": 3,
+      "sourceCrop": [
+        512,
+        765,
+        768,
+        1024
+      ],
+      "importMargin": 33
+    },
+    {
+      "fighter": "Fern",
+      "action": "Guard",
+      "frame": 4,
+      "sourceCrop": [
+        768,
+        765,
+        1031,
+        1024
+      ],
+      "importMargin": 32
+    },
+    {
+      "fighter": "Fern",
+      "action": "Guard",
+      "frame": 5,
+      "sourceCrop": [
+        1031,
+        765,
+        1280,
+        1024
+      ],
+      "importMargin": 37
+    },
+    {
+      "fighter": "Fern",
+      "action": "Guard",
+      "frame": 6,
+      "sourceCrop": [
+        1280,
+        765,
+        1536,
+        1024
+      ],
+      "importMargin": 51
+    },
+    {
+      "fighter": "Luna",
+      "action": "Slash",
+      "frame": 1,
+      "sourceCrop": [
+        0,
+        0,
+        256,
+        256
+      ],
+      "importMargin": 59
+    },
+    {
+      "fighter": "Luna",
+      "action": "Slash",
+      "frame": 2,
+      "sourceCrop": [
+        256,
+        0,
+        507,
+        256
+      ],
+      "importMargin": 37
+    },
+    {
+      "fighter": "Luna",
+      "action": "Slash",
+      "frame": 3,
+      "sourceCrop": [
+        507,
+        0,
+        768,
+        256
+      ],
+      "importMargin": 32
+    },
+    {
+      "fighter": "Luna",
+      "action": "Slash",
+      "frame": 4,
+      "sourceCrop": [
+        768,
+        0,
+        1041,
+        256
+      ],
+      "importMargin": 29
+    },
+    {
+      "fighter": "Luna",
+      "action": "Slash",
+      "frame": 5,
+      "sourceCrop": [
+        1041,
+        0,
+        1280,
+        256
+      ],
+      "importMargin": 40
+    },
+    {
+      "fighter": "Luna",
+      "action": "Slash",
+      "frame": 6,
+      "sourceCrop": [
+        1280,
+        0,
+        1536,
+        256
+      ],
+      "importMargin": 56
+    },
+    {
+      "fighter": "Luna",
+      "action": "Hit",
+      "frame": 1,
+      "sourceCrop": [
+        0,
+        256,
+        256,
+        512
+      ],
+      "importMargin": 66
+    },
+    {
+      "fighter": "Luna",
+      "action": "Hit",
+      "frame": 2,
+      "sourceCrop": [
+        256,
+        256,
+        494,
+        512
+      ],
+      "importMargin": 48
+    },
+    {
+      "fighter": "Luna",
+      "action": "Hit",
+      "frame": 3,
+      "sourceCrop": [
+        494,
+        256,
+        768,
+        512
+      ],
+      "importMargin": 28
+    },
+    {
+      "fighter": "Luna",
+      "action": "Hit",
+      "frame": 4,
+      "sourceCrop": [
+        768,
+        256,
+        1024,
+        512
+      ],
+      "importMargin": 35
+    },
+    {
+      "fighter": "Luna",
+      "action": "Hit",
+      "frame": 5,
+      "sourceCrop": [
+        1024,
+        256,
+        1285,
+        512
+      ],
+      "importMargin": 33
+    },
+    {
+      "fighter": "Luna",
+      "action": "Hit",
+      "frame": 6,
+      "sourceCrop": [
+        1285,
+        256,
+        1536,
+        512
+      ],
+      "importMargin": 36
+    },
+    {
+      "fighter": "Luna",
+      "action": "Finisher",
+      "frame": 1,
+      "sourceCrop": [
+        0,
+        512,
+        256,
+        767
+      ],
+      "importMargin": 50
+    },
+    {
+      "fighter": "Luna",
+      "action": "Finisher",
+      "frame": 2,
+      "sourceCrop": [
+        256,
+        512,
+        506,
+        767
+      ],
+      "importMargin": 42
+    },
+    {
+      "fighter": "Luna",
+      "action": "Finisher",
+      "frame": 3,
+      "sourceCrop": [
+        506,
+        512,
+        768,
+        767
+      ],
+      "importMargin": 33
+    },
+    {
+      "fighter": "Luna",
+      "action": "Finisher",
+      "frame": 4,
+      "sourceCrop": [
+        768,
+        512,
+        1030,
+        767
+      ],
+      "importMargin": 32
+    },
+    {
+      "fighter": "Luna",
+      "action": "Finisher",
+      "frame": 5,
+      "sourceCrop": [
+        1030,
+        512,
+        1280,
+        767
+      ],
+      "importMargin": 37
+    },
+    {
+      "fighter": "Luna",
+      "action": "Finisher",
+      "frame": 6,
+      "sourceCrop": [
+        1280,
+        512,
+        1536,
+        767
+      ],
+      "importMargin": 52
+    },
+    {
+      "fighter": "Luna",
+      "action": "Guard",
+      "frame": 1,
+      "sourceCrop": [
+        0,
+        767,
+        256,
+        1024
+      ],
+      "importMargin": 54
+    },
+    {
+      "fighter": "Luna",
+      "action": "Guard",
+      "frame": 2,
+      "sourceCrop": [
+        256,
+        767,
+        512,
+        1024
+      ],
+      "importMargin": 46
+    },
+    {
+      "fighter": "Luna",
+      "action": "Guard",
+      "frame": 3,
+      "sourceCrop": [
+        512,
+        767,
+        768,
+        1024
+      ],
+      "importMargin": 34
+    },
+    {
+      "fighter": "Luna",
+      "action": "Guard",
+      "frame": 4,
+      "sourceCrop": [
+        768,
+        767,
+        1024,
+        1024
+      ],
+      "importMargin": 37
+    },
+    {
+      "fighter": "Luna",
+      "action": "Guard",
+      "frame": 5,
+      "sourceCrop": [
+        1024,
+        767,
+        1280,
+        1024
+      ],
+      "importMargin": 41
+    },
+    {
+      "fighter": "Luna",
+      "action": "Guard",
+      "frame": 6,
+      "sourceCrop": [
+        1280,
+        767,
+        1536,
+        1024
+      ],
+      "importMargin": 50
+    },
+    {
+      "fighter": "Nyx",
+      "action": "Slash",
+      "frame": 1,
+      "sourceCrop": [
+        0,
+        0,
+        256,
+        256
+      ],
+      "importMargin": 49
+    },
+    {
+      "fighter": "Nyx",
+      "action": "Slash",
+      "frame": 2,
+      "sourceCrop": [
+        256,
+        0,
+        512,
+        256
+      ],
+      "importMargin": 38
+    },
+    {
+      "fighter": "Nyx",
+      "action": "Slash",
+      "frame": 3,
+      "sourceCrop": [
+        512,
+        0,
+        768,
+        256
+      ],
+      "importMargin": 34
+    },
+    {
+      "fighter": "Nyx",
+      "action": "Slash",
+      "frame": 4,
+      "sourceCrop": [
+        768,
+        0,
+        1024,
+        256
+      ],
+      "importMargin": 36
+    },
+    {
+      "fighter": "Nyx",
+      "action": "Slash",
+      "frame": 5,
+      "sourceCrop": [
+        1024,
+        0,
+        1280,
+        256
+      ],
+      "importMargin": 38
+    },
+    {
+      "fighter": "Nyx",
+      "action": "Slash",
+      "frame": 6,
+      "sourceCrop": [
+        1280,
+        0,
+        1536,
+        256
+      ],
+      "importMargin": 38
+    },
+    {
+      "fighter": "Nyx",
+      "action": "Hit",
+      "frame": 1,
+      "sourceCrop": [
+        0,
+        256,
+        256,
+        512
+      ],
+      "importMargin": 59
+    },
+    {
+      "fighter": "Nyx",
+      "action": "Hit",
+      "frame": 2,
+      "sourceCrop": [
+        256,
+        256,
+        512,
+        512
+      ],
+      "importMargin": 49
+    },
+    {
+      "fighter": "Nyx",
+      "action": "Hit",
+      "frame": 3,
+      "sourceCrop": [
+        512,
+        256,
+        768,
+        512
+      ],
+      "importMargin": 37
+    },
+    {
+      "fighter": "Nyx",
+      "action": "Hit",
+      "frame": 4,
+      "sourceCrop": [
+        768,
+        256,
+        1024,
+        512
+      ],
+      "importMargin": 35
+    },
+    {
+      "fighter": "Nyx",
+      "action": "Hit",
+      "frame": 5,
+      "sourceCrop": [
+        1024,
+        256,
+        1280,
+        512
+      ],
+      "importMargin": 39
+    },
+    {
+      "fighter": "Nyx",
+      "action": "Hit",
+      "frame": 6,
+      "sourceCrop": [
+        1280,
+        256,
+        1536,
+        512
+      ],
+      "importMargin": 53
+    },
+    {
+      "fighter": "Nyx",
+      "action": "Finisher",
+      "frame": 1,
+      "sourceCrop": [
+        0,
+        512,
+        256,
+        765
+      ],
+      "importMargin": 35
+    },
+    {
+      "fighter": "Nyx",
+      "action": "Finisher",
+      "frame": 2,
+      "sourceCrop": [
+        256,
+        512,
+        512,
+        765
+      ],
+      "importMargin": 40
+    },
+    {
+      "fighter": "Nyx",
+      "action": "Finisher",
+      "frame": 3,
+      "sourceCrop": [
+        512,
+        512,
+        789,
+        765
+      ],
+      "importMargin": 27
+    },
+    {
+      "fighter": "Nyx",
+      "action": "Finisher",
+      "frame": 4,
+      "sourceCrop": [
+        789,
+        512,
+        1037,
+        765
+      ],
+      "importMargin": 37
+    },
+    {
+      "fighter": "Nyx",
+      "action": "Finisher",
+      "frame": 5,
+      "sourceCrop": [
+        1037,
+        512,
+        1280,
+        765
+      ],
+      "importMargin": 39
+    },
+    {
+      "fighter": "Nyx",
+      "action": "Finisher",
+      "frame": 6,
+      "sourceCrop": [
+        1280,
+        512,
+        1536,
+        765
+      ],
+      "importMargin": 48
+    },
+    {
+      "fighter": "Nyx",
+      "action": "Guard",
+      "frame": 1,
+      "sourceCrop": [
+        0,
+        765,
+        256,
+        1024
+      ],
+      "importMargin": 45
+    },
+    {
+      "fighter": "Nyx",
+      "action": "Guard",
+      "frame": 2,
+      "sourceCrop": [
+        256,
+        765,
+        512,
+        1024
+      ],
+      "importMargin": 44
+    },
+    {
+      "fighter": "Nyx",
+      "action": "Guard",
+      "frame": 3,
+      "sourceCrop": [
+        512,
+        765,
+        777,
+        1024
+      ],
+      "importMargin": 32
+    },
+    {
+      "fighter": "Nyx",
+      "action": "Guard",
+      "frame": 4,
+      "sourceCrop": [
+        777,
+        765,
+        1024,
+        1024
+      ],
+      "importMargin": 42
+    },
+    {
+      "fighter": "Nyx",
+      "action": "Guard",
+      "frame": 5,
+      "sourceCrop": [
+        1024,
+        765,
+        1280,
+        1024
+      ],
+      "importMargin": 41
+    },
+    {
+      "fighter": "Nyx",
+      "action": "Guard",
+      "frame": 6,
+      "sourceCrop": [
+        1280,
+        765,
+        1536,
+        1024
+      ],
+      "importMargin": 52
+    },
+    {
+      "fighter": "Volt",
+      "action": "Slash",
+      "frame": 1,
+      "sourceCrop": [
+        0,
+        0,
+        256,
+        256
+      ],
+      "importMargin": 46
+    },
+    {
+      "fighter": "Volt",
+      "action": "Slash",
+      "frame": 2,
+      "sourceCrop": [
+        256,
+        0,
+        512,
+        256
+      ],
+      "importMargin": 36
+    },
+    {
+      "fighter": "Volt",
+      "action": "Slash",
+      "frame": 3,
+      "sourceCrop": [
+        512,
+        0,
+        779,
+        256
+      ],
+      "importMargin": 31
+    },
+    {
+      "fighter": "Volt",
+      "action": "Slash",
+      "frame": 4,
+      "sourceCrop": [
+        779,
+        0,
+        1026,
+        256
+      ],
+      "importMargin": 37
+    },
+    {
+      "fighter": "Volt",
+      "action": "Slash",
+      "frame": 5,
+      "sourceCrop": [
+        1026,
+        0,
+        1280,
+        256
+      ],
+      "importMargin": 35
+    },
+    {
+      "fighter": "Volt",
+      "action": "Slash",
+      "frame": 6,
+      "sourceCrop": [
+        1280,
+        0,
+        1536,
+        256
+      ],
+      "importMargin": 51
+    },
+    {
+      "fighter": "Volt",
+      "action": "Hit",
+      "frame": 1,
+      "sourceCrop": [
+        0,
+        256,
+        256,
+        512
+      ],
+      "importMargin": 65
+    },
+    {
+      "fighter": "Volt",
+      "action": "Hit",
+      "frame": 2,
+      "sourceCrop": [
+        256,
+        256,
+        512,
+        512
+      ],
+      "importMargin": 36
+    },
+    {
+      "fighter": "Volt",
+      "action": "Hit",
+      "frame": 3,
+      "sourceCrop": [
+        512,
+        256,
+        768,
+        512
+      ],
+      "importMargin": 35
+    },
+    {
+      "fighter": "Volt",
+      "action": "Hit",
+      "frame": 4,
+      "sourceCrop": [
+        768,
+        256,
+        1024,
+        512
+      ],
+      "importMargin": 34
+    },
+    {
+      "fighter": "Volt",
+      "action": "Hit",
+      "frame": 5,
+      "sourceCrop": [
+        1024,
+        256,
+        1280,
+        512
+      ],
+      "importMargin": 35
+    },
+    {
+      "fighter": "Volt",
+      "action": "Hit",
+      "frame": 6,
+      "sourceCrop": [
+        1280,
+        256,
+        1536,
+        512
+      ],
+      "importMargin": 58
+    },
+    {
+      "fighter": "Volt",
+      "action": "Finisher",
+      "frame": 1,
+      "sourceCrop": [
+        0,
+        512,
+        256,
+        759
+      ],
+      "importMargin": 53
+    },
+    {
+      "fighter": "Volt",
+      "action": "Finisher",
+      "frame": 2,
+      "sourceCrop": [
+        256,
+        512,
+        512,
+        759
+      ],
+      "importMargin": 35
+    },
+    {
+      "fighter": "Volt",
+      "action": "Finisher",
+      "frame": 3,
+      "sourceCrop": [
+        512,
+        512,
+        774,
+        759
+      ],
+      "importMargin": 32
+    },
+    {
+      "fighter": "Volt",
+      "action": "Finisher",
+      "frame": 4,
+      "sourceCrop": [
+        774,
+        512,
+        1032,
+        759
+      ],
+      "importMargin": 34
+    },
+    {
+      "fighter": "Volt",
+      "action": "Finisher",
+      "frame": 5,
+      "sourceCrop": [
+        1032,
+        512,
+        1280,
+        759
+      ],
+      "importMargin": 37
+    },
+    {
+      "fighter": "Volt",
+      "action": "Finisher",
+      "frame": 6,
+      "sourceCrop": [
+        1280,
+        512,
+        1536,
+        759
+      ],
+      "importMargin": 35
+    },
+    {
+      "fighter": "Volt",
+      "action": "Guard",
+      "frame": 1,
+      "sourceCrop": [
+        0,
+        759,
+        256,
+        1024
+      ],
+      "importMargin": 54
+    },
+    {
+      "fighter": "Volt",
+      "action": "Guard",
+      "frame": 2,
+      "sourceCrop": [
+        256,
+        759,
+        512,
+        1024
+      ],
+      "importMargin": 35
+    },
+    {
+      "fighter": "Volt",
+      "action": "Guard",
+      "frame": 3,
+      "sourceCrop": [
+        512,
+        759,
+        773,
+        1024
+      ],
+      "importMargin": 31
+    },
+    {
+      "fighter": "Volt",
+      "action": "Guard",
+      "frame": 4,
+      "sourceCrop": [
+        773,
+        759,
+        1037,
+        1024
+      ],
+      "importMargin": 31
+    },
+    {
+      "fighter": "Volt",
+      "action": "Guard",
+      "frame": 5,
+      "sourceCrop": [
+        1037,
+        759,
+        1280,
+        1024
+      ],
+      "importMargin": 39
+    },
+    {
+      "fighter": "Volt",
+      "action": "Guard",
+      "frame": 6,
+      "sourceCrop": [
+        1280,
+        759,
+        1536,
+        1024
+      ],
+      "importMargin": 59
+    },
+    {
+      "fighter": "Zephyr",
+      "action": "Slash",
+      "frame": 1,
+      "sourceCrop": [
+        0,
+        0,
+        256,
+        256
+      ],
+      "importMargin": 68
+    },
+    {
+      "fighter": "Zephyr",
+      "action": "Slash",
+      "frame": 2,
+      "sourceCrop": [
+        256,
+        0,
+        506,
+        256
+      ],
+      "importMargin": 39
+    },
+    {
+      "fighter": "Zephyr",
+      "action": "Slash",
+      "frame": 3,
+      "sourceCrop": [
+        506,
+        0,
+        768,
+        256
+      ],
+      "importMargin": 33
+    },
+    {
+      "fighter": "Zephyr",
+      "action": "Slash",
+      "frame": 4,
+      "sourceCrop": [
+        768,
+        0,
+        1024,
+        256
+      ],
+      "importMargin": 38
+    },
+    {
+      "fighter": "Zephyr",
+      "action": "Slash",
+      "frame": 5,
+      "sourceCrop": [
+        1024,
+        0,
+        1280,
+        256
+      ],
+      "importMargin": 40
+    },
+    {
+      "fighter": "Zephyr",
+      "action": "Slash",
+      "frame": 6,
+      "sourceCrop": [
+        1280,
+        0,
+        1536,
+        256
+      ],
+      "importMargin": 53
+    },
+    {
+      "fighter": "Zephyr",
+      "action": "Hit",
+      "frame": 1,
+      "sourceCrop": [
+        0,
+        256,
+        256,
+        512
+      ],
+      "importMargin": 72
+    },
+    {
+      "fighter": "Zephyr",
+      "action": "Hit",
+      "frame": 2,
+      "sourceCrop": [
+        256,
+        256,
+        505,
+        512
+      ],
+      "importMargin": 46
+    },
+    {
+      "fighter": "Zephyr",
+      "action": "Hit",
+      "frame": 3,
+      "sourceCrop": [
+        505,
+        256,
+        768,
+        512
+      ],
+      "importMargin": 32
+    },
+    {
+      "fighter": "Zephyr",
+      "action": "Hit",
+      "frame": 4,
+      "sourceCrop": [
+        768,
+        256,
+        1024,
+        512
+      ],
+      "importMargin": 34
+    },
+    {
+      "fighter": "Zephyr",
+      "action": "Hit",
+      "frame": 5,
+      "sourceCrop": [
+        1024,
+        256,
+        1280,
+        512
+      ],
+      "importMargin": 35
+    },
+    {
+      "fighter": "Zephyr",
+      "action": "Hit",
+      "frame": 6,
+      "sourceCrop": [
+        1280,
+        256,
+        1536,
+        512
+      ],
+      "importMargin": 61
+    },
+    {
+      "fighter": "Zephyr",
+      "action": "Finisher",
+      "frame": 1,
+      "sourceCrop": [
+        0,
+        512,
+        255,
+        768
+      ],
+      "importMargin": 59
+    },
+    {
+      "fighter": "Zephyr",
+      "action": "Finisher",
+      "frame": 2,
+      "sourceCrop": [
+        255,
+        512,
+        509,
+        768
+      ],
+      "importMargin": 35
+    },
+    {
+      "fighter": "Zephyr",
+      "action": "Finisher",
+      "frame": 3,
+      "sourceCrop": [
+        509,
+        512,
+        768,
+        768
+      ],
+      "importMargin": 33
+    },
+    {
+      "fighter": "Zephyr",
+      "action": "Finisher",
+      "frame": 4,
+      "sourceCrop": [
+        768,
+        512,
+        1027,
+        768
+      ],
+      "importMargin": 34
+    },
+    {
+      "fighter": "Zephyr",
+      "action": "Finisher",
+      "frame": 5,
+      "sourceCrop": [
+        1027,
+        512,
+        1280,
+        768
+      ],
+      "importMargin": 35
+    },
+    {
+      "fighter": "Zephyr",
+      "action": "Finisher",
+      "frame": 6,
+      "sourceCrop": [
+        1280,
+        512,
+        1536,
+        768
+      ],
+      "importMargin": 34
+    },
+    {
+      "fighter": "Zephyr",
+      "action": "Guard",
+      "frame": 1,
+      "sourceCrop": [
+        0,
+        768,
+        256,
+        1024
+      ],
+      "importMargin": 58
+    },
+    {
+      "fighter": "Zephyr",
+      "action": "Guard",
+      "frame": 2,
+      "sourceCrop": [
+        256,
+        768,
+        512,
+        1024
+      ],
+      "importMargin": 40
+    },
+    {
+      "fighter": "Zephyr",
+      "action": "Guard",
+      "frame": 3,
+      "sourceCrop": [
+        512,
+        768,
+        768,
+        1024
+      ],
+      "importMargin": 36
+    },
+    {
+      "fighter": "Zephyr",
+      "action": "Guard",
+      "frame": 4,
+      "sourceCrop": [
+        768,
+        768,
+        1024,
+        1024
+      ],
+      "importMargin": 40
+    },
+    {
+      "fighter": "Zephyr",
+      "action": "Guard",
+      "frame": 5,
+      "sourceCrop": [
+        1024,
+        768,
+        1280,
+        1024
+      ],
+      "importMargin": 45
+    },
+    {
+      "fighter": "Zephyr",
+      "action": "Guard",
+      "frame": 6,
+      "sourceCrop": [
+        1280,
+        768,
+        1536,
+        1024
+      ],
+      "importMargin": 56
+    }
+  ]
+}

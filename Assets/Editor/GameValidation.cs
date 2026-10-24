@@ -147,27 +147,39 @@ public static class GameValidation
                 Check(game.CharacterNames.Length==8 && game.backgrounds.Length==6,"Eight fighters and six arenas are saved");
                 Check(game.roundsToWin==3 && game.roundDuration==99,"Rounds are 99 seconds, first to three");
                 foreach(var catalog in game.CharacterAnimationSets)foreach(string state in new[]{"Walk","Jump","Hurt","Push","Punch","Kick","Knockout","Block","DoubleJump","Special","Dash","Backstep","Victory","Ultimate","Downed","GetUp"})Check(catalog.Get(state).Length==10 && catalog.Get(state).All(sprite=>sprite),"Complete native animation "+catalog.name+" / "+state);
-                game.ChooseMode(false);game.hud.RefreshMenu();Capture("Documentation/RuneRumble-CharacterSelect.png");
+                CheckLiveLabels(hud.titleMenu);
+                Capture("Documentation/RuneRumble-Title.png");
+                Capture("Documentation/RuneRumble-Title-16x10.png",1440,900);
+                Capture("Documentation/RuneRumble-Title-Ultrawide.png",1920,800);
+                hud.modeButtons[1].onClick.Invoke();Check(game.Screen==WoodlandGame.MenuScreen.Characters,"Saved local-versus button opens roster");game.hud.RefreshMenu();CheckLiveLabels(hud.characterMenu);Capture("Documentation/RuneRumble-CharacterSelect.png");
                 Capture("Documentation/RuneRumble-CharacterSelect-16x10.png",1440,900);
                 Capture("Documentation/RuneRumble-CharacterSelect-Ultrawide.png",1920,800);
                 Check(hud.menuRoot.GetComponent<RectTransform>().anchorMin==Vector2.one*.5f,"Menu design canvas is anchored at the screen center");
-                foreach(var card in hud.characterButtons)Check(card.transform.Find("Portrait Card Placeholder") && card.transform.Find("Frame Corner Horizontal 0"),"Fighter cards have framed placeholders");
+                foreach(var card in hud.characterButtons)Check(card.transform.Find("Portrait Card Placeholder") && card.transform.Find("Painted Card Frame"),"Fighter cards have layered painted frames");
                 foreach(var controller in game.CharacterControllers)foreach(var clip in controller.animationClips)Check(!AnimationUtility.GetCurveBindings(clip).Any(binding=>binding.type==typeof(Transform)),"Sprite clip has no artificial transform rotation: "+clip.name);
                 Check(hud.selectionPortraits.All(image=>image) && hud.characterButtons.Length==8,"Both player showcases and eight roster cards exist");
-                game.PreviewCharacter(4);game.ConfirmCharacter();game.PreviewCharacter(7);game.ConfirmCharacter();game.PreviewArena(5);hud.RefreshMenu();Capture("Documentation/RuneRumble-StageSelect.png");
+                hud.characterButtons[4].onClick.Invoke();hud.confirmCharacterButton.onClick.Invoke();hud.characterButtons[7].onClick.Invoke();hud.confirmCharacterButton.onClick.Invoke();hud.mapButtons[5].onClick.Invoke();hud.RefreshMenu();Check(game.CharacterChoices[0]==4 && game.CharacterChoices[1]==7 && game.PendingArena==5,"Saved roster, lock-in and map buttons select the requested match");CheckLiveLabels(hud.mapMenu);Capture("Documentation/RuneRumble-StageSelect.png");
                 Check(hud.mapPreview && hud.mapButtons.Length==6,"Large selected-stage preview and six cards exist");
                 Check(hud.mapPreview.rectTransform.pivot==Vector2.one*.5f,"Map preview images use a centered pivot");
                 Capture("Documentation/RuneRumble-StageSelect-Ultrawide.png",1920,800);
-                game.StartSelectedMatch();SetStage(0);
+                hud.startButton.onClick.Invoke();SetStage(0);
             } else if(stage==0 && game.playing && string.IsNullOrEmpty(game.message)) {
                 Check(game.plank.bodyType==RigidbodyType2D.Kinematic && !game.plankArt.enabled,"Ground is fixed with no floating platform art");
                 Check(game.RoundTimeRemaining>97 && hud.roundTimerText,"Round starts with a live 99-second timer");
                 Check(game.edgeHatches.All(h=>h && !h.enabled) && game.HatchIsOpen(0) && game.HatchIsOpen(1),"Both edge holes are open from round start");
-                Check(Mathf.Abs(game.edgeHatchArt[0].bounds.size.x-3.6f)<.03f && Mathf.Abs(game.edgeHatchArt[1].bounds.center.x-8.2f)<.03f,"Large rune shafts sit at the outer edges");
+                Check(Mathf.Abs(game.edgeHatchArt[0].bounds.size.x-3.6f)<.03f && Mathf.Abs(game.edgeHatchArt[1].bounds.center.x-8.2f)<.03f,"Large open manholes sit at the outer edges");
                 foreach(var fighter in game.players){fighter.aiControlled=false;fighter.inputEnabled=false;}
                 PlaceOnPvpBase(game,false);SetStage(1);
             } else if(stage==1 && SimElapsed>.4f) {
                 Check(a.Grounded && b.Grounded,"Fighters stand on the central floor");
+                CheckLiveLabels(hud.matchHud);
+                Capture("Documentation/RuneRumble-HUD.png");
+                Capture("Documentation/RuneRumble-HUD-16x10.png",1440,900);
+                Capture("Documentation/RuneRumble-HUD-Ultrawide.png",1920,800);
+                for(int map=0;map<6;map++){game.SelectArena(map);Capture("Documentation/RuneRumble-Arena-"+map+".png");}
+                game.SelectArena(5);
+                hud.OpenMoveGuide();CheckLiveLabels(hud.helpPanel);Capture("Documentation/RuneRumble-MoveGuide.png");hud.CloseMoveGuide();game.ResumeMatch();
+
                 Check(a.Facing>0 && b.Facing<0,"Fighters face their rival");
                 SessionState.SetFloat("Woodland.DuelClock",game.RoundTimeRemaining);game.TogglePause();SetStage(2);
             } else if(stage==2 && Elapsed>.35f) {
@@ -202,6 +214,7 @@ public static class GameValidation
             } else if(stage==11 && SimElapsed>.4f) {
                 int c=SessionState.GetInt("Woodland.PresentationCharacter",0);
                 Check(a.Grounded && b.Grounded,"Presentation pair is grounded: "+c);
+                Check(WoodlandEffects.Instance.AttackFramesLoaded(c)==24,"Four six-frame brush effects loaded: "+c);
                 Check(WoodlandEffects.Instance.ComboFramesLoaded(c)==12,"Hit and finisher VFX loaded: "+c);
                 SessionState.SetInt("Woodland.PresentationVfx",WoodlandEffects.Instance.ComboAnimationsPlayed);
                 Check(a.TryAttack(true),"Natural punch starts: "+c);SetStage(12);
@@ -232,6 +245,14 @@ public static class GameValidation
                 Complete(true,"DUEL_PRESENTATION_PASS: centered responsive cards and portraits, upright natural attacks, all eight hit effects, large outer shafts and falling presentation");
             }
         } catch(Exception exception){Complete(false,exception.ToString());}
+    }
+    static void CheckLiveLabels(GameObject screen)
+    {
+        Canvas.ForceUpdateCanvases();
+        foreach(var text in screen.GetComponentsInChildren<Text>()) {
+            if(!text.gameObject.activeInHierarchy || string.IsNullOrWhiteSpace(text.text))continue;
+            Check(text.preferredHeight<=text.rectTransform.rect.height+1,"Visible label fits its height: "+screen.name+" / "+text.name+" ["+text.preferredHeight+" <= "+text.rectTransform.rect.height+"]");
+        }
     }
     static void PreparePresentationPair(WoodlandGame game,int character)
     {

@@ -1,13 +1,17 @@
-# Continue Rune Rumble
+# Current checkpoint, 2026-10-24
 
-Workspace: C:/Users/johna/OneDrive/Documents/Portfolio/woodland-tumble. Branch: feat/rune-rumble-combat-presentation, based on origin/lab-duel-roster at 1a4d735. The older GameDev/woodland-tumble checkout has unrelated uncommitted work and was left untouched.
+The PC must stay on. John revoked shutdown.
 
-The user's final choice is Arcade Aura menu/HUD and Ink & Motion attack effects. Read DESIGN.md and Documentation/ART-DIRECTION.md; inspect both boards in Documentation/Design-Samples before generating anything. Preserve all eight CharactersRework fighters. Do not resume the rejected wood, shard/rune-frame or all-liquid experiments.
+Arcade Aura UI, six new maps and 192 Ink & Motion effect frames are in the project. The saved scene was rebuilt. The first redesigned-scene regression passed 414 checks. Later corrections trim brush-panel padding, use clearer small text, add action captions, and improve eight-character guide descriptions. The final scene rebuild, label checks, repeat counterplay and Windows build are still pending.
 
-Combat changes are in Scout.cs, WoodlandEffects.cs and WoodlandHUD.cs. GameValidation.RunCounterplay reproduced the missed-punch recovery failure before the change and now passes 16 checks: whiff commitment, guard endurance, block punishment, repeated-punch route rejection, natural P-P-K finisher and stamina. Reports are Documentation/COUNTERPLAY-BEFORE-v9.json and COUNTERPLAY-v9.json. Full presentation/ring-out regression and standalone build remain pending. The editor also logged an unrelated Unity Search index exception; the controlled Play Mode checks completed successfully.
+Automatic approval review blocked a combined command to remove unused old fonts and run the final Unity checks/build. It reported only "blocked by policy". John approved the retry, but automatic review rejected that retry too. Do not retry again or work around the rejection. No shutdown command was issued after the user revoked it.
 
-Next implement approved artwork in the existing GameSetup/HUD/effects files, rebuild the saved scene, run GameValidation.RunDuelSaved and RunCounterplay, inspect three aspect ratios and all eight fighters, then build Windows. Do not claim current concept boards are running-game screenshots. Keep TODO.md current.
+Current branch: feat/rune-rumble-combat-presentation. Presentation work is being saved as an unfinished checkpoint, without a release merge. Combat checkpoint c49b747 was already pushed.
 
-Earlier default-branch work is retained in git stash. Rejected image drafts and an unapproved interface patch are outside the project in ../woodland-update-workbench. Do not apply that patch blindly. Generated originals remain under C:/Users/johna/.codex/generated_images/01a16970-d7f5-7dc2-906c-dd1f89b33816.
+Evidence: Documentation/DUEL-VALIDATION.json (414 first-pass checks), COUNTERPLAY-v9.json (16 earlier combat checks), FX-SLICING-v9.json (192 frames, no output-edge contacts), ASSET-CLEANUP-v9.json (817 unused assets, 78,794,446 bytes removed). The final corrections need new Unity evidence before release.
 
-The user authorized PC shutdown at completion or 5 percent remaining usage. The 5 percent threshold was reached, so work was saved before shutdown. No shutdown automation was installed.
+Backups of removed assets are outside the project in ../woodland-update-workbench/removed-v9. Cleanup verified the active scene/prefab asset references. Old four-character art, animations, menus, arena props and effects were removed. The old Python importer and its obsolete source manifest were also removed; the current roster importer now uses its template inside CharactersRework.
+
+Art prompts: Documentation/ART-BATCH-v9.json. Sources: Documentation/Design-Samples/FX-*-v9.png. Runtime effects: Assets/Resources/Art/CombatV9. Repackage with Tools/prepare_combat_v9.py; optional Python dependencies are pinned in Tools/requirements.txt. It does not generate images.
+
+After the command restriction is resolved, run final Unity verification and inspect fresh title/roster/HUD/guide captures at 1280x720, 1440x900 and 1920x800, fix actual failures, then commit and use the solo-repo fast-forward merge/push flow. Keep all CharactersRework and AnimationsRework catalogs. Do not apply the rejected workbench draft or old stash.

@@ -7,13 +7,20 @@
 - [x] Add punishable whiffs, blocked recovery, confirmed punch-punch-kick route and CPU pressure defense.
 - [x] Reproduce the whiff bug, then pass 16 targeted counterplay checks in Unity 6000.5.10f1.
 - [x] Generate comparison boards and record the user's choice: Arcade Aura menu/HUD, Ink & Motion effects.
-- [ ] Build the approved interface and effects using DESIGN.md and the two boards.
-- [ ] Refresh six maps within the approved direction; retain grounded collision and both open manholes.
-- [ ] Slice, inspect and integrate approved per-fighter animated effects. Earlier generated sets are drafts only.
-- [ ] Verify menu/card label placement at three aspect ratios, full eight-fighter/ring-out regression and Windows build.
+- [x] Build the approved Arcade Aura interface and Ink & Motion effects.
+- [ ] Rebuild the final caption/font corrections and repeat current Unity validation once the command restriction is resolved.
+- [x] Generate and save title backdrop, selection hall, title logo, neutral brush band, open manhole and first four arena illustrations.
+- [x] Finish and inspect all six maps and eight effect sheets; package 192 frames with zero output-edge contacts.
+- [x] Remove 817 unused legacy asset files; active Unity references resolve. Backups remain outside the project.
+- [ ] Old-font cleanup and final verification remain blocked: John approved the retry, but automatic review rejected it again.
+- [x] Compile the initial presentation pass in Unity 6000.5.10f1 without C# errors. Later caption/guide corrections still need compilation.
+- [x] Refresh six maps within the approved direction; retain grounded collision and both open manholes.
+- [x] Slice, inspect and integrate all eight fighters' slash, hit, finisher and guard animations.
+- [x] First redesigned-scene regression: 414 Unity checks passed, including all eight fighters and ring-outs.
+- [ ] Confirm final text/caption corrections at three aspect ratios; run counterplay again and build Windows.
 - [ ] Merge only after full regression and visual checks. No finished release or Windows build is claimed.
 
-Shutdown was requested when remaining usage reached 5 percent. That threshold was observed before presentation implementation finished. Continue from this checklist and HANDOFF-CURRENT.md.
+User revoked the shutdown instruction on 2026-10-24. Do not shut down this PC. Continue from this checklist and HANDOFF-CURRENT.md.
 
 ## Presentation corrections in progress
 
@@ -24,7 +31,7 @@ Shutdown was requested when remaining usage reached 5 percent. That threshold wa
 - [x] Enlarge permanently open rune shafts to 3.6 units and move their centers to ±8.2 at the arena edges.
 - [x] Add a short sinking/fading ring-out sequence, contact removal, shaft-level particles and rumble.
 - [x] Rebuild, exercise natural punches/kicks for all eight fighters, inspect multi-aspect menus/portraits and native desktop captures. Expanded fixture passed 406 checks.
-- [ ] Save the verified presentation corrections to GitHub.
+- [ ] Save the final verified presentation corrections to GitHub.
 
 # Rune Rumble: current tasks
 
