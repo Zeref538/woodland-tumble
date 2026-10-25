@@ -633,7 +633,11 @@ public class WoodlandEffects : MonoBehaviour
                     matchZoom=Mathf.Clamp(Mathf.Max(3,(span+sideMargin)/(2*cam.aspect),high-low+.25f),3,cameraZoom);
                     float imageHalfWidth=game.backgroundArt.bounds.extents.x;
                     float limit=Mathf.Max(0,imageHalfWidth-matchZoom*cam.aspect-.05f);
-                    focus=new Vector3(Mathf.Clamp((first.Body.position.x+second.Body.position.x)*.5f,-limit,limit),(low+high)*.5f-matchZoom*.1f,cameraHome.z);
+                    float desiredY=(low+high)*.5f+matchZoom*.16f;
+                    var scenery=game.backgroundArt.bounds;
+                    float minY=scenery.min.y+matchZoom,maxY=scenery.max.y-matchZoom;
+                    float framedY=minY<=maxY?Mathf.Clamp(desiredY,minY,maxY):scenery.center.y;
+                    focus=new Vector3(Mathf.Clamp((first.Body.position.x+second.Body.position.x)*.5f,-limit,limit),framedY,cameraHome.z);
                 }
             }
             if(cinematic)focus=Vector3.Lerp(focus,new Vector3(cinematicFocus.x,cinematicFocus.y,cameraHome.z),.28f);

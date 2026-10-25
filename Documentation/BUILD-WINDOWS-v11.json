@@ -1,0 +1,23 @@
+{
+  "files": 179,
+  "bytes": 853331804,
+  "assemblySha256": "353e8bed50ce9d488fb7a5d9fb73087fbfd0640881afff9abe09207804665a9b",
+  "sceneChecks": 624,
+  "counterplayChecks": 16,
+  "hasDiamondLayoutCode": true,
+  "hasVersusObject": true,
+  "fontAssets": {
+    "RumbleDisplay": true,
+    "RumbleSignal": true,
+    "RumbleRead": true
+  },
+  "native": {
+    "sampleSeconds": 18,
+    "aliveAfterSample": true,
+    "verifiedExecutable": true,
+    "workingSetBytes": 1229037568,
+    "scriptDomainInitialized": true,
+    "loggedExceptions": 0,
+    "closedAfterTest": true
+  }
+}

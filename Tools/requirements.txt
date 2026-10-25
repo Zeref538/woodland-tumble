@@ -1,2 +1,6 @@
 Pillow==12.1.1
 numpy==2.4.3
+
+# Optional editable typeface generation
+fonttools==4.63.0
+shapely==2.1.2

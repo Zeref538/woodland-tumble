@@ -7,8 +7,8 @@ public class WoodlandHUD : MonoBehaviour
 {
     public const float FighterHudScale=.9f;
     public const float FighterHudHeight=154;
-    public const float ActionBarWidth=344;
-    public const float ActionBarHeight=104;
+    public const float ActionClusterWidth=256;
+    public const float ActionClusterHeight=280;
     public const float ActionButtonDiameter=80;
     public WoodlandGame game;
     public Text[] names = new Text[2];
@@ -65,6 +65,7 @@ public class WoodlandHUD : MonoBehaviour
     public Button[] settingsButtons = new Button[5];
     public Button confirmCharacterButton, ruleBackButton, characterBackButton, settingsBackButton;
     public Text characterDetail, characterHeading, settingsSummary;
+    public CanvasGroup[] actionClusters=new CanvasGroup[2];
     public Image[] fighterPortraits = new Image[2];
     public Button[] mapButtons = new Button[4];
     public Button[] pauseButtons = new Button[4];
@@ -122,10 +123,10 @@ public class WoodlandHUD : MonoBehaviour
             var timer=new GameObject("Round Timer",typeof(RectTransform),typeof(CanvasRenderer),typeof(Text));
             timer.transform.SetParent(matchHud.transform,false);
             roundTimerText=timer.GetComponent<Text>();roundTimerText.font=bannerText.font;
-            roundTimerText.fontSize=48;roundTimerText.alignment=TextAnchor.UpperCenter;roundTimerText.supportRichText=false;
+            roundTimerText.fontSize=24;roundTimerText.alignment=TextAnchor.MiddleCenter;roundTimerText.supportRichText=false;
             roundTimerText.raycastTarget=false;
             var rect=roundTimerText.rectTransform;rect.anchorMin=rect.anchorMax=new Vector2(.5f,1);
-            rect.pivot=new Vector2(.5f,1);rect.anchoredPosition=new Vector2(0,-20);rect.sizeDelta=new Vector2(150,66);
+            rect.pivot=new Vector2(.5f,1);rect.anchoredPosition=new Vector2(0,-97);rect.sizeDelta=new Vector2(74,30);
         }
         // Old saved HUDs may still contain health graphics; retain portrait/name/skill controls.
         foreach(var plate in fighterPlates)if(plate)foreach(var child in plate.GetComponentsInChildren<Transform>(true))
@@ -382,6 +383,11 @@ public class WoodlandHUD : MonoBehaviour
     }
     void RefreshActionControls(int player,Scout scout,Gamepad pad,string style)
     {
+        if(player<actionClusters.Length && actionClusters[player]) {
+            bool ringOut=game.players[0].RingOutFalling || game.players[1].RingOutFalling || game.players[0].KnockedOut || game.players[1].KnockedOut;
+            var group=actionClusters[player];group.alpha=Mathf.MoveTowards(group.alpha,ringOut?.08f:1,Time.unscaledDeltaTime*9);
+            group.interactable=group.blocksRaycasts=!ringOut;
+        }
         bool cpu=player==1 && game.SoloMode;
         bool ps=pad!=null && style=="PLAYSTATION";
         string[] letters=pad==null?(player==0?new[]{"S","T","Y","G"}:new[]{"DN","I","O","K"}):style=="XBOX"?new[]{"A","X","B","Y"}:new[]{"S","W","E","N"};

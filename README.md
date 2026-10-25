@@ -63,6 +63,6 @@ Use Unity batch mode with `-projectPath` pointing to this folder and `-executeMe
 
 Add `-silent-test` for muted verification and `-logFile` for a log. Use `-quit` with Prepare and BuildWindows. The validation methods close Unity themselves after writing their JSON reports.
 
-Current saved-scene verification passed 620 checks; counterplay passed 16 checks. The Windows player completed an 18-second startup check with no logged script exceptions. These checks do not replace a physical two-player/controller playtest. See [build evidence](Documentation/BUILD-WINDOWS-v10.json) and [TODO.md](TODO.md). Historical v7/v8 reports describe earlier rules and art, not this version. The approved design and import calibrations live in [DESIGN.md](DESIGN.md) and [art direction](Documentation/ART-DIRECTION.md).
+Current saved-scene verification passed 624 checks; counterplay passed 16 checks. The Windows player completed an 18-second startup check with no logged script exceptions. These checks do not replace a physical two-player/controller playtest. See [build evidence](Documentation/BUILD-WINDOWS-v11.json) and [TODO.md](TODO.md). Historical v7/v8 reports describe earlier rules and art, not this version. The approved design and import calibrations live in [DESIGN.md](DESIGN.md) and [art direction](Documentation/ART-DIRECTION.md).
 
-Interface labels use Unity's built-in upright body font, with bold headings and plain button text.
+The original Rumble Display, Rumble Signal and Rumble Read typefaces cover headers, subheaders/numbers and body text. Their editable vector source is Tools/create_rumble_fonts.py.

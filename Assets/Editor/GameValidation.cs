@@ -148,7 +148,15 @@ public static class GameValidation
             var cover=hud.actionCovers[i].rectTransform;var disc=hud.actionDiscs[i].rectTransform;
             Check(Vector3.Distance(disc.InverseTransformPoint(cover.TransformPoint(cover.rect.center)),disc.rect.center)<.01f,"Live action icon box is centered on its disc");
         }
-        Check(hud.GetComponentsInChildren<Text>(true).All(t=>t.font && t.font.name!="Bangers" && t.fontStyle!=FontStyle.Italic && t.fontStyle!=FontStyle.BoldAndItalic),"All current interface labels use upright normal fonts");
+        Check(hud.GetComponentsInChildren<Text>(true).All(t=>t.font && t.font.name.StartsWith("Rumble") && t.fontStyle!=FontStyle.Italic && t.fontStyle!=FontStyle.BoldAndItalic),"All interface labels use the three original upright typefaces");
+        Check(hud.GetComponentsInChildren<Text>(true).Select(t=>t.font.name).Distinct().Count()==3,"Header, subheader and body font roles are all present");
+        for(int player=0;player<2;player++) {
+            var guard=hud.actionDiscs[player*4].rectTransform;var punch=hud.actionDiscs[player*4+1].rectTransform;
+            var kick=hud.actionDiscs[player*4+2].rectTransform;var special=hud.actionDiscs[player*4+3].rectTransform;
+            Check(special.anchoredPosition.y>punch.anchoredPosition.y && guard.anchoredPosition.y<punch.anchoredPosition.y && punch.anchoredPosition.x<special.anchoredPosition.x && kick.anchoredPosition.x>special.anchoredPosition.x,"Skills retain the controller diamond placement");
+        }
+        var vs=hud.matchHud.transform.Find("Versus Emblem").GetComponent<Image>();
+        Check(vs.sprite && hud.roundTimerText.fontSize<=24 && hud.roundTimerText.rectTransform.anchoredPosition.y<vs.rectTransform.anchoredPosition.y-vs.rectTransform.rect.height,"The new VS artwork sits above a small live timer");
     }
     static void TickDuel()
     {
@@ -223,6 +231,8 @@ public static class GameValidation
                 hud.OpenMoveGuide();CheckLiveLabels(hud.helpPanel);Capture("Documentation/RuneRumble-MoveGuide.png");hud.CloseMoveGuide();game.ResumeMatch();
 
                 Check(a.Facing>0 && b.Facing<0,"Fighters face their rival");
+                float feetY=Camera.main.WorldToViewportPoint(a.Body.position-Vector2.up*1.1875f).y;
+                Check(feetY>.17f && feetY<.27f,"Standing fighters sit lower, leaving only about a quarter of the frame for floor");
                 Check(Camera.main.orthographicSize<3.2f && a.GetComponent<Collider2D>().bounds.size.y/(Camera.main.orthographicSize*2)>.37f,"Close fight camera makes standing fighters at least 37 percent of the screen height");
                 a.Body.gravityScale=b.Body.gravityScale=0;a.Body.linearVelocity=b.Body.linearVelocity=Vector2.zero;
                 a.Body.position=new Vector2(-5,-.36f);b.Body.position=new Vector2(5,-.36f);SetStage(100);
@@ -296,6 +306,7 @@ public static class GameValidation
                 float fallingX=Camera.main.WorldToViewportPoint(b.Body.position).x;
                 Check(fallingX>.03f && fallingX<.97f,"The ring-out camera keeps the falling rival visible at the edge");
                 Check(Camera.main.WorldToViewportPoint(b.art.bounds.max).x<.995f,"The complete horizontal fall sprite stays within the right camera edge");
+                Check(hud.actionClusters.All(group=>group && group.alpha<.2f),"Skill diamonds fade during ring-out so the losing fighter remains readable");
                 Capture("Documentation/RuneRumble-Fall.png");SetStage(18);
             } else if(stage==18 && b.KnockedOut) {
                 Check(!b.art.enabled && !b.Body.simulated,"Fallen fighter disappears into the shaft");

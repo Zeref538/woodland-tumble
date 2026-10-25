@@ -12,10 +12,10 @@
 - [x] Remove 817 unused legacy asset files and preserve recoverable copies outside the project.
 - [x] Fix the clipped timer, crowded input badge and inconsistent Corin skill name.
 - [x] Inspect title, roster, arena selection and HUD at 1280x720, 1440x900 and 1920x800.
-- [x] Pass 620 current scene/UI/combat checks and 16 counterplay checks.
+- [x] Pass 624 current scene/UI/combat checks and 16 counterplay checks.
 - [x] Build Windows and check one native player launch with no logged script exceptions.
 
-The remaining old font files were left untouched after the cleanup command was rejected. They are not required by the active scene. The PC must stay on: John revoked shutdown.
+The remaining old font files were left untouched after the cleanup command was rejected. They are not required by the active scene.
 
 ## Manual verification still open
 
@@ -45,6 +45,14 @@ Evidence: Documentation/DUEL-VALIDATION.json, COUNTERPLAY-v9.json, FX-SLICING-v9
 
 - [x] Add closer dynamic fight framing, with automatic pullback for separation and jumps.
 
-Current delivery evidence: Documentation/DUEL-VALIDATION.json (620 passed), COUNTERPLAY-v9.json (16 passed), HUD-ICON-CENTERING-v10.json, BUILD-WINDOWS-v10.json and NATIVE-WINDOWS-v10.json. The native player was closed after its 18-second startup check.
+Current delivery evidence: Documentation/DUEL-VALIDATION.json (624 passed), COUNTERPLAY-v9.json (16 passed), HUD-ICON-CENTERING-v10.json, BUILD-WINDOWS-v11.json and NATIVE-WINDOWS-v11.json. The native player was closed after its 18-second startup check.
 
 - [x] Verify padded selection poses retain their full hat and hood details, then refresh Windows delivery.
+
+## Diamond HUD and typography
+
+- [x] Restore diamond skill placement with readable captions and centered icons.
+- [x] Place a new VS emblem above a compact live timer.
+- [x] Lower fighter framing and show more surrounding architecture with less floor.
+- [x] Create and integrate distinct custom header, subheader and body fonts.
+- [x] Verify layouts and camera behavior, then rebuild Windows.

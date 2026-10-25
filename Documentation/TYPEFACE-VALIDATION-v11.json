@@ -1,0 +1,20 @@
+[
+  {
+    "file": "Assets/Fonts/Rumble/RumbleDisplay.ttf",
+    "glyphs": 99,
+    "printableAsciiCovered": true,
+    "tabularNumberAdvance": 700
+  },
+  {
+    "file": "Assets/Fonts/Rumble/RumbleRead.ttf",
+    "glyphs": 99,
+    "printableAsciiCovered": true,
+    "tabularNumberAdvance": 700
+  },
+  {
+    "file": "Assets/Fonts/Rumble/RumbleSignal.ttf",
+    "glyphs": 99,
+    "printableAsciiCovered": true,
+    "tabularNumberAdvance": 700
+  }
+]

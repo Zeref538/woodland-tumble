@@ -1,0 +1,20 @@
+[
+  {
+    "family": "Rumble Display",
+    "glyphs": 99,
+    "strokeUnits": 136,
+    "file": "Assets/Fonts/Rumble/RumbleDisplay.ttf"
+  },
+  {
+    "family": "Rumble Signal",
+    "glyphs": 99,
+    "strokeUnits": 100,
+    "file": "Assets/Fonts/Rumble/RumbleSignal.ttf"
+  },
+  {
+    "family": "Rumble Read",
+    "glyphs": 99,
+    "strokeUnits": 78,
+    "file": "Assets/Fonts/Rumble/RumbleRead.ttf"
+  }
+]

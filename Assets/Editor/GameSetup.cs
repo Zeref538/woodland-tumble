@@ -13,7 +13,7 @@ using System.Linq;
 public static class GameSetup
 {
     static readonly string[] States = { "Walk", "Jump", "Hurt", "Push", "Punch", "Kick", "Knockout" };
-    static Font font;
+    static Font font,displayFont,subheaderFont,bodyFont;
     static Color cream = new Color(1, .91f, .71f);
     static Color gold = new Color(.75f, 1, .24f);
     const string ArcadeArt="Assets/Art/Arcade/";
@@ -137,7 +137,7 @@ public static class GameSetup
         uiInput.move=null;uiInput.submit=null;uiInput.cancel=null;
         EditorSceneManager.SaveScene(scene, path);
         EditorBuildSettings.scenes = new[] { new EditorBuildSettingsScene(path, true) };
-        PlayerSettings.companyName = "Woodland Games";PlayerSettings.productName = "Rune Rumble";PlayerSettings.bundleVersion="10.0.0";
+        PlayerSettings.companyName = "Woodland Games";PlayerSettings.productName = "Rune Rumble";PlayerSettings.bundleVersion="11.0.0";
         PlayerSettings.defaultScreenWidth = 1280;PlayerSettings.defaultScreenHeight = 720;PlayerSettings.runInBackground = true;
         AssetDatabase.SaveAssets();
         Selection.activeGameObject = beam;
@@ -175,6 +175,7 @@ public static class GameSetup
         foreach(var file in Directory.GetFiles("Assets/Resources/Art/CombatV9/Marin","*.png",SearchOption.AllDirectories))ImportSprite(file.Replace('\\','/'),256);
         foreach(var file in Directory.GetFiles("Assets/Art/UI/SkillIcons","*.png",SearchOption.AllDirectories))ImportSprite(file.Replace('\\','/'),100);
         ImportSprite(ArcadeArt+"AtlasBackdrop.png",100);
+        ImportSprite(ArcadeArt+"VersusEmblem.png",100);
         CreateActionGlyphs();CreateStageMask();
     }
     static void ImportSprite(string path, float ppu, Vector2? pivot = null, Vector4? border = null)
@@ -283,6 +284,11 @@ public static class GameSetup
     }
     static void CreateHUD(WoodlandGame game)
     {
+        displayFont=AssetDatabase.LoadAssetAtPath<Font>("Assets/Fonts/Rumble/RumbleDisplay.ttf");
+        subheaderFont=AssetDatabase.LoadAssetAtPath<Font>("Assets/Fonts/Rumble/RumbleSignal.ttf");
+        bodyFont=AssetDatabase.LoadAssetAtPath<Font>("Assets/Fonts/Rumble/RumbleRead.ttf");
+        if(!displayFont || !subheaderFont || !bodyFont)throw new System.Exception("Missing project typefaces");
+        font=displayFont;
         var root = new GameObject("HUD - Arena Broadcast", typeof(RectTransform), typeof(Canvas), typeof(CanvasScaler), typeof(GraphicRaycaster));
         root.GetComponent<Canvas>().renderMode = RenderMode.ScreenSpaceOverlay;
         var scaler = root.GetComponent<CanvasScaler>(); scaler.uiScaleMode = CanvasScaler.ScaleMode.ScaleWithScreenSize; scaler.referenceResolution = new Vector2(1280,720); scaler.matchWidthOrHeight = .5f;scaler.screenMatchMode=CanvasScaler.ScreenMatchMode.Expand;
@@ -290,19 +296,20 @@ public static class GameSetup
         var match = MenuLayer("Match HUD",root.transform); hud.matchHud=match.gameObject;
         match.anchorMin=match.anchorMax=Vector2.one*.5f;match.pivot=Vector2.one*.5f;
         match.sizeDelta=new Vector2(1280,720);match.anchoredPosition=Vector2.zero;
-        var pixel = font; var body = Resources.GetBuiltinResource<Font>("LegacyRuntime.ttf");
+        var pixel = displayFont; var body = bodyFont;
         Color ink = new Color(.055f,.035f,.14f,1), track = new Color(.15f,.10f,.24f), white = new Color(1,.97f,.85f);
         var header=Flat("Header Contrast Fade",match,new Rect(0,0,1280,110),new Color(1,1,1,.25f));header.sprite=SpriteAt("Assets/Art/UI/HeaderShade.png");
         header.rectTransform.anchorMin=new Vector2(0,1);header.rectTransform.anchorMax=new Vector2(1,1);header.rectTransform.pivot=new Vector2(.5f,1);header.rectTransform.anchoredPosition=Vector2.zero;header.rectTransform.sizeDelta=new Vector2(0,110);
         font = body;
-        var versus=Label("Versus Emblem",match,"VS",new Rect(0,0,120,44),32,gold,TextAnchor.MiddleCenter);
-        var vsRect=versus.rectTransform;vsRect.anchorMin=vsRect.anchorMax=new Vector2(.5f,1);vsRect.pivot=new Vector2(.5f,1);vsRect.anchoredPosition=new Vector2(0,-92);
-        font=pixel;
-        hud.roundTimerText=Label("Round Timer",match,"99",new Rect(0,0,150,66),48,white,TextAnchor.UpperCenter);
+        var versus=Flat("Versus Emblem",match,new Rect(0,0,144,76),Color.white);
+        versus.sprite=SpriteAt(ArcadeArt+"VersusEmblem.png");versus.preserveAspect=true;
+        var vsRect=versus.rectTransform;vsRect.anchorMin=vsRect.anchorMax=new Vector2(.5f,1);vsRect.pivot=new Vector2(.5f,1);vsRect.anchoredPosition=new Vector2(0,-12);
+        var timerBacking=Flat("Timer Counter Backing",match,new Rect(0,0,76,32),new Color(.02f,.025f,.055f,.94f));
+        var timerBackRect=timerBacking.rectTransform;timerBackRect.anchorMin=timerBackRect.anchorMax=new Vector2(.5f,1);timerBackRect.pivot=new Vector2(.5f,1);timerBackRect.anchoredPosition=new Vector2(0,-96);
+        hud.roundTimerText=Label("Round Timer",match,"99",new Rect(0,0,74,30),24,white,TextAnchor.MiddleCenter);
         hud.roundTimerText.supportRichText=false;
         var timerRect=hud.roundTimerText.rectTransform;timerRect.anchorMin=timerRect.anchorMax=new Vector2(.5f,1);
-        timerRect.pivot=new Vector2(.5f,1);timerRect.anchoredPosition=new Vector2(0,-20);
-        LabelAnchored("Round Format",match,"FIRST TO 3",new Vector2(.5f,1),new Vector2(0,-82),new Vector2(150,20),12,white);
+        timerRect.pivot=new Vector2(.5f,1);timerRect.anchoredPosition=new Vector2(0,-97);
         font=pixel;
         for(int a=0;a<4;a++){hud.playstationIcons[a]=SpriteAt("Assets/Art/UI/PSAction"+a+".png");hud.neutralIcons[a]=SpriteAt("Assets/Art/UI/CPUAction"+a+".png");}
         for(int c=0;c<game.CharacterNames.Length;c++){
@@ -350,10 +357,10 @@ public static class GameSetup
             hud.ultimateCutinNames[i]=Label("Cinematic Move Name",cutin,"",new Rect(0,210,320,58),24,accent,TextAnchor.MiddleCenter);hud.ultimateCutinNames[i].fontStyle=FontStyle.Bold;
             var cutinOutline=hud.ultimateCutinNames[i].gameObject.AddComponent<Outline>();cutinOutline.effectColor=new Color(.02f,.035f,.04f,1);cutinOutline.effectDistance=new Vector2(2,-2);
             hud.ultimateCutins[i]=cutin.gameObject;cutin.gameObject.SetActive(false);
-            var diamond=Box(i==0?"Fern Action Controls":"Ember Action Controls",match,new Rect(0,0,WoodlandHUD.ActionBarWidth,WoodlandHUD.ActionBarHeight));
-            diamond.anchorMin=diamond.anchorMax=new Vector2(i,0);diamond.pivot=new Vector2(i,0);diamond.anchoredPosition=new Vector2(i==0?24:-24,12);
-            Flat("Action Control Reading Field",diamond,new Rect(-8,-6,360,116),new Color(.018f,.027f,.045f,.94f));
-            Vector2[] buttonPositions={new Vector2(0,0),new Vector2(88,0),new Vector2(176,0),new Vector2(264,0)};
+            var diamond=Box(i==0?"Fern Action Controls":"Ember Action Controls",match,new Rect(0,0,WoodlandHUD.ActionClusterWidth,WoodlandHUD.ActionClusterHeight));
+            hud.actionClusters[i]=diamond.gameObject.AddComponent<CanvasGroup>();
+            diamond.anchorMin=diamond.anchorMax=new Vector2(i,0);diamond.pivot=new Vector2(i,0);diamond.anchoredPosition=new Vector2(i==0?12:-12,12);
+            Vector2[] buttonPositions={new Vector2(88,176),new Vector2(0,88),new Vector2(176,88),new Vector2(88,0)};
             string[] captions={"Guard","Punch","Kick","Special"};
             for(int a=0;a<4;a++){
                 int slot=i*4+a;var position=buttonPositions[a];
@@ -622,7 +629,7 @@ public static class GameSetup
     }
     static Text Label(string name, Transform parent, string value, Rect bounds, int size, Color color, TextAnchor alignment = TextAnchor.MiddleLeft)
     {
-        var rect = Box(name, parent, bounds);var text = rect.gameObject.AddComponent<Text>();text.font = Resources.GetBuiltinResource<Font>("LegacyRuntime.ttf");text.fontStyle=size>=20 || name=="Action Caption"?FontStyle.Bold:FontStyle.Normal;text.text = value;text.fontSize = size;text.color = color;text.alignment = alignment;text.raycastTarget = false;text.horizontalOverflow = HorizontalWrapMode.Wrap;text.verticalOverflow = VerticalWrapMode.Truncate;
+        var rect = Box(name, parent, bounds);var text = rect.gameObject.AddComponent<Text>();text.font = size>=26?displayFont:size>=19 || name=="Action Caption" || name=="Arena Name"?subheaderFont:bodyFont;text.fontStyle=FontStyle.Normal;text.text = value;text.fontSize = size;text.color = color;text.alignment = alignment;text.raycastTarget = false;text.horizontalOverflow = HorizontalWrapMode.Wrap;text.verticalOverflow = VerticalWrapMode.Truncate;
         return text;
     }
     static void LabelAnchored(string name, Transform parent, string value, Vector2 anchor, Vector2 position, Vector2 size, int fontSize, Color color)
