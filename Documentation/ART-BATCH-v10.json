@@ -1,0 +1,43 @@
+{
+  "selectedFighters": [
+    "Fern",
+    "Ember",
+    "Luna",
+    "Bram",
+    "Zephyr",
+    "Volt",
+    "Nyx",
+    "Marin"
+  ],
+  "builtInGenerationCalls": 29,
+  "selectedSourceImages": 27,
+  "supersededRequests": 2,
+  "selectionFrames": 32,
+  "selectionFramePixels": [
+    656,
+    656
+  ],
+  "hudPortraits": 8,
+  "portraitPixels": [
+    1254,
+    1254
+  ],
+  "marinGameplayFrames": 161,
+  "marinEffectFrames": 24,
+  "minimumMarinEffectMarginPixels": 30,
+  "notes": [
+    "The two superseded Corin selection requests had already been submitted when replacement was requested. Those drafts are archived outside this project.",
+    "Four genuine breathing poses per fighter, common foot anchors, no body scaling for breathing.",
+    "Marin Walk/Jump source contains 22 poses; 20 complete poses were selected. Downed uses five lying poses in a held return loop.",
+    "Corin is absent from the saved selectable roster. Old unused runtime files remain after the safety gate blocked the original deletion command and its approved retry.",
+    "Selection imports use a 656-pixel transparent canvas to preserve tall hats and hoods without clipping."
+  ],
+  "environmentAssets": [
+    "Assets/Art/Arcade/AtlasBackdrop.png",
+    "Assets/Art/Arcade/Maps/Forest.png"
+  ],
+  "selectionSourceCellPixels": [
+    627,
+    627
+  ]
+}

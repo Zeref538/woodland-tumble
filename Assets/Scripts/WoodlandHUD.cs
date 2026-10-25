@@ -7,7 +7,8 @@ public class WoodlandHUD : MonoBehaviour
 {
     public const float FighterHudScale=.9f;
     public const float FighterHudHeight=154;
-    public const float ActionDiamondHeight=230;
+    public const float ActionBarWidth=344;
+    public const float ActionBarHeight=104;
     public const float ActionButtonDiameter=80;
     public WoodlandGame game;
     public Text[] names = new Text[2];
@@ -70,6 +71,12 @@ public class WoodlandHUD : MonoBehaviour
     public Button startButton, backButton;
     public Text modeText, mapDescription;
     public Image mapPreview;
+    public Image[] selectionSweeps=new Image[2];
+    public Sprite[] hudPortraits=new Sprite[8];
+    public Sprite[] selectionIdleFrames=new Sprite[32];
+    int showcaseIdentity=-1,showcasePlayer=-1,lastArenaSelection=-1;
+    float arenaSelectionChangedAt;
+    float showcaseChangedAt;
     public Image[] selectionPortraits=new Image[2];
     public Text[] selectionNames=new Text[2], selectionSkills=new Text[2], selectionStates=new Text[2];
     public Text selectedArenaName;
@@ -244,7 +251,7 @@ public class WoodlandHUD : MonoBehaviour
             var pad=game.GetGamepad(i);
             string style=WoodlandGame.GamepadStyle(pad);
             if(deviceText[i])deviceText[i].text=i==1 && game.SoloMode?"CPU RIVAL  /  "+scout.displayName.ToUpper():style=="KEYBOARD"?"KEYBOARD  /  "+(i==0?"A D + W":"ARROW KEYS"):style+"  /  PAD "+(i+1);
-            RefreshActionDiamond(i,scout,pad,style);
+            RefreshActionControls(i,scout,pad,style);
             if(scout.UltimateActive && !cutinWasActive[i])cutinStarted[i]=Time.unscaledTime;
             float cutinAge=Time.unscaledTime-cutinStarted[i];
             bool showCutin=scout.UltimateActive && !game.Paused && cutinAge<.72f;
@@ -263,7 +270,7 @@ public class WoodlandHUD : MonoBehaviour
 
             Color accent = scout.Element;
             int character=game.CharacterChoices[i];
-            if(fighterPortraits[i] && character>=0 && character<game.CharacterPortraits.Length)fighterPortraits[i].sprite=character<game.CharacterProfiles.Length && game.CharacterProfiles[character]?game.CharacterProfiles[character]:game.CharacterPortraits[character];
+            if(fighterPortraits[i] && character>=0 && character<game.CharacterPortraits.Length)fighterPortraits[i].sprite=character<hudPortraits.Length && hudPortraits[character]?hudPortraits[character]:game.CharacterPortraits[character];
             float ratio = Mathf.Clamp01(scout.Health / Mathf.Max(1, scout.maxHealth));
             bool reset = previousHealth[i] < 0 || scout.Health > previousHealth[i];
             if (scout.Health < previousHealth[i]) { ghostDelay[i] = .42f; punch[i] = 1; }
@@ -373,7 +380,7 @@ public class WoodlandHUD : MonoBehaviour
         }
         observationsReady[player]=true;observedPunch[player]=scout.PunchReady;observedKick[player]=scout.PushReady;observedState[player]=scout.Blocking?"Block":scout.Charging?"Charge":scout.AnimationState;
     }
-    void RefreshActionDiamond(int player,Scout scout,Gamepad pad,string style)
+    void RefreshActionControls(int player,Scout scout,Gamepad pad,string style)
     {
         bool cpu=player==1 && game.SoloMode;
         bool ps=pad!=null && style=="PLAYSTATION";
@@ -389,7 +396,7 @@ public class WoodlandHUD : MonoBehaviour
                 else if(a!=0 && coverIndex<characterActionCovers.Length && characterActionCovers[coverIndex])actionCovers[slot].sprite=characterActionCovers[coverIndex];
             }
             if(actionIcons[slot]){actionIcons[slot].enabled=!cpu&&ps;actionIcons[slot].sprite=playstationIcons[a];actionIcons[slot].color=Color.white;}
-            if(actionGlyphs[slot]){actionGlyphs[slot].text=cpu?"CPU":ps?"":letters[a];actionGlyphs[slot].fontSize=cpu?11:letters[a].Length>2?10:letters[a].Length>1?13:18;actionGlyphs[slot].color=pad==null?new Color(.91f,.95f,.86f):a==0?new Color(.51f,.89f,.53f):a==1?new Color(.44f,.71f,1):a==2?new Color(1,.48f,.43f):new Color(1,.82f,.35f);}
+            if(actionGlyphs[slot]){actionGlyphs[slot].text=cpu?"CPU":ps?"":letters[a];actionGlyphs[slot].fontSize=cpu?12:letters[a].Length>2?12:letters[a].Length>1?15:20;actionGlyphs[slot].color=pad==null?new Color(.91f,.95f,.86f):a==0?new Color(.51f,.89f,.53f):a==1?new Color(.44f,.71f,1):a==2?new Color(1,.48f,.43f):new Color(1,.82f,.35f);}
             bool pressed=false,rawPress=false;
             if(!cpu && pad!=null){var button=a==0?pad.buttonSouth:a==1?pad.buttonWest:a==2?pad.buttonEast:pad.buttonNorth;pressed=button.isPressed;rawPress=button.wasPressedThisFrame;}
             else if(!cpu && Keyboard.current!=null){var keys=Keyboard.current;var button=player==0?(a==0?keys.sKey:a==1?keys.tKey:a==2?keys.yKey:keys.gKey):(a==0?keys.downArrowKey:a==1?keys.iKey:a==2?keys.oKey:keys.kKey);pressed=button.isPressed;rawPress=button.wasPressedThisFrame;}
@@ -425,7 +432,7 @@ public class WoodlandHUD : MonoBehaviour
         }
         if(fighterPortraitRings[player]){var color=ultimate?Color.Lerp(scout.Element,new Color(1,.85f,.4f),.5f+.25f*Mathf.Sin(Time.unscaledTime*4)):scout.Element;color.a=ultimate?.95f:.7f;fighterPortraitRings[player].color=color;}
     }
-    static readonly string[] mapDescriptions={"Warm light. Old roots. A friendly rivalry.","Moonstone, falling water and a silver edge.","Glowing embers. A battle under red leaves.","Ancient sky ruins. A fight above the clouds.","Stormglass towers. Open rune shafts guard both edges.","Ancient roots and dark cisterns. Open shafts widen after 99 seconds."};
+    static readonly string[] mapDescriptions={"Rain-dark streets. Elemental lamps. A crowd beyond the combat lane.","Moonstone, falling water and a silver edge.","Glowing embers. A battle under red leaves.","Ancient sky ruins. A fight above the clouds.","Stormglass towers. Open shafts guard both edges.","Ancient roots and dark cisterns. Open shafts widen after 99 seconds."};
     public void RefreshMenu()
     {
         if(!game) return;
@@ -467,7 +474,7 @@ public class WoodlandHUD : MonoBehaviour
         for(int side=0;side<2;side++) {
             bool choosing=side==game.ChoosingPlayer;
             int selected=choosing?scout:Mathf.Clamp(game.CharacterChoices[side],0,game.CharacterNames.Length-1);
-            if(selectionPortraits.Length>side && selectionPortraits[side]) {selectionPortraits[side].sprite=game.CharacterPortraits[selected];selectionPortraits[side].color=Color.white;}
+            if(selectionPortraits.Length>side && selectionPortraits[side])selectionPortraits[side].transform.parent.gameObject.SetActive(choosing);
             if(selectionNames.Length>side && selectionNames[side]){selectionNames[side].text=game.CharacterNames[selected].ToUpper();selectionNames[side].color=game.CharacterColors[selected];}
             if(selectionSkills.Length>side && selectionSkills[side])selectionSkills[side].text=game.SkillNames[selected];
             if(selectionStates.Length>side && selectionStates[side])selectionStates[side].text=choosing?"SELECTING":side<game.ChoosingPlayer?"LOCKED IN":game.SoloMode?"CPU RIVAL":"AWAITING PLAYER";
@@ -488,6 +495,44 @@ public class WoodlandHUD : MonoBehaviour
     }
     void AnimateFrontEnd()
     {
+        if(game && game.Screen==WoodlandGame.MenuScreen.Characters) {
+            int character=game.PendingCharacter,side=game.ChoosingPlayer;
+            if(character!=showcaseIdentity || side!=showcasePlayer) {
+                showcaseIdentity=character;showcasePlayer=side;showcaseChangedAt=Time.unscaledTime;
+            }
+            if(side<selectionPortraits.Length && selectionPortraits[side]) {
+                var hero=selectionPortraits[side];
+                // Held key poses make one relaxed breath; artwork carries the movement.
+                float elapsed=Time.unscaledTime-showcaseChangedAt;
+                int pose=Mathf.FloorToInt(elapsed/.38f)%4,index=character*4+pose;
+                hero.sprite=index<selectionIdleFrames.Length && selectionIdleFrames[index]?selectionIdleFrames[index]:game.CharacterProfiles[character];
+                float enter=1-Mathf.Pow(1-Mathf.Clamp01(elapsed/.32f),3);
+                hero.rectTransform.anchoredPosition=new Vector2(265-65*(1-enter),-245);
+                hero.color=new Color(1,1,1,enter);
+                if(side<selectionSweeps.Length && selectionSweeps[side]) {
+                    var sweep=selectionSweeps[side];Color accent=game.CharacterColors[character];
+                    sweep.color=new Color(accent.r,accent.g,accent.b,.42f*(1-enter));
+                    sweep.rectTransform.anchoredPosition=new Vector2(180+180*enter,-230);
+                    sweep.rectTransform.localScale=new Vector3(1.4f,.7f+.3f*enter,1);
+                }
+            }
+        }
+        if(game && game.Screen==WoodlandGame.MenuScreen.Maps) {
+            if(lastArenaSelection!=game.PendingArena){lastArenaSelection=game.PendingArena;arenaSelectionChangedAt=Time.unscaledTime;}
+            float selectionAge=Time.unscaledTime-arenaSelectionChangedAt;
+            float atlasEase=1-Mathf.Exp(-14*Time.unscaledDeltaTime);
+            for(int i=0;i<mapButtons.Length;i++) {
+                var card=mapButtons[i];if(!card)continue;
+                bool chosen=i==game.PendingArena;
+                card.transform.localScale=Vector3.Lerp(card.transform.localScale,Vector3.one*(chosen?1.06f:1),atlasEase);
+                var rect=card.GetComponent<RectTransform>();
+                rect.anchoredPosition=Vector2.Lerp(rect.anchoredPosition,new Vector2(25+i*204,chosen?-132:-144),atlasEase);
+                var art=card.transform.Find("Arena Illustration");
+                if(art){art.GetComponent<Image>().color=chosen?new Color(.8f,.8f,.88f):WoodlandGame.ArenaExposure;art.localScale=Vector3.Lerp(art.localScale,Vector3.one*(chosen?1.045f:1),atlasEase);}
+                var flash=card.transform.Find("Selection Glint");if(flash)flash.GetComponent<Image>().color=new Color(.45f,.85f,1,chosen?.26f*(1-Mathf.Clamp01(selectionAge/.4f)):0);
+                var stroke=card.transform.Find("Selection Stroke");if(stroke)stroke.gameObject.SetActive(chosen);
+            }
+        }
         if(!enteringScreen || !enteringGroup)return;
         float progress=Mathf.Clamp01((Time.unscaledTime-screenEnteredAt)/.26f);
         float ease=1-Mathf.Pow(1-progress,3);

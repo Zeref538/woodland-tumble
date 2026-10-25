@@ -1,0 +1,418 @@
+[
+  {
+    "fighter": "Fern",
+    "action": "Guard",
+    "visibleCenter": [
+      31.577972723260668,
+      31.985177635855585
+    ],
+    "sourceCenter": [
+      147.27408450342884,
+      125.95526388313444
+    ],
+    "distanceFromCanvasCenter": 0.4222874906871457
+  },
+  {
+    "fighter": "Fern",
+    "action": "Punch",
+    "visibleCenter": [
+      31.40783438623125,
+      31.95236870733928
+    ],
+    "sourceCenter": [
+      124.48678839679914,
+      137.931378351637
+    ],
+    "distanceFromCanvasCenter": 0.594078154934728
+  },
+  {
+    "fighter": "Fern",
+    "action": "Kick",
+    "visibleCenter": [
+      32.14022761378175,
+      31.95798779679593
+    ],
+    "sourceCenter": [
+      147.63718473287244,
+      139.36421761021043
+    ],
+    "distanceFromCanvasCenter": 0.14638582200808514
+  },
+  {
+    "fighter": "Fern",
+    "action": "Special",
+    "visibleCenter": [
+      31.939931141171158,
+      31.2649751659957
+    ],
+    "sourceCenter": [
+      127.45680947138514,
+      128.12285581532524
+    ],
+    "distanceFromCanvasCenter": 0.7374752703677916
+  },
+  {
+    "fighter": "Ember",
+    "action": "Guard",
+    "visibleCenter": [
+      31.19404556601262,
+      31.76535707459405
+    ],
+    "sourceCenter": [
+      134.93986489618453,
+      112.11472702463081
+    ],
+    "distanceFromCanvasCenter": 0.8394163758868313
+  },
+  {
+    "fighter": "Ember",
+    "action": "Punch",
+    "visibleCenter": [
+      32.11249239243886,
+      31.620470688760918
+    ],
+    "sourceCenter": [
+      121.3728544905442,
+      136.6209203340783
+    ],
+    "distanceFromCanvasCenter": 0.39584976499453756
+  },
+  {
+    "fighter": "Ember",
+    "action": "Kick",
+    "visibleCenter": [
+      31.680090248357946,
+      31.755608082906335
+    ],
+    "sourceCenter": [
+      144.46065547065794,
+      136.04763110451063
+    ],
+    "distanceFromCanvasCenter": 0.4025787604139069
+  },
+  {
+    "fighter": "Ember",
+    "action": "Special",
+    "visibleCenter": [
+      31.041857250183355,
+      31.70026630752918
+    ],
+    "sourceCenter": [
+      122.67315524856441,
+      134.66573103498612
+    ],
+    "distanceFromCanvasCenter": 1.003931180623649
+  },
+  {
+    "fighter": "Luna",
+    "action": "Guard",
+    "visibleCenter": [
+      31.246571647277005,
+      31.924732275927504
+    ],
+    "sourceCenter": [
+      131.74346510076157,
+      116.96660693629892
+    ],
+    "distanceFromCanvasCenter": 0.7571786532740735
+  },
+  {
+    "fighter": "Luna",
+    "action": "Punch",
+    "visibleCenter": [
+      31.663777555019756,
+      31.332985492133076
+    ],
+    "sourceCenter": [
+      131.53874996177956,
+      130.73747165835917
+    ],
+    "distanceFromCanvasCenter": 0.746963109004352
+  },
+  {
+    "fighter": "Luna",
+    "action": "Kick",
+    "visibleCenter": [
+      31.828520423191478,
+      31.81881217092013
+    ],
+    "sourceCenter": [
+      143.73677595039106,
+      141.6781800188101
+    ],
+    "distanceFromCanvasCenter": 0.24946798325457814
+  },
+  {
+    "fighter": "Luna",
+    "action": "Special",
+    "visibleCenter": [
+      31.72776938763114,
+      31.75408318220078
+    ],
+    "sourceCenter": [
+      126.43050617357144,
+      140.8430127377454
+    ],
+    "distanceFromCanvasCenter": 0.36685772117705007
+  },
+  {
+    "fighter": "Bram",
+    "action": "Guard",
+    "visibleCenter": [
+      31.52729063752017,
+      31.791016224554525
+    ],
+    "sourceCenter": [
+      137.05404610105407,
+      128.52527942862108
+    ],
+    "distanceFromCanvasCenter": 0.5168446185997599
+  },
+  {
+    "fighter": "Bram",
+    "action": "Punch",
+    "visibleCenter": [
+      31.531867817206603,
+      31.108647366941376
+    ],
+    "sourceCenter": [
+      125.62096240868604,
+      151.18515998830563
+    ],
+    "distanceFromCanvasCenter": 1.0068054712939594
+  },
+  {
+    "fighter": "Bram",
+    "action": "Kick",
+    "visibleCenter": [
+      31.555491970719725,
+      31.824309928862878
+    ],
+    "sourceCenter": [
+      139.20249107250908,
+      152.04077602034857
+    ],
+    "distanceFromCanvasCenter": 0.47796902534662317
+  },
+  {
+    "fighter": "Bram",
+    "action": "Special",
+    "visibleCenter": [
+      31.143383790667727,
+      31.390961291806544
+    ],
+    "sourceCenter": [
+      127.99345219650776,
+      139.02931246255287
+    ],
+    "distanceFromCanvasCenter": 1.051056362983806
+  },
+  {
+    "fighter": "Zephyr",
+    "action": "Guard",
+    "visibleCenter": [
+      31.828718270459778,
+      31.80443266014136
+    ],
+    "sourceCenter": [
+      136.68326068962148,
+      124.25568102499939
+    ],
+    "distanceFromCanvasCenter": 0.25996925836274415
+  },
+  {
+    "fighter": "Zephyr",
+    "action": "Punch",
+    "visibleCenter": [
+      31.019547339582733,
+      31.48209697672434
+    ],
+    "sourceCenter": [
+      122.85451244663582,
+      138.1647642666704
+    ],
+    "distanceFromCanvasCenter": 1.1088331528401227
+  },
+  {
+    "fighter": "Zephyr",
+    "action": "Kick",
+    "visibleCenter": [
+      31.922576036161043,
+      31.494460080136214
+    ],
+    "sourceCenter": [
+      138.93705877801312,
+      136.17275569831625
+    ],
+    "distanceFromCanvasCenter": 0.511434336696725
+  },
+  {
+    "fighter": "Zephyr",
+    "action": "Special",
+    "visibleCenter": [
+      32.1446410680073,
+      31.792572455605328
+    ],
+    "sourceCenter": [
+      125.52046052228741,
+      130.2142733884127
+    ],
+    "distanceFromCanvasCenter": 0.2528778850115151
+  },
+  {
+    "fighter": "Volt",
+    "action": "Guard",
+    "visibleCenter": [
+      31.263249497710056,
+      30.932515223240657
+    ],
+    "sourceCenter": [
+      145.0740417689179,
+      124.112097070389
+    ],
+    "distanceFromCanvasCenter": 1.2970447375620586
+  },
+  {
+    "fighter": "Volt",
+    "action": "Punch",
+    "visibleCenter": [
+      31.67101252331112,
+      31.825747159540576
+    ],
+    "sourceCenter": [
+      132.72639381238605,
+      134.63044093427922
+    ],
+    "distanceFromCanvasCenter": 0.3722859280530139
+  },
+  {
+    "fighter": "Volt",
+    "action": "Kick",
+    "visibleCenter": [
+      31.04952745401335,
+      31.38913944464074
+    ],
+    "sourceCenter": [
+      157.7433161235468,
+      145.00348631796166
+    ],
+    "distanceFromCanvasCenter": 1.129844537433432
+  },
+  {
+    "fighter": "Volt",
+    "action": "Special",
+    "visibleCenter": [
+      31.77372112071399,
+      31.86922880560054
+    ],
+    "sourceCenter": [
+      142.3916517601153,
+      134.0582866419
+    ],
+    "distanceFromCanvasCenter": 0.2613488788871962
+  },
+  {
+    "fighter": "Nyx",
+    "action": "Guard",
+    "visibleCenter": [
+      31.60785580923614,
+      31.61181403645097
+    ],
+    "sourceCenter": [
+      137.1399021772071,
+      120.90531398957967
+    ],
+    "distanceFromCanvasCenter": 0.5517838423208252
+  },
+  {
+    "fighter": "Nyx",
+    "action": "Punch",
+    "visibleCenter": [
+      31.621335558864324,
+      31.79644993277144
+    ],
+    "sourceCenter": [
+      124.11381105960761,
+      141.27948251587665
+    ],
+    "distanceFromCanvasCenter": 0.4299062558853321
+  },
+  {
+    "fighter": "Nyx",
+    "action": "Kick",
+    "visibleCenter": [
+      32.25793853025165,
+      31.953628951402003
+    ],
+    "sourceCenter": [
+      151.11803867553164,
+      140.34482354774076
+    ],
+    "distanceFromCanvasCenter": 0.2620735765705104
+  },
+  {
+    "fighter": "Nyx",
+    "action": "Special",
+    "visibleCenter": [
+      31.134728819983426,
+      31.46417193170966
+    ],
+    "sourceCenter": [
+      130.76190418887302,
+      128.8893427471102
+    ],
+    "distanceFromCanvasCenter": 1.017745515212438
+  },
+  {
+    "fighter": "Marin",
+    "action": "Guard",
+    "visibleCenter": [
+      31.895011018625365,
+      32.33969168601318
+    ],
+    "sourceCenter": [
+      125.32150680324753,
+      125.32763548830829
+    ],
+    "distanceFromCanvasCenter": 0.35554623856337175
+  },
+  {
+    "fighter": "Marin",
+    "action": "Punch",
+    "visibleCenter": [
+      31.065216674830143,
+      31.164899082343776
+    ],
+    "sourceCenter": [
+      129.709420030723,
+      148.32585617815917
+    ],
+    "distanceFromCanvasCenter": 1.2534805174735988
+  },
+  {
+    "fighter": "Marin",
+    "action": "Kick",
+    "visibleCenter": [
+      31.32776806189596,
+      31.509802793277206
+    ],
+    "sourceCenter": [
+      145.75017587990826,
+      137.936780427691
+    ],
+    "distanceFromCanvasCenter": 0.8319790142100606
+  },
+  {
+    "fighter": "Marin",
+    "action": "Special",
+    "visibleCenter": [
+      31.67389207902825,
+      31.64409424050524
+    ],
+    "sourceCenter": [
+      127.90912157626184,
+      134.87013747390944
+    ],
+    "distanceFromCanvasCenter": 0.48271656876686947
+  }
+]

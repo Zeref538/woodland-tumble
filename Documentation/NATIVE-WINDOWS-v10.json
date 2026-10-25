@@ -1,0 +1,9 @@
+{
+  "sampleSeconds": 18,
+  "aliveAfterSample": true,
+  "verifiedExecutable": true,
+  "workingSetBytes": 1201037312,
+  "scriptDomainInitialized": true,
+  "loggedExceptions": 0,
+  "closedAfterTest": true
+}

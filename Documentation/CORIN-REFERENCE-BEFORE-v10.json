@@ -1,0 +1,17 @@
+{
+  "targets": [
+    "Assets/AnimationsRework/Corin",
+    "Assets/Art/CharactersRework/Corin",
+    "Assets/Art/ProfilesRework/Corin.png",
+    "Assets/Art/PortraitsRework/Corin.png",
+    "Assets/Resources/Art/CombatV9/Corin"
+  ],
+  "legacyGuids": 234,
+  "blockers": [
+    {
+      "file": "Assets\\Scenes\\WoodlandTumble.unity",
+      "references": 8
+    }
+  ],
+  "safeToRemove": false
+}

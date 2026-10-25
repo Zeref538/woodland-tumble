@@ -9,8 +9,8 @@ public class Scout : MonoBehaviour
     [Range(0, 1)] public int id;
     public string displayName = "Fern";
     public int CharacterIndex { get; private set; }
-    public string SkillName => new[]{"VINE BOLT","FIRE BOLT","FROST WAVE","STONE WAVE","GALE CRESCENT","ARC LANCE","DUSK ORB","PRISM ARC"}[Mathf.Clamp(SkillIndex,0,7)];
-    public string UltimateName => new[]{"WILDROOT PRISON","PHOENIX COMBO","MOONFROST SEAL","WORLD SHATTER","TEMPEST SPIRAL","THUNDER RUSH","ECLIPSE SNARE","CRYSTAL CROWN"}[Mathf.Clamp(SkillIndex,0,7)];
+    public string SkillName => new[]{"VINE BOLT","FIRE BOLT","FROST WAVE","STONE WAVE","GALE CRESCENT","ARC LANCE","DUSK ORB","TIDE SURGE"}[Mathf.Clamp(SkillIndex,0,7)];
+    public string UltimateName => new[]{"WILDROOT PRISON","PHOENIX COMBO","MOONFROST SEAL","WORLD SHATTER","TEMPEST SPIRAL","THUNDER RUSH","ECLIPSE SNARE","UNDERTOW"}[Mathf.Clamp(SkillIndex,0,7)];
     public const float SpecialCooldown = 0;
     public float SpecialCooldownRemaining => 0;
     public float SpecialReady => Charging ? Charge : 1;
@@ -650,6 +650,7 @@ public class Scout : MonoBehaviour
         action = 5; actionAnimation = "Ultimate"; PlayState(actionAnimation);
         float direction = face;
         int skill = SkillIndex;
+        if(skill==7)WoodlandEffects.Instance?.ComboImpact(Body.position+Vector2.right*direction, direction,7,true);
         // The long tell gives the rival control and a chance to interrupt or escape.
         for (int i = 0; i < 5; i++) {
             WoodlandEffects.Instance?.ChargeAura(Body.position + Vector2.up * .25f, skill, i/4f);

@@ -93,7 +93,7 @@ public class WoodlandEffects : MonoBehaviour
         glow = SoftGlow();
         glowMaterial = new Material(material); glowMaterial.SetColor("_Color", new Color(2.4f,2.4f,2.4f,1));
         material.mainTexture = pixel.texture;
-        string[] characters={"Fern","Ember","Luna","Bram","Zephyr","Volt","Nyx","Corin"};
+        string[] characters={"Fern","Ember","Luna","Bram","Zephyr","Volt","Nyx","Marin"};
         for(int character=0;character<characters.Length;character++) {
             brushSwings[character]=LoadComboFrames(characters[character],"Slash");
             brushGuards[character]=LoadComboFrames(characters[character],"Guard");
@@ -122,7 +122,13 @@ public class WoodlandEffects : MonoBehaviour
         Scout.UltimateImpact -= UltimateImpact;
         RestoreCinematic();
     }
-    public void ResetCameraPresentation() => RestoreCinematic();
+    public void ResetCameraPresentation(bool holdFraming=false)
+    {
+        if(holdFraming && cam) {
+            Vector3 position=cam.transform.position;float size=cam.orthographicSize;
+            RestoreCinematic();cam.transform.position=position;cam.orthographicSize=size;
+        } else RestoreCinematic();
+    }
     void RestoreCinematic()
     {
         cinematicScout = null; cinematicImpactUntil = 0;
@@ -412,7 +418,7 @@ public class WoodlandEffects : MonoBehaviour
             case 4:return new Color(.5f,1,.85f);
             case 5:return new Color(1,.85f,.2f);
             case 6:return new Color(.7f,.4f,1);
-            case 7:return new Color(1,.5f,.8f);
+            case 7:return new Color(.18f,.84f,1);
             default:return new Color(.38f,1,.68f);
         }
     }
@@ -607,15 +613,36 @@ public class WoodlandEffects : MonoBehaviour
             cameraVelocity+=(-cameraOffset*145-cameraVelocity*20)*smoothDt;
             cameraOffset+=cameraVelocity*smoothDt;cameraOffset=Vector2.ClampMagnitude(cameraOffset,.18f);
             var game=WoodlandGame.Instance;
-            bool motionAllowed=game && game.playing && !game.Paused;
+            bool inMatch=game && game.playing && game.Screen==WoodlandGame.MenuScreen.Match;
+            bool motionAllowed=inMatch && !game.Paused;
             if (!motionAllowed) { cameraOffset=cameraVelocity=Vector2.zero;shake=0; }
             bool cinematic=motionAllowed && cameraShake && cinematicScout;
-            Vector3 focus=cameraHome;
-            if(cinematic)focus=Vector3.Lerp(cameraHome,new Vector3(cinematicFocus.x,cinematicFocus.y,cameraHome.z),.28f);
+            Vector3 focus=cameraHome;float matchZoom=cameraZoom;
+            if(inMatch && game.players.Length==2 && game.players[0] && game.players[1] && game.players[0].Body && game.players[1].Body) {
+                var first=game.players[0];var second=game.players[1];
+                if(game.Paused) {
+                    focus=cam.transform.position;matchZoom=cam.orthographicSize;
+                } else {
+                    float standingY=game.plank.position.y+.15f+1.1875f;
+                    float firstY=first.RingOutFalling || first.KnockedOut?standingY:first.Body.position.y;
+                    float secondY=second.RingOutFalling || second.KnockedOut?standingY:second.Body.position.y;
+                    float low=Mathf.Min(firstY,secondY)-1.1875f;
+                    float high=Mathf.Max(firstY,secondY)+1.1875f;
+                    float span=Mathf.Abs(first.Body.position.x-second.Body.position.x);
+                    float sideMargin=first.RingOutFalling || second.RingOutFalling?5.5f:2.8f;
+                    matchZoom=Mathf.Clamp(Mathf.Max(3,(span+sideMargin)/(2*cam.aspect),high-low+.25f),3,cameraZoom);
+                    float imageHalfWidth=game.backgroundArt.bounds.extents.x;
+                    float limit=Mathf.Max(0,imageHalfWidth-matchZoom*cam.aspect-.05f);
+                    focus=new Vector3(Mathf.Clamp((first.Body.position.x+second.Body.position.x)*.5f,-limit,limit),(low+high)*.5f-matchZoom*.1f,cameraHome.z);
+                }
+            }
+            if(cinematic)focus=Vector3.Lerp(focus,new Vector3(cinematicFocus.x,cinematicFocus.y,cameraHome.z),.28f);
             Vector3 target=focus+(cameraShake&&motionAllowed?(Vector3)cameraOffset:Vector3.zero);
-            float zoom=cameraZoom*(cinematic?(Time.unscaledTime<cinematicImpactUntil?.91f:.95f):1);
-            cam.transform.position=motionAllowed?Vector3.Lerp(cam.transform.position,target,1-Mathf.Exp(-14*smoothDt)):cameraHome;
-            cam.orthographicSize=motionAllowed?Mathf.Lerp(cam.orthographicSize,zoom-(cameraShake?shake*.45f:0),1-Mathf.Exp(-16*smoothDt)):cameraZoom;
+            float zoom=matchZoom*(cinematic?(Time.unscaledTime<cinematicImpactUntil?.91f:.95f):1);
+            bool edgeFall=inMatch && (game.players[0].RingOutFalling || game.players[1].RingOutFalling);
+            float cameraEase=1-Mathf.Exp(-(edgeFall?18:10)*smoothDt);
+            cam.transform.position=inMatch?Vector3.Lerp(cam.transform.position,target,cameraEase):cameraHome;
+            cam.orthographicSize=inMatch?Mathf.Lerp(cam.orthographicSize,zoom-(cameraShake?shake*.45f:0),cameraEase):cameraZoom;
             shake=Mathf.MoveTowards(shake,0,smoothDt*.7f);
         }
     }

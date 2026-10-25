@@ -1,0 +1,25 @@
+{
+  "files": 179,
+  "bytes": 849596316,
+  "assemblyBytes": 114688,
+  "assemblySha256": "a38ec8e1bf6d723b3736b17e17238065378f0aec4217ad39f02cf2711862b17e",
+  "hasMarinName": true,
+  "hasTideSurge": true,
+  "hasCloseCameraCode": true,
+  "hasLowActionBar": true,
+  "hasLanternScene": true,
+  "native": {
+    "sampleSeconds": 18,
+    "aliveAfterSample": true,
+    "verifiedExecutable": true,
+    "workingSetBytes": 1201037312,
+    "scriptDomainInitialized": true,
+    "loggedExceptions": 0,
+    "closedAfterTest": true
+  },
+  "startupSamples": 1,
+  "sceneChecks": 620,
+  "counterplayChecks": 16,
+  "method": "GameSetup.BuildWindows",
+  "earlierBuildStartupSamples": 2
+}

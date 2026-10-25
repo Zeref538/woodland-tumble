@@ -1,0 +1,8 @@
+{
+  "sampleSeconds": 4,
+  "aliveAfterSample": true,
+  "verifiedExecutable": true,
+  "workingSetBytes": 303456256,
+  "loggedExceptions": 0,
+  "closedAfterTest": true
+}

@@ -1,0 +1,170 @@
+{
+  "poses": 32,
+  "beforeTouchingBorder": 11,
+  "beforeMarginsUnderTwoPixels": 12,
+  "afterTouchingBorder": 0,
+  "minimumFinalMargin": 20,
+  "comparison": "Earlier staged image bytes versus final padded image bytes",
+  "frames": [
+    {
+      "file": "Assets/Art/SelectionV10/Bram/01.png",
+      "beforeMargin": 0,
+      "afterMargin": 20
+    },
+    {
+      "file": "Assets/Art/SelectionV10/Bram/02.png",
+      "beforeMargin": 0,
+      "afterMargin": 20
+    },
+    {
+      "file": "Assets/Art/SelectionV10/Bram/03.png",
+      "beforeMargin": 0,
+      "afterMargin": 20
+    },
+    {
+      "file": "Assets/Art/SelectionV10/Bram/04.png",
+      "beforeMargin": 0,
+      "afterMargin": 20
+    },
+    {
+      "file": "Assets/Art/SelectionV10/Ember/01.png",
+      "beforeMargin": 11,
+      "afterMargin": 20
+    },
+    {
+      "file": "Assets/Art/SelectionV10/Ember/02.png",
+      "beforeMargin": 11,
+      "afterMargin": 20
+    },
+    {
+      "file": "Assets/Art/SelectionV10/Ember/03.png",
+      "beforeMargin": 12,
+      "afterMargin": 20
+    },
+    {
+      "file": "Assets/Art/SelectionV10/Ember/04.png",
+      "beforeMargin": 14,
+      "afterMargin": 20
+    },
+    {
+      "file": "Assets/Art/SelectionV10/Fern/01.png",
+      "beforeMargin": 20,
+      "afterMargin": 20
+    },
+    {
+      "file": "Assets/Art/SelectionV10/Fern/02.png",
+      "beforeMargin": 20,
+      "afterMargin": 20
+    },
+    {
+      "file": "Assets/Art/SelectionV10/Fern/03.png",
+      "beforeMargin": 19,
+      "afterMargin": 20
+    },
+    {
+      "file": "Assets/Art/SelectionV10/Fern/04.png",
+      "beforeMargin": 20,
+      "afterMargin": 20
+    },
+    {
+      "file": "Assets/Art/SelectionV10/Luna/01.png",
+      "beforeMargin": 0,
+      "afterMargin": 20
+    },
+    {
+      "file": "Assets/Art/SelectionV10/Luna/02.png",
+      "beforeMargin": 0,
+      "afterMargin": 20
+    },
+    {
+      "file": "Assets/Art/SelectionV10/Luna/03.png",
+      "beforeMargin": 0,
+      "afterMargin": 20
+    },
+    {
+      "file": "Assets/Art/SelectionV10/Luna/04.png",
+      "beforeMargin": 0,
+      "afterMargin": 20
+    },
+    {
+      "file": "Assets/Art/SelectionV10/Marin/01.png",
+      "beforeMargin": 12,
+      "afterMargin": 20
+    },
+    {
+      "file": "Assets/Art/SelectionV10/Marin/02.png",
+      "beforeMargin": 16,
+      "afterMargin": 20
+    },
+    {
+      "file": "Assets/Art/SelectionV10/Marin/03.png",
+      "beforeMargin": 17,
+      "afterMargin": 20
+    },
+    {
+      "file": "Assets/Art/SelectionV10/Marin/04.png",
+      "beforeMargin": 20,
+      "afterMargin": 20
+    },
+    {
+      "file": "Assets/Art/SelectionV10/Nyx/01.png",
+      "beforeMargin": 0,
+      "afterMargin": 20
+    },
+    {
+      "file": "Assets/Art/SelectionV10/Nyx/02.png",
+      "beforeMargin": 0,
+      "afterMargin": 20
+    },
+    {
+      "file": "Assets/Art/SelectionV10/Nyx/03.png",
+      "beforeMargin": 1,
+      "afterMargin": 20
+    },
+    {
+      "file": "Assets/Art/SelectionV10/Nyx/04.png",
+      "beforeMargin": 0,
+      "afterMargin": 20
+    },
+    {
+      "file": "Assets/Art/SelectionV10/Volt/01.png",
+      "beforeMargin": 12,
+      "afterMargin": 20
+    },
+    {
+      "file": "Assets/Art/SelectionV10/Volt/02.png",
+      "beforeMargin": 4,
+      "afterMargin": 20
+    },
+    {
+      "file": "Assets/Art/SelectionV10/Volt/03.png",
+      "beforeMargin": 5,
+      "afterMargin": 20
+    },
+    {
+      "file": "Assets/Art/SelectionV10/Volt/04.png",
+      "beforeMargin": 12,
+      "afterMargin": 20
+    },
+    {
+      "file": "Assets/Art/SelectionV10/Zephyr/01.png",
+      "beforeMargin": 13,
+      "afterMargin": 20
+    },
+    {
+      "file": "Assets/Art/SelectionV10/Zephyr/02.png",
+      "beforeMargin": 12,
+      "afterMargin": 20
+    },
+    {
+      "file": "Assets/Art/SelectionV10/Zephyr/03.png",
+      "beforeMargin": 5,
+      "afterMargin": 20
+    },
+    {
+      "file": "Assets/Art/SelectionV10/Zephyr/04.png",
+      "beforeMargin": 16,
+      "afterMargin": 20
+    }
+  ]
+}

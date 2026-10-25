@@ -30,6 +30,7 @@ public static class GameValidation
     [MenuItem("Woodland/Validate Editable Game")]
     public static void RunInEditor() {EditorApplication.ExecuteMenuItem("Window/General/Game");SessionState.SetBool("Woodland.Duel",true);Begin(false);}
     public static void Run() => RunDuelSaved();
+    public static void RunDuelFresh(){GameSetup.PrepareHUD();RunDuelSaved();}
     public static void RunDuelSaved(){AudioListener.volume=0;SessionState.SetBool("Woodland.Duel",true);Begin(true);}
     public static void RunCounterplay(){AudioListener.volume=0;SessionState.SetBool("Woodland.Counterplay",true);Begin(true);}
     public static void RunSaved() => RunDuelSaved();
@@ -135,6 +136,20 @@ public static class GameValidation
             }
         }catch(Exception exception){Complete(false,exception.ToString());}
     }
+    static void CheckHudIconCenters(WoodlandHUD hud)
+    {
+        foreach(var sprite in hud.characterActionCovers) {
+            Check(sprite && sprite.texture.width==64 && sprite.texture.height==64,"HUD action uses a dedicated 64-pixel icon canvas");
+            var pixels=sprite.texture.GetPixels32();double total=0,x=0,y=0;
+            for(int i=0;i<pixels.Length;i++)if(pixels[i].a>32){double weight=pixels[i].a*pixels[i].a;total+=weight;x+=(i%64)*weight;y+=(i/64)*weight;}
+            Check(total>0 && Vector2.Distance(new Vector2((float)(x/total),(float)(y/total)),new Vector2(32,31))<2,"Visible icon artwork is centered inside its circular safe area");
+        }
+        for(int i=0;i<hud.actionCovers.Length;i++) {
+            var cover=hud.actionCovers[i].rectTransform;var disc=hud.actionDiscs[i].rectTransform;
+            Check(Vector3.Distance(disc.InverseTransformPoint(cover.TransformPoint(cover.rect.center)),disc.rect.center)<.01f,"Live action icon box is centered on its disc");
+        }
+        Check(hud.GetComponentsInChildren<Text>(true).All(t=>t.font && t.font.name!="Bangers" && t.fontStyle!=FontStyle.Italic && t.fontStyle!=FontStyle.BoldAndItalic),"All current interface labels use upright normal fonts");
+    }
     static void TickDuel()
     {
         try {
@@ -151,20 +166,46 @@ public static class GameValidation
                 Capture("Documentation/RuneRumble-Title.png");
                 Capture("Documentation/RuneRumble-Title-16x10.png",1440,900);
                 Capture("Documentation/RuneRumble-Title-Ultrawide.png",1920,800);
-                hud.modeButtons[1].onClick.Invoke();Check(game.Screen==WoodlandGame.MenuScreen.Characters,"Saved local-versus button opens roster");game.hud.RefreshMenu();CheckLiveLabels(hud.characterMenu);Capture("Documentation/RuneRumble-CharacterSelect.png");
+                hud.modeButtons[1].onClick.Invoke();Check(game.Screen==WoodlandGame.MenuScreen.Characters,"Saved local-versus button opens roster");SetStage(-2);
+            } else if(stage==-2 && Elapsed>.6f) {
+                CheckLiveLabels(hud.characterMenu);Capture("Documentation/RuneRumble-CharacterSelect.png");
                 Capture("Documentation/RuneRumble-CharacterSelect-16x10.png",1440,900);
                 Capture("Documentation/RuneRumble-CharacterSelect-Ultrawide.png",1920,800);
-                Check(hud.menuRoot.GetComponent<RectTransform>().anchorMin==Vector2.one*.5f,"Menu design canvas is anchored at the screen center");
+                Check(hud.hudPortraits.Length==8 && hud.hudPortraits.All(p=>p && p.texture.width>=512),"Eight dedicated high-resolution HUD portraits exist");
+                Check(hud.selectionIdleFrames.Length==32 && hud.selectionIdleFrames.All(p=>p && p.texture.height>=512),"Eight four-pose high-resolution selection loops exist");
+                foreach(var pose in hud.selectionIdleFrames) {
+                    var pixels=pose.texture.GetPixels32();int w=pose.texture.width,h=pose.texture.height;
+                    bool clear=Enumerable.Range(0,w).All(x=>pixels[x].a<49 && pixels[(h-1)*w+x].a<49) && Enumerable.Range(0,h).All(y=>pixels[y*w].a<49 && pixels[y*w+w-1].a<49);
+                    Check(clear,"Selection pose retains head and clothing details inside transparent margins");
+                }
+                Check(hud.selectionPortraits[0].transform.parent.gameObject.activeSelf && !hud.selectionPortraits[1].transform.parent.gameObject.activeSelf,"Only active P1 showcase is visible");
                 foreach(var card in hud.characterButtons)Check(card.transform.Find("Portrait Card Placeholder") && card.transform.Find("Painted Card Frame"),"Fighter cards have layered painted frames");
                 foreach(var controller in game.CharacterControllers)foreach(var clip in controller.animationClips)Check(!AnimationUtility.GetCurveBindings(clip).Any(binding=>binding.type==typeof(Transform)),"Sprite clip has no artificial transform rotation: "+clip.name);
-                Check(hud.selectionPortraits.All(image=>image) && hud.characterButtons.Length==8,"Both player showcases and eight roster cards exist");
-                hud.characterButtons[4].onClick.Invoke();hud.confirmCharacterButton.onClick.Invoke();hud.characterButtons[7].onClick.Invoke();hud.confirmCharacterButton.onClick.Invoke();hud.mapButtons[5].onClick.Invoke();hud.RefreshMenu();Check(game.CharacterChoices[0]==4 && game.CharacterChoices[1]==7 && game.PendingArena==5,"Saved roster, lock-in and map buttons select the requested match");CheckLiveLabels(hud.mapMenu);Capture("Documentation/RuneRumble-StageSelect.png");
-                Check(hud.mapPreview && hud.mapButtons.Length==6,"Large selected-stage preview and six cards exist");
-                Check(hud.mapPreview.rectTransform.pivot==Vector2.one*.5f,"Map preview images use a centered pivot");
+                SessionState.SetString("Woodland.SelectionPose",AssetDatabase.GetAssetPath(hud.selectionPortraits[0].sprite));SetStage(-5);
+            } else if(stage==-5 && Elapsed>.45f) {
+                Check(AssetDatabase.GetAssetPath(hud.selectionPortraits[0].sprite)!=SessionState.GetString("Woodland.SelectionPose",""),"Selection idle changes artwork over time without scaling the body");
+                Check(hud.selectionPortraits[0].transform.localScale==Vector3.one,"Breathing uses drawn poses at one body scale");
+                hud.characterButtons[4].onClick.Invoke();hud.confirmCharacterButton.onClick.Invoke();SetStage(-3);
+            } else if(stage==-3 && Elapsed>.6f) {
+                Check(!hud.selectionPortraits[0].transform.parent.gameObject.activeSelf && hud.selectionPortraits[1].transform.parent.gameObject.activeSelf,"P2 uses the same left-side showcase after P1 locks in");
+                Check(hud.selectionPortraits[0].transform.parent.localPosition==hud.selectionPortraits[1].transform.parent.localPosition,"Both player showcases occupy the same left-side position");
+                Capture("Documentation/RuneRumble-CharacterSelect-P2.png");
+                hud.characterButtons[7].onClick.Invoke();SetStage(-6);
+            } else if(stage==-6 && Elapsed>.6f) {
+                Capture("Documentation/RuneRumble-Marin-Selection.png");
+                Check(hud.selectionIdleFrames.Skip(28).Take(4).Contains(hud.selectionPortraits[1].sprite),"Marin displays its own selection animation");
+                hud.confirmCharacterButton.onClick.Invoke();hud.mapButtons[5].onClick.Invoke();SetStage(-4);
+            } else if(stage==-4 && Elapsed>.6f) {
+                Check(game.CharacterChoices[0]==4 && game.CharacterChoices[1]==7 && game.PendingArena==5,"Saved roster, lock-in and map buttons select the requested match");
+                CheckLiveLabels(hud.mapMenu);Capture("Documentation/RuneRumble-StageSelect.png");
+                Check(hud.mapButtons[5].GetComponent<RectTransform>().anchoredPosition.y>-138 && hud.mapButtons[5].transform.localScale.x>1.04f,"Selected stage visibly lifts and enlarges after switching");
+                Check(hud.mapButtons.Length==6 && hud.mapButtons.All(c=>c.GetComponent<UnityEngine.UI.Mask>()),"Six tall angled stage masks exist");
                 Capture("Documentation/RuneRumble-StageSelect-16x10.png",1440,900);
                 Capture("Documentation/RuneRumble-StageSelect-Ultrawide.png",1920,800);
                 hud.startButton.onClick.Invoke();SetStage(0);
             } else if(stage==0 && game.playing && string.IsNullOrEmpty(game.message)) {
+                Check(game.backgroundArt.color==WoodlandGame.ArenaExposure,"Arena scenery uses the subdued exposure independently from fighter art");
+                Check(game.CharacterNames[7]=="Marin" && game.SkillNames[7]=="Tide Surge","The eighth fighter is Marin with the tide identity");
                 Check(game.plank.bodyType==RigidbodyType2D.Kinematic && !game.plankArt.enabled,"Ground is fixed with no floating platform art");
                 Check(game.RoundTimeRemaining>97 && hud.roundTimerText,"Round starts with a live 99-second timer");
                 Check(game.edgeHatches.All(h=>h && !h.enabled) && game.HatchIsOpen(0) && game.HatchIsOpen(1),"Both edge holes are open from round start");
@@ -173,7 +214,7 @@ public static class GameValidation
                 PlaceOnPvpBase(game,false);SetStage(1);
             } else if(stage==1 && SimElapsed>.4f) {
                 Check(a.Grounded && b.Grounded,"Fighters stand on the central floor");
-                CheckLiveLabels(hud.matchHud);
+                CheckLiveLabels(hud.matchHud);CheckHudIconCenters(hud);
                 Capture("Documentation/RuneRumble-HUD.png");
                 Capture("Documentation/RuneRumble-HUD-16x10.png",1440,900);
                 Capture("Documentation/RuneRumble-HUD-Ultrawide.png",1920,800);
@@ -182,9 +223,21 @@ public static class GameValidation
                 hud.OpenMoveGuide();CheckLiveLabels(hud.helpPanel);Capture("Documentation/RuneRumble-MoveGuide.png");hud.CloseMoveGuide();game.ResumeMatch();
 
                 Check(a.Facing>0 && b.Facing<0,"Fighters face their rival");
+                Check(Camera.main.orthographicSize<3.2f && a.GetComponent<Collider2D>().bounds.size.y/(Camera.main.orthographicSize*2)>.37f,"Close fight camera makes standing fighters at least 37 percent of the screen height");
+                a.Body.gravityScale=b.Body.gravityScale=0;a.Body.linearVelocity=b.Body.linearVelocity=Vector2.zero;
+                a.Body.position=new Vector2(-5,-.36f);b.Body.position=new Vector2(5,-.36f);SetStage(100);
+            } else if(stage==100 && SimElapsed>.65f) {
+                Check(Camera.main.orthographicSize>3.4f,"Fight camera pulls back when rivals separate");
+                Check(Camera.main.WorldToViewportPoint(a.Body.position).x>.05f && Camera.main.WorldToViewportPoint(b.Body.position).x<.95f,"Separated rivals stay inside the camera frame");
+                b.Body.position=new Vector2(5,2.2f);SetStage(101);
+            } else if(stage==101 && SimElapsed>.65f) {
+                Check(Camera.main.orthographicSize>4.8f && Camera.main.WorldToViewportPoint(b.Body.position+Vector2.up*1.1875f).y<.85f,"Fight camera makes room for an airborne rival below the top HUD");
+                PlaceOnPvpBase(game,false);
+                SessionState.SetFloat("Woodland.PauseZoom",Camera.main.orthographicSize);
                 SessionState.SetFloat("Woodland.DuelClock",game.RoundTimeRemaining);game.TogglePause();SetStage(2);
             } else if(stage==2 && Elapsed>.35f) {
                 Check(Mathf.Approximately(game.RoundTimeRemaining,SessionState.GetFloat("Woodland.DuelClock",0)),"Pause freezes the timer");
+                Check(Mathf.Abs(Camera.main.orthographicSize-SessionState.GetFloat("Woodland.PauseZoom",0))<.01f,"Pause holds the current camera framing");
                 game.ResumeMatch();SetStage(3);
             } else if(stage==3 && SimElapsed>.35f) {
                 Check(game.RoundTimeRemaining<SessionState.GetFloat("Woodland.DuelClock",0)-.2f,"Timer resumes");
@@ -240,6 +293,9 @@ public static class GameValidation
                 else {PreparePresentationPair(game,7);b.Body.position=new Vector2(8.2f,game.plank.position.y+.8f);b.Body.linearVelocity=Vector2.down;SetStage(17);}
             } else if(stage==17 && b.RingOutFalling && SimElapsed>.2f) {
                 Check(!b.KnockedOut && !b.GetComponent<Collider2D>().enabled,"Ring-out presentation disables contact before scoring");
+                float fallingX=Camera.main.WorldToViewportPoint(b.Body.position).x;
+                Check(fallingX>.03f && fallingX<.97f,"The ring-out camera keeps the falling rival visible at the edge");
+                Check(Camera.main.WorldToViewportPoint(b.art.bounds.max).x<.995f,"The complete horizontal fall sprite stays within the right camera edge");
                 Capture("Documentation/RuneRumble-Fall.png");SetStage(18);
             } else if(stage==18 && b.KnockedOut) {
                 Check(!b.art.enabled && !b.Body.simulated,"Fallen fighter disappears into the shaft");

@@ -13,14 +13,14 @@ public class WoodlandGame : MonoBehaviour
     public int ChoosingPlayer { get; private set; }
     public int PendingCharacter { get; private set; }
     public int[] CharacterChoices = {0,1};
-    public string[] CharacterNames={"Fern","Ember","Luna","Bram","Zephyr","Volt","Nyx","Corin"};
-    public string[] SkillNames={"Vine Bolt","Fire Bolt","Frost Wave","Stone Wave","Gale Crescent","Arc Lance","Dusk Orb","Prism Arc"};
-    public string[] SkillDescriptions={"Fire a binding vine bolt. Last-square ultimate: Wildroot Prison.","Launch a fire bolt. Last-square ultimate: Phoenix Combo.","Send a slowing frost wave. Last-square ultimate: Moonfrost Seal.","Launch a rising stone wave. Last-square ultimate: World Shatter.","A wind crescent drives rivals back. Last-square ultimate: Tempest Spiral.","A fast arc lance interrupts approaches. Last-square ultimate: Thunder Rush.","A shadow orb binds rivals. Last-square ultimate: Eclipse Snare.","A prism arc controls space. Last-square ultimate: Crystal Crown."};
+    public string[] CharacterNames={"Fern","Ember","Luna","Bram","Zephyr","Volt","Nyx","Marin"};
+    public string[] SkillNames={"Vine Bolt","Fire Bolt","Frost Wave","Stone Wave","Gale Crescent","Arc Lance","Dusk Orb","Tide Surge"};
+    public string[] SkillDescriptions={"Fire a binding vine bolt. Last-square ultimate: Wildroot Prison.","Launch a fire bolt. Last-square ultimate: Phoenix Combo.","Send a slowing frost wave. Last-square ultimate: Moonfrost Seal.","Launch a rising stone wave. Last-square ultimate: World Shatter.","A wind crescent drives rivals back. Last-square ultimate: Tempest Spiral.","A fast arc lance interrupts approaches. Last-square ultimate: Thunder Rush.","A shadow orb binds rivals. Last-square ultimate: Eclipse Snare.","A tide surge drives rivals back. Last-square ultimate: Undertow."};
     public Sprite[] CharacterPortraits=new Sprite[8];
     public Sprite[] CharacterProfiles=new Sprite[8];
     public ScoutAnimations[] CharacterAnimationSets=new ScoutAnimations[8];
     public RuntimeAnimatorController[] CharacterControllers=new RuntimeAnimatorController[8];
-    public Color[] CharacterColors={new Color(.38f,1,.68f),new Color(1,.48f,.18f),new Color(.45f,.72f,1),new Color(.85f,.68f,.4f),new Color(.55f,1,.85f),new Color(1,.85f,.25f),new Color(.7f,.4f,1),new Color(1,.55f,.8f)};
+    public Color[] CharacterColors={new Color(.38f,1,.68f),new Color(1,.48f,.18f),new Color(.45f,.72f,1),new Color(.85f,.68f,.4f),new Color(.55f,1,.85f),new Color(1,.85f,.25f),new Color(.7f,.4f,1),new Color(.18f,.84f,1)};
     public Rigidbody2D[] arenaPlatforms=new Rigidbody2D[0];
     public float SettingsVolume=>WoodlandEffects.Instance?WoodlandEffects.Instance.SfxVolume:.65f;
     public bool SettingsFullscreen=>UnityEngine.Screen.fullScreen;
@@ -35,15 +35,17 @@ public class WoodlandGame : MonoBehaviour
     public SpriteRenderer backgroundArt, plankArt, sphereArt;
     public Sprite[] backgrounds = new Sprite[4], planks = new Sprite[4], spheres = new Sprite[4];
     public Sprite[] PvpBases = new Sprite[4], PvpLedges = new Sprite[4];
-    public string[] arenaNames = { "SUNLIT HOLLOW", "MOONLIT LAKE", "EMBER GROVE", "SKYWARD RUINS", "STORMGLASS CAUSEWAY", "HOLLOWROOT CISTERN" };
+    public string[] arenaNames = { "LANTERN CROSSROADS", "MOONLIT LAKE", "EMBER GROVE", "SKYWARD RUINS", "STORMGLASS CAUSEWAY", "HOLLOWROOT CISTERN" };
     public int ArenaIndex { get; private set; }
     public string ArenaName => arenaNames[ArenaIndex];
+    public static readonly Color ArenaExposure=new Color(.52f,.55f,.68f,1);
     public void SelectArena(int index)
     {
         if (index < 0 || index >= backgrounds.Length || !backgrounds[index]) return;
         bool changed=ArenaIndex!=index;ArenaIndex = index;
         if(changed)WoodlandEffects.Instance?.PlayCue(12,.18f);
         backgroundArt.sprite = backgrounds[index];
+        backgroundArt.color=ArenaExposure;
         ApplyPlatformArt();EnsureEdgeHatches();
         float scale = Mathf.Max(22 / backgroundArt.sprite.bounds.size.x, 12.5f / backgroundArt.sprite.bounds.size.y);
         backgroundArt.transform.localScale = Vector3.one * scale;
@@ -149,6 +151,7 @@ public class WoodlandGame : MonoBehaviour
     public void PreviewCharacter(int index)
     {
         if(Screen!=MenuScreen.Characters||!CharacterAvailable(index))return;
+        if(PendingCharacter!=index)WoodlandEffects.Instance?.PlayCue(12,.18f);
         PendingCharacter=index;if(hud)hud.RefreshMenu();
     }
     public void ConfirmCharacter()
@@ -367,7 +370,7 @@ public class WoodlandGame : MonoBehaviour
         Paused = false;
         roundRoutine = StartCoroutine(StartRound());
     }
-    public void TogglePause() { if(Screen!=MenuScreen.Match)return;Paused = !Paused; Time.timeScale = Paused ? 0 : 1;if(Paused)WoodlandEffects.Instance?.ResetCameraPresentation(); }
+    public void TogglePause() { if(Screen!=MenuScreen.Match)return;Paused = !Paused; Time.timeScale = Paused ? 0 : 1;if(Paused)WoodlandEffects.Instance?.ResetCameraPresentation(true); }
     void Update()
     {
         RefreshGamepads();

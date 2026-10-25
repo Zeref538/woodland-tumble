@@ -37,11 +37,15 @@ The action circles also accept mouse input. Menu navigation supports arrows, sti
 
 ## Roster and arenas
 
-Fern uses vines, Ember fire, Luna frost, Bram earth, Zephyr wind, Volt lightning, Nyx shadow and Corin prism energy. Each has its own native sprite catalog, ranged special and last-segment ultimate. Character size comes from one uniform scale and a calibrated foot pivot, never separate horizontal and vertical stretching.
+Fern uses vines, Ember fire, Luna frost, Bram earth, Zephyr wind, Volt lightning, Nyx shadow and Marin tides. Each has its own native sprite catalog, ranged special and last-segment ultimate. Character size comes from one uniform scale and a calibrated foot pivot, never separate horizontal and vertical stretching.
+
+Character selection uses detailed pixel-art poses with a four-pose breathing loop and dedicated face portraits. The active fighter appears on the left for either player.
 
 ![Fighter select](Documentation/RuneRumble-CharacterSelect.png)
 
-The arenas are Sunlit Hollow, Moonlit Lake, Ember Grove, Skyward Ruins, Stormglass Causeway and Hollowroot Cistern. Scenery, fixed collision, manholes, fighters, effects and HUD remain separate layers.
+The arenas are Lantern Crossroads, Moonlit Lake, Ember Grove, Skyward Ruins, Stormglass Causeway and Hollowroot Cistern. Scenery, fixed collision, manholes, fighters, effects and HUD remain separate layers.
+
+The camera moves closer for large fighters and pulls back for separation, jumps and edge falls. Physical collision shapes keep their existing dimensions.
 
 ![Arena select](Documentation/RuneRumble-StageSelect.png)
 
@@ -54,10 +58,11 @@ Use Unity batch mode with `-projectPath` pointing to this folder and `-executeMe
 - `GameSetup.Prepare`: rebuild the scene from the current art and catalogs.
 - `GameValidation.RunDuelSaved`: test the saved scene and capture the current presentation.
 - `GameValidation.RunCounterplay`: test recovery, guarding and confirmed combo routes.
+- `GameValidation.RunDuelFresh`: rebuild the current HUD and verify the saved scene.
 - `GameSetup.BuildWindows`: build the Windows player.
 
 Add `-silent-test` for muted verification and `-logFile` for a log. Use `-quit` with Prepare and BuildWindows. The validation methods close Unity themselves after writing their JSON reports.
 
-Current saved-scene verification passed 504 checks; counterplay passed 16 checks. The Windows build was produced and launched once without logged script exceptions. These checks do not replace a physical two-player/controller playtest. See [build evidence](Documentation/BUILD-WINDOWS-v9.json) and [TODO.md](TODO.md). Historical v7/v8 reports describe earlier rules and art, not this version. The approved design and import calibrations live in [DESIGN.md](DESIGN.md) and [art direction](Documentation/ART-DIRECTION.md).
+Current saved-scene verification passed 620 checks; counterplay passed 16 checks. The Windows player completed an 18-second startup check with no logged script exceptions. These checks do not replace a physical two-player/controller playtest. See [build evidence](Documentation/BUILD-WINDOWS-v10.json) and [TODO.md](TODO.md). Historical v7/v8 reports describe earlier rules and art, not this version. The approved design and import calibrations live in [DESIGN.md](DESIGN.md) and [art direction](Documentation/ART-DIRECTION.md).
 
-Bangers is bundled under the SIL Open Font License; see `Assets/Fonts/Bangers-OFL.txt`. Small interface text uses Unity's built-in body font.
+Interface labels use Unity's built-in upright body font, with bold headings and plain button text.

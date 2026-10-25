@@ -12,7 +12,7 @@
 - [x] Remove 817 unused legacy asset files and preserve recoverable copies outside the project.
 - [x] Fix the clipped timer, crowded input badge and inconsistent Corin skill name.
 - [x] Inspect title, roster, arena selection and HUD at 1280x720, 1440x900 and 1920x800.
-- [x] Pass 504 current scene/UI/combat checks and 16 counterplay checks.
+- [x] Pass 620 current scene/UI/combat checks and 16 counterplay checks.
 - [x] Build Windows and check one native player launch with no logged script exceptions.
 
 The remaining old font files were left untouched after the cleanup command was rejected. They are not required by the active scene. The PC must stay on: John revoked shutdown.
@@ -22,3 +22,29 @@ The remaining old font files were left untouched after the cleanup command was r
 - [ ] Check two-person keyboard/controller feel on physical hardware. Software fixtures do not establish this.
 
 Evidence: Documentation/DUEL-VALIDATION.json, COUNTERPLAY-v9.json, FX-SLICING-v9.json, ASSET-CLEANUP-v9.json and BUILD-WINDOWS-v9.json. Earlier reports in Git describe older rules and art.
+
+## Selection refinement
+
+- [x] Generate eight detailed pixel-art breathing sheets and eight dedicated circular HUD portraits.
+- [x] Put the active P1/P2 fighter on the left and roster on the right, with switching transitions.
+- [x] Darken arena scenery and replace stage selection with tall angled panels.
+- [x] Verify the new layouts and animation, then rebuild Windows.
+
+
+- [x] Replace Corin with Marin in the saved roster, including gameplay animation, effects and move labels.
+- [ ] Remove the unused Corin files: the safety gate rejected the original command and the user-approved retry. No further removal attempt is authorized by the tool gate.
+
+## Readability refinement
+
+- [x] Replace slanted display text with a normal font and clear button labels.
+- [x] Redesign action discs and center 32 skill icons by their visible artwork.
+- [x] Add a dedicated quiet stage background and stronger selection motion.
+- [x] Recheck label bounds, inspect the final screens and rebuild Windows.
+
+- [x] Replace the main arena with Lantern Crossroads: a street-level pixel-art plaza with deep perspective.
+
+- [x] Add closer dynamic fight framing, with automatic pullback for separation and jumps.
+
+Current delivery evidence: Documentation/DUEL-VALIDATION.json (620 passed), COUNTERPLAY-v9.json (16 passed), HUD-ICON-CENTERING-v10.json, BUILD-WINDOWS-v10.json and NATIVE-WINDOWS-v10.json. The native player was closed after its 18-second startup check.
+
+- [x] Verify padded selection poses retain their full hat and hood details, then refresh Windows delivery.

@@ -1,0 +1,4326 @@
+{
+  "gameplayFrames": 161,
+  "fxFrames": 24,
+  "frames": [
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Walk\\01.png",
+      "sha256": "7b85f7e12f3308003435b9ede283d8de455002b07a0dba33f03f92d0d3c945e5",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        131,
+        95,
+        254,
+        291
+      ],
+      "source": "Marin-Walk-Jump.png",
+      "uniformBatchScale": 0.7224334600760456,
+      "sourcePoseCount": 22,
+      "sourceBounds": [
+        58,
+        34,
+        220,
+        297
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Walk\\02.png",
+      "sha256": "a9ad0dfc1badb00836721731c855a007bb2e61b5a97eb459e3b4af6427eeca5d",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        123,
+        96,
+        261,
+        291
+      ],
+      "source": "Marin-Walk-Jump.png",
+      "uniformBatchScale": 0.7224334600760456,
+      "sourcePoseCount": 22,
+      "sourceBounds": [
+        284,
+        34,
+        468,
+        296
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Walk\\03.png",
+      "sha256": "9a383c1ed9c895f390c2e1433efc8046e1c8baca7dbf17389520e385c8216376",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        124,
+        99,
+        260,
+        290
+      ],
+      "source": "Marin-Walk-Jump.png",
+      "uniformBatchScale": 0.7224334600760456,
+      "sourcePoseCount": 22,
+      "sourceBounds": [
+        516,
+        36,
+        698,
+        294
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Walk\\04.png",
+      "sha256": "9c288d433b3f1787e7116a712691a8b6bd24daac8f89d36d94a823002f17a1dc",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        121,
+        99,
+        263,
+        291
+      ],
+      "source": "Marin-Walk-Jump.png",
+      "uniformBatchScale": 0.7224334600760456,
+      "sourcePoseCount": 22,
+      "sourceBounds": [
+        988,
+        37,
+        1177,
+        295
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Walk\\05.png",
+      "sha256": "002e4ca9a2a81a2a7caf751ec74992bf76b6cde81e58056d5a0ec0aef8f9a52a",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        134,
+        95,
+        250,
+        291
+      ],
+      "source": "Marin-Walk-Jump.png",
+      "uniformBatchScale": 0.7224334600760456,
+      "sourcePoseCount": 22,
+      "sourceBounds": [
+        1259,
+        33,
+        1411,
+        297
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Walk\\06.png",
+      "sha256": "e0a47bf3ea480b8bbded3e63174f371df794fced1f77a0e32a8462457f952662",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        128,
+        97,
+        255,
+        291
+      ],
+      "source": "Marin-Walk-Jump.png",
+      "uniformBatchScale": 0.7224334600760456,
+      "sourcePoseCount": 22,
+      "sourceBounds": [
+        58,
+        309,
+        226,
+        570
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Walk\\07.png",
+      "sha256": "3828e3d0970cafec3a8a2bd64f392112117b466ba076235217f0a8b0717234c3",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        128,
+        97,
+        255,
+        290
+      ],
+      "source": "Marin-Walk-Jump.png",
+      "uniformBatchScale": 0.7224334600760456,
+      "sourcePoseCount": 22,
+      "sourceBounds": [
+        290,
+        309,
+        458,
+        570
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Walk\\08.png",
+      "sha256": "f000935f099d718435242ebb52381c1e8ee6e311aa7398ce2c2700db1c59a0fe",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        122,
+        105,
+        261,
+        291
+      ],
+      "source": "Marin-Walk-Jump.png",
+      "uniformBatchScale": 0.7224334600760456,
+      "sourcePoseCount": 22,
+      "sourceBounds": [
+        512,
+        304,
+        697,
+        555
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Walk\\09.png",
+      "sha256": "b596b55686af8f20576f83175dc2cb79d2ab4d43a6100622338f9db249f8dfac",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        113,
+        99,
+        269,
+        291
+      ],
+      "source": "Marin-Walk-Jump.png",
+      "uniformBatchScale": 0.7224334600760456,
+      "sourcePoseCount": 22,
+      "sourceBounds": [
+        994,
+        309,
+        1204,
+        568
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Walk\\10.png",
+      "sha256": "cf2417508bd342fe6235bef160ec99f8804ab5fa55df372ebddbac56e4f26cc7",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        135,
+        96,
+        250,
+        291
+      ],
+      "source": "Marin-Walk-Jump.png",
+      "uniformBatchScale": 0.7224334600760456,
+      "sourcePoseCount": 22,
+      "sourceBounds": [
+        1260,
+        306,
+        1411,
+        569
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Jump\\01.png",
+      "sha256": "f0b5a222b832f9d568dc1b524db68beb8bab3d9da323a910993a01951978b1e7",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        123,
+        143,
+        261,
+        291
+      ],
+      "source": "Marin-Walk-Jump.png",
+      "uniformBatchScale": 0.7224334600760456,
+      "sourcePoseCount": 22,
+      "sourceBounds": [
+        59,
+        625,
+        243,
+        822
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Jump\\02.png",
+      "sha256": "e80f36bd4614079c5ed00662576726b77565f2e5481f209170e75d742dad02f9",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        110,
+        117,
+        275,
+        291
+      ],
+      "source": "Marin-Walk-Jump.png",
+      "uniformBatchScale": 0.7224334600760456,
+      "sourcePoseCount": 22,
+      "sourceBounds": [
+        344,
+        598,
+        564,
+        832
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Jump\\03.png",
+      "sha256": "5833a22b6da5215b5376eeb0dadbccbfca251948393d0ba581fac6c46e843449",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        116,
+        116,
+        267,
+        291
+      ],
+      "source": "Marin-Walk-Jump.png",
+      "uniformBatchScale": 0.7224334600760456,
+      "sourcePoseCount": 22,
+      "sourceBounds": [
+        632,
+        582,
+        835,
+        818
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Jump\\04.png",
+      "sha256": "8493965e258954056ef4df9642793cb4b14154526bd2f45c1148d6246af915b2",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        116,
+        100,
+        267,
+        291
+      ],
+      "source": "Marin-Walk-Jump.png",
+      "uniformBatchScale": 0.7224334600760456,
+      "sourcePoseCount": 22,
+      "sourceBounds": [
+        940,
+        578,
+        1143,
+        834
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Jump\\05.png",
+      "sha256": "9dc11a2cf0417adb63473c46552b17f9061006de751906aee510114fdf37984d",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        112,
+        123,
+        272,
+        291
+      ],
+      "source": "Marin-Walk-Jump.png",
+      "uniformBatchScale": 0.7224334600760456,
+      "sourcePoseCount": 22,
+      "sourceBounds": [
+        1194,
+        594,
+        1408,
+        818
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Jump\\06.png",
+      "sha256": "456678242c22555675c12bf8b80c18b12038c43649a54539b5eebab6e7d646c1",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        105,
+        121,
+        279,
+        291
+      ],
+      "source": "Marin-Walk-Jump.png",
+      "uniformBatchScale": 0.7224334600760456,
+      "sourcePoseCount": 22,
+      "sourceBounds": [
+        57,
+        835,
+        290,
+        1062
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Jump\\07.png",
+      "sha256": "1ff61aff388d968c3f1bc31864cbfad1ad32e2b12c8263e23320b034eec21835",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        104,
+        136,
+        280,
+        291
+      ],
+      "source": "Marin-Walk-Jump.png",
+      "uniformBatchScale": 0.7224334600760456,
+      "sourcePoseCount": 22,
+      "sourceBounds": [
+        352,
+        842,
+        587,
+        1048
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Jump\\08.png",
+      "sha256": "1d91b994a3268cb2444bfaf3eb8eb29225ae2ebae9fb87c68d9554b1030914ce",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        113,
+        141,
+        271,
+        291
+      ],
+      "source": "Marin-Walk-Jump.png",
+      "uniformBatchScale": 0.7224334600760456,
+      "sourcePoseCount": 22,
+      "sourceBounds": [
+        628,
+        867,
+        839,
+        1067
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Jump\\09.png",
+      "sha256": "02036a89f16dcc81ea1e5e8b2a6991a7f8de6f395d1455d23a56338fa6d1f470",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        116,
+        166,
+        268,
+        290
+      ],
+      "source": "Marin-Walk-Jump.png",
+      "uniformBatchScale": 0.7224334600760456,
+      "sourcePoseCount": 22,
+      "sourceBounds": [
+        907,
+        906,
+        1110,
+        1072
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Jump\\10.png",
+      "sha256": "ca648e799b9b8f5f54385da1ee7269a4eafe19f7c48fdda3a1cb565d0658281c",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        136,
+        109,
+        248,
+        291
+      ],
+      "source": "Marin-Walk-Jump.png",
+      "uniformBatchScale": 0.7224334600760456,
+      "sourcePoseCount": 22,
+      "sourceBounds": [
+        1235,
+        828,
+        1382,
+        1072
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Hurt\\01.png",
+      "sha256": "95928109c63d159e75107efbc01f0983851a1f2c618cceb8802ea7635d741d5f",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        93,
+        78,
+        290,
+        291
+      ],
+      "source": "Marin-Hurt-Push.png",
+      "uniformBatchScale": 0.8085106382978723,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        41,
+        29,
+        278,
+        287
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Hurt\\02.png",
+      "sha256": "948336b659c4ef3c12e44863866f04692307a70054ddc5dbc76eb5f8839f4a21",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        90,
+        81,
+        294,
+        291
+      ],
+      "source": "Marin-Hurt-Push.png",
+      "uniformBatchScale": 0.8085106382978723,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        330,
+        35,
+        574,
+        287
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Hurt\\03.png",
+      "sha256": "4d8fdf23572ccf789792139b51308bd8d23b5c2bc74ee235f0b12afac10f675f",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        106,
+        95,
+        278,
+        291
+      ],
+      "source": "Marin-Hurt-Push.png",
+      "uniformBatchScale": 0.8085106382978723,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        627,
+        51,
+        832,
+        287
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Hurt\\04.png",
+      "sha256": "a53cbd8943ae0397c8f4644c9fca1f46784fc26a94c6ea1f3982547b8d3f6e74",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        105,
+        121,
+        277,
+        292
+      ],
+      "source": "Marin-Hurt-Push.png",
+      "uniformBatchScale": 0.8085106382978723,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        904,
+        84,
+        1110,
+        287
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Hurt\\05.png",
+      "sha256": "86c800cb26c2ec29a536a9125d14c195352fb01595bd20f3dcaa75c0e4361050",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        109,
+        119,
+        275,
+        291
+      ],
+      "source": "Marin-Hurt-Push.png",
+      "uniformBatchScale": 0.8085106382978723,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        1188,
+        82,
+        1385,
+        287
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Hurt\\06.png",
+      "sha256": "b2105d408826f443b56dbcca8535f3040234b89ce66979fadd1649d215bb98c7",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        109,
+        117,
+        275,
+        291
+      ],
+      "source": "Marin-Hurt-Push.png",
+      "uniformBatchScale": 0.8085106382978723,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        68,
+        341,
+        265,
+        550
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Hurt\\07.png",
+      "sha256": "a16cc8000548ddfa101e0d29bda167b62d0b5c3ed76bc3fcc2c3bbd2db345f2d",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        107,
+        140,
+        277,
+        291
+      ],
+      "source": "Marin-Hurt-Push.png",
+      "uniformBatchScale": 0.8085106382978723,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        347,
+        372,
+        549,
+        552
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Hurt\\08.png",
+      "sha256": "032326c143cfd4a55efc0640905c209f4dec735a9376079cdf1438192e809957",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        110,
+        103,
+        275,
+        291
+      ],
+      "source": "Marin-Hurt-Push.png",
+      "uniformBatchScale": 0.8085106382978723,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        629,
+        327,
+        825,
+        552
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Hurt\\09.png",
+      "sha256": "ca3e066f41660245eeaed98941c00100ec1a85c5483de0c3e58d944dba595bd5",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        110,
+        83,
+        275,
+        291
+      ],
+      "source": "Marin-Hurt-Push.png",
+      "uniformBatchScale": 0.8085106382978723,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        918,
+        303,
+        1114,
+        552
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Hurt\\10.png",
+      "sha256": "633d62b0f2440144b94a110f1249ce9bb313f1e9c92f474f6d53b19ac0f138f3",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        107,
+        81,
+        277,
+        291
+      ],
+      "source": "Marin-Hurt-Push.png",
+      "uniformBatchScale": 0.8085106382978723,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        1201,
+        300,
+        1403,
+        552
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Push\\01.png",
+      "sha256": "3868d98686809d112c3753d15961b211354d5e0f794dff49ba719ec14e1df9b4",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        106,
+        95,
+        278,
+        291
+      ],
+      "source": "Marin-Hurt-Push.png",
+      "uniformBatchScale": 0.8085106382978723,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        49,
+        567,
+        254,
+        802
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Push\\02.png",
+      "sha256": "bd2b9297f81d8f6234467c505f5f1e7ddd5614f4101b710599cce136f00162d1",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        95,
+        94,
+        290,
+        291
+      ],
+      "source": "Marin-Hurt-Push.png",
+      "uniformBatchScale": 0.8085106382978723,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        309,
+        566,
+        542,
+        802
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Push\\03.png",
+      "sha256": "6d991d0c260383bd2270ff4825875b73f512239418b471e129e24f693a044772",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        89,
+        98,
+        294,
+        291
+      ],
+      "source": "Marin-Hurt-Push.png",
+      "uniformBatchScale": 0.8085106382978723,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        585,
+        571,
+        831,
+        802
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Push\\04.png",
+      "sha256": "ea415db832e7a4f4d1c57402476f3b8cedc554a8b3abc4b4343622367a7c2b28",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        77,
+        98,
+        307,
+        291
+      ],
+      "source": "Marin-Hurt-Push.png",
+      "uniformBatchScale": 0.8085106382978723,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        874,
+        572,
+        1150,
+        803
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Push\\05.png",
+      "sha256": "05e307c81e52e655e3dcbf02eaf86a1bbdee3b982dabf2fbc1cb2a665bfd7329",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        72,
+        99,
+        313,
+        291
+      ],
+      "source": "Marin-Hurt-Push.png",
+      "uniformBatchScale": 0.8085106382978723,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        1141,
+        572,
+        1431,
+        802
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Push\\06.png",
+      "sha256": "ede486bf84eaa7ba622688162a842fe543c2eb845dddf43baf32c821583b1c02",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        93,
+        92,
+        292,
+        291
+      ],
+      "source": "Marin-Hurt-Push.png",
+      "uniformBatchScale": 0.8085106382978723,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        32,
+        822,
+        270,
+        1060
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Push\\07.png",
+      "sha256": "8bf5eb84bbcd8c36bda3a2d7fbddd6394307b86428d3365a85e515589c93a766",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        103,
+        93,
+        282,
+        291
+      ],
+      "source": "Marin-Hurt-Push.png",
+      "uniformBatchScale": 0.8085106382978723,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        342,
+        823,
+        555,
+        1060
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Push\\08.png",
+      "sha256": "ef2d3eec15b847e31e7f491815b381344fec79ba37a51caa9baac287640cda8f",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        107,
+        94,
+        278,
+        291
+      ],
+      "source": "Marin-Hurt-Push.png",
+      "uniformBatchScale": 0.8085106382978723,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        621,
+        824,
+        824,
+        1060
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Push\\09.png",
+      "sha256": "d28c0259389e5f9d34e4fcd973c4c4a8ed9b90024a35b57ff0c0e18567116392",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        106,
+        88,
+        278,
+        291
+      ],
+      "source": "Marin-Hurt-Push.png",
+      "uniformBatchScale": 0.8085106382978723,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        906,
+        817,
+        1111,
+        1060
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Push\\10.png",
+      "sha256": "9acd89cacf9f79234ba29e5b8a97225c9168327d947b4b807a72ea9c787a9804",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        114,
+        83,
+        270,
+        292
+      ],
+      "source": "Marin-Hurt-Push.png",
+      "uniformBatchScale": 0.8085106382978723,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        1193,
+        810,
+        1378,
+        1060
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Punch\\01.png",
+      "sha256": "958dd03e5a0e4bf281b27f9cdfe0d28fa27cd9dcb58fc0960b512654029bf7e7",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        118,
+        96,
+        264,
+        291
+      ],
+      "source": "Marin-Punch-Kick.png",
+      "uniformBatchScale": 0.7661290322580645,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        45,
+        32,
+        229,
+        280
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Punch\\02.png",
+      "sha256": "37c94a9b22f51e23d4c2e23bd22c851246b459618ae8dd45593ec0bb0d423153",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        112,
+        96,
+        270,
+        291
+      ],
+      "source": "Marin-Punch-Kick.png",
+      "uniformBatchScale": 0.7661290322580645,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        334,
+        32,
+        534,
+        280
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Punch\\03.png",
+      "sha256": "e4f2554b7265c07b78d2a424a7eab9462258fc71a8c70fae1f754479c5454258",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        89,
+        100,
+        295,
+        291
+      ],
+      "source": "Marin-Punch-Kick.png",
+      "uniformBatchScale": 0.7661290322580645,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        582,
+        38,
+        843,
+        279
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Punch\\04.png",
+      "sha256": "501b2a40b24d2770fd503bf220c30a0e002cbb880cd48a2ab1f0442648c14dd8",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        74,
+        99,
+        310,
+        291
+      ],
+      "source": "Marin-Punch-Kick.png",
+      "uniformBatchScale": 0.7661290322580645,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        879,
+        37,
+        1179,
+        280
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Punch\\05.png",
+      "sha256": "c5a7700945c87f7b1b3f0aaaadf08d9589efae729443829f8264fb4baec8051e",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        115,
+        96,
+        270,
+        291
+      ],
+      "source": "Marin-Punch-Kick.png",
+      "uniformBatchScale": 0.7661290322580645,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        1217,
+        31,
+        1411,
+        280
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Punch\\06.png",
+      "sha256": "4d6c7750c477f79e54effb4526d682e342c58a4aa2d1524b06c01eafe9c9b2cc",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        116,
+        98,
+        267,
+        291
+      ],
+      "source": "Marin-Punch-Kick.png",
+      "uniformBatchScale": 0.7661290322580645,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        44,
+        297,
+        235,
+        541
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Punch\\07.png",
+      "sha256": "2dbc21d4d2dc315286100be98469c3a3a7d3bb3b616178300894bc230caf771c",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        103,
+        102,
+        282,
+        291
+      ],
+      "source": "Marin-Punch-Kick.png",
+      "uniformBatchScale": 0.7661290322580645,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        334,
+        302,
+        559,
+        541
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Punch\\08.png",
+      "sha256": "01d50e2b569c7322f601c4301af64ee7028b7b8b472eeca09a2fb5ed82850231",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        92,
+        106,
+        291,
+        291
+      ],
+      "source": "Marin-Punch-Kick.png",
+      "uniformBatchScale": 0.7661290322580645,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        587,
+        305,
+        839,
+        539
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Punch\\09.png",
+      "sha256": "7e0fb52b40fc2e28a101d1aa5f92d8b67d4ee2044563e7d01d28c389fd489f2b",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        76,
+        103,
+        308,
+        291
+      ],
+      "source": "Marin-Punch-Kick.png",
+      "uniformBatchScale": 0.7661290322580645,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        879,
+        303,
+        1174,
+        541
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Punch\\10.png",
+      "sha256": "6eaf41975db13d25e9bd97637a61b14475fce40efcbc07b745eeb4c7f8d43aab",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        118,
+        98,
+        266,
+        291
+      ],
+      "source": "Marin-Punch-Kick.png",
+      "uniformBatchScale": 0.7661290322580645,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        1220,
+        297,
+        1405,
+        541
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Kick\\01.png",
+      "sha256": "d1944f0aeeef6c5504ab10758a64332c7919ab2a969c5b468df0f08866ca4780",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        120,
+        98,
+        264,
+        291
+      ],
+      "source": "Marin-Punch-Kick.png",
+      "uniformBatchScale": 0.7661290322580645,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        52,
+        555,
+        232,
+        800
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Kick\\02.png",
+      "sha256": "9e0734bc65ee6922103637f0a757bce7ac5b1ae5d9ffa5076f443c9353c5905d",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        124,
+        93,
+        260,
+        291
+      ],
+      "source": "Marin-Punch-Kick.png",
+      "uniformBatchScale": 0.7661290322580645,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        342,
+        550,
+        511,
+        800
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Kick\\03.png",
+      "sha256": "b91558d90befe662a97a782c6916a78423984adde67dd0f267617f420ec01772",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        111,
+        95,
+        273,
+        291
+      ],
+      "source": "Marin-Punch-Kick.png",
+      "uniformBatchScale": 0.7661290322580645,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        607,
+        552,
+        811,
+        800
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Kick\\04.png",
+      "sha256": "5626869335e30b2933d057578986a20baf2138879288210c838401c777a38982",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        71,
+        101,
+        313,
+        291
+      ],
+      "source": "Marin-Punch-Kick.png",
+      "uniformBatchScale": 0.7661290322580645,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        841,
+        560,
+        1149,
+        800
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Kick\\05.png",
+      "sha256": "8d51769ef266a76b63fb6cf8539eda402059a1a99b46f29f6028eb1dca8745e1",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        97,
+        98,
+        286,
+        291
+      ],
+      "source": "Marin-Punch-Kick.png",
+      "uniformBatchScale": 0.7661290322580645,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        1178,
+        556,
+        1418,
+        800
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Kick\\06.png",
+      "sha256": "6926e9db3ccaf415bb735580233fae8ff95dbb07a9c299971a2c7debcb9bd6de",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        124,
+        98,
+        260,
+        291
+      ],
+      "source": "Marin-Punch-Kick.png",
+      "uniformBatchScale": 0.7661290322580645,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        44,
+        815,
+        213,
+        1059
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Kick\\07.png",
+      "sha256": "8d6af0a3d72bde6bfe2e09c7055989bd42023750f86d13fac2d68b9661b224e7",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        119,
+        98,
+        265,
+        291
+      ],
+      "source": "Marin-Punch-Kick.png",
+      "uniformBatchScale": 0.7661290322580645,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        347,
+        815,
+        530,
+        1059
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Kick\\08.png",
+      "sha256": "36b5df5249450b7fcd7c7211fbbc0be2ec95fef410f0b015da7900a4458c0063",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        111,
+        97,
+        273,
+        291
+      ],
+      "source": "Marin-Punch-Kick.png",
+      "uniformBatchScale": 0.7661290322580645,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        626,
+        816,
+        830,
+        1061
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Kick\\09.png",
+      "sha256": "211ef769731d23c726d4176084005bba689399d56f0f6a90a99aadbdbdec65a0",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        116,
+        96,
+        267,
+        291
+      ],
+      "source": "Marin-Punch-Kick.png",
+      "uniformBatchScale": 0.7661290322580645,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        921,
+        815,
+        1112,
+        1061
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Kick\\10.png",
+      "sha256": "cb631880dd7fe680606cdea8fb4db2a34018bbef5e808ba0107c325df1eb9e81",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        113,
+        95,
+        269,
+        291
+      ],
+      "source": "Marin-Punch-Kick.png",
+      "uniformBatchScale": 0.7661290322580645,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        1202,
+        813,
+        1400,
+        1061
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Knockout\\01.png",
+      "sha256": "1b72e91f58eafe5f85c916bd553d80ab5c0bfdbeb5d5bfeeecd7f7e6163b4a89",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        113,
+        73,
+        272,
+        291
+      ],
+      "source": "Marin-Knockout-Block.png",
+      "uniformBatchScale": 0.7251908396946565,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        53,
+        16,
+        264,
+        310
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Knockout\\02.png",
+      "sha256": "14a60d2156f464de5b0f1d89d1fe9b5b574a32336f6c9c3d911087d56879791b",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        96,
+        84,
+        288,
+        291
+      ],
+      "source": "Marin-Knockout-Block.png",
+      "uniformBatchScale": 0.7251908396946565,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        324,
+        32,
+        584,
+        311
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Knockout\\03.png",
+      "sha256": "0359204d39ab626bf78f408fe1ffcd1d7104e5f673c2bcddc7a71829170d7f96",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        106,
+        98,
+        279,
+        290
+      ],
+      "source": "Marin-Knockout-Block.png",
+      "uniformBatchScale": 0.7251908396946565,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        632,
+        50,
+        864,
+        309
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Knockout\\04.png",
+      "sha256": "682c2d1b51902907da04d36ac26c2ee3c635374accb18557d78c622b5658f04d",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        88,
+        126,
+        295,
+        290
+      ],
+      "source": "Marin-Knockout-Block.png",
+      "uniformBatchScale": 0.7251908396946565,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        894,
+        89,
+        1173,
+        309
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Knockout\\05.png",
+      "sha256": "70efdef13de0c075e701c8207f836acb740c97bf4afedf0cac0971c9298ff44b",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        106,
+        143,
+        276,
+        291
+      ],
+      "source": "Marin-Knockout-Block.png",
+      "uniformBatchScale": 0.7251908396946565,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        1202,
+        115,
+        1430,
+        313
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Knockout\\06.png",
+      "sha256": "8d84bb5c669834542376abca8981429688461df5e7ed3f2395cf527960d5c978",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        92,
+        148,
+        292,
+        290
+      ],
+      "source": "Marin-Knockout-Block.png",
+      "uniformBatchScale": 0.7251908396946565,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        22,
+        347,
+        291,
+        536
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Knockout\\07.png",
+      "sha256": "0462568f85ee1e8b2e4e79ec1b02ba2e6b75d230d54a13dde3e469b4cd6e6ac0",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        91,
+        169,
+        293,
+        291
+      ],
+      "source": "Marin-Knockout-Block.png",
+      "uniformBatchScale": 0.7251908396946565,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        301,
+        369,
+        571,
+        530
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Knockout\\08.png",
+      "sha256": "8bf4fac45fcdfe4cb453ff425536add461fc078d6ad2c25b5a3c3af5e9e36675",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        92,
+        201,
+        291,
+        291
+      ],
+      "source": "Marin-Knockout-Block.png",
+      "uniformBatchScale": 0.7251908396946565,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        591,
+        411,
+        858,
+        528
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Knockout\\09.png",
+      "sha256": "a2b75d64cffa706c38f95167d7fa762f7d21a4fdedaae704f9cee7954d1271bb",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        95,
+        211,
+        289,
+        291
+      ],
+      "source": "Marin-Knockout-Block.png",
+      "uniformBatchScale": 0.7251908396946565,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        871,
+        430,
+        1130,
+        534
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Knockout\\10.png",
+      "sha256": "d9e7c72028658e316a91851f6a379a10f1cd0459ab081b08f5b92c94f5f4da61",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        88,
+        222,
+        297,
+        291
+      ],
+      "source": "Marin-Knockout-Block.png",
+      "uniformBatchScale": 0.7251908396946565,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        1146,
+        443,
+        1426,
+        531
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Block\\01.png",
+      "sha256": "1cadec7416fe2943b8a1ed68d83452ecced82a960af4237ad66e3b53c7d84288",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        123,
+        96,
+        260,
+        291
+      ],
+      "source": "Marin-Knockout-Block.png",
+      "uniformBatchScale": 0.7251908396946565,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        55,
+        547,
+        236,
+        809
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Block\\02.png",
+      "sha256": "a64cc704d7cae185ba6cb810072b4ffd7618e72a7b16813d923b3e513c9ec9b9",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        117,
+        95,
+        266,
+        291
+      ],
+      "source": "Marin-Knockout-Block.png",
+      "uniformBatchScale": 0.7251908396946565,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        339,
+        546,
+        537,
+        808
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Block\\03.png",
+      "sha256": "39d8955d5b0d41c1ea942b0d71c1f950d0fc924f3e1ef85ce63bbde45d2930cd",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        116,
+        94,
+        268,
+        290
+      ],
+      "source": "Marin-Knockout-Block.png",
+      "uniformBatchScale": 0.7251908396946565,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        620,
+        545,
+        822,
+        809
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Block\\04.png",
+      "sha256": "be04bfdb78cfc6a6539e12f53e65962b1fa0c9764d32f67c184071127de80292",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        122,
+        95,
+        263,
+        291
+      ],
+      "source": "Marin-Knockout-Block.png",
+      "uniformBatchScale": 0.7251908396946565,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        919,
+        546,
+        1108,
+        808
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Block\\05.png",
+      "sha256": "2a406a02ee0555f3611a3fb439c2a626889f458e4d87ef86948131ec9ef03936",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        118,
+        95,
+        266,
+        291
+      ],
+      "source": "Marin-Knockout-Block.png",
+      "uniformBatchScale": 0.7251908396946565,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        1204,
+        546,
+        1401,
+        808
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Block\\06.png",
+      "sha256": "4cc98eba33cfecc239bc3bcce507369e475bbcc81a853bd3a4e8ed134c0203c3",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        109,
+        99,
+        276,
+        290
+      ],
+      "source": "Marin-Knockout-Block.png",
+      "uniformBatchScale": 0.7251908396946565,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        42,
+        815,
+        264,
+        1072
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Block\\07.png",
+      "sha256": "b50eea51bb9e82d93e02728dd22463d58be80377905b6120c7b132ede6a6d3f8",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        118,
+        98,
+        265,
+        290
+      ],
+      "source": "Marin-Knockout-Block.png",
+      "uniformBatchScale": 0.7251908396946565,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        351,
+        814,
+        549,
+        1072
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Block\\08.png",
+      "sha256": "668f84704d98eb07376b887c387486f83a22cbcc470d0af467e3e5d4eb232331",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        109,
+        114,
+        274,
+        291
+      ],
+      "source": "Marin-Knockout-Block.png",
+      "uniformBatchScale": 0.7251908396946565,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        623,
+        836,
+        843,
+        1072
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Block\\09.png",
+      "sha256": "81b10fbd9463c4322aed97d2eebf9fd08b382d3665420f1fe1bdc25969c9b9ed",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        116,
+        99,
+        267,
+        290
+      ],
+      "source": "Marin-Knockout-Block.png",
+      "uniformBatchScale": 0.7251908396946565,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        911,
+        815,
+        1112,
+        1072
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Block\\10.png",
+      "sha256": "63baf16cf9fcca4b9f605762ef5c06da7e9e3156a033066eb254a484c909b6d2",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        119,
+        99,
+        265,
+        289
+      ],
+      "source": "Marin-Knockout-Block.png",
+      "uniformBatchScale": 0.7251908396946565,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        1205,
+        816,
+        1401,
+        1072
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\DoubleJump\\01.png",
+      "sha256": "4b972ee70776455ca4c58c74b068fa522c746d6e53f65bd360f444508013876c",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        106,
+        144,
+        276,
+        291
+      ],
+      "source": "Marin-DoubleJump-Special.png",
+      "uniformBatchScale": 0.753968253968254,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        38,
+        93,
+        257,
+        280
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\DoubleJump\\02.png",
+      "sha256": "ba66e572bf0f175401c0174aa9ee9e4d9503c246f7c3e35552e0721b760bd9e7",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        113,
+        83,
+        271,
+        291
+      ],
+      "source": "Marin-DoubleJump-Special.png",
+      "uniformBatchScale": 0.753968253968254,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        337,
+        12,
+        539,
+        280
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\DoubleJump\\03.png",
+      "sha256": "5b9aeb6dc15070512736798ddfef5610460edda6c72e8f80b5ba48a65e74b78d",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        108,
+        104,
+        275,
+        291
+      ],
+      "source": "Marin-DoubleJump-Special.png",
+      "uniformBatchScale": 0.753968253968254,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        612,
+        22,
+        826,
+        262
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\DoubleJump\\04.png",
+      "sha256": "c219fa6e821434a0358986ce19c4456d68e6777c446ece88cb0435d50112f861",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        112,
+        90,
+        273,
+        289
+      ],
+      "source": "Marin-DoubleJump-Special.png",
+      "uniformBatchScale": 0.753968253968254,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        884,
+        19,
+        1089,
+        277
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\DoubleJump\\05.png",
+      "sha256": "4ed3cb0343a15e3df1bd53b2c3010c59c89defd9acbcb9a415726bf88f9b9066",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        103,
+        90,
+        282,
+        290
+      ],
+      "source": "Marin-DoubleJump-Special.png",
+      "uniformBatchScale": 0.753968253968254,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        1189,
+        28,
+        1418,
+        289
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\DoubleJump\\06.png",
+      "sha256": "a6c061e3e29dd9ec6b600c1bea993b73481f8c2017f8f21444cf7ecc20310852",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        101,
+        98,
+        283,
+        291
+      ],
+      "source": "Marin-DoubleJump-Special.png",
+      "uniformBatchScale": 0.753968253968254,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        28,
+        297,
+        261,
+        545
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\DoubleJump\\07.png",
+      "sha256": "2c0ef55cd21117effc8a60df2ca5ef3fbe8303a3b3ca964b033a5d435757ef03",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        104,
+        98,
+        280,
+        291
+      ],
+      "source": "Marin-DoubleJump-Special.png",
+      "uniformBatchScale": 0.753968253968254,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        345,
+        293,
+        571,
+        541
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\DoubleJump\\08.png",
+      "sha256": "1ef46113c6ebe7ac68a3a28da03fa01bec6a3186cd8a8f83d45168521ce3abab",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        101,
+        101,
+        283,
+        291
+      ],
+      "source": "Marin-DoubleJump-Special.png",
+      "uniformBatchScale": 0.753968253968254,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        611,
+        301,
+        845,
+        545
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\DoubleJump\\09.png",
+      "sha256": "ef73f41fa1a515b97d22a3f7daf510a994223224c427eb1fc13b15d6e19df756",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        98,
+        150,
+        285,
+        291
+      ],
+      "source": "Marin-DoubleJump-Special.png",
+      "uniformBatchScale": 0.753968253968254,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        890,
+        360,
+        1131,
+        540
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\DoubleJump\\10.png",
+      "sha256": "ff0ccec21adb97f1beef87825f6d6dcbcb2eca4ab4fbdc0ab94713bd0b782afd",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        103,
+        148,
+        282,
+        291
+      ],
+      "source": "Marin-DoubleJump-Special.png",
+      "uniformBatchScale": 0.753968253968254,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        1194,
+        370,
+        1423,
+        553
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Special\\01.png",
+      "sha256": "e951d1ba56f59959f23c8b3db74f7f538fd4d53d8cee8b518412d2e5f2a0a1e6",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        122,
+        95,
+        262,
+        291
+      ],
+      "source": "Marin-DoubleJump-Special.png",
+      "uniformBatchScale": 0.753968253968254,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        50,
+        556,
+        228,
+        808
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Special\\02.png",
+      "sha256": "48679b00c8485c40a0127e0c3f380f1aa34af3940bc0654baaf5f9dab4dc7c4c",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        118,
+        97,
+        267,
+        291
+      ],
+      "source": "Marin-DoubleJump-Special.png",
+      "uniformBatchScale": 0.753968253968254,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        336,
+        557,
+        525,
+        808
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Special\\03.png",
+      "sha256": "7c6aa2377ec491905932858cb382b81c859405650659fd0ecd619a4f781cdf94",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        117,
+        96,
+        266,
+        291
+      ],
+      "source": "Marin-DoubleJump-Special.png",
+      "uniformBatchScale": 0.753968253968254,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        621,
+        557,
+        811,
+        808
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Special\\04.png",
+      "sha256": "0ac1212a1cf304de6ff1ad3edade121e341675c11872a979fab655194822a9fe",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        89,
+        112,
+        295,
+        291
+      ],
+      "source": "Marin-DoubleJump-Special.png",
+      "uniformBatchScale": 0.753968253968254,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        892,
+        577,
+        1157,
+        806
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Special\\05.png",
+      "sha256": "87d001a37cadfb8c51a8e774ce7b40af0ae7b21e6a22a083c5adb6de1c4881c8",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        77,
+        134,
+        306,
+        291
+      ],
+      "source": "Marin-DoubleJump-Special.png",
+      "uniformBatchScale": 0.753968253968254,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        1146,
+        604,
+        1442,
+        804
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Special\\06.png",
+      "sha256": "1c88ea1f02225b7ca4a81080ffacb6b6839dd4519fe913ca30f6a394773343fe",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        100,
+        120,
+        283,
+        291
+      ],
+      "source": "Marin-DoubleJump-Special.png",
+      "uniformBatchScale": 0.753968253968254,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        27,
+        844,
+        262,
+        1066
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Special\\07.png",
+      "sha256": "a5e8aced5a03e973284e3dff02bfc5e4429b33785df7e6decf29447ef66b74f2",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        113,
+        116,
+        271,
+        291
+      ],
+      "source": "Marin-DoubleJump-Special.png",
+      "uniformBatchScale": 0.753968253968254,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        337,
+        839,
+        539,
+        1064
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Special\\08.png",
+      "sha256": "e99385114059aaf2ceb9b2e9c98be0a03b83982039121474376c17e5e0dd48ca",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        121,
+        107,
+        263,
+        291
+      ],
+      "source": "Marin-DoubleJump-Special.png",
+      "uniformBatchScale": 0.753968253968254,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        632,
+        829,
+        813,
+        1066
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Special\\09.png",
+      "sha256": "27e75c6fcc09cfc6d5a84340b18c9f235b25da49d9fc576e5ca626697b393b83",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        126,
+        104,
+        258,
+        290
+      ],
+      "source": "Marin-DoubleJump-Special.png",
+      "uniformBatchScale": 0.753968253968254,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        934,
+        829,
+        1101,
+        1071
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Special\\10.png",
+      "sha256": "a16a397a2e88d7b29e39659c42bd610927b7d0c29abcf58dfec8f37971ba618e",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        127,
+        97,
+        257,
+        290
+      ],
+      "source": "Marin-DoubleJump-Special.png",
+      "uniformBatchScale": 0.753968253968254,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        1223,
+        822,
+        1388,
+        1071
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Dash\\01.png",
+      "sha256": "61d93eb04104af63f1b809bcfbed43162463c3b1a90504da5983129f27c26459",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        92,
+        98,
+        293,
+        291
+      ],
+      "source": "Marin-Dash-Backstep.png",
+      "uniformBatchScale": 0.7818930041152263,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        39,
+        37,
+        288,
+        276
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Dash\\02.png",
+      "sha256": "21019668cadcab644cc89bf1084cd119d00f2e2bc0dbc7913ea6ad89f6b48362",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        88,
+        101,
+        296,
+        290
+      ],
+      "source": "Marin-Dash-Backstep.png",
+      "uniformBatchScale": 0.7818930041152263,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        315,
+        38,
+        573,
+        274
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Dash\\03.png",
+      "sha256": "a0afc6d43039ec48fa8407fa9bbcfe773f9c689132d7ddc427f60b0b4fdd2d91",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        83,
+        109,
+        300,
+        290
+      ],
+      "source": "Marin-Dash-Backstep.png",
+      "uniformBatchScale": 0.7818930041152263,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        595,
+        50,
+        865,
+        276
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Dash\\04.png",
+      "sha256": "f3803c105a8fa708b65e20f19b7b0134d258a80c3b8973a406bd3d3c3f4447ad",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        86,
+        110,
+        297,
+        290
+      ],
+      "source": "Marin-Dash-Backstep.png",
+      "uniformBatchScale": 0.7818930041152263,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        872,
+        52,
+        1134,
+        276
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Dash\\05.png",
+      "sha256": "f5e0460b177faa4a20d0e15e27639919306edf18e0c4a7e1da47d3e423d512b3",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        83,
+        109,
+        299,
+        290
+      ],
+      "source": "Marin-Dash-Backstep.png",
+      "uniformBatchScale": 0.7818930041152263,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        1145,
+        49,
+        1416,
+        275
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Dash\\06.png",
+      "sha256": "90c643072ebc71c9f0d10529bf566f65e09b753fd68344308464099669b4523b",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        84,
+        99,
+        299,
+        291
+      ],
+      "source": "Marin-Dash-Backstep.png",
+      "uniformBatchScale": 0.7818930041152263,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        28,
+        299,
+        295,
+        537
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Dash\\07.png",
+      "sha256": "dc5483f65b717c68f6db48361670a2704a6ba4263d3f6dd8681e34589037e78f",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        81,
+        102,
+        304,
+        291
+      ],
+      "source": "Marin-Dash-Backstep.png",
+      "uniformBatchScale": 0.7818930041152263,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        324,
+        303,
+        601,
+        537
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Dash\\08.png",
+      "sha256": "6d1dabfb9317bdaa95c6b3f70383e4c928861ebca3006df4621788c6b3519c59",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        93,
+        109,
+        291,
+        292
+      ],
+      "source": "Marin-Dash-Backstep.png",
+      "uniformBatchScale": 0.7818930041152263,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        615,
+        309,
+        860,
+        537
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Dash\\09.png",
+      "sha256": "e509cc5595c9d087c1363cb2ff65db51cea70ba940ef07b403b58ad5e9fff4f1",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        100,
+        101,
+        285,
+        291
+      ],
+      "source": "Marin-Dash-Backstep.png",
+      "uniformBatchScale": 0.7818930041152263,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        902,
+        302,
+        1130,
+        537
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Dash\\10.png",
+      "sha256": "27ad211fd879f02bf25c29391f2b7d415f76e008fbcf062bd9282ce3e321789d",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        117,
+        95,
+        268,
+        291
+      ],
+      "source": "Marin-Dash-Backstep.png",
+      "uniformBatchScale": 0.7818930041152263,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        1206,
+        294,
+        1391,
+        538
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Backstep\\01.png",
+      "sha256": "8c6b1aed977c1b10fc37e53d09fae1d89c9f28da8f8dc7d6dc98ae19ba7603ee",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        111,
+        91,
+        271,
+        291
+      ],
+      "source": "Marin-Dash-Backstep.png",
+      "uniformBatchScale": 0.7818930041152263,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        49,
+        554,
+        247,
+        803
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Backstep\\02.png",
+      "sha256": "568bf1d71397d80ea8e0d78d7cb511d8907c8fd97995aad20e89f81d2f510387",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        95,
+        93,
+        290,
+        291
+      ],
+      "source": "Marin-Dash-Backstep.png",
+      "uniformBatchScale": 0.7818930041152263,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        345,
+        558,
+        586,
+        803
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Backstep\\03.png",
+      "sha256": "c068d9044283bc120fa831a06a39bee7216b539635a3de9bb58161433e59f9b1",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        79,
+        98,
+        303,
+        291
+      ],
+      "source": "Marin-Dash-Backstep.png",
+      "uniformBatchScale": 0.7818930041152263,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        591,
+        564,
+        871,
+        803
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Backstep\\04.png",
+      "sha256": "103c910cbb12f42a0cb48d16a18f9440406982b09e2a1106bed0f297dbee4a9f",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        94,
+        93,
+        289,
+        291
+      ],
+      "source": "Marin-Dash-Backstep.png",
+      "uniformBatchScale": 0.7818930041152263,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        906,
+        553,
+        1148,
+        800
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Backstep\\05.png",
+      "sha256": "abd6519c51f301bd6300563bc26bef5839d06df98268090db2476fe6685322b1",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        99,
+        99,
+        285,
+        291
+      ],
+      "source": "Marin-Dash-Backstep.png",
+      "uniformBatchScale": 0.7818930041152263,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        1172,
+        562,
+        1403,
+        800
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Backstep\\06.png",
+      "sha256": "a7ef51b0519b7373c4e4255226d7ff77319b98fba552148e9d9d1ae12e5561c0",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        104,
+        101,
+        281,
+        291
+      ],
+      "source": "Marin-Dash-Backstep.png",
+      "uniformBatchScale": 0.7818930041152263,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        68,
+        822,
+        286,
+        1057
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Backstep\\07.png",
+      "sha256": "002f4eb25a073af99c25d21407a8f813256f1fd81fd5c8292988aabba3adfc1a",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        107,
+        101,
+        277,
+        291
+      ],
+      "source": "Marin-Dash-Backstep.png",
+      "uniformBatchScale": 0.7818930041152263,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        363,
+        823,
+        572,
+        1058
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Backstep\\08.png",
+      "sha256": "7745275a6cb2f96105f0c92f33a345138b1891f6482bd9ae725cd3547a47961b",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        114,
+        96,
+        269,
+        290
+      ],
+      "source": "Marin-Dash-Backstep.png",
+      "uniformBatchScale": 0.7818930041152263,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        644,
+        816,
+        836,
+        1058
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Backstep\\09.png",
+      "sha256": "6620606ef40038d11de62afec481bf9161d3bc4073b7d352d455fe23bc9d16f0",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        117,
+        96,
+        268,
+        291
+      ],
+      "source": "Marin-Dash-Backstep.png",
+      "uniformBatchScale": 0.7818930041152263,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        933,
+        816,
+        1119,
+        1058
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Backstep\\10.png",
+      "sha256": "33c20e3c0ebaddb1597223e20351d4ad842cf5058033e867c972cb7819ade2d5",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        118,
+        95,
+        266,
+        291
+      ],
+      "source": "Marin-Dash-Backstep.png",
+      "uniformBatchScale": 0.7818930041152263,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        1205,
+        815,
+        1386,
+        1058
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Victory\\01.png",
+      "sha256": "f21fda9b6444b3dd34e7d6349d222da08ef3394305577592c716dfb0a0d40b86",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        128,
+        78,
+        256,
+        291
+      ],
+      "source": "Marin-Victory-Ultimate.png",
+      "uniformBatchScale": 0.6985294117647058,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        105,
+        5,
+        281,
+        302
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Victory\\02.png",
+      "sha256": "471040ac5a76c91e97ab79669a4edefc7fb7dac9fcd5a25acf98244f189e7a38",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        122,
+        96,
+        262,
+        291
+      ],
+      "source": "Marin-Victory-Ultimate.png",
+      "uniformBatchScale": 0.6985294117647058,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        380,
+        30,
+        573,
+        302
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Victory\\03.png",
+      "sha256": "59c14703186f771e97646b4d236fa33c4d6c01691ad8be6db837405f646d8033",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        130,
+        94,
+        255,
+        291
+      ],
+      "source": "Marin-Victory-Ultimate.png",
+      "uniformBatchScale": 0.6985294117647058,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        643,
+        28,
+        815,
+        302
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Victory\\04.png",
+      "sha256": "938104a5fce9d7bfede6b5eaadb5ff5462288e8316f3ec124b5978280afbbfc9",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        117,
+        96,
+        267,
+        291
+      ],
+      "source": "Marin-Victory-Ultimate.png",
+      "uniformBatchScale": 0.6985294117647058,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        905,
+        30,
+        1112,
+        302
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Victory\\05.png",
+      "sha256": "8e3b081391ef7b06885f04a6809e307317a0291c6b2655d22566816e2b08ceaa",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        123,
+        96,
+        261,
+        291
+      ],
+      "source": "Marin-Victory-Ultimate.png",
+      "uniformBatchScale": 0.6985294117647058,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        1175,
+        29,
+        1364,
+        302
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Victory\\06.png",
+      "sha256": "ffbd0ffc4cb7858c686bbe37a08397530df319f8db0db3d4fd04cb5338ba646f",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        95,
+        96,
+        291,
+        291
+      ],
+      "source": "Marin-Victory-Ultimate.png",
+      "uniformBatchScale": 0.6985294117647058,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        62,
+        309,
+        336,
+        580
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Victory\\07.png",
+      "sha256": "c7e52b5bbee335787c57fb4b70e49bdf2022be1a533db1216ae690e8a49907a7",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        133,
+        94,
+        250,
+        291
+      ],
+      "source": "Marin-Victory-Ultimate.png",
+      "uniformBatchScale": 0.6985294117647058,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        403,
+        307,
+        566,
+        581
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Victory\\08.png",
+      "sha256": "1e6eb4face93c97d6aaa6e345765c6f8cff3c916039a136b95bd9322678297b3",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        132,
+        95,
+        252,
+        291
+      ],
+      "source": "Marin-Victory-Ultimate.png",
+      "uniformBatchScale": 0.6985294117647058,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        650,
+        309,
+        814,
+        581
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Victory\\09.png",
+      "sha256": "310ec165386875377fd4d2fe69f8decca02f670865c3c21088ff3d92da69b563",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        125,
+        95,
+        259,
+        291
+      ],
+      "source": "Marin-Victory-Ultimate.png",
+      "uniformBatchScale": 0.6985294117647058,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        925,
+        308,
+        1109,
+        581
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Victory\\10.png",
+      "sha256": "1fc9e20d70751ce9dc357d5f9d3917a9a17354a534c1643569d0a06e9192d217",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        128,
+        95,
+        255,
+        291
+      ],
+      "source": "Marin-Victory-Ultimate.png",
+      "uniformBatchScale": 0.6985294117647058,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        1201,
+        310,
+        1375,
+        582
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Ultimate\\01.png",
+      "sha256": "bd4d732e92638683b288dabc5aef62fedb2c3e2193d75c38276626c5d4770a17",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        118,
+        125,
+        265,
+        291
+      ],
+      "source": "Marin-Victory-Ultimate.png",
+      "uniformBatchScale": 0.6985294117647058,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        90,
+        593,
+        293,
+        823
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Ultimate\\02.png",
+      "sha256": "9f5d7c296edcc709bb0b832744499f356e925dc3ed022d0783c157b5fde89d7a",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        122,
+        122,
+        261,
+        290
+      ],
+      "source": "Marin-Victory-Ultimate.png",
+      "uniformBatchScale": 0.6985294117647058,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        373,
+        590,
+        566,
+        823
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Ultimate\\03.png",
+      "sha256": "12a4ab70489174d4f1a1a650ad31f351b65ca1b92d239e1ba67df7d37e2c01d5",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        106,
+        123,
+        279,
+        291
+      ],
+      "source": "Marin-Victory-Ultimate.png",
+      "uniformBatchScale": 0.6985294117647058,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        611,
+        591,
+        850,
+        823
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Ultimate\\04.png",
+      "sha256": "0063639574f6a4194eb5ac490a67644486989f805d5ab211dbda9812c208d3d8",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        93,
+        125,
+        291,
+        291
+      ],
+      "source": "Marin-Victory-Ultimate.png",
+      "uniformBatchScale": 0.6985294117647058,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        864,
+        593,
+        1140,
+        823
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Ultimate\\05.png",
+      "sha256": "3a85ab7b032fa6ed0fec4105f4aa47e828a9cbcc3ffa537cbedc1f77bcb83d3b",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        85,
+        126,
+        299,
+        291
+      ],
+      "source": "Marin-Victory-Ultimate.png",
+      "uniformBatchScale": 0.6985294117647058,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        1136,
+        594,
+        1435,
+        822
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Ultimate\\06.png",
+      "sha256": "3f34b5a323336747698770a6da83a9c4e026be0e6896dce21085049501a16f41",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        90,
+        120,
+        293,
+        290
+      ],
+      "source": "Marin-Victory-Ultimate.png",
+      "uniformBatchScale": 0.6985294117647058,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        41,
+        830,
+        324,
+        1066
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Ultimate\\07.png",
+      "sha256": "ea7d311c0346585846504f9f5c58ccf54b4fd2059b422b8329196c2501c10a14",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        97,
+        117,
+        288,
+        290
+      ],
+      "source": "Marin-Victory-Ultimate.png",
+      "uniformBatchScale": 0.6985294117647058,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        335,
+        829,
+        600,
+        1070
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Ultimate\\08.png",
+      "sha256": "781f484493371cc6a02a257e859ab36453a38f88cc2a758602bf2408e8561d96",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        117,
+        111,
+        266,
+        291
+      ],
+      "source": "Marin-Victory-Ultimate.png",
+      "uniformBatchScale": 0.6985294117647058,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        628,
+        823,
+        834,
+        1073
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Ultimate\\09.png",
+      "sha256": "93f585f5e5ad4978245cafc361a88d74253e1265fb98507d191a52b5765a1d7f",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        135,
+        113,
+        248,
+        290
+      ],
+      "source": "Marin-Victory-Ultimate.png",
+      "uniformBatchScale": 0.6985294117647058,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        920,
+        828,
+        1074,
+        1074
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Ultimate\\10.png",
+      "sha256": "894c8f25977a9478351fda2b3f3cb1399949288143b6381c82965eda458e5d49",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        136,
+        108,
+        248,
+        290
+      ],
+      "source": "Marin-Victory-Ultimate.png",
+      "uniformBatchScale": 0.6985294117647058,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        1199,
+        823,
+        1351,
+        1076
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Downed\\01.png",
+      "sha256": "39b165b434e227fea581e101dbd6c903b8016e83345a13d088019c12bc6588ac",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        91,
+        190,
+        294,
+        291
+      ],
+      "source": "Marin-Downed-GetUp.png",
+      "uniformBatchScale": 0.7169811320754716,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        11,
+        145,
+        286,
+        280
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Downed\\02.png",
+      "sha256": "1f6c68d84acc3fdc06d343b6361cc83bfabc7eb09ca1ba03347978be3ea14a59",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        88,
+        191,
+        297,
+        290
+      ],
+      "source": "Marin-Downed-GetUp.png",
+      "uniformBatchScale": 0.7169811320754716,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        299,
+        148,
+        582,
+        280
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Downed\\03.png",
+      "sha256": "78ed68c9f5602141de4f37f53cfcb0f0f5be0cc5a6547f21caf1b5042c29a62c",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        94,
+        185,
+        290,
+        290
+      ],
+      "source": "Marin-Downed-GetUp.png",
+      "uniformBatchScale": 0.7169811320754716,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        595,
+        139,
+        861,
+        278
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Downed\\04.png",
+      "sha256": "43555f5e666512137510bda5562d0c704b512cf30a08ac361811e688863d683f",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        92,
+        179,
+        292,
+        291
+      ],
+      "source": "Marin-Downed-GetUp.png",
+      "uniformBatchScale": 0.7169811320754716,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        877,
+        130,
+        1148,
+        280
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Downed\\05.png",
+      "sha256": "c754c2835956f422f082afed6ab200f874bc9d64324adf810cc3e271f2d9bf34",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        91,
+        197,
+        293,
+        291
+      ],
+      "source": "Marin-Downed-GetUp.png",
+      "uniformBatchScale": 0.7169811320754716,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        1161,
+        153,
+        1435,
+        278
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Downed\\06.png",
+      "sha256": "43555f5e666512137510bda5562d0c704b512cf30a08ac361811e688863d683f",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        92,
+        179,
+        292,
+        291
+      ],
+      "source": "Marin-Downed-GetUp.png",
+      "uniformBatchScale": 0.7169811320754716,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        877,
+        130,
+        1148,
+        280
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Downed\\07.png",
+      "sha256": "78ed68c9f5602141de4f37f53cfcb0f0f5be0cc5a6547f21caf1b5042c29a62c",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        94,
+        185,
+        290,
+        290
+      ],
+      "source": "Marin-Downed-GetUp.png",
+      "uniformBatchScale": 0.7169811320754716,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        595,
+        139,
+        861,
+        278
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Downed\\08.png",
+      "sha256": "1f6c68d84acc3fdc06d343b6361cc83bfabc7eb09ca1ba03347978be3ea14a59",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        88,
+        191,
+        297,
+        290
+      ],
+      "source": "Marin-Downed-GetUp.png",
+      "uniformBatchScale": 0.7169811320754716,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        299,
+        148,
+        582,
+        280
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Downed\\09.png",
+      "sha256": "39b165b434e227fea581e101dbd6c903b8016e83345a13d088019c12bc6588ac",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        91,
+        190,
+        294,
+        291
+      ],
+      "source": "Marin-Downed-GetUp.png",
+      "uniformBatchScale": 0.7169811320754716,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        11,
+        145,
+        286,
+        280
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Downed\\10.png",
+      "sha256": "1f6c68d84acc3fdc06d343b6361cc83bfabc7eb09ca1ba03347978be3ea14a59",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        88,
+        191,
+        297,
+        290
+      ],
+      "source": "Marin-Downed-GetUp.png",
+      "uniformBatchScale": 0.7169811320754716,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        299,
+        148,
+        582,
+        280
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\GetUp\\01.png",
+      "sha256": "551f7d83c8ac2192d2ecd964f1463c2ed6349bb23fb19d7a2a8f46c982cc0b4e",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        111,
+        148,
+        272,
+        290
+      ],
+      "source": "Marin-Downed-GetUp.png",
+      "uniformBatchScale": 0.7169811320754716,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        25,
+        600,
+        242,
+        792
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\GetUp\\02.png",
+      "sha256": "2e3237447e817e3c764602d8ed400fffa18d3de64e8ec4097d3c6fa94811121e",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        102,
+        133,
+        281,
+        290
+      ],
+      "source": "Marin-Downed-GetUp.png",
+      "uniformBatchScale": 0.7169811320754716,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        319,
+        580,
+        562,
+        793
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\GetUp\\03.png",
+      "sha256": "80468dabe57b9134eae429115838192a8794801b8e898a794c6a14edf5766341",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        111,
+        133,
+        273,
+        291
+      ],
+      "source": "Marin-Downed-GetUp.png",
+      "uniformBatchScale": 0.7169811320754716,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        608,
+        580,
+        826,
+        794
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\GetUp\\04.png",
+      "sha256": "1d67501532253e7d3ffbd1ce92f4d418eb1c8112e74fa13bc846be5d2317ffdf",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        111,
+        108,
+        273,
+        290
+      ],
+      "source": "Marin-Downed-GetUp.png",
+      "uniformBatchScale": 0.7169811320754716,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        906,
+        545,
+        1125,
+        792
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\GetUp\\05.png",
+      "sha256": "827e89c2025b9c84713fd4f710ba6ecfa2f0590f1d54c44efe525a211e1a2940",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        127,
+        101,
+        257,
+        290
+      ],
+      "source": "Marin-Downed-GetUp.png",
+      "uniformBatchScale": 0.7169811320754716,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        1223,
+        536,
+        1396,
+        793
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\GetUp\\06.png",
+      "sha256": "15f911a579a979b9b94f40d6c201cfa0485aa38b50cb53e410cdd4c629c7929a",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        131,
+        87,
+        253,
+        290
+      ],
+      "source": "Marin-Downed-GetUp.png",
+      "uniformBatchScale": 0.7169811320754716,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        73,
+        796,
+        235,
+        1072
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\GetUp\\07.png",
+      "sha256": "f390b8a57508ed70b1853b2d15d4955338283966ef14fbeeb550755dff6f6989",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        127,
+        89,
+        256,
+        289
+      ],
+      "source": "Marin-Downed-GetUp.png",
+      "uniformBatchScale": 0.7169811320754716,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        341,
+        799,
+        513,
+        1072
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\GetUp\\08.png",
+      "sha256": "22aa08464a6925ed700dc85ce36e374b5f81ed8f0e5bfd0e3140cd0fb831ee25",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        117,
+        98,
+        266,
+        290
+      ],
+      "source": "Marin-Downed-GetUp.png",
+      "uniformBatchScale": 0.7169811320754716,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        620,
+        810,
+        820,
+        1072
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\GetUp\\09.png",
+      "sha256": "f13e0afcb56dc8137a81c2cd9f5810f068feb5f5c825cc7f724e3efc9c42ea03",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        122,
+        100,
+        261,
+        290
+      ],
+      "source": "Marin-Downed-GetUp.png",
+      "uniformBatchScale": 0.7169811320754716,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        921,
+        813,
+        1107,
+        1072
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\GetUp\\10.png",
+      "sha256": "6dc66e5568807035a9e2dab3e9a9d3acdb2943903e2f168941214c77d8f33d31",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        122,
+        95,
+        261,
+        290
+      ],
+      "source": "Marin-Downed-GetUp.png",
+      "uniformBatchScale": 0.7169811320754716,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        1212,
+        807,
+        1398,
+        1072
+      ]
+    }
+  ]
+}
