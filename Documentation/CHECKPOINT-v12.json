@@ -1,0 +1,15 @@
+{
+  "sceneChecks": 667,
+  "counterplayChecks": 16,
+  "artRequests": 25,
+  "selectedSources": 17,
+  "abilityIcons": 32,
+  "marinGameplayFrames": 161,
+  "marinSelectionPoses": 4,
+  "marinStandingBodyPixels": 210,
+  "otherRosterBodyPixels": 190,
+  "remainingUsagePercent": 16,
+  "knownIssue": "Roster Footer Shade dims the selection skill subtitle after the nameplate was lowered to uncover the boots.",
+  "nextStep": "Move the roster footer below the subtitle, inspect selection and verify the Windows player.",
+  "shutdownQueued": false
+}

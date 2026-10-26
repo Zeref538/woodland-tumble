@@ -627,7 +627,8 @@ public class WoodlandEffects : MonoBehaviour
                     float firstY=first.RingOutFalling || first.KnockedOut?standingY:first.Body.position.y;
                     float secondY=second.RingOutFalling || second.KnockedOut?standingY:second.Body.position.y;
                     float low=Mathf.Min(firstY,secondY)-1.1875f;
-                    float high=Mathf.Max(firstY,secondY)+1.1875f;
+                    // Marin's larger artwork shares the same feet and collision body.
+                    float high=Mathf.Max(firstY+1.1875f+(first.CharacterIndex==7?.25f:0),secondY+1.1875f+(second.CharacterIndex==7?.25f:0));
                     float span=Mathf.Abs(first.Body.position.x-second.Body.position.x);
                     float sideMargin=first.RingOutFalling || second.RingOutFalling?5.5f:2.8f;
                     matchZoom=Mathf.Clamp(Mathf.Max(3,(span+sideMargin)/(2*cam.aspect),high-low+.25f),3,cameraZoom);

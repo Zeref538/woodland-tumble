@@ -2,6 +2,8 @@
 
 The approved combination is Arcade Aura interface plus Ink & Motion effects. DESIGN.md governs the result; the two reference boards are in Documentation/Design-Samples.
 
+Current refinement restores the menu's dark brush silhouettes and bright ivory text, with colored ink focus strokes. Ability buttons receive original purpose-drawn circular illustrations: guarding forearms, a punching fist, a kicking boot and a character-specific special. These illustrations are independent of combat VFX sheets. Marin's new sheets use larger heads and compact bodies to match the roster. Keep all body dimensions uniform in world space and check the new proportions beside Fern before accepting them.
+
 Use midnight purple with vivid cyan, coral pink, amber and acid lime. Normal upright sans-serif lettering, bold headings and calm high-contrast label fields and confident illustrated bands define the interface. Attack effects use broad directional ink-brush sweeps, pale contact cores, teal or the fighter's own element color, and short controlled paint fragments. Keep the detailed existing fighters and preserve their proportions. Avoid wood ornaments, crystal shards, rune glyph decoration and glossy mobile-game bevels.
 
 Every generation prompt must include these shared colors, shape rules, reference roles and exclusions, followed by the specific asset composition. Generate independent assets together. Keep source artwork, live labels and state feedback in separate layers. Inspect the actual Unity result, not just the generated images.

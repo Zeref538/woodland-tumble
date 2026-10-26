@@ -1,0 +1,55 @@
+{
+  "requested": 8,
+  "returned": 8,
+  "mode": "built-in concurrent batch",
+  "assets": [
+    {
+      "name": "Marin-Walk-Jump-Spaced",
+      "source": "C:\\Users\\johna\\.codex\\generated_images\\01a16970-d7f5-7dc2-906c-dd1f89b33816\\exec-06fd9f47-0f60-4cc7-b5e0-ba655bbf97d4.png",
+      "destination": "Documentation/Presentation-v12/Marin-Walk-Jump-Spaced.png",
+      "accepted": true
+    },
+    {
+      "name": "Marin-Hurt-Push-Spaced",
+      "source": "C:\\Users\\johna\\.codex\\generated_images\\01a16970-d7f5-7dc2-906c-dd1f89b33816\\exec-ebf0b34a-1581-4dcc-9667-6d228d5cf706.png",
+      "destination": "Documentation/Presentation-v12/Marin-Hurt-Push-Spaced.png",
+      "accepted": true
+    },
+    {
+      "name": "Marin-Punch-Kick-Spaced",
+      "source": "C:\\Users\\johna\\.codex\\generated_images\\01a16970-d7f5-7dc2-906c-dd1f89b33816\\exec-2e853ea6-5db2-413b-8e3b-068b4b3011e5.png",
+      "destination": "Documentation/Presentation-v12/Marin-Punch-Kick-Spaced.png",
+      "accepted": true
+    },
+    {
+      "name": "Marin-Knockout-Block-Spaced",
+      "source": "C:\\Users\\johna\\.codex\\generated_images\\01a16970-d7f5-7dc2-906c-dd1f89b33816\\exec-09c054c9-21c5-471b-95d8-3c86dfa6a5c4.png",
+      "destination": "Documentation/Presentation-v12/Marin-Knockout-Block-Spaced.png",
+      "accepted": true
+    },
+    {
+      "name": "Marin-DoubleJump-Special-Spaced",
+      "source": "C:\\Users\\johna\\.codex\\generated_images\\01a16970-d7f5-7dc2-906c-dd1f89b33816\\exec-39ca8f7d-02f7-4eee-a482-a45bf3026de6.png",
+      "destination": "Documentation/Presentation-v12/Marin-DoubleJump-Special-Spaced.png",
+      "accepted": true
+    },
+    {
+      "name": "Marin-Dash-Backstep-Spaced",
+      "source": "C:\\Users\\johna\\.codex\\generated_images\\01a16970-d7f5-7dc2-906c-dd1f89b33816\\exec-dba8d508-0112-4b4a-837b-dd28e4cc3839.png",
+      "destination": "Documentation/Presentation-v12/Marin-Dash-Backstep-Spaced.png",
+      "accepted": true
+    },
+    {
+      "name": "Marin-Victory-Ultimate-Spaced",
+      "source": "C:\\Users\\johna\\.codex\\generated_images\\01a16970-d7f5-7dc2-906c-dd1f89b33816\\exec-5d42aa94-49c8-40d8-a44b-3c861d64169f.png",
+      "destination": "Documentation/Presentation-v12/Marin-Victory-Ultimate-Spaced.png",
+      "accepted": true
+    },
+    {
+      "name": "Marin-Downed-GetUp-Spaced",
+      "source": "C:\\Users\\johna\\.codex\\generated_images\\01a16970-d7f5-7dc2-906c-dd1f89b33816\\exec-8e6e7271-1cb3-4b93-adf1-68624958ecee.png",
+      "destination": "Documentation/Presentation-v12/Marin-Downed-GetUp-Spaced.png",
+      "accepted": true
+    }
+  ]
+}

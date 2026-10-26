@@ -1,0 +1,738 @@
+[
+  {
+    "fighter": "Fern",
+    "action": "Guard",
+    "source": "Documentation\\Presentation-v12\\Fern-Skills.png",
+    "sourceBounds": [
+      56,
+      60,
+      595,
+      593
+    ],
+    "canvas": [
+      128,
+      128
+    ],
+    "visibleCenter": [
+      62.99548384270028,
+      63.47424559538743
+    ],
+    "centerError": 1.1337858723082201,
+    "safeRadius": 54.57105459856901,
+    "oldSha256": "12ba047693001444187d693d9446df7e2afb34622395d023e6949749b273a1a2",
+    "sha256": "ace011ebbe325e439194ff961f41e3cea75064d356b7c41e88deb1c7b1016941"
+  },
+  {
+    "fighter": "Fern",
+    "action": "Punch",
+    "source": "Documentation\\Presentation-v12\\Fern-Skills.png",
+    "sourceBounds": [
+      28,
+      60,
+      569,
+      593
+    ],
+    "canvas": [
+      128,
+      128
+    ],
+    "visibleCenter": [
+      63.392550141229066,
+      63.53652469318665
+    ],
+    "centerError": 0.7640711295072975,
+    "safeRadius": 54.70831746635972,
+    "oldSha256": "92301b5458f2130f08977eaf098d8a1764207e1ccc21ac036245417cfe80072c",
+    "sha256": "1a1181dbdded614a1f4a86e110c21ab2231fef7e164cf9fd4cc4723403387a58"
+  },
+  {
+    "fighter": "Fern",
+    "action": "Kick",
+    "source": "Documentation\\Presentation-v12\\Fern-Skills.png",
+    "sourceBounds": [
+      54,
+      27,
+      597,
+      561
+    ],
+    "canvas": [
+      128,
+      128
+    ],
+    "visibleCenter": [
+      63.86744880146228,
+      63.01345196384271
+    ],
+    "centerError": 0.9954129032113191,
+    "safeRadius": 53.907327887774215,
+    "oldSha256": "df8c70587e607916934a8d1fff85490dcd07fd1c9d98ce4590a82576a86172c4",
+    "sha256": "c13b144c942c8f91f2913ea7a64d65bd0ea2232f6102eff39fba4e1b3c4c3ff0"
+  },
+  {
+    "fighter": "Fern",
+    "action": "Special",
+    "source": "Documentation\\Presentation-v12\\Fern-Skills.png",
+    "sourceBounds": [
+      29,
+      27,
+      573,
+      561
+    ],
+    "canvas": [
+      128,
+      128
+    ],
+    "visibleCenter": [
+      62.98999048601372,
+      62.9888723864296
+    ],
+    "centerError": 1.429159987288821,
+    "safeRadius": 54.45181356024793,
+    "oldSha256": "d54aa6c109daed4c62e22e45ad9becfbd07e6eea8585c6f62a322379e64bb133",
+    "sha256": "36db4c9aacdb9071300c222374d272b9aec08b96df01929f27b6e7a99649f30b"
+  },
+  {
+    "fighter": "Ember",
+    "action": "Guard",
+    "source": "Documentation\\Presentation-v12\\Ember-Skills.png",
+    "sourceBounds": [
+      42,
+      40,
+      587,
+      580
+    ],
+    "canvas": [
+      128,
+      128
+    ],
+    "visibleCenter": [
+      63.235882690634966,
+      63.36747944206811
+    ],
+    "centerError": 0.9919463285267649,
+    "safeRadius": 54.57105459856901,
+    "oldSha256": "ecc9c9a1c1533e0ed062720b121c294238f49cabc9e965e2babeeaadd9a8a8f4",
+    "sha256": "26198ee4964f105977c9ef499ac253a825e78d4f857af6e04f0f0d62e3203936"
+  },
+  {
+    "fighter": "Ember",
+    "action": "Punch",
+    "source": "Documentation\\Presentation-v12\\Ember-Skills.png",
+    "sourceBounds": [
+      40,
+      39,
+      584,
+      581
+    ],
+    "canvas": [
+      128,
+      128
+    ],
+    "visibleCenter": [
+      64.05331171006758,
+      63.87441728602146
+    ],
+    "centerError": 0.13643004244133522,
+    "safeRadius": 53.85164807134504,
+    "oldSha256": "33a7679305dfd1f81181c0af66441e8af7019e76e4e4c48ebd7811c2dff47581",
+    "sha256": "2b3b263d335b08862c1484180e5a10af2a2f4f71c65abb62cf6a115fc0b38319"
+  },
+  {
+    "fighter": "Ember",
+    "action": "Kick",
+    "source": "Documentation\\Presentation-v12\\Ember-Skills.png",
+    "sourceBounds": [
+      41,
+      38,
+      586,
+      578
+    ],
+    "canvas": [
+      128,
+      128
+    ],
+    "visibleCenter": [
+      63.02756546701405,
+      63.377812466047914
+    ],
+    "centerError": 1.1544462951341572,
+    "safeRadius": 54.62600113499065,
+    "oldSha256": "38e7123dcc45da98f5c628821e42046634cd80ff8a524ddcdfacdfdefbb2805f",
+    "sha256": "e70a28402c1af915b3bdae5ad73e53ad2873fe3a9d904d9b3216c05e0e6d18c3"
+  },
+  {
+    "fighter": "Ember",
+    "action": "Special",
+    "source": "Documentation\\Presentation-v12\\Ember-Skills.png",
+    "sourceBounds": [
+      40,
+      38,
+      584,
+      579
+    ],
+    "canvas": [
+      128,
+      128
+    ],
+    "visibleCenter": [
+      63.95322261636195,
+      63.439935402530175
+    ],
+    "centerError": 0.562014659025064,
+    "safeRadius": 53.85164807134504,
+    "oldSha256": "f9d0a859295cbcc2a4de2e7868c2b655d3d4004e168d02987aa94db0a136a85e",
+    "sha256": "07467fab0c8ee926de62750f7d7bb72ed2f4674bf70e4739682b105fc6c6554e"
+  },
+  {
+    "fighter": "Luna",
+    "action": "Guard",
+    "source": "Documentation\\Presentation-v12\\Luna-Skills.png",
+    "sourceBounds": [
+      34,
+      38,
+      597,
+      592
+    ],
+    "canvas": [
+      128,
+      128
+    ],
+    "visibleCenter": [
+      63.46821418693671,
+      63.53024626343148
+    ],
+    "centerError": 0.7095524814948282,
+    "safeRadius": 54.70831746635972,
+    "oldSha256": "09b63e7aff1fc326e38ea6ed6210c1f5c989d452c7c4dee9965edebe553b16d7",
+    "sha256": "ad8b78a64fe5a51521e766f14b05eb6ab8d4fe167c7493eb6e8849bdb54103be"
+  },
+  {
+    "fighter": "Luna",
+    "action": "Punch",
+    "source": "Documentation\\Presentation-v12\\Luna-Skills.png",
+    "sourceBounds": [
+      29,
+      37,
+      594,
+      592
+    ],
+    "canvas": [
+      128,
+      128
+    ],
+    "visibleCenter": [
+      63.91303320783256,
+      62.94762818460716
+    ],
+    "centerError": 1.0559591188929205,
+    "safeRadius": 53.9351462406472,
+    "oldSha256": "7c204d9499bae48dfa8a17fb987d551413d4f3adc13b3112380300b7217ba4d2",
+    "sha256": "0061b930df969c005f4e8b299120cc8e98b8d3de861f8c54229be03b7aa354f9"
+  },
+  {
+    "fighter": "Luna",
+    "action": "Kick",
+    "source": "Documentation\\Presentation-v12\\Luna-Skills.png",
+    "sourceBounds": [
+      34,
+      21,
+      597,
+      579
+    ],
+    "canvas": [
+      128,
+      128
+    ],
+    "visibleCenter": [
+      63.000712362805565,
+      63.40889277369732
+    ],
+    "centerError": 1.1610269311419468,
+    "safeRadius": 54.78138369920935,
+    "oldSha256": "f0a4fc077522923242bfe6659b7ae04d1a7a71d2e6fbd9c102e1d220f52eb6e9",
+    "sha256": "0c0808c0662541ed3e035212c9f5ee7cd7f8a2e25c94b001a4846eaeecb83dad"
+  },
+  {
+    "fighter": "Luna",
+    "action": "Special",
+    "source": "Documentation\\Presentation-v12\\Luna-Skills.png",
+    "sourceBounds": [
+      28,
+      21,
+      593,
+      579
+    ],
+    "canvas": [
+      128,
+      128
+    ],
+    "visibleCenter": [
+      63.88546756254883,
+      63.390753426502265
+    ],
+    "centerError": 0.6199185967102753,
+    "safeRadius": 54.20332093147061,
+    "oldSha256": "af3f53b36046bdd57420a60c9a19d4aff47244e100cfb9cd109d87696978c739",
+    "sha256": "a2dc4eb56d2abfb880c05776abf8ab4875c74ed3159b6fae7394bff2565cef48"
+  },
+  {
+    "fighter": "Bram",
+    "action": "Guard",
+    "source": "Documentation\\Presentation-v12\\Bram-Skills.png",
+    "sourceBounds": [
+      40,
+      40,
+      592,
+      585
+    ],
+    "canvas": [
+      128,
+      128
+    ],
+    "visibleCenter": [
+      64.06986658125341,
+      63.01548621944994
+    ],
+    "centerError": 0.9869897280463513,
+    "safeRadius": 54.20332093147061,
+    "oldSha256": "3537271e3ea3c1b7534a641217e09b2a7b5a17b0a8050b5ff359030b2a391b5e",
+    "sha256": "1a8a74424a72495d85080e6e90762432d2a71c7ef4193a35eef29b0d37a12fb2"
+  },
+  {
+    "fighter": "Bram",
+    "action": "Punch",
+    "source": "Documentation\\Presentation-v12\\Bram-Skills.png",
+    "sourceBounds": [
+      30,
+      40,
+      584,
+      585
+    ],
+    "canvas": [
+      128,
+      128
+    ],
+    "visibleCenter": [
+      64.00013975917102,
+      64.0232122878622
+    ],
+    "centerError": 0.023212708597301325,
+    "safeRadius": 54.12947441089743,
+    "oldSha256": "431fcd1aec4a2bd993b3dab2bf1b27fab1cd1baf203499cfd27d2ab0a5620560",
+    "sha256": "d01c70505af2b1c908dbf46b22043ccdfbe4291a9c8f452bf8dd9b768319c91b"
+  },
+  {
+    "fighter": "Bram",
+    "action": "Kick",
+    "source": "Documentation\\Presentation-v12\\Bram-Skills.png",
+    "sourceBounds": [
+      43,
+      20,
+      591,
+      562
+    ],
+    "canvas": [
+      128,
+      128
+    ],
+    "visibleCenter": [
+      64.06690973351766,
+      63.852035631951544
+    ],
+    "centerError": 0.16238955216202594,
+    "safeRadius": 53.85164807134504,
+    "oldSha256": "6ca07e1f9cc34dd6c7f15b5e0eedc3b73a8f4d2810acee5b339a9eabe464609c",
+    "sha256": "bc1f89c73268d848af5175b0a2adec8447abdcd2bc82b1dc737a31710fcc1ec5"
+  },
+  {
+    "fighter": "Bram",
+    "action": "Special",
+    "source": "Documentation\\Presentation-v12\\Bram-Skills.png",
+    "sourceBounds": [
+      30,
+      20,
+      584,
+      566
+    ],
+    "canvas": [
+      128,
+      128
+    ],
+    "visibleCenter": [
+      63.7902116941078,
+      63.91774651156415
+    ],
+    "centerError": 0.22533701349087074,
+    "safeRadius": 54.12947441089743,
+    "oldSha256": "890f935d43231f2e13c292ccce974254b6c4dd7a772642ce81ee4483b8ec4eeb",
+    "sha256": "d71b7ebafadbe358448b966e49ef68ab2c0b52a4ddffc543d68d60c55264f3ee"
+  },
+  {
+    "fighter": "Zephyr",
+    "action": "Guard",
+    "source": "Documentation\\Presentation-v12\\Zephyr-Skills.png",
+    "sourceBounds": [
+      36,
+      33,
+      599,
+      595
+    ],
+    "canvas": [
+      128,
+      128
+    ],
+    "visibleCenter": [
+      64.01892372070168,
+      64.105546537775
+    ],
+    "centerError": 0.10722956141607722,
+    "safeRadius": 53.85164807134504,
+    "oldSha256": "3f58a054b4627cf83431b48fda050cd772eaec8dd32ec3d2d5c62d42bbc5467f",
+    "sha256": "3faa9749ba84d8485ebad49a004b6c6e0ab1ddeaf7c7085ec77f0065ce91d628"
+  },
+  {
+    "fighter": "Zephyr",
+    "action": "Punch",
+    "source": "Documentation\\Presentation-v12\\Zephyr-Skills.png",
+    "sourceBounds": [
+      29,
+      34,
+      593,
+      595
+    ],
+    "canvas": [
+      128,
+      128
+    ],
+    "visibleCenter": [
+      63.67303693723893,
+      63.65123406846841
+    ],
+    "centerError": 0.4780612088500735,
+    "safeRadius": 53.85164807134504,
+    "oldSha256": "8dd6ce02503af80a0adce937eab6fdd08a196fc77577a8e91b7e4be43431d9d5",
+    "sha256": "57786c1d3dd2e7e047f0e9be15c4aef304082a2ceaa8da8206530b8db29413ec"
+  },
+  {
+    "fighter": "Zephyr",
+    "action": "Kick",
+    "source": "Documentation\\Presentation-v12\\Zephyr-Skills.png",
+    "sourceBounds": [
+      35,
+      24,
+      600,
+      576
+    ],
+    "canvas": [
+      128,
+      128
+    ],
+    "visibleCenter": [
+      64.03317565639288,
+      64.13781686183547
+    ],
+    "centerError": 0.14175370042181315,
+    "safeRadius": 53.85164807134504,
+    "oldSha256": "6fc0b896f17751a98d8928a49c814089ab8a300d5b4ff1fdc17eea72e476598b",
+    "sha256": "1a038a4e8a93518f4267b530aa13d8618c62bfe8dea5ce5f13a6e32b2e4ef657"
+  },
+  {
+    "fighter": "Zephyr",
+    "action": "Special",
+    "source": "Documentation\\Presentation-v12\\Zephyr-Skills.png",
+    "sourceBounds": [
+      29,
+      24,
+      593,
+      579
+    ],
+    "canvas": [
+      128,
+      128
+    ],
+    "visibleCenter": [
+      63.14204705881998,
+      64.16525505721059
+    ],
+    "centerError": 0.8737233447797509,
+    "safeRadius": 53.85164807134504,
+    "oldSha256": "5e74f7301d17b6d137f25da9b265422fe848d27febcf25b295c4934dc0bbad1e",
+    "sha256": "32f0e4118db6165fb2766243af02862f13e3841a8ccf118caeeb86a12639a8c6"
+  },
+  {
+    "fighter": "Volt",
+    "action": "Guard",
+    "source": "Documentation\\Presentation-v12\\Volt-Skills.png",
+    "sourceBounds": [
+      45,
+      44,
+      603,
+      591
+    ],
+    "canvas": [
+      128,
+      128
+    ],
+    "visibleCenter": [
+      63.49496807661864,
+      63.579760575352026
+    ],
+    "centerError": 0.6570071671319392,
+    "safeRadius": 54.3415126767741,
+    "oldSha256": "53fce01e82e60730385a9df4e6741af7b34ed6e724dd7cc3141468f40698e5bb",
+    "sha256": "b7862756c084c3bb02f0c6aad2d2a47ba2ad62d6df8fd0788aa97ea6ca62e8e4"
+  },
+  {
+    "fighter": "Volt",
+    "action": "Punch",
+    "source": "Documentation\\Presentation-v12\\Volt-Skills.png",
+    "sourceBounds": [
+      26,
+      44,
+      582,
+      591
+    ],
+    "canvas": [
+      128,
+      128
+    ],
+    "visibleCenter": [
+      63.433282746317154,
+      63.49812215519921
+    ],
+    "centerError": 0.7570005394474373,
+    "safeRadius": 54.589376255824725,
+    "oldSha256": "30981dafa99b301d70747e9d253d80037752451a92b76e80b8fdd735fef2b411",
+    "sha256": "cfe52100249bd39e61ff7b6d754cd465ac4c8baecb454bc78c19e53dc23b026a"
+  },
+  {
+    "fighter": "Volt",
+    "action": "Kick",
+    "source": "Documentation\\Presentation-v12\\Volt-Skills.png",
+    "sourceBounds": [
+      46,
+      19,
+      601,
+      563
+    ],
+    "canvas": [
+      128,
+      128
+    ],
+    "visibleCenter": [
+      63.53561597617295,
+      62.941059982059095
+    ],
+    "centerError": 1.1562899650098535,
+    "safeRadius": 54.62600113499065,
+    "oldSha256": "e22c80a9e7593a803f9ca7dce8f37ff41e536d5f0a72263078fa05a25332c774",
+    "sha256": "1f858d10b746ea88a66ec9c4790696614fbe2e9a7c2333d3dbba0286c280925f"
+  },
+  {
+    "fighter": "Volt",
+    "action": "Special",
+    "source": "Documentation\\Presentation-v12\\Volt-Skills.png",
+    "sourceBounds": [
+      25,
+      15,
+      579,
+      566
+    ],
+    "canvas": [
+      128,
+      128
+    ],
+    "visibleCenter": [
+      63.48724644384189,
+      64.08121752301703
+    ],
+    "centerError": 0.519145928807893,
+    "safeRadius": 54.62600113499065,
+    "oldSha256": "f624dc6399fff771b97f14fa9be60e2236744cf0b4c7d19297c1816cdcef8a2f",
+    "sha256": "c56d0221c7de82610e46487c4e4897ce06ec9ef39a71ec08b2a927fa699a1fb4"
+  },
+  {
+    "fighter": "Nyx",
+    "action": "Guard",
+    "source": "Documentation\\Presentation-v12\\Nyx-Skills.png",
+    "sourceBounds": [
+      51,
+      48,
+      608,
+      604
+    ],
+    "canvas": [
+      128,
+      128
+    ],
+    "visibleCenter": [
+      63.03481205197296,
+      63.176519104513375
+    ],
+    "centerError": 1.2687429054966557,
+    "safeRadius": 54.74486277268398,
+    "oldSha256": "86621fb7a9f59e4db704037fade926dd3f5184ef7a7b78019f0264e303c99aca",
+    "sha256": "bcc00b0e4188f44944b3e2f8c97028fcffbe3685f20f75f6fba8b25001bd2af1"
+  },
+  {
+    "fighter": "Nyx",
+    "action": "Punch",
+    "source": "Documentation\\Presentation-v12\\Nyx-Skills.png",
+    "sourceBounds": [
+      13,
+      48,
+      575,
+      604
+    ],
+    "canvas": [
+      128,
+      128
+    ],
+    "visibleCenter": [
+      63.95659927655373,
+      63.57818522439046
+    ],
+    "centerError": 0.4240416579985821,
+    "safeRadius": 53.75872022286245,
+    "oldSha256": "467dbdc7a5c57dd99e1f0ec700f481dd52dbb1a8a010c3063bee4a2a53d3e504",
+    "sha256": "32c81037f117ae70e1883ccf7de9b5736cc1ba9c2890c50bd14a852eefe4034c"
+  },
+  {
+    "fighter": "Nyx",
+    "action": "Kick",
+    "source": "Documentation\\Presentation-v12\\Nyx-Skills.png",
+    "sourceBounds": [
+      50,
+      13,
+      608,
+      562
+    ],
+    "canvas": [
+      128,
+      128
+    ],
+    "visibleCenter": [
+      63.9047521275234,
+      62.961177554080855
+    ],
+    "centerError": 1.0431798652949322,
+    "safeRadius": 54.230987451824994,
+    "oldSha256": "c556419c4077efa3fb0b7db56fcf13ec64de4375dc3707c7e1333ddab653f2cd",
+    "sha256": "815ccd1166dbb4ac1f854b89fa36eb5ae3f87f9bf20bf04e46ef61d481b78d4e"
+  },
+  {
+    "fighter": "Nyx",
+    "action": "Special",
+    "source": "Documentation\\Presentation-v12\\Nyx-Skills.png",
+    "sourceBounds": [
+      13,
+      11,
+      574,
+      563
+    ],
+    "canvas": [
+      128,
+      128
+    ],
+    "visibleCenter": [
+      63.85258655509973,
+      63.215666189284015
+    ],
+    "centerError": 0.7980665701366176,
+    "safeRadius": 53.85164807134504,
+    "oldSha256": "6619ef4658f1cb830dd5ad2b0eaac3ef9c6f8253dd169d33a40de4793854ac41",
+    "sha256": "2e3b39f3c20dfb57beb09e77df7c01fed1320e2bee31cf1449883797958cb30e"
+  },
+  {
+    "fighter": "Marin",
+    "action": "Guard",
+    "source": "Documentation\\Presentation-v12\\Marin-Skills.png",
+    "sourceBounds": [
+      50,
+      38,
+      599,
+      588
+    ],
+    "canvas": [
+      128,
+      128
+    ],
+    "visibleCenter": [
+      63.50450254825152,
+      64.12051159539091
+    ],
+    "centerError": 0.5099419273926165,
+    "safeRadius": 54.08326913195984,
+    "oldSha256": "b73ffa1ed833a644c1da1cb19500d961c41ded4147da5808998e2ee5ef23cfab",
+    "sha256": "2043593764625738a34112c9a7b37578bef1f5fe4efc8b29affb87b755bb64f6"
+  },
+  {
+    "fighter": "Marin",
+    "action": "Punch",
+    "source": "Documentation\\Presentation-v12\\Marin-Skills.png",
+    "sourceBounds": [
+      29,
+      38,
+      577,
+      588
+    ],
+    "canvas": [
+      128,
+      128
+    ],
+    "visibleCenter": [
+      63.53387168958131,
+      63.7694565260894
+    ],
+    "centerError": 0.5200248985736642,
+    "safeRadius": 53.225933528685054,
+    "oldSha256": "13a313a135cc628c165d559131b2d5fedbb6c66eaf59e2e6a2787a773543c82a",
+    "sha256": "c75cb2a085b9dc5f650fbeddc078303ea166072c9b4aaaf5ff0c1daab9a5df6b"
+  },
+  {
+    "fighter": "Marin",
+    "action": "Kick",
+    "source": "Documentation\\Presentation-v12\\Marin-Skills.png",
+    "sourceBounds": [
+      51,
+      20,
+      596,
+      559
+    ],
+    "canvas": [
+      128,
+      128
+    ],
+    "visibleCenter": [
+      64.03350247574862,
+      63.57483760422621
+    ],
+    "centerError": 0.4264803379540432,
+    "safeRadius": 53.75872022286245,
+    "oldSha256": "d021bebc410592f3ee51c63559f746ca9d44318e532f113cce60e143cf274136",
+    "sha256": "6ef030830be2eb7b36ca388e6d09985b405371fe89b34b3df6fcd85fc20c28c9"
+  },
+  {
+    "fighter": "Marin",
+    "action": "Special",
+    "source": "Documentation\\Presentation-v12\\Marin-Skills.png",
+    "sourceBounds": [
+      28,
+      20,
+      574,
+      559
+    ],
+    "canvas": [
+      128,
+      128
+    ],
+    "visibleCenter": [
+      63.90859024884347,
+      63.630176632296276
+    ],
+    "centerError": 0.3809528394778321,
+    "safeRadius": 53.75872022286245,
+    "oldSha256": "e9b354ea8ca29d065b9a319aee92ce198f8cff2c5c89a1df3997be8be92a4926",
+    "sha256": "8975300095e0053b95717de31c5e0e8835c100915dbbe51e4a3abc7d01952f06"
+  }
+]

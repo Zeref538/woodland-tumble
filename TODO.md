@@ -1,5 +1,17 @@
 # Rune Rumble: current delivery
 
+## Ink menu and dedicated ability art
+
+- [x] Restore brush-edged ink menu controls with readable labels and focus feedback.
+- [x] Redraw Marin gameplay and selection proportions, with a larger 210-pixel standing body.
+- [x] Generate and integrate 32 dedicated illustrated ability icons, preserving the diamond layout.
+- [x] Pass 667 current scene checks and 16 current counterplay checks.
+- [ ] Move the roster footer below the selection skill subtitle, which is currently dimmed by the footer overlay.
+- [ ] Check the final Windows player after the subtitle fix.
+
+Stopped at the usage boundary. The latest account reading was 16 percent remaining. No shutdown is queued because this checkpoint still needs the selection subtitle fix.
+
+
 - [x] Recover and preserve the actual eight-fighter checkpoint.
 - [x] Keep the larger detailed fighters, one uniform scale and calibrated foot pivots.
 - [x] Add punishable missed/blocked attacks, persistent guard and confirmed punch-punch-kick routes.
@@ -12,7 +24,7 @@
 - [x] Remove 817 unused legacy asset files and preserve recoverable copies outside the project.
 - [x] Fix the clipped timer, crowded input badge and inconsistent Corin skill name.
 - [x] Inspect title, roster, arena selection and HUD at 1280x720, 1440x900 and 1920x800.
-- [x] Pass 624 current scene/UI/combat checks and 16 counterplay checks.
+- [x] Pass 667 current scene/UI/combat checks and 16 counterplay checks.
 - [x] Build Windows and check one native player launch with no logged script exceptions.
 
 The remaining old font files were left untouched after the cleanup command was rejected. They are not required by the active scene.
@@ -45,7 +57,7 @@ Evidence: Documentation/DUEL-VALIDATION.json, COUNTERPLAY-v9.json, FX-SLICING-v9
 
 - [x] Add closer dynamic fight framing, with automatic pullback for separation and jumps.
 
-Current delivery evidence: Documentation/DUEL-VALIDATION.json (624 passed), COUNTERPLAY-v9.json (16 passed), HUD-ICON-CENTERING-v10.json, BUILD-WINDOWS-v11.json and NATIVE-WINDOWS-v11.json. The native player was closed after its 18-second startup check.
+Current delivery evidence: Documentation/DUEL-VALIDATION.json (667 passed), COUNTERPLAY-v9.json (16 passed), HUD-ICON-CENTERING-v10.json, BUILD-WINDOWS-v11.json and NATIVE-WINDOWS-v11.json. The native player was closed after its 18-second startup check.
 
 - [x] Verify padded selection poses retain their full hat and hood details, then refresh Windows delivery.
 
@@ -56,3 +68,4 @@ Current delivery evidence: Documentation/DUEL-VALIDATION.json (624 passed), COUN
 - [x] Lower fighter framing and show more surrounding architecture with less floor.
 - [x] Create and integrate distinct custom header, subheader and body fonts.
 - [x] Verify layouts and camera behavior, then rebuild Windows.
+

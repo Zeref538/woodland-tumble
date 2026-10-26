@@ -1,0 +1,117 @@
+{
+  "requested": 17,
+  "returned": 17,
+  "mode": "built-in concurrent batch",
+  "assets": [
+    {
+      "name": "Marin-Walk-Jump",
+      "source": "C:\\Users\\johna\\.codex\\generated_images\\01a16970-d7f5-7dc2-906c-dd1f89b33816\\exec-42f53a47-9681-43c0-98d8-443f09790ab3.png",
+      "destination": "Documentation/Presentation-v12/Marin-Walk-Jump.png",
+      "accepted": false,
+      "reason": "Superseded by spaced sheets after import review found crowded rows or edge clipping."
+    },
+    {
+      "name": "Marin-Hurt-Push",
+      "source": "C:\\Users\\johna\\.codex\\generated_images\\01a16970-d7f5-7dc2-906c-dd1f89b33816\\exec-2d6f46d7-4fc5-4efc-9d30-e8a9885e2090.png",
+      "destination": "Documentation/Presentation-v12/Marin-Hurt-Push.png",
+      "accepted": false,
+      "reason": "Superseded by spaced sheets after import review found crowded rows or edge clipping."
+    },
+    {
+      "name": "Marin-Punch-Kick",
+      "source": "C:\\Users\\johna\\.codex\\generated_images\\01a16970-d7f5-7dc2-906c-dd1f89b33816\\exec-1e656ac5-f485-446f-9cb1-85fe7b565d84.png",
+      "destination": "Documentation/Presentation-v12/Marin-Punch-Kick.png",
+      "accepted": false,
+      "reason": "Superseded by spaced sheets after import review found crowded rows or edge clipping."
+    },
+    {
+      "name": "Marin-Knockout-Block",
+      "source": "C:\\Users\\johna\\.codex\\generated_images\\01a16970-d7f5-7dc2-906c-dd1f89b33816\\exec-e40a3525-ffae-40cc-9b69-c927e292fafd.png",
+      "destination": "Documentation/Presentation-v12/Marin-Knockout-Block.png",
+      "accepted": false,
+      "reason": "Superseded by spaced sheets after import review found crowded rows or edge clipping."
+    },
+    {
+      "name": "Marin-DoubleJump-Special",
+      "source": "C:\\Users\\johna\\.codex\\generated_images\\01a16970-d7f5-7dc2-906c-dd1f89b33816\\exec-c16ab679-2cdf-4a4a-8387-74bfb91c1dae.png",
+      "destination": "Documentation/Presentation-v12/Marin-DoubleJump-Special.png",
+      "accepted": false,
+      "reason": "Superseded by spaced sheets after import review found crowded rows or edge clipping."
+    },
+    {
+      "name": "Marin-Dash-Backstep",
+      "source": "C:\\Users\\johna\\.codex\\generated_images\\01a16970-d7f5-7dc2-906c-dd1f89b33816\\exec-c50de66e-0d26-472c-994a-ce167296ff6f.png",
+      "destination": "Documentation/Presentation-v12/Marin-Dash-Backstep.png",
+      "accepted": false,
+      "reason": "Superseded by spaced sheets after import review found crowded rows or edge clipping."
+    },
+    {
+      "name": "Marin-Victory-Ultimate",
+      "source": "C:\\Users\\johna\\.codex\\generated_images\\01a16970-d7f5-7dc2-906c-dd1f89b33816\\exec-2970f18f-b345-4f4d-af64-aa6a7c3efea6.png",
+      "destination": "Documentation/Presentation-v12/Marin-Victory-Ultimate.png",
+      "accepted": false,
+      "reason": "Superseded by spaced sheets after import review found crowded rows or edge clipping."
+    },
+    {
+      "name": "Marin-Downed-GetUp",
+      "source": "C:\\Users\\johna\\.codex\\generated_images\\01a16970-d7f5-7dc2-906c-dd1f89b33816\\exec-fab6d080-9432-40ae-af09-e4be8bc6eacf.png",
+      "destination": "Documentation/Presentation-v12/Marin-Downed-GetUp.png",
+      "accepted": false,
+      "reason": "Superseded by spaced sheets after import review found crowded rows or edge clipping."
+    },
+    {
+      "name": "Marin-Idle",
+      "source": "C:\\Users\\johna\\.codex\\generated_images\\01a16970-d7f5-7dc2-906c-dd1f89b33816\\exec-3ba7ae97-f3fa-46fc-b74f-34c8ea22070e.png",
+      "destination": "Documentation/Presentation-v12/Marin-Idle.png",
+      "accepted": true
+    },
+    {
+      "name": "Fern-Skills",
+      "source": "C:\\Users\\johna\\.codex\\generated_images\\01a16970-d7f5-7dc2-906c-dd1f89b33816\\exec-1a2e352e-4391-4572-8f1f-e65532cb9571.png",
+      "destination": "Documentation/Presentation-v12/Fern-Skills.png",
+      "accepted": true
+    },
+    {
+      "name": "Ember-Skills",
+      "source": "C:\\Users\\johna\\.codex\\generated_images\\01a16970-d7f5-7dc2-906c-dd1f89b33816\\exec-ab72982b-0f4a-46fe-8aec-f026dbcc1aac.png",
+      "destination": "Documentation/Presentation-v12/Ember-Skills.png",
+      "accepted": true
+    },
+    {
+      "name": "Luna-Skills",
+      "source": "C:\\Users\\johna\\.codex\\generated_images\\01a16970-d7f5-7dc2-906c-dd1f89b33816\\exec-cac2631c-ac81-491d-be82-bc2e6ee85f92.png",
+      "destination": "Documentation/Presentation-v12/Luna-Skills.png",
+      "accepted": true
+    },
+    {
+      "name": "Bram-Skills",
+      "source": "C:\\Users\\johna\\.codex\\generated_images\\01a16970-d7f5-7dc2-906c-dd1f89b33816\\exec-db041d9f-bcbe-4af2-84b6-f86ae142f69a.png",
+      "destination": "Documentation/Presentation-v12/Bram-Skills.png",
+      "accepted": true
+    },
+    {
+      "name": "Zephyr-Skills",
+      "source": "C:\\Users\\johna\\.codex\\generated_images\\01a16970-d7f5-7dc2-906c-dd1f89b33816\\exec-ebcb4e18-a55e-44ab-8f07-d4b01bdebdb0.png",
+      "destination": "Documentation/Presentation-v12/Zephyr-Skills.png",
+      "accepted": true
+    },
+    {
+      "name": "Volt-Skills",
+      "source": "C:\\Users\\johna\\.codex\\generated_images\\01a16970-d7f5-7dc2-906c-dd1f89b33816\\exec-ced1b8b6-ae56-4c90-9837-eeec45bf6b3d.png",
+      "destination": "Documentation/Presentation-v12/Volt-Skills.png",
+      "accepted": true
+    },
+    {
+      "name": "Nyx-Skills",
+      "source": "C:\\Users\\johna\\.codex\\generated_images\\01a16970-d7f5-7dc2-906c-dd1f89b33816\\exec-4512f1db-82cc-4075-9f6b-09f8e5e67285.png",
+      "destination": "Documentation/Presentation-v12/Nyx-Skills.png",
+      "accepted": true
+    },
+    {
+      "name": "Marin-Skills",
+      "source": "C:\\Users\\johna\\.codex\\generated_images\\01a16970-d7f5-7dc2-906c-dd1f89b33816\\exec-170f7a0e-94d8-48de-8b90-37f4fd699ce2.png",
+      "destination": "Documentation/Presentation-v12/Marin-Skills.png",
+      "accepted": true
+    }
+  ]
+}

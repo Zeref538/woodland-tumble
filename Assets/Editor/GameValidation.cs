@@ -139,10 +139,10 @@ public static class GameValidation
     static void CheckHudIconCenters(WoodlandHUD hud)
     {
         foreach(var sprite in hud.characterActionCovers) {
-            Check(sprite && sprite.texture.width==64 && sprite.texture.height==64,"HUD action uses a dedicated 64-pixel icon canvas");
+            Check(sprite && sprite.texture.width==128 && sprite.texture.height==128,"HUD action uses a dedicated 128-pixel illustrated ability canvas");
             var pixels=sprite.texture.GetPixels32();double total=0,x=0,y=0;
-            for(int i=0;i<pixels.Length;i++)if(pixels[i].a>32){double weight=pixels[i].a*pixels[i].a;total+=weight;x+=(i%64)*weight;y+=(i/64)*weight;}
-            Check(total>0 && Vector2.Distance(new Vector2((float)(x/total),(float)(y/total)),new Vector2(32,31))<2,"Visible icon artwork is centered inside its circular safe area");
+            for(int i=0;i<pixels.Length;i++)if(pixels[i].a>32){double weight=pixels[i].a*pixels[i].a;total+=weight;x+=(i%128)*weight;y+=(i/128)*weight;}
+            Check(total>0 && Vector2.Distance(new Vector2((float)(x/total),(float)(y/total)),new Vector2(64,63))<2,"Visible icon artwork is centered inside its circular safe area");
         }
         for(int i=0;i<hud.actionCovers.Length;i++) {
             var cover=hud.actionCovers[i].rectTransform;var disc=hud.actionDiscs[i].rectTransform;
@@ -171,6 +171,12 @@ public static class GameValidation
                 Check(game.roundsToWin==3 && game.roundDuration==99,"Rounds are 99 seconds, first to three");
                 foreach(var catalog in game.CharacterAnimationSets)foreach(string state in new[]{"Walk","Jump","Hurt","Push","Punch","Kick","Knockout","Block","DoubleJump","Special","Dash","Backstep","Victory","Ultimate","Downed","GetUp"})Check(catalog.Get(state).Length==10 && catalog.Get(state).All(sprite=>sprite),"Complete native animation "+catalog.name+" / "+state);
                 CheckLiveLabels(hud.titleMenu);
+                foreach(var button in hud.GetComponentsInChildren<Button>(true)) {
+                    if(!button.transform.Find("Ink Focus Stroke"))continue;
+                    Check(button.image.sprite && button.image.sprite.name=="BrushBand","Menu action uses the irregular ink brush silhouette: "+button.name);
+                    var label=button.transform.Find("Choice").GetComponent<Text>();
+                    Check(label.color.r>.9f && label.color.g>.9f,"Ink menu labels stay bright against the dark paint: "+button.name);
+                }
                 Capture("Documentation/RuneRumble-Title.png");
                 Capture("Documentation/RuneRumble-Title-16x10.png",1440,900);
                 Capture("Documentation/RuneRumble-Title-Ultrawide.png",1920,800);
@@ -200,6 +206,12 @@ public static class GameValidation
                 Capture("Documentation/RuneRumble-CharacterSelect-P2.png");
                 hud.characterButtons[7].onClick.Invoke();SetStage(-6);
             } else if(stage==-6 && Elapsed>.6f) {
+                var hero=hud.selectionPortraits[1];var texture=hero.sprite.texture;
+                int bottomRow=texture.GetPixels32().Select((pixel,index)=>new{pixel,index}).Where(value=>value.pixel.a>48).Min(value=>value.index/texture.width);
+                float artSize=Mathf.Min(hero.rectTransform.rect.width,hero.rectTransform.rect.height);
+                float bootsY=hero.rectTransform.TransformPoint(new Vector3(0,-artSize*.5f+artSize*bottomRow/texture.height,0)).y;
+                var shade=hero.transform.parent.Find("Showcase Name Shade").GetComponent<RectTransform>();
+                Check(bootsY>shade.TransformPoint(new Vector3(0,shade.rect.yMax,0)).y,"The selection nameplate sits below the visible boots");
                 Capture("Documentation/RuneRumble-Marin-Selection.png");
                 Check(hud.selectionIdleFrames.Skip(28).Take(4).Contains(hud.selectionPortraits[1].sprite),"Marin displays its own selection animation");
                 hud.confirmCharacterButton.onClick.Invoke();hud.mapButtons[5].onClick.Invoke();SetStage(-4);
@@ -214,6 +226,10 @@ public static class GameValidation
             } else if(stage==0 && game.playing && string.IsNullOrEmpty(game.message)) {
                 Check(game.backgroundArt.color==WoodlandGame.ArenaExposure,"Arena scenery uses the subdued exposure independently from fighter art");
                 Check(game.CharacterNames[7]=="Marin" && game.SkillNames[7]=="Tide Surge","The eighth fighter is Marin with the tide identity");
+                var marinIdle=AssetDatabase.LoadAssetAtPath<Sprite>("Assets/Art/CharactersRework/Marin/Idle/01.png");
+                var marinRows=marinIdle.texture.GetPixels32().Select((pixel,index)=>new{pixel,index}).Where(value=>value.pixel.a>48).Select(value=>value.index/marinIdle.texture.width).ToArray();
+                Check(marinRows.Max()-marinRows.Min()+1>=205 && Mathf.Approximately(marinIdle.pixelsPerUnit,80),"Marin retains a larger visible body at the roster's common pixels-per-unit scale");
+                Check(Mathf.Abs(marinRows.Min()-marinIdle.pivot.y)<=2,"Marin's larger artwork keeps its feet on the common baseline");
                 Check(game.plank.bodyType==RigidbodyType2D.Kinematic && !game.plankArt.enabled,"Ground is fixed with no floating platform art");
                 Check(game.RoundTimeRemaining>97 && hud.roundTimerText,"Round starts with a live 99-second timer");
                 Check(game.edgeHatches.All(h=>h && !h.enabled) && game.HatchIsOpen(0) && game.HatchIsOpen(1),"Both edge holes are open from round start");
@@ -241,7 +257,7 @@ public static class GameValidation
                 Check(Camera.main.WorldToViewportPoint(a.Body.position).x>.05f && Camera.main.WorldToViewportPoint(b.Body.position).x<.95f,"Separated rivals stay inside the camera frame");
                 b.Body.position=new Vector2(5,2.2f);SetStage(101);
             } else if(stage==101 && SimElapsed>.65f) {
-                Check(Camera.main.orthographicSize>4.8f && Camera.main.WorldToViewportPoint(b.Body.position+Vector2.up*1.1875f).y<.85f,"Fight camera makes room for an airborne rival below the top HUD");
+                Check(Camera.main.orthographicSize>4.8f && Camera.main.WorldToViewportPoint(b.Body.position+Vector2.up*(b.CharacterIndex==7?1.4375f:1.1875f)).y<.85f,"Fight camera makes room for the larger airborne rival below the top HUD");
                 PlaceOnPvpBase(game,false);
                 SessionState.SetFloat("Woodland.PauseZoom",Camera.main.orthographicSize);
                 SessionState.SetFloat("Woodland.DuelClock",game.RoundTimeRemaining);game.TogglePause();SetStage(2);

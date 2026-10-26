@@ -1,0 +1,4347 @@
+{
+  "gameplayFrames": 161,
+  "selectionFrames": 4,
+  "standingBodyPixels": 210,
+  "otherRosterBodyPixels": 190,
+  "feetAnchorPreserved": true,
+  "frames": [
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Idle\\01.png",
+      "sha256": "faabb85cae135ceef2b52cbbbe69ad10dfab5df702fdb512c95267831f1bf88a",
+      "size": [
+        256,
+        256
+      ],
+      "pivot": [
+        0.5,
+        0.09375
+      ],
+      "alphaBounds": [
+        56,
+        22,
+        199,
+        232
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Walk\\01.png",
+      "sha256": "59b15a61085190682f03f017d8fa4a4850d5144ccc5ce9a979b37feb01d7cb70",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        121,
+        77,
+        264,
+        292
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Walk-Jump-Spaced.png",
+      "uniformBatchScale": 0.8171206225680934,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        44,
+        66,
+        214,
+        323
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Walk\\02.png",
+      "sha256": "9b91d87fc8847055f36050e44ea3f69d83d25841598a17430a4b68e8c7ddb04c",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        117,
+        77,
+        267,
+        292
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Walk-Jump-Spaced.png",
+      "uniformBatchScale": 0.8171206225680934,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        301,
+        67,
+        476,
+        323
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Walk\\03.png",
+      "sha256": "f7ceb268e6b90dd34da3b06743bedc4f1c680a147d70cfe7075c51459eb9c9f7",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        121,
+        77,
+        262,
+        292
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Walk-Jump-Spaced.png",
+      "uniformBatchScale": 0.8171206225680934,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        541,
+        66,
+        708,
+        323
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Walk\\04.png",
+      "sha256": "6c3e103acaf5a4bae2a8dee6403e550ee035fadd4e684f21ddd2cfa747e6586d",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        118,
+        77,
+        265,
+        291
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Walk-Jump-Spaced.png",
+      "uniformBatchScale": 0.8171206225680934,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        795,
+        66,
+        967,
+        323
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Walk\\05.png",
+      "sha256": "7b61ddad33e432fd084cedffd88c01dc1859f4824e55107b17a388fc7c7cee58",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        119,
+        77,
+        265,
+        291
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Walk-Jump-Spaced.png",
+      "uniformBatchScale": 0.8171206225680934,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        1047,
+        67,
+        1218,
+        323
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Walk\\06.png",
+      "sha256": "0cfd1377473c60513cdca3a01a0fbb7e032466b6992da628e140d9a799320eb9",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        121,
+        78,
+        263,
+        291
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Walk-Jump-Spaced.png",
+      "uniformBatchScale": 0.8171206225680934,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        49,
+        354,
+        215,
+        611
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Walk\\07.png",
+      "sha256": "1db911e20252189c317351c1c7c197c3f2133b233c636e192bd51839f6371f62",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        122,
+        76,
+        263,
+        291
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Walk-Jump-Spaced.png",
+      "uniformBatchScale": 0.8171206225680934,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        304,
+        354,
+        468,
+        611
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Walk\\08.png",
+      "sha256": "5fb1732f14bfbffdc9b7a2c287e25afb5e88f54d4b6e9dcbba2e639df693720e",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        119,
+        74,
+        264,
+        290
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Walk-Jump-Spaced.png",
+      "uniformBatchScale": 0.8171206225680934,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        554,
+        352,
+        724,
+        611
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Walk\\09.png",
+      "sha256": "8347d87823ac3090e715d150c22865e7a3783b9b227eecf652aec48abc7984b5",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        116,
+        70,
+        267,
+        290
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Walk-Jump-Spaced.png",
+      "uniformBatchScale": 0.8171206225680934,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        796,
+        348,
+        973,
+        611
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Walk\\10.png",
+      "sha256": "aa46f1f074e9eb9efbbf6028a5356919519318ef6c6ad93f0988410064be837d",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        121,
+        73,
+        264,
+        290
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Walk-Jump-Spaced.png",
+      "uniformBatchScale": 0.8171206225680934,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        1052,
+        351,
+        1219,
+        611
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Jump\\01.png",
+      "sha256": "d861bbde71482aa5c28ea2b713ee33465c0221ab74649ddbfdf53078a9c0852f",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        116,
+        154,
+        269,
+        292
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Walk-Jump-Spaced.png",
+      "uniformBatchScale": 0.8171206225680934,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        37,
+        740,
+        216,
+        903
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Jump\\02.png",
+      "sha256": "a845ac6475c1fb3a3e3ba9c122fc546829ba82d8dfbe7de6fde0fb4e509ea921",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        104,
+        129,
+        280,
+        291
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Walk-Jump-Spaced.png",
+      "uniformBatchScale": 0.8171206225680934,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        281,
+        713,
+        489,
+        903
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Jump\\03.png",
+      "sha256": "55405520722ce47472e27fb1076ca8b97e88300bcf1dc33795466b38d6e9820a",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        103,
+        80,
+        281,
+        291
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Walk-Jump-Spaced.png",
+      "uniformBatchScale": 0.8171206225680934,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        534,
+        652,
+        744,
+        903
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Jump\\04.png",
+      "sha256": "c00d5897c381ec1cbbad43121058dc0a0f513ea072a9c4a8b49a674a12df1dd4",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        107,
+        77,
+        278,
+        291
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Walk-Jump-Spaced.png",
+      "uniformBatchScale": 0.8171206225680934,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        784,
+        636,
+        985,
+        890
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Jump\\05.png",
+      "sha256": "2e8dfa25df5c002bbc42cd3f97d4a6db092abe62fb9c0ed4b331f31c67d067ea",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        109,
+        88,
+        275,
+        291
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Walk-Jump-Spaced.png",
+      "uniformBatchScale": 0.8171206225680934,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        1023,
+        652,
+        1218,
+        894
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Jump\\06.png",
+      "sha256": "f98ed5fa25b18a547da444a102929048861b73ee046a1db34fa606f9e8a4bd7f",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        112,
+        96,
+        273,
+        291
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Walk-Jump-Spaced.png",
+      "uniformBatchScale": 0.8171206225680934,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        46,
+        939,
+        235,
+        1170
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Jump\\07.png",
+      "sha256": "d99975f0137941f8edc9a2a9105488bf94d44261c251f1a835dcd00aa647035a",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        115,
+        90,
+        269,
+        291
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Walk-Jump-Spaced.png",
+      "uniformBatchScale": 0.8171206225680934,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        292,
+        958,
+        472,
+        1197
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Jump\\08.png",
+      "sha256": "d33bb2f5beeeccc7fcd44323b2ef3d6e901be6fc3301492ab0ba1958728dbef4",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        111,
+        138,
+        273,
+        292
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Walk-Jump-Spaced.png",
+      "uniformBatchScale": 0.8171206225680934,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        530,
+        1018,
+        720,
+        1198
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Jump\\09.png",
+      "sha256": "5dd4d6f5c2a8e4f9a0e6dc5088bcae0650a67387281d7a2a64611164289fc429",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        112,
+        99,
+        272,
+        292
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Walk-Jump-Spaced.png",
+      "uniformBatchScale": 0.8171206225680934,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        785,
+        968,
+        973,
+        1197
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Jump\\10.png",
+      "sha256": "805929211966dfd1df117814043ded8e3a4b17316324eb0190c16e18079a7a82",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        121,
+        72,
+        263,
+        292
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Walk-Jump-Spaced.png",
+      "uniformBatchScale": 0.8171206225680934,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        1046,
+        935,
+        1212,
+        1197
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Hurt\\01.png",
+      "sha256": "4cb51ca3310bb6e98c5d8785ea48208183b1e6d1cf8a106ab84c4b961287e6d3",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        110,
+        65,
+        275,
+        292
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Hurt-Push-Spaced.png",
+      "uniformBatchScale": 0.8333333333333334,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        45,
+        68,
+        235,
+        333
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Hurt\\02.png",
+      "sha256": "93536b2b6070d412b6a44803482875a2c2e4cf07a73df2806b16c83cfeaff222",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        104,
+        72,
+        280,
+        291
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Hurt-Push-Spaced.png",
+      "uniformBatchScale": 0.8333333333333334,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        290,
+        75,
+        493,
+        331
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Hurt\\03.png",
+      "sha256": "29280b4046ca91026cde7d72ea8d80e1645617836755ba0a53e25a79faf6a375",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        99,
+        71,
+        286,
+        292
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Hurt-Push-Spaced.png",
+      "uniformBatchScale": 0.8333333333333334,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        520,
+        75,
+        737,
+        333
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Hurt\\04.png",
+      "sha256": "b2f8a08c5a1208a69d260eb07dedc03aa8d95b1c47b17df61b501ca85e491c30",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        94,
+        71,
+        290,
+        291
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Hurt-Push-Spaced.png",
+      "uniformBatchScale": 0.8333333333333334,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        758,
+        74,
+        985,
+        333
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Hurt\\05.png",
+      "sha256": "216aaaef41830659519bbfd03e1405dd6c10935488bc53e58d21320c646fa067",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        110,
+        65,
+        274,
+        292
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Hurt-Push-Spaced.png",
+      "uniformBatchScale": 0.8333333333333334,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        1027,
+        68,
+        1216,
+        333
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Hurt\\06.png",
+      "sha256": "eb10224fde7718e9e3d175e9bad4a224daeaef378f38436378e0a0ea9f362281",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        110,
+        87,
+        275,
+        292
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Hurt-Push-Spaced.png",
+      "uniformBatchScale": 0.8333333333333334,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        39,
+        396,
+        229,
+        636
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Hurt\\07.png",
+      "sha256": "3767f9d52c9841eb2c1d74390103cff496f822f829bdaf2bd1ebcec4b04b98b1",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        114,
+        58,
+        271,
+        291
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Hurt-Push-Spaced.png",
+      "uniformBatchScale": 0.8333333333333334,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        301,
+        363,
+        481,
+        637
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Hurt\\08.png",
+      "sha256": "1d7d786415649b417027ecd01ca547e745358c4ea5176976614ea056bd715cfb",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        105,
+        75,
+        279,
+        292
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Hurt-Push-Spaced.png",
+      "uniformBatchScale": 0.8333333333333334,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        536,
+        383,
+        737,
+        636
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Hurt\\09.png",
+      "sha256": "9b07cbde6fe9be92512b112648534debc9a8e882a49f8a3f17a16dec610ee7b9",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        109,
+        59,
+        276,
+        291
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Hurt-Push-Spaced.png",
+      "uniformBatchScale": 0.8333333333333334,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        783,
+        366,
+        975,
+        638
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Hurt\\10.png",
+      "sha256": "1bdfa21813caf730b04f94cff27f22e1b2439d7977a45ab1816918f1a596b670",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        110,
+        59,
+        275,
+        291
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Hurt-Push-Spaced.png",
+      "uniformBatchScale": 0.8333333333333334,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        1027,
+        366,
+        1217,
+        638
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Push\\01.png",
+      "sha256": "6dbd5ab74f37ef33fe0db504296ed077bdbc436849cb4ea42918d764467ce8c9",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        109,
+        77,
+        274,
+        292
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Hurt-Push-Spaced.png",
+      "uniformBatchScale": 0.8333333333333334,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        31,
+        672,
+        224,
+        924
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Push\\02.png",
+      "sha256": "0400b9d129c5299bddfafde3d3437c4fd2795ccf5452aa82e1d1b0e24d986f56",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        103,
+        78,
+        281,
+        292
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Hurt-Push-Spaced.png",
+      "uniformBatchScale": 0.8333333333333334,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        278,
+        673,
+        483,
+        924
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Push\\03.png",
+      "sha256": "445a6ad5804b1eaf4b4c0f7a51788d3cb5d66a2eb1a9ff8d990dfa2c993b826f",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        95,
+        89,
+        288,
+        291
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Hurt-Push-Spaced.png",
+      "uniformBatchScale": 0.8333333333333334,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        508,
+        687,
+        732,
+        924
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Push\\04.png",
+      "sha256": "a1297ee7ad76c67bfd77df2ded879cad782682aa0ff951f86018021e9c0bcf67",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        90,
+        91,
+        293,
+        292
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Hurt-Push-Spaced.png",
+      "uniformBatchScale": 0.8333333333333334,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        755,
+        691,
+        991,
+        925
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Push\\05.png",
+      "sha256": "5ce43c713df784b9e7cc52557b5a437c1cb0b85dc2b33167b9321cd7297a7bad",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        101,
+        87,
+        283,
+        292
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Hurt-Push-Spaced.png",
+      "uniformBatchScale": 0.8333333333333334,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        1017,
+        687,
+        1228,
+        926
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Push\\06.png",
+      "sha256": "38a8b21c307864b413be2ca24ea6e44e1cae1d9fc32a53e531435b4d7001db04",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        99,
+        80,
+        285,
+        291
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Hurt-Push-Spaced.png",
+      "uniformBatchScale": 0.8333333333333334,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        33,
+        966,
+        248,
+        1213
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Push\\07.png",
+      "sha256": "29e679142eca3eb73c2dc60b93974e44e066ae89f78b67af8cde0d0a73dafdc6",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        103,
+        74,
+        280,
+        291
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Hurt-Push-Spaced.png",
+      "uniformBatchScale": 0.8333333333333334,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        279,
+        958,
+        485,
+        1212
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Push\\08.png",
+      "sha256": "91399d7c3906845f8f6414e2ad620d0877299bb116ac102ced2e108199a90755",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        108,
+        76,
+        276,
+        292
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Hurt-Push-Spaced.png",
+      "uniformBatchScale": 0.8333333333333334,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        524,
+        962,
+        717,
+        1214
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Push\\09.png",
+      "sha256": "cd656b33a201da2e429099aa229b20735117e5d52d605f800756f2891db6cb15",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        105,
+        71,
+        279,
+        291
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Hurt-Push-Spaced.png",
+      "uniformBatchScale": 0.8333333333333334,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        770,
+        957,
+        971,
+        1214
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Push\\10.png",
+      "sha256": "59668bdd3cda9785abb93d05874c0c7928f9071c73e9a8f3b82c5d5fb939dd76",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        110,
+        66,
+        274,
+        291
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Hurt-Push-Spaced.png",
+      "uniformBatchScale": 0.8333333333333334,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        1024,
+        955,
+        1213,
+        1217
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Punch\\01.png",
+      "sha256": "61667700b86a475d022840d983e77f5b32d85e33855975e8a0ec882542043411",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        115,
+        76,
+        269,
+        292
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Punch-Kick-Spaced.png",
+      "uniformBatchScale": 0.8203125,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        42,
+        52,
+        222,
+        308
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Punch\\02.png",
+      "sha256": "1cceeafa22d97ef000b3a7003ecaf185adcc155edaad2e777d1ddc5addf32b11",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        114,
+        77,
+        271,
+        290
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Punch-Kick-Spaced.png",
+      "uniformBatchScale": 0.8203125,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        286,
+        55,
+        470,
+        308
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Punch\\03.png",
+      "sha256": "1c9cff426b0229364eb52bc9f3f5155fa9208d740ca06f13c9dcfc5dca69bf4e",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        95,
+        82,
+        289,
+        289
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Punch-Kick-Spaced.png",
+      "uniformBatchScale": 0.8203125,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        525,
+        60,
+        754,
+        308
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Punch\\04.png",
+      "sha256": "06bcfbed1d743c542c09bcf90283569568778991b6c7bb28e27c1a8bc70060ec",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        93,
+        81,
+        291,
+        291
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Punch-Kick-Spaced.png",
+      "uniformBatchScale": 0.8203125,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        780,
+        60,
+        1013,
+        308
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Punch\\05.png",
+      "sha256": "a8e8c5b9353030ea6eb6199445314c136cb5007718fc45a623c6306d99be3ad3",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        121,
+        79,
+        264,
+        290
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Punch-Kick-Spaced.png",
+      "uniformBatchScale": 0.8203125,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        1047,
+        58,
+        1213,
+        309
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Punch\\06.png",
+      "sha256": "5708faff13f7d282c5a79da15f01eda9a1c61edcf6bbe5847bc259d005bc05bd",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        115,
+        80,
+        268,
+        290
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Punch-Kick-Spaced.png",
+      "uniformBatchScale": 0.8203125,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        50,
+        359,
+        229,
+        610
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Punch\\07.png",
+      "sha256": "a8503d69e188a2d8743c9bc68648a4ce237128b6829d8eafb6b7a7846b379f5e",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        114,
+        81,
+        273,
+        291
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Punch-Kick-Spaced.png",
+      "uniformBatchScale": 0.8203125,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        286,
+        360,
+        474,
+        610
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Punch\\08.png",
+      "sha256": "f5e01369463064d6668dcfbc1c64e34db5717fd38ea5eeadb7ca207b11092123",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        114,
+        77,
+        271,
+        290
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Punch-Kick-Spaced.png",
+      "uniformBatchScale": 0.8203125,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        534,
+        356,
+        718,
+        610
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Punch\\09.png",
+      "sha256": "b177dc59d47ab4854d1c33c41433872e75fc0da6158ed8ac03d60fa4f26b07ba",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        105,
+        81,
+        276,
+        291
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Punch-Kick-Spaced.png",
+      "uniformBatchScale": 0.8203125,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        778,
+        360,
+        981,
+        610
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Punch\\10.png",
+      "sha256": "26cb659f1fcfd8b3f224a3ae9899a9d3551333bbf8ab4b6530bf7ae071015d45",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        119,
+        79,
+        265,
+        290
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Punch-Kick-Spaced.png",
+      "uniformBatchScale": 0.8203125,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        1040,
+        358,
+        1210,
+        610
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Kick\\01.png",
+      "sha256": "5db244d440d4ba2e82aead455b47997e2e660b737246a6db9d6b31519325b82a",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        114,
+        74,
+        269,
+        290
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Punch-Kick-Spaced.png",
+      "uniformBatchScale": 0.8203125,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        41,
+        658,
+        222,
+        916
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Kick\\02.png",
+      "sha256": "0810372c404b79972b2b4e88ffe7fc965fab8b92a80e24c832c1fbaeb02f92dd",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        116,
+        81,
+        269,
+        290
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Punch-Kick-Spaced.png",
+      "uniformBatchScale": 0.8203125,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        281,
+        666,
+        459,
+        915
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Kick\\03.png",
+      "sha256": "e292266e0e8790e3ac3da2fe94daca1e815435c06dc42be2ca876901b0d98976",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        112,
+        82,
+        272,
+        290
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Punch-Kick-Spaced.png",
+      "uniformBatchScale": 0.8203125,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        531,
+        669,
+        718,
+        916
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Kick\\04.png",
+      "sha256": "92224f30ec03b5f0755337bd0b240dfd189e7b9245b858663df46457b4155bac",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        77,
+        83,
+        307,
+        289
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Punch-Kick-Spaced.png",
+      "uniformBatchScale": 0.8203125,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        744,
+        667,
+        1016,
+        915
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Kick\\05.png",
+      "sha256": "ad524f8382c04b5333efab5ad870d8b8032b264864d083ec0e3cb3527b4872af",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        115,
+        79,
+        270,
+        290
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Punch-Kick-Spaced.png",
+      "uniformBatchScale": 0.8203125,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        1028,
+        665,
+        1211,
+        916
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Kick\\06.png",
+      "sha256": "e65661b403990c6c27455793c7ca4cf27c677c8c326fc48ef3515e1057068ef7",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        117,
+        86,
+        268,
+        291
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Punch-Kick-Spaced.png",
+      "uniformBatchScale": 0.8203125,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        54,
+        961,
+        230,
+        1205
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Kick\\07.png",
+      "sha256": "8553721a9817b37e002375a5e3a9cb553c3de7f8e048a035e93d915053b6780a",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        117,
+        89,
+        267,
+        290
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Punch-Kick-Spaced.png",
+      "uniformBatchScale": 0.8203125,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        288,
+        964,
+        463,
+        1205
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Kick\\08.png",
+      "sha256": "dbd2d1f86f2c10868b8fd79b9d90da8ce798dfcef8fcbda7551f659f0563e159",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        116,
+        86,
+        267,
+        290
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Punch-Kick-Spaced.png",
+      "uniformBatchScale": 0.8203125,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        533,
+        962,
+        712,
+        1205
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Kick\\09.png",
+      "sha256": "c54a099ec88c9848d56566fa16c509bac08216c7f7f1278b4c77365a15b39d9c",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        113,
+        84,
+        271,
+        290
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Punch-Kick-Spaced.png",
+      "uniformBatchScale": 0.8203125,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        776,
+        960,
+        962,
+        1207
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Kick\\10.png",
+      "sha256": "8e89462a1cd653e13ddd3d06c75e2d65313b81207322928ed01ccb7e5ea44866",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        116,
+        85,
+        268,
+        291
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Punch-Kick-Spaced.png",
+      "uniformBatchScale": 0.8203125,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        1038,
+        960,
+        1215,
+        1205
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Knockout\\01.png",
+      "sha256": "0ebc778e72d10f16e2d448cf605944eab9c0f4851aba7d0adc3ac7aac090e663",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        110,
+        54,
+        274,
+        292
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Knockout-Block-Spaced.png",
+      "uniformBatchScale": 0.84,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        44,
+        56,
+        231,
+        331
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Knockout\\02.png",
+      "sha256": "268571c8d23f280bb39cf1282a1ae19b6cca345565813dd50d56bcbd4b6bcbfb",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        89,
+        75,
+        296,
+        292
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Knockout-Block-Spaced.png",
+      "uniformBatchScale": 0.84,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        261,
+        79,
+        499,
+        330
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Knockout\\03.png",
+      "sha256": "bf708b83032f89f2b1942674921293a333e257179af1299810177aca362d263c",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        88,
+        97,
+        295,
+        291
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Knockout-Block-Spaced.png",
+      "uniformBatchScale": 0.84,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        499,
+        109,
+        738,
+        335
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Knockout\\04.png",
+      "sha256": "e94160a270e71c69da7cbc58da4f806471852f2d167df2ad87edf21fd7755da6",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        81,
+        128,
+        304,
+        291
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Knockout-Block-Spaced.png",
+      "uniformBatchScale": 0.84,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        733,
+        152,
+        990,
+        338
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Knockout\\05.png",
+      "sha256": "f0b3c58401e610d57b82434af1bd1af6d984511245927f587c35573a9df10f93",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        94,
+        208,
+        290,
+        291
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Knockout-Block-Spaced.png",
+      "uniformBatchScale": 0.84,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        1001,
+        247,
+        1227,
+        338
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Knockout\\06.png",
+      "sha256": "419e456925189a6a52e6c8b84171c9311d7cc3a03b006428546e7aab428b9d99",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        86,
+        201,
+        299,
+        291
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Knockout-Block-Spaced.png",
+      "uniformBatchScale": 0.84,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        23,
+        557,
+        268,
+        656
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Knockout\\07.png",
+      "sha256": "5de651b6823ef83e3b144298719159e09c003287af3ac9fb77c3594313f6bb8f",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        88,
+        197,
+        295,
+        291
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Knockout-Block-Spaced.png",
+      "uniformBatchScale": 0.84,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        283,
+        551,
+        522,
+        655
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Knockout\\08.png",
+      "sha256": "d3ca2ec1ffc4ff849ccbb1c1555ef3c4e49a3375832045a9cd5c20a635a7e570",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        104,
+        143,
+        281,
+        291
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Knockout-Block-Spaced.png",
+      "uniformBatchScale": 0.84,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        547,
+        484,
+        751,
+        655
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Knockout\\09.png",
+      "sha256": "c52800dff51dc5ff2cd337ae7341af14dd27cdf2120ea61872b336b6f7b1fa1f",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        110,
+        104,
+        274,
+        291
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Knockout-Block-Spaced.png",
+      "uniformBatchScale": 0.84,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        794,
+        434,
+        982,
+        651
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Knockout\\10.png",
+      "sha256": "1ef0112bedda370a96c2751aa5641e4b3b4818abd4f2b53dd831ac93e9d04268",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        114,
+        58,
+        269,
+        291
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Knockout-Block-Spaced.png",
+      "uniformBatchScale": 0.84,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        1040,
+        379,
+        1218,
+        650
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Block\\01.png",
+      "sha256": "2c42675b41a8b0c61027229e17f7a71bb1d0ab3af3b5a517c49f36f73a1e1007",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        113,
+        77,
+        272,
+        292
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Knockout-Block-Spaced.png",
+      "uniformBatchScale": 0.84,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        45,
+        690,
+        226,
+        940
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Block\\02.png",
+      "sha256": "18aff294b10f44aba11f5499f2c12aa1bb41b8a1afc2370c90d805e8e464d15f",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        115,
+        77,
+        269,
+        291
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Knockout-Block-Spaced.png",
+      "uniformBatchScale": 0.84,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        291,
+        693,
+        467,
+        942
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Block\\03.png",
+      "sha256": "db84d82e4451b1864829bf1ce4ba5278cd0547ee562eadc541ed9f4736b076d1",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        115,
+        75,
+        269,
+        292
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Knockout-Block-Spaced.png",
+      "uniformBatchScale": 0.84,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        543,
+        692,
+        719,
+        942
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Block\\04.png",
+      "sha256": "0a650f9ae9af7a9b795be66e386e3b55ad6f02d48ad1ec2643c686cf26d8fa00",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        113,
+        79,
+        270,
+        291
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Knockout-Block-Spaced.png",
+      "uniformBatchScale": 0.84,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        791,
+        694,
+        970,
+        941
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Block\\05.png",
+      "sha256": "87454f82bc54582be9f4cb31eb5dd1bad201afa8a415d06f18d4c5438e2841fa",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        114,
+        78,
+        270,
+        291
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Knockout-Block-Spaced.png",
+      "uniformBatchScale": 0.84,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        1038,
+        695,
+        1216,
+        942
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Block\\06.png",
+      "sha256": "12e5c226aa96e17129af34ce9d454ea6790c77ad7b09cef76b0a7c14f2550874",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        111,
+        71,
+        272,
+        289
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Knockout-Block-Spaced.png",
+      "uniformBatchScale": 0.84,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        44,
+        967,
+        228,
+        1222
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Block\\07.png",
+      "sha256": "12170d44b871e3b06eb3eaef1429cca8a808d2a21d84e99dcf307db55e955be5",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        113,
+        75,
+        272,
+        292
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Knockout-Block-Spaced.png",
+      "uniformBatchScale": 0.84,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        291,
+        971,
+        473,
+        1222
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Block\\08.png",
+      "sha256": "08383974bc4d51742a73ae2950cdfd95eb6cf9fc9768c709d250882ae2c47025",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        116,
+        73,
+        267,
+        290
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Knockout-Block-Spaced.png",
+      "uniformBatchScale": 0.84,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        541,
+        968,
+        713,
+        1222
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Block\\09.png",
+      "sha256": "4f98e08d23b7329b908cfd96d74d60d120b8dac3aebdcbbd55ed48efd4a92269",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        108,
+        75,
+        277,
+        291
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Knockout-Block-Spaced.png",
+      "uniformBatchScale": 0.84,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        777,
+        971,
+        970,
+        1222
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Block\\10.png",
+      "sha256": "763bc86540298aeee6214514fe3be9496bd0fdb7b8f105175c2f86779be76a00",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        114,
+        76,
+        270,
+        290
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Knockout-Block-Spaced.png",
+      "uniformBatchScale": 0.84,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        1034,
+        973,
+        1212,
+        1222
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\DoubleJump\\01.png",
+      "sha256": "63a056067081a1ba3c4c60fa17068c90564dfd11bb9403f7e2ed4c05a7e185a5",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        98,
+        66,
+        284,
+        290
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-DoubleJump-Special-Spaced.png",
+      "uniformBatchScale": 0.8677685950413223,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        33,
+        87,
+        241,
+        339
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\DoubleJump\\02.png",
+      "sha256": "7160db01a4c42eed992fd1814270872736dc5947e37f894ec5495ae45c5c0c52",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        113,
+        43,
+        271,
+        290
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-DoubleJump-Special-Spaced.png",
+      "uniformBatchScale": 0.8677685950413223,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        295,
+        55,
+        470,
+        336
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\DoubleJump\\03.png",
+      "sha256": "77e0e754ea3038bbdcc724fe4b3d1ff7bfe6409565849a8721d6912761f539d5",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        111,
+        90,
+        273,
+        291
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-DoubleJump-Special-Spaced.png",
+      "uniformBatchScale": 0.8677685950413223,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        543,
+        56,
+        722,
+        281
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\DoubleJump\\04.png",
+      "sha256": "6c55add2020f13ae9c14f6e5be86bb826761d8d692cb713b2347cfb55e02c57a",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        95,
+        69,
+        289,
+        292
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-DoubleJump-Special-Spaced.png",
+      "uniformBatchScale": 0.8677685950413223,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        771,
+        80,
+        986,
+        330
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\DoubleJump\\05.png",
+      "sha256": "ac7abae76e5ff6aa0c044ada4c8a9caaab0660532023358e8989f41fcbdb3a62",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        89,
+        83,
+        294,
+        291
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-DoubleJump-Special-Spaced.png",
+      "uniformBatchScale": 0.8677685950413223,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        1008,
+        96,
+        1238,
+        330
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\DoubleJump\\06.png",
+      "sha256": "1f1b8d0befda40acd53a76c29fb17d6db7ecf1677c9287fa4b62d513454d4374",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        98,
+        86,
+        285,
+        291
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-DoubleJump-Special-Spaced.png",
+      "uniformBatchScale": 0.8677685950413223,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        33,
+        371,
+        242,
+        602
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\DoubleJump\\07.png",
+      "sha256": "0ae360da876177fdc157bb9796b0e272eda3b87c92c2d5b717e1b210db7334d0",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        101,
+        52,
+        281,
+        291
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-DoubleJump-Special-Spaced.png",
+      "uniformBatchScale": 0.8677685950413223,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        284,
+        366,
+        485,
+        635
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\DoubleJump\\08.png",
+      "sha256": "e001d2fdd8f3e1bb50447d3ea421e86907fdb208150d0862225dd49d6254ec67",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        112,
+        82,
+        272,
+        291
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-DoubleJump-Special-Spaced.png",
+      "uniformBatchScale": 0.8677685950413223,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        538,
+        388,
+        714,
+        622
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\DoubleJump\\09.png",
+      "sha256": "d4e49c28340d06e677e8961d86ea65af9aedb65bd3d68b4a15fe72f4d96e078b",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        103,
+        89,
+        280,
+        292
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-DoubleJump-Special-Spaced.png",
+      "uniformBatchScale": 0.8677685950413223,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        770,
+        408,
+        967,
+        636
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\DoubleJump\\10.png",
+      "sha256": "f67fc2e330a30d45197d40d477fff5ef50a7c293cfc3be28e4dec0cbded51d8a",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        94,
+        114,
+        291,
+        291
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-DoubleJump-Special-Spaced.png",
+      "uniformBatchScale": 0.8677685950413223,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        1007,
+        441,
+        1226,
+        637
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Special\\01.png",
+      "sha256": "316a817862452e2417246c2b4f2fe71e5073f8b620db0e219ebea5eb556f0418",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        112,
+        77,
+        271,
+        292
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-DoubleJump-Special-Spaced.png",
+      "uniformBatchScale": 0.8677685950413223,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        49,
+        681,
+        228,
+        923
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Special\\02.png",
+      "sha256": "30360003e0f7cb78b484f6cca72fe45dcc6b1e0282db6cc41201e80f20e197e6",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        114,
+        79,
+        269,
+        291
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-DoubleJump-Special-Spaced.png",
+      "uniformBatchScale": 0.8677685950413223,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        295,
+        683,
+        466,
+        922
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Special\\03.png",
+      "sha256": "57e78a336702d2e7b5dd0c59dd7e47200d1c2e4f8f8ddbf01213e5ea006d45cc",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        111,
+        78,
+        272,
+        291
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-DoubleJump-Special-Spaced.png",
+      "uniformBatchScale": 0.8677685950413223,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        530,
+        685,
+        708,
+        923
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Special\\04.png",
+      "sha256": "e9ecc888eb33e456ff94e956fd45faa5d30187b3d1efbe51f09142ec144824dd",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        107,
+        79,
+        276,
+        291
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-DoubleJump-Special-Spaced.png",
+      "uniformBatchScale": 0.8677685950413223,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        769,
+        684,
+        956,
+        922
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Special\\05.png",
+      "sha256": "3d8d631691f0c281e1eace826047ffa23f1478e6e36f7a919bbd6a948759ca6e",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        74,
+        105,
+        309,
+        291
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-DoubleJump-Special-Spaced.png",
+      "uniformBatchScale": 0.8677685950413223,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        983,
+        711,
+        1246,
+        920
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Special\\06.png",
+      "sha256": "34e6062dd5bda182e565c7110cf7ce16b9c96753ddb65c2e1d9cfdc60cbcbe1f",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        104,
+        99,
+        279,
+        290
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-DoubleJump-Special-Spaced.png",
+      "uniformBatchScale": 0.8677685950413223,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        29,
+        992,
+        223,
+        1207
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Special\\07.png",
+      "sha256": "5e8bf4ee74282d49513df1a3542089847cc44f2680fd87e49e2b4529920dffd8",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        103,
+        91,
+        281,
+        290
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-DoubleJump-Special-Spaced.png",
+      "uniformBatchScale": 0.8677685950413223,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        273,
+        984,
+        470,
+        1207
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Special\\08.png",
+      "sha256": "1efea3d8006ca56c9d8f9ffa0d66f2ef16106aa8a35744664c4d2318695ea0fd",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        113,
+        75,
+        269,
+        291
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-DoubleJump-Special-Spaced.png",
+      "uniformBatchScale": 0.8677685950413223,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        535,
+        970,
+        709,
+        1211
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Special\\09.png",
+      "sha256": "5f23be9641288076d68732bf1bcf7a0b41caa87a7a2c0f1c4a655e3e563fdf3f",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        117,
+        75,
+        268,
+        292
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-DoubleJump-Special-Spaced.png",
+      "uniformBatchScale": 0.8677685950413223,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        779,
+        967,
+        945,
+        1210
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Special\\10.png",
+      "sha256": "33c2b73b5ea1f31db2809528abf9671e25e07ea81cae59f67cab2ffdec1192bc",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        117,
+        71,
+        266,
+        291
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-DoubleJump-Special-Spaced.png",
+      "uniformBatchScale": 0.8677685950413223,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        1033,
+        964,
+        1197,
+        1211
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Dash\\01.png",
+      "sha256": "eb9e55e997f92262eb2c4d0bab28d79285a6b25b86f2730dc86577b5fd900eca",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        92,
+        74,
+        290,
+        291
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Dash-Backstep-Spaced.png",
+      "uniformBatchScale": 0.9130434782608695,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        46,
+        133,
+        256,
+        364
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Dash\\02.png",
+      "sha256": "12d1601655cc43242b6730d25dfba8e2f28186256fec61ca1eb35cef6b7266b0",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        99,
+        64,
+        284,
+        291
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Dash-Backstep-Spaced.png",
+      "uniformBatchScale": 0.9130434782608695,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        295,
+        124,
+        490,
+        366
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Dash\\03.png",
+      "sha256": "bac8d5ac54211c02df7223eaf91f90a5a52fb4bfd8faecffaebfb7dea05926f2",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        98,
+        53,
+        288,
+        291
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Dash-Backstep-Spaced.png",
+      "uniformBatchScale": 0.9130434782608695,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        528,
+        112,
+        729,
+        366
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Dash\\04.png",
+      "sha256": "e8d0f22d6be9bacedc62220b09963e234088aeef03c4363a7eca621cae8042a4",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        110,
+        51,
+        273,
+        292
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Dash-Backstep-Spaced.png",
+      "uniformBatchScale": 0.9130434782608695,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        793,
+        109,
+        964,
+        366
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Dash\\05.png",
+      "sha256": "7bb19881d8ca22005b9d57808dccfbed2729a087b4cfb8edf58f862712076d6c",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        105,
+        40,
+        279,
+        292
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Dash-Backstep-Spaced.png",
+      "uniformBatchScale": 0.9130434782608695,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        1033,
+        97,
+        1216,
+        366
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Dash\\06.png",
+      "sha256": "87e4b0563855f520951fb5b6d4804103c75d0f1d459ca096f533a588addeb68c",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        97,
+        75,
+        287,
+        292
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Dash-Backstep-Spaced.png",
+      "uniformBatchScale": 0.9130434782608695,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        44,
+        443,
+        244,
+        675
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Dash\\07.png",
+      "sha256": "407e9b35d7abafc3db256b49cda84c6ff65b9307b86b018e3b5dcc8581ee3e14",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        95,
+        63,
+        289,
+        292
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Dash-Backstep-Spaced.png",
+      "uniformBatchScale": 0.9130434782608695,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        282,
+        433,
+        487,
+        678
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Dash\\08.png",
+      "sha256": "0ec8bc3fd1a824451a5aad9206b0f24bd1de41847939aa9eba1bf356f6cf27fe",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        100,
+        54,
+        283,
+        290
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Dash-Backstep-Spaced.png",
+      "uniformBatchScale": 0.9130434782608695,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        534,
+        422,
+        729,
+        675
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Dash\\09.png",
+      "sha256": "5ac9c59c8141c2639ab6672333d94026073c93b3235869d5eb450b25e1e08372",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        109,
+        51,
+        274,
+        290
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Dash-Backstep-Spaced.png",
+      "uniformBatchScale": 0.9130434782608695,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        791,
+        420,
+        965,
+        677
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Dash\\10.png",
+      "sha256": "daa03d8dba7dc044f615f87a23f7e66b282a438c13b426a3572b21c45e213992",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        107,
+        40,
+        278,
+        292
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Dash-Backstep-Spaced.png",
+      "uniformBatchScale": 0.9130434782608695,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        1039,
+        407,
+        1218,
+        677
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Backstep\\01.png",
+      "sha256": "ccac80a438217f574bf12c95e3bcc56a8df7851b527911f7cd6db6fe01a07402",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        109,
+        63,
+        274,
+        292
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Dash-Backstep-Spaced.png",
+      "uniformBatchScale": 0.9130434782608695,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        36,
+        723,
+        210,
+        967
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Backstep\\02.png",
+      "sha256": "8ef606e5af438d40f93ac211828d5fdaf9fd46fa93a7da039a72463c33c4a5ba",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        108,
+        76,
+        277,
+        291
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Dash-Backstep-Spaced.png",
+      "uniformBatchScale": 0.9130434782608695,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        281,
+        737,
+        458,
+        967
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Backstep\\03.png",
+      "sha256": "dfcb6b34059330f2dc537c1ca5e389003423d3af048944ec2b3789f77c9345df",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        101,
+        79,
+        283,
+        292
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Dash-Backstep-Spaced.png",
+      "uniformBatchScale": 0.9130434782608695,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        528,
+        742,
+        721,
+        967
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Backstep\\04.png",
+      "sha256": "02c4847599d02c3ea7cf1170c312adefcf3e906bcca89be46ce549630eaa55a0",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        110,
+        82,
+        273,
+        292
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Dash-Backstep-Spaced.png",
+      "uniformBatchScale": 0.9130434782608695,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        788,
+        744,
+        961,
+        967
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Backstep\\05.png",
+      "sha256": "50b4de5bc653cbb7bc75ba5f171e3775fef8ee137385603789fffbdaeb34b314",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        118,
+        81,
+        265,
+        292
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Dash-Backstep-Spaced.png",
+      "uniformBatchScale": 0.9130434782608695,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        1055,
+        743,
+        1208,
+        967
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Backstep\\06.png",
+      "sha256": "d38a0ed784aeadbd194e4f42e341c48ae5e307ea88ab379f0edc7b47f468fbdc",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        109,
+        80,
+        274,
+        292
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Dash-Backstep-Spaced.png",
+      "uniformBatchScale": 0.9130434782608695,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        54,
+        992,
+        228,
+        1216
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Backstep\\07.png",
+      "sha256": "a4f880b31485103d85eff5cfe01dab0907fd5ce3606985061fe80cc506f70677",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        110,
+        87,
+        272,
+        291
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Dash-Backstep-Spaced.png",
+      "uniformBatchScale": 0.9130434782608695,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        301,
+        1000,
+        472,
+        1217
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Backstep\\08.png",
+      "sha256": "0707a51ceb672a4ce10d988fe75c8ab682c100208b2849ca1a016b92e65040e7",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        106,
+        85,
+        277,
+        291
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Dash-Backstep-Spaced.png",
+      "uniformBatchScale": 0.9130434782608695,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        549,
+        997,
+        732,
+        1217
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Backstep\\09.png",
+      "sha256": "cbc010890715726f213fed43abde0dfd4b6d5117605fd6e601d6672c27db2b79",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        118,
+        92,
+        266,
+        292
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Dash-Backstep-Spaced.png",
+      "uniformBatchScale": 0.9130434782608695,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        805,
+        1004,
+        963,
+        1216
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Backstep\\10.png",
+      "sha256": "245171ed31b81e11085cd4f837d5221be6f08db679f9ab98ea96a392b731350a",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        117,
+        74,
+        267,
+        291
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Dash-Backstep-Spaced.png",
+      "uniformBatchScale": 0.9130434782608695,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        1045,
+        987,
+        1201,
+        1217
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Victory\\01.png",
+      "sha256": "b2bc41023282f2f8fbf8b0135f685ae69dc1294e306abe5d22f3fe4cbb9e8dab",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        108,
+        79,
+        276,
+        291
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Victory-Ultimate-Spaced.png",
+      "uniformBatchScale": 0.7954545454545454,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        35,
+        92,
+        238,
+        351
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Victory\\02.png",
+      "sha256": "49f79915bd9c03d7f793bbb388772b960a3ebcbbbe78200f6f594eb0bb685edd",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        112,
+        73,
+        270,
+        292
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Victory-Ultimate-Spaced.png",
+      "uniformBatchScale": 0.7954545454545454,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        292,
+        83,
+        484,
+        351
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Victory\\03.png",
+      "sha256": "9c8ae99d8035245b9ee6c44b231d2af5abf247f141adb377727697ac5bb026a6",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        114,
+        48,
+        269,
+        291
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Victory-Ultimate-Spaced.png",
+      "uniformBatchScale": 0.7954545454545454,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        536,
+        53,
+        723,
+        351
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Victory\\04.png",
+      "sha256": "e08b3db9590ea7869c7be5a6d93956c2f93ce35e0a97ce85a937334d502a6640",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        118,
+        53,
+        267,
+        290
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Victory-Ultimate-Spaced.png",
+      "uniformBatchScale": 0.7954545454545454,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        787,
+        60,
+        968,
+        352
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Victory\\05.png",
+      "sha256": "9365a35a1de0c1759d709c31b42f80aebd7f61fa3ddf89f3db21be595d711bcf",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        113,
+        85,
+        270,
+        290
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Victory-Ultimate-Spaced.png",
+      "uniformBatchScale": 0.7954545454545454,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        1032,
+        100,
+        1222,
+        351
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Victory\\06.png",
+      "sha256": "6b517bdc6f5de1a710555b062e125f73f716372c1c0f8fbc4c360a2a4b6790ed",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        123,
+        65,
+        263,
+        290
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Victory-Ultimate-Spaced.png",
+      "uniformBatchScale": 0.7954545454545454,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        48,
+        379,
+        219,
+        656
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Victory\\07.png",
+      "sha256": "25872f81909c91bb6c31dfa0c9f3724ef91af0d9e4bbea8170a89ad7e1d2519d",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        121,
+        67,
+        262,
+        291
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Victory-Ultimate-Spaced.png",
+      "uniformBatchScale": 0.7954545454545454,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        296,
+        380,
+        467,
+        655
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Victory\\08.png",
+      "sha256": "c0e878a7f24b15cda259dadf77121b428d10a4a577de8f7a21c24d4f438a1e19",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        124,
+        68,
+        259,
+        291
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Victory-Ultimate-Spaced.png",
+      "uniformBatchScale": 0.7954545454545454,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        543,
+        381,
+        705,
+        655
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Victory\\09.png",
+      "sha256": "ec1828387e8b3cd2da1af2171917993e4fb080170685fa2cbb9a9b73841235e1",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        112,
+        75,
+        272,
+        291
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Victory-Ultimate-Spaced.png",
+      "uniformBatchScale": 0.7954545454545454,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        792,
+        392,
+        985,
+        656
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Victory\\10.png",
+      "sha256": "a5d6057bc8762ff505706ef90b06c422d6e2b0e46147d11dfa0a8f680ecb14bd",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        124,
+        75,
+        261,
+        290
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Victory-Ultimate-Spaced.png",
+      "uniformBatchScale": 0.7954545454545454,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        1049,
+        392,
+        1215,
+        656
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Ultimate\\01.png",
+      "sha256": "21350e42e60b00052262ea809e4012942492d729d9fca55ab53d259aa7138947",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        116,
+        89,
+        269,
+        291
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Victory-Ultimate-Spaced.png",
+      "uniformBatchScale": 0.7954545454545454,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        45,
+        687,
+        229,
+        936
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Ultimate\\02.png",
+      "sha256": "5a5c10d87696a8fd3148b540076c8f302bab37b42d4063d1974292368d2077de",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        112,
+        92,
+        274,
+        291
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Victory-Ultimate-Spaced.png",
+      "uniformBatchScale": 0.7954545454545454,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        288,
+        692,
+        486,
+        936
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Ultimate\\03.png",
+      "sha256": "e34eda014c99523f862c57e8e333d628db6f0ca5a9da311cf5a04d0d63bade19",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        92,
+        88,
+        292,
+        291
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Victory-Ultimate-Spaced.png",
+      "uniformBatchScale": 0.7954545454545454,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        507,
+        689,
+        750,
+        936
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Ultimate\\04.png",
+      "sha256": "614df59900dc99d3eb772e4e992b93bacca55231714f2ca3847ea562a4d704dc",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        90,
+        92,
+        294,
+        291
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Victory-Ultimate-Spaced.png",
+      "uniformBatchScale": 0.7954545454545454,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        745,
+        692,
+        994,
+        936
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Ultimate\\05.png",
+      "sha256": "5800dec7c47585652d3acaf5b858a96b87dca4e3d5b892a0170417694cda364c",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        102,
+        94,
+        282,
+        292
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Victory-Ultimate-Spaced.png",
+      "uniformBatchScale": 0.7954545454545454,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        1016,
+        693,
+        1234,
+        936
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Ultimate\\06.png",
+      "sha256": "3af156f9fde9e11a305580d1103df7a085f28ba2ef295327333dc75e2fbcb2f3",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        101,
+        86,
+        283,
+        291
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Victory-Ultimate-Spaced.png",
+      "uniformBatchScale": 0.7954545454545454,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        40,
+        964,
+        261,
+        1215
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Ultimate\\07.png",
+      "sha256": "d1dd0fcfde9a2a2bc2d3356a2150636001b56f18cc918b6993a4cd404080834d",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        111,
+        89,
+        271,
+        291
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Victory-Ultimate-Spaced.png",
+      "uniformBatchScale": 0.7954545454545454,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        286,
+        967,
+        481,
+        1214
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Ultimate\\08.png",
+      "sha256": "a19b36ef13d43ffe5be619c8098e225eb94eb610e2bd60cd4789630c2b2bd493",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        112,
+        85,
+        271,
+        292
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Victory-Ultimate-Spaced.png",
+      "uniformBatchScale": 0.7954545454545454,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        526,
+        961,
+        718,
+        1214
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Ultimate\\09.png",
+      "sha256": "2ae565f3ccc25128d1b13f30b68440cd9dfff9d0dda00efef3a6ffc953f9b84c",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        113,
+        88,
+        271,
+        291
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Victory-Ultimate-Spaced.png",
+      "uniformBatchScale": 0.7954545454545454,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        778,
+        964,
+        969,
+        1214
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Ultimate\\10.png",
+      "sha256": "2dd5ed698bbf7331c4e257a13bad77890d97c236a1e926e1320f8743c718789a",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        126,
+        87,
+        259,
+        291
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Victory-Ultimate-Spaced.png",
+      "uniformBatchScale": 0.7954545454545454,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        1036,
+        964,
+        1198,
+        1214
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Downed\\01.png",
+      "sha256": "d1843c34e04ff9796bc696178bc1b9b23cd5fc99c0276e352d04fbd2ac3f48e0",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        87,
+        192,
+        297,
+        292
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Downed-GetUp-Spaced.png",
+      "uniformBatchScale": 0.8433734939759037,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        8,
+        330,
+        249,
+        440
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Downed\\02.png",
+      "sha256": "54151a3afb1a4328a40c0298aeac655074a6509b54b28c65f210d7b28968ad4b",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        93,
+        196,
+        290,
+        291
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Downed-GetUp-Spaced.png",
+      "uniformBatchScale": 0.8433734939759037,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        267,
+        339,
+        493,
+        444
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Downed\\03.png",
+      "sha256": "c96dc0c9a063dc0f280d493bc0d7da5293615a9014dccf679f08d73b86cfdf83",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        93,
+        193,
+        289,
+        292
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Downed-GetUp-Spaced.png",
+      "uniformBatchScale": 0.8433734939759037,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        517,
+        335,
+        743,
+        444
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Downed\\04.png",
+      "sha256": "8d6eb2260a90cdff33782f90b1837b1a5f227c7ce8a205521a8aa6ba620903e7",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        93,
+        189,
+        291,
+        291
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Downed-GetUp-Spaced.png",
+      "uniformBatchScale": 0.8433734939759037,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        767,
+        331,
+        994,
+        444
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Downed\\05.png",
+      "sha256": "a738bf6a7eb9833f1e239720777f165bf0af259f78dcc21238cb850a98c72174",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        91,
+        184,
+        293,
+        292
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Downed-GetUp-Spaced.png",
+      "uniformBatchScale": 0.8433734939759037,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        1016,
+        322,
+        1247,
+        444
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Downed\\06.png",
+      "sha256": "f2e966df25281b554903161aa23405ecd12f5cd78d376cb4ebdae0825d02ce9d",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        97,
+        189,
+        287,
+        291
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Downed-GetUp-Spaced.png",
+      "uniformBatchScale": 0.8433734939759037,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        40,
+        575,
+        258,
+        689
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Downed\\07.png",
+      "sha256": "9ef4b47390e8d4e092e4064fea5336d5f73badb50bc4d6358cba9f875bb0754b",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        92,
+        182,
+        293,
+        291
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Downed-GetUp-Spaced.png",
+      "uniformBatchScale": 0.8433734939759037,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        290,
+        566,
+        520,
+        689
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Downed\\08.png",
+      "sha256": "f2e966df25281b554903161aa23405ecd12f5cd78d376cb4ebdae0825d02ce9d",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        97,
+        189,
+        287,
+        291
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Downed-GetUp-Spaced.png",
+      "uniformBatchScale": 0.8433734939759037,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        40,
+        575,
+        258,
+        689
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Downed\\09.png",
+      "sha256": "8d6eb2260a90cdff33782f90b1837b1a5f227c7ce8a205521a8aa6ba620903e7",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        93,
+        189,
+        291,
+        291
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Downed-GetUp-Spaced.png",
+      "uniformBatchScale": 0.8433734939759037,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        767,
+        331,
+        994,
+        444
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\Downed\\10.png",
+      "sha256": "54151a3afb1a4328a40c0298aeac655074a6509b54b28c65f210d7b28968ad4b",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        93,
+        196,
+        290,
+        291
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Downed-GetUp-Spaced.png",
+      "uniformBatchScale": 0.8433734939759037,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        267,
+        339,
+        493,
+        444
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\GetUp\\01.png",
+      "sha256": "e3aee74cfddbdcceb7c0f03688f5e5d0d0913b3152517ee7c17acb0c1ffdc93f",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        108,
+        137,
+        276,
+        291
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Downed-GetUp-Spaced.png",
+      "uniformBatchScale": 0.8433734939759037,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        37,
+        778,
+        228,
+        953
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\GetUp\\02.png",
+      "sha256": "625fd7eb14c9b6dc4b5311a14f03c7b06dc480448d2c9330eba4321e5364fcbb",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        115,
+        116,
+        269,
+        291
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Downed-GetUp-Spaced.png",
+      "uniformBatchScale": 0.8433734939759037,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        300,
+        751,
+        475,
+        951
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\GetUp\\03.png",
+      "sha256": "866519c223bc00821638b273abce4d30fbcadd4f4b147940bcf932e309dbc816",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        112,
+        121,
+        272,
+        290
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Downed-GetUp-Spaced.png",
+      "uniformBatchScale": 0.8433734939759037,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        531,
+        755,
+        713,
+        950
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\GetUp\\04.png",
+      "sha256": "3ca5773f0145e96ac4044f794333e8cd931dca0452a7a694e5b84037e7a145be",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        106,
+        116,
+        279,
+        291
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Downed-GetUp-Spaced.png",
+      "uniformBatchScale": 0.8433734939759037,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        784,
+        752,
+        981,
+        953
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\GetUp\\05.png",
+      "sha256": "e713d5f4f00ff1eedb0d1b6075e12a704eee76ff3a87c9be461192df3bf2008d",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        109,
+        113,
+        275,
+        292
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Downed-GetUp-Spaced.png",
+      "uniformBatchScale": 0.8433734939759037,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        1033,
+        750,
+        1222,
+        954
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\GetUp\\06.png",
+      "sha256": "78f4e5a6c14e5e09281f1b5602ecaf51058790b8b4122332ed55766a0e747c5d",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        114,
+        81,
+        270,
+        292
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Downed-GetUp-Spaced.png",
+      "uniformBatchScale": 0.8433734939759037,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        45,
+        986,
+        222,
+        1228
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\GetUp\\07.png",
+      "sha256": "ad8e441103b5587e1fe1d9672bcf5cffea2abd536b58fbbbfca3025d89c83f59",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        111,
+        79,
+        274,
+        291
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Downed-GetUp-Spaced.png",
+      "uniformBatchScale": 0.8433734939759037,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        297,
+        983,
+        482,
+        1228
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\GetUp\\08.png",
+      "sha256": "aafbe8d8d2e50096306391c90ed5001e8bfbaa6f55f1a5decd9c0b25a7f3d208",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        117,
+        76,
+        266,
+        292
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Downed-GetUp-Spaced.png",
+      "uniformBatchScale": 0.8433734939759037,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        550,
+        979,
+        719,
+        1228
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\GetUp\\09.png",
+      "sha256": "2c75c0f01ea983d44ba443e91861e033d309a10daba346cde1d9e3b5488c4734",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        118,
+        77,
+        266,
+        291
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Downed-GetUp-Spaced.png",
+      "uniformBatchScale": 0.8433734939759037,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        796,
+        980,
+        963,
+        1228
+      ]
+    },
+    {
+      "path": "Assets\\Art\\CharactersRework\\Marin\\GetUp\\10.png",
+      "sha256": "43db02a33faac0d1b0c3d7d5fbfc42058a95afac1b0befac870f2cf6472df5d9",
+      "size": [
+        384,
+        320
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "alphaBounds": [
+        118,
+        76,
+        266,
+        292
+      ],
+      "source": "Documentation\\Presentation-v12\\Marin-Downed-GetUp-Spaced.png",
+      "uniformBatchScale": 0.8433734939759037,
+      "sourcePoseCount": 20,
+      "sourceBounds": [
+        1049,
+        979,
+        1216,
+        1228
+      ]
+    }
+  ]
+}

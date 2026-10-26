@@ -137,7 +137,7 @@ public static class GameSetup
         uiInput.move=null;uiInput.submit=null;uiInput.cancel=null;
         EditorSceneManager.SaveScene(scene, path);
         EditorBuildSettings.scenes = new[] { new EditorBuildSettingsScene(path, true) };
-        PlayerSettings.companyName = "Woodland Games";PlayerSettings.productName = "Rune Rumble";PlayerSettings.bundleVersion="11.0.0";
+        PlayerSettings.companyName = "Woodland Games";PlayerSettings.productName = "Rune Rumble";PlayerSettings.bundleVersion="12.0.0";
         PlayerSettings.defaultScreenWidth = 1280;PlayerSettings.defaultScreenHeight = 720;PlayerSettings.runInBackground = true;
         AssetDatabase.SaveAssets();
         Selection.activeGameObject = beam;
@@ -366,7 +366,7 @@ public static class GameSetup
                 int slot=i*4+a;var position=buttonPositions[a];
                 var disc=Flat("Face Button "+captions[a],diamond,new Rect(position.x,position.y,WoodlandHUD.ActionButtonDiameter,WoodlandHUD.ActionButtonDiameter),Color.white);disc.sprite=SpriteAt("Assets/Art/UI/ControlDisc.png");disc.raycastTarget=true;disc.alphaHitTestMinimumThreshold=.1f;disc.rectTransform.pivot=Vector2.one*.5f;disc.rectTransform.anchoredPosition+=new Vector2(40,-40);hud.actionDiscs[slot]=disc;
                 var button=disc.gameObject.AddComponent<Button>();button.targetGraphic=disc;button.transition=Selectable.Transition.None;button.navigation=new Navigation{mode=Navigation.Mode.None};hud.actionButtons[slot]=button;
-                hud.actionCovers[slot]=Flat("Illustrated "+captions[a],disc.transform,new Rect(8,8,64,64),Color.white);hud.actionCovers[slot].sprite=a==0?hud.characterGuardCovers[i]:hud.characterActionCovers[i*4+a];hud.actionCovers[slot].preserveAspect=true;
+                hud.actionCovers[slot]=Flat("Illustrated "+captions[a],disc.transform,new Rect(2,2,76,76),Color.white);hud.actionCovers[slot].sprite=a==0?hud.characterGuardCovers[i]:hud.characterActionCovers[i*4+a];hud.actionCovers[slot].preserveAspect=true;
                 Flat("Action Caption Backing",disc.transform,new Rect(-2,81,84,23),new Color(.018f,.027f,.045f,.98f));
                 Label("Action Caption",disc.transform,captions[a].ToUpper(),new Rect(-2,81,84,23),16,Color.white,TextAnchor.MiddleCenter);
                 if(a==3){
@@ -423,10 +423,13 @@ public static class GameSetup
     {
         bool card=title.Length==0;
         var face=Flat(name,parent,bounds,new Color(.11f,.065f,.23f,.98f));face.raycastTarget=true;
-        if(!card)Flat("Button Accent",face.transform,new Rect(0,0,4,bounds.height),accent);
+        if(!card) {
+            face.sprite=SpriteAt(ArcadeArt+"BrushBand.png");
+            Paint("Ink Focus Stroke",face.transform,new Rect(24,bounds.height-10,bounds.width-48,5),new Color(accent.r,accent.g,accent.b,.35f));
+        }
         var outline=face.gameObject.AddComponent<Outline>();outline.effectDistance=new Vector2(1,-1);outline.effectColor=new Color(.32f,.22f,.49f,.8f);
-        Label("Choice",face.transform,title,new Rect(18,subtitle.Length>0?5:0,bounds.width-36,subtitle.Length>0?36:bounds.height),24,Color.white,subtitle.Length>0?TextAnchor.MiddleLeft:TextAnchor.MiddleCenter);
-        if(subtitle.Length>0)Label("Description",face.transform,subtitle,new Rect(24,44,bounds.width-48,24),17,new Color(.78f,.81f,.94f));
+        Label("Choice",face.transform,title,new Rect(32,subtitle.Length>0?5:0,bounds.width-64,subtitle.Length>0?36:bounds.height-6),24,Color.white,subtitle.Length>0?TextAnchor.MiddleLeft:TextAnchor.MiddleCenter);
+        if(subtitle.Length>0)Label("Description",face.transform,subtitle,new Rect(32,40,bounds.width-64,24),16,new Color(.78f,.81f,.94f));
         var button=face.gameObject.AddComponent<Button>();button.targetGraphic=face;
         button.navigation=new Navigation{mode=Navigation.Mode.None};var colors=button.colors;colors.normalColor=Color.white;colors.highlightedColor=new Color(1.25f,1.25f,1.2f);colors.pressedColor=new Color(.6f,.8f,.68f);colors.selectedColor=Color.white;colors.fadeDuration=.10f;button.colors=colors;
         return button;
@@ -444,7 +447,8 @@ public static class GameSetup
         Flat("Left Reading Field",title,new Rect(0,0,570,720),new Color(.035f,.015f,.10f,.18f));
         Flat("Lower Reading Field",title,new Rect(0,650,1280,70),new Color(.045f,.02f,.105f,.92f));
         var logo=Flat("Rune Rumble Title",title,new Rect(45,62,490,250),Color.white);logo.sprite=SpriteAt(ArcadeArt+"TitleLogo.png");logo.preserveAspect=true;
-        Label("Title Description",title,"READ YOUR RIVAL. CLAIM THE EDGE.",new Rect(76,310,455,42),24,white);
+        Paint("Motto Ink Band",title,new Rect(64,309,470,48),new Color(.035f,.02f,.09f,.94f));
+        Label("Title Description",title,"READ YOUR RIVAL. CLAIM THE EDGE.",new Rect(94,312,410,36),21,white);
         hud.modeButtons=new Button[4];
         hud.modeButtons[0]=MenuButton("Single Player",title,new Rect(64,382,454,76),"SINGLE PLAYER","Learn their habits. Punish their mistakes.",hud.fernColor);
         hud.modeButtons[1]=MenuButton("Multiplayer",title,new Rect(64,473,454,76),"LOCAL VERSUS","Share a keyboard or connect two controllers.",hud.emberColor);
@@ -467,16 +471,16 @@ public static class GameSetup
         hud.selectionSweeps=new Image[2];hud.selectionPortraits=new Image[2];hud.selectionNames=new Text[2];hud.selectionSkills=new Text[2];hud.selectionStates=new Text[2];
         for(int side=0;side<2;side++) {
             Color accent=side==0?hud.fernColor:hud.emberColor;
-            var panel=Box("Player "+(side+1)+" Showcase",roster,new Rect(24,110,560,490));
+            var panel=Box("Player "+(side+1)+" Showcase",roster,new Rect(24,110,560,524));
             Paint("Player Accent",panel,new Rect(30,0,400,35),accent);
             Label("Player Badge",panel,"PLAYER "+(side+1),new Rect(40,3,380,28),23,new Color(.04f,.025f,.10f),TextAnchor.MiddleCenter);
             hud.selectionSweeps[side]=Paint("Fighter Switch Sweep",panel,new Rect(25,150,470,160),new Color(accent.r,accent.g,accent.b,0));
             CenterImage(hud.selectionSweeps[side]);
             hud.selectionPortraits[side]=Flat("Full Fighter Preview",panel,new Rect(0,30,530,430),Color.white);hud.selectionPortraits[side].preserveAspect=true;
             CenterImage(hud.selectionPortraits[side]);
-            Flat("Showcase Name Shade",panel,new Rect(20,420,490,74),new Color(.025f,.018f,.07f,.9f));
-            hud.selectionNames[side]=Label("Fighter Name",panel,"",new Rect(24,420,480,48),40,white,TextAnchor.MiddleCenter);
-            hud.selectionSkills[side]=Label("Fighter Skill",panel,"",new Rect(24,466,480,24),17,muted,TextAnchor.MiddleCenter);
+            Flat("Showcase Name Shade",panel,new Rect(20,450,490,74),new Color(.025f,.018f,.07f,.9f));
+            hud.selectionNames[side]=Label("Fighter Name",panel,"",new Rect(24,450,480,48),40,white,TextAnchor.MiddleCenter);
+            hud.selectionSkills[side]=Label("Fighter Skill",panel,"",new Rect(24,496,480,24),17,muted,TextAnchor.MiddleCenter);
             hud.selectionStates[side]=Label("Ready State",panel,"SELECTING",new Rect(24,39,480,24),15,accent,TextAnchor.MiddleCenter);
         }
         hud.characterButtons=new Button[hud.game.CharacterNames.Length];
