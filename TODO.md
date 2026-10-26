@@ -1,12 +1,30 @@
 # Rune Rumble: current delivery
 
+## Midterm ink and combat revision
+
+- [x] New ink-battle menu backdrop and illustrated FIGHT SMART. FALL LAST. slogan.
+- [x] New generated artwork on every button, long in menus/pause and short in stage selection.
+- [x] Remove navigation instructions along the bottom of every HUD.
+- [x] Illustrated move cards with each fighter's name and skill imagery.
+- [x] Lower guard hold and impact stamina costs without removing grabs or parries.
+- [x] Generate and integrate six real elemental shield poses for each of eight fighters.
+- [x] Fix Volt's committed Thunder Rush and verify it hits from its intended range.
+- [x] Stop knockdown drift while allowing an opponent to push the body.
+- [x] Animate the ultimate-ready HUD and extend all ranged attacks.
+- [x] Run combat regressions, scene checks and a fresh Windows build within the 20 percent reserve.
+
+
+Completed 2026-10-27: 686 scene checks, 38 combat checks and 16 counterplay checks passed. Windows built successfully and stayed alive for an 18-second startup sample without logged script exceptions. Usage reserve was 47 percent at the final build check. Physical controller feel remains open.
+
+- [ ] Stop the completed daily heartbeat: the desktop automation tool returned Transport closed.
+
 ## Illustrated menu refresh
 
 - [x] Generate and integrate eight labeled ink buttons and seven arena plaques.
 - [x] Generate and integrate a battle backdrop with all eight active fighters.
 - [x] Replace the primary arena with a restrained pixel-art Cinder Quay.
 - [x] Remove footer shading and integrate the new artwork.
-- [ ] Inspect the final centered controls and run the Windows native startup check after resuming.
+- [x] Inspect the final centered controls and pass the 18-second Windows native startup check in v14.
 
 
 ## Ink menu and dedicated ability art
@@ -66,7 +84,7 @@ Evidence: Documentation/DUEL-VALIDATION.json, COUNTERPLAY-v9.json, FX-SLICING-v9
 
 - [x] Add closer dynamic fight framing, with automatic pullback for separation and jumps.
 
-Current delivery evidence: Documentation/DUEL-VALIDATION.json (668 passed), COUNTERPLAY-v9.json (16 passed), HUD-ICON-CENTERING-v10.json, BUILD-WINDOWS-v12.json and NATIVE-WINDOWS-v12.json. The native player was closed after its 18-second startup check.
+Current delivery evidence: Documentation/DUEL-VALIDATION.json (686 passed), COUNTERPLAY-v9.json (16 passed), MIDTERM-COMBAT-v14.json (38 passed), BUILD-WINDOWS-v14.json and NATIVE-WINDOWS-v14.json. The native player was closed after its 18-second startup check.
 
 - [x] Verify padded selection poses retain their full hat and hood details, then refresh Windows delivery.
 

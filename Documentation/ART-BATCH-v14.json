@@ -1,0 +1,82 @@
+[
+  {
+    "name": "Buttons-0",
+    "source": "C:\\Users\\johna\\.codex\\generated_images\\01a16970-d7f5-7dc2-906c-dd1f89b33816\\exec-ddd985b2-8933-494b-ac4b-60f9c0130b64.png",
+    "destination": "Documentation/Presentation-v14/Buttons-0.png"
+  },
+  {
+    "name": "Buttons-1",
+    "source": "C:\\Users\\johna\\.codex\\generated_images\\01a16970-d7f5-7dc2-906c-dd1f89b33816\\exec-950b9633-d05a-4be3-a954-2f5830b233ee.png",
+    "destination": "Documentation/Presentation-v14/Buttons-1.png"
+  },
+  {
+    "name": "Buttons-2",
+    "source": "C:\\Users\\johna\\.codex\\generated_images\\01a16970-d7f5-7dc2-906c-dd1f89b33816\\exec-1d7e444d-f5a9-4289-b6c8-d0743229e560.png",
+    "destination": "Documentation/Presentation-v14/Buttons-2.png"
+  },
+  {
+    "name": "UISurfaces",
+    "source": "C:\\Users\\johna\\.codex\\generated_images\\01a16970-d7f5-7dc2-906c-dd1f89b33816\\exec-5d89c763-f222-434b-b478-8da11686b404.png",
+    "destination": "Documentation/Presentation-v14/UISurfaces.png"
+  },
+  {
+    "name": "ArenaNames",
+    "source": "C:\\Users\\johna\\.codex\\generated_images\\01a16970-d7f5-7dc2-906c-dd1f89b33816\\exec-cd15fa19-ac6f-4cdf-a8d8-155128189bf1.png",
+    "destination": "Documentation/Presentation-v14/ArenaNames.png"
+  },
+  {
+    "name": "GuideNames",
+    "source": "C:\\Users\\johna\\.codex\\generated_images\\01a16970-d7f5-7dc2-906c-dd1f89b33816\\exec-95a14b7b-7ca6-41e6-a524-2f0c0b9a40a5.png",
+    "destination": "Documentation/Presentation-v14/GuideNames.png"
+  },
+  {
+    "name": "Slogan",
+    "source": "C:\\Users\\johna\\.codex\\generated_images\\01a16970-d7f5-7dc2-906c-dd1f89b33816\\exec-43ecbf85-53a2-492c-b4e7-792635aeb6a9.png",
+    "destination": "Documentation/Presentation-v14/Slogan.png"
+  },
+  {
+    "name": "MenuBackdrop",
+    "source": "C:\\Users\\johna\\.codex\\generated_images\\01a16970-d7f5-7dc2-906c-dd1f89b33816\\exec-ebc14b3f-bc8a-49c1-8feb-985dcaefed99.png",
+    "destination": "Documentation/Presentation-v14/MenuBackdrop.png"
+  },
+  {
+    "name": "Shield-Fern",
+    "source": "C:\\Users\\johna\\.codex\\generated_images\\01a16970-d7f5-7dc2-906c-dd1f89b33816\\exec-78acf85c-990b-47bb-9954-a5c34143b63a.png",
+    "destination": "Documentation/Presentation-v14/Shield-Fern.png"
+  },
+  {
+    "name": "Shield-Ember",
+    "source": "C:\\Users\\johna\\.codex\\generated_images\\01a16970-d7f5-7dc2-906c-dd1f89b33816\\exec-7dc286f9-ea1d-4561-90f3-398a72db01ef.png",
+    "destination": "Documentation/Presentation-v14/Shield-Ember.png"
+  },
+  {
+    "name": "Shield-Luna",
+    "source": "C:\\Users\\johna\\.codex\\generated_images\\01a16970-d7f5-7dc2-906c-dd1f89b33816\\exec-6cf3bb96-396e-458d-92dd-794e6a625c49.png",
+    "destination": "Documentation/Presentation-v14/Shield-Luna.png"
+  },
+  {
+    "name": "Shield-Bram",
+    "source": "C:\\Users\\johna\\.codex\\generated_images\\01a16970-d7f5-7dc2-906c-dd1f89b33816\\exec-4b64c6af-bcfc-4c26-9da1-6a6b4228a0ac.png",
+    "destination": "Documentation/Presentation-v14/Shield-Bram.png"
+  },
+  {
+    "name": "Shield-Zephyr",
+    "source": "C:\\Users\\johna\\.codex\\generated_images\\01a16970-d7f5-7dc2-906c-dd1f89b33816\\exec-32fe62b5-5c4a-47e3-8ad0-216dcf63517c.png",
+    "destination": "Documentation/Presentation-v14/Shield-Zephyr.png"
+  },
+  {
+    "name": "Shield-Volt",
+    "source": "C:\\Users\\johna\\.codex\\generated_images\\01a16970-d7f5-7dc2-906c-dd1f89b33816\\exec-a8807bba-4bb9-4a34-815b-0c20cb1746d4.png",
+    "destination": "Documentation/Presentation-v14/Shield-Volt.png"
+  },
+  {
+    "name": "Shield-Nyx",
+    "source": "C:\\Users\\johna\\.codex\\generated_images\\01a16970-d7f5-7dc2-906c-dd1f89b33816\\exec-531520d9-c762-4257-bafe-a5ccb802eeba.png",
+    "destination": "Documentation/Presentation-v14/Shield-Nyx.png"
+  },
+  {
+    "name": "Shield-Marin",
+    "source": "C:\\Users\\johna\\.codex\\generated_images\\01a16970-d7f5-7dc2-906c-dd1f89b33816\\exec-cc1c210a-ef7c-4882-9104-e61908412cd1.png",
+    "destination": "Documentation/Presentation-v14/Shield-Marin.png"
+  }
+]

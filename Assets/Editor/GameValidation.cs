@@ -33,6 +33,7 @@ public static class GameValidation
     public static void RunDuelFresh(){GameSetup.PrepareHUD();RunDuelSaved();}
     public static void RunDuelSaved(){AudioListener.volume=0;SessionState.SetBool("Woodland.Duel",true);Begin(true);}
     public static void RunCounterplay(){AudioListener.volume=0;SessionState.SetBool("Woodland.Counterplay",true);Begin(true);}
+    public static void RunMidtermCombat(){AudioListener.volume=0;GameSetup.PrepareHUD();SessionState.SetBool("Woodland.MidtermCombat",true);Begin(true);}
     public static void RunSaved() => RunDuelSaved();
     public static void RunHUD()
     {
@@ -136,6 +137,63 @@ public static class GameValidation
             }
         }catch(Exception exception){Complete(false,exception.ToString());}
     }
+    static void TickMidtermCombat()
+    {
+        try {
+            if(Elapsed>9)throw new Exception("Midterm combat timeout");
+            var game=WoodlandGame.Instance;if(!game)return;var a=game.players[0];var b=game.players[1];
+            int stage=SessionState.GetInt("Woodland.Stage",-1);
+            if(stage==-1 && Elapsed>.4f){game.ChooseMode(false);game.ConfirmCharacter();game.ConfirmCharacter();game.StartSelectedMatch();SetStage(0);}
+            else if(stage==0 && game.playing && string.IsNullOrEmpty(game.message)){
+                PreparePresentationPair(game,0);a.Body.position=new Vector2(-3,a.Body.position.y);b.Body.position=new Vector2(3,b.Body.position.y);SetStage(1);
+            }else if(stage==1 && SimElapsed>.4f){Check(b.SetPointerGuard(true),"Guard starts through the live hold path");SessionState.SetFloat("Woodland.GuardEnergy",b.Stamina);SetStage(2);}
+            else if(stage==2 && SimElapsed>1){
+                Check(b.Blocking && SessionState.GetFloat("Woodland.GuardEnergy",0)-b.Stamina<5.5f,"Holding guard for one second costs less than 5.5 stamina [blocking="+b.Blocking+", before="+SessionState.GetFloat("Woodland.GuardEnergy",0)+", after="+b.Stamina+", drain="+b.shieldDrain+", playing="+game.playing+"]");
+                float before=b.Stamina;Check(!b.ReceiveHit(a,1,true),"Established guard blocks the frontal punch");
+                Check(before-b.Stamina<8,"Blocking a punch costs less energy than throwing one");b.SetPointerGuard(false);
+                PreparePresentationPair(game,0);a.Body.position=new Vector2(-3,a.Body.position.y);b.Body.position=new Vector2(1,b.Body.position.y);SessionState.SetInt("Woodland.DownHits",0);SetStage(3);
+            }else if(stage==3 && SimElapsed>.26f){
+                int count=SessionState.GetInt("Woodland.DownHits",0);b.Body.position=new Vector2(1,b.Body.position.y);b.Body.linearVelocity=new Vector2(count==4?3:0,0);
+                Check(b.ReceiveHit(a,1,true),"Knockdown setup confirms hit "+count);count++;SessionState.SetInt("Woodland.DownHits",count);
+                if(count==5){Check(b.Downed,"Five confirmed hits cause knockdown");SessionState.SetFloat("Woodland.DownX",b.Body.position.x);SetStage(4);}else SetStage(3);
+            }else if(stage==4 && SimElapsed>.6f){
+                Check(Mathf.Abs(b.Body.position.x-SessionState.GetFloat("Woodland.DownX",0))<.12f,"A knocked-down fighter does not coast after the hit");
+                Check(b.ReceiveHit(a,1,true),"The rival can still shove a downed fighter");SetStage(5);
+            }else if(stage==5 && SimElapsed>.15f){
+                Check(b.Body.position.x>SessionState.GetFloat("Woodland.DownX",0)+.07f,"An explicit opponent shove moves the downed body");
+                PreparePresentationPair(game,5);a.Body.position=new Vector2(-2,a.Body.position.y);b.Body.position=new Vector2(2,b.Body.position.y);
+                typeof(Scout).GetProperty("HitsRemaining").SetValue(a,1);SetStage(6);
+            }else if(stage==6 && SimElapsed>.4f){
+                Check(game.hud.ultimatePanels[0].activeSelf,"Ultimate-ready rail is visible at one hit square");
+                SessionState.SetFloat("Woodland.ReadySweepX",game.hud.ultimatePanels[0].transform.Find("Ready Ink Sweep").GetComponent<RectTransform>().anchoredPosition.x);SetStage(60);
+            }else if(stage==60 && SimElapsed>.15f){
+                Check(Mathf.Abs(game.hud.ultimatePanels[0].transform.Find("Ready Ink Sweep").GetComponent<RectTransform>().anchoredPosition.x-SessionState.GetFloat("Woodland.ReadySweepX",0))>10,"Ultimate-ready ink highlight moves over time");
+                Capture("Documentation/RuneRumble-UltimateReady.png");Check(a.TryUltimate(),"Volt starts Thunder Rush from four units away");SetStage(7);
+            }
+            else if(stage==7 && SimElapsed>2.15f){
+                Check(b.HitsRemaining<5,"Thunder Rush reaches and damages the rival at four units");
+                Check(a.UltimateUsed && !a.UltimateActive,"Thunder Rush ends and spends its once-per-round use");
+                SessionState.SetInt("Woodland.RangeCharacter",0);PrepareMidtermRange(game,0);SetStage(8);
+            }else if(stage==8 && SimElapsed>.4f){Check(a.TrySpecial(),"Long-range cast charges for fighter "+a.CharacterIndex);SetStage(9);}
+            else if(stage==9 && SimElapsed>2.5f){
+                int character=SessionState.GetInt("Woodland.RangeCharacter",0);
+                Check(b.HitsRemaining<5,"Projectile reaches a rival 10.5 units away: "+character);
+                character++;if(character<8){SessionState.SetInt("Woodland.RangeCharacter",character);PrepareMidtermRange(game,character);SetStage(8);}
+                else {SessionState.SetInt("Woodland.RangeUltimate",0);PrepareMidtermRange(game,2);typeof(Scout).GetProperty("HitsRemaining").SetValue(a,1);SetStage(20);}
+            }else if(stage==20 && SimElapsed>.4f){Check(a.TryUltimate(),"Ranged ultimate starts for fighter "+a.CharacterIndex);SetStage(21);}
+            else if(stage==21 && ((b.HitsRemaining<5 && SimElapsed>1.75f) || SimElapsed>2.5f)){
+                Check(b.HitsRemaining<5,"Ranged ultimate reaches a rival 10.5 units away: "+a.CharacterIndex);
+                if(SessionState.GetInt("Woodland.RangeUltimate",0)==0){SessionState.SetInt("Woodland.RangeUltimate",1);PrepareMidtermRange(game,7);typeof(Scout).GetProperty("HitsRemaining").SetValue(a,1);SetStage(20);}
+                else Complete(true,"MIDTERM_COMBAT_PASS: affordable guard, stable knockdowns, Thunder Rush, eight long-range attacks and two ranged ultimates");
+            }
+        }catch(Exception error){Complete(false,error.ToString());}
+    }
+    static void PrepareMidtermRange(WoodlandGame game,int character)
+    {
+        PreparePresentationPair(game,character);
+        game.players[0].Body.position=new Vector2(-5,game.players[0].Body.position.y);
+        game.players[1].Body.position=new Vector2(5.5f,game.players[1].Body.position.y);
+    }
     static void CheckHudIconCenters(WoodlandHUD hud)
     {
         foreach(var sprite in hud.characterActionCovers) {
@@ -172,11 +230,14 @@ public static class GameValidation
                 foreach(var catalog in game.CharacterAnimationSets)foreach(string state in new[]{"Walk","Jump","Hurt","Push","Punch","Kick","Knockout","Block","DoubleJump","Special","Dash","Backstep","Victory","Ultimate","Downed","GetUp"})Check(catalog.Get(state).Length==10 && catalog.Get(state).All(sprite=>sprite),"Complete native animation "+catalog.name+" / "+state);
                 CheckLiveLabels(hud.titleMenu);
                 foreach(var button in hud.modeButtons) {
-                    Check(button.image.sprite && button.image.sprite.name.StartsWith("Menu_") && button.image.preserveAspect,"Main menu uses complete labeled button artwork without stretching");
+                    var words=button.transform.Find("Illustrated Label").GetComponent<Image>();
+                    Check(button.image.sprite && button.image.sprite.name=="LongPlate" && words.sprite && words.preserveAspect,"Main menu uses long generated ink plates and unstretched illustrated lettering");
                     Check(!button.transform.Find("Choice").gameObject.activeSelf,"Generated button text is not duplicated by a live label");
                 }
                 Check(!hud.titleMenu.transform.Find("Lower Reading Field") && !hud.characterMenu.transform.Find("Roster Footer Shade"),"Menu footer background panels are removed");
                 Check(hud.titleMenu.transform.Find("Illustrated Woodland").GetComponent<Image>().sprite.name=="BattleBackdrop","The main menu uses the eight-rival battle illustration");
+                Check(!hud.helpHint && !hud.GetComponentsInChildren<Text>(true).Any(text=>text.name.EndsWith("Footer") || text.text.Contains("ARROWS /") || text.text.Contains("LEFT / RIGHT  SELECT")),"Bottom navigation instruction text is removed from every HUD");
+                foreach(var button in hud.GetComponentsInChildren<Button>(true))if(button.transform.Find("Choice") && button.transform.Find("Choice").GetComponent<Text>().text.Length>0)Check(button.transform.Find("Illustrated Label"),"Every menu and pause option has generated label artwork: "+button.name);
                 foreach(var button in hud.GetComponentsInChildren<Button>(true)) {
                     if(!button.transform.Find("Ink Focus Stroke"))continue;
                     Check(button.image.sprite && button.image.sprite.name=="BrushBand","Menu action uses the irregular ink brush silhouette: "+button.name);
@@ -186,7 +247,10 @@ public static class GameValidation
                 Capture("Documentation/RuneRumble-Title.png");
                 Capture("Documentation/RuneRumble-Title-16x10.png",1440,900);
                 Capture("Documentation/RuneRumble-Title-Ultrawide.png",1920,800);
-                hud.modeButtons[1].onClick.Invoke();Check(game.Screen==WoodlandGame.MenuScreen.Characters,"Saved local-versus button opens roster");SetStage(-2);
+                hud.modeButtons[2].onClick.Invoke();SetStage(-7);
+            }else if(stage==-7 && Elapsed>.4f){
+                Check(game.Screen==WoodlandGame.MenuScreen.Settings,"Generated settings button opens settings");CheckLiveLabels(hud.settingsMenu);Capture("Documentation/RuneRumble-Settings.png");
+                hud.settingsBackButton.onClick.Invoke();hud.modeButtons[1].onClick.Invoke();Check(game.Screen==WoodlandGame.MenuScreen.Characters,"Saved local-versus button opens roster");SetStage(-2);
             } else if(stage==-2 && Elapsed>.6f) {
                 CheckLiveLabels(hud.characterMenu);Capture("Documentation/RuneRumble-CharacterSelect.png");
                 Capture("Documentation/RuneRumble-CharacterSelect-16x10.png",1440,900);
@@ -273,6 +337,7 @@ public static class GameValidation
             } else if(stage==2 && Elapsed>.35f) {
                 Check(Mathf.Approximately(game.RoundTimeRemaining,SessionState.GetFloat("Woodland.DuelClock",0)),"Pause freezes the timer");
                 Check(Mathf.Abs(Camera.main.orthographicSize-SessionState.GetFloat("Woodland.PauseZoom",0))<.01f,"Pause holds the current camera framing");
+                CheckLiveLabels(hud.pauseMenu);Check(hud.pauseButtons.All(button=>button.image.sprite.name=="LongPlate"),"Battle options use the long generated ink controls");Capture("Documentation/RuneRumble-Pause.png");
                 game.ResumeMatch();SetStage(3);
             } else if(stage==3 && SimElapsed>.35f) {
                 Check(game.RoundTimeRemaining<SessionState.GetFloat("Woodland.DuelClock",0)-.2f,"Timer resumes");
@@ -325,7 +390,16 @@ public static class GameValidation
             } else if(stage==16 && SimElapsed>.45f) {
                 int c=SessionState.GetInt("Woodland.PresentationCharacter",0)+1;
                 if(c<8){SessionState.SetInt("Woodland.PresentationCharacter",c);PreparePresentationPair(game,c);SetStage(11);}
-                else {PreparePresentationPair(game,7);b.Body.position=new Vector2(8.2f,game.plank.position.y+.8f);b.Body.linearVelocity=Vector2.down;SetStage(17);}
+                else {SessionState.SetInt("Woodland.ShieldCharacter",0);PreparePresentationPair(game,0);a.SetPointerGuard(true);SetStage(160);}
+            }else if(stage==160 && SimElapsed>.2f){
+                int character=SessionState.GetInt("Woodland.ShieldCharacter",0);
+                Check(a.Blocking && WoodlandEffects.Instance.ShieldFramesLoaded(character)==6,"Six real elemental shield poses display while guarding: "+character);
+                Capture("Documentation/RuneRumble-Shield-"+game.CharacterNames[character]+".png");character++;
+                hud.OpenMoveGuide();CheckLiveLabels(hud.helpPanel);Capture("Documentation/RuneRumble-Guide-"+game.CharacterNames[character-1]+".png");hud.CloseMoveGuide();game.ResumeMatch();
+                if(character<8){SessionState.SetInt("Woodland.ShieldCharacter",character);PreparePresentationPair(game,character);a.SetPointerGuard(true);SetStage(160);}
+                else {PreparePresentationPair(game,7);b.Body.gravityScale=0;b.Body.position=new Vector2(8.2f,game.plank.position.y+1.8f);b.Body.linearVelocity=Vector2.zero;SetStage(165);}
+            }else if(stage==165 && SimElapsed>.4f && Camera.main.WorldToViewportPoint(b.art.bounds.max).x<.98f){
+                b.Body.gravityScale=1;b.Body.position=new Vector2(8.2f,game.plank.position.y+.8f);b.Body.linearVelocity=Vector2.down;SetStage(17);
             } else if(stage==17 && b.RingOutFalling && SimElapsed>.2f) {
                 Check(!b.KnockedOut && !b.GetComponent<Collider2D>().enabled,"Ring-out presentation disables contact before scoring");
                 float fallingX=Camera.main.WorldToViewportPoint(b.Body.position).x;
@@ -384,6 +458,7 @@ public static class GameValidation
     static void Tick()
     {
         if (!SessionState.GetBool(Active, false) || !EditorApplication.isPlaying) return;
+        if(SessionState.GetBool("Woodland.MidtermCombat",false)){TickMidtermCombat();return;}
         if(SessionState.GetBool("Woodland.Counterplay",false)){TickCounterplay();return;}
         if(SessionState.GetBool("Woodland.Duel",false)){TickDuel();return;}
         if(SessionState.GetBool("Woodland.V8",false)){TickV8();return;}
@@ -1668,7 +1743,8 @@ public static class GameValidation
         SessionState.SetBool("Woodland.HudOnly",false);
         bool duel=SessionState.GetBool("Woodland.Duel",false);SessionState.SetBool("Woodland.Duel",false);
         bool counterplay=SessionState.GetBool("Woodland.Counterplay",false);SessionState.SetBool("Woodland.Counterplay",false);
-        File.WriteAllText(counterplay?"Documentation/COUNTERPLAY-v9.json":duel?"Documentation/DUEL-VALIDATION.json":v81?"Documentation/PLAYMODE-VALIDATION-v8.1.json":v8?"Documentation/PLAYMODE-VALIDATION-v8.json":hudOnly?"Documentation/HUD-VALIDATION-v7.1.json":meleeOnly?"Documentation/MELEE-VALIDATION-v8.1.json":"Documentation/PLAYMODE-VALIDATION-v7.json", JsonUtility.ToJson(report, true));
+        bool midterm=SessionState.GetBool("Woodland.MidtermCombat",false);SessionState.SetBool("Woodland.MidtermCombat",false);
+        File.WriteAllText(midterm?"Documentation/MIDTERM-COMBAT-v14.json":counterplay?"Documentation/COUNTERPLAY-v9.json":duel?"Documentation/DUEL-VALIDATION.json":v81?"Documentation/PLAYMODE-VALIDATION-v8.1.json":v8?"Documentation/PLAYMODE-VALIDATION-v8.json":hudOnly?"Documentation/HUD-VALIDATION-v7.1.json":meleeOnly?"Documentation/MELEE-VALIDATION-v8.1.json":"Documentation/PLAYMODE-VALIDATION-v7.json", JsonUtility.ToJson(report, true));
         if (success) Debug.Log(status);else Debug.LogError(status);
         EditorApplication.isPlaying = false;
         if (SessionState.GetBool("Woodland.ValidationExit", false)) EditorApplication.delayCall += () => EditorApplication.Exit(success ? 0 : 1);

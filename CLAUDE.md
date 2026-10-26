@@ -7,3 +7,5 @@ Menu buttons are built in GameSetup, then bound in WoodlandHUD.Awake. UnityEvent
 GameSetup.Prepare rebuilds the scene. GameValidation.Run and GameValidation.RunSaved both test the saved scene. Pass -silent-test to keep speaker output muted. The native Windows build uses GameSetup.BuildWindows.
 
 The current roster preparation tool uses Assets/Art/CharactersRework/Fern/Walk/01.png.meta as its import template. Keep this path current when cleaning legacy art. Offline art tools need checking as well as Unity scene dependencies.
+
+PrepareHUD must record edited Scout prefab-instance properties with PrefabUtility.RecordPrefabInstancePropertyModifications. The midterm guard probe found the old serialized 14-per-second drain returning after scene reload despite a code default of 3. Keep the Fern and Ember prefab defaults in step with saved scene overrides.

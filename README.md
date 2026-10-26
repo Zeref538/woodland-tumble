@@ -1,6 +1,6 @@
 # Rune Rumble
 
-A local 2D ring-out fighter for Unity 6000.5.10f1 with eight detailed pixel-art fighters and six grounded arenas. The interface combines painted arcade panels with character-colored ink effects.
+A local 2D ring-out fighter for Unity 6000.5.10f1 with eight detailed pixel-art fighters and six grounded arenas. The interface uses illustrated black-ink controls with character-colored ink effects.
 
 ![Main menu](Documentation/RuneRumble-Title.png)
 
@@ -10,7 +10,7 @@ Five confirmed hits knock a fighter down for three seconds. Push them into an op
 
 After 99 seconds, both holes widen and the safe floor shrinks until someone falls. First to three rounds wins. There is no balance mode or online multiplayer.
 
-Punches start quickly. Kicks take longer. A missed or blocked attack leaves recovery time when the rival can punish it. Only confirmed punch, punch, kick earns the finisher; repeated punches, misses and blocked hits cannot build it. Guard faces forward, fresh guards can parry, and grabs counter guarding. The CPU responds to sustained pressure and exposed recovery.
+Punches start quickly. Kicks take longer. A missed or blocked attack leaves recovery time when the rival can punish it. Only confirmed punch, punch, kick earns the finisher; repeated punches, misses and blocked hits cannot build it. Guard faces forward, costs 3 stamina per second, and displays a six-frame elemental shield. Fresh guards can parry, and grabs counter guarding. Ranged specials travel up to 14.4 world units. A moving ink highlight marks a ready ultimate. The CPU responds to sustained pressure and exposed recovery.
 
 ## Play
 
@@ -43,7 +43,7 @@ Character selection uses detailed pixel-art poses with a four-pose breathing loo
 
 ![Fighter select](Documentation/RuneRumble-CharacterSelect.png)
 
-The arenas are Lantern Crossroads, Moonlit Lake, Ember Grove, Skyward Ruins, Stormglass Causeway and Hollowroot Cistern. Scenery, fixed collision, manholes, fighters, effects and HUD remain separate layers.
+The arenas are Cinder Quay, Moonlit Lake, Ember Grove, Skyward Ruins, Stormglass Causeway and Hollowroot Cistern. Scenery, fixed collision, manholes, fighters, effects and HUD remain separate layers.
 
 The camera moves closer for large fighters and pulls back for separation, jumps and edge falls. Physical collision shapes keep their existing dimensions.
 
@@ -58,11 +58,12 @@ Use Unity batch mode with `-projectPath` pointing to this folder and `-executeMe
 - `GameSetup.Prepare`: rebuild the scene from the current art and catalogs.
 - `GameValidation.RunDuelSaved`: test the saved scene and capture the current presentation.
 - `GameValidation.RunCounterplay`: test recovery, guarding and confirmed combo routes.
+- `GameValidation.RunMidtermCombat`: test guard costs, knockdown drift, Volt rush and long-range hits.
 - `GameValidation.RunDuelFresh`: rebuild the current HUD and verify the saved scene.
 - `GameSetup.BuildWindows`: build the Windows player.
 
 Add `-silent-test` for muted verification and `-logFile` for a log. Use `-quit` with Prepare and BuildWindows. The validation methods close Unity themselves after writing their JSON reports.
 
-Current saved-scene verification passed 668 checks; counterplay passed 16 checks. The Windows player completed an 18-second startup check with no logged script exceptions. These checks do not replace a physical two-player/controller playtest. See [build evidence](Documentation/BUILD-WINDOWS-v12.json) and [TODO.md](TODO.md). Historical v7/v8 reports describe earlier rules and art, not this version. The approved design and import calibrations live in [DESIGN.md](DESIGN.md) and [art direction](Documentation/ART-DIRECTION.md).
+Current saved-scene verification passed 686 checks; counterplay passed 16 checks. The midterm combat fixture passed 38 checks, including all eight projectiles against targets 10.5 world units away, both ranged ultimates, Volt's four-unit rush, guard stamina and knockdown movement. See [current delivery evidence](Documentation/DELIVERY-v14.json) and [TODO.md](TODO.md). These checks do not replace a physical two-player/controller playtest. Historical reports describe earlier art and rules. The design and import calibrations live in [DESIGN.md](DESIGN.md) and [art direction](Documentation/ART-DIRECTION.md).
 
 The original Rumble Display, Rumble Signal and Rumble Read typefaces cover headers, subheaders/numbers and body text. Their editable vector source is Tools/create_rumble_fonts.py.

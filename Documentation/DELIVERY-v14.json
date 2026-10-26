@@ -1,0 +1,48 @@
+{
+  "verifiedAt": "2026-10-26T22:15:58.244508+00:00",
+  "sceneChecks": 686,
+  "midtermCombatChecks": 38,
+  "counterplayChecks": 16,
+  "allPassed": true,
+  "art": {
+    "sourceImages": 16,
+    "illustratedButtonLabels": 17,
+    "uiAssets": 37,
+    "shieldFrames": 48,
+    "menuBackdrops": 1
+  },
+  "gameplay": {
+    "guardStaminaPerSecond": 3,
+    "blockedDamageStaminaFactor": 0.3,
+    "projectileRangeWorldUnits": 14.4,
+    "measuredProjectileTargetDistance": 10.5,
+    "ordinaryProjectilesTested": 8,
+    "rangedUltimatesTested": 2,
+    "voltRushTargetDistance": 4
+  },
+  "native": {
+    "sampleSeconds": 18,
+    "aliveAfterSample": true,
+    "verifiedExecutable": true,
+    "workingSetBytes": 1224200192,
+    "scriptDomainInitialized": true,
+    "loggedExceptions": 0,
+    "closedAfterTest": true
+  },
+  "visualInspection": [
+    "title: all eight faces visible",
+    "settings: generated labels and live values contained",
+    "pause: heading inside frame and five generated controls",
+    "move list: body fits inside ink frame",
+    "all eight six-pose shield sources",
+    "Volt shield in game",
+    "moving ultimate-ready ink rail"
+  ],
+  "usageReserveAtFinalBuildPercent": 47,
+  "limitations": [
+    "Physical two-controller feel requires a human playtest.",
+    "Previously blocked unused Corin/font cleanup remains untouched.",
+    "Automation deletion failed: desktop tool transport closed."
+  ],
+  "shutdownPerformed": false
+}

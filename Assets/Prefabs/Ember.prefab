@@ -240,7 +240,7 @@ MonoBehaviour:
   acceleration: 28
   airAcceleration: 8
   shieldCapacity: 100
-  shieldDrain: 14
+  shieldDrain: 3
   shieldRecovery: 25
   parryWindow: 0.12
   dashCooldown: 0.85

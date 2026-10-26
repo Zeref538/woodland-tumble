@@ -152,6 +152,7 @@ public static class GameSetup
         if(!game)throw new System.Exception("Saved game scene is missing its game component.");
         PrepareSelectionArtwork();
         game.arenaNames[0]="CINDER QUAY";
+        foreach(var fighter in game.players){fighter.shieldDrain=3;PrefabUtility.RecordPrefabInstancePropertyModifications(fighter);}
         game.CharacterNames[7]="Marin";game.SkillNames[7]="Tide Surge";
         game.SkillDescriptions[7]="A tide surge drives rivals back. Last-square ultimate: Undertow.";
         game.CharacterColors[7]=new Color(.18f,.84f,1);
@@ -179,6 +180,8 @@ public static class GameSetup
         ImportSprite(ArcadeArt+"BattleBackdrop.png",100);
         ImportSprite(ArcadeArt+"Maps/Forest.png",100);
         foreach(var file in Directory.GetFiles("Assets/Art/UI/MenuV13","*.png"))ImportSprite(file.Replace('\\','/'),100);
+        foreach(var file in Directory.GetFiles("Assets/Art/UI/InkV14","*.png"))ImportSprite(file.Replace('\\','/'),100);
+        foreach(var file in Directory.GetFiles("Assets/Resources/Art/ElementShieldsV14","*.png",SearchOption.AllDirectories))ImportSprite(file.Replace('\\','/'),256);
         CreateActionGlyphs();CreateStageMask();
     }
     static void ImportSprite(string path, float ppu, Vector2? pivot = null, Vector4? border = null)
@@ -352,7 +355,9 @@ public static class GameSetup
             for(int j=0;j<3;j++){hud.roundPips[i*3+j]=Flat("Round "+(j+1),plate,new Rect(i==0?516+j*19:18+j*19,106,11,11),accent);hud.roundPips[i*3+j].rectTransform.localRotation=Quaternion.Euler(0,0,45);}
             hud.deviceText[i]=Label("Input Device",plate,"KEYBOARD",new Rect(meterX,130,452,24),16,new Color(.84f,.91f,.85f),side);
             var ultimatePanel=Box("Ultimate Ready Callout",plate,new Rect(0,160,410,34));
-            Flat("Ultimate Rail",ultimatePanel,new Rect(0,0,410,34),new Color(.09f,.045f,.18f,.92f));
+            ultimatePanel.gameObject.AddComponent<RectMask2D>();
+            var readyRail=Flat("Ultimate Rail",ultimatePanel,new Rect(0,0,410,34),new Color(.09f,.045f,.18f,.92f));readyRail.sprite=SpriteAt("Assets/Art/UI/InkV14/LongPlate.png");
+            var readySweep=Flat("Ready Ink Sweep",ultimatePanel,new Rect(-110,0,110,34),new Color(accent.r,accent.g,accent.b,.5f));readySweep.sprite=SpriteAt("Assets/Art/UI/InkV14/ReadyRail.png");
             hud.ultimateLabels[i]=Label("Ultimate State",ultimatePanel,"",new Rect(7,3,396,28),15,new Color(1,.87f,.52f),TextAnchor.MiddleCenter);hud.ultimatePanels[i]=ultimatePanel.gameObject;
             var cutin=Box("Ultimate Character Cut-in",match,new Rect(i==0?35:925,178,320,270));
             var cutinGroup=cutin.gameObject.AddComponent<CanvasGroup>();cutinGroup.interactable=false;cutinGroup.blocksRaycasts=false;
@@ -390,23 +395,23 @@ public static class GameSetup
             var comboOutline=hud.statusText[i].gameObject.AddComponent<Outline>();comboOutline.effectColor=new Color(.015f,.035f,.04f,1);comboOutline.effectDistance=new Vector2(1,-1);
         }
         var footer=Flat("Quiet Controls Strip",match,new Rect(0,0,210,30),new Color(ink.r,ink.g,ink.b,.5f));footer.rectTransform.anchorMin=footer.rectTransform.anchorMax=new Vector2(.5f,0);footer.rectTransform.pivot=new Vector2(.5f,0);footer.rectTransform.anchoredPosition=new Vector2(0,7);
-        hud.helpHint=Label("Help Hint",match,"MENU  [ESC]",new Rect(0,0,210,22),14,new Color(.82f,.87f,.82f),TextAnchor.MiddleCenter);
-        var hintRect=hud.helpHint.rectTransform;hintRect.anchorMin=hintRect.anchorMax=new Vector2(.5f,0);hintRect.pivot=Vector2.one*.5f;hintRect.anchoredPosition=new Vector2(0,23);
+        hud.helpHint=null;
         var banner = new GameObject("Round Announcement",typeof(RectTransform)).GetComponent<RectTransform>();banner.SetParent(match,false);banner.anchorMin=banner.anchorMax=Vector2.one*.5f;banner.pivot=Vector2.one*.5f;banner.sizeDelta=new Vector2(520,100);banner.anchoredPosition=new Vector2(0,130);
         Paint("Announcement Backing",banner,new Rect(0,0,520,100),new Color(.075f,.035f,.16f,.98f));Flat("Announcement Rule",banner,new Rect(160,0,200,2),gold);
         hud.bannerPanel=banner.gameObject;hud.bannerText=Label("Announcement",banner,"GET READY",new Rect(10,8,500,84),30,white,TextAnchor.MiddleCenter);banner.gameObject.SetActive(false);
         var help = new GameObject("F1 Controls Overlay",typeof(RectTransform)).GetComponent<RectTransform>();help.SetParent(root.transform,false);help.anchorMin=help.anchorMax=Vector2.one*.5f;help.pivot=Vector2.one*.5f;help.sizeDelta=new Vector2(1140,636);
-        Flat("Guide Surface",help,new Rect(0,0,1140,636),new Color(.02f,.045f,.055f,1));Flat("Guide Rule",help,new Rect(32,22,1076,2),gold);
-        Label("Help Heading",help,"MOVE LIST",new Rect(36,30,800,40),28,white);
-        Label("Guide Subtitle",help,"Your selected rivals. Their moves and counterplay.",new Rect(36,72,1000,25),17,new Color(.72f,.8f,.75f));
-        Flat("Guide Divider",help,new Rect(570,112,1,450),new Color(.22f,.32f,.32f));
+        Flat("Guide Surface",help,new Rect(0,0,1140,636),new Color(.013f,.015f,.025f,.98f));
+        var guideHeading=Flat("Help Heading",help,new Rect(36,22,500,60),Color.white);guideHeading.sprite=SpriteAt("Assets/Art/UI/InkV14/Button_MOVE_LIST.png");guideHeading.preserveAspect=true;CenterImage(guideHeading);
+        hud.guideTitleArt=game.CharacterNames.Select(name=>SpriteAt("Assets/Art/UI/InkV14/Guide_"+name+".png")).ToArray();
         for(int i=0;i<2;i++){
             float x=36+i*566;
-            hud.guideNames[i]=Label("Guide Scout",help,"",new Rect(x,111,500,30),22,i==0?hud.fernColor:hud.emberColor);
-            hud.controlsText[i]=Label("Move Explanations",help,"",new Rect(x,152,500,425),17,white,TextAnchor.UpperLeft);hud.controlsText[i].supportRichText=true;
+            var card=Flat("Illustrated Move Card",help,new Rect(x-14,96,532,480),Color.white);card.sprite=SpriteAt("Assets/Art/UI/InkV14/GuideFrame.png");
+            hud.guideNames[i]=Label("Guide Scout",help,"",new Rect(x,111,40,30),20,i==0?hud.fernColor:hud.emberColor);
+            hud.guideTitles[i]=Flat("Fighter Move Header",help,new Rect(x+40,103,260,67),Color.white);hud.guideTitles[i].preserveAspect=true;CenterImage(hud.guideTitles[i]);
+            for(int action=0;action<4;action++){var icon=Flat("Guide Action Illustration",help,new Rect(x+308+action*48,114,44,44),Color.white);icon.preserveAspect=true;hud.guideActionImages[i*4+action]=icon;}
+            hud.controlsText[i]=Label("Move Explanations",help,"",new Rect(x+40,196,420,340),16,white,TextAnchor.UpperLeft);hud.controlsText[i].supportRichText=true;
         }
         hud.guideCloseButton=MenuButton("Close Move List",help,new Rect(870,580,234,42),"BACK","",gold);
-        Label("Guide Footer",help,"ESC / OPTIONS / MENU: back     EAST BUTTON: back",new Rect(36,590,810,25),14,new Color(.72f,.8f,.75f));
         hud.helpPanel=help.gameObject;help.gameObject.SetActive(false);
 
         CreateMenus(hud,root.transform,body,pixel);
@@ -425,12 +430,14 @@ public static class GameSetup
     static Button MenuButton(string name,Transform parent,Rect bounds,string title,string subtitle,Color accent)
     {
         bool card=title.Length==0;
-        var painted=card?null:SpriteAt("Assets/Art/UI/MenuV13/Menu_"+title.Replace(' ','_')+".png");
+        var painted=card?null:SpriteAt("Assets/Art/UI/InkV14/Button_"+title.Replace(' ','_')+".png");
+        if(!card && !painted)throw new System.Exception("Missing illustrated button: "+title);
         var face=Flat(name,parent,bounds,new Color(.11f,.065f,.23f,.98f));face.raycastTarget=true;
-        if(painted){face.sprite=painted;face.color=Color.white;face.preserveAspect=true;CenterImage(face);}
-        else if(!card) {
-            face.sprite=SpriteAt(ArcadeArt+"BrushBand.png");
-            Paint("Ink Focus Stroke",face.transform,new Rect(24,bounds.height-10,bounds.width-48,5),new Color(accent.r,accent.g,accent.b,.35f));
+        if(painted){
+            face.sprite=SpriteAt("Assets/Art/UI/InkV14/"+(parent.name=="Stage Select"?"ShortPlate":"LongPlate")+".png");face.color=Color.white;CenterImage(face);
+            bool setting=name.StartsWith("Toggle") || name=="Cycle Effects";
+            var words=Flat("Illustrated Label",face.transform,new Rect(16,4,bounds.width-(setting?170:32),bounds.height-8),Color.white);words.sprite=painted;words.preserveAspect=true;CenterImage(words);
+            if(setting)Label("Setting Value",face.transform,"",new Rect(bounds.width-145,0,120,bounds.height),21,Color.white,TextAnchor.MiddleCenter);
         }
         var outline=face.gameObject.AddComponent<Outline>();outline.effectDistance=new Vector2(1,-1);outline.effectColor=new Color(.32f,.22f,.49f,.8f);
         var choice=Label("Choice",face.transform,title,new Rect(32,subtitle.Length>0?5:0,bounds.width-64,subtitle.Length>0?36:bounds.height-6),24,Color.white,subtitle.Length>0?TextAnchor.MiddleLeft:TextAnchor.MiddleCenter);
@@ -452,15 +459,12 @@ public static class GameSetup
         MenuBackdrop("Illustrated Woodland",title,ArcadeArt+"BattleBackdrop.png");
         Flat("Left Reading Field",title,new Rect(0,0,570,720),new Color(.035f,.015f,.10f,.18f));
         var logo=Flat("Rune Rumble Title",title,new Rect(34,42,330,174),Color.white);logo.sprite=SpriteAt(ArcadeArt+"TitleLogo.png");logo.preserveAspect=true;
-        Paint("Motto Ink Band",title,new Rect(64,309,470,48),new Color(.035f,.02f,.09f,.94f));
-        Label("Title Description",title,"READ YOUR RIVAL. CLAIM THE EDGE.",new Rect(94,312,410,36),21,white);
+        var slogan=Flat("Illustrated Slogan",title,new Rect(32,274,330,64),Color.white);slogan.sprite=SpriteAt("Assets/Art/UI/InkV14/Slogan.png");slogan.preserveAspect=true;CenterImage(slogan);
         hud.modeButtons=new Button[4];
-        hud.modeButtons[0]=MenuButton("Single Player",title,new Rect(64,366,454,94),"SINGLE PLAYER","",hud.fernColor);
-        hud.modeButtons[1]=MenuButton("Multiplayer",title,new Rect(64,474,454,94),"LOCAL VERSUS","",hud.emberColor);
-        hud.modeButtons[2]=MenuButton("Settings",title,new Rect(76,587,195,58),"SETTINGS","",brass);
-        hud.modeButtons[3]=MenuButton("Exit",title,new Rect(291,587,195,58),"EXIT","",brass);
-        Label("Title Footer",title,"ARROWS / STICK  choose     ENTER / SOUTH  confirm",new Rect(76,669,670,27),15,muted);
-        Label("Title Audio Hint",title,"M  mute     - / +  volume",new Rect(890,669,310,27),15,muted,TextAnchor.MiddleRight);
+        hud.modeButtons[0]=MenuButton("Single Player",title,new Rect(32,354,330,86),"SINGLE PLAYER","",hud.fernColor);
+        hud.modeButtons[1]=MenuButton("Multiplayer",title,new Rect(32,450,330,86),"LOCAL VERSUS","",hud.emberColor);
+        hud.modeButtons[2]=MenuButton("Settings",title,new Rect(32,552,330,52),"SETTINGS","",brass);
+        hud.modeButtons[3]=MenuButton("Exit",title,new Rect(32,616,330,52),"EXIT","",brass);
 
         hud.ruleButtons=new Button[0];
 
@@ -503,17 +507,16 @@ public static class GameSetup
         hud.characterDetail=Label("Selected Scout Detail",roster,"",new Rect(606,522,610,70),18,white,TextAnchor.MiddleCenter);
         hud.characterBackButton=MenuButton("Back From Scouts",roster,new Rect(40,628,170,52),"BACK","",brass);
         hud.confirmCharacterButton=MenuButton("Confirm Scout",roster,new Rect(1000,620,240,64),"LOCK IN","",hud.fernColor);
-        Label("Roster Footer",roster,"ARROWS / WASD  SELECT    ENTER / SOUTH  LOCK IN",new Rect(250,638,720,30),16,muted,TextAnchor.MiddleCenter);
 
         var maps=MenuLayer("Stage Select",menu);hud.mapMenu=maps.gameObject;
         MenuBackdrop("Rune Hall",maps,ArcadeArt+"BattleBackdrop.png");
         maps.Find("Rune Hall").GetComponent<Image>().color=new Color(.28f,.25f,.35f);
         Flat("Stage Scrim",maps,new Rect(0,0,1280,720),new Color(.04f,.018f,.10f,.38f));
-        var stageHeading=Flat("Stage Heading",maps,new Rect(290,0,700,104),Color.white);stageHeading.sprite=SpriteAt("Assets/Art/UI/MenuV13/ArenaHeading.png");stageHeading.preserveAspect=true;CenterImage(stageHeading);
+        var stageHeading=Flat("Stage Heading",maps,new Rect(290,0,700,104),Color.white);stageHeading.sprite=SpriteAt("Assets/Art/UI/InkV14/ArenaHeading.png");stageHeading.preserveAspect=true;CenterImage(stageHeading);
         hud.modeText=Label("Match Type",maps,"",new Rect(40,109,1200,25),16,brass,TextAnchor.MiddleCenter);
         hud.mapPreview=null;
         hud.mapButtons=new Button[hud.game.backgrounds.Length];
-        var arenaNamePlaques=Enumerable.Range(0,hud.game.backgrounds.Length).Select(i=>SpriteAt("Assets/Art/UI/MenuV13/Arena_"+i+".png")).ToArray();
+        var arenaNamePlaques=Enumerable.Range(0,hud.game.backgrounds.Length).Select(i=>SpriteAt("Assets/Art/UI/InkV14/Arena_"+i+".png")).ToArray();
         for(int j=0;j<hud.mapButtons.Length;j++) {
             var card=MenuButton("Select "+hud.game.arenaNames[j],maps,new Rect(25+j*204,144,210,420),"","",brass);
             card.image.sprite=SpriteAt("Assets/Art/UI/StageMask.png");card.gameObject.AddComponent<Mask>().showMaskGraphic=true;
@@ -526,7 +529,6 @@ public static class GameSetup
         hud.mapDescription=Label("Stage Description",maps,"",new Rect(130,589,1020,29),18,muted,TextAnchor.MiddleCenter);
         hud.backButton=MenuButton("Back From Atlas",maps,new Rect(40,641,170,52),"BACK","",brass);
         hud.startButton=MenuButton("Begin Match",maps,new Rect(1000,633,240,64),"FIGHT","",hud.fernColor);
-        Label("Atlas Footer",maps,"LEFT / RIGHT  SELECT    ENTER / SOUTH  FIGHT",new Rect(240,652,730,26),16,muted,TextAnchor.MiddleCenter);
 
         var settings=MenuLayer("Settings",menu);hud.settingsMenu=settings.gameObject;
         MenuBackdrop("Settings Woodland",settings,ArcadeArt+"TitleBackdrop.png");Flat("Settings Reading Field",settings,new Rect(0,0,1280,720),new Color(.015f,.035f,.035f,.94f));
@@ -539,15 +541,13 @@ public static class GameSetup
         hud.settingsButtons[3]=MenuButton("Toggle Camera Shake",settings,new Rect(286,349,700,60),"CAMERA SHAKE","",brass);
         hud.settingsButtons[4]=MenuButton("Cycle Effects",settings,new Rect(286,431,700,60),"EFFECTS QUALITY","",brass);
         hud.settingsBackButton=MenuButton("Back From Settings",settings,new Rect(286,545,200,55),"BACK","",brass);
-        Label("Settings Footer",settings,"UP / DOWN  choose     ENTER / SOUTH  change     ESC / EAST  back",new Rect(286,641,730,32),15,muted);
         var pause=MenuLayer("Paused Match",canvas);hud.pauseMenu=pause.gameObject;
         Flat("Pause Scrim",pause,new Rect(0,0,1280,720),new Color(.01f,.025f,.025f,.8f));
         var pauseSheet=Box("Pause Sheet",pause,new Rect(410,76,460,568));
-        Flat("Pause Surface",pauseSheet,new Rect(0,0,460,568),new Color(.026f,.06f,.057f));Flat("Pause Fine Rule",pauseSheet,new Rect(32,22,396,1),brass);
-        Label("Pause Heading",pauseSheet,"TAKE A BREATHER",new Rect(32,42,396,48),30,white,TextAnchor.MiddleCenter);
+        var pauseSurface=Flat("Pause Surface",pauseSheet,new Rect(0,0,460,568),Color.white);pauseSurface.sprite=SpriteAt("Assets/Art/UI/InkV14/GuideFrame.png");
+        Label("Pause Heading",pauseSheet,"TAKE A BREATHER",new Rect(32,78,396,34),26,white,TextAnchor.MiddleCenter);
         hud.pauseButtons=new Button[5];string[] choices={"RESUME","REMATCH","CHOOSE MAP","MAIN MENU","MOVE LIST"};
         for(int j=0;j<5;j++)hud.pauseButtons[j]=MenuButton(choices[j],pauseSheet,new Rect(36,113+j*77,388,60),choices[j],"",brass);
-        Label("Pause Footer",pauseSheet,"UP / DOWN  choose     ENTER / SOUTH  confirm",new Rect(20,524,420,26),14,muted,TextAnchor.MiddleCenter);
         pause.gameObject.SetActive(false);hud.RefreshMenu();
     }
     static void CreateStageMask()

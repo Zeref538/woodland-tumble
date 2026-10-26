@@ -1,5 +1,7 @@
 # Shared art direction
 
+Midterm revision: INKCLASH. Broad black/navy ink, warm ivory lettering, sparse cyan/vermilion accents, no ornamental flames around UI. All static menu and pause labels use generated artwork. The new slogan is FIGHT SMART. FALL LAST. Character move headers and six-frame real elemental shields share each fighter's palette. Dark underpainting sits beneath colored attack effects for a printed ink contour. Bottom navigation instructions are removed.
+
 The approved combination is Arcade Aura interface plus Ink & Motion effects. DESIGN.md governs the result; the two reference boards are in Documentation/Design-Samples.
 
 Static menu buttons, the arena heading and arena-name plaques now include their lettering in the illustrated bitmap, as requested. Changing settings, descriptions and input hints remain live text. Remove footer background panels. Use the eight-rival battle backdrop behind the front end, with dark exposure behind roster and stage cards. Cinder Quay is dry, muted brick-and-stone scenery with two small lamps, replacing the bright primary arena.

@@ -62,7 +62,8 @@ public class Scout : MonoBehaviour
     public float MovementInput => axis;
     [Header("Defense and aerial combat")]
     public float shieldCapacity = 100;
-    public float shieldDrain = 14;
+    public float shieldDrain = 3;
+    public const float ProjectileRange=14.4f;
     public float shieldRecovery = 25;
     public float parryWindow = .12f;
     public float dashCooldown = .85f;
@@ -262,7 +263,7 @@ public class Scout : MonoBehaviour
         if (Blocking) {
             Shield = Mathf.Max(0, Shield - shieldDrain * Time.deltaTime);
             if (Shield <= 0) BreakGuard();
-            else if (Time.time >= nextWard) { nextWard = Time.time + .07f; WoodlandEffects.Instance?.Ward(Body.position, face, Element, Shield / shieldCapacity); }
+            else if (Time.time >= nextWard) { nextWard = Time.time + .07f; WoodlandEffects.Instance?.Ward(Body.position, face, Element, Shield / shieldCapacity,CharacterIndex); }
         } else if (!Charging && action==0 && Time.time >= shieldBrokenUntil && Time.time >= nextEnergyRegen) Shield = Mathf.Min(shieldCapacity, Shield + shieldRecovery * Time.deltaTime);
         if (Charging && Time.time >= nextWard) { nextWard = Time.time + .08f; WoodlandEffects.Instance?.ChargeAura(Body.position + Vector2.up*.15f, SkillIndex, Charge); }
         if (Charging && Charge >= 1) ReleaseSmash();
@@ -431,6 +432,7 @@ public class Scout : MonoBehaviour
         if (Body.simulated && grounded && !wasGrounded && lastVerticalSpeed < -2)
             WoodlandEffects.Instance?.Land(Body.position + Vector2.down * 1.1875f, -lastVerticalSpeed);
         lastVerticalSpeed = Body.linearVelocity.y;
+        if(Downed && grounded)Body.linearVelocity=new Vector2(Mathf.MoveTowards(Body.linearVelocity.x,0,18*Time.fixedDeltaTime),Body.linearVelocity.y);
         if (game == null || !game.playing || KnockedOut || Downed || RingOutFalling) { ClearRequests(); return; }
         if (Time.time >= hurtUntil) {
             if (action == 0 && !Charging && Time.time >= dashUntil) {
@@ -588,12 +590,12 @@ public class Scout : MonoBehaviour
         // A fixed path, visible travel and one contact let the rival jump, dodge, guard or parry it.
         var game = WoodlandGame.Instance;
         Scout other = game.players[1 - id];
-        for (int pulse = 0; pulse < 12; pulse++) {
+        for (int pulse = 0; pulse < 24; pulse++) {
             if (!game.playing || KnockedOut) yield break;
             Vector2 point = origin + Vector2.right * direction * (.6f + pulse * .6f);
             WoodlandEffects.Instance?.RangedProjectile(point,direction,skill,1);
             float forward = (other.Body.position.x - origin.x) * direction;
-            if (forward > 0 && forward <= 7.5f && Mathf.Abs(other.Body.position.x - point.x) < .65f && Mathf.Abs(other.Body.position.y - point.y) < 1.1f) {
+            if (forward > 0 && forward <= ProjectileRange+.1f && Mathf.Abs(other.Body.position.x - point.x) < .65f && Mathf.Abs(other.Body.position.y - point.y) < 1.1f) {
                 float power = skill == 0 ? .95f : skill == 1 ? 1.05f : skill == 2 ? .85f : 1.1f;
                 if(skill>=4) {
                     bool hit=SpecialHit(other,direction,power,skill==7?.5f:0,skill==6?.55f:0,skill==4?1.8f:0);
@@ -659,7 +661,22 @@ public class Scout : MonoBehaviour
         }
         var game = WoodlandGame.Instance;
         var other = game.players[1 - id];
-        if (skill == 1 || skill == 5) {
+        if(skill==5) {
+            // Commit to a visible rush. Normal ground braking must not cancel it.
+            float rushEnd=Time.time+.65f,nextContact=Time.time;int contacts=0;
+            dashUntil=rushEnd;
+            while(Time.time<rushEnd && CanAct && UltimateActive && contacts<3) {
+                Body.linearVelocity=new Vector2(direction*7,Body.linearVelocity.y);
+                Vector2 delta=other.Body.position-Body.position;
+                if(Time.time>=nextContact && delta.x*direction>-.35f && delta.x*direction<1.9f && Mathf.Abs(delta.y)<1.5f && UltimateHit(other,direction,10)) {
+                    contacts++;nextContact=Time.time+.24f;
+                    WoodlandEffects.Instance?.ComboImpact(other.Body.position,direction,5,true);
+                }
+                yield return new WaitForFixedUpdate();
+            }
+            dashUntil=Time.time;
+            if(!RingOutFalling)Body.linearVelocity=new Vector2(0,Body.linearVelocity.y);
+        } else if (skill == 1) {
             Body.AddForce(Vector2.right * direction * 2.5f, ForceMode2D.Impulse);
             for (int i = 0; i < 3; i++) {
                 Vector2 delta = other.Body.position - Body.position;
@@ -669,7 +686,7 @@ public class Scout : MonoBehaviour
             }
         } else if (skill == 2 || skill == 7) {
             Vector2 origin = Body.position;
-            for (int i = 0; i < 9; i++) {
+            for (int i = 0; i < 24; i++) {
                 Vector2 point = origin + Vector2.right * direction * (.6f + i * .6f);
                 WoodlandEffects.Instance?.Burst(point, Vector2.up, 12, Element, 2);
                 if ((other.Body.position.x - origin.x) * direction > 0 && Mathf.Abs(other.Body.position.x - point.x) < .7f && Mathf.Abs(other.Body.position.y - point.y) < 1.3f) {
@@ -767,7 +784,7 @@ public class Scout : MonoBehaviour
             bool parry = Time.time - shieldStarted <= parryWindow;
             WoodlandEffects.Instance?.GuardImpact(Body.position, face, Element, parry, false,CharacterIndex);
             if (parry) { attacker.Stagger(.4f); Shield = Mathf.Min(shieldCapacity, Shield + 8);ShowCombatCue("PARRY"); }
-            else { Shield = Mathf.Max(0, Shield - damage * .8f); Body.AddForce(Vector2.right * direction * .35f, ForceMode2D.Impulse);blockStunUntil=Time.time+.055f;nextEnergyRegen=Time.time+.65f; if (Shield <= 0) BreakGuard(); }
+            else { Shield = Mathf.Max(0, Shield - damage * .3f); Body.AddForce(Vector2.right * direction * .35f, ForceMode2D.Impulse);blockStunUntil=Time.time+.055f;nextEnergyRegen=Time.time+.65f; if (Shield <= 0) BreakGuard(); }
             return false;
         }
         bool punish=AttackRecovery,counter=AttackStartup || Charging;
@@ -805,6 +822,7 @@ public class Scout : MonoBehaviour
     IEnumerator TemporaryKnockdown()
     {
         Downed=true;recovering=false;knockedDownUntil=Time.time+knockdownDuration;
+        Body.linearVelocity=new Vector2(0,grounded?0:Mathf.Min(0,Body.linearVelocity.y));
         axis=0;ClearRequests();pointerGuard=false;Blocking=Charging=blockHeld=chargeHeld=false;
         bodyCollider.direction=CapsuleDirection2D.Horizontal;
         bodyCollider.size=new Vector2(2.1f,.9f);bodyCollider.offset=new Vector2(0,-.7375f);

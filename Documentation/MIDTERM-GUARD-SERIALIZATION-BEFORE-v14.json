@@ -1,0 +1,7 @@
+{
+    "success": false,
+    "status": "System.Exception: Holding guard for one second costs less than 5.5 stamina [blocking=True, before=100, after=85.76692, drain=14, playing=True]\r\n  at GameValidation.Check (System.Boolean ok, System.String message) [0x0002e] in C:\\Users\\johna\\OneDrive\\Documents\\Portfolio\\woodland-tumble\\Assets\\Editor\\GameValidation.cs:427 \r\n  at GameValidation.TickMidtermCombat () [0x00142] in C:\\Users\\johna\\OneDrive\\Documents\\Portfolio\\woodland-tumble\\Assets\\Editor\\GameValidation.cs:151 ",
+    "checks": [
+        "Guard starts through the live hold path"
+    ]
+}

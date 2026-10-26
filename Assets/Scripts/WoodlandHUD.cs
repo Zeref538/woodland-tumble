@@ -82,6 +82,8 @@ public class WoodlandHUD : MonoBehaviour
     public Text[] selectionNames=new Text[2], selectionSkills=new Text[2], selectionStates=new Text[2];
     public Text selectedArenaName;
     public GameObject helpPanel;
+    public Image[] guideTitles=new Image[2],guideActionImages=new Image[8];
+    public Sprite[] guideTitleArt=new Sprite[8];
     public Text[] guideNames=new Text[2];
     public Button guideCloseButton;
     public bool MoveGuideOpen => helpPanel && helpPanel.activeSelf;
@@ -223,18 +225,19 @@ public class WoodlandHUD : MonoBehaviour
             string guard=ps?"HOLD CROSS / L2":xbox?"HOLD A / LT":pad!=null?"HOLD SOUTH / LEFT TRIGGER":i==0?"HOLD S":"HOLD DOWN";
             string dash=ps?"L1 / R1":xbox?"LB / RB":pad!=null?"LEFT / RIGHT SHOULDER":i==0?"Q / E":"U / P";
             string ultimate=ps?"L2 + R2":xbox?"LT + RT":pad!=null?"BOTH TRIGGERS":i==0?"H":"L";
-            string ranged=game.SkillDescriptions[Mathf.Clamp(actor.CharacterIndex,0,game.SkillDescriptions.Length-1)].Split('.')[0]+".";
-            string finisher="Five confirmed hits cause a 3s knockdown. Push a downed rival into an open edge hatch for a ring-out.";
-            if(guideNames[i]){guideNames[i].text=(i==1 && game.SoloMode?"CPU":"P"+(i+1))+"  "+actor.displayName.ToUpper();guideNames[i].color=actor.Element;}
+            if(guideNames[i]){guideNames[i].text=i==1 && game.SoloMode?"CPU":"P"+(i+1);guideNames[i].color=actor.Element;}
+            if(guideTitles[i] && actor.CharacterIndex<guideTitleArt.Length)guideTitles[i].sprite=guideTitleArt[actor.CharacterIndex];
+            for(int action=0;action<4;action++)if(guideActionImages[i*4+action])guideActionImages[i*4+action].sprite=characterActionCovers[actor.CharacterIndex*4+action];
             if(controlsText[i])controlsText[i].text=
-                "<b>"+punch+"   PUNCH</b>\n8 stamina. Start a close-range combo.\n"+
-                "<b>"+kick+"   KICK</b>\n6 stamina. Finish a string and launch.\n"+
-                "<b>"+punch+", "+punch+", "+kick+"   THREE-HIT COMBO</b>\nConfirm P, P, K to launch. Repeated punches reset the route.\n"+
-                "<b>"+jump+"   JUMP / DOUBLE JUMP</b>\n4 stamina on ground; 6 for the aerial jump.\n"+
-                "<b>"+guard+"   GUARD / PARRY</b>\nBlock, then punish. Fresh guard parries; "+(i==0?"F":"J")+" grabs guards.\n"+
-                "<b>"+dash+"   BACKDASH / FORWARD DASH</b>\n12 / 10 stamina. Backdash briefly avoids hits.\n"+
-                "<b>"+skill+"   "+actor.SkillName+"</b>\n14 stamina. 0.85s charge, then launch. "+ranged+"\n"+
-                "<b>"+ultimate+"   "+actor.UltimateName+"</b>\nOne hit square left. Once per round. "+finisher;
+                "<b>"+punch+"   PUNCH</b>   8 stamina\n"+
+                "<b>"+kick+"   KICK</b>   6 stamina\n"+
+                "<b>"+punch+", "+punch+", "+kick+"   CONFIRMED COMBO</b>\nConfirm hits to launch; whiffs do not chain.\n"+
+                "<b>"+jump+"   JUMP / DOUBLE JUMP</b>\n4 stamina, then 6 for the aerial jump.\n"+
+                "<b>"+guard+"   GUARD / PARRY</b>\n3 stamina/sec to hold; "+(i==0?"F":"J")+" grabs a guard.\n"+
+                "<b>"+dash+"   BACKSTEP / DASH</b>\n12 / 10 stamina.\n"+
+                "<b>"+skill+"   "+actor.SkillName+"</b>\n14 stamina. Charge 0.85s. Long-range shot.\n"+
+                "<b>"+ultimate+"   "+actor.UltimateName+"</b>\nOne hit square left. Once each round.\n"+
+                "Five hits knock down. Push downed rivals into a hatch.";
         }
     }
     bool menuChordUsed;
@@ -431,6 +434,10 @@ public class WoodlandHUD : MonoBehaviour
         if(visible && actionTooltips[player])actionTooltips[player].text=tip==0?"HOLD GUARD / PARRY":tip==1?"PUNCH / COMBO":tip==2?"KICK / LAUNCH":scout.SkillName.ToUpper()+"\n"+(scout.Charging?"CHARGING "+Mathf.RoundToInt(scout.Charge*100)+"%":"0.85s WIND-UP / 14 STAMINA");
         bool ultimate=scout.UltimateReady || scout.UltimateActive;
         if(ultimatePanels[player])ultimatePanels[player].SetActive(ultimate);
+        if(ultimatePanels[player]) {
+            var sweep=ultimatePanels[player].transform.Find("Ready Ink Sweep");
+            if(sweep){sweep.GetComponent<RectTransform>().anchoredPosition=new Vector2(-110+Mathf.Repeat(Time.unscaledTime*.7f+player*.3f,1)*520,0);sweep.GetComponent<Image>().color=new Color(scout.Element.r,scout.Element.g,scout.Element.b,.4f+.15f*Mathf.Sin(Time.unscaledTime*7));}
+        }
         if(ultimateLabels[player]){
             string binding=cpu?"CPU":pad==null?(player==0?"H":"L"):ps?"L2 + R2":style=="XBOX"?"LT + RT":"BOTH TRIGGERS";
             ultimateLabels[player].text=scout.UltimateActive?scout.UltimateName.ToUpper():"ULTIMATE READY: "+scout.UltimateName.ToUpper()+" ["+binding+"]";
@@ -547,13 +554,15 @@ public class WoodlandHUD : MonoBehaviour
     }
     static void SetButtonTitle(Button button,string value)
     {
-        if(!button)return;var child=button.transform.Find("Choice");if(child){var text=child.GetComponent<Text>();if(text)text.text=value;}
+        if(!button)return;
+        var state=button.transform.Find("Setting Value");if(state){int split=value.LastIndexOf('/');state.GetComponent<Text>().text=split>=0?value.Substring(split+1).Trim():value;}
+        var child=button.transform.Find("Choice");if(child){var text=child.GetComponent<Text>();if(text)text.text=value;}
     }
     static void MarkButton(Button button,bool chosen,Color accent)
     {
         if(!button) return;
         bool ink=button.transform.Find("Ink Focus Stroke");
-        bool painted=button.image.sprite && button.image.sprite.name.StartsWith("Menu_");
+        bool painted=button.transform.Find("Illustrated Label");
         button.image.color=painted?(chosen?Color.white:new Color(.87f,.87f,.94f,1)):(chosen?new Color(.20f,.12f,.35f,1):new Color(.105f,.06f,.22f,.98f));
         var outline=button.GetComponent<Outline>();if(outline)outline.effectColor=chosen?accent:new Color(.32f,.23f,.47f,.85f);
         // Choice text belongs to this button, leaving all illustration and native layout editable.

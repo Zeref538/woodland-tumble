@@ -1,0 +1,20 @@
+{
+    "success": false,
+    "status": "System.Exception: Thunder Rush reaches and damages the rival at four units\r\n  at GameValidation.Check (System.Boolean ok, System.String message) [0x0002e] in C:\\Users\\johna\\OneDrive\\Documents\\Portfolio\\woodland-tumble\\Assets\\Editor\\GameValidation.cs:427 \r\n  at GameValidation.TickMidtermCombat () [0x00505] in C:\\Users\\johna\\OneDrive\\Documents\\Portfolio\\woodland-tumble\\Assets\\Editor\\GameValidation.cs:168 ",
+    "checks": [
+        "Guard starts through the live hold path",
+        "Holding guard for one second costs less than 5.5 stamina [blocking=True, before=100, after=96.99991, drain=3, playing=True]",
+        "Established guard blocks the frontal punch",
+        "Blocking a punch costs less energy than throwing one",
+        "Knockdown setup confirms hit 0",
+        "Knockdown setup confirms hit 1",
+        "Knockdown setup confirms hit 2",
+        "Knockdown setup confirms hit 3",
+        "Knockdown setup confirms hit 4",
+        "Five confirmed hits cause knockdown",
+        "A knocked-down fighter does not coast after the hit",
+        "The rival can still shove a downed fighter",
+        "An explicit opponent shove moves the downed body",
+        "Volt starts Thunder Rush from four units away"
+    ]
+}

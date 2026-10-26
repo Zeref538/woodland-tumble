@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using System.Collections;
+using System.Linq;
 
 // Shared pool for native pixel shapes, sprite afterimages and woodland atmosphere.
 public class WoodlandEffects : MonoBehaviour
@@ -26,6 +27,8 @@ public class WoodlandEffects : MonoBehaviour
     [Header("Elemental sprite animation")]
     public Sprite[] fernSlash=new Sprite[8],emberSlash=new Sprite[8];
     readonly Sprite[][] comboHits=new Sprite[8][],comboFinishers=new Sprite[8][],brushSwings=new Sprite[8][],brushGuards=new Sprite[8][];
+    readonly Sprite[][] elementalShields=new Sprite[8][];
+    public int ShieldFramesLoaded(int character)=>character>=0&&character<8?(elementalShields[character]?.Length??0):0;
     public int AttackFramesLoaded(int character)=>character>=0&&character<8?ComboFramesLoaded(character)+(brushSwings[character]?.Length??0)+(brushGuards[character]?.Length??0):0;
     public int ComboAnimationsPlayed { get; private set; }
     public int ComboFramesLoaded(int character)=>character>=0&&character<8?(comboHits[character]?.Length??0)+(comboFinishers[character]?.Length??0):0;
@@ -97,6 +100,7 @@ public class WoodlandEffects : MonoBehaviour
         for(int character=0;character<characters.Length;character++) {
             brushSwings[character]=LoadComboFrames(characters[character],"Slash");
             brushGuards[character]=LoadComboFrames(characters[character],"Guard");
+            elementalShields[character]=Resources.LoadAll<Sprite>("Art/ElementShieldsV14/"+characters[character]).OrderBy(frame=>frame.name).ToArray();
             comboHits[character]=LoadComboFrames(characters[character],"Hit");
             comboFinishers[character]=LoadComboFrames(characters[character],"Finisher");
         }
@@ -366,6 +370,7 @@ public class WoodlandEffects : MonoBehaviour
         Light(point,tint,1.6f,.15f);
         var frames=brushSwings[Mathf.Clamp(character,0,7)];
         if(frames==null || frames.Length==0)return;
+        InkUnderpaint(frames,point,direction,.16f,1.45f*size,Vector2.right*direction*1.6f);
         int index=Emit(frames[0],point,Vector2.right*direction*1.6f,Color.white,.16f,Vector2.one*(1.45f*size),Vector2.one*(1.45f*size),0,10);
         pool[index].frames=frames;pool[index].art.flipX=direction<0;
     }
@@ -431,6 +436,7 @@ public class WoodlandEffects : MonoBehaviour
         var frames=brushSwings[Mathf.Clamp(character,0,7)];
         if(frames!=null && frames.Length>0) {
             float size=punch?1.75f:2.1f;
+            InkUnderpaint(frames,contact,facing,.23f,size,Vector2.right*facing*.22f,punch?0:-20*facing);
             int index=Emit(frames[0],contact,Vector2.right*facing*.22f,Color.white,.23f,Vector2.one*size,Vector2.one*size,0,10,punch?0:-20*facing);
             pool[index].frames=frames;pool[index].art.flipX=facing<0;
         }
@@ -468,12 +474,18 @@ public class WoodlandEffects : MonoBehaviour
         }
         return frames;
     }
+    void InkUnderpaint(Sprite[] frames,Vector2 point,float facing,float duration,float size,Vector2 velocity,float angle=0)
+    {
+        int ink=Emit(frames[0],point,velocity,new Color(.03f,.02f,.05f,.85f),duration,Vector2.one*(size*1.14f),Vector2.one*size,0,9,angle);
+        pool[ink].frames=frames;pool[ink].art.flipX=facing<0;
+    }
     public void ComboImpact(Vector2 point,float facing,int character,bool finisher)
     {
         if(character<0 || character>=8)return;
         var frames=finisher?comboFinishers[character]:comboHits[character];
         if(frames==null || frames.Length==0)return;
         float size=finisher?3.0f:2.0f;
+        InkUnderpaint(frames,point,facing,finisher?.40f:.27f,size,Vector2.right*facing*.22f);
         int index=Emit(frames[0],point,Vector2.right*facing*.22f,Color.white,finisher?.40f:.27f,Vector2.one*size,Vector2.one*size,0,11);
         pool[index].frames=frames;pool[index].art.flipX=facing<0;
         ComboAnimationsPlayed++;
@@ -491,8 +503,14 @@ public class WoodlandEffects : MonoBehaviour
         Light(point,tint,1.2f+combo*.25f);
         if (combo == 3) {KickCamera(new Vector2(facing,.2f),.13f);FreezeImpact(.055f); Pulse(point, Color.white, 2.1f,.18f); shake=Mathf.Max(shake,.11f); }
     }
-    public void Ward(Vector2 point, float facing, Color tint, float strength)
+    public void Ward(Vector2 point, float facing, Color tint, float strength,int character=0)
     {
+        var frames=elementalShields[Mathf.Clamp(character,0,7)];
+        if(frames!=null && frames.Length>0) {
+            var frame=frames[Mathf.FloorToInt(Time.time*12)%frames.Length];
+            int shield=Emit(frame,point+new Vector2(facing*.72f,.05f),Vector2.zero,new Color(1,1,1,.72f+.28f*strength),.09f,Vector2.one*2.4f,Vector2.one*2.4f,0,10);
+            pool[shield].art.flipX=facing<0;return;
+        }
         Light(point+Vector2.right*facing*.45f,tint,.9f,.12f);
         // A forward crescent leaves the back exposed and makes guard direction visible.
         for(int i=0;i<3;i++) {
@@ -630,7 +648,8 @@ public class WoodlandEffects : MonoBehaviour
                     // Marin's larger artwork shares the same feet and collision body.
                     float high=Mathf.Max(firstY+1.1875f+(first.CharacterIndex==7?.25f:0),secondY+1.1875f+(second.CharacterIndex==7?.25f:0));
                     float span=Mathf.Abs(first.Body.position.x-second.Body.position.x);
-                    float sideMargin=first.RingOutFalling || second.RingOutFalling?5.5f:2.8f;
+                    bool edgeApproach=first.RingOutFalling || second.RingOutFalling || Mathf.Max(Mathf.Abs(first.Body.position.x),Mathf.Abs(second.Body.position.x))>game.SafeFloorHalfWidth-.9f;
+                    float sideMargin=edgeApproach?5.5f:2.8f;
                     matchZoom=Mathf.Clamp(Mathf.Max(3,(span+sideMargin)/(2*cam.aspect),high-low+.25f),3,cameraZoom);
                     float imageHalfWidth=game.backgroundArt.bounds.extents.x;
                     float limit=Mathf.Max(0,imageHalfWidth-matchZoom*cam.aspect-.05f);
