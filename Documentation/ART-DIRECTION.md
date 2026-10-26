@@ -2,6 +2,8 @@
 
 The approved combination is Arcade Aura interface plus Ink & Motion effects. DESIGN.md governs the result; the two reference boards are in Documentation/Design-Samples.
 
+Static menu buttons, the arena heading and arena-name plaques now include their lettering in the illustrated bitmap, as requested. Changing settings, descriptions and input hints remain live text. Remove footer background panels. Use the eight-rival battle backdrop behind the front end, with dark exposure behind roster and stage cards. Cinder Quay is dry, muted brick-and-stone scenery with two small lamps, replacing the bright primary arena.
+
 Current refinement restores the menu's dark brush silhouettes and bright ivory text, with colored ink focus strokes. Ability buttons receive original purpose-drawn circular illustrations: guarding forearms, a punching fist, a kicking boot and a character-specific special. These illustrations are independent of combat VFX sheets. Marin's new sheets use larger heads and compact bodies to match the roster. Keep all body dimensions uniform in world space and check the new proportions beside Fern before accepting them.
 
 Use midnight purple with vivid cyan, coral pink, amber and acid lime. Normal upright sans-serif lettering, bold headings and calm high-contrast label fields and confident illustrated bands define the interface. Attack effects use broad directional ink-brush sweeps, pale contact cores, teal or the fighter's own element color, and short controlled paint fragments. Keep the detailed existing fighters and preserve their proportions. Avoid wood ornaments, crystal shards, rune glyph decoration and glossy mobile-game bevels.

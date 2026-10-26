@@ -1,5 +1,14 @@
 # Rune Rumble: current delivery
 
+## Illustrated menu refresh
+
+- [x] Generate and integrate eight labeled ink buttons and seven arena plaques.
+- [x] Generate and integrate a battle backdrop with all eight active fighters.
+- [x] Replace the primary arena with a restrained pixel-art Cinder Quay.
+- [x] Remove footer shading and integrate the new artwork.
+- [ ] Inspect the final centered controls and run the Windows native startup check after resuming.
+
+
 ## Ink menu and dedicated ability art
 
 - [x] Restore brush-edged ink menu controls with readable labels and focus feedback.

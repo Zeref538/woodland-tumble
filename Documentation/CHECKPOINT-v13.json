@@ -1,0 +1,13 @@
+{
+  "status": "Stopped at usage boundary",
+  "remainingPercentFromSessionLog": 16,
+  "usageLogTimestamp": "2026-10-26T18:00:14.362Z",
+  "sourceImages": 4,
+  "labeledButtons": 8,
+  "arenaPlaques": 7,
+  "mainArena": "CINDER QUAY",
+  "battleBackdropFighters": 8,
+  "sceneChecksBeforeFinalCentering": 644,
+  "pending": "Inspect final centered controls and perform Windows native startup check.",
+  "shutdownRequested": false
+}

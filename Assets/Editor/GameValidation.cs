@@ -171,6 +171,12 @@ public static class GameValidation
                 Check(game.roundsToWin==3 && game.roundDuration==99,"Rounds are 99 seconds, first to three");
                 foreach(var catalog in game.CharacterAnimationSets)foreach(string state in new[]{"Walk","Jump","Hurt","Push","Punch","Kick","Knockout","Block","DoubleJump","Special","Dash","Backstep","Victory","Ultimate","Downed","GetUp"})Check(catalog.Get(state).Length==10 && catalog.Get(state).All(sprite=>sprite),"Complete native animation "+catalog.name+" / "+state);
                 CheckLiveLabels(hud.titleMenu);
+                foreach(var button in hud.modeButtons) {
+                    Check(button.image.sprite && button.image.sprite.name.StartsWith("Menu_") && button.image.preserveAspect,"Main menu uses complete labeled button artwork without stretching");
+                    Check(!button.transform.Find("Choice").gameObject.activeSelf,"Generated button text is not duplicated by a live label");
+                }
+                Check(!hud.titleMenu.transform.Find("Lower Reading Field") && !hud.characterMenu.transform.Find("Roster Footer Shade"),"Menu footer background panels are removed");
+                Check(hud.titleMenu.transform.Find("Illustrated Woodland").GetComponent<Image>().sprite.name=="BattleBackdrop","The main menu uses the eight-rival battle illustration");
                 foreach(var button in hud.GetComponentsInChildren<Button>(true)) {
                     if(!button.transform.Find("Ink Focus Stroke"))continue;
                     Check(button.image.sprite && button.image.sprite.name=="BrushBand","Menu action uses the irregular ink brush silhouette: "+button.name);
@@ -212,9 +218,7 @@ public static class GameValidation
                 float bootsY=hero.rectTransform.TransformPoint(new Vector3(0,-artSize*.5f+artSize*bottomRow/texture.height,0)).y;
                 var shade=hero.transform.parent.Find("Showcase Name Shade").GetComponent<RectTransform>();
                 Check(bootsY>shade.TransformPoint(new Vector3(0,shade.rect.yMax,0)).y,"The selection nameplate sits below the visible boots");
-                var subtitle=hud.selectionSkills[1].rectTransform;
-                var footer=hud.characterMenu.transform.Find("Roster Footer Shade").GetComponent<RectTransform>();
-                Check(subtitle.TransformPoint(new Vector3(0,subtitle.rect.yMin,0)).y>footer.TransformPoint(new Vector3(0,footer.rect.yMax,0)).y,"The selection skill subtitle is above the opaque footer");
+                Check(!hud.characterMenu.transform.Find("Roster Footer Shade"),"The selection skill subtitle has no opaque footer covering it");
                 Capture("Documentation/RuneRumble-Marin-Selection.png");
                 Check(hud.selectionIdleFrames.Skip(28).Take(4).Contains(hud.selectionPortraits[1].sprite),"Marin displays its own selection animation");
                 hud.confirmCharacterButton.onClick.Invoke();hud.mapButtons[5].onClick.Invoke();SetStage(-4);
@@ -223,6 +227,8 @@ public static class GameValidation
                 CheckLiveLabels(hud.mapMenu);Capture("Documentation/RuneRumble-StageSelect.png");
                 Check(hud.mapButtons[5].GetComponent<RectTransform>().anchoredPosition.y>-138 && hud.mapButtons[5].transform.localScale.x>1.04f,"Selected stage visibly lifts and enlarges after switching");
                 Check(hud.mapButtons.Length==6 && hud.mapButtons.All(c=>c.GetComponent<UnityEngine.UI.Mask>()),"Six tall angled stage masks exist");
+                for(int index=0;index<6;index++)Check(hud.mapButtons[index].transform.Find("Arena Name").GetComponent<Image>().sprite.name=="Arena_"+index,"Arena names use dedicated illustrated plaques: "+index);
+                Check(game.arenaNames[0]=="CINDER QUAY","Cinder Quay replaces the previous primary arena");
                 Capture("Documentation/RuneRumble-StageSelect-16x10.png",1440,900);
                 Capture("Documentation/RuneRumble-StageSelect-Ultrawide.png",1920,800);
                 hud.startButton.onClick.Invoke();SetStage(0);

@@ -438,7 +438,7 @@ public class WoodlandHUD : MonoBehaviour
         }
         if(fighterPortraitRings[player]){var color=ultimate?Color.Lerp(scout.Element,new Color(1,.85f,.4f),.5f+.25f*Mathf.Sin(Time.unscaledTime*4)):scout.Element;color.a=ultimate?.95f:.7f;fighterPortraitRings[player].color=color;}
     }
-    static readonly string[] mapDescriptions={"Rain-dark streets. Elemental lamps. A crowd beyond the combat lane.","Moonstone, falling water and a silver edge.","Glowing embers. A battle under red leaves.","Ancient sky ruins. A fight above the clouds.","Stormglass towers. Open shafts guard both edges.","Ancient roots and dark cisterns. Open shafts widen after 99 seconds."};
+    static readonly string[] mapDescriptions={"A quiet service lane beside the canal, lit by two workshop lamps.","Moonstone, falling water and a silver edge.","Glowing embers. A battle under red leaves.","Ancient sky ruins. A fight above the clouds.","Stormglass towers. Open shafts guard both edges.","Ancient roots and dark cisterns. Open shafts widen after 99 seconds."};
     public void RefreshMenu()
     {
         if(!game) return;
@@ -553,14 +553,15 @@ public class WoodlandHUD : MonoBehaviour
     {
         if(!button) return;
         bool ink=button.transform.Find("Ink Focus Stroke");
-        button.image.color=chosen?new Color(.20f,.12f,.35f,1):new Color(.105f,.06f,.22f,.98f);
+        bool painted=button.image.sprite && button.image.sprite.name.StartsWith("Menu_");
+        button.image.color=painted?(chosen?Color.white:new Color(.87f,.87f,.94f,1)):(chosen?new Color(.20f,.12f,.35f,1):new Color(.105f,.06f,.22f,.98f));
         var outline=button.GetComponent<Outline>();if(outline)outline.effectColor=chosen?accent:new Color(.32f,.23f,.47f,.85f);
         // Choice text belongs to this button, leaving all illustration and native layout editable.
         var description=button.transform.Find("Description");if(description){var label=description.GetComponent<Text>();if(label)label.color=chosen?new Color(.9f,.95f,1):new Color(.78f,.81f,.94f);}
         var text=button.transform.Find("Choice");if(text){var label=text.GetComponent<Text>();if(label)label.color=new Color(1,.97f,.85f);}
-        if(ink) {
-            var stroke=button.transform.Find("Ink Focus Stroke").GetComponent<Image>();
-            stroke.color=new Color(accent.r,accent.g,accent.b,chosen?1:.25f);
+        if(ink || painted) {
+            var stroke=button.transform.Find("Ink Focus Stroke");
+            if(stroke)stroke.GetComponent<Image>().color=new Color(accent.r,accent.g,accent.b,chosen?1:.25f);
             button.transform.localScale=Vector3.Lerp(button.transform.localScale,Vector3.one*(chosen?1.025f:1),1-Mathf.Exp(-16*Time.unscaledDeltaTime));
         }
     }

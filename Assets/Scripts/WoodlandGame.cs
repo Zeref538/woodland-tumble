@@ -35,7 +35,7 @@ public class WoodlandGame : MonoBehaviour
     public SpriteRenderer backgroundArt, plankArt, sphereArt;
     public Sprite[] backgrounds = new Sprite[4], planks = new Sprite[4], spheres = new Sprite[4];
     public Sprite[] PvpBases = new Sprite[4], PvpLedges = new Sprite[4];
-    public string[] arenaNames = { "LANTERN CROSSROADS", "MOONLIT LAKE", "EMBER GROVE", "SKYWARD RUINS", "STORMGLASS CAUSEWAY", "HOLLOWROOT CISTERN" };
+    public string[] arenaNames = { "CINDER QUAY", "MOONLIT LAKE", "EMBER GROVE", "SKYWARD RUINS", "STORMGLASS CAUSEWAY", "HOLLOWROOT CISTERN" };
     public int ArenaIndex { get; private set; }
     public string ArenaName => arenaNames[ArenaIndex];
     public static readonly Color ArenaExposure=new Color(.52f,.55f,.68f,1);

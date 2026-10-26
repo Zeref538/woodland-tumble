@@ -151,7 +151,7 @@ public static class GameSetup
         var game=Object.FindAnyObjectByType<WoodlandGame>();
         if(!game)throw new System.Exception("Saved game scene is missing its game component.");
         PrepareSelectionArtwork();
-        game.arenaNames[0]="LANTERN CROSSROADS";
+        game.arenaNames[0]="CINDER QUAY";
         game.CharacterNames[7]="Marin";game.SkillNames[7]="Tide Surge";
         game.SkillDescriptions[7]="A tide surge drives rivals back. Last-square ultimate: Undertow.";
         game.CharacterColors[7]=new Color(.18f,.84f,1);
@@ -176,6 +176,9 @@ public static class GameSetup
         foreach(var file in Directory.GetFiles("Assets/Art/UI/SkillIcons","*.png",SearchOption.AllDirectories))ImportSprite(file.Replace('\\','/'),100);
         ImportSprite(ArcadeArt+"AtlasBackdrop.png",100);
         ImportSprite(ArcadeArt+"VersusEmblem.png",100);
+        ImportSprite(ArcadeArt+"BattleBackdrop.png",100);
+        ImportSprite(ArcadeArt+"Maps/Forest.png",100);
+        foreach(var file in Directory.GetFiles("Assets/Art/UI/MenuV13","*.png"))ImportSprite(file.Replace('\\','/'),100);
         CreateActionGlyphs();CreateStageMask();
     }
     static void ImportSprite(string path, float ppu, Vector2? pivot = null, Vector4? border = null)
@@ -422,14 +425,17 @@ public static class GameSetup
     static Button MenuButton(string name,Transform parent,Rect bounds,string title,string subtitle,Color accent)
     {
         bool card=title.Length==0;
+        var painted=card?null:SpriteAt("Assets/Art/UI/MenuV13/Menu_"+title.Replace(' ','_')+".png");
         var face=Flat(name,parent,bounds,new Color(.11f,.065f,.23f,.98f));face.raycastTarget=true;
-        if(!card) {
+        if(painted){face.sprite=painted;face.color=Color.white;face.preserveAspect=true;CenterImage(face);}
+        else if(!card) {
             face.sprite=SpriteAt(ArcadeArt+"BrushBand.png");
             Paint("Ink Focus Stroke",face.transform,new Rect(24,bounds.height-10,bounds.width-48,5),new Color(accent.r,accent.g,accent.b,.35f));
         }
         var outline=face.gameObject.AddComponent<Outline>();outline.effectDistance=new Vector2(1,-1);outline.effectColor=new Color(.32f,.22f,.49f,.8f);
-        Label("Choice",face.transform,title,new Rect(32,subtitle.Length>0?5:0,bounds.width-64,subtitle.Length>0?36:bounds.height-6),24,Color.white,subtitle.Length>0?TextAnchor.MiddleLeft:TextAnchor.MiddleCenter);
-        if(subtitle.Length>0)Label("Description",face.transform,subtitle,new Rect(32,40,bounds.width-64,24),16,new Color(.78f,.81f,.94f));
+        var choice=Label("Choice",face.transform,title,new Rect(32,subtitle.Length>0?5:0,bounds.width-64,subtitle.Length>0?36:bounds.height-6),24,Color.white,subtitle.Length>0?TextAnchor.MiddleLeft:TextAnchor.MiddleCenter);
+        if(painted)choice.gameObject.SetActive(false);
+        if(!painted && subtitle.Length>0)Label("Description",face.transform,subtitle,new Rect(32,40,bounds.width-64,24),16,new Color(.78f,.81f,.94f));
         var button=face.gameObject.AddComponent<Button>();button.targetGraphic=face;
         button.navigation=new Navigation{mode=Navigation.Mode.None};var colors=button.colors;colors.normalColor=Color.white;colors.highlightedColor=new Color(1.25f,1.25f,1.2f);colors.pressedColor=new Color(.6f,.8f,.68f);colors.selectedColor=Color.white;colors.fadeDuration=.10f;button.colors=colors;
         return button;
@@ -443,24 +449,23 @@ public static class GameSetup
         menu.anchorMin=menu.anchorMax=Vector2.one*.5f;menu.pivot=Vector2.one*.5f;
         menu.sizeDelta=new Vector2(1280,720);menu.anchoredPosition=Vector2.zero;
         var title=MenuLayer("Title Screen",menu);hud.titleMenu=title.gameObject;
-        MenuBackdrop("Illustrated Woodland",title,ArcadeArt+"TitleBackdrop.png");
+        MenuBackdrop("Illustrated Woodland",title,ArcadeArt+"BattleBackdrop.png");
         Flat("Left Reading Field",title,new Rect(0,0,570,720),new Color(.035f,.015f,.10f,.18f));
-        Flat("Lower Reading Field",title,new Rect(0,650,1280,70),new Color(.045f,.02f,.105f,.92f));
-        var logo=Flat("Rune Rumble Title",title,new Rect(45,62,490,250),Color.white);logo.sprite=SpriteAt(ArcadeArt+"TitleLogo.png");logo.preserveAspect=true;
+        var logo=Flat("Rune Rumble Title",title,new Rect(34,42,330,174),Color.white);logo.sprite=SpriteAt(ArcadeArt+"TitleLogo.png");logo.preserveAspect=true;
         Paint("Motto Ink Band",title,new Rect(64,309,470,48),new Color(.035f,.02f,.09f,.94f));
         Label("Title Description",title,"READ YOUR RIVAL. CLAIM THE EDGE.",new Rect(94,312,410,36),21,white);
         hud.modeButtons=new Button[4];
-        hud.modeButtons[0]=MenuButton("Single Player",title,new Rect(64,382,454,76),"SINGLE PLAYER","Learn their habits. Punish their mistakes.",hud.fernColor);
-        hud.modeButtons[1]=MenuButton("Multiplayer",title,new Rect(64,473,454,76),"LOCAL VERSUS","Share a keyboard or connect two controllers.",hud.emberColor);
-        hud.modeButtons[2]=MenuButton("Settings",title,new Rect(76,569,195,52),"SETTINGS","",brass);
-        hud.modeButtons[3]=MenuButton("Exit",title,new Rect(291,569,195,52),"EXIT","",brass);
+        hud.modeButtons[0]=MenuButton("Single Player",title,new Rect(64,366,454,94),"SINGLE PLAYER","",hud.fernColor);
+        hud.modeButtons[1]=MenuButton("Multiplayer",title,new Rect(64,474,454,94),"LOCAL VERSUS","",hud.emberColor);
+        hud.modeButtons[2]=MenuButton("Settings",title,new Rect(76,587,195,58),"SETTINGS","",brass);
+        hud.modeButtons[3]=MenuButton("Exit",title,new Rect(291,587,195,58),"EXIT","",brass);
         Label("Title Footer",title,"ARROWS / STICK  choose     ENTER / SOUTH  confirm",new Rect(76,669,670,27),15,muted);
         Label("Title Audio Hint",title,"M  mute     - / +  volume",new Rect(890,669,310,27),15,muted,TextAnchor.MiddleRight);
 
         hud.ruleButtons=new Button[0];
 
         var roster=MenuLayer("Choose Scout",menu);hud.characterMenu=roster.gameObject;
-        MenuBackdrop("Rune Hall",roster,ArcadeArt+"SelectionHall.png");
+        MenuBackdrop("Rune Hall",roster,ArcadeArt+"BattleBackdrop.png");
         roster.Find("Rune Hall").GetComponent<Image>().color=new Color(.46f,.43f,.60f);
         Flat("Roster Atmosphere",roster,new Rect(0,0,1280,720),new Color(.04f,.018f,.10f,.28f));
         Flat("Roster Header",roster,new Rect(0,0,1280,98),new Color(.015f,.035f,.045f,.9f));
@@ -496,29 +501,28 @@ public static class GameSetup
         }
         Flat("Fighter Detail Reading Field",roster,new Rect(594,518,642,77),new Color(.025f,.018f,.07f,.94f));
         hud.characterDetail=Label("Selected Scout Detail",roster,"",new Rect(606,522,610,70),18,white,TextAnchor.MiddleCenter);
-        Flat("Roster Footer Shade",roster,new Rect(0,632,1280,88),new Color(.01f,.025f,.035f,.94f));
         hud.characterBackButton=MenuButton("Back From Scouts",roster,new Rect(40,628,170,52),"BACK","",brass);
         hud.confirmCharacterButton=MenuButton("Confirm Scout",roster,new Rect(1000,620,240,64),"LOCK IN","",hud.fernColor);
         Label("Roster Footer",roster,"ARROWS / WASD  SELECT    ENTER / SOUTH  LOCK IN",new Rect(250,638,720,30),16,muted,TextAnchor.MiddleCenter);
 
         var maps=MenuLayer("Stage Select",menu);hud.mapMenu=maps.gameObject;
-        MenuBackdrop("Rune Hall",maps,ArcadeArt+"AtlasBackdrop.png");
-        maps.Find("Rune Hall").GetComponent<Image>().color=Color.white;
-        Flat("Stage Scrim",maps,new Rect(0,0,1280,720),new Color(.04f,.018f,.10f,.45f));
-        font=pixel;Label("Stage Heading",maps,"SELECT YOUR ARENA",new Rect(40,25,1200,42),27,white,TextAnchor.MiddleCenter);font=pixel;
-        hud.modeText=Label("Match Type",maps,"",new Rect(40,77,1200,27),16,brass,TextAnchor.MiddleCenter);
+        MenuBackdrop("Rune Hall",maps,ArcadeArt+"BattleBackdrop.png");
+        maps.Find("Rune Hall").GetComponent<Image>().color=new Color(.28f,.25f,.35f);
+        Flat("Stage Scrim",maps,new Rect(0,0,1280,720),new Color(.04f,.018f,.10f,.38f));
+        var stageHeading=Flat("Stage Heading",maps,new Rect(290,0,700,104),Color.white);stageHeading.sprite=SpriteAt("Assets/Art/UI/MenuV13/ArenaHeading.png");stageHeading.preserveAspect=true;CenterImage(stageHeading);
+        hud.modeText=Label("Match Type",maps,"",new Rect(40,109,1200,25),16,brass,TextAnchor.MiddleCenter);
         hud.mapPreview=null;
         hud.mapButtons=new Button[hud.game.backgrounds.Length];
+        var arenaNamePlaques=Enumerable.Range(0,hud.game.backgrounds.Length).Select(i=>SpriteAt("Assets/Art/UI/MenuV13/Arena_"+i+".png")).ToArray();
         for(int j=0;j<hud.mapButtons.Length;j++) {
             var card=MenuButton("Select "+hud.game.arenaNames[j],maps,new Rect(25+j*204,144,210,420),"","",brass);
             card.image.sprite=SpriteAt("Assets/Art/UI/StageMask.png");card.gameObject.AddComponent<Mask>().showMaskGraphic=true;
             var picture=Flat("Arena Illustration",card.transform,new Rect(-268.33f,0,746.67f,420),WoodlandGame.ArenaExposure);picture.sprite=hud.game.backgrounds[j];picture.preserveAspect=false;CenterImage(picture);
             Flat("Selection Glint",card.transform,new Rect(0,0,210,420),Color.clear);
-            Flat("Arena Caption Shade",card.transform,new Rect(0,326,210,94),new Color(.025f,.018f,.065f,.94f));
             Paint("Selection Stroke",card.transform,new Rect(25,310,152,10),hud.fernColor);
-            var arenaLabel=Label("Arena Name",card.transform,hud.game.arenaNames[j],new Rect(34,340,144,65),18,white,TextAnchor.MiddleCenter);arenaLabel.fontStyle=FontStyle.Bold;hud.mapButtons[j]=card;
+            var arenaLabel=Flat("Arena Name",card.transform,new Rect(12,326,152,88),Color.white);arenaLabel.sprite=arenaNamePlaques[j];arenaLabel.preserveAspect=true;CenterImage(arenaLabel);hud.mapButtons[j]=card;
         }
-        hud.selectedArenaName=Label("Selected Arena Name",maps,"",new Rect(130,96,1020,32),24,white,TextAnchor.MiddleCenter);
+        hud.selectedArenaName=null;
         hud.mapDescription=Label("Stage Description",maps,"",new Rect(130,589,1020,29),18,muted,TextAnchor.MiddleCenter);
         hud.backButton=MenuButton("Back From Atlas",maps,new Rect(40,641,170,52),"BACK","",brass);
         hud.startButton=MenuButton("Begin Match",maps,new Rect(1000,633,240,64),"FIGHT","",hud.fernColor);

@@ -1,0 +1,212 @@
+[
+  {
+    "asset": "Assets\\Art\\UI\\MenuV13\\Menu_SINGLE_PLAYER.png",
+    "source": "Button-Sheet",
+    "sourceBounds": [
+      23,
+      208,
+      531,
+      384
+    ],
+    "canvas": [
+      432,
+      160
+    ]
+  },
+  {
+    "asset": "Assets\\Art\\UI\\MenuV13\\Menu_LOCAL_VERSUS.png",
+    "source": "Button-Sheet",
+    "sourceBounds": [
+      558,
+      208,
+      1064,
+      388
+    ],
+    "canvas": [
+      421,
+      160
+    ]
+  },
+  {
+    "asset": "Assets\\Art\\UI\\MenuV13\\Menu_SETTINGS.png",
+    "source": "Button-Sheet",
+    "sourceBounds": [
+      23,
+      483,
+      528,
+      672
+    ],
+    "canvas": [
+      401,
+      160
+    ]
+  },
+  {
+    "asset": "Assets\\Art\\UI\\MenuV13\\Menu_EXIT.png",
+    "source": "Button-Sheet",
+    "sourceBounds": [
+      560,
+      486,
+      1064,
+      668
+    ],
+    "canvas": [
+      415,
+      160
+    ]
+  },
+  {
+    "asset": "Assets\\Art\\UI\\MenuV13\\Menu_BACK.png",
+    "source": "Button-Sheet",
+    "sourceBounds": [
+      26,
+      777,
+      532,
+      963
+    ],
+    "canvas": [
+      408,
+      160
+    ]
+  },
+  {
+    "asset": "Assets\\Art\\UI\\MenuV13\\Menu_LOCK_IN.png",
+    "source": "Button-Sheet",
+    "sourceBounds": [
+      558,
+      776,
+      1064,
+      959
+    ],
+    "canvas": [
+      414,
+      160
+    ]
+  },
+  {
+    "asset": "Assets\\Art\\UI\\MenuV13\\Menu_FIGHT.png",
+    "source": "Button-Sheet",
+    "sourceBounds": [
+      24,
+      1073,
+      527,
+      1259
+    ],
+    "canvas": [
+      405,
+      160
+    ]
+  },
+  {
+    "asset": "Assets\\Art\\UI\\MenuV13\\Menu_MOVE_LIST.png",
+    "source": "Button-Sheet",
+    "sourceBounds": [
+      558,
+      1068,
+      1064,
+      1264
+    ],
+    "canvas": [
+      388,
+      160
+    ]
+  },
+  {
+    "asset": "Assets\\Art\\UI\\MenuV13\\ArenaHeading.png",
+    "source": "Arena-Name-Sheet",
+    "sourceBounds": [
+      15,
+      153,
+      534,
+      354
+    ],
+    "canvas": [
+      594,
+      240
+    ]
+  },
+  {
+    "asset": "Assets\\Art\\UI\\MenuV13\\Arena_0.png",
+    "source": "Arena-Name-Sheet",
+    "sourceBounds": [
+      575,
+      128,
+      1066,
+      356
+    ],
+    "canvas": [
+      498,
+      240
+    ]
+  },
+  {
+    "asset": "Assets\\Art\\UI\\MenuV13\\Arena_1.png",
+    "source": "Arena-Name-Sheet",
+    "sourceBounds": [
+      16,
+      457,
+      522,
+      692
+    ],
+    "canvas": [
+      498,
+      240
+    ]
+  },
+  {
+    "asset": "Assets\\Art\\UI\\MenuV13\\Arena_2.png",
+    "source": "Arena-Name-Sheet",
+    "sourceBounds": [
+      568,
+      463,
+      1065,
+      691
+    ],
+    "canvas": [
+      504,
+      240
+    ]
+  },
+  {
+    "asset": "Assets\\Art\\UI\\MenuV13\\Arena_3.png",
+    "source": "Arena-Name-Sheet",
+    "sourceBounds": [
+      16,
+      787,
+      524,
+      1014
+    ],
+    "canvas": [
+      517,
+      240
+    ]
+  },
+  {
+    "asset": "Assets\\Art\\UI\\MenuV13\\Arena_4.png",
+    "source": "Arena-Name-Sheet",
+    "sourceBounds": [
+      554,
+      794,
+      1071,
+      1028
+    ],
+    "canvas": [
+      511,
+      240
+    ]
+  },
+  {
+    "asset": "Assets\\Art\\UI\\MenuV13\\Arena_5.png",
+    "source": "Arena-Name-Sheet",
+    "sourceBounds": [
+      16,
+      1111,
+      525,
+      1335
+    ],
+    "canvas": [
+      525,
+      240
+    ]
+  }
+]
