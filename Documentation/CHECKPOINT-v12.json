@@ -1,5 +1,5 @@
 {
-  "sceneChecks": 667,
+  "sceneChecks": 668,
   "counterplayChecks": 16,
   "artRequests": 25,
   "selectedSources": 17,
@@ -8,8 +8,9 @@
   "marinSelectionPoses": 4,
   "marinStandingBodyPixels": 210,
   "otherRosterBodyPixels": 190,
-  "remainingUsagePercent": 16,
-  "knownIssue": "Roster Footer Shade dims the selection skill subtitle after the nameplate was lowered to uncover the boots.",
-  "nextStep": "Move the roster footer below the subtitle, inspect selection and verify the Windows player.",
-  "shutdownQueued": false
+  "remainingUsagePercent": 59,
+  "knownIssue": null,
+  "nextStep": "Physical two-player/controller playtest remains unverified. The selection subtitle fix and native Windows check are complete.",
+  "shutdownQueued": false,
+  "completedAt": "2026-10-27T01:28:04.7188501+08:00"
 }

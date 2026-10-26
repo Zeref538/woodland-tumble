@@ -212,6 +212,9 @@ public static class GameValidation
                 float bootsY=hero.rectTransform.TransformPoint(new Vector3(0,-artSize*.5f+artSize*bottomRow/texture.height,0)).y;
                 var shade=hero.transform.parent.Find("Showcase Name Shade").GetComponent<RectTransform>();
                 Check(bootsY>shade.TransformPoint(new Vector3(0,shade.rect.yMax,0)).y,"The selection nameplate sits below the visible boots");
+                var subtitle=hud.selectionSkills[1].rectTransform;
+                var footer=hud.characterMenu.transform.Find("Roster Footer Shade").GetComponent<RectTransform>();
+                Check(subtitle.TransformPoint(new Vector3(0,subtitle.rect.yMin,0)).y>footer.TransformPoint(new Vector3(0,footer.rect.yMax,0)).y,"The selection skill subtitle is above the opaque footer");
                 Capture("Documentation/RuneRumble-Marin-Selection.png");
                 Check(hud.selectionIdleFrames.Skip(28).Take(4).Contains(hud.selectionPortraits[1].sprite),"Marin displays its own selection animation");
                 hud.confirmCharacterButton.onClick.Invoke();hud.mapButtons[5].onClick.Invoke();SetStage(-4);

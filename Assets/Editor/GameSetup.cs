@@ -496,7 +496,7 @@ public static class GameSetup
         }
         Flat("Fighter Detail Reading Field",roster,new Rect(594,518,642,77),new Color(.025f,.018f,.07f,.94f));
         hud.characterDetail=Label("Selected Scout Detail",roster,"",new Rect(606,522,610,70),18,white,TextAnchor.MiddleCenter);
-        Flat("Roster Footer Shade",roster,new Rect(0,600,1280,120),new Color(.01f,.025f,.035f,.94f));
+        Flat("Roster Footer Shade",roster,new Rect(0,632,1280,88),new Color(.01f,.025f,.035f,.94f));
         hud.characterBackButton=MenuButton("Back From Scouts",roster,new Rect(40,628,170,52),"BACK","",brass);
         hud.confirmCharacterButton=MenuButton("Confirm Scout",roster,new Rect(1000,620,240,64),"LOCK IN","",hud.fernColor);
         Label("Roster Footer",roster,"ARROWS / WASD  SELECT    ENTER / SOUTH  LOCK IN",new Rect(250,638,720,30),16,muted,TextAnchor.MiddleCenter);
