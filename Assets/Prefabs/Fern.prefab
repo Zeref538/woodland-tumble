@@ -113,7 +113,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Scout
   id: 0
   displayName: Fern
-  knockdownDuration: 3
+  knockdownDuration: 4.5
   inputEnabled: 1
   aiControlled: 0
   art: {fileID: 4697976862626804864}

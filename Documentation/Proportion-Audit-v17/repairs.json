@@ -1,0 +1,46 @@
+[
+  {
+    "fighter": "Ember",
+    "state": "Ultimate",
+    "frame": 6,
+    "repair": "Use complete neighboring pose 5 with matching pivot; retain clip timing",
+    "beforeSha256": "203450b6d7956c495d80067e56cb2cae8c384cc7824c7e01df953a994508ffdf"
+  },
+  {
+    "fighter": "Ember",
+    "state": "Ultimate",
+    "frame": 7,
+    "repair": "Use complete neighboring pose 8 with matching pivot; retain clip timing",
+    "beforeSha256": "a814609266107a15764197f23c02615655e1de5b16e7df4a078cf5cc4415f050"
+  },
+  {
+    "fighter": "Nyx",
+    "state": "Backstep",
+    "frame": 2,
+    "repair": "Mirror the incorrect-facing pose so the fighter keeps facing the rival."
+  },
+  {
+    "fighter": "Marin",
+    "state": "Ultimate",
+    "frame": 3,
+    "repair": "Remove an isolated neighboring-frame fragment by its connected component",
+    "removedBounds": [
+      285,
+      258,
+      292,
+      286
+    ]
+  },
+  {
+    "fighter": "Ember",
+    "state": "DoubleJump",
+    "frame": 10,
+    "repair": "Remove an isolated neighboring-frame fragment by its connected component",
+    "removedBounds": [
+      278,
+      295,
+      290,
+      311
+    ]
+  }
+]

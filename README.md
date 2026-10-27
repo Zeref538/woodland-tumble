@@ -6,7 +6,7 @@ A local 2D ring-out fighter for Unity 6000.5.10f1 with eight detailed pixel-art 
 
 ## Fight for the edge
 
-Five confirmed hits knock a fighter down for three seconds. Push them into an open manhole to win the round. Getting up restores all five hit squares. Damage alone does not end a round.
+Five confirmed hits knock a fighter down for 4.5 seconds. Tap X (P1 keyboard), N (P2 keyboard), or the controller X button to get up earlier, with a 2.1-second minimum. Push them into an open manhole to win the round. Getting up restores all five hit squares. Damage alone does not end a round.
 
 After 99 seconds, both holes widen and the safe floor shrinks until someone falls. First to three rounds wins. There is no balance mode or online multiplayer.
 
@@ -64,6 +64,6 @@ Use Unity batch mode with `-projectPath` pointing to this folder and `-executeMe
 
 Add `-silent-test` for muted verification and `-logFile` for a log. Use `-quit` with Prepare and BuildWindows. The validation methods close Unity themselves after writing their JSON reports.
 
-Current saved-scene verification passed 686 checks; counterplay passed 16 checks. The midterm combat fixture passed 38 checks, including all eight projectiles against targets 10.5 world units away, both ranged ultimates, Volt's four-unit rush, guard stamina and knockdown movement. See [current delivery evidence](Documentation/DELIVERY-v14.json) and [TODO.md](TODO.md). These checks do not replace a physical two-player/controller playtest. Historical reports describe earlier art and rules. The design and import calibrations live in [DESIGN.md](DESIGN.md) and [art direction](Documentation/ART-DIRECTION.md).
+All 1,288 character sprite frames were visually reviewed and checked against their native animation clips. Current saved-scene verification passed 686 checks, contact checks passed 92, and counterplay passed 16. The midterm combat fixture passed 38 checks, including all eight projectiles against targets 10.5 world units away, both ranged ultimates, Volt's four-unit rush, guard stamina and knockdown movement. See [current delivery evidence](Documentation/DELIVERY-v17.json) and [TODO.md](TODO.md). These checks do not replace a physical two-player/controller playtest. Historical reports describe earlier art and rules. The design and import calibrations live in [DESIGN.md](DESIGN.md) and [art direction](Documentation/ART-DIRECTION.md).
 
 The original Rumble Display, Rumble Signal and Rumble Read typefaces cover headers, subheaders/numbers and body text. Their editable vector source is Tools/create_rumble_fonts.py.

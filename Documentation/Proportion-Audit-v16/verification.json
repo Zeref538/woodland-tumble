@@ -1,0 +1,19 @@
+{
+  "repairedFrames": 30,
+  "malformedFramesReplaced": 10,
+  "uniformlyCalibratedHurtFrames": 20,
+  "minimumVisibleHeightAfterRepair": 125,
+  "tenFramesPerRepairedAnimation": true,
+  "completeAfterSheetVisuallyReviewed": true,
+  "unityContactChecks": 92,
+  "windowsBuild": "Success",
+  "nativeStartup": {
+    "sampleSeconds": 18,
+    "aliveAfterSample": true,
+    "verifiedExecutable": true,
+    "scriptDomainInitialized": true,
+    "loggedExceptions": 0,
+    "closedAfterTest": true
+  },
+  "remaining": "Unsampled poses still require a full landmark review; no claim that all 1288 frames are proportion-perfect."
+}

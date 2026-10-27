@@ -152,14 +152,18 @@ public static class GameSetup
         if(!game)throw new System.Exception("Saved game scene is missing its game component.");
         PrepareSelectionArtwork();
         game.arenaNames[0]="CINDER QUAY";
-        foreach(var fighter in game.players){fighter.shieldDrain=3;PrefabUtility.RecordPrefabInstancePropertyModifications(fighter);}
+        foreach(var fighter in game.players){fighter.shieldDrain=3;fighter.knockdownDuration=4.5f;PrefabUtility.RecordPrefabInstancePropertyModifications(fighter);}
         game.CharacterNames[7]="Marin";game.SkillNames[7]="Tide Surge";
         game.SkillDescriptions[7]="A tide surge drives rivals back. Last-square ultimate: Undertow.";
         game.CharacterColors[7]=new Color(.18f,.84f,1);
         game.CharacterProfiles[7]=SpriteAt("Assets/Art/ProfilesRework/Marin.png");
         game.CharacterPortraits[7]=SpriteAt("Assets/Art/PortraitsRework/Marin.png");
-        game.CharacterAnimationSets[7]=MakeAnimations("Marin");
-        game.CharacterControllers[7]=AssetDatabase.LoadAssetAtPath<RuntimeAnimatorController>("Assets/AnimationsRework/Marin/Marin.controller");
+        for(int c=0;c<game.CharacterNames.Length;c++){
+            foreach(string state in new[]{"Knockout","Downed","GetUp"})foreach(var file in Directory.GetFiles("Assets/Art/CharactersRework/"+game.CharacterNames[c]+"/"+state,"*.png"))ImportSprite(file.Replace('\\','/'),80,new Vector2(.5f,.1f));
+            game.CharacterAnimationSets[c]=MakeAnimations(game.CharacterNames[c]);
+            game.CharacterControllers[c]=AssetDatabase.LoadAssetAtPath<RuntimeAnimatorController>("Assets/AnimationsRework/"+game.CharacterNames[c]+"/"+game.CharacterNames[c]+".controller");
+        }
+        foreach(var fighter in game.players){fighter.animator.runtimeAnimatorController=game.CharacterControllers[fighter.id];fighter.animations=game.CharacterAnimationSets[fighter.id];PrefabUtility.RecordPrefabInstancePropertyModifications(fighter.animator);PrefabUtility.RecordPrefabInstancePropertyModifications(fighter);}
         font=Resources.GetBuiltinResource<Font>("LegacyRuntime.ttf");
         if(game.hud)Object.DestroyImmediate(game.hud.gameObject);
         CreateHUD(game);EditorSceneManager.SaveScene(scene);AssetDatabase.SaveAssets();
@@ -181,6 +185,7 @@ public static class GameSetup
         ImportSprite(ArcadeArt+"Maps/Forest.png",100);
         foreach(var file in Directory.GetFiles("Assets/Art/UI/MenuV13","*.png"))ImportSprite(file.Replace('\\','/'),100);
         foreach(var file in Directory.GetFiles("Assets/Art/UI/InkV14","*.png"))ImportSprite(file.Replace('\\','/'),100);
+        foreach(var file in Directory.GetFiles("Assets/Art/UI/InkV15","*.png"))ImportSprite(file.Replace('\\','/'),100);
         foreach(var file in Directory.GetFiles("Assets/Resources/Art/ElementShieldsV14","*.png",SearchOption.AllDirectories))ImportSprite(file.Replace('\\','/'),256);
         CreateActionGlyphs();CreateStageMask();
     }
@@ -222,8 +227,7 @@ public static class GameSetup
         var set = AssetDatabase.LoadAssetAtPath<ScoutAnimations>(setPath);
         if (!set) { set = ScriptableObject.CreateInstance<ScoutAnimations>();AssetDatabase.CreateAsset(set, setPath); }
         var controller = AssetDatabase.LoadAssetAtPath<AnimatorController>(dir + "/" + name + ".controller");
-        if (controller) AssetDatabase.DeleteAsset(dir + "/" + name + ".controller");
-        controller = AnimatorController.CreateAnimatorControllerAtPath(dir + "/" + name + ".controller");
+        if (!controller) controller = AnimatorController.CreateAnimatorControllerAtPath(dir + "/" + name + ".controller");
         foreach (string state in States) {
             string source=state;
             var sprites = Enumerable.Range(1, 10).Select(i => SpriteAt("Assets/Art/CharactersRework/" + name + "/" + source + "/" + i.ToString("00") + ".png")).ToArray();
@@ -231,12 +235,12 @@ public static class GameSetup
             switch (state) { case "Walk":set.walk = sprites;break;case "Jump":set.jump = sprites;break;case "Hurt":set.hurt = sprites;break;case "Push":set.push = sprites;break;case "Punch":set.punch = sprites;break;case "Kick":set.kick=sprites;break;case "Knockout":set.knockout = sprites;break; }
             float rate = state == "Push" || state == "Punch" ? 36 : state=="Kick" ? 33 : state == "Knockout" ? 30 : state == "Hurt" ? 22 : state == "Jump" ? 12 : 10;
             var clip = MakeClip(dir + "/" + state + ".anim", sprites, rate, state == "Walk");
-            var node = controller.layers[0].stateMachine.AddState(state);node.motion = clip;
+            var node = NativeState(controller,state);node.motion = clip;
         }
         MakeCombatClips(name, dir, set, controller);
         var idleSprite=SpriteAt("Assets/Art/CharactersRework/"+name+"/Idle/01.png") ?? set.walk[0];
         var idleClip = MakeClip(dir + "/Idle.anim", new[] { idleSprite }, 1, true);
-        var idle = controller.layers[0].stateMachine.AddState("Idle");idle.motion = idleClip;controller.layers[0].stateMachine.defaultState = idle;
+        var idle = NativeState(controller,"Idle");idle.motion = idleClip;controller.layers[0].stateMachine.defaultState = idle;
         EditorUtility.SetDirty(set);EditorUtility.SetDirty(controller);
         return set;
     }
@@ -274,8 +278,12 @@ public static class GameSetup
             // Leaf scout flips; fire scout tucks and kicks. Pivot stays fixed at the feet.
             // Pose artwork already contains the action. Never rotate a whole fighter to fake a strike.
             clip.SetCurve("",typeof(Transform),"localEulerAnglesRaw.z",null);
-            var node = controller.layers[0].stateMachine.AddState(state); node.motion = clip;
+            var node = NativeState(controller,state); node.motion = clip;
         }
+    }
+    static AnimatorState NativeState(AnimatorController controller,string name)
+    {
+        return controller.layers[0].stateMachine.states.Select(child=>child.state).FirstOrDefault(state=>state.name==name) ?? controller.layers[0].stateMachine.AddState(name);
     }
     static AnimationClip MakeClip(string path, Sprite[] sprites, float rate, bool loop)
     {
@@ -330,6 +338,16 @@ public static class GameSetup
         }
         for(int i=0;i<2;i++) {
             Color accent = i==0 ? hud.fernColor : hud.emberColor;
+            var wake=Flat("Recovery Prompt P"+(i+1),match,new Rect(0,0,80,80),Color.white);wake.sprite=SpriteAt("Assets/Art/UI/InkV15/RecoveryPrompt.png");wake.raycastTarget=true;
+            wake.rectTransform.pivot=Vector2.one*.5f;
+            hud.recoveryPrompts[i]=wake.gameObject.AddComponent<Button>();hud.recoveryPrompts[i].targetGraphic=wake;
+            hud.recoveryPrompts[i].navigation=new Navigation{mode=Navigation.Mode.None};
+            var recoveryFill=Flat("Recovery Progress",wake.transform,new Rect(-8,-8,96,96),accent);recoveryFill.sprite=SpriteAt("Assets/Art/UI/ControlRipple.png");recoveryFill.type=Image.Type.Filled;recoveryFill.fillMethod=Image.FillMethod.Radial360;recoveryFill.fillOrigin=2;hud.recoveryFills[i]=recoveryFill;
+            var keyBase=Flat("Raised Key Base",wake.transform,new Rect(18,25,44,44),new Color(.01f,.02f,.04f,1));keyBase.sprite=SpriteAt("Assets/Art/UI/ControlDisc.png");
+            var keyFace=Flat("Raised Key Face",wake.transform,new Rect(18,18,44,44),new Color(.9f,.88f,.77f));keyFace.sprite=keyBase.sprite;
+            hud.recoveryLabels[i]=Label("Recovery Press Count",keyFace.transform,"X",new Rect(0,0,44,44),23,new Color(.05f,.08f,.14f),TextAnchor.MiddleCenter);
+            Label("Recovery Input Caption",wake.transform,"TAP KEY",new Rect(-16,82,112,20),12,white,TextAnchor.MiddleCenter);
+            wake.gameObject.SetActive(false);
             var plate = new GameObject(i==0?"Fern Fighter Plate":"Ember Fighter Plate",typeof(RectTransform)).GetComponent<RectTransform>();
             plate.SetParent(match,false);plate.anchorMin=plate.anchorMax=new Vector2(i,1);plate.pivot=new Vector2(i,1);plate.anchoredPosition=new Vector2(i==0?24:-24,-18);plate.sizeDelta=new Vector2(590,WoodlandHUD.FighterHudHeight);plate.localScale=Vector3.one*WoodlandHUD.FighterHudScale;
             hud.fighterPlates[i]=plate;
@@ -430,13 +448,13 @@ public static class GameSetup
     static Button MenuButton(string name,Transform parent,Rect bounds,string title,string subtitle,Color accent)
     {
         bool card=title.Length==0;
-        var painted=card?null:SpriteAt("Assets/Art/UI/InkV14/Button_"+title.Replace(' ','_')+".png");
+        bool setting=name.StartsWith("Toggle") || name=="Cycle Effects";
+        string role=setting?"Wide":parent.name=="Stage Select"?"Short":bounds.width/bounds.height>5?"Long":"Menu";
+        var painted=card?null:SpriteAt("Assets/Art/UI/InkV15/Button_"+title.Replace(' ','_')+"_"+role+".png");
         if(!card && !painted)throw new System.Exception("Missing illustrated button: "+title);
         var face=Flat(name,parent,bounds,new Color(.11f,.065f,.23f,.98f));face.raycastTarget=true;
         if(painted){
-            face.sprite=SpriteAt("Assets/Art/UI/InkV14/"+(parent.name=="Stage Select"?"ShortPlate":"LongPlate")+".png");face.color=Color.white;CenterImage(face);
-            bool setting=name.StartsWith("Toggle") || name=="Cycle Effects";
-            var words=Flat("Illustrated Label",face.transform,new Rect(16,4,bounds.width-(setting?170:32),bounds.height-8),Color.white);words.sprite=painted;words.preserveAspect=true;CenterImage(words);
+            face.sprite=painted;face.color=Color.white;face.preserveAspect=true;CenterImage(face);
             if(setting)Label("Setting Value",face.transform,"",new Rect(bounds.width-145,0,120,bounds.height),21,Color.white,TextAnchor.MiddleCenter);
         }
         var outline=face.gameObject.AddComponent<Outline>();outline.effectDistance=new Vector2(1,-1);outline.effectColor=new Color(.32f,.22f,.49f,.8f);

@@ -1,6 +1,6 @@
 # Shared art direction
 
-Midterm revision: INKCLASH. Broad black/navy ink, warm ivory lettering, sparse cyan/vermilion accents, no ornamental flames around UI. All static menu and pause labels use generated artwork. The new slogan is FIGHT SMART. FALL LAST. Character move headers and six-frame real elemental shields share each fighter's palette. Dark underpainting sits beneath colored attack effects for a printed ink contour. Bottom navigation instructions are removed.
+Midterm revision: INKCLASH. Broad black/navy ink, warm ivory lettering, sparse cyan/vermilion accents, no ornamental flames around UI. All static menu and pause labels use generated artwork on one surface. Preserve lettering proportions and widen only the side ink; never stack another frame behind the labeled artwork. The new slogan is FIGHT SMART. FALL LAST. Character move headers and six-frame real elemental shields share each fighter's palette. Dark underpainting sits beneath colored attack effects for a printed ink contour. Bottom navigation instructions are removed.
 
 The approved combination is Arcade Aura interface plus Ink & Motion effects. DESIGN.md governs the result; the two reference boards are in Documentation/Design-Samples.
 
@@ -15,3 +15,5 @@ Every generation prompt must include these shared colors, shape rules, reference
 Import calibration: transparent brush panels are trimmed to their occupied canvas before use. Effect sheets use measured transparent gutters rather than assuming perfect generated grid alignment. Put each extracted frame on a common 352-pixel canvas, then uniformly downsample to 256 pixels. Do not independently enlarge each frame: that erases anticipation and decay. Use the original upright Rumble Display header face, Rumble Signal subheader and numeral face, and Rumble Read body face. Font outlines are maintained in Tools/create_rumble_fonts.py.
 
 Selection refinement: preserve pixel art with deliberate visible pixel clusters, richer face and clothing detail, and a high-resolution selection-only breathing loop. Active player artwork stays on the left for both P1 and P2; roster sits on the right. Dedicated HUD circles contain close faces, not miniaturized bodies. Arena scenery and previews use a subdued night exposure so fighters and contact effects stay readable. Stage choices are tall angled picture panels.
+
+Recovery poses use the current eight identities and a shared per-fighter scale across falling, breathing and getting up. Match the existing roster, including Luna, without a new outfit or body style. Gameplay feet stay on a common ground pivot.

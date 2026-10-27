@@ -1,5 +1,37 @@
 # Rune Rumble: current delivery
 
+## Full animation proportion audit
+
+- [x] Inventory every active animation frame and create fixed-scale comparison sheets for all eight fighters.
+- [x] Inspect 392 representative poses across all eight fighters; record malformed frames and scale changes.
+- [x] Repair 10 detached-effect/duplicate-body frames and calibrate 20 Luna/Bram hurt frames. Preserve clip timing and foot pivots.
+- [x] Pass 92 Unity contact checks, rebuild Windows and verify an 18-second native launch after these sprite repairs.
+- [x] Inspect every one of 1288 frames using 32 full comparison sheets. Repair two Ember ultimate frames, Nyx's reversed backstep and two neighboring-frame fragments.
+- [x] Verify all 1288 clip bindings, pass 92 contact checks, 686 scene checks and 16 counterplay checks, then rebuild Windows and verify native startup.
+
+
+
+
+
+## Button, animation and contact correction
+
+- [x] Use one full-width illustrated surface per button, with no duplicate frame.
+- [x] Match fall, downed and get-up artwork and scale across all eight fighters.
+- [x] Match melee and projectile contacts to body bounds and real front shield bounds.
+- [x] Render shields opaque, preserving attacks from the exposed back.
+- [x] Remove the old slash-like block VFX and prevent walking through downed bodies.
+- [x] Match the circular tap-recovery reference with device-specific input glyphs.
+- [x] Navigate the roster in two dimensions using keyboard, D-pad and stick.
+- [x] Verify all eight ultimate contact areas and Volt interruption cleanup.
+- [x] Add a longer knockdown with capped X-tap recovery and an overhead press effect.
+- [x] Regress front/back contacts and all eight recovery animations, inspect screens and rebuild Windows.
+
+Current delivery: all 1288 sprite frames reviewed and their native clip bindings checked. Windows passed an 18-second native startup sample with no logged script exceptions. Evidence: Documentation/DELIVERY-v17.json.
+
+- [x] Confirm Windows build and verify native startup.
+- [x] Raise the recovery glyph contrast on the dark key face and inspect the corrected prompt.
+- [x] Commit and push the verified delivery.
+
 ## Midterm ink and combat revision
 
 - [x] New ink-battle menu backdrop and illustrated FIGHT SMART. FALL LAST. slogan.

@@ -1,0 +1,5 @@
+{
+    "success": false,
+    "status": "System.Exception: Single illustrated surface: Single Player\r\n  at GameValidation.Check (System.Boolean ok, System.String message) [0x0002e] in C:\\Users\\johna\\OneDrive\\Documents\\Portfolio\\woodland-tumble\\Assets\\Editor\\GameValidation.cs:499 \r\n  at GameValidation.TickContacts () [0x000b6] in C:\\Users\\johna\\OneDrive\\Documents\\Portfolio\\woodland-tumble\\Assets\\Editor\\GameValidation.cs:149 ",
+    "checks": []
+}

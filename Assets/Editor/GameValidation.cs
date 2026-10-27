@@ -30,9 +30,34 @@ public static class GameValidation
     [MenuItem("Woodland/Validate Editable Game")]
     public static void RunInEditor() {EditorApplication.ExecuteMenuItem("Window/General/Game");SessionState.SetBool("Woodland.Duel",true);Begin(false);}
     public static void Run() => RunDuelSaved();
+    public static void ValidateSpritePlayback()
+    {
+        SessionState.SetString("Woodland.Checks","");
+        var scene=EditorSceneManager.OpenScene("Assets/Scenes/WoodlandTumble.unity");
+        var game=UnityEngine.Object.FindAnyObjectByType<WoodlandGame>();var renderer=game.players[0].art;var original=renderer.sprite;
+        try {
+            string[] states={"Idle","Walk","Jump","Hurt","Push","Punch","Kick","Knockout","Block","DoubleJump","Special","Dash","Backstep","Victory","Ultimate","Downed","GetUp"};
+            foreach(int character in Enumerable.Range(0,game.CharacterNames.Length))foreach(string state in states){
+                string name=game.CharacterNames[character];
+                var clip=AssetDatabase.LoadAssetAtPath<AnimationClip>("Assets/AnimationsRework/"+name+"/"+(state=="Special"?"Smash":state)+".anim");
+                var frames=state=="Idle"?new[]{AssetDatabase.LoadAssetAtPath<Sprite>("Assets/Art/CharactersRework/"+name+"/Idle/01.png")}:game.CharacterAnimationSets[character].Get(state);
+                if(!clip || frames.Length!=(state=="Idle"?1:10))throw new Exception("Incomplete native clip: "+name+"/"+state);
+                for(int frame=0;frame<frames.Length;frame++){
+                    clip.SampleAnimation(renderer.gameObject,(frame+.25f)/clip.frameRate);
+                    Check(renderer.sprite==frames[frame],"Native sprite playback: "+name+" / "+state+" / "+(frame+1));
+                }
+            }
+            var report=new Report{success=true,status="SPRITE_PLAYBACK_PASS: every active character frame matches its native clip",checks=SessionState.GetString("Woodland.Checks","").Split('\n').Where(s=>s.Length>0).ToArray()};
+            File.WriteAllText("Documentation/SPRITE-PLAYBACK-v17.json",JsonUtility.ToJson(report,true));Debug.Log(report.status+" / "+report.checks.Length);
+        } catch(Exception error){
+            File.WriteAllText("Documentation/SPRITE-PLAYBACK-v17.json",JsonUtility.ToJson(new Report{success=false,status=error.ToString(),checks=new string[0]},true));throw;
+        } finally {renderer.sprite=original;}
+    }
     public static void RunDuelFresh(){GameSetup.PrepareHUD();RunDuelSaved();}
     public static void RunDuelSaved(){AudioListener.volume=0;SessionState.SetBool("Woodland.Duel",true);Begin(true);}
     public static void RunCounterplay(){AudioListener.volume=0;SessionState.SetBool("Woodland.Counterplay",true);Begin(true);}
+    public static void RunContactsSaved(){AudioListener.volume=0;SessionState.SetBool("Woodland.Contacts",true);Begin(true);}
+    public static void RunContactsFresh(){GameSetup.PrepareHUD();RunContactsSaved();}
     public static void RunMidtermCombat(){AudioListener.volume=0;GameSetup.PrepareHUD();SessionState.SetBool("Woodland.MidtermCombat",true);Begin(true);}
     public static void RunSaved() => RunDuelSaved();
     public static void RunHUD()
@@ -137,6 +162,51 @@ public static class GameValidation
             }
         }catch(Exception exception){Complete(false,exception.ToString());}
     }
+    static void TickContacts()
+    {
+        try {
+            if(Elapsed>15)throw new Exception("Contact regression timed out at "+SessionState.GetInt("Woodland.Stage",-1));
+            var game=WoodlandGame.Instance;if(!game)return;var a=game.players[0];var b=game.players[1];var hud=game.hud;
+            int stage=SessionState.GetInt("Woodland.Stage",-1);
+            if(stage==-1 && Elapsed>.4f){
+                foreach(var button in hud.modeButtons)Check(button.image.sprite && button.image.sprite.name.StartsWith("Button_") && !button.transform.Find("Illustrated Label"),"Single illustrated surface: "+button.name);
+                game.ChooseMode(false);game.PreviewCharacter(0);originalInputSettings=InputSystem.settings;validationInputSettings=UnityEngine.Object.Instantiate(originalInputSettings);validationInputSettings.editorInputBehaviorInPlayMode=InputSettings.EditorInputBehaviorInPlayMode.AllDeviceInputAlwaysGoesToGameView;validationInputSettings.backgroundBehavior=InputSettings.BackgroundBehavior.IgnoreFocus;InputSystem.settings=validationInputSettings;testKeyboard=InputSystem.AddDevice<Keyboard>();InputSystem.onBeforeUpdate+=DriveTestInput;heldKey=Key.DownArrow;SetStage(0);
+            }else if(stage==0 && SimElapsed>.15f){heldKey=Key.None;Check(game.PendingCharacter==4,"Keyboard down moves four columns to the next row [pending="+game.PendingCharacter+"]");SetStage(1);}
+            else if(stage==1 && SimElapsed>.15f){heldKey=Key.UpArrow;SetStage(2);}
+            else if(stage==2 && SimElapsed>.15f){heldKey=Key.None;Check(game.PendingCharacter==0,"Keyboard up returns to the same column");SetStage(3);}
+            else if(stage==3 && SimElapsed>.15f){heldKey=Key.RightArrow;SetStage(4);}
+            else if(stage==4 && SimElapsed>.15f){heldKey=Key.None;Check(game.PendingCharacter==1,"Keyboard right moves one card");SetStage(5);}
+            else if(stage==5 && SimElapsed>.15f){game.PreviewCharacter(0);game.ConfirmCharacter();game.PreviewCharacter(1);heldKey=Key.DownArrow;SetStage(6);}
+            else if(stage==6 && SimElapsed>.15f){heldKey=Key.None;Check(game.PendingCharacter==5,"P2 down retains its column while P1 stays locked");testPads[0]=InputSystem.AddDevice<Gamepad>();padStates[0]=new GamepadState().WithButton(GamepadButton.DpadUp);SetStage(7);}
+            else if(stage==7 && SimElapsed>.15f){padStates[0]=new GamepadState();Check(game.PendingCharacter==1,"D-pad up moves between roster rows");SetStage(8);}
+            else if(stage==8 && SimElapsed>.25f){padStates[0]=new GamepadState{leftStick=new Vector2(0,-1)};SetStage(9);}
+            else if(stage==9 && SimElapsed>.15f){padStates[0]=new GamepadState();Check(game.PendingCharacter==5,"Stick down moves between roster rows");InputSystem.RemoveDevice(testPads[0]);testPads[0]=null;game.ConfirmCharacter();game.StartSelectedMatch();SetStage(10);}
+            else if(stage==10 && game.playing && string.IsNullOrEmpty(game.message)){PreparePresentationPair(game,0);a.Body.position=new Vector2(-1.9f,a.Body.position.y);b.Body.position=new Vector2(0,b.Body.position.y);SetStage(11);}
+            else if(stage==11 && SimElapsed>.4f){Check(b.BodyContact(a.MeleeBounds(true)),"Punch reaches the actual near edge of a body at 1.9 units");Check(a.TryAttack(true),"Body-contact punch starts");SetStage(12);}
+            else if(stage==12 && SimElapsed>.17f){Check(b.HitsRemaining==4,"Visible body-edge punch loses one hit square");PreparePresentationPair(game,0);a.Body.position=new Vector2(-3,a.Body.position.y);b.Body.position=new Vector2(0,b.Body.position.y);SetStage(13);}
+            else if(stage==13 && SimElapsed>.4f){Check(!b.BodyContact(a.MeleeBounds(true)),"A punch beyond the body cannot connect");b.enabled=false;Check(b.SetBlock(true),"Front shield raises");a.Body.position=new Vector2(b.GuardBounds.min.x-a.punchRange+.08f,b.Body.position.y);Physics2D.SyncTransforms();SetStage(14);}
+            else if(stage==14 && SimElapsed>.2f){Check(b.ShieldVisible && b.GuardBounds.size.y>1.5f,"Opaque animated shield has a visible matching trigger");Check(b.ShieldContact(a.MeleeBounds(true),1) && !b.BodyContact(a.MeleeBounds(true)),"Front shield intercepts a strike before it reaches the body");Check(a.TryAttack(true),"Shield-edge punch starts");SetStage(15);}
+            else if(stage==15 && SimElapsed>.17f){Check(b.HitsRemaining==5 && b.Stamina<100,"Shield-edge contact consumes guard instead of body health [hits="+b.HitsRemaining+", stamina="+b.Stamina+", cue="+a.Status+"]");Capture("Documentation/Contact-Shield-v15.png");b.enabled=true;PreparePresentationPair(game,0);a.Body.position=new Vector2(1.8f,a.Body.position.y);b.Body.position=new Vector2(0,b.Body.position.y);typeof(Scout).GetField("face",System.Reflection.BindingFlags.NonPublic|System.Reflection.BindingFlags.Instance).SetValue(a,-1f);b.enabled=false;b.SetBlock(true);SetStage(16);}
+            else if(stage==16 && SimElapsed>.2f){Check(!b.ShieldContact(a.MeleeBounds(true),-1),"The exposed back never intercepts a rear strike");Check(a.TryAttack(true),"Rear punch starts");SetStage(17);}
+            else if(stage==17 && SimElapsed>.17f){Check(b.HitsRemaining==4,"A rear strike damages a guarding fighter");b.enabled=true;PreparePresentationPair(game,0);a.Body.position=new Vector2(-3,a.Body.position.y);b.Body.position=new Vector2(3,b.Body.position.y);SessionState.SetInt("Woodland.ContactHits",0);SetStage(18);}
+            else if(stage==18 && SimElapsed>.24f){int hit=SessionState.GetInt("Woodland.ContactHits",0);Check(a.ReceiveHit(b,-1,true) && b.ReceiveHit(a,1,true),"Recovery setup hit "+hit);a.Body.linearVelocity=b.Body.linearVelocity=Vector2.zero;a.Body.position=new Vector2(-3,a.Body.position.y);b.Body.position=new Vector2(3,b.Body.position.y);SessionState.SetInt("Woodland.ContactHits",hit+1);SetStage(hit<4?18:19);}
+            else if(stage==19 && SimElapsed>.45f){Check(a.Downed && b.Downed && a.KnockdownRemaining>3.8f,"Untapped knockdown lasts 4.5 seconds [a="+a.Downed+", b="+b.Downed+", remaining="+a.KnockdownRemaining+", duration="+a.knockdownDuration+"]");a.inputEnabled=true;heldKey=Key.X;SetStage(20);}
+            else if(stage==20 && SimElapsed>.3f){heldKey=Key.None;Check(a.RecoveryPresses==1,"Holding X produces one recovery press, not automatic mashing");Check(hud.recoveryPrompts[0].gameObject.activeSelf && hud.recoveryLabels[0].text.Contains("X") && hud.recoveryFills[0].fillAmount>0,"Circular recovery prompt shows the assigned input and recovery progress");SessionState.SetInt("Woodland.Mash",0);SetStage(21);}
+            else if(stage==21 && SimElapsed>.1f){if(a.Downed)a.TryRecover();int n=SessionState.GetInt("Woodland.Mash",0)+1;SessionState.SetInt("Woodland.Mash",n);if(n==2)Capture("Documentation/Recovery-Prompt-v15.png");if(n<15)SetStage(21);else SetStage(22);}
+            else if(stage==22 && SimElapsed>.6f){Check(!a.Downed && b.Downed,"Tapping wakes earlier while the untouched rival remains down");Check(!a.TryRecover(),"Recovery presses do nothing while standing");SessionState.SetInt("Woodland.UltCharacter",0);PrepareContactUltimate(game,0);SetStage(30);}
+            else if(stage==30 && SimElapsed>.4f){Check(a.TryUltimate(),"Ultimate starts: "+a.displayName);SetStage(31);}
+            else if(stage==31 && SimElapsed>2.6f){int c=SessionState.GetInt("Woodland.UltCharacter",0);Check(b.HitsRemaining<5,"Ultimate contacts a target "+(c==5?"six":"four")+" units away: "+a.displayName);Check(!a.UltimateActive && !a.ActionBusy,"Ultimate finishes without stuck action: "+a.displayName);c++;if(c<8){SessionState.SetInt("Woodland.UltCharacter",c);PrepareContactUltimate(game,c);SetStage(30);}else{PrepareContactUltimate(game,5);SetStage(32);}}
+            else if(stage==32 && SimElapsed>.4f){Check(a.TryUltimate(),"Volt interruption probe starts");SetStage(33);}
+            else if(stage==33 && SimElapsed>.82f){a.Stagger(.35f);Check(!a.UltimateActive && Mathf.Abs(a.Body.linearVelocity.x)<.01f,"Interrupting Volt clears cinematic and rush velocity immediately");SessionState.SetInt("Woodland.RecoveryCharacter",0);PreparePresentationPair(game,0);SetStage(40);}
+            else if(stage==40 && SimElapsed>.3f){int c=SessionState.GetInt("Woodland.RecoveryCharacter",0);typeof(Scout).GetProperty("HitsRemaining").SetValue(b,0);b.StartCoroutine((System.Collections.IEnumerator)typeof(Scout).GetMethod("TemporaryKnockdown",System.Reflection.BindingFlags.NonPublic|System.Reflection.BindingFlags.Instance).Invoke(b,null));b.Body.gravityScale=0;if(b.CharacterIndex==2){a.inputEnabled=true;heldKey=Key.D;}foreach(string state in new[]{"Knockout","Downed","GetUp"}){var frames=b.animations.Get(state);Check(frames.Length==10 && frames.All(frame=>AssetDatabase.GetAssetPath(frame).Contains("/CharactersRework/"+game.CharacterNames[b.CharacterIndex]+"/"+state+"/")),"Native recovery catalog: "+game.CharacterNames[b.CharacterIndex]+" / "+state);}SetStage(41);}
+            else if(stage==41 && SimElapsed>.6f){int c=SessionState.GetInt("Woodland.RecoveryCharacter",0);Check(b.art.sprite && b.animations.downed.Contains(b.art.sprite),"Animator displays the new downed sprite: "+game.CharacterNames[b.CharacterIndex]);if(b.CharacterIndex==2){Check(a.HurtBounds.max.x+.1f<b.HurtBounds.min.x,"Walking Ember stays outside Luna's downed body");Check(Mathf.Abs(a.Body.position.y-b.Body.position.y)<.12f,"Walking into a downed rival does not climb onto their face");}Capture("Documentation/Recovery-v15/Runtime-"+game.CharacterNames[b.CharacterIndex]+".png");heldKey=Key.None;a.inputEnabled=false;b.enabled=true;c++;if(c<8){SessionState.SetInt("Woodland.RecoveryCharacter",c);PreparePresentationPair(game,c);SetStage(40);}else Complete(true,"CONTACTS_PASS: single buttons, grid navigation, body and shield contacts, recovery input and eight ultimates");}
+        }catch(Exception error){Complete(false,error.ToString());}
+    }
+    static void PrepareContactUltimate(WoodlandGame game,int character)
+    {
+        game.StopAllCoroutines();game.playing=true;game.message="";game.score[0]=game.score[1]=0;
+        PreparePresentationPair(game,character);var a=game.players[0];var b=game.players[1];a.Body.position=new Vector2(character==5?-3:-2,a.Body.position.y);b.Body.position=new Vector2(character==5?3:2,b.Body.position.y);typeof(Scout).GetProperty("HitsRemaining").SetValue(a,1);Physics2D.SyncTransforms();
+    }
     static void TickMidtermCombat()
     {
         try {
@@ -170,7 +240,7 @@ public static class GameValidation
                 Check(Mathf.Abs(game.hud.ultimatePanels[0].transform.Find("Ready Ink Sweep").GetComponent<RectTransform>().anchoredPosition.x-SessionState.GetFloat("Woodland.ReadySweepX",0))>10,"Ultimate-ready ink highlight moves over time");
                 Capture("Documentation/RuneRumble-UltimateReady.png");Check(a.TryUltimate(),"Volt starts Thunder Rush from four units away");SetStage(7);
             }
-            else if(stage==7 && SimElapsed>2.15f){
+            else if(stage==7 && SimElapsed>2.6f){
                 Check(b.HitsRemaining<5,"Thunder Rush reaches and damages the rival at four units");
                 Check(a.UltimateUsed && !a.UltimateActive,"Thunder Rush ends and spends its once-per-round use");
                 SessionState.SetInt("Woodland.RangeCharacter",0);PrepareMidtermRange(game,0);SetStage(8);
@@ -190,6 +260,7 @@ public static class GameValidation
     }
     static void PrepareMidtermRange(WoodlandGame game,int character)
     {
+        game.StopAllCoroutines();game.playing=true;game.message="";game.score[0]=game.score[1]=0;
         PreparePresentationPair(game,character);
         game.players[0].Body.position=new Vector2(-5,game.players[0].Body.position.y);
         game.players[1].Body.position=new Vector2(5.5f,game.players[1].Body.position.y);
@@ -230,14 +301,13 @@ public static class GameValidation
                 foreach(var catalog in game.CharacterAnimationSets)foreach(string state in new[]{"Walk","Jump","Hurt","Push","Punch","Kick","Knockout","Block","DoubleJump","Special","Dash","Backstep","Victory","Ultimate","Downed","GetUp"})Check(catalog.Get(state).Length==10 && catalog.Get(state).All(sprite=>sprite),"Complete native animation "+catalog.name+" / "+state);
                 CheckLiveLabels(hud.titleMenu);
                 foreach(var button in hud.modeButtons) {
-                    var words=button.transform.Find("Illustrated Label").GetComponent<Image>();
-                    Check(button.image.sprite && button.image.sprite.name=="LongPlate" && words.sprite && words.preserveAspect,"Main menu uses long generated ink plates and unstretched illustrated lettering");
+                    Check(button.image.sprite && button.image.sprite.name.StartsWith("Button_") && !button.transform.Find("Illustrated Label"),"Main menu has one full-width illustrated button without an overlapping frame");
                     Check(!button.transform.Find("Choice").gameObject.activeSelf,"Generated button text is not duplicated by a live label");
                 }
                 Check(!hud.titleMenu.transform.Find("Lower Reading Field") && !hud.characterMenu.transform.Find("Roster Footer Shade"),"Menu footer background panels are removed");
                 Check(hud.titleMenu.transform.Find("Illustrated Woodland").GetComponent<Image>().sprite.name=="BattleBackdrop","The main menu uses the eight-rival battle illustration");
                 Check(!hud.helpHint && !hud.GetComponentsInChildren<Text>(true).Any(text=>text.name.EndsWith("Footer") || text.text.Contains("ARROWS /") || text.text.Contains("LEFT / RIGHT  SELECT")),"Bottom navigation instruction text is removed from every HUD");
-                foreach(var button in hud.GetComponentsInChildren<Button>(true))if(button.transform.Find("Choice") && button.transform.Find("Choice").GetComponent<Text>().text.Length>0)Check(button.transform.Find("Illustrated Label"),"Every menu and pause option has generated label artwork: "+button.name);
+                foreach(var button in hud.GetComponentsInChildren<Button>(true))if(button.transform.Find("Choice") && button.transform.Find("Choice").GetComponent<Text>().text.Length>0)Check(button.image.sprite && button.image.sprite.name.StartsWith("Button_"),"Every menu and pause option has generated label artwork: "+button.name);
                 foreach(var button in hud.GetComponentsInChildren<Button>(true)) {
                     if(!button.transform.Find("Ink Focus Stroke"))continue;
                     Check(button.image.sprite && button.image.sprite.name=="BrushBand","Menu action uses the irregular ink brush silhouette: "+button.name);
@@ -337,7 +407,7 @@ public static class GameValidation
             } else if(stage==2 && Elapsed>.35f) {
                 Check(Mathf.Approximately(game.RoundTimeRemaining,SessionState.GetFloat("Woodland.DuelClock",0)),"Pause freezes the timer");
                 Check(Mathf.Abs(Camera.main.orthographicSize-SessionState.GetFloat("Woodland.PauseZoom",0))<.01f,"Pause holds the current camera framing");
-                CheckLiveLabels(hud.pauseMenu);Check(hud.pauseButtons.All(button=>button.image.sprite.name=="LongPlate"),"Battle options use the long generated ink controls");Capture("Documentation/RuneRumble-Pause.png");
+                CheckLiveLabels(hud.pauseMenu);Check(hud.pauseButtons.All(button=>button.image.sprite.name.StartsWith("Button_")),"Battle options use the long generated ink controls");Capture("Documentation/RuneRumble-Pause.png");
                 game.ResumeMatch();SetStage(3);
             } else if(stage==3 && SimElapsed>.35f) {
                 Check(game.RoundTimeRemaining<SessionState.GetFloat("Woodland.DuelClock",0)-.2f,"Timer resumes");
@@ -348,7 +418,7 @@ public static class GameValidation
                 int remaining=b.HitsRemaining;
                 if(remaining>0){Check(b.ReceiveHit(a,1,true),"Confirmed hit removes one square");SetStage(4);}
                 else {Check(b.Downed && game.playing && !b.KnockedOut,"Fifth hit temporarily knocks down without ending the round");SetStage(5);}
-            } else if(stage==5 && SimElapsed>3.4f) {
+            } else if(stage==5 && SimElapsed>b.knockdownDuration+.4f) {
                 Check(!b.Downed && b.HitsRemaining==5,"Recovery restores five hit squares");
                 b.Body.gravityScale=1;b.Body.position=new Vector2(8.2f,game.plank.position.y+1.2f);b.Body.linearVelocity=Vector2.zero;SetStage(6);
             } else if(stage==6 && b.KnockedOut) {
@@ -458,6 +528,7 @@ public static class GameValidation
     static void Tick()
     {
         if (!SessionState.GetBool(Active, false) || !EditorApplication.isPlaying) return;
+        if(SessionState.GetBool("Woodland.Contacts",false)){TickContacts();return;}
         if(SessionState.GetBool("Woodland.MidtermCombat",false)){TickMidtermCombat();return;}
         if(SessionState.GetBool("Woodland.Counterplay",false)){TickCounterplay();return;}
         if(SessionState.GetBool("Woodland.Duel",false)){TickDuel();return;}
@@ -1744,7 +1815,8 @@ public static class GameValidation
         bool duel=SessionState.GetBool("Woodland.Duel",false);SessionState.SetBool("Woodland.Duel",false);
         bool counterplay=SessionState.GetBool("Woodland.Counterplay",false);SessionState.SetBool("Woodland.Counterplay",false);
         bool midterm=SessionState.GetBool("Woodland.MidtermCombat",false);SessionState.SetBool("Woodland.MidtermCombat",false);
-        File.WriteAllText(midterm?"Documentation/MIDTERM-COMBAT-v14.json":counterplay?"Documentation/COUNTERPLAY-v9.json":duel?"Documentation/DUEL-VALIDATION.json":v81?"Documentation/PLAYMODE-VALIDATION-v8.1.json":v8?"Documentation/PLAYMODE-VALIDATION-v8.json":hudOnly?"Documentation/HUD-VALIDATION-v7.1.json":meleeOnly?"Documentation/MELEE-VALIDATION-v8.1.json":"Documentation/PLAYMODE-VALIDATION-v7.json", JsonUtility.ToJson(report, true));
+        bool contacts=SessionState.GetBool("Woodland.Contacts",false);SessionState.SetBool("Woodland.Contacts",false);
+        File.WriteAllText(contacts?"Documentation/CONTACTS-v15.json":midterm?"Documentation/MIDTERM-COMBAT-v14.json":counterplay?"Documentation/COUNTERPLAY-v9.json":duel?"Documentation/DUEL-VALIDATION.json":v81?"Documentation/PLAYMODE-VALIDATION-v8.1.json":v8?"Documentation/PLAYMODE-VALIDATION-v8.json":hudOnly?"Documentation/HUD-VALIDATION-v7.1.json":meleeOnly?"Documentation/MELEE-VALIDATION-v8.1.json":"Documentation/PLAYMODE-VALIDATION-v7.json", JsonUtility.ToJson(report, true));
         if (success) Debug.Log(status);else Debug.LogError(status);
         EditorApplication.isPlaying = false;
         if (SessionState.GetBool("Woodland.ValidationExit", false)) EditorApplication.delayCall += () => EditorApplication.Exit(success ? 0 : 1);

@@ -228,7 +228,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Scout
   id: 1
   displayName: Ember
-  knockdownDuration: 3
+  knockdownDuration: 4.5
   inputEnabled: 1
   aiControlled: 0
   art: {fileID: 7008911880329495265}

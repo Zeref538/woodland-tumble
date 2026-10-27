@@ -1,0 +1,27 @@
+{
+  "reviewedUniqueFrames": 1288,
+  "reviewedCharacters": 8,
+  "reviewedAnimationStatesPerCharacter": 17,
+  "comparisonSheets": 32,
+  "scale": 0.7,
+  "method": "Inspect all ten frames per action with an idle reference repeated on every row. Compare face/head, torso, limb proportions and complete body silhouettes. Crop/fold/foreshortening and VFX bounds are not interpreted as body growth.",
+  "characterResults": {
+    "Fern": "No additional obvious malformed/proportion frames after v16 repairs.",
+    "Ember": "Repair Ultimate 06 and 07; remove neighboring flame fragment in DoubleJump 10.",
+    "Luna": "No additional obvious jumps after v16 Hurt calibration and v15 recovery calibration.",
+    "Bram": "No additional obvious jumps after v16 Hurt calibration.",
+    "Zephyr": "No additional obvious malformed/proportion frames after v16 Push repairs.",
+    "Volt": "No additional obvious malformed/proportion frames after v16 repairs.",
+    "Nyx": "Backstep 02 faces away from the rival; mirror that frame.",
+    "Marin": "Remove a neighboring boot fragment from Ultimate 03."
+  },
+  "limit": "All source frames received static visual review and clip-binding checks. Natural pose foreshortening remains; this is not a claim of mathematically identical anatomy or a substitute for human controller playtesting.",
+  "verification": {
+    "spriteClipChecks": 1288,
+    "contactChecks": 92,
+    "sceneChecks": 686,
+    "counterplayChecks": 16,
+    "nativeStartupSeconds": 18
+  },
+  "repairsCompleted": true
+}

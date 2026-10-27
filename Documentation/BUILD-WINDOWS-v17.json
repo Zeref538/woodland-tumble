@@ -1,0 +1,20 @@
+{
+  "buildResult": "Success",
+  "files": 179,
+  "bytes": 909467084.0,
+  "assemblySha256": "610CA9187DDEA21B95BDCEFAD58ACDE563D547B05D40512B47C7C2281A8CEA69",
+  "sceneSha256": "0D13AEA53A6BAACD52DAA20946C3F8A13C9781BA04F27A87A190834F08C6B165",
+  "sceneChecks": 686,
+  "contactChecks": 92,
+  "spriteClipChecks": 1288,
+  "counterplayChecks": 16,
+  "native": {
+    "sampleSeconds": 18,
+    "aliveAfterSample": true,
+    "verifiedExecutable": true,
+    "workingSetBytes": 1255284736,
+    "scriptDomainInitialized": true,
+    "loggedExceptions": 0,
+    "closedAfterTest": true
+  }
+}

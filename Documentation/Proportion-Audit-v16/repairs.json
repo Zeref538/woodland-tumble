@@ -1,0 +1,333 @@
+[
+  {
+    "fighter": "Fern",
+    "state": "Push",
+    "frame": 5,
+    "replacementFrame": 6,
+    "method": "Hold an adjacent reviewed complete pose; frame count and clip rate unchanged",
+    "oldSha256": "8af28ab0e997938487cd660bcc32f2ac31fd150b75558d62cc268b47fba98a50",
+    "sha256": "3b45ff146c99c99493451cc06a3341b298b8417194ae876c391d1f86c2a78a19"
+  },
+  {
+    "fighter": "Fern",
+    "state": "Ultimate",
+    "frame": 4,
+    "replacementFrame": 8,
+    "method": "Hold an adjacent reviewed complete pose; frame count and clip rate unchanged",
+    "oldSha256": "d098af216e5e4c96e33b997fc7e313b4ad5478180004dfdc7a0f55b9a2283b60",
+    "sha256": "2229dd611b0ee48019b662c8d50c55386b6a301052bff56a3f51bbc1b03cb9a6"
+  },
+  {
+    "fighter": "Fern",
+    "state": "Ultimate",
+    "frame": 5,
+    "replacementFrame": 8,
+    "method": "Hold an adjacent reviewed complete pose; frame count and clip rate unchanged",
+    "oldSha256": "8ade160b08fd8eb23a68e5f0333996aa6d65d11caa7ebed9a173bd95c45f53d9",
+    "sha256": "2229dd611b0ee48019b662c8d50c55386b6a301052bff56a3f51bbc1b03cb9a6",
+    "replacementPivotCopied": true
+  },
+  {
+    "fighter": "Zephyr",
+    "state": "Push",
+    "frame": 3,
+    "replacementFrame": 2,
+    "method": "Hold an adjacent reviewed complete pose; frame count and clip rate unchanged",
+    "oldSha256": "8e16a6220cf1f15b4babdbfefeafc747169f51c128b059c9a8cb43a2f2af1394",
+    "sha256": "cafee44983744740d9cbf05b4b36d9027b3cd1dc06259baecf689e6fbaeda086"
+  },
+  {
+    "fighter": "Zephyr",
+    "state": "Push",
+    "frame": 5,
+    "replacementFrame": 6,
+    "method": "Hold an adjacent reviewed complete pose; frame count and clip rate unchanged",
+    "oldSha256": "bb8ceaa166596c0c1fa554b7492dd582764c8516803389e50187563413bb1113",
+    "sha256": "fdb7f46a3e33f7bef953b51851184a8a22ce3e87272261c12eb0275de40749fe"
+  },
+  {
+    "fighter": "Volt",
+    "state": "Push",
+    "frame": 5,
+    "replacementFrame": 6,
+    "method": "Hold an adjacent reviewed complete pose; frame count and clip rate unchanged",
+    "oldSha256": "c1265f4a413665eab2a6521ab9aadb4ef808364a233f60ac109bb4b4019042f5",
+    "sha256": "6179a39da9c2a49629b6bf5d2421e1d5bffde2072a6552c47c1110397a95cfcc"
+  },
+  {
+    "fighter": "Volt",
+    "state": "Ultimate",
+    "frame": 4,
+    "replacementFrame": 6,
+    "method": "Hold an adjacent reviewed complete pose; frame count and clip rate unchanged",
+    "oldSha256": "bc7b222c52daed7af2a1914430b4b318754edae766c9201c8a6c192c6fcd5b91",
+    "sha256": "237874d1312b14271c16533c5df046454793205a890a8535a645d659a9f2baed"
+  },
+  {
+    "fighter": "Volt",
+    "state": "Ultimate",
+    "frame": 5,
+    "replacementFrame": 6,
+    "method": "Hold an adjacent reviewed complete pose; frame count and clip rate unchanged",
+    "oldSha256": "5fb3331ee7f646afeace985deef8a4be5364607efbe92457a77a8f013b233f9d",
+    "sha256": "237874d1312b14271c16533c5df046454793205a890a8535a645d659a9f2baed"
+  },
+  {
+    "fighter": "Volt",
+    "state": "Hurt",
+    "frame": 3,
+    "replacementFrame": 2,
+    "method": "Hold an adjacent reviewed complete pose; frame count and clip rate unchanged",
+    "oldSha256": "d5e01a5d6d1949f37efc9f7ce377e2f9b66e143407f357a0872db6c01cc55e03",
+    "sha256": "f50c317bef9c67bd3e3ac88d6bf0f6f8d18e22ff868a148c45032d5ae4180938"
+  },
+  {
+    "fighter": "Nyx",
+    "state": "Push",
+    "frame": 5,
+    "replacementFrame": 4,
+    "method": "Hold an adjacent reviewed complete pose; frame count and clip rate unchanged",
+    "oldSha256": "6dfcfcf493e270a7c34c440838087d635051ac773293392ac853bac40ff17f54",
+    "sha256": "513873b55b35162d1481fd5b6cba815c9a2261881b10b052dd2508e1f507f0e0"
+  },
+  {
+    "fighter": "Luna",
+    "state": "Hurt",
+    "frame": 1,
+    "uniformScale": 0.93,
+    "pivotPreserved": [
+      0.5,
+      0.09375
+    ],
+    "oldSha256": "94128ff9d5579479d86af110f7bd3138fd1cc4c9e25c217457cd875d0dd0dde7",
+    "sha256": "c1116f3d101b31fe5bcf94c16a0992731fa954b765110452ae22b91e2584e12b"
+  },
+  {
+    "fighter": "Luna",
+    "state": "Hurt",
+    "frame": 2,
+    "uniformScale": 0.93,
+    "pivotPreserved": [
+      0.5,
+      0.09375
+    ],
+    "oldSha256": "2c98e97dd9cc1577a1aaa78ccb28e853107106c2f8c447ac0ea4618ba71aed2c",
+    "sha256": "a5c01116b07578a7319facfd156805a2d64dcea71e50da651e743fb44270c2f7"
+  },
+  {
+    "fighter": "Luna",
+    "state": "Hurt",
+    "frame": 3,
+    "uniformScale": 0.93,
+    "pivotPreserved": [
+      0.5,
+      0.09375
+    ],
+    "oldSha256": "b6a35a74811b0dc934b9c8c0e5f2ba76b346a986fbd80ef72f2d47e036f29f51",
+    "sha256": "e85a950d304e6f4aaf28d88f30a8d9d082287670c3cd653c3166bad15583403f"
+  },
+  {
+    "fighter": "Luna",
+    "state": "Hurt",
+    "frame": 4,
+    "uniformScale": 0.93,
+    "pivotPreserved": [
+      0.5,
+      0.09375
+    ],
+    "oldSha256": "cbf4b4cf15efee8340f08bc39dd8571c312a8e781b44678ffc1e28fd8e99aa71",
+    "sha256": "1374be1d0e046f98b3866eda52f4ab4e83f02af28c720730b1dfb623168660e5"
+  },
+  {
+    "fighter": "Luna",
+    "state": "Hurt",
+    "frame": 5,
+    "uniformScale": 0.93,
+    "pivotPreserved": [
+      0.5,
+      0.09375
+    ],
+    "oldSha256": "63af2f37fba71afbdc8e97069dfc8a73751e94ef053bc4a3b1a5f4cb82be765b",
+    "sha256": "8478fdcacebbcc9db910f57307f7b20dfea73d0eb7de5c021ad2eeefd962076e"
+  },
+  {
+    "fighter": "Luna",
+    "state": "Hurt",
+    "frame": 6,
+    "uniformScale": 0.93,
+    "pivotPreserved": [
+      0.5,
+      0.09375
+    ],
+    "oldSha256": "070157cff5f5541ad1ac2a8260be9ff8b4bce0a620d0b5aed2d7d6faf1cf1c36",
+    "sha256": "7b2714c90471e8d0c6164c4de53c2694892eb258b904a826440d9da977258f97"
+  },
+  {
+    "fighter": "Luna",
+    "state": "Hurt",
+    "frame": 7,
+    "uniformScale": 0.93,
+    "pivotPreserved": [
+      0.5,
+      0.09375
+    ],
+    "oldSha256": "d9767c72bd26827d77fb2199fd621383e91c6f4d9375ff63ac233da19033e0e8",
+    "sha256": "dd156b207fc4685a76535ddb7901adf48d862f833a01233d615bfa9687492d37"
+  },
+  {
+    "fighter": "Luna",
+    "state": "Hurt",
+    "frame": 8,
+    "uniformScale": 0.93,
+    "pivotPreserved": [
+      0.5,
+      0.09375
+    ],
+    "oldSha256": "8d97fa531853d4fbc83d98bb4a02ad5b91db53c204cce9e7a83c63d0b2cf73c0",
+    "sha256": "375657ee89d476dac84cc465de622721cf0e794b92355137f291beca94912db4"
+  },
+  {
+    "fighter": "Luna",
+    "state": "Hurt",
+    "frame": 9,
+    "uniformScale": 0.93,
+    "pivotPreserved": [
+      0.5,
+      0.09375
+    ],
+    "oldSha256": "13baafe9dc5764a342362734dd0f40f596cf0d1003505879de2247f2a8e0fbaf",
+    "sha256": "57af7f1a003299f033dde7428e948d49714f543fdda59dc12b97450f7d05a267"
+  },
+  {
+    "fighter": "Luna",
+    "state": "Hurt",
+    "frame": 10,
+    "uniformScale": 0.93,
+    "pivotPreserved": [
+      0.5,
+      0.09375
+    ],
+    "oldSha256": "72699d1312d1f6fd891be08c6d4ebc1e3d4249bc37685b19abe6c12ea9731183",
+    "sha256": "27bcef986b1d06ae6403823afcaf6224a674a230ab7432a817bb52c0a7430752"
+  },
+  {
+    "fighter": "Bram",
+    "state": "Hurt",
+    "frame": 1,
+    "uniformScale": 0.88,
+    "pivotPreserved": [
+      0.5,
+      0.09375
+    ],
+    "oldSha256": "3e18d181c75a1d27f563dc5b961e5134dc532b2b47988ce2059a123d778706e9",
+    "sha256": "166535fa62d1fb9de28fdaad51e5b47778df3a5839271911a8d9f3243851167c"
+  },
+  {
+    "fighter": "Bram",
+    "state": "Hurt",
+    "frame": 2,
+    "uniformScale": 0.88,
+    "pivotPreserved": [
+      0.5,
+      0.09375
+    ],
+    "oldSha256": "605a3c3f08b6ee028f3c882bcd1f7455e2d01033f748da3ba2a833c1e09dfebf",
+    "sha256": "b8608fa20a4ab1dea0de90c4895519ef8e6f8f7481194a21e2c4c2b74bd42759"
+  },
+  {
+    "fighter": "Bram",
+    "state": "Hurt",
+    "frame": 3,
+    "uniformScale": 0.88,
+    "pivotPreserved": [
+      0.5,
+      0.09375
+    ],
+    "oldSha256": "4c27ca0fec5e38879f3d132d0a766f8e64c1ac282777c5abf920b8147dad8ed8",
+    "sha256": "69a4615bae022986987d0e2f9d6f23ebcc0c669dac561124379d504066775d42"
+  },
+  {
+    "fighter": "Bram",
+    "state": "Hurt",
+    "frame": 4,
+    "uniformScale": 0.88,
+    "pivotPreserved": [
+      0.5,
+      0.09375
+    ],
+    "oldSha256": "2fce829a3225374155bcf57081b79de21b2ff65dcc97a4be5db221d3e607b5a3",
+    "sha256": "87f902ef329296093bb6cdb7c1574a5aa0a0002def561c4b3be27e6c360b9282"
+  },
+  {
+    "fighter": "Bram",
+    "state": "Hurt",
+    "frame": 5,
+    "uniformScale": 0.88,
+    "pivotPreserved": [
+      0.5,
+      0.09375
+    ],
+    "oldSha256": "8dd8d24aae57c8533493496df96f05e28f26083ae783acfe887022fb9b538944",
+    "sha256": "02deced90885d5ab219413774343b68edff0fb7b56ee0804e8fab0b76a86cb33"
+  },
+  {
+    "fighter": "Bram",
+    "state": "Hurt",
+    "frame": 6,
+    "uniformScale": 0.88,
+    "pivotPreserved": [
+      0.5,
+      0.09375
+    ],
+    "oldSha256": "604387211f7afc970d30de8922889f3e568b9e093572290a8582405bc11ceabc",
+    "sha256": "3f229c783d73b168ebd237faaaef3466af9e2e6b5d471459d2fc959c5a327518"
+  },
+  {
+    "fighter": "Bram",
+    "state": "Hurt",
+    "frame": 7,
+    "uniformScale": 0.88,
+    "pivotPreserved": [
+      0.5,
+      0.09375
+    ],
+    "oldSha256": "8f1de87df8f7f4e7199718baf8ef7edbb84549b39dc4306514268b7dcb6a02ca",
+    "sha256": "e599730c4a9c615e697eb95c730c262dc93af4fd11311f744dd89c652a1b302e"
+  },
+  {
+    "fighter": "Bram",
+    "state": "Hurt",
+    "frame": 8,
+    "uniformScale": 0.88,
+    "pivotPreserved": [
+      0.5,
+      0.09375
+    ],
+    "oldSha256": "6ad894526a94995343954ea73bfd8b469d646e17e4b2643c5535bff6bb9eb4e9",
+    "sha256": "470073692acdba496ca981a741bb08658873eadeb1ab400dc7c10f338bf8eec2"
+  },
+  {
+    "fighter": "Bram",
+    "state": "Hurt",
+    "frame": 9,
+    "uniformScale": 0.88,
+    "pivotPreserved": [
+      0.5,
+      0.09375
+    ],
+    "oldSha256": "a4cffcdab4fb794f4c51949bc3eaa257c0e49c5eb42006af8d1373b31c0d1dd7",
+    "sha256": "958225f43dc52fa3c409392e08eacb5303fca4e821a9d39d4b1f72913577ae17"
+  },
+  {
+    "fighter": "Bram",
+    "state": "Hurt",
+    "frame": 10,
+    "uniformScale": 0.88,
+    "pivotPreserved": [
+      0.5,
+      0.09375
+    ],
+    "oldSha256": "c1f8e71017be55dfeb9c0e53cfb7742b30530c59ae16cab1555f48d268b628a1",
+    "sha256": "2a7ba372c2cf745d5358cd33c1059693a925e49ff3c16b5ed1dac49954b94442"
+  }
+]

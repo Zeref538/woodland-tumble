@@ -1,0 +1,94 @@
+{
+  "inventoriedFrames": 1288,
+  "visuallyInspectedRepresentativeFrames": 392,
+  "fighters": 8,
+  "sampleFrames": [
+    1,
+    5,
+    10
+  ],
+  "findings": [
+    {
+      "fighter": "Fern",
+      "issue": "Push 05 and Ultimate 05 display detached leaf/VFX fragments instead of a complete fighter."
+    },
+    {
+      "fighter": "Zephyr",
+      "issue": "Push 05 contains two fighter bodies in one frame."
+    },
+    {
+      "fighter": "Volt",
+      "issue": "Push 05 contains two fighter bodies; Ultimate 05 displays only lightning."
+    },
+    {
+      "fighter": "Nyx",
+      "issue": "Push 05 displays only a detached purple effect."
+    },
+    {
+      "fighter": "Luna",
+      "issue": "Hurt poses have a visibly larger head than idle. Needs landmark-based calibration, not fitting the full VFX bounds."
+    },
+    {
+      "fighter": "Bram",
+      "issue": "Hurt 01 has a visibly larger head than idle."
+    }
+  ],
+  "notes": [
+    "Effects and crouching change bounding size naturally; bounding-box height alone does not prove proportion consistency.",
+    "Ember, Marin and the remaining sampled poses still need a frame-by-frame landmark pass.",
+    "No runtime sprites were modified during this audit."
+  ],
+  "shortFrameCandidates": [
+    {
+      "fighter": "Volt",
+      "state": "Hurt",
+      "frame": "03",
+      "canvas": [
+        384,
+        256
+      ],
+      "visible": [
+        190,
+        180,
+        226,
+        233
+      ],
+      "visibleWidth": 36,
+      "visibleHeight": 53
+    },
+    {
+      "fighter": "Volt",
+      "state": "Ultimate",
+      "frame": "05",
+      "canvas": [
+        384,
+        256
+      ],
+      "visible": [
+        147,
+        179,
+        206,
+        232
+      ],
+      "visibleWidth": 59,
+      "visibleHeight": 53
+    },
+    {
+      "fighter": "Nyx",
+      "state": "Push",
+      "frame": "05",
+      "canvas": [
+        384,
+        256
+      ],
+      "visible": [
+        167,
+        203,
+        218,
+        232
+      ],
+      "visibleWidth": 51,
+      "visibleHeight": 29
+    }
+  ]
+}

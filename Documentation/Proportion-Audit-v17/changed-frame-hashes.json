@@ -1,0 +1,37 @@
+[
+  {
+    "fighter": "Ember",
+    "state": "DoubleJump",
+    "frame": 10,
+    "before": "f647b10d52a832139091fe82247a0236d1ed804c2bfde4f54bd300f97bc0d00b",
+    "after": "32a76866ba6533a49b6b5ea8936f8e219f03ae22e2cb4754e9f32df688030784"
+  },
+  {
+    "fighter": "Ember",
+    "state": "Ultimate",
+    "frame": 6,
+    "before": "203450b6d7956c495d80067e56cb2cae8c384cc7824c7e01df953a994508ffdf",
+    "after": "d141db464ab537904e529d55ee9de1316246b49ae3eecce5cdc6a12f927705f8"
+  },
+  {
+    "fighter": "Ember",
+    "state": "Ultimate",
+    "frame": 7,
+    "before": "a814609266107a15764197f23c02615655e1de5b16e7df4a078cf5cc4415f050",
+    "after": "672ac5b83d2f1be4b35e75e3a864a77909d63d29e5dae1302ffc768655bf329c"
+  },
+  {
+    "fighter": "Nyx",
+    "state": "Backstep",
+    "frame": 2,
+    "before": "178cf3ca9c996954f7d0d453139091872c13a131270fe7ab7737eb56fc663a46",
+    "after": "2d51f946bae85e67c12cb154747090ffcda12cb8c5368749f5b59c0f930667da"
+  },
+  {
+    "fighter": "Marin",
+    "state": "Ultimate",
+    "frame": 3,
+    "before": "e34eda014c99523f862c57e8e333d628db6f0ca5a9da311cf5a04d0d63bade19",
+    "after": "ebd902974de774dcc73ab6b2b45b59ebc56e990d6742b716b55bf88eae5fae6e"
+  }
+]

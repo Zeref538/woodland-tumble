@@ -29,6 +29,7 @@ public class WoodlandEffects : MonoBehaviour
     readonly Sprite[][] comboHits=new Sprite[8][],comboFinishers=new Sprite[8][],brushSwings=new Sprite[8][],brushGuards=new Sprite[8][];
     readonly Sprite[][] elementalShields=new Sprite[8][];
     public int ShieldFramesLoaded(int character)=>character>=0&&character<8?(elementalShields[character]?.Length??0):0;
+    public Sprite ShieldFrame(int character,int index=-1)=>ShieldFramesLoaded(character)>0?elementalShields[character][(index<0?Mathf.FloorToInt(Time.time*12):index)%elementalShields[character].Length]:null;
     public int AttackFramesLoaded(int character)=>character>=0&&character<8?ComboFramesLoaded(character)+(brushSwings[character]?.Length??0)+(brushGuards[character]?.Length??0):0;
     public int ComboAnimationsPlayed { get; private set; }
     public int ComboFramesLoaded(int character)=>character>=0&&character<8?(comboHits[character]?.Length??0)+(comboFinishers[character]?.Length??0):0;
@@ -507,9 +508,7 @@ public class WoodlandEffects : MonoBehaviour
     {
         var frames=elementalShields[Mathf.Clamp(character,0,7)];
         if(frames!=null && frames.Length>0) {
-            var frame=frames[Mathf.FloorToInt(Time.time*12)%frames.Length];
-            int shield=Emit(frame,point+new Vector2(facing*.72f,.05f),Vector2.zero,new Color(1,1,1,.72f+.28f*strength),.09f,Vector2.one*2.4f,Vector2.one*2.4f,0,10);
-            pool[shield].art.flipX=facing<0;return;
+            return; // Scout owns one opaque shield renderer and matching trigger.
         }
         Light(point+Vector2.right*facing*.45f,tint,.9f,.12f);
         // A forward crescent leaves the back exposed and makes guard direction visible.
@@ -543,13 +542,9 @@ public class WoodlandEffects : MonoBehaviour
         Light(point,tint,broken?2.6f:1.7f);KickCamera(Vector2.right*facing,parry?.08f:.04f);if(parry)FreezeImpact(.045f);
         var color = parry ? Color.white : broken ? new Color(1,.25f,.2f) : tint;
         character=character<0?0:Mathf.Clamp(character,0,7);
-        var frames=brushGuards[character];
-        if(frames!=null && frames.Length>0) {
-            float size=broken?2.35f:parry?1.9f:1.5f;
-            int index=Emit(frames[0],point,Vector2.zero,broken?color:Color.white,.28f,Vector2.one*size,Vector2.one*size,0,11);
-            pool[index].frames=frames;pool[index].art.flipX=facing<0;
-        }
-        Burst(point,Vector2.right*facing,broken?10:4,color,2);
+        Vector2 contact=point+Vector2.right*facing*.95f;
+        Emit(star,contact,Vector2.zero,color,.12f,Vector2.one*(broken?.5f:parry?.35f:.18f),Vector2.zero,0,11);
+        Burst(contact,Vector2.right*facing,broken?10:3,color,broken?2:.45f);
         shake = Mathf.Max(shake, parry ? .06f : .04f);
     }
     public void Smash(Vector2 point, float facing, Color tint, float charge,int character=0)

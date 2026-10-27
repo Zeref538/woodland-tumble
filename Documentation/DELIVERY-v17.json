@@ -1,0 +1,84 @@
+{
+  "verifiedAtUtc": "2026-10-27T08:21:19.393638+00:00",
+  "scope": "Complete eight-fighter sprite audit and accumulated menu/contact/recovery corrections",
+  "reviewedSpriteFrames": 1288,
+  "characters": 8,
+  "statesPerCharacter": 17,
+  "spriteClipChecks": 1288,
+  "contactChecks": 92,
+  "sceneChecks": 686,
+  "counterplayChecks": 16,
+  "latestSpriteRepairs": [
+    {
+      "fighter": "Ember",
+      "state": "Ultimate",
+      "frame": 6,
+      "repair": "Use complete neighboring pose 5 with matching pivot; retain clip timing",
+      "beforeSha256": "203450b6d7956c495d80067e56cb2cae8c384cc7824c7e01df953a994508ffdf"
+    },
+    {
+      "fighter": "Ember",
+      "state": "Ultimate",
+      "frame": 7,
+      "repair": "Use complete neighboring pose 8 with matching pivot; retain clip timing",
+      "beforeSha256": "a814609266107a15764197f23c02615655e1de5b16e7df4a078cf5cc4415f050"
+    },
+    {
+      "fighter": "Nyx",
+      "state": "Backstep",
+      "frame": 2,
+      "repair": "Mirror the incorrect-facing pose so the fighter keeps facing the rival."
+    },
+    {
+      "fighter": "Marin",
+      "state": "Ultimate",
+      "frame": 3,
+      "repair": "Remove an isolated neighboring-frame fragment by its connected component",
+      "removedBounds": [
+        285,
+        258,
+        292,
+        286
+      ]
+    },
+    {
+      "fighter": "Ember",
+      "state": "DoubleJump",
+      "frame": 10,
+      "repair": "Remove an isolated neighboring-frame fragment by its connected component",
+      "removedBounds": [
+        278,
+        295,
+        290,
+        311
+      ]
+    }
+  ],
+  "previousSpriteRepairs": 30,
+  "build": {
+    "buildResult": "Success",
+    "files": 179,
+    "bytes": 909467084.0,
+    "assemblySha256": "610CA9187DDEA21B95BDCEFAD58ACDE563D547B05D40512B47C7C2281A8CEA69",
+    "sceneSha256": "0D13AEA53A6BAACD52DAA20946C3F8A13C9781BA04F27A87A190834F08C6B165",
+    "sceneChecks": 686,
+    "contactChecks": 92,
+    "spriteClipChecks": 1288,
+    "counterplayChecks": 16,
+    "native": {
+      "sampleSeconds": 18,
+      "aliveAfterSample": true,
+      "verifiedExecutable": true,
+      "workingSetBytes": 1255284736,
+      "scriptDomainInitialized": true,
+      "loggedExceptions": 0,
+      "closedAfterTest": true
+    }
+  },
+  "remaining": [
+    "Human two-player/controller playtest.",
+    "Previously blocked unused Corin/font cleanup remains untouched.",
+    "Daily automation deletion remains unavailable because its desktop connection closed."
+  ],
+  "shutdownPerformed": false
+}

@@ -3,7 +3,7 @@
     "status": "MIDTERM_COMBAT_PASS: affordable guard, stable knockdowns, Thunder Rush, eight long-range attacks and two ranged ultimates",
     "checks": [
         "Guard starts through the live hold path",
-        "Holding guard for one second costs less than 5.5 stamina [blocking=True, before=100, after=96.9738, drain=3, playing=True]",
+        "Holding guard for one second costs less than 5.5 stamina [blocking=True, before=100, after=96.99991, drain=3, playing=True]",
         "Established guard blocks the frontal punch",
         "Blocking a punch costs less energy than throwing one",
         "Knockdown setup confirms hit 0",

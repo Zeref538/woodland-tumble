@@ -1,0 +1,3362 @@
+[
+  {
+    "path": "Assets\\Art\\CharactersRework\\Fern\\Knockout\\01.png",
+    "oldSha256": "706755f78b7ca2bdd047876fd0432a94ca57157118884de223afec96956a0ab0",
+    "sha256": "ad8bd2d741900d33bad2138cb1a3725638f637e00b548c595b7fabb405d01efd",
+    "sharedScale": 0.6418918918918919,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      100,
+      99,
+      284,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Fern\\Knockout\\02.png",
+    "oldSha256": "d2ac7aff17e3c4a2ebf5376a5e97c99fe480ae9f48b2db4b951613559f6de5e2",
+    "sha256": "ad8bd2d741900d33bad2138cb1a3725638f637e00b548c595b7fabb405d01efd",
+    "sharedScale": 0.6418918918918919,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      100,
+      99,
+      284,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Fern\\Knockout\\03.png",
+    "oldSha256": "9edf2e85bb5d5378af1945f697e42d16cf6718f3265e76f4ec5fd888d17c5715",
+    "sha256": "54246f2069edbcd2498e2db76cd4c7f5b190365fe1afcc8fbcc380d26af5bbb0",
+    "sharedScale": 0.6418918918918919,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      112,
+      138,
+      271,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Fern\\Knockout\\04.png",
+    "oldSha256": "e9b5b0be4f07d91dba6004c7eabba212cd71fea311a0eccf4432075697938515",
+    "sha256": "54246f2069edbcd2498e2db76cd4c7f5b190365fe1afcc8fbcc380d26af5bbb0",
+    "sharedScale": 0.6418918918918919,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      112,
+      138,
+      271,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Fern\\Knockout\\05.png",
+    "oldSha256": "743d8a04e810642ecc6d5a0ac709765eb8b7286884d42e3c2df82f11bf84760f",
+    "sha256": "6b3d548f20a80927f316a7be70f7a8566cd6f8166b089a58771de1e5bcdd914f",
+    "sharedScale": 0.6418918918918919,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      109,
+      169,
+      275,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Fern\\Knockout\\06.png",
+    "oldSha256": "67edd926ab4d8d7591062e12e92c096d62401d27eca90c807ac49f9dcce28636",
+    "sha256": "6b3d548f20a80927f316a7be70f7a8566cd6f8166b089a58771de1e5bcdd914f",
+    "sharedScale": 0.6418918918918919,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      109,
+      169,
+      275,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Fern\\Knockout\\07.png",
+    "oldSha256": "774fd1c9b9ea99cf4597b8f5005a2463f55f7c15d93ab259db6849db0cb34a2b",
+    "sha256": "51b8c5289b460757abcc9edeeb5966578631f562f38c954485c385b18c241146",
+    "sharedScale": 0.6418918918918919,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      94,
+      187,
+      289,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Fern\\Knockout\\08.png",
+    "oldSha256": "00dec85e2487baf71960ac7de337897d2c7b6df1385025b180a2a2fdd2ef0d06",
+    "sha256": "51b8c5289b460757abcc9edeeb5966578631f562f38c954485c385b18c241146",
+    "sharedScale": 0.6418918918918919,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      94,
+      187,
+      289,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Fern\\Knockout\\09.png",
+    "oldSha256": "239dc9cd880b954e6395f4c5ff03e9c1519bf36cf8e2a3ce19fab0052b3c0b73",
+    "sha256": "b2d04001b9bfc99168e85576a7f6123c56b6c8a8c4a4f523395ed4008c3ba526",
+    "sharedScale": 0.6418918918918919,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      101,
+      213,
+      282,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Fern\\Knockout\\10.png",
+    "oldSha256": "9c5a8c2568e46a1ca447fd8bd20c420b9e15e5cac03d5888cc0171d30c4c3369",
+    "sha256": "b2d04001b9bfc99168e85576a7f6123c56b6c8a8c4a4f523395ed4008c3ba526",
+    "sharedScale": 0.6418918918918919,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      101,
+      213,
+      282,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Fern\\Downed\\01.png",
+    "oldSha256": "3dd7184f581ac1ac4b58f31361595f25d2c9a34e22389a7a5f5be9bbf4c55de3",
+    "sha256": "b58730160f9d7d8002bc13043bac4466932b96bb97be53b29c29741c10b14045",
+    "sharedScale": 0.6418918918918919,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      99,
+      212,
+      284,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Fern\\Downed\\02.png",
+    "oldSha256": "b756f0e9ffefb6a5a9a721a7dd8c795d9432d5e8151aa52b8c7f10657e77ad5a",
+    "sha256": "5cc036bbba3332566721c7bba11158ea334bb3510c3fb5a2b66ac76c8f6f52e5",
+    "sharedScale": 0.6418918918918919,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      97,
+      212,
+      286,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Fern\\Downed\\03.png",
+    "oldSha256": "2c4084727123a381cdaea67b805b9e0b3a4a647140e3b53eacb5eb4b25ca8e11",
+    "sha256": "187b840cc05b30bfa1590ace1b5d17be7921758f24e6ebf7281e18d8607959dc",
+    "sharedScale": 0.6418918918918919,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      99,
+      212,
+      285,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Fern\\Downed\\04.png",
+    "oldSha256": "71c9dfa4811e19e5227fcab2e500e378216404a48dc7282a2ad6ca3f1ff61218",
+    "sha256": "28558e61239015052994fbdd3b4ea9117cdec7565d19b39c7444446b5398d2c2",
+    "sharedScale": 0.6418918918918919,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      98,
+      212,
+      285,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Fern\\Downed\\05.png",
+    "oldSha256": "b252faa3c16ab2dee9fdbe272a0c19eabdfb65019c67716085be5384ffcb40ec",
+    "sha256": "45367f6b0a0b4ff45122133eb46f92ac850d6a1ae78926ec60e013ffe3a407ed",
+    "sharedScale": 0.6418918918918919,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      101,
+      212,
+      283,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Fern\\Downed\\06.png",
+    "oldSha256": "601facaf6cab02ff434a15e8b29c99cd2bb6d5c2d1869ecdab7cf2971aa0e09d",
+    "sha256": "28558e61239015052994fbdd3b4ea9117cdec7565d19b39c7444446b5398d2c2",
+    "sharedScale": 0.6418918918918919,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      98,
+      212,
+      285,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Fern\\Downed\\07.png",
+    "oldSha256": "167fe2a89c56b34454d4ada92bd24526dd546e3d5718ffca6d669aae17c9c253",
+    "sha256": "187b840cc05b30bfa1590ace1b5d17be7921758f24e6ebf7281e18d8607959dc",
+    "sharedScale": 0.6418918918918919,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      99,
+      212,
+      285,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Fern\\Downed\\08.png",
+    "oldSha256": "c5c7b45b08700804e6530d44a156dc2c7f224fed9e426a7329fb25a4b5b41e34",
+    "sha256": "5cc036bbba3332566721c7bba11158ea334bb3510c3fb5a2b66ac76c8f6f52e5",
+    "sharedScale": 0.6418918918918919,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      97,
+      212,
+      286,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Fern\\Downed\\09.png",
+    "oldSha256": "5356f4be8065b70012f327946a11dfe5abd170dd3d93dcf780be9d9a5613664d",
+    "sha256": "b58730160f9d7d8002bc13043bac4466932b96bb97be53b29c29741c10b14045",
+    "sharedScale": 0.6418918918918919,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      99,
+      212,
+      284,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Fern\\Downed\\10.png",
+    "oldSha256": "07ac4ebfc5bf22624c07a7ee5afc0d0f40723a9adca0b92638331e5aef9eaa20",
+    "sha256": "5cc036bbba3332566721c7bba11158ea334bb3510c3fb5a2b66ac76c8f6f52e5",
+    "sharedScale": 0.6418918918918919,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      97,
+      212,
+      286,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Fern\\GetUp\\01.png",
+    "oldSha256": "b761c88cee34bf688b8da6184613963f67405af4b2bab9a9f59ad99ab510987b",
+    "sha256": "c18945e83aed926b9e51022fc8aea2129550e5854360ba6a8f137ed6430958cb",
+    "sharedScale": 0.6418918918918919,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      100,
+      212,
+      284,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Fern\\GetUp\\02.png",
+    "oldSha256": "2182aa3c663f7a46909752300fbbe2f227d5d67cdc756289c882d47fceeec701",
+    "sha256": "c18945e83aed926b9e51022fc8aea2129550e5854360ba6a8f137ed6430958cb",
+    "sharedScale": 0.6418918918918919,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      100,
+      212,
+      284,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Fern\\GetUp\\03.png",
+    "oldSha256": "4a7122fbaa07d6007d63cc0839ea77bbaba58892881224ef63bf140f26a5dc7a",
+    "sha256": "559f5087d56ca8ca963595aeb747e22bd20f049c14124d5f7dc7f68ef9b2146b",
+    "sharedScale": 0.6418918918918919,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      97,
+      186,
+      287,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Fern\\GetUp\\04.png",
+    "oldSha256": "2c66e12619f1ca1bebebe1f53d938b779ba51703e35538d6f9b712b4db1c817c",
+    "sha256": "559f5087d56ca8ca963595aeb747e22bd20f049c14124d5f7dc7f68ef9b2146b",
+    "sharedScale": 0.6418918918918919,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      97,
+      186,
+      287,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Fern\\GetUp\\05.png",
+    "oldSha256": "d70062a7159d8e8dcc52981d23744d4c21d84f5a1c90e8725c4cdb16f5375e40",
+    "sha256": "425193f18b4e8e31a2b5bc759a30c9dbe6e2382b203e5cf6fbf70933b6d4a021",
+    "sharedScale": 0.6418918918918919,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      115,
+      157,
+      268,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Fern\\GetUp\\06.png",
+    "oldSha256": "39e26cc36e29a04433ede7fa3ea9c6b54b9ded0352a33229b21944615227a6ab",
+    "sha256": "425193f18b4e8e31a2b5bc759a30c9dbe6e2382b203e5cf6fbf70933b6d4a021",
+    "sharedScale": 0.6418918918918919,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      115,
+      157,
+      268,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Fern\\GetUp\\07.png",
+    "oldSha256": "55f9049b1c16e3d37be5b1bdf261bc960f1ff8d8eb880577e05a87af0ff91803",
+    "sha256": "28e5d3c62954847ff8630c61373f5b625eac6e0e6f32fbbba54bb1f635c17dff",
+    "sharedScale": 0.6418918918918919,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      132,
+      113,
+      251,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Fern\\GetUp\\08.png",
+    "oldSha256": "4f3977eeeb705bc88c0e19e49f3e8d71f860375de2502781cf3bd6ca5728e1ba",
+    "sha256": "28e5d3c62954847ff8630c61373f5b625eac6e0e6f32fbbba54bb1f635c17dff",
+    "sharedScale": 0.6418918918918919,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      132,
+      113,
+      251,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Fern\\GetUp\\09.png",
+    "oldSha256": "60841c9ba86d5fdac150a73cea47e41f73c0b3b06c524003015d70e2fa966389",
+    "sha256": "bc6b078811dda78cb9ea0e9d833861fdedaa08fc62e4c021e08fe069a0dc11ff",
+    "sharedScale": 0.6418918918918919,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      138,
+      98,
+      246,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Fern\\GetUp\\10.png",
+    "oldSha256": "902935300caa0c0af768fc7caa11b18a43947bae8d4d5f123f8c1979aedd72a1",
+    "sha256": "bc6b078811dda78cb9ea0e9d833861fdedaa08fc62e4c021e08fe069a0dc11ff",
+    "sharedScale": 0.6418918918918919,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      138,
+      98,
+      246,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Ember\\Knockout\\01.png",
+    "oldSha256": "75682602e84c2ed62e851c3cb325235485edb49c064baa3c349102741c2200d4",
+    "sha256": "a021bd479f72bff8f8bf2002afae46144beda8cd315e67ff2013911f958feba3",
+    "sharedScale": 0.6484641638225256,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      112,
+      89,
+      272,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Ember\\Knockout\\02.png",
+    "oldSha256": "b27bfd17e46586afd7950b657a1f4df1da038e412280ea206c780d5b04049af5",
+    "sha256": "a021bd479f72bff8f8bf2002afae46144beda8cd315e67ff2013911f958feba3",
+    "sharedScale": 0.6484641638225256,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      112,
+      89,
+      272,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Ember\\Knockout\\03.png",
+    "oldSha256": "8caca3d335e2610b863d5b5ffd599ee8c0cbe3db8a32af4dea2c80783caa8ba4",
+    "sha256": "3829949e46cf2e37b713f9fde3225eed36afb6534fcc3b5a2ef8743a732e4e5a",
+    "sharedScale": 0.6484641638225256,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      113,
+      119,
+      271,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Ember\\Knockout\\04.png",
+    "oldSha256": "885508d5848ed51280269ab67d2dc607876bed4465cd180031a3f7638c57828e",
+    "sha256": "3829949e46cf2e37b713f9fde3225eed36afb6534fcc3b5a2ef8743a732e4e5a",
+    "sharedScale": 0.6484641638225256,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      113,
+      119,
+      271,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Ember\\Knockout\\05.png",
+    "oldSha256": "8f4d852766b8af0851794cb8798df67c70605ab59718d94dbe0e38daa5408aaa",
+    "sha256": "e399eba62bae6da90a0124b2dc7a36c9d2814a552b019ed742734c93f2a3fc58",
+    "sharedScale": 0.6484641638225256,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      121,
+      160,
+      262,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Ember\\Knockout\\06.png",
+    "oldSha256": "ed0175cf02a1458f77baa68e7e9b333985d40887dd541ba964dc74894d1fadd3",
+    "sha256": "e399eba62bae6da90a0124b2dc7a36c9d2814a552b019ed742734c93f2a3fc58",
+    "sharedScale": 0.6484641638225256,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      121,
+      160,
+      262,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Ember\\Knockout\\07.png",
+    "oldSha256": "102c31b8cca79ad9234d14f172afff8953a4a4973bcb607caa3882906c87db59",
+    "sha256": "9445570eabad4bbcb8c8183b38cfae0429331c0f67d63ae85243054a4de0d336",
+    "sharedScale": 0.6484641638225256,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      105,
+      193,
+      279,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Ember\\Knockout\\08.png",
+    "oldSha256": "3fa9895ba969ec3bc4664e7e6886def7b8e53600097294ed1a5ab4d9cd6dfe57",
+    "sha256": "9445570eabad4bbcb8c8183b38cfae0429331c0f67d63ae85243054a4de0d336",
+    "sharedScale": 0.6484641638225256,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      105,
+      193,
+      279,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Ember\\Knockout\\09.png",
+    "oldSha256": "4758ba42725792153c5025f7f2ba6caaeca13fa69e3164e89bbf44d608f9eeba",
+    "sha256": "56a7619ac54a24540bc5ecc09f6fc7fcc9eb1496d2ef3918e0a3c82e21015c3e",
+    "sharedScale": 0.6484641638225256,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      94,
+      217,
+      289,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Ember\\Knockout\\10.png",
+    "oldSha256": "c371643b14352d4c8c1fb568dfd8d8da6262f0e2879544df3544cb0992a48672",
+    "sha256": "56a7619ac54a24540bc5ecc09f6fc7fcc9eb1496d2ef3918e0a3c82e21015c3e",
+    "sharedScale": 0.6484641638225256,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      94,
+      217,
+      289,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Ember\\Downed\\01.png",
+    "oldSha256": "dc1b2f52d68e608700546ec7f9bf910de1dbb0f569f3944c093726552002604f",
+    "sha256": "fed47cffd9e0f275a9ea9917734edd0814cd6e1b7417f16676336004db2d1527",
+    "sharedScale": 0.6484641638225256,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      99,
+      218,
+      284,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Ember\\Downed\\02.png",
+    "oldSha256": "fb8c26733f7f3a75729bd12521353a7590dc9b1a76d2bf4614719ef27170afab",
+    "sha256": "0d5b030e402e3dfee3fc2d12ed3b34062be2eb4606aeed69cc625f1ebb6dbea6",
+    "sharedScale": 0.6484641638225256,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      99,
+      216,
+      284,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Ember\\Downed\\03.png",
+    "oldSha256": "cb7cd3ad941e63a6274e60b944636c94f09694954a8a9abc5df688dc387cfd10",
+    "sha256": "30db33d0b5aef5364d0727383269d9d9d7eee4a53a08d6b8a0c66848ec9b0bb9",
+    "sharedScale": 0.6484641638225256,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      99,
+      215,
+      285,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Ember\\Downed\\04.png",
+    "oldSha256": "8f6da04d5b2c55ae6985e5a7b84a2fc57e927ab7f4f1f4a33e657c7faafb086d",
+    "sha256": "6d5a37a78c454d05c561980ab7ce8f8eea6ff0be1b5bc7b99e48d275b7e8c170",
+    "sharedScale": 0.6484641638225256,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      98,
+      215,
+      286,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Ember\\Downed\\05.png",
+    "oldSha256": "db8f51bfad5de02fdc50b011b7b57cca345fe614e06d3b6f940367f2ba221579",
+    "sha256": "e4f6ddd12b7bdb5e117be88328789f1cf5891be500c8d543fbf155468db2ebf1",
+    "sharedScale": 0.6484641638225256,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      100,
+      215,
+      284,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Ember\\Downed\\06.png",
+    "oldSha256": "487286a9f6fdf38ee58bc898b96b9f0f678fe7ab5984e0cb8e078dadc5343170",
+    "sha256": "6d5a37a78c454d05c561980ab7ce8f8eea6ff0be1b5bc7b99e48d275b7e8c170",
+    "sharedScale": 0.6484641638225256,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      98,
+      215,
+      286,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Ember\\Downed\\07.png",
+    "oldSha256": "af515cfd48149470b1d46040b10d507a22073c2236a3dd87b962918c3095245f",
+    "sha256": "30db33d0b5aef5364d0727383269d9d9d7eee4a53a08d6b8a0c66848ec9b0bb9",
+    "sharedScale": 0.6484641638225256,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      99,
+      215,
+      285,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Ember\\Downed\\08.png",
+    "oldSha256": "c606a1416c59036ccb38e0d39a1907ce781d40f36c0cbbb33d419951efe88f93",
+    "sha256": "0d5b030e402e3dfee3fc2d12ed3b34062be2eb4606aeed69cc625f1ebb6dbea6",
+    "sharedScale": 0.6484641638225256,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      99,
+      216,
+      284,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Ember\\Downed\\09.png",
+    "oldSha256": "7728c60cda03b0420b7b8307c9baa3a365659ac4009d128567635550b47c7e84",
+    "sha256": "fed47cffd9e0f275a9ea9917734edd0814cd6e1b7417f16676336004db2d1527",
+    "sharedScale": 0.6484641638225256,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      99,
+      218,
+      284,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Ember\\Downed\\10.png",
+    "oldSha256": "291eabb9b00583a51385dcb6bee2104d2a295ceb3fa4add8acaaff96da8d6272",
+    "sha256": "0d5b030e402e3dfee3fc2d12ed3b34062be2eb4606aeed69cc625f1ebb6dbea6",
+    "sharedScale": 0.6484641638225256,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      99,
+      216,
+      284,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Ember\\GetUp\\01.png",
+    "oldSha256": "87eaf260041bf580b9c82a8c39c5df11815074b8037ef72f55e41078f145e542",
+    "sha256": "277495cf92e66da5fa9b84154334a3260b30b1dc2f8efeabecd2cacacd727560",
+    "sharedScale": 0.6484641638225256,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      97,
+      215,
+      286,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Ember\\GetUp\\02.png",
+    "oldSha256": "8f8cb2c3cdefd14e2137a8f12b0ecf14f0a1315c83cf2b9529071f72b136c7d0",
+    "sha256": "277495cf92e66da5fa9b84154334a3260b30b1dc2f8efeabecd2cacacd727560",
+    "sharedScale": 0.6484641638225256,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      97,
+      215,
+      286,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Ember\\GetUp\\03.png",
+    "oldSha256": "1c665327aa8e183ba75d317b36efc0748764f5c70acb0af457fdc20d8110a2df",
+    "sha256": "23a4051873a1fe24c2b2f4e0072ed11a3d7efea8a45f616a013ddef78ada7800",
+    "sharedScale": 0.6484641638225256,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      95,
+      172,
+      288,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Ember\\GetUp\\04.png",
+    "oldSha256": "211fb9b0b4e1071ddc8fa909bc9f5e1476337034581476166b789c1e1149a71e",
+    "sha256": "23a4051873a1fe24c2b2f4e0072ed11a3d7efea8a45f616a013ddef78ada7800",
+    "sharedScale": 0.6484641638225256,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      95,
+      172,
+      288,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Ember\\GetUp\\05.png",
+    "oldSha256": "6289ed6d65f90133dc92b5ac83ef446fc0b5583d909c44ad73f18b6c95b402a0",
+    "sha256": "b51fc0876f861ee6a1ebc5d21af6d24f0662bf4af3ed12659f3db07c6f417794",
+    "sharedScale": 0.6484641638225256,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      122,
+      155,
+      261,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Ember\\GetUp\\06.png",
+    "oldSha256": "e583b1d059a5bb6204685ebcfde60279abb0e53abbb244c0e27a545528887fab",
+    "sha256": "b51fc0876f861ee6a1ebc5d21af6d24f0662bf4af3ed12659f3db07c6f417794",
+    "sharedScale": 0.6484641638225256,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      122,
+      155,
+      261,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Ember\\GetUp\\07.png",
+    "oldSha256": "50a835fe826a7cf8caf5808b33e5f0af684f898dbf3b142c49bffccafd5f0c33",
+    "sha256": "818989d44670d87866147d7fcd12388106156d2f0356d0bc6c219850ab4a8400",
+    "sharedScale": 0.6484641638225256,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      130,
+      131,
+      254,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Ember\\GetUp\\08.png",
+    "oldSha256": "6f6e810a343a47e9b777a57b66edc174ef40ba4914bdfab5eca8788eb7143848",
+    "sha256": "818989d44670d87866147d7fcd12388106156d2f0356d0bc6c219850ab4a8400",
+    "sharedScale": 0.6484641638225256,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      130,
+      131,
+      254,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Ember\\GetUp\\09.png",
+    "oldSha256": "e9cb07dcb96c102ea1a48007cb53d548640a8a414294a646219c19d01d22ff1c",
+    "sha256": "9048f17ff4d9367f987308aea1c29b8e35595c3c22f91b6e17e10cb2670f9855",
+    "sharedScale": 0.6484641638225256,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      131,
+      98,
+      252,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Ember\\GetUp\\10.png",
+    "oldSha256": "6f0bd5a029dbaa36a53596d27f79b34ad46fa8719679bd5b0322e5dd1531a8ff",
+    "sha256": "9048f17ff4d9367f987308aea1c29b8e35595c3c22f91b6e17e10cb2670f9855",
+    "sharedScale": 0.6484641638225256,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      131,
+      98,
+      252,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Luna\\Knockout\\01.png",
+    "oldSha256": "774a2d3e203778530860f22005cb4404567cdd9a970a0d2a29bcc568d0ed91e7",
+    "sha256": "563e442f90aeef7786b03132132e5b8d0cbbcc0f8209a12056f74a7c13a9428a",
+    "sharedScale": 0.6909090909090909,
+    "poseScaleCorrection": 1.0,
+    "visiblePixels": [
+      101,
+      85,
+      282,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Luna\\Knockout\\02.png",
+    "oldSha256": "04ec00603aad7b541cc5360d4721bfde9aac1ebfeac764c880b957b0c4e6b1b4",
+    "sha256": "563e442f90aeef7786b03132132e5b8d0cbbcc0f8209a12056f74a7c13a9428a",
+    "sharedScale": 0.6909090909090909,
+    "poseScaleCorrection": 1.0,
+    "visiblePixels": [
+      101,
+      85,
+      282,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Luna\\Knockout\\03.png",
+    "oldSha256": "17b3475735b0ea03d8c2c215858cf8a2736cb1f1cb0142114abb13abef48fc14",
+    "sha256": "0facfd0d9414f0800bd904a132b3be5170a9e5149c8de64e61497474d710181b",
+    "sharedScale": 0.6909090909090909,
+    "poseScaleCorrection": 0.975,
+    "visiblePixels": [
+      112,
+      110,
+      272,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Luna\\Knockout\\04.png",
+    "oldSha256": "6362ec3ed41d1bfad9b286bdaa91bde184be5849808ddec735ad54b1b82919aa",
+    "sha256": "0facfd0d9414f0800bd904a132b3be5170a9e5149c8de64e61497474d710181b",
+    "sharedScale": 0.6909090909090909,
+    "poseScaleCorrection": 0.975,
+    "visiblePixels": [
+      112,
+      110,
+      272,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Luna\\Knockout\\05.png",
+    "oldSha256": "b3961a86c8a988db0c3e9422d6b9f3aa996d4f404b0afadeb6a68d82ecead05b",
+    "sha256": "cc8a9e55dfa3c1b0b7cb43b73c5182e71dbf3f72e7e386f0495b12e9f4edc0de",
+    "sharedScale": 0.6909090909090909,
+    "poseScaleCorrection": 0.95,
+    "visiblePixels": [
+      102,
+      160,
+      281,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Luna\\Knockout\\06.png",
+    "oldSha256": "f77c842f2548c4335be6ce8702c8869fd6d44f7ce3e4ec049f1cb3f0e1459f75",
+    "sha256": "cc8a9e55dfa3c1b0b7cb43b73c5182e71dbf3f72e7e386f0495b12e9f4edc0de",
+    "sharedScale": 0.6909090909090909,
+    "poseScaleCorrection": 0.95,
+    "visiblePixels": [
+      102,
+      160,
+      281,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Luna\\Knockout\\07.png",
+    "oldSha256": "997be6dca3cb2338882e1c124f1b957f33ad0976a6480f2afffd646ceb609935",
+    "sha256": "f3427334b68d4ad43c7d8317f08fba4dc4a46ac0b5da128f8f0ab5181a15d386",
+    "sharedScale": 0.6909090909090909,
+    "poseScaleCorrection": 0.925,
+    "visiblePixels": [
+      94,
+      188,
+      290,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Luna\\Knockout\\08.png",
+    "oldSha256": "13676653a1b60e0bed865f484f85852c454f58757ccd28da679581e3417c675f",
+    "sha256": "f3427334b68d4ad43c7d8317f08fba4dc4a46ac0b5da128f8f0ab5181a15d386",
+    "sharedScale": 0.6909090909090909,
+    "poseScaleCorrection": 0.925,
+    "visiblePixels": [
+      94,
+      188,
+      290,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Luna\\Knockout\\09.png",
+    "oldSha256": "ae3c15cef06108a1e5fb1189f4332679ced8335ce6a46ce7d9de9885181bd3d7",
+    "sha256": "db6c669325e42985be78c21bfaf6a2856323a8b9883310a7eb3ed18b04affc71",
+    "sharedScale": 0.6909090909090909,
+    "poseScaleCorrection": 0.9,
+    "visiblePixels": [
+      98,
+      209,
+      285,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Luna\\Knockout\\10.png",
+    "oldSha256": "32e63254fda2636f4af62b4c30e35fd4568f39870792c441fbea3b683c3407b2",
+    "sha256": "db6c669325e42985be78c21bfaf6a2856323a8b9883310a7eb3ed18b04affc71",
+    "sharedScale": 0.6909090909090909,
+    "poseScaleCorrection": 0.9,
+    "visiblePixels": [
+      98,
+      209,
+      285,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Luna\\Downed\\01.png",
+    "oldSha256": "8431def5f09878d748f69e1e17af0c1d4222b1f552a18534d5494cb09a978c92",
+    "sha256": "1e04127b11b256158d02f922610b8c8f6e3b2f1f74fc3b9ff7e220e5f63fee71",
+    "sharedScale": 0.6909090909090909,
+    "poseScaleCorrection": 0.9,
+    "visiblePixels": [
+      99,
+      210,
+      284,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Luna\\Downed\\02.png",
+    "oldSha256": "365efa171cf08170f2c15d58c85bdd11b8738c7771c49f202b0bdfcc70525924",
+    "sha256": "50216a8fb86ffe368eada66b3a2f0797d77940234527f97f8211636283f20db7",
+    "sharedScale": 0.6909090909090909,
+    "poseScaleCorrection": 0.9,
+    "visiblePixels": [
+      98,
+      210,
+      285,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Luna\\Downed\\03.png",
+    "oldSha256": "5e7db87c012baa8bb52cebfc01b58d4d7e6dea3d35353cffcae2422bcadb946b",
+    "sha256": "1757c5b0c4849ab92a3d8ea614d6c4cbca070dfe656104f3b6fc9663c420b544",
+    "sharedScale": 0.6909090909090909,
+    "poseScaleCorrection": 0.9,
+    "visiblePixels": [
+      103,
+      209,
+      281,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Luna\\Downed\\04.png",
+    "oldSha256": "4a0327d9f3afe6a11d0f2a5bde998575764f0cd5710c451c9626c735705cc3e4",
+    "sha256": "1caa347e6c58eb9ccfb130d2999a24dc452a950863af52131d6b5de69b9ca0e1",
+    "sharedScale": 0.6909090909090909,
+    "poseScaleCorrection": 0.9,
+    "visiblePixels": [
+      101,
+      206,
+      283,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Luna\\Downed\\05.png",
+    "oldSha256": "394a73c95526727531e6fa01e3471af4053dd96dccaf12bda8e9f6dadd27d7b4",
+    "sha256": "34dc9ded1586a173a8b38dad7c59a99302ef7b10eb3a4779211aa25e05bf4443",
+    "sharedScale": 0.6909090909090909,
+    "poseScaleCorrection": 0.9,
+    "visiblePixels": [
+      100,
+      210,
+      284,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Luna\\Downed\\06.png",
+    "oldSha256": "74f74caafd33276e6dd65522d0cb31973df5125991490ddcbc6d9bcbe79ce55d",
+    "sha256": "1caa347e6c58eb9ccfb130d2999a24dc452a950863af52131d6b5de69b9ca0e1",
+    "sharedScale": 0.6909090909090909,
+    "poseScaleCorrection": 0.9,
+    "visiblePixels": [
+      101,
+      206,
+      283,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Luna\\Downed\\07.png",
+    "oldSha256": "7ab1ed012d73c3be929ae6111845f3270da1a80289b0937edb02356b1e340ec1",
+    "sha256": "1757c5b0c4849ab92a3d8ea614d6c4cbca070dfe656104f3b6fc9663c420b544",
+    "sharedScale": 0.6909090909090909,
+    "poseScaleCorrection": 0.9,
+    "visiblePixels": [
+      103,
+      209,
+      281,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Luna\\Downed\\08.png",
+    "oldSha256": "20448efc6bda9ef98f951dd2548856fa6e6b62e97f24351f1736ea3717438a83",
+    "sha256": "50216a8fb86ffe368eada66b3a2f0797d77940234527f97f8211636283f20db7",
+    "sharedScale": 0.6909090909090909,
+    "poseScaleCorrection": 0.9,
+    "visiblePixels": [
+      98,
+      210,
+      285,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Luna\\Downed\\09.png",
+    "oldSha256": "ce9e4c8ca500fe4f02fbffd15e804c041532358a52981d8ed5d7dc851cb1ffed",
+    "sha256": "1e04127b11b256158d02f922610b8c8f6e3b2f1f74fc3b9ff7e220e5f63fee71",
+    "sharedScale": 0.6909090909090909,
+    "poseScaleCorrection": 0.9,
+    "visiblePixels": [
+      99,
+      210,
+      284,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Luna\\Downed\\10.png",
+    "oldSha256": "bbb51a66abc3fce8fcb716a1d9471e014e1594372520e17c13b4a54ff489aaf9",
+    "sha256": "50216a8fb86ffe368eada66b3a2f0797d77940234527f97f8211636283f20db7",
+    "sharedScale": 0.6909090909090909,
+    "poseScaleCorrection": 0.9,
+    "visiblePixels": [
+      98,
+      210,
+      285,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Luna\\GetUp\\01.png",
+    "oldSha256": "57db4311c43a2216fcfb6c88e62f202c45fc91524f368179ed2af1e650657153",
+    "sha256": "9857527afab23d932b5d540078a03ab6fbdf1804ded29ead174e8dc1c5abc1c1",
+    "sharedScale": 0.6909090909090909,
+    "poseScaleCorrection": 0.9,
+    "visiblePixels": [
+      98,
+      207,
+      286,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Luna\\GetUp\\02.png",
+    "oldSha256": "22b536831486e5c1e9908e64abf8f66c64ce904314203ef572b9a86cdb82cb7d",
+    "sha256": "9857527afab23d932b5d540078a03ab6fbdf1804ded29ead174e8dc1c5abc1c1",
+    "sharedScale": 0.6909090909090909,
+    "poseScaleCorrection": 0.9,
+    "visiblePixels": [
+      98,
+      207,
+      286,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Luna\\GetUp\\03.png",
+    "oldSha256": "329b312966e7e98c88c57f6e017e4c80b26fc13731cbfad195d74f1082ff4d86",
+    "sha256": "7d2e8be3528a986f7c664b06ef495c1b71a8ede3ad017d77370367c0650fefb3",
+    "sharedScale": 0.6909090909090909,
+    "poseScaleCorrection": 0.925,
+    "visiblePixels": [
+      88,
+      170,
+      295,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Luna\\GetUp\\04.png",
+    "oldSha256": "6fcd6fdb5d21a05f9f963aefa9611375ab4b978d9a5aed659090c5a32aca79d3",
+    "sha256": "7d2e8be3528a986f7c664b06ef495c1b71a8ede3ad017d77370367c0650fefb3",
+    "sharedScale": 0.6909090909090909,
+    "poseScaleCorrection": 0.925,
+    "visiblePixels": [
+      88,
+      170,
+      295,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Luna\\GetUp\\05.png",
+    "oldSha256": "77079d24f7f3e92844cecbc9f911b06ffd4d187295adeb5cc5d9cb26ad30969f",
+    "sha256": "506e97f81a115738f98f38ac90859d9cec25470dfc9ecf3df275fd9fde4adbd2",
+    "sharedScale": 0.6909090909090909,
+    "poseScaleCorrection": 0.9500000000000001,
+    "visiblePixels": [
+      110,
+      156,
+      273,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Luna\\GetUp\\06.png",
+    "oldSha256": "b4919d436ab66bc6d85361fc90c7609dff5688b92665a16ef9974fa772a51678",
+    "sha256": "506e97f81a115738f98f38ac90859d9cec25470dfc9ecf3df275fd9fde4adbd2",
+    "sharedScale": 0.6909090909090909,
+    "poseScaleCorrection": 0.9500000000000001,
+    "visiblePixels": [
+      110,
+      156,
+      273,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Luna\\GetUp\\07.png",
+    "oldSha256": "b60da0f6bf1fdcef42ab5ec70cd91fe8e1bfa9982ef2ccd787b7c35b099ff838",
+    "sha256": "80a002b29f049126e6a45df622e5c9db88814c940a0c71ad719ae8dd83aed9cf",
+    "sharedScale": 0.6909090909090909,
+    "poseScaleCorrection": 0.9750000000000001,
+    "visiblePixels": [
+      110,
+      137,
+      274,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Luna\\GetUp\\08.png",
+    "oldSha256": "d4cb59d3339ce6caa2c20c97c18590cacb7b8103b3e0c1547ad0b02ef58ac71f",
+    "sha256": "80a002b29f049126e6a45df622e5c9db88814c940a0c71ad719ae8dd83aed9cf",
+    "sharedScale": 0.6909090909090909,
+    "poseScaleCorrection": 0.9750000000000001,
+    "visiblePixels": [
+      110,
+      137,
+      274,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Luna\\GetUp\\09.png",
+    "oldSha256": "063ad5439718e02866265754877ee1b2a00eb23964dbd301096351738a299bb7",
+    "sha256": "944807c79fd67ac724e81d2b04713bf58f0e32a610f1da9177729d82bcd91a17",
+    "sharedScale": 0.6909090909090909,
+    "poseScaleCorrection": 1.0,
+    "visiblePixels": [
+      115,
+      98,
+      268,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Luna\\GetUp\\10.png",
+    "oldSha256": "e9f606a684b82281c1da1ba491c17b1f52f66e2d8d0c1cb7fddbd9bf001b0a19",
+    "sha256": "944807c79fd67ac724e81d2b04713bf58f0e32a610f1da9177729d82bcd91a17",
+    "sharedScale": 0.6909090909090909,
+    "poseScaleCorrection": 1.0,
+    "visiblePixels": [
+      115,
+      98,
+      268,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Bram\\Knockout\\01.png",
+    "oldSha256": "98ee3360a787a83e39877078d27f0644fe8dc39f7552bc793d6bbea6f1c8b595",
+    "sha256": "108a31d2eaa2b1c2aaee498fd5cab6887fb39a3d0a0c95e5dde95d9032199b30",
+    "sharedScale": 0.6354515050167224,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      112,
+      100,
+      271,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Bram\\Knockout\\02.png",
+    "oldSha256": "2912c6cb436ea6bfd7a6285038dfad52ff05fbcdc6c19ae8dfe7153e98c84489",
+    "sha256": "108a31d2eaa2b1c2aaee498fd5cab6887fb39a3d0a0c95e5dde95d9032199b30",
+    "sharedScale": 0.6354515050167224,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      112,
+      100,
+      271,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Bram\\Knockout\\03.png",
+    "oldSha256": "ea852ff20932ac4f52a9403a443dc4652dfc32812d9c31ea4930bc0409bb325e",
+    "sha256": "28c46a8ba06fc71d2e6319cb36b072d425b6659494f368959f706168d580de5b",
+    "sharedScale": 0.6354515050167224,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      114,
+      125,
+      270,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Bram\\Knockout\\04.png",
+    "oldSha256": "80fe3785c2da02817e77f3d62778b9eba9ca6a2007fddd8834dbf5fb24c76f65",
+    "sha256": "28c46a8ba06fc71d2e6319cb36b072d425b6659494f368959f706168d580de5b",
+    "sharedScale": 0.6354515050167224,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      114,
+      125,
+      270,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Bram\\Knockout\\05.png",
+    "oldSha256": "126b0fb48942696553dc0d88b71451961a99070c468816406dcb959f84db81ea",
+    "sha256": "d5f036cb0ca828be187fad2d6f574a17d815e4bb2154d347b5800110123f34a4",
+    "sharedScale": 0.6354515050167224,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      119,
+      174,
+      265,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Bram\\Knockout\\06.png",
+    "oldSha256": "27b71f2b97f5d13f789fac4b08cfd925441ff8ea2d6acf2062ac50dfc6dfa1b2",
+    "sha256": "d5f036cb0ca828be187fad2d6f574a17d815e4bb2154d347b5800110123f34a4",
+    "sharedScale": 0.6354515050167224,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      119,
+      174,
+      265,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Bram\\Knockout\\07.png",
+    "oldSha256": "3f25f1c391af35a62e12ddbee169c14e567917174f95cbb2c22fb99cb2ba8792",
+    "sha256": "da8558532d04519ea4226de4113c3331b1b323a58922023eb7edc317fbbb7882",
+    "sharedScale": 0.6354515050167224,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      109,
+      187,
+      275,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Bram\\Knockout\\08.png",
+    "oldSha256": "2b1ae182757db7f06af679aa4de107c280fd985427ac6a27f153c6f08daf9109",
+    "sha256": "da8558532d04519ea4226de4113c3331b1b323a58922023eb7edc317fbbb7882",
+    "sharedScale": 0.6354515050167224,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      109,
+      187,
+      275,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Bram\\Knockout\\09.png",
+    "oldSha256": "d10ebb82bb453d062350d18e64eda0233b5741a4c68c08e2fffd26c78dfc03cb",
+    "sha256": "4d8a4d1ae44245c941de86903f23a6f44648ebc88ad32f1176c99124c93624fc",
+    "sharedScale": 0.6354515050167224,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      95,
+      217,
+      289,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Bram\\Knockout\\10.png",
+    "oldSha256": "9b9f0c310c5d3a0215ffc471e9cf8e6ad0b49cdf4c8c7e3f7e196bf83b8986b8",
+    "sha256": "4d8a4d1ae44245c941de86903f23a6f44648ebc88ad32f1176c99124c93624fc",
+    "sharedScale": 0.6354515050167224,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      95,
+      217,
+      289,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Bram\\Downed\\01.png",
+    "oldSha256": "04234aff0fbb4983845d40e06bf8d54a2e955eebb8e016fb0f9e644b0de1d44b",
+    "sha256": "370ad34a288b3bb2a8fccf9e3cb19a6ef4917f96f5c2d7a2b613b7044aa90f9d",
+    "sharedScale": 0.6354515050167224,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      102,
+      221,
+      281,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Bram\\Downed\\02.png",
+    "oldSha256": "679c11ffc37f11b1148a9cede882f008077bc29e50d7ad4ffbff7d382ba50a21",
+    "sha256": "bc799006c984aa098bfb48c76d9e1004641b7b0e5fac57c19671d41e784fe887",
+    "sharedScale": 0.6354515050167224,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      102,
+      221,
+      282,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Bram\\Downed\\03.png",
+    "oldSha256": "b103c4307c04bc70dbff949df77174611ab9c0abcb69e988e5a1b656e460e0c9",
+    "sha256": "7c30c596c9a8096cd2822d36472fabdb372903f04e9d043edd4fb870636f0841",
+    "sharedScale": 0.6354515050167224,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      102,
+      222,
+      281,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Bram\\Downed\\04.png",
+    "oldSha256": "b3a3a1b21763f21452bc14f5210bb8edf926c40d001921a2f96785451df7927f",
+    "sha256": "7bc5c8dfaa8400c911f18184ccb115a9abb3ff26d061b3aa7e4700d204ee9eeb",
+    "sharedScale": 0.6354515050167224,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      102,
+      222,
+      281,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Bram\\Downed\\05.png",
+    "oldSha256": "555c0c4b2850c495f14bc65572e4a3a310b62e8ec67f484bdfee4772dd81d721",
+    "sha256": "8bc0dda210c175a0e49e56f76236248fccb1e71f56591fdb4f2329dc2e141ba5",
+    "sharedScale": 0.6354515050167224,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      102,
+      221,
+      281,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Bram\\Downed\\06.png",
+    "oldSha256": "37bc334a2b6fe09f9e35a6526e664998185d8da82affeda4381aae5af53fd520",
+    "sha256": "7bc5c8dfaa8400c911f18184ccb115a9abb3ff26d061b3aa7e4700d204ee9eeb",
+    "sharedScale": 0.6354515050167224,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      102,
+      222,
+      281,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Bram\\Downed\\07.png",
+    "oldSha256": "b67548cf638bd3be6c4690e7f8a8c1d55fbf6f24b7368e242fb5433e6a4138fe",
+    "sha256": "7c30c596c9a8096cd2822d36472fabdb372903f04e9d043edd4fb870636f0841",
+    "sharedScale": 0.6354515050167224,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      102,
+      222,
+      281,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Bram\\Downed\\08.png",
+    "oldSha256": "f34c8e52e79181f74d374e29db5ea7d479f2d174e3f857eb4d306d79f1945b11",
+    "sha256": "bc799006c984aa098bfb48c76d9e1004641b7b0e5fac57c19671d41e784fe887",
+    "sharedScale": 0.6354515050167224,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      102,
+      221,
+      282,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Bram\\Downed\\09.png",
+    "oldSha256": "d89baeff0cc4213bef5484a9632ea9f7e84d2088fbf9e93b73d7cfedd4c25535",
+    "sha256": "370ad34a288b3bb2a8fccf9e3cb19a6ef4917f96f5c2d7a2b613b7044aa90f9d",
+    "sharedScale": 0.6354515050167224,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      102,
+      221,
+      281,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Bram\\Downed\\10.png",
+    "oldSha256": "fce5a68f51a21297b4dc9e198bfd853e1fb227ba9a8abef10c806e69906beac6",
+    "sha256": "bc799006c984aa098bfb48c76d9e1004641b7b0e5fac57c19671d41e784fe887",
+    "sharedScale": 0.6354515050167224,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      102,
+      221,
+      282,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Bram\\GetUp\\01.png",
+    "oldSha256": "edeec97fd9c28d449dc9cc1a2f50e3cf0ae0863f2a921b98df2e9ec6f00bc439",
+    "sha256": "00efe351bdb4c7bf97d3e03e62e7564d68a71ad0e05ab0a5addc1c3c548db178",
+    "sharedScale": 0.6354515050167224,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      102,
+      221,
+      282,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Bram\\GetUp\\02.png",
+    "oldSha256": "ac0a956f952fc5168b56ce6d6003e453717d3ce09f9146693bb59014cf085812",
+    "sha256": "00efe351bdb4c7bf97d3e03e62e7564d68a71ad0e05ab0a5addc1c3c548db178",
+    "sharedScale": 0.6354515050167224,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      102,
+      221,
+      282,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Bram\\GetUp\\03.png",
+    "oldSha256": "fdcee3e9367fa3b70b3b05739f95637bf3685ffb195cb5499e3ade0ffda104b6",
+    "sha256": "ca1bc85b4c9f6d3ce34d2a84a34ecff1e417d24327a833de27642d54b228ae4d",
+    "sharedScale": 0.6354515050167224,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      105,
+      178,
+      278,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Bram\\GetUp\\04.png",
+    "oldSha256": "54a4fb4740030c43f54a24e84179311ce0c7f37efc2f5aa28551daa83e5ba019",
+    "sha256": "ca1bc85b4c9f6d3ce34d2a84a34ecff1e417d24327a833de27642d54b228ae4d",
+    "sharedScale": 0.6354515050167224,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      105,
+      178,
+      278,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Bram\\GetUp\\05.png",
+    "oldSha256": "9a5b34b8bfe7da177b79e948ca144a88c15e9abbac8d25890d74482d89b00bac",
+    "sha256": "c4486fc5c8de17cb7cfbd3c00dec587a988b040b077112b7b192d35895e9565f",
+    "sharedScale": 0.6354515050167224,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      120,
+      153,
+      264,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Bram\\GetUp\\06.png",
+    "oldSha256": "0974f967104b0f0d1c2605c041556b7e1ba3c14bbc052289ab1acd52c60ba8f4",
+    "sha256": "c4486fc5c8de17cb7cfbd3c00dec587a988b040b077112b7b192d35895e9565f",
+    "sharedScale": 0.6354515050167224,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      120,
+      153,
+      264,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Bram\\GetUp\\07.png",
+    "oldSha256": "bc29613e025d7589224258502f435b894af1d69da991721059ce2f3290c7c1ed",
+    "sha256": "ee09cca87e7dbd2b4f9602162da62758d42e5385f65caed01471abbf6c8e64ed",
+    "sharedScale": 0.6354515050167224,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      126,
+      130,
+      258,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Bram\\GetUp\\08.png",
+    "oldSha256": "0c96bd185eced7551c49d462ec72b31cc0a4373638407c96d3f4be529ec9c7b0",
+    "sha256": "ee09cca87e7dbd2b4f9602162da62758d42e5385f65caed01471abbf6c8e64ed",
+    "sharedScale": 0.6354515050167224,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      126,
+      130,
+      258,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Bram\\GetUp\\09.png",
+    "oldSha256": "ee65f48a150324b190f3da595b357bc697379f17c40a38bc5026a23a41412480",
+    "sha256": "52b95f0c07aa83907f60010f1c46b43994c5b7506365af403e5f6e16635f3b28",
+    "sharedScale": 0.6354515050167224,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      128,
+      98,
+      255,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Bram\\GetUp\\10.png",
+    "oldSha256": "82f1dcc0652ba9b0329c96c317cb0469948dcf59b1e61b08974654e4d2ee83a2",
+    "sha256": "52b95f0c07aa83907f60010f1c46b43994c5b7506365af403e5f6e16635f3b28",
+    "sharedScale": 0.6354515050167224,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      128,
+      98,
+      255,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Zephyr\\Knockout\\01.png",
+    "oldSha256": "542e49823d204b81c7b274c8e59e2b984dfcafd464149864c81e01f9a652d74b",
+    "sha256": "ce1fccd6577f207c12616a3a9270cb8ae79e0ad214fcf0185ae956f3659f3d96",
+    "sharedScale": 0.6551724137931034,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      105,
+      101,
+      279,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Zephyr\\Knockout\\02.png",
+    "oldSha256": "a1c10b26eb7653c75625ee7a5c2eeb668e9a55e1cf155878b9bf2fcd29a22ca5",
+    "sha256": "ce1fccd6577f207c12616a3a9270cb8ae79e0ad214fcf0185ae956f3659f3d96",
+    "sharedScale": 0.6551724137931034,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      105,
+      101,
+      279,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Zephyr\\Knockout\\03.png",
+    "oldSha256": "fdeba0a70d2066694f726a486d33b785bf5d9243394d3802005fc6cf77c11d7f",
+    "sha256": "6a5826008e0843682c49977e96da2901ae98cc01723945f16558a0d6d7de6e18",
+    "sharedScale": 0.6551724137931034,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      105,
+      130,
+      279,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Zephyr\\Knockout\\04.png",
+    "oldSha256": "f46feaf6537758e454371d537f3ccea0ac9c85d1adbf1012aa6324fa8c64a1f8",
+    "sha256": "6a5826008e0843682c49977e96da2901ae98cc01723945f16558a0d6d7de6e18",
+    "sharedScale": 0.6551724137931034,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      105,
+      130,
+      279,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Zephyr\\Knockout\\05.png",
+    "oldSha256": "1f8fe828ac88a457da1b8a0d4b61564df493234e7a39eb6bba722fe90fc80653",
+    "sha256": "bf3000c0ee7bec89043e47e4b087d31afd9d4b1812d11af32c4f3fb6081df40f",
+    "sharedScale": 0.6551724137931034,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      106,
+      176,
+      278,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Zephyr\\Knockout\\06.png",
+    "oldSha256": "8e9ed6fb836e2e6228f094e146a177ee637a46296d0afba0c71086c0bbc5d031",
+    "sha256": "bf3000c0ee7bec89043e47e4b087d31afd9d4b1812d11af32c4f3fb6081df40f",
+    "sharedScale": 0.6551724137931034,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      106,
+      176,
+      278,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Zephyr\\Knockout\\07.png",
+    "oldSha256": "82ab0bfc13eab9e2019ecfc4a6bf1864fbdc43b413f261efa76db7d179e4d60a",
+    "sha256": "da90b025aec1f5854be6da752c9117dad7130089b4e4c27f9d35f42fd4bbc82a",
+    "sharedScale": 0.6551724137931034,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      98,
+      206,
+      286,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Zephyr\\Knockout\\08.png",
+    "oldSha256": "107e259c8875d4af150fd3435b23367e9bb4973b58cbdb56c2230a77ada56156",
+    "sha256": "da90b025aec1f5854be6da752c9117dad7130089b4e4c27f9d35f42fd4bbc82a",
+    "sharedScale": 0.6551724137931034,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      98,
+      206,
+      286,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Zephyr\\Knockout\\09.png",
+    "oldSha256": "9b3612f657e4da1d6e99cd49f4466bea86ab42bfd82f5ff780ff8e5b57aac664",
+    "sha256": "7b2dc8df9b29e7b5c31b2b715529a3546d97a6ab81cbf0c22354acc75178cac9",
+    "sharedScale": 0.6551724137931034,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      90,
+      214,
+      293,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Zephyr\\Knockout\\10.png",
+    "oldSha256": "f4727e0d3e775363c4e81fe167c6ab5978689012fdc5040f4b00c8fa7299d11e",
+    "sha256": "7b2dc8df9b29e7b5c31b2b715529a3546d97a6ab81cbf0c22354acc75178cac9",
+    "sharedScale": 0.6551724137931034,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      90,
+      214,
+      293,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Zephyr\\Downed\\01.png",
+    "oldSha256": "85a3d1a2cc178eb3a9cfd28bf4e1d064446896d2b8a86737efa68d7617c274ab",
+    "sha256": "234b109225fcfe00c9fac809607b3007b7595c69eb199d579103a4b822432c8b",
+    "sharedScale": 0.6551724137931034,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      93,
+      215,
+      290,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Zephyr\\Downed\\02.png",
+    "oldSha256": "0e01e94a294de6da7f6c79fddc65780a8ab4301288474b9752ba2c13ea743b73",
+    "sha256": "750423f6ed2f6e43eff0517c37406592a8403d76e32cf44092def36f1a5eed05",
+    "sharedScale": 0.6551724137931034,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      94,
+      215,
+      290,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Zephyr\\Downed\\03.png",
+    "oldSha256": "a4e435bb60ce3924f596ebcdec3845f54b1d348bc09599dfce8126c4da4aed5a",
+    "sha256": "ce6859c7c0aceb28e0d2f883002cb6b7dc63bb04a5368a03d8c4e1cd37bd5648",
+    "sharedScale": 0.6551724137931034,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      93,
+      215,
+      290,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Zephyr\\Downed\\04.png",
+    "oldSha256": "7ee7f82153ef24c73260cb83957fd25338effc2bcb1a49eef86cacb0e402a208",
+    "sha256": "70f332518a646d30945c04faa95912182e23eec056fd72ac6657b15873d87266",
+    "sharedScale": 0.6551724137931034,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      94,
+      214,
+      289,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Zephyr\\Downed\\05.png",
+    "oldSha256": "b320545cfc78a06e4e410ce883b9754ce8887f695dfcdb4017b6bac8eea1857d",
+    "sha256": "32ead7d7ef57d2d87a8a3c0be961be65c717ec3c6ed6d990ae4adbcf2b5503c1",
+    "sharedScale": 0.6551724137931034,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      95,
+      215,
+      288,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Zephyr\\Downed\\06.png",
+    "oldSha256": "8fb13019c9ad806b8bfba663cb626e256ffc67efbe469634982a75ddca49204f",
+    "sha256": "70f332518a646d30945c04faa95912182e23eec056fd72ac6657b15873d87266",
+    "sharedScale": 0.6551724137931034,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      94,
+      214,
+      289,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Zephyr\\Downed\\07.png",
+    "oldSha256": "c6206f00577d77f838e52437e52e9e68128ca33f91305d10d877f8b11a731471",
+    "sha256": "ce6859c7c0aceb28e0d2f883002cb6b7dc63bb04a5368a03d8c4e1cd37bd5648",
+    "sharedScale": 0.6551724137931034,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      93,
+      215,
+      290,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Zephyr\\Downed\\08.png",
+    "oldSha256": "6ab0672f45fc4410fc96c6e9dc5b038235815efdeacc69f3bbc83c5b5e0011dd",
+    "sha256": "750423f6ed2f6e43eff0517c37406592a8403d76e32cf44092def36f1a5eed05",
+    "sharedScale": 0.6551724137931034,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      94,
+      215,
+      290,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Zephyr\\Downed\\09.png",
+    "oldSha256": "0fed7af7e58a6f12d65302dfe4d3ad834a4da3d53d4a6f4a7382c5f68c7a103b",
+    "sha256": "234b109225fcfe00c9fac809607b3007b7595c69eb199d579103a4b822432c8b",
+    "sharedScale": 0.6551724137931034,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      93,
+      215,
+      290,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Zephyr\\Downed\\10.png",
+    "oldSha256": "82749773a2a5da0a47b03f3908ba473dbf1cfda345428ff83ab0a6423dadf951",
+    "sha256": "750423f6ed2f6e43eff0517c37406592a8403d76e32cf44092def36f1a5eed05",
+    "sharedScale": 0.6551724137931034,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      94,
+      215,
+      290,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Zephyr\\GetUp\\01.png",
+    "oldSha256": "62fbdf24f5922d4cdde20f595556bffd85df2eb29b9971d2d439924e7d975477",
+    "sha256": "56b64365d872149ea12e53bc18466801a74542bff759f73e0ec59daf742f494d",
+    "sharedScale": 0.6551724137931034,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      93,
+      216,
+      290,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Zephyr\\GetUp\\02.png",
+    "oldSha256": "abd8c24457dc6b5dc1c50fc2116ce2cde4d83bc24c3b73194bb41b0a89417318",
+    "sha256": "56b64365d872149ea12e53bc18466801a74542bff759f73e0ec59daf742f494d",
+    "sharedScale": 0.6551724137931034,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      93,
+      216,
+      290,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Zephyr\\GetUp\\03.png",
+    "oldSha256": "8ff60a0e6888e91a3537560191e028cbd103db88c414772dcb5e45010e4d9abe",
+    "sha256": "bd2014a2d7a4e73c9780771d3aae1a000c69e5af035757533336309c4b07b440",
+    "sharedScale": 0.6551724137931034,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      97,
+      196,
+      286,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Zephyr\\GetUp\\04.png",
+    "oldSha256": "fecb80a85cda6e675ec2e53555d81344b54432d942b4e59f0eb0223c1668d1ea",
+    "sha256": "bd2014a2d7a4e73c9780771d3aae1a000c69e5af035757533336309c4b07b440",
+    "sharedScale": 0.6551724137931034,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      97,
+      196,
+      286,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Zephyr\\GetUp\\05.png",
+    "oldSha256": "1c9b68fbe833eb7bdae7bc8596615e266a290f10fa7721705cd406ed22ee5a46",
+    "sha256": "5b4f004a9b4e0bce7768e5946628f98de10d2e7839d116b3e894db01081637b1",
+    "sharedScale": 0.6551724137931034,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      111,
+      162,
+      273,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Zephyr\\GetUp\\06.png",
+    "oldSha256": "c89270c6387de1f660c347d033b182408cdd04e47d38bd01118f4413d9757d52",
+    "sha256": "5b4f004a9b4e0bce7768e5946628f98de10d2e7839d116b3e894db01081637b1",
+    "sharedScale": 0.6551724137931034,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      111,
+      162,
+      273,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Zephyr\\GetUp\\07.png",
+    "oldSha256": "75e66224fb2f225046715817ed3020b3ee2291d54b4764d2fcb9750566823868",
+    "sha256": "5c8881075e52d3aa9a1d91a05ba8f8267fb1c5927051b311a6a74e197ea82a3e",
+    "sharedScale": 0.6551724137931034,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      108,
+      148,
+      275,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Zephyr\\GetUp\\08.png",
+    "oldSha256": "e33e4ad25b1378556bd8abb1ba195e9724a71d85fe08ad9075050825653f2904",
+    "sha256": "5c8881075e52d3aa9a1d91a05ba8f8267fb1c5927051b311a6a74e197ea82a3e",
+    "sharedScale": 0.6551724137931034,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      108,
+      148,
+      275,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Zephyr\\GetUp\\09.png",
+    "oldSha256": "01a90b09a3d7a9421d8864979b127314ce00e1702acf58a684d33b2a4ac0d901",
+    "sha256": "9c95f110a764cace6cce08d8acaeb06bd471301b7029c8938741ccd40ceb1a50",
+    "sharedScale": 0.6551724137931034,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      115,
+      98,
+      268,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Zephyr\\GetUp\\10.png",
+    "oldSha256": "25479ef6be42566d8da791bf4607089517ba25a864437a416095440fc49e56df",
+    "sha256": "9c95f110a764cace6cce08d8acaeb06bd471301b7029c8938741ccd40ceb1a50",
+    "sharedScale": 0.6551724137931034,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      115,
+      98,
+      268,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Volt\\Knockout\\01.png",
+    "oldSha256": "064a2fb0a312f555b5d812e3d80ea313fe34bc31d2a882c43a1e706a9a5a2503",
+    "sha256": "a4aa0d725fbe0fdeaa26a0d344babda9fe6098ca183245fc9870827c84b5f8d9",
+    "sharedScale": 0.6909090909090909,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      108,
+      96,
+      275,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Volt\\Knockout\\02.png",
+    "oldSha256": "6f2f16d5388f6ac5c6f3fc394f933d344cd3f2055b4b03ee802afdb2afb4c016",
+    "sha256": "a4aa0d725fbe0fdeaa26a0d344babda9fe6098ca183245fc9870827c84b5f8d9",
+    "sharedScale": 0.6909090909090909,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      108,
+      96,
+      275,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Volt\\Knockout\\03.png",
+    "oldSha256": "24e6e39531cd123cb4a78af4337e5ec56eba6f191e88da24dd2f2560c0f57387",
+    "sha256": "9c566c8a497ad463413ac6dd2b1f6ac8e03e42cf36a9b761616dc4b965f2456e",
+    "sharedScale": 0.6909090909090909,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      110,
+      121,
+      274,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Volt\\Knockout\\04.png",
+    "oldSha256": "06956445cb948a6a04c616ce7efae336ded281eaa48c3b7ee68b81a0ad9471b9",
+    "sha256": "9c566c8a497ad463413ac6dd2b1f6ac8e03e42cf36a9b761616dc4b965f2456e",
+    "sharedScale": 0.6909090909090909,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      110,
+      121,
+      274,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Volt\\Knockout\\05.png",
+    "oldSha256": "078085373bcafa786414ab7cc9f5a20a36bf711aa3633ed210cda6b26eaaf393",
+    "sha256": "74bb5dd2af810bdd7310998705f7de04ed5f8a4bbd3b9325158afe8d3c22924b",
+    "sharedScale": 0.6909090909090909,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      111,
+      153,
+      273,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Volt\\Knockout\\06.png",
+    "oldSha256": "7b9876db9721b15e1c1b7b2e49cbd088522d8483eb4bfd8142b991f19dc1e532",
+    "sha256": "74bb5dd2af810bdd7310998705f7de04ed5f8a4bbd3b9325158afe8d3c22924b",
+    "sharedScale": 0.6909090909090909,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      111,
+      153,
+      273,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Volt\\Knockout\\07.png",
+    "oldSha256": "ed91f5e68b7b697561d25d155dccd943beb58f131cf531cf6616517c0d46de88",
+    "sha256": "af6b86a10d1f2f567f812b41f1c20d6706e5e49e0abef35c6a517f9c6452ad07",
+    "sharedScale": 0.6909090909090909,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      88,
+      193,
+      295,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Volt\\Knockout\\08.png",
+    "oldSha256": "8e5c7d0562c9e5d0df615fe5f8420bfd5055c8ac6424fddb8e8d3a768e44cbcb",
+    "sha256": "af6b86a10d1f2f567f812b41f1c20d6706e5e49e0abef35c6a517f9c6452ad07",
+    "sharedScale": 0.6909090909090909,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      88,
+      193,
+      295,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Volt\\Knockout\\09.png",
+    "oldSha256": "fc32f19f06dec1a98b1547bdbef8dfbc3683c18d98fc83462c9eae646fbf9123",
+    "sha256": "747001ab2fc238b20d2bb56ccd188a4a50ec4f7ea7d03db2b7cd5e7de5277ef9",
+    "sharedScale": 0.6909090909090909,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      91,
+      218,
+      293,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Volt\\Knockout\\10.png",
+    "oldSha256": "32c75dbe1c4614acae6641827e3c9244d4e0b24eb9f8ad49b73dfad91e470ea1",
+    "sha256": "747001ab2fc238b20d2bb56ccd188a4a50ec4f7ea7d03db2b7cd5e7de5277ef9",
+    "sharedScale": 0.6909090909090909,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      91,
+      218,
+      293,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Volt\\Downed\\01.png",
+    "oldSha256": "4de94ddb365cf1e3765862f315a3a471f1fb232ec07cbb41312f30300cdbb486",
+    "sha256": "f9fa8c0e70302f40ab94611ec7c9236b071ed83460cb8fa23c3a8ec9f639b484",
+    "sharedScale": 0.6909090909090909,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      94,
+      226,
+      290,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Volt\\Downed\\02.png",
+    "oldSha256": "39e4d0fa7de18677090ef3cee560e9d7bf942142e76000801634fadfbcf495dc",
+    "sha256": "733c637f567220449284d105dd6773b95155a87a8cec12f0d6324cef47dbd276",
+    "sharedScale": 0.6909090909090909,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      93,
+      223,
+      291,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Volt\\Downed\\03.png",
+    "oldSha256": "4be1ab83dcd3bb74fd5bde14de1f54d64b8b62d0ff41525cfc36e61382fba393",
+    "sha256": "2b94ce51058e91396e7b57a3c3aa63df7ff57d16dcee3d9ce124d237d5f89435",
+    "sharedScale": 0.6909090909090909,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      92,
+      224,
+      291,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Volt\\Downed\\04.png",
+    "oldSha256": "05e253370e2ac620372e8379eded7d618d360071def8935a9b99162d5019d8e4",
+    "sha256": "a9aa3a306ef82f71f37e9aae78a27c8828beeacaf01597329690a2074ff6d4a1",
+    "sharedScale": 0.6909090909090909,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      91,
+      221,
+      293,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Volt\\Downed\\05.png",
+    "oldSha256": "fa02c48b26efbc8ded14a15debf770e9dbc739c620593c7283950c63de5b7d81",
+    "sha256": "7b22f7da55db603eedf9276f620c1d737cada2f1163f48e68416a219e450feac",
+    "sharedScale": 0.6909090909090909,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      92,
+      222,
+      291,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Volt\\Downed\\06.png",
+    "oldSha256": "0d203acc0b3510ad7476b60bb2ff5b4058ebdab2261564b8a2ed344d0b274047",
+    "sha256": "a9aa3a306ef82f71f37e9aae78a27c8828beeacaf01597329690a2074ff6d4a1",
+    "sharedScale": 0.6909090909090909,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      91,
+      221,
+      293,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Volt\\Downed\\07.png",
+    "oldSha256": "4c9a21d5dd54a4273e68d5ce0af0280d60c8fb2c548f1f73152bba53cf9c0da2",
+    "sha256": "2b94ce51058e91396e7b57a3c3aa63df7ff57d16dcee3d9ce124d237d5f89435",
+    "sharedScale": 0.6909090909090909,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      92,
+      224,
+      291,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Volt\\Downed\\08.png",
+    "oldSha256": "53de2b85b1ec0534a49d6358c8b825591b1e2c517090a8d09bdd38b7a47b06c4",
+    "sha256": "733c637f567220449284d105dd6773b95155a87a8cec12f0d6324cef47dbd276",
+    "sharedScale": 0.6909090909090909,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      93,
+      223,
+      291,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Volt\\Downed\\09.png",
+    "oldSha256": "1c086a6fa1d581f89d5ca23c2d3722f137a2d061c682a266184529a9e1ac3568",
+    "sha256": "f9fa8c0e70302f40ab94611ec7c9236b071ed83460cb8fa23c3a8ec9f639b484",
+    "sharedScale": 0.6909090909090909,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      94,
+      226,
+      290,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Volt\\Downed\\10.png",
+    "oldSha256": "da8d83f23e37b8ad62ee8d871cdd48f94bbc561d06c835d3a7b0990fecf0d1d0",
+    "sha256": "733c637f567220449284d105dd6773b95155a87a8cec12f0d6324cef47dbd276",
+    "sharedScale": 0.6909090909090909,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      93,
+      223,
+      291,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Volt\\GetUp\\01.png",
+    "oldSha256": "7499505c89d3a2d664abd94a8fbcda7f57822e55a144695987add90fcc2ad8ec",
+    "sha256": "37b47493a6290f2df23c9015d461567542b763de5f0b9176fa186f3651a1c16c",
+    "sharedScale": 0.6909090909090909,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      94,
+      227,
+      290,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Volt\\GetUp\\02.png",
+    "oldSha256": "859f14823f9eee495a205f4fccf31d0bbd60931602f73a64bebaec98796954e6",
+    "sha256": "37b47493a6290f2df23c9015d461567542b763de5f0b9176fa186f3651a1c16c",
+    "sharedScale": 0.6909090909090909,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      94,
+      227,
+      290,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Volt\\GetUp\\03.png",
+    "oldSha256": "d6e45949cf69bcf66ab86e3080e4a4203323b08d29c318673a33162c6ce32c8d",
+    "sha256": "913a56bafe4e01bbec4f621591e0339bdadb5687bb80e2c19a51e333e17924e4",
+    "sharedScale": 0.6909090909090909,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      93,
+      179,
+      291,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Volt\\GetUp\\04.png",
+    "oldSha256": "7db0d59da962295d9c8fcf448cd88fb9d3dfd177c9e5da500e60c2a823250754",
+    "sha256": "913a56bafe4e01bbec4f621591e0339bdadb5687bb80e2c19a51e333e17924e4",
+    "sharedScale": 0.6909090909090909,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      93,
+      179,
+      291,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Volt\\GetUp\\05.png",
+    "oldSha256": "a4865064250a0779c4deacd05548679a29594f0a92b7182077f195426213d883",
+    "sha256": "a3212f6b35ae1355e9d371d8beee345fbaf64e6e026376c69272aa4c5ad1db24",
+    "sharedScale": 0.6909090909090909,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      113,
+      145,
+      271,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Volt\\GetUp\\06.png",
+    "oldSha256": "510909a38f397096cd545fac1e4ddc0bdc249a50967c69cae1d69b9f15366262",
+    "sha256": "a3212f6b35ae1355e9d371d8beee345fbaf64e6e026376c69272aa4c5ad1db24",
+    "sharedScale": 0.6909090909090909,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      113,
+      145,
+      271,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Volt\\GetUp\\07.png",
+    "oldSha256": "4f4ce2b6a248bbb064fa8d3f07ee778ddd5fcb678bcbb06d3432df0333f53d07",
+    "sha256": "aacc6bf0acd48a4a811462aa05e3e8a7b3a0c0958b19c1bf10ab1c645085eca8",
+    "sharedScale": 0.6909090909090909,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      125,
+      137,
+      258,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Volt\\GetUp\\08.png",
+    "oldSha256": "46e78026c739035237997f07613ba267b7ff3d4fa5438b285630c065fb796502",
+    "sha256": "aacc6bf0acd48a4a811462aa05e3e8a7b3a0c0958b19c1bf10ab1c645085eca8",
+    "sharedScale": 0.6909090909090909,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      125,
+      137,
+      258,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Volt\\GetUp\\09.png",
+    "oldSha256": "ea985ce3eacd47f657720c8d54817c2faf545526ac002a6142166c9ff8eeafda",
+    "sha256": "72308af5a99bfcadae24e33dd87197dd5e87368bc3c3b7845ede2112890e4b75",
+    "sharedScale": 0.6909090909090909,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      135,
+      98,
+      248,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Volt\\GetUp\\10.png",
+    "oldSha256": "0df57b3d6168aca3a4e9307f1656d1c9f3f698c7073d2f41324b74f19f598077",
+    "sha256": "72308af5a99bfcadae24e33dd87197dd5e87368bc3c3b7845ede2112890e4b75",
+    "sharedScale": 0.6909090909090909,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      135,
+      98,
+      248,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Nyx\\Knockout\\01.png",
+    "oldSha256": "4c49d6cd20c95b8e1e233fdc0ec5085fdd317e4a634d7def49ebf4e6f4f98803",
+    "sha256": "d97bd67645204191752d02458126b961f003477460de7a95b8c7ce1b31870061",
+    "sharedScale": 0.6529209621993127,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      107,
+      93,
+      276,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Nyx\\Knockout\\02.png",
+    "oldSha256": "96fde189aec3751cb4bd575ab63cff6ec5e84a89531f5936fb6db0dd715d70c6",
+    "sha256": "d97bd67645204191752d02458126b961f003477460de7a95b8c7ce1b31870061",
+    "sharedScale": 0.6529209621993127,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      107,
+      93,
+      276,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Nyx\\Knockout\\03.png",
+    "oldSha256": "d9d40e04427e22e83079fa2aac9b54a31cc98df7d1b7579c3c9aeba7177a35b3",
+    "sha256": "b1406f1a018f45041c9155ceb3060715130aa6567975092b9dee21d8b0b7f5c5",
+    "sharedScale": 0.6529209621993127,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      106,
+      123,
+      278,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Nyx\\Knockout\\04.png",
+    "oldSha256": "b662d68a6f4bc9cb0da9765577929b87077c3be96249551aa1e3e90cd2dd90dd",
+    "sha256": "b1406f1a018f45041c9155ceb3060715130aa6567975092b9dee21d8b0b7f5c5",
+    "sharedScale": 0.6529209621993127,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      106,
+      123,
+      278,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Nyx\\Knockout\\05.png",
+    "oldSha256": "b7b2bbbd0dd5223ccf3c18818a69906ed6154a021b04392fcdeb3a3b4f01d769",
+    "sha256": "e08198a0fa86e673be4a5364c004a6e1b4a17a029c5a91fb72fb9921da5b9594",
+    "sharedScale": 0.6529209621993127,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      105,
+      173,
+      279,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Nyx\\Knockout\\06.png",
+    "oldSha256": "fb19214940f62b21823efbb7b4b9baf1099ee9631f41b0d94c9764138c6df8f0",
+    "sha256": "e08198a0fa86e673be4a5364c004a6e1b4a17a029c5a91fb72fb9921da5b9594",
+    "sharedScale": 0.6529209621993127,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      105,
+      173,
+      279,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Nyx\\Knockout\\07.png",
+    "oldSha256": "53d6980b8ccf893784d8131e1653dac6d7f34f6f2ddc6abd350d72a38475c62d",
+    "sha256": "20f695c16bb156d895b39077686d9d64a735c43eb58d8bbb1426d7030ea2dcf0",
+    "sharedScale": 0.6529209621993127,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      100,
+      201,
+      284,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Nyx\\Knockout\\08.png",
+    "oldSha256": "5474171682c25d0492b2cbd6f509cd8f39838f03a481aca80ed41e222da96f22",
+    "sha256": "20f695c16bb156d895b39077686d9d64a735c43eb58d8bbb1426d7030ea2dcf0",
+    "sharedScale": 0.6529209621993127,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      100,
+      201,
+      284,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Nyx\\Knockout\\09.png",
+    "oldSha256": "80ec31144dfe60cba6fc18fdb886256faf3597fe82414b654dbf8b8e4ff4aa07",
+    "sha256": "09dd17bb1febe15fdc115acff40b8ae1a8fc3ccdeefb8621f1082af6702fc950",
+    "sharedScale": 0.6529209621993127,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      94,
+      215,
+      290,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Nyx\\Knockout\\10.png",
+    "oldSha256": "22b32ef97c3abffef9811b9923dd82e12dcf552cf5920629e44f378981c5cebb",
+    "sha256": "09dd17bb1febe15fdc115acff40b8ae1a8fc3ccdeefb8621f1082af6702fc950",
+    "sharedScale": 0.6529209621993127,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      94,
+      215,
+      290,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Nyx\\Downed\\01.png",
+    "oldSha256": "b03d924c974553f3cfaacc138edcc25d2dc341386a935c2655975feb853dc494",
+    "sha256": "61f28f6fc5e9b1237adc648be5249edfd0290a442f0626e313e91a527802ab57",
+    "sharedScale": 0.6529209621993127,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      94,
+      215,
+      289,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Nyx\\Downed\\02.png",
+    "oldSha256": "34033bf416a741b408d7c7389e99551448507098de0fa0b0c067db0d82480915",
+    "sha256": "77239b32629d31a1a6de7b9156ba3502695fec33c8098dc2e3bddb460ac1d96c",
+    "sharedScale": 0.6529209621993127,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      94,
+      216,
+      290,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Nyx\\Downed\\03.png",
+    "oldSha256": "c5b7c60424fc75c989eee2fced6ac4fa37d8c8d7c1a3f6c68d2e35789aac264e",
+    "sha256": "d5de2202f2ebe5a8c91e16b8991ed5acc2bad7b8c7820d0a59f4a10e739cf3ee",
+    "sharedScale": 0.6529209621993127,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      94,
+      214,
+      289,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Nyx\\Downed\\04.png",
+    "oldSha256": "f49eb1b9c9cdadcb574480e02eef9e1b84aa20aa401b631728d44abeb760b2c3",
+    "sha256": "ab709acf015b45fdfb852603b21a5e9f1998e3ee8624b29ea860292b742664dd",
+    "sharedScale": 0.6529209621993127,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      93,
+      214,
+      291,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Nyx\\Downed\\05.png",
+    "oldSha256": "65407226ca5398b3f73632f0b0f4a880aec584304e63015e329ba615d1add073",
+    "sha256": "c2827c042473531d68f54860178b5c705da116e85b629e91d935475eaaa712e2",
+    "sharedScale": 0.6529209621993127,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      93,
+      216,
+      290,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Nyx\\Downed\\06.png",
+    "oldSha256": "60d5520297e9f6c0d434c23f1ed014be4c7aead273ff46d28003c30cbacb17ff",
+    "sha256": "ab709acf015b45fdfb852603b21a5e9f1998e3ee8624b29ea860292b742664dd",
+    "sharedScale": 0.6529209621993127,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      93,
+      214,
+      291,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Nyx\\Downed\\07.png",
+    "oldSha256": "190dba37c33e36f42c9c787241a059526563a01d666d240e3df830fdd3644aef",
+    "sha256": "d5de2202f2ebe5a8c91e16b8991ed5acc2bad7b8c7820d0a59f4a10e739cf3ee",
+    "sharedScale": 0.6529209621993127,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      94,
+      214,
+      289,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Nyx\\Downed\\08.png",
+    "oldSha256": "b3dadf559f0bc4836dba8b07341a9bf4fe1e6ff5ceaf762056d697df6e9ca650",
+    "sha256": "77239b32629d31a1a6de7b9156ba3502695fec33c8098dc2e3bddb460ac1d96c",
+    "sharedScale": 0.6529209621993127,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      94,
+      216,
+      290,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Nyx\\Downed\\09.png",
+    "oldSha256": "8bdc96619acfdb242c9421d052cc3b8fd04bad07620d0366896aff31368c79fe",
+    "sha256": "61f28f6fc5e9b1237adc648be5249edfd0290a442f0626e313e91a527802ab57",
+    "sharedScale": 0.6529209621993127,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      94,
+      215,
+      289,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Nyx\\Downed\\10.png",
+    "oldSha256": "cf63d064d0ccc709c3ac9174f1c9347d1c4e983cab6c56c87f1e9e57776528a8",
+    "sha256": "77239b32629d31a1a6de7b9156ba3502695fec33c8098dc2e3bddb460ac1d96c",
+    "sharedScale": 0.6529209621993127,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      94,
+      216,
+      290,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Nyx\\GetUp\\01.png",
+    "oldSha256": "0e79c3bd15b2f074088efb194c8e4eedbb08d10e6f1a7f02dd7b2cddd4ec2349",
+    "sha256": "b461d447d5236e6e7c6d65c5c8899b009a8cf974374974beb1abf2e61d708c83",
+    "sharedScale": 0.6529209621993127,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      94,
+      215,
+      289,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Nyx\\GetUp\\02.png",
+    "oldSha256": "bfbd6d5b7bfc8221a08303d7447c89acde1092878023710d6b0455d372836cd2",
+    "sha256": "b461d447d5236e6e7c6d65c5c8899b009a8cf974374974beb1abf2e61d708c83",
+    "sharedScale": 0.6529209621993127,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      94,
+      215,
+      289,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Nyx\\GetUp\\03.png",
+    "oldSha256": "92a20b8feef4e06d4aeaa6c4627e2d91c353f1fbc19bb4344cdcec40d7182a05",
+    "sha256": "a9f43816e39e79082641b3d130f49f18a23d33857da375c0ce2e584a0a4c33ae",
+    "sharedScale": 0.6529209621993127,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      87,
+      174,
+      296,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Nyx\\GetUp\\04.png",
+    "oldSha256": "97b09831a0c2ecac2fa54fabead0d187ebc256140d2c8a21e9c67f7fb1ada781",
+    "sha256": "a9f43816e39e79082641b3d130f49f18a23d33857da375c0ce2e584a0a4c33ae",
+    "sharedScale": 0.6529209621993127,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      87,
+      174,
+      296,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Nyx\\GetUp\\05.png",
+    "oldSha256": "920b38718260db26f15a7f8e9904a59cb22168dbb9b8d5d64ebba1d50348984e",
+    "sha256": "1b1227808d4ff7cc22c40e8dafe8fd2f75e6342125863c1288f8d03c21d97df5",
+    "sharedScale": 0.6529209621993127,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      107,
+      157,
+      276,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Nyx\\GetUp\\06.png",
+    "oldSha256": "295465f7425b16cf266eae3084d251fce8cfaf407326ac02658268cfa581fe1c",
+    "sha256": "1b1227808d4ff7cc22c40e8dafe8fd2f75e6342125863c1288f8d03c21d97df5",
+    "sharedScale": 0.6529209621993127,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      107,
+      157,
+      276,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Nyx\\GetUp\\07.png",
+    "oldSha256": "2be63dbc08ecf4b5b4d1c0432da0554202fc952d97a79f73fe6d5807cf144d68",
+    "sha256": "2dc88eb57c1a4651992e4256dd54fcea37716b8b957d4cac7428f48ba36194f8",
+    "sharedScale": 0.6529209621993127,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      111,
+      144,
+      272,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Nyx\\GetUp\\08.png",
+    "oldSha256": "544af0abd24fb0450a2841ebe3dce7c653ae8696f4440bcca7764183d7452fca",
+    "sha256": "2dc88eb57c1a4651992e4256dd54fcea37716b8b957d4cac7428f48ba36194f8",
+    "sharedScale": 0.6529209621993127,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      111,
+      144,
+      272,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Nyx\\GetUp\\09.png",
+    "oldSha256": "da3f7f979c241b6f2a717ff6ad98a7fe32fe82a7020ad35a549b684fccb8b00e",
+    "sha256": "6822f318a44337f51c2bff3cb379c26cc8a60cb8e2f5655210350d2a5a73a7fd",
+    "sharedScale": 0.6529209621993127,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      119,
+      98,
+      264,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Nyx\\GetUp\\10.png",
+    "oldSha256": "2cb77eb4493735e1813425e329a63f8eee80bc2f17eb2208324a95371c4724c2",
+    "sha256": "6822f318a44337f51c2bff3cb379c26cc8a60cb8e2f5655210350d2a5a73a7fd",
+    "sharedScale": 0.6529209621993127,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      119,
+      98,
+      264,
+      288
+    ],
+    "standingPixels": 190
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Marin\\Knockout\\01.png",
+    "oldSha256": "0ebc778e72d10f16e2d448cf605944eab9c0f4851aba7d0adc3ac7aac090e663",
+    "sha256": "037361191c134a0aa3e47f8b6d6788c281416e8675fd9115e7366da45b036618",
+    "sharedScale": 0.7094594594594594,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      96,
+      77,
+      288,
+      288
+    ],
+    "standingPixels": 210
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Marin\\Knockout\\02.png",
+    "oldSha256": "268571c8d23f280bb39cf1282a1ae19b6cca345565813dd50d56bcbd4b6bcbfb",
+    "sha256": "037361191c134a0aa3e47f8b6d6788c281416e8675fd9115e7366da45b036618",
+    "sharedScale": 0.7094594594594594,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      96,
+      77,
+      288,
+      288
+    ],
+    "standingPixels": 210
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Marin\\Knockout\\03.png",
+    "oldSha256": "bf708b83032f89f2b1942674921293a333e257179af1299810177aca362d263c",
+    "sha256": "0780b60f32389a77185fb485aa025027dc903616554d977bf18d4b2fb038c7c5",
+    "sharedScale": 0.7094594594594594,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      114,
+      107,
+      270,
+      288
+    ],
+    "standingPixels": 210
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Marin\\Knockout\\04.png",
+    "oldSha256": "e94160a270e71c69da7cbc58da4f806471852f2d167df2ad87edf21fd7755da6",
+    "sha256": "0780b60f32389a77185fb485aa025027dc903616554d977bf18d4b2fb038c7c5",
+    "sharedScale": 0.7094594594594594,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      114,
+      107,
+      270,
+      288
+    ],
+    "standingPixels": 210
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Marin\\Knockout\\05.png",
+    "oldSha256": "f0b3c58401e610d57b82434af1bd1af6d984511245927f587c35573a9df10f93",
+    "sha256": "3772fe6af848f1120d2a58023d796cc3944d92bab0ba0f58004d1b61fa605c59",
+    "sharedScale": 0.7094594594594594,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      101,
+      171,
+      282,
+      288
+    ],
+    "standingPixels": 210
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Marin\\Knockout\\06.png",
+    "oldSha256": "419e456925189a6a52e6c8b84171c9311d7cc3a03b006428546e7aab428b9d99",
+    "sha256": "3772fe6af848f1120d2a58023d796cc3944d92bab0ba0f58004d1b61fa605c59",
+    "sharedScale": 0.7094594594594594,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      101,
+      171,
+      282,
+      288
+    ],
+    "standingPixels": 210
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Marin\\Knockout\\07.png",
+    "oldSha256": "5de651b6823ef83e3b144298719159e09c003287af3ac9fb77c3594313f6bb8f",
+    "sha256": "59a65a36c971492d4cc9058881f248f1c784b23b2244732af0c82bd6e42928ab",
+    "sharedScale": 0.7094594594594594,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      86,
+      187,
+      298,
+      288
+    ],
+    "standingPixels": 210
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Marin\\Knockout\\08.png",
+    "oldSha256": "d3ca2ec1ffc4ff849ccbb1c1555ef3c4e49a3375832045a9cd5c20a635a7e570",
+    "sha256": "59a65a36c971492d4cc9058881f248f1c784b23b2244732af0c82bd6e42928ab",
+    "sharedScale": 0.7094594594594594,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      86,
+      187,
+      298,
+      288
+    ],
+    "standingPixels": 210
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Marin\\Knockout\\09.png",
+    "oldSha256": "c52800dff51dc5ff2cd337ae7341af14dd27cdf2120ea61872b336b6f7b1fa1f",
+    "sha256": "ba33563dc16cb55fb4b4b22154d6f17efc4deec2e60d3e8adfd59c3b660f282f",
+    "sharedScale": 0.7094594594594594,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      87,
+      204,
+      297,
+      288
+    ],
+    "standingPixels": 210
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Marin\\Knockout\\10.png",
+    "oldSha256": "1ef0112bedda370a96c2751aa5641e4b3b4818abd4f2b53dd831ac93e9d04268",
+    "sha256": "ba33563dc16cb55fb4b4b22154d6f17efc4deec2e60d3e8adfd59c3b660f282f",
+    "sharedScale": 0.7094594594594594,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      87,
+      204,
+      297,
+      288
+    ],
+    "standingPixels": 210
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Marin\\Downed\\01.png",
+    "oldSha256": "d1843c34e04ff9796bc696178bc1b9b23cd5fc99c0276e352d04fbd2ac3f48e0",
+    "sha256": "c3a548140d47228f2cdd6985c74f7e1c5643a65000ff46c374b5ef5dd596e4c9",
+    "sharedScale": 0.7094594594594594,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      90,
+      206,
+      294,
+      288
+    ],
+    "standingPixels": 210
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Marin\\Downed\\02.png",
+    "oldSha256": "54151a3afb1a4328a40c0298aeac655074a6509b54b28c65f210d7b28968ad4b",
+    "sha256": "24a4b8252cb038ed821ec59b7e719b4d7dec0267cb4bf93235194acdeb09409f",
+    "sharedScale": 0.7094594594594594,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      89,
+      210,
+      295,
+      288
+    ],
+    "standingPixels": 210
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Marin\\Downed\\03.png",
+    "oldSha256": "c96dc0c9a063dc0f280d493bc0d7da5293615a9014dccf679f08d73b86cfdf83",
+    "sha256": "9ebced09939171fead3b30f29d407ef27bfbce2fd57b2b4c50c48191ca4a82bb",
+    "sharedScale": 0.7094594594594594,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      90,
+      204,
+      293,
+      288
+    ],
+    "standingPixels": 210
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Marin\\Downed\\04.png",
+    "oldSha256": "8d6eb2260a90cdff33782f90b1837b1a5f227c7ce8a205521a8aa6ba620903e7",
+    "sha256": "b3a6ca774c202d9a593abfcd7f372e0fc2892dd0dbf085e117041e38f65071fa",
+    "sharedScale": 0.7094594594594594,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      92,
+      206,
+      292,
+      288
+    ],
+    "standingPixels": 210
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Marin\\Downed\\05.png",
+    "oldSha256": "a738bf6a7eb9833f1e239720777f165bf0af259f78dcc21238cb850a98c72174",
+    "sha256": "5c7a651df311620f40ce5992abc3d742a10214ee70367422414e8041285b6f92",
+    "sharedScale": 0.7094594594594594,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      92,
+      204,
+      292,
+      288
+    ],
+    "standingPixels": 210
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Marin\\Downed\\06.png",
+    "oldSha256": "f2e966df25281b554903161aa23405ecd12f5cd78d376cb4ebdae0825d02ce9d",
+    "sha256": "b3a6ca774c202d9a593abfcd7f372e0fc2892dd0dbf085e117041e38f65071fa",
+    "sharedScale": 0.7094594594594594,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      92,
+      206,
+      292,
+      288
+    ],
+    "standingPixels": 210
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Marin\\Downed\\07.png",
+    "oldSha256": "9ef4b47390e8d4e092e4064fea5336d5f73badb50bc4d6358cba9f875bb0754b",
+    "sha256": "9ebced09939171fead3b30f29d407ef27bfbce2fd57b2b4c50c48191ca4a82bb",
+    "sharedScale": 0.7094594594594594,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      90,
+      204,
+      293,
+      288
+    ],
+    "standingPixels": 210
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Marin\\Downed\\08.png",
+    "oldSha256": "f2e966df25281b554903161aa23405ecd12f5cd78d376cb4ebdae0825d02ce9d",
+    "sha256": "24a4b8252cb038ed821ec59b7e719b4d7dec0267cb4bf93235194acdeb09409f",
+    "sharedScale": 0.7094594594594594,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      89,
+      210,
+      295,
+      288
+    ],
+    "standingPixels": 210
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Marin\\Downed\\09.png",
+    "oldSha256": "8d6eb2260a90cdff33782f90b1837b1a5f227c7ce8a205521a8aa6ba620903e7",
+    "sha256": "c3a548140d47228f2cdd6985c74f7e1c5643a65000ff46c374b5ef5dd596e4c9",
+    "sharedScale": 0.7094594594594594,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      90,
+      206,
+      294,
+      288
+    ],
+    "standingPixels": 210
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Marin\\Downed\\10.png",
+    "oldSha256": "54151a3afb1a4328a40c0298aeac655074a6509b54b28c65f210d7b28968ad4b",
+    "sha256": "24a4b8252cb038ed821ec59b7e719b4d7dec0267cb4bf93235194acdeb09409f",
+    "sharedScale": 0.7094594594594594,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      89,
+      210,
+      295,
+      288
+    ],
+    "standingPixels": 210
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Marin\\GetUp\\01.png",
+    "oldSha256": "e3aee74cfddbdcceb7c0f03688f5e5d0d0913b3152517ee7c17acb0c1ffdc93f",
+    "sha256": "628c74eb250f1b624b0d3602d94f5e9ca99e3b71e47dbba5f878475594448fa5",
+    "sharedScale": 0.7094594594594594,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      91,
+      206,
+      292,
+      288
+    ],
+    "standingPixels": 210
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Marin\\GetUp\\02.png",
+    "oldSha256": "625fd7eb14c9b6dc4b5311a14f03c7b06dc480448d2c9330eba4321e5364fcbb",
+    "sha256": "628c74eb250f1b624b0d3602d94f5e9ca99e3b71e47dbba5f878475594448fa5",
+    "sharedScale": 0.7094594594594594,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      91,
+      206,
+      292,
+      288
+    ],
+    "standingPixels": 210
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Marin\\GetUp\\03.png",
+    "oldSha256": "866519c223bc00821638b273abce4d30fbcadd4f4b147940bcf932e309dbc816",
+    "sha256": "cbc6e3782c863537677899e993505cc1b309ca2fa99845251692bbcac2bc1966",
+    "sharedScale": 0.7094594594594594,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      91,
+      171,
+      292,
+      288
+    ],
+    "standingPixels": 210
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Marin\\GetUp\\04.png",
+    "oldSha256": "3ca5773f0145e96ac4044f794333e8cd931dca0452a7a694e5b84037e7a145be",
+    "sha256": "cbc6e3782c863537677899e993505cc1b309ca2fa99845251692bbcac2bc1966",
+    "sharedScale": 0.7094594594594594,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      91,
+      171,
+      292,
+      288
+    ],
+    "standingPixels": 210
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Marin\\GetUp\\05.png",
+    "oldSha256": "e713d5f4f00ff1eedb0d1b6075e12a704eee76ff3a87c9be461192df3bf2008d",
+    "sha256": "8fc4633b22b795c27fcbd73ac87b95125c4c200f7b6278e99ca6916384f489c7",
+    "sharedScale": 0.7094594594594594,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      98,
+      138,
+      285,
+      288
+    ],
+    "standingPixels": 210
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Marin\\GetUp\\06.png",
+    "oldSha256": "78f4e5a6c14e5e09281f1b5602ecaf51058790b8b4122332ed55766a0e747c5d",
+    "sha256": "8fc4633b22b795c27fcbd73ac87b95125c4c200f7b6278e99ca6916384f489c7",
+    "sharedScale": 0.7094594594594594,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      98,
+      138,
+      285,
+      288
+    ],
+    "standingPixels": 210
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Marin\\GetUp\\07.png",
+    "oldSha256": "ad8e441103b5587e1fe1d9672bcf5cffea2abd536b58fbbbfca3025d89c83f59",
+    "sha256": "8115ec75621eec7ea338211ee4c0971df1c6cf0b95e17f84fbe267fbf6280f24",
+    "sharedScale": 0.7094594594594594,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      116,
+      109,
+      267,
+      288
+    ],
+    "standingPixels": 210
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Marin\\GetUp\\08.png",
+    "oldSha256": "aafbe8d8d2e50096306391c90ed5001e8bfbaa6f55f1a5decd9c0b25a7f3d208",
+    "sha256": "8115ec75621eec7ea338211ee4c0971df1c6cf0b95e17f84fbe267fbf6280f24",
+    "sharedScale": 0.7094594594594594,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      116,
+      109,
+      267,
+      288
+    ],
+    "standingPixels": 210
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Marin\\GetUp\\09.png",
+    "oldSha256": "2c75c0f01ea983d44ba443e91861e033d309a10daba346cde1d9e3b5488c4734",
+    "sha256": "fd8b5800ace92e1182414c66d8d3b9e467740d15fe2674c56a06d6387f396d24",
+    "sharedScale": 0.7094594594594594,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      124,
+      78,
+      260,
+      288
+    ],
+    "standingPixels": 210
+  },
+  {
+    "path": "Assets\\Art\\CharactersRework\\Marin\\GetUp\\10.png",
+    "oldSha256": "43db02a33faac0d1b0c3d7d5fbfc42058a95afac1b0befac870f2cf6472df5d9",
+    "sha256": "fd8b5800ace92e1182414c66d8d3b9e467740d15fe2674c56a06d6387f396d24",
+    "sharedScale": 0.7094594594594594,
+    "poseScaleCorrection": 1,
+    "visiblePixels": [
+      124,
+      78,
+      260,
+      288
+    ],
+    "standingPixels": 210
+  }
+]

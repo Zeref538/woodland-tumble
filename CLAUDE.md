@@ -9,3 +9,5 @@ GameSetup.Prepare rebuilds the scene. GameValidation.Run and GameValidation.RunS
 The current roster preparation tool uses Assets/Art/CharactersRework/Fern/Walk/01.png.meta as its import template. Keep this path current when cleaning legacy art. Offline art tools need checking as well as Unity scene dependencies.
 
 PrepareHUD must record edited Scout prefab-instance properties with PrefabUtility.RecordPrefabInstancePropertyModifications. The midterm guard probe found the old serialized 14-per-second drain returning after scene reload despite a code default of 3. Keep the Fern and Ember prefab defaults in step with saved scene overrides.
+
+Reuse existing AnimatorController assets and named states when rebuilding clips. Deleting all eight controllers during the recovery correction changed their GUIDs and left the saved player animators without a controller at boot. Update clips and state motions in place.

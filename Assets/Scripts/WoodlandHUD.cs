@@ -84,6 +84,9 @@ public class WoodlandHUD : MonoBehaviour
     public GameObject helpPanel;
     public Image[] guideTitles=new Image[2],guideActionImages=new Image[8];
     public Sprite[] guideTitleArt=new Sprite[8];
+    public Button[] recoveryPrompts=new Button[2];
+    public Text[] recoveryLabels=new Text[2];
+    public Image[] recoveryFills=new Image[2];
     public Text[] guideNames=new Text[2];
     public Button guideCloseButton;
     public bool MoveGuideOpen => helpPanel && helpPanel.activeSelf;
@@ -142,6 +145,7 @@ public class WoodlandHUD : MonoBehaviour
         for(int i=0;i<ruleButtons.Length;i++){int index=i;if(ruleButtons[i])ruleButtons[i].onClick.AddListener(()=>game.ChooseRules(index==1));}
         for(int i=0;i<characterButtons.Length;i++){int index=i;if(characterButtons[i])characterButtons[i].onClick.AddListener(()=>game.PreviewCharacter(index));}
         if(confirmCharacterButton)confirmCharacterButton.onClick.AddListener(game.ConfirmCharacter);
+        for(int i=0;i<recoveryPrompts.Length;i++){int player=i;if(recoveryPrompts[i])recoveryPrompts[i].onClick.AddListener(()=>game.players[player].TryRecover());}
         if(ruleBackButton)ruleBackButton.onClick.AddListener(game.MenuBack);
         if(characterBackButton)characterBackButton.onClick.AddListener(game.MenuBack);
         if(settingsBackButton)settingsBackButton.onClick.AddListener(game.MenuBack);
@@ -237,7 +241,7 @@ public class WoodlandHUD : MonoBehaviour
                 "<b>"+dash+"   BACKSTEP / DASH</b>\n12 / 10 stamina.\n"+
                 "<b>"+skill+"   "+actor.SkillName+"</b>\n14 stamina. Charge 0.85s. Long-range shot.\n"+
                 "<b>"+ultimate+"   "+actor.UltimateName+"</b>\nOne hit square left. Once each round.\n"+
-                "Five hits knock down. Push downed rivals into a hatch.";
+                "Down 4.5s. Tap "+(pad!=null || i==0?"X":"N")+" to rise. Shove into a hatch.";
         }
     }
     bool menuChordUsed;
@@ -386,6 +390,22 @@ public class WoodlandHUD : MonoBehaviour
     }
     void RefreshActionControls(int player,Scout scout,Gamepad pad,string style)
     {
+        if(recoveryPrompts[player]){
+            var prompt=recoveryPrompts[player];bool recoveryVisible=scout.Downed && !scout.RingOutFalling && !game.Paused;
+            prompt.gameObject.SetActive(recoveryVisible);
+            if(recoveryVisible){
+                var point=Camera.main.WorldToViewportPoint(new Vector3(scout.HurtBounds.center.x,scout.HurtBounds.max.y+.55f,0));
+                var rect=prompt.GetComponent<RectTransform>();rect.anchorMin=rect.anchorMax=Vector2.one*.5f;
+                var area=matchHud.GetComponent<RectTransform>().rect;rect.anchoredPosition=new Vector2((point.x-.5f)*area.width,(point.y-.5f)*area.height);
+                float press=Mathf.Clamp01(1-(Time.time-scout.LastRecoveryPress)/.16f);
+                prompt.transform.localScale=Vector3.one*(1+press*.04f);prompt.image.color=Color.Lerp(Color.white,scout.Element,press*.4f);
+                recoveryLabels[player].text=pad==null?(player==0?"[X]":"[N]"):"X";
+                recoveryLabels[player].color=pad==null?new Color(1,.97f,.85f):new Color(.45f,.75f,1);
+                var keyFace=prompt.transform.Find("Raised Key Face").GetComponent<RectTransform>();keyFace.anchoredPosition=new Vector2(18,-18-press*6);keyFace.localScale=Vector3.one*(1-press*.05f);
+                prompt.transform.Find("Recovery Input Caption").GetComponent<Text>().text=pad==null?"TAP KEY":style=="PLAYSTATION"?"TAP CROSS":style=="XBOX"?"TAP XBOX X":"TAP WEST";
+                if(recoveryFills[player]){recoveryFills[player].fillAmount=Mathf.Clamp01(1-scout.KnockdownRemaining/scout.knockdownDuration);recoveryFills[player].color=Color.Lerp(scout.Element,Color.white,press);recoveryFills[player].transform.localScale=Vector3.one*(1+press*.1f);}
+            }
+        }
         if(player<actionClusters.Length && actionClusters[player]) {
             bool ringOut=game.players[0].RingOutFalling || game.players[1].RingOutFalling || game.players[0].KnockedOut || game.players[1].KnockedOut;
             var group=actionClusters[player];group.alpha=Mathf.MoveTowards(group.alpha,ringOut?.08f:1,Time.unscaledDeltaTime*9);
@@ -562,7 +582,7 @@ public class WoodlandHUD : MonoBehaviour
     {
         if(!button) return;
         bool ink=button.transform.Find("Ink Focus Stroke");
-        bool painted=button.transform.Find("Illustrated Label");
+        bool painted=button.image.sprite && button.image.sprite.name.StartsWith("Button_");
         button.image.color=painted?(chosen?Color.white:new Color(.87f,.87f,.94f,1)):(chosen?new Color(.20f,.12f,.35f,1):new Color(.105f,.06f,.22f,.98f));
         var outline=button.GetComponent<Outline>();if(outline)outline.effectColor=chosen?accent:new Color(.32f,.23f,.47f,.85f);
         // Choice text belongs to this button, leaving all illustration and native layout editable.
@@ -581,13 +601,17 @@ public class WoodlandHUD : MonoBehaviour
         bool back=game.Screen!=WoodlandGame.MenuScreen.Match && keys!=null && keys.escapeKey.wasPressedThisFrame;
         bool next=keys!=null && (keys.downArrowKey.wasPressedThisFrame || keys.rightArrowKey.wasPressedThisFrame || keys.sKey.wasPressedThisFrame || keys.dKey.wasPressedThisFrame);
         bool previous=keys!=null && (keys.upArrowKey.wasPressedThisFrame || keys.leftArrowKey.wasPressedThisFrame || keys.wKey.wasPressedThisFrame || keys.aKey.wasPressedThisFrame);
+        bool down=keys!=null && (keys.downArrowKey.wasPressedThisFrame || keys.sKey.wasPressedThisFrame);
+        bool up=keys!=null && (keys.upArrowKey.wasPressedThisFrame || keys.wKey.wasPressedThisFrame);
         bool analogNext=false,analogPrevious=false;
         foreach(var pad in Gamepad.all){
             if(!pad.added || !pad.enabled)continue;
             confirm|=pad.buttonSouth.wasPressedThisFrame;back|=pad.buttonEast.wasPressedThisFrame;
             next|=pad.dpad.down.wasPressedThisFrame || pad.dpad.right.wasPressedThisFrame;
             previous|=pad.dpad.up.wasPressedThisFrame || pad.dpad.left.wasPressedThisFrame;
-            Vector2 stick=pad.leftStick.ReadValue();analogNext|=stick.x>.55f || stick.y<-.55f;analogPrevious|=stick.x<-.55f || stick.y>.55f;
+            down|=pad.dpad.down.wasPressedThisFrame;up|=pad.dpad.up.wasPressedThisFrame;
+            Vector2 stick=pad.leftStick.ReadValue();bool vertical=Mathf.Abs(stick.y)>=Mathf.Abs(stick.x);analogNext|=vertical?stick.y<-.55f:stick.x>.55f;analogPrevious|=vertical?stick.y>.55f:stick.x<-.55f;
+            if(Time.unscaledTime>=nextNavigation && Mathf.Abs(stick.y)>.55f && Mathf.Abs(stick.y)>=Mathf.Abs(stick.x)){down|=stick.y<0;up|=stick.y>0;}
         }
         if(MoveGuideOpen){
             if(back || confirm || (keys!=null && keys.f1Key.wasPressedThisFrame))CloseMoveGuide();
@@ -602,8 +626,11 @@ public class WoodlandHUD : MonoBehaviour
             if(game.Screen==WoodlandGame.MenuScreen.Title)menuFocus=(menuFocus+direction+modeButtons.Length)%modeButtons.Length;
             else if(game.Screen==WoodlandGame.MenuScreen.Rules)menuFocus=(menuFocus+direction+2)%2;
             else if(game.Screen==WoodlandGame.MenuScreen.Characters){
-                int candidate=game.PendingCharacter;
-                for(int n=0;n<game.CharacterNames.Length;n++){candidate=(candidate+direction+game.CharacterNames.Length)%game.CharacterNames.Length;if(game.CharacterAvailable(candidate)){game.PreviewCharacter(candidate);break;}}
+                int current=game.PendingCharacter,columns=4,rows=(game.CharacterNames.Length+columns-1)/columns;
+                for(int n=0;n<columns;n++){
+                    int candidate=up||down?((current/columns+(down?1:-1)+rows)%rows)*columns+(current%columns+n)%columns:current/columns*columns+(current%columns+direction*(n+1)+columns)%columns;
+                    if(candidate<game.CharacterNames.Length && game.CharacterAvailable(candidate)){game.PreviewCharacter(candidate);break;}
+                }
             }
             else if(game.Screen==WoodlandGame.MenuScreen.Maps)game.PreviewArena((game.PendingArena+direction+mapButtons.Length)%mapButtons.Length);
             else if(game.Screen==WoodlandGame.MenuScreen.Settings)menuFocus=(menuFocus+direction+settingsButtons.Length)%settingsButtons.Length;

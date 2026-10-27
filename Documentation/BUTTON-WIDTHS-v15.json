@@ -1,0 +1,886 @@
+[
+  {
+    "path": "Assets\\Art\\UI\\InkV15\\Button_BACK_Menu.png",
+    "source": "Assets\\Art\\UI\\InkV14\\Button_BACK.png",
+    "size": [
+      690,
+      180
+    ],
+    "protectedLettering": [
+      165,
+      374
+    ],
+    "uniformLetteringScale": 1.0
+  },
+  {
+    "path": "Assets\\Art\\UI\\InkV15\\Button_BACK_Long.png",
+    "source": "Assets\\Art\\UI\\InkV14\\Button_BACK.png",
+    "size": [
+      1164,
+      180
+    ],
+    "protectedLettering": [
+      165,
+      374
+    ],
+    "uniformLetteringScale": 1.0
+  },
+  {
+    "path": "Assets\\Art\\UI\\InkV15\\Button_BACK_Wide.png",
+    "source": "Assets\\Art\\UI\\InkV14\\Button_BACK.png",
+    "size": [
+      1980,
+      170
+    ],
+    "protectedLettering": [
+      156,
+      354
+    ],
+    "uniformLetteringScale": 0.9444444444444444
+  },
+  {
+    "path": "Assets\\Art\\UI\\InkV15\\Button_BACK_Short.png",
+    "source": "Assets\\Art\\UI\\InkV14\\Button_BACK.png",
+    "size": [
+      655,
+      180
+    ],
+    "protectedLettering": [
+      165,
+      374
+    ],
+    "uniformLetteringScale": 1.0
+  },
+  {
+    "path": "Assets\\Art\\UI\\InkV15\\Button_CAMERA_SHAKE_Menu.png",
+    "source": "Assets\\Art\\UI\\InkV14\\Button_CAMERA_SHAKE.png",
+    "size": [
+      690,
+      180
+    ],
+    "protectedLettering": [
+      55,
+      459
+    ],
+    "uniformLetteringScale": 1.0
+  },
+  {
+    "path": "Assets\\Art\\UI\\InkV15\\Button_CAMERA_SHAKE_Long.png",
+    "source": "Assets\\Art\\UI\\InkV14\\Button_CAMERA_SHAKE.png",
+    "size": [
+      1164,
+      180
+    ],
+    "protectedLettering": [
+      55,
+      459
+    ],
+    "uniformLetteringScale": 1.0
+  },
+  {
+    "path": "Assets\\Art\\UI\\InkV15\\Button_CAMERA_SHAKE_Wide.png",
+    "source": "Assets\\Art\\UI\\InkV14\\Button_CAMERA_SHAKE.png",
+    "size": [
+      1980,
+      170
+    ],
+    "protectedLettering": [
+      51,
+      434
+    ],
+    "uniformLetteringScale": 0.9444444444444444
+  },
+  {
+    "path": "Assets\\Art\\UI\\InkV15\\Button_CAMERA_SHAKE_Short.png",
+    "source": "Assets\\Art\\UI\\InkV14\\Button_CAMERA_SHAKE.png",
+    "size": [
+      655,
+      180
+    ],
+    "protectedLettering": [
+      55,
+      459
+    ],
+    "uniformLetteringScale": 1.0
+  },
+  {
+    "path": "Assets\\Art\\UI\\InkV15\\Button_CHOOSE_MAP_Menu.png",
+    "source": "Assets\\Art\\UI\\InkV14\\Button_CHOOSE_MAP.png",
+    "size": [
+      690,
+      180
+    ],
+    "protectedLettering": [
+      59,
+      452
+    ],
+    "uniformLetteringScale": 1.0
+  },
+  {
+    "path": "Assets\\Art\\UI\\InkV15\\Button_CHOOSE_MAP_Long.png",
+    "source": "Assets\\Art\\UI\\InkV14\\Button_CHOOSE_MAP.png",
+    "size": [
+      1164,
+      180
+    ],
+    "protectedLettering": [
+      59,
+      452
+    ],
+    "uniformLetteringScale": 1.0
+  },
+  {
+    "path": "Assets\\Art\\UI\\InkV15\\Button_CHOOSE_MAP_Wide.png",
+    "source": "Assets\\Art\\UI\\InkV14\\Button_CHOOSE_MAP.png",
+    "size": [
+      1980,
+      170
+    ],
+    "protectedLettering": [
+      55,
+      427
+    ],
+    "uniformLetteringScale": 0.9444444444444444
+  },
+  {
+    "path": "Assets\\Art\\UI\\InkV15\\Button_CHOOSE_MAP_Short.png",
+    "source": "Assets\\Art\\UI\\InkV14\\Button_CHOOSE_MAP.png",
+    "size": [
+      655,
+      180
+    ],
+    "protectedLettering": [
+      59,
+      452
+    ],
+    "uniformLetteringScale": 1.0
+  },
+  {
+    "path": "Assets\\Art\\UI\\InkV15\\Button_EFFECTS_QUALITY_Menu.png",
+    "source": "Assets\\Art\\UI\\InkV14\\Button_EFFECTS_QUALITY.png",
+    "size": [
+      690,
+      180
+    ],
+    "protectedLettering": [
+      67,
+      449
+    ],
+    "uniformLetteringScale": 1.0
+  },
+  {
+    "path": "Assets\\Art\\UI\\InkV15\\Button_EFFECTS_QUALITY_Long.png",
+    "source": "Assets\\Art\\UI\\InkV14\\Button_EFFECTS_QUALITY.png",
+    "size": [
+      1164,
+      180
+    ],
+    "protectedLettering": [
+      67,
+      449
+    ],
+    "uniformLetteringScale": 1.0
+  },
+  {
+    "path": "Assets\\Art\\UI\\InkV15\\Button_EFFECTS_QUALITY_Wide.png",
+    "source": "Assets\\Art\\UI\\InkV14\\Button_EFFECTS_QUALITY.png",
+    "size": [
+      1980,
+      170
+    ],
+    "protectedLettering": [
+      63,
+      424
+    ],
+    "uniformLetteringScale": 0.9444444444444444
+  },
+  {
+    "path": "Assets\\Art\\UI\\InkV15\\Button_EFFECTS_QUALITY_Short.png",
+    "source": "Assets\\Art\\UI\\InkV14\\Button_EFFECTS_QUALITY.png",
+    "size": [
+      655,
+      180
+    ],
+    "protectedLettering": [
+      67,
+      449
+    ],
+    "uniformLetteringScale": 1.0
+  },
+  {
+    "path": "Assets\\Art\\UI\\InkV15\\Button_EXIT_Menu.png",
+    "source": "Assets\\Art\\UI\\InkV14\\Button_EXIT.png",
+    "size": [
+      690,
+      180
+    ],
+    "protectedLettering": [
+      181,
+      343
+    ],
+    "uniformLetteringScale": 1.0
+  },
+  {
+    "path": "Assets\\Art\\UI\\InkV15\\Button_EXIT_Long.png",
+    "source": "Assets\\Art\\UI\\InkV14\\Button_EXIT.png",
+    "size": [
+      1164,
+      180
+    ],
+    "protectedLettering": [
+      181,
+      343
+    ],
+    "uniformLetteringScale": 1.0
+  },
+  {
+    "path": "Assets\\Art\\UI\\InkV15\\Button_EXIT_Wide.png",
+    "source": "Assets\\Art\\UI\\InkV14\\Button_EXIT.png",
+    "size": [
+      1980,
+      170
+    ],
+    "protectedLettering": [
+      170,
+      325
+    ],
+    "uniformLetteringScale": 0.9444444444444444
+  },
+  {
+    "path": "Assets\\Art\\UI\\InkV15\\Button_EXIT_Short.png",
+    "source": "Assets\\Art\\UI\\InkV14\\Button_EXIT.png",
+    "size": [
+      655,
+      180
+    ],
+    "protectedLettering": [
+      181,
+      343
+    ],
+    "uniformLetteringScale": 1.0
+  },
+  {
+    "path": "Assets\\Art\\UI\\InkV15\\Button_FIGHT_Menu.png",
+    "source": "Assets\\Art\\UI\\InkV14\\Button_FIGHT.png",
+    "size": [
+      690,
+      180
+    ],
+    "protectedLettering": [
+      92,
+      420
+    ],
+    "uniformLetteringScale": 1.0
+  },
+  {
+    "path": "Assets\\Art\\UI\\InkV15\\Button_FIGHT_Long.png",
+    "source": "Assets\\Art\\UI\\InkV14\\Button_FIGHT.png",
+    "size": [
+      1164,
+      180
+    ],
+    "protectedLettering": [
+      92,
+      420
+    ],
+    "uniformLetteringScale": 1.0
+  },
+  {
+    "path": "Assets\\Art\\UI\\InkV15\\Button_FIGHT_Wide.png",
+    "source": "Assets\\Art\\UI\\InkV14\\Button_FIGHT.png",
+    "size": [
+      1980,
+      170
+    ],
+    "protectedLettering": [
+      86,
+      397
+    ],
+    "uniformLetteringScale": 0.9444444444444444
+  },
+  {
+    "path": "Assets\\Art\\UI\\InkV15\\Button_FIGHT_Short.png",
+    "source": "Assets\\Art\\UI\\InkV14\\Button_FIGHT.png",
+    "size": [
+      655,
+      180
+    ],
+    "protectedLettering": [
+      92,
+      420
+    ],
+    "uniformLetteringScale": 1.0
+  },
+  {
+    "path": "Assets\\Art\\UI\\InkV15\\Button_FULLSCREEN_Menu.png",
+    "source": "Assets\\Art\\UI\\InkV14\\Button_FULLSCREEN.png",
+    "size": [
+      690,
+      180
+    ],
+    "protectedLettering": [
+      65,
+      424
+    ],
+    "uniformLetteringScale": 1.0
+  },
+  {
+    "path": "Assets\\Art\\UI\\InkV15\\Button_FULLSCREEN_Long.png",
+    "source": "Assets\\Art\\UI\\InkV14\\Button_FULLSCREEN.png",
+    "size": [
+      1164,
+      180
+    ],
+    "protectedLettering": [
+      65,
+      424
+    ],
+    "uniformLetteringScale": 1.0
+  },
+  {
+    "path": "Assets\\Art\\UI\\InkV15\\Button_FULLSCREEN_Wide.png",
+    "source": "Assets\\Art\\UI\\InkV14\\Button_FULLSCREEN.png",
+    "size": [
+      1980,
+      170
+    ],
+    "protectedLettering": [
+      61,
+      400
+    ],
+    "uniformLetteringScale": 0.9444444444444444
+  },
+  {
+    "path": "Assets\\Art\\UI\\InkV15\\Button_FULLSCREEN_Short.png",
+    "source": "Assets\\Art\\UI\\InkV14\\Button_FULLSCREEN.png",
+    "size": [
+      655,
+      180
+    ],
+    "protectedLettering": [
+      65,
+      424
+    ],
+    "uniformLetteringScale": 1.0
+  },
+  {
+    "path": "Assets\\Art\\UI\\InkV15\\Button_LOCAL_VERSUS_Menu.png",
+    "source": "Assets\\Art\\UI\\InkV14\\Button_LOCAL_VERSUS.png",
+    "size": [
+      690,
+      180
+    ],
+    "protectedLettering": [
+      77,
+      454
+    ],
+    "uniformLetteringScale": 1.0
+  },
+  {
+    "path": "Assets\\Art\\UI\\InkV15\\Button_LOCAL_VERSUS_Long.png",
+    "source": "Assets\\Art\\UI\\InkV14\\Button_LOCAL_VERSUS.png",
+    "size": [
+      1164,
+      180
+    ],
+    "protectedLettering": [
+      77,
+      454
+    ],
+    "uniformLetteringScale": 1.0
+  },
+  {
+    "path": "Assets\\Art\\UI\\InkV15\\Button_LOCAL_VERSUS_Wide.png",
+    "source": "Assets\\Art\\UI\\InkV14\\Button_LOCAL_VERSUS.png",
+    "size": [
+      1980,
+      170
+    ],
+    "protectedLettering": [
+      72,
+      429
+    ],
+    "uniformLetteringScale": 0.9444444444444444
+  },
+  {
+    "path": "Assets\\Art\\UI\\InkV15\\Button_LOCAL_VERSUS_Short.png",
+    "source": "Assets\\Art\\UI\\InkV14\\Button_LOCAL_VERSUS.png",
+    "size": [
+      655,
+      180
+    ],
+    "protectedLettering": [
+      77,
+      454
+    ],
+    "uniformLetteringScale": 1.0
+  },
+  {
+    "path": "Assets\\Art\\UI\\InkV15\\Button_LOCK_IN_Menu.png",
+    "source": "Assets\\Art\\UI\\InkV14\\Button_LOCK_IN.png",
+    "size": [
+      690,
+      180
+    ],
+    "protectedLettering": [
+      132,
+      381
+    ],
+    "uniformLetteringScale": 1.0
+  },
+  {
+    "path": "Assets\\Art\\UI\\InkV15\\Button_LOCK_IN_Long.png",
+    "source": "Assets\\Art\\UI\\InkV14\\Button_LOCK_IN.png",
+    "size": [
+      1164,
+      180
+    ],
+    "protectedLettering": [
+      132,
+      381
+    ],
+    "uniformLetteringScale": 1.0
+  },
+  {
+    "path": "Assets\\Art\\UI\\InkV15\\Button_LOCK_IN_Wide.png",
+    "source": "Assets\\Art\\UI\\InkV14\\Button_LOCK_IN.png",
+    "size": [
+      1980,
+      170
+    ],
+    "protectedLettering": [
+      124,
+      360
+    ],
+    "uniformLetteringScale": 0.9444444444444444
+  },
+  {
+    "path": "Assets\\Art\\UI\\InkV15\\Button_LOCK_IN_Short.png",
+    "source": "Assets\\Art\\UI\\InkV14\\Button_LOCK_IN.png",
+    "size": [
+      655,
+      180
+    ],
+    "protectedLettering": [
+      132,
+      381
+    ],
+    "uniformLetteringScale": 1.0
+  },
+  {
+    "path": "Assets\\Art\\UI\\InkV15\\Button_MAIN_MENU_Menu.png",
+    "source": "Assets\\Art\\UI\\InkV14\\Button_MAIN_MENU.png",
+    "size": [
+      690,
+      180
+    ],
+    "protectedLettering": [
+      59,
+      453
+    ],
+    "uniformLetteringScale": 1.0
+  },
+  {
+    "path": "Assets\\Art\\UI\\InkV15\\Button_MAIN_MENU_Long.png",
+    "source": "Assets\\Art\\UI\\InkV14\\Button_MAIN_MENU.png",
+    "size": [
+      1164,
+      180
+    ],
+    "protectedLettering": [
+      59,
+      453
+    ],
+    "uniformLetteringScale": 1.0
+  },
+  {
+    "path": "Assets\\Art\\UI\\InkV15\\Button_MAIN_MENU_Wide.png",
+    "source": "Assets\\Art\\UI\\InkV14\\Button_MAIN_MENU.png",
+    "size": [
+      1980,
+      170
+    ],
+    "protectedLettering": [
+      56,
+      429
+    ],
+    "uniformLetteringScale": 0.9444444444444444
+  },
+  {
+    "path": "Assets\\Art\\UI\\InkV15\\Button_MAIN_MENU_Short.png",
+    "source": "Assets\\Art\\UI\\InkV14\\Button_MAIN_MENU.png",
+    "size": [
+      655,
+      180
+    ],
+    "protectedLettering": [
+      59,
+      453
+    ],
+    "uniformLetteringScale": 1.0
+  },
+  {
+    "path": "Assets\\Art\\UI\\InkV15\\Button_MOVE_LIST_Menu.png",
+    "source": "Assets\\Art\\UI\\InkV14\\Button_MOVE_LIST.png",
+    "size": [
+      690,
+      180
+    ],
+    "protectedLettering": [
+      62,
+      443
+    ],
+    "uniformLetteringScale": 1.0
+  },
+  {
+    "path": "Assets\\Art\\UI\\InkV15\\Button_MOVE_LIST_Long.png",
+    "source": "Assets\\Art\\UI\\InkV14\\Button_MOVE_LIST.png",
+    "size": [
+      1164,
+      180
+    ],
+    "protectedLettering": [
+      62,
+      443
+    ],
+    "uniformLetteringScale": 1.0
+  },
+  {
+    "path": "Assets\\Art\\UI\\InkV15\\Button_MOVE_LIST_Wide.png",
+    "source": "Assets\\Art\\UI\\InkV14\\Button_MOVE_LIST.png",
+    "size": [
+      1980,
+      170
+    ],
+    "protectedLettering": [
+      59,
+      419
+    ],
+    "uniformLetteringScale": 0.9444444444444444
+  },
+  {
+    "path": "Assets\\Art\\UI\\InkV15\\Button_MOVE_LIST_Short.png",
+    "source": "Assets\\Art\\UI\\InkV14\\Button_MOVE_LIST.png",
+    "size": [
+      655,
+      180
+    ],
+    "protectedLettering": [
+      62,
+      443
+    ],
+    "uniformLetteringScale": 1.0
+  },
+  {
+    "path": "Assets\\Art\\UI\\InkV15\\Button_REMATCH_Menu.png",
+    "source": "Assets\\Art\\UI\\InkV14\\Button_REMATCH.png",
+    "size": [
+      690,
+      180
+    ],
+    "protectedLettering": [
+      75,
+      437
+    ],
+    "uniformLetteringScale": 1.0
+  },
+  {
+    "path": "Assets\\Art\\UI\\InkV15\\Button_REMATCH_Long.png",
+    "source": "Assets\\Art\\UI\\InkV14\\Button_REMATCH.png",
+    "size": [
+      1164,
+      180
+    ],
+    "protectedLettering": [
+      75,
+      437
+    ],
+    "uniformLetteringScale": 1.0
+  },
+  {
+    "path": "Assets\\Art\\UI\\InkV15\\Button_REMATCH_Wide.png",
+    "source": "Assets\\Art\\UI\\InkV14\\Button_REMATCH.png",
+    "size": [
+      1980,
+      170
+    ],
+    "protectedLettering": [
+      70,
+      413
+    ],
+    "uniformLetteringScale": 0.9444444444444444
+  },
+  {
+    "path": "Assets\\Art\\UI\\InkV15\\Button_REMATCH_Short.png",
+    "source": "Assets\\Art\\UI\\InkV14\\Button_REMATCH.png",
+    "size": [
+      655,
+      180
+    ],
+    "protectedLettering": [
+      75,
+      437
+    ],
+    "uniformLetteringScale": 1.0
+  },
+  {
+    "path": "Assets\\Art\\UI\\InkV15\\Button_RESUME_Menu.png",
+    "source": "Assets\\Art\\UI\\InkV14\\Button_RESUME.png",
+    "size": [
+      690,
+      180
+    ],
+    "protectedLettering": [
+      80,
+      424
+    ],
+    "uniformLetteringScale": 1.0
+  },
+  {
+    "path": "Assets\\Art\\UI\\InkV15\\Button_RESUME_Long.png",
+    "source": "Assets\\Art\\UI\\InkV14\\Button_RESUME.png",
+    "size": [
+      1164,
+      180
+    ],
+    "protectedLettering": [
+      80,
+      424
+    ],
+    "uniformLetteringScale": 1.0
+  },
+  {
+    "path": "Assets\\Art\\UI\\InkV15\\Button_RESUME_Wide.png",
+    "source": "Assets\\Art\\UI\\InkV14\\Button_RESUME.png",
+    "size": [
+      1980,
+      170
+    ],
+    "protectedLettering": [
+      76,
+      400
+    ],
+    "uniformLetteringScale": 0.9444444444444444
+  },
+  {
+    "path": "Assets\\Art\\UI\\InkV15\\Button_RESUME_Short.png",
+    "source": "Assets\\Art\\UI\\InkV14\\Button_RESUME.png",
+    "size": [
+      655,
+      180
+    ],
+    "protectedLettering": [
+      80,
+      424
+    ],
+    "uniformLetteringScale": 1.0
+  },
+  {
+    "path": "Assets\\Art\\UI\\InkV15\\Button_SETTINGS_Menu.png",
+    "source": "Assets\\Art\\UI\\InkV14\\Button_SETTINGS.png",
+    "size": [
+      690,
+      180
+    ],
+    "protectedLettering": [
+      96,
+      423
+    ],
+    "uniformLetteringScale": 1.0
+  },
+  {
+    "path": "Assets\\Art\\UI\\InkV15\\Button_SETTINGS_Long.png",
+    "source": "Assets\\Art\\UI\\InkV14\\Button_SETTINGS.png",
+    "size": [
+      1164,
+      180
+    ],
+    "protectedLettering": [
+      96,
+      423
+    ],
+    "uniformLetteringScale": 1.0
+  },
+  {
+    "path": "Assets\\Art\\UI\\InkV15\\Button_SETTINGS_Wide.png",
+    "source": "Assets\\Art\\UI\\InkV14\\Button_SETTINGS.png",
+    "size": [
+      1980,
+      170
+    ],
+    "protectedLettering": [
+      90,
+      400
+    ],
+    "uniformLetteringScale": 0.9444444444444444
+  },
+  {
+    "path": "Assets\\Art\\UI\\InkV15\\Button_SETTINGS_Short.png",
+    "source": "Assets\\Art\\UI\\InkV14\\Button_SETTINGS.png",
+    "size": [
+      655,
+      180
+    ],
+    "protectedLettering": [
+      96,
+      423
+    ],
+    "uniformLetteringScale": 1.0
+  },
+  {
+    "path": "Assets\\Art\\UI\\InkV15\\Button_SINGLE_PLAYER_Menu.png",
+    "source": "Assets\\Art\\UI\\InkV14\\Button_SINGLE_PLAYER.png",
+    "size": [
+      690,
+      180
+    ],
+    "protectedLettering": [
+      55,
+      469
+    ],
+    "uniformLetteringScale": 1.0
+  },
+  {
+    "path": "Assets\\Art\\UI\\InkV15\\Button_SINGLE_PLAYER_Long.png",
+    "source": "Assets\\Art\\UI\\InkV14\\Button_SINGLE_PLAYER.png",
+    "size": [
+      1164,
+      180
+    ],
+    "protectedLettering": [
+      55,
+      469
+    ],
+    "uniformLetteringScale": 1.0
+  },
+  {
+    "path": "Assets\\Art\\UI\\InkV15\\Button_SINGLE_PLAYER_Wide.png",
+    "source": "Assets\\Art\\UI\\InkV14\\Button_SINGLE_PLAYER.png",
+    "size": [
+      1980,
+      170
+    ],
+    "protectedLettering": [
+      52,
+      443
+    ],
+    "uniformLetteringScale": 0.9444444444444444
+  },
+  {
+    "path": "Assets\\Art\\UI\\InkV15\\Button_SINGLE_PLAYER_Short.png",
+    "source": "Assets\\Art\\UI\\InkV14\\Button_SINGLE_PLAYER.png",
+    "size": [
+      655,
+      180
+    ],
+    "protectedLettering": [
+      55,
+      469
+    ],
+    "uniformLetteringScale": 1.0
+  },
+  {
+    "path": "Assets\\Art\\UI\\InkV15\\Button_VOLUME_+_Menu.png",
+    "source": "Assets\\Art\\UI\\InkV14\\Button_VOLUME_+.png",
+    "size": [
+      690,
+      180
+    ],
+    "protectedLettering": [
+      81,
+      423
+    ],
+    "uniformLetteringScale": 1.0
+  },
+  {
+    "path": "Assets\\Art\\UI\\InkV15\\Button_VOLUME_+_Long.png",
+    "source": "Assets\\Art\\UI\\InkV14\\Button_VOLUME_+.png",
+    "size": [
+      1164,
+      180
+    ],
+    "protectedLettering": [
+      81,
+      423
+    ],
+    "uniformLetteringScale": 1.0
+  },
+  {
+    "path": "Assets\\Art\\UI\\InkV15\\Button_VOLUME_+_Wide.png",
+    "source": "Assets\\Art\\UI\\InkV14\\Button_VOLUME_+.png",
+    "size": [
+      1980,
+      170
+    ],
+    "protectedLettering": [
+      76,
+      399
+    ],
+    "uniformLetteringScale": 0.9444444444444444
+  },
+  {
+    "path": "Assets\\Art\\UI\\InkV15\\Button_VOLUME_+_Short.png",
+    "source": "Assets\\Art\\UI\\InkV14\\Button_VOLUME_+.png",
+    "size": [
+      655,
+      180
+    ],
+    "protectedLettering": [
+      81,
+      423
+    ],
+    "uniformLetteringScale": 1.0
+  },
+  {
+    "path": "Assets\\Art\\UI\\InkV15\\Button_VOLUME_-_Menu.png",
+    "source": "Assets\\Art\\UI\\InkV14\\Button_VOLUME_-.png",
+    "size": [
+      690,
+      180
+    ],
+    "protectedLettering": [
+      91,
+      420
+    ],
+    "uniformLetteringScale": 1.0
+  },
+  {
+    "path": "Assets\\Art\\UI\\InkV15\\Button_VOLUME_-_Long.png",
+    "source": "Assets\\Art\\UI\\InkV14\\Button_VOLUME_-.png",
+    "size": [
+      1164,
+      180
+    ],
+    "protectedLettering": [
+      91,
+      420
+    ],
+    "uniformLetteringScale": 1.0
+  },
+  {
+    "path": "Assets\\Art\\UI\\InkV15\\Button_VOLUME_-_Wide.png",
+    "source": "Assets\\Art\\UI\\InkV14\\Button_VOLUME_-.png",
+    "size": [
+      1980,
+      170
+    ],
+    "protectedLettering": [
+      86,
+      397
+    ],
+    "uniformLetteringScale": 0.9444444444444444
+  },
+  {
+    "path": "Assets\\Art\\UI\\InkV15\\Button_VOLUME_-_Short.png",
+    "source": "Assets\\Art\\UI\\InkV14\\Button_VOLUME_-.png",
+    "size": [
+      655,
+      180
+    ],
+    "protectedLettering": [
+      91,
+      420
+    ],
+    "uniformLetteringScale": 1.0
+  }
+]

@@ -1,0 +1,58 @@
+[
+  {
+    "fighter": "Fern",
+    "standingHeightPixels": 190,
+    "getUpHeightPixels": 190,
+    "downedLengthPixels": 185,
+    "getUpScaleRatio": 1.0
+  },
+  {
+    "fighter": "Ember",
+    "standingHeightPixels": 190,
+    "getUpHeightPixels": 190,
+    "downedLengthPixels": 185,
+    "getUpScaleRatio": 1.0
+  },
+  {
+    "fighter": "Luna",
+    "standingHeightPixels": 190,
+    "getUpHeightPixels": 190,
+    "downedLengthPixels": 185,
+    "getUpScaleRatio": 1.0
+  },
+  {
+    "fighter": "Bram",
+    "standingHeightPixels": 190,
+    "getUpHeightPixels": 190,
+    "downedLengthPixels": 179,
+    "getUpScaleRatio": 1.0
+  },
+  {
+    "fighter": "Zephyr",
+    "standingHeightPixels": 190,
+    "getUpHeightPixels": 190,
+    "downedLengthPixels": 197,
+    "getUpScaleRatio": 1.0
+  },
+  {
+    "fighter": "Volt",
+    "standingHeightPixels": 190,
+    "getUpHeightPixels": 190,
+    "downedLengthPixels": 196,
+    "getUpScaleRatio": 1.0
+  },
+  {
+    "fighter": "Nyx",
+    "standingHeightPixels": 190,
+    "getUpHeightPixels": 190,
+    "downedLengthPixels": 195,
+    "getUpScaleRatio": 1.0
+  },
+  {
+    "fighter": "Marin",
+    "standingHeightPixels": 210,
+    "getUpHeightPixels": 210,
+    "downedLengthPixels": 204,
+    "getUpScaleRatio": 1.0
+  }
+]
