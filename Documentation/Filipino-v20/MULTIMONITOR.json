@@ -1,0 +1,14 @@
+[
+  {
+    "case": "normal",
+    "alive": true,
+    "displayMode": "DISPLAY_MODE: 1920x1080 / FullScreenWindow / viewport=(x:0.00, y:0.00, width:1.00, height:1.00) / monitor=VP24K1S PRO  1920x1080",
+    "exceptions": 0
+  },
+  {
+    "case": "square",
+    "alive": true,
+    "displayMode": "DISPLAY_MODE: 1920x1080 / FullScreenWindow / viewport=(x:0.00, y:0.00, width:1.00, height:1.00) / monitor=VP24K1S PRO  1920x1080",
+    "exceptions": 0
+  }
+]

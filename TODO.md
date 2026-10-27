@@ -1,5 +1,12 @@
 # Rune Rumble: current delivery
 
+## Multi-monitor launch correction
+
+- [x] Select a complete resolution pair from the game window's monitor after initialization.
+- [x] Test fresh and forced-square launches on the connected landscape/portrait displays.
+- [x] Rebuild, test and package a new submission ZIP.
+
+
 ## Fullscreen and ultimate prompt
 
 - [x] Use native borderless fullscreen and verify the native display size.

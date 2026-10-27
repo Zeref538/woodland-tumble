@@ -2,6 +2,10 @@
 
 Paste the following prompt into a coding-agent chat with access to this workspace.
 
+## Multi-monitor launch correction
+
+Use the latest `Build/Submission/Pasuntok-Nga-John-Andrei-M-Martinez-Display-Fix.zip`. The prior Updated ZIP could start at 1080x1080 on the connected portrait/landscape setup. Startup now waits a frame and takes both dimensions from the game window's actual monitor. Normal, forced-square and extracted-ZIP launches all reported 1920x1080 with a full viewport and zero script exceptions. See MULTIMONITOR.json and DISPLAY-FIX-NATIVE.json. This supersedes older package links below.
+
 ## Latest display correction
 
 Use `Build/Submission/Pasuntok-Nga-John-Andrei-M-Martinez-Updated.zip`. The extracted game reports 1920x1080 borderless fullscreen with a full viewport, and passed an 18-second launch with no exceptions. The ready prompt is now HANDA! [L2 + R2] on PS4. The fresh presentation fixture passed 138 checks covering both sides and PS4/Xbox/keyboard prompts. This replaces the original package referenced below.

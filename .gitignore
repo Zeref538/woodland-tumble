@@ -34,3 +34,5 @@ Documentation/*.log
 # Temporary Unity performance-test build resources
 Assets/Resources/PerformanceTestRunInfo.json*
 Assets/Resources/PerformanceTestRunSettings.json*
+
+Documentation/**/*.log

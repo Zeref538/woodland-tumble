@@ -12,27 +12,28 @@
   },
   "totalChecks": 525,
   "package": {
-    "packagedAtUtc": "2026-10-27T15:48:13.009411+00:00",
-    "archive": "C:\\Users\\johna\\OneDrive\\Documents\\Portfolio\\woodland-tumble\\Build\\Submission\\Pasuntok-Nga-John-Andrei-M-Martinez-Updated.zip",
-    "archiveBytes": 211942207,
-    "archiveSha256": "add3312e12e2df7d69bf4c54398eca33e6b3b46380ca8ad14d90eb71cd417168",
+    "packagedAtUtc": "2026-10-27T16:07:24.735737+00:00",
+    "archive": "C:\\Users\\johna\\OneDrive\\Documents\\Portfolio\\woodland-tumble\\Build\\Submission\\Pasuntok-Nga-John-Andrei-M-Martinez-Display-Fix.zip",
+    "archiveBytes": 211942485,
+    "archiveSha256": "b599bb776a8f0e51a8bbf2c40126c1d5707176fbc2dc1c5539597b7425b94d4e",
     "files": 179,
-    "unpackedBytes": 905341515,
+    "unpackedBytes": 905342027,
     "archiveCrcPassed": true,
     "debugFoldersExcluded": true
   },
   "native": {
-    "source": "Extracted updated ZIP",
-    "sampleSeconds": 18,
+    "source": "Extracted Display-Fix ZIP",
+    "sampleSeconds": 15,
+    "forcedInitialResolution": "1080x1080 windowed",
     "aliveAfterSample": true,
     "verifiedExecutable": true,
     "scriptDomainInitialized": true,
     "loggedExceptions": 0,
     "nativeFullscreenVerified": true,
-    "displayMode": "DISPLAY_MODE: 1920x1080 / FullScreenWindow / viewport=(x:0.00, y:0.00, width:1.00, height:1.00)",
+    "displayMode": "DISPLAY_MODE: 1920x1080 / FullScreenWindow / viewport=(x:0.00, y:0.00, width:1.00, height:1.00) / monitor=VP24K1S PRO  1920x1080",
     "closedAfterTest": true
   },
-  "assemblySha256": "3547cab5238ad6bc0a2212ac894e0fb310b5a6b9b28566240d983eca91dac331",
+  "assemblySha256": "9aefb1e119a1718edabbb000dfb0b207a477db6244eaa58046bf58f08e71c411",
   "sceneSha256": "1d4505b436b6639edaff084024131718a9ea8948ccc89919c7c25b925f7f184f",
   "savedRoundDurationSeconds": 99,
   "originalScenePreserved": true,
@@ -47,12 +48,16 @@
     "No physical two-controller feel test.",
     "The assignment has not been uploaded or submitted."
   ],
-  "updatedAtUtc": "2026-10-27T15:50:33.862624+00:00",
+  "updatedAtUtc": "2026-10-27T16:09:44.393263+00:00",
   "displayFix": {
-    "startup": "Request native borderless fullscreen after menu initialization",
-    "verified": "1920x1080, full normalized viewport",
-    "ultimatePrompt": "HANDA! [L2 + R2]",
-    "freshPresentationChecks": 138,
-    "scope": "Both players, PS4, Xbox and keyboard. Older combat reports are retained; this patch changes display setup and prompt text."
+    "previousObservedFailure": "User launch reported 1080x1080 FullScreenWindow while primary monitor was 1920x1080; a second monitor was 1080x1920.",
+    "implementation": "Wait for window initialization, then read both dimensions from Screen.mainWindowDisplayInfo. Reapply on focus regain while fullscreen is active.",
+    "nativeCases": [
+      "Normal launch -> 1920x1080",
+      "Forced 1080x1080 windowed launch -> 1920x1080",
+      "Extracted final ZIP with forced square launch -> 1920x1080"
+    ],
+    "result": "All observed final viewports cover the complete frame.",
+    "logs": "MULTIMONITOR.json and DISPLAY-FIX-NATIVE.json"
   }
 }

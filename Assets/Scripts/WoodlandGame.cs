@@ -397,19 +397,31 @@ public class WoodlandGame : MonoBehaviour
     public void OpenSettings(){FreezeMatch();Screen=MenuScreen.Settings;if(hud)hud.RefreshMenu();}
     public void StepVolume(float delta){if(WoodlandEffects.Instance)WoodlandEffects.Instance.SetVolume(SettingsVolume+delta);}
     public void ToggleFullscreen(){SetDisplayMode(!UnityEngine.Screen.fullScreen);}
+    bool fullscreenRequested;
+    Coroutine displayChange;
     public void SetDisplayMode(bool fullscreen)
     {
-        var native=UnityEngine.Screen.currentResolution;
-        int width=fullscreen?native.width:Mathf.Min(1280,native.width);
-        int height=fullscreen?native.height:Mathf.Min(720,native.height);
-        UnityEngine.Screen.SetResolution(width,height,fullscreen?FullScreenMode.FullScreenWindow:FullScreenMode.Windowed);
-        StartCoroutine(ReportDisplayMode());
+        fullscreenRequested=fullscreen;
+        if(displayChange!=null)StopCoroutine(displayChange);
+        displayChange=StartCoroutine(ApplyDisplayMode(fullscreen));
     }
-    IEnumerator ReportDisplayMode()
+    IEnumerator ApplyDisplayMode(bool fullscreen)
     {
-        yield return new WaitForSecondsRealtime(.5f);
+        // Let the player window finish binding to its monitor before reading its dimensions.
+        yield return null;
+        var monitor=UnityEngine.Screen.mainWindowDisplayInfo;
+        int nativeWidth=Mathf.Max(1,monitor.width),nativeHeight=Mathf.Max(1,monitor.height);
+        int width=fullscreen?nativeWidth:Mathf.Min(1280,nativeWidth);
+        int height=fullscreen?nativeHeight:Mathf.Min(720,nativeHeight);
+        UnityEngine.Screen.SetResolution(width,height,fullscreen?FullScreenMode.FullScreenWindow:FullScreenMode.Windowed);
+        yield return new WaitForSecondsRealtime(.75f);
         UpdateCameraViewport();
-        Debug.Log("DISPLAY_MODE: "+UnityEngine.Screen.width+"x"+UnityEngine.Screen.height+" / "+UnityEngine.Screen.fullScreenMode+" / viewport="+(Camera.main?Camera.main.rect.ToString():"none"));
+        Debug.Log("DISPLAY_MODE: "+UnityEngine.Screen.width+"x"+UnityEngine.Screen.height+" / "+UnityEngine.Screen.fullScreenMode+" / viewport="+(Camera.main?Camera.main.rect.ToString():"none")+" / monitor="+monitor.name+" "+nativeWidth+"x"+nativeHeight);
+        displayChange=null;
+    }
+    void OnApplicationFocus(bool focused)
+    {
+        if(focused && punchEdition && !Application.isEditor && fullscreenRequested && UnityEngine.Screen.fullScreen)SetDisplayMode(true);
     }
     public void ToggleCameraShake(){if(WoodlandEffects.Instance){WoodlandEffects.Instance.cameraShake=!CameraShakeEnabled;PlayerPrefs.SetInt("Woodland.CameraShake",CameraShakeEnabled?1:0);}}
     public void CycleEffectsQuality(){if(WoodlandEffects.Instance){float value=EffectsQualityName=="LOW"?1:EffectsQualityName=="STANDARD"?1.35f:.65f;WoodlandEffects.Instance.effectIntensity=value;PlayerPrefs.SetFloat("Woodland.EffectsQuality",value);}}
