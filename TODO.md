@@ -1,12 +1,27 @@
 # Rune Rumble: current delivery
 
+## Filipino punch edition
+
+- [x] Package the portable submission ZIP, validate all 179 entries and launch its extracted EXE for 18 seconds with zero script exceptions.
+
+- [x] Initialize opening portraits and fit ANGAT/ABOT captions; 18 layout checks and 114 presentation checks passed, with screenshots inspected.
+
+- [x] Correct input-fixture focus and diagonal thresholds; 289 Filipino checks now pass, including software input isolation and hot swapping.
+
+- [x] Disable jumping through every keyboard, controller and gameplay entry point.
+- [x] Replace kicks with grounded uppercut artwork and convert skills into traveling punches.
+- [x] Replace all eight ultimates with a short-range, interruptible three-hit punch barrage.
+- [x] Translate live and illustrated UI into Filipino and give all eight fighters strong names with funny surnames.
+- [x] Use the confirmed title Pasuntok Nga! and developer credit John Andrei M. Martinez.
+- [x] Verify controls, damage limits, text and animation proportions, then build to a separate Windows folder.
+
 ## Midterm rubric audit
 
 - [x] Re-run the saved scene suite: 686 checks passed on the current commit.
 - [x] Launch the relocated Windows folder for 18 seconds without script exceptions.
 - [x] Record rubric failures and submission dependencies in Documentation/MIDTERM-RUBRIC-AUDIT.md.
-- [ ] Choose whether to prepare a separate strict exam edition. No gameplay changes made during this audit.
-- [ ] Confirm the exact full developer name for the required title credit if preparing the exam edition.
+- [x] User chose a separate custom Filipino punch edition. Strict-rubric exceptions are documented.
+- [x] Confirm developer credit: John Andrei M. Martinez.
 - [ ] Verify simultaneous physical controllers, unplug/reconnect and clean-machine startup before submission.
 
 

@@ -9,8 +9,8 @@ public class Scout : MonoBehaviour
     [Range(0, 1)] public int id;
     public string displayName = "Fern";
     public int CharacterIndex { get; private set; }
-    public string SkillName => new[]{"VINE BOLT","FIRE BOLT","FROST WAVE","STONE WAVE","GALE CRESCENT","ARC LANCE","DUSK ORB","TIDE SURGE"}[Mathf.Clamp(SkillIndex,0,7)];
-    public string UltimateName => new[]{"WILDROOT PRISON","PHOENIX COMBO","MOONFROST SEAL","WORLD SHATTER","TEMPEST SPIRAL","THUNDER RUSH","ECLIPSE SNARE","UNDERTOW"}[Mathf.Clamp(SkillIndex,0,7)];
+    public string SkillName => WoodlandGame.PunchEdition?"ABOT-SUNTOK":new[]{"VINE BOLT","FIRE BOLT","FROST WAVE","STONE WAVE","GALE CRESCENT","ARC LANCE","DUSK ORB","TIDE SURGE"}[Mathf.Clamp(SkillIndex,0,7)];
+    public string UltimateName => WoodlandGame.PunchEdition?"ULAN NG SUNTOK":new[]{"WILDROOT PRISON","PHOENIX COMBO","MOONFROST SEAL","WORLD SHATTER","TEMPEST SPIRAL","THUNDER RUSH","ECLIPSE SNARE","UNDERTOW"}[Mathf.Clamp(SkillIndex,0,7)];
     public const float SpecialCooldown = 0;
     public float SpecialCooldownRemaining => 0;
     public float SpecialReady => Charging ? Charge : 1;
@@ -296,7 +296,7 @@ public class Scout : MonoBehaviour
         } else if (!Charging && action==0 && Time.time >= shieldBrokenUntil && Time.time >= nextEnergyRegen) Shield = Mathf.Min(shieldCapacity, Shield + shieldRecovery * Time.deltaTime);
         if (Charging && Time.time >= nextWard) { nextWard = Time.time + .08f; WoodlandEffects.Instance?.ChargeAura(Body.position + Vector2.up*.15f, SkillIndex, Charge); }
         if (Charging && Charge >= 1) ReleaseSmash();
-        string state = victoryPlaying ? "Victory" : KnockedOut ? "Knockout" : Downed ? (recovering?"GetUp":KnockdownRemaining>knockdownDuration-.35f?"Knockout":"Downed") : Time.time < hurtUntil ? "Hurt" : Blocking ? "Block" : Charging ? "Charge" : Time.time < dashUntil ? (AnimationState == "Backstep" ? "Backstep" : "Dash") : action != 0 ? actionAnimation : Time.time < doubleJumpUntil ? "DoubleJump" : !grounded && game.playing ? "Jump" : Mathf.Abs(axis) > .1f ? "Walk" : "Idle";
+        string state = victoryPlaying ? "Victory" : KnockedOut ? "Knockout" : Downed ? (recovering?"GetUp":KnockdownRemaining>knockdownDuration-.35f?"Knockout":"Downed") : Time.time < hurtUntil ? "Hurt" : Blocking ? "Block" : Charging ? "Charge" : Time.time < dashUntil ? (AnimationState == "Backstep" ? "Backstep" : "Dash") : action != 0 ? actionAnimation : Time.time < doubleJumpUntil ? "DoubleJump" : !grounded && game.playing && !game.punchEdition ? "Jump" : Mathf.Abs(axis) > .1f ? "Walk" : "Idle";
         PlayState(state);
         art.flipX = face < 0;
         art.color = Time.time < hurtUntil && !KnockedOut ? new Color(1, .72f, .62f) : Color.white;
@@ -470,7 +470,7 @@ public class Scout : MonoBehaviour
     public Bounds MeleeBounds(bool punch)
     {
         float reach=punch?punchRange:pushRange;
-        return new Bounds(Body.position+new Vector2(face*(reach+.15f)*.5f,punch?.25f:-.48f),new Vector3(reach-.15f,punch?.6f:.65f,1));
+        return new Bounds(Body.position+new Vector2(face*(reach+.15f)*.5f,punch || WoodlandGame.PunchEdition?.25f:-.48f),new Vector3(reach-.15f,punch?.6f:WoodlandGame.PunchEdition?1.2f:.65f,1));
     }
     float DownedBodyWidth()
     {
@@ -583,6 +583,7 @@ public class Scout : MonoBehaviour
     }
     public bool TryJump()
     {
+        if(WoodlandGame.PunchEdition)return false;
         if (!CanAct || Time.time < rootedUntil || Blocking || Charging || Time.time < dashUntil || action != 0 || (!grounded && AirJumpsRemaining == 0)) return false;
         bool aerial = !grounded;
         if (!SpendStamina(aerial ? 6 : 4)) return false;
@@ -683,7 +684,7 @@ public class Scout : MonoBehaviour
     }
     IEnumerator RangedCast()
     {
-        action = 3; actionAnimation = "Smash"; PlayState(actionAnimation);
+        action = 3; actionAnimation = WoodlandGame.PunchEdition?"Punch":"Smash"; PlayState(actionAnimation);
         float direction = face;
         bool airborne=aerialCharge;
         WoodlandEffects.Instance?.Windup(Body.position + Vector2.right * direction * .45f, direction, Element);
@@ -709,6 +710,7 @@ public class Scout : MonoBehaviour
             WoodlandEffects.Instance?.RangedProjectile(point,direction,skill,1);
             var area=new Bounds(point-travel*.3f,new Vector3(1.2f,.8f,1));
             if (Contact(other,area,direction)) {
+                if(game.punchEdition){other.ReceiveHit(this,direction,true,1,area);yield break;}
                 float power = skill == 0 ? .95f : skill == 1 ? 1.05f : skill == 2 ? .85f : 1.1f;
                 if(skill>=4) {
                     bool hit=SpecialHit(other,direction,power,skill==7?.5f:0,skill==6?.55f:0,skill==4?1.8f:0,area);
@@ -763,6 +765,7 @@ public class Scout : MonoBehaviour
     }
     IEnumerator Ultimate()
     {
+        if(WoodlandGame.PunchEdition){yield return PunchBarrage();yield break;}
         action = 5; actionAnimation = "Ultimate"; PlayState(actionAnimation);
         float direction = face;
         int skill = SkillIndex;
@@ -815,6 +818,27 @@ public class Scout : MonoBehaviour
         yield return new WaitForSeconds(.45f);
         action = 0;
         CancelUltimate();
+    }
+    IEnumerator PunchBarrage()
+    {
+        action=5;actionAnimation="Charge";PlayState("Charge");
+        float direction=face;
+        yield return new WaitForSeconds(.35f);
+        var game=WoodlandGame.Instance;var other=game.players[1-id];
+        actionAnimation="Ultimate";
+        for(int hit=0;hit<3;hit++){
+            if(!CanAct || !UltimateActive)yield break;
+            PlayState("Ultimate");animator.Play("Ultimate",0,0);
+            var area=new Bounds(Body.position+Vector2.right*direction*1.4f,new Vector3(2.8f,1.6f,1));
+            WoodlandEffects.Instance?.Swipe(Body.position,direction,true,id,SkillIndex);
+            if(Contact(other,area,direction)){
+                if(!other.ReceiveHit(this,direction,true,1,area))break;
+                WoodlandEffects.Instance?.Impact(other.Body.position,direction,true,hit==2);
+            }else{ShowCombatCue("WHIFF");break;}
+            yield return new WaitForSeconds(.26f);
+        }
+        yield return new WaitForSeconds(.3f);
+        action=0;CancelUltimate();
     }
     public void PlayVictory()
     {
@@ -916,7 +940,7 @@ public class Scout : MonoBehaviour
         // Early grounded hits preserve close spacing so a buffered string can finish without auto-tracking.
         if (groundedCombo && !finisher) force *= .22f;
         Body.linearVelocity = new Vector2(0, Mathf.Max(0, Body.linearVelocity.y));
-        Body.AddForce(new Vector2(direction * force, groundedCombo && finisher && !punch ? 5.5f : groundedCombo && !finisher ? .35f : AirHitsTaken>0 ? .6f : punch ? 1.9f : 1.1f), ForceMode2D.Impulse);
+        Body.AddForce(new Vector2(direction * force, WoodlandGame.PunchEdition?0:groundedCombo && finisher && !punch ? 5.5f : groundedCombo && !finisher ? .35f : AirHitsTaken>0 ? .6f : punch ? 1.9f : 1.1f), ForceMode2D.Impulse);
         hurtUntil = Mathf.Max(hurtUntil, Time.time + (groundedCombo ? .16f : punch ? .28f : .24f));
         invulnerableUntil = Time.time + .22f;
         action = 0;AttackRecovery=false;

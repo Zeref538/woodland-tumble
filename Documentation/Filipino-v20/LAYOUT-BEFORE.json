@@ -1,0 +1,5 @@
+{
+    "success": false,
+    "status": "System.Exception: Compact Filipino action caption: SUNTOK-ANGAT\r\n  at GameValidation.Check (System.Boolean ok, System.String message) [0x0002e] in C:\\Users\\johna\\OneDrive\\Documents\\Portfolio\\woodland-tumble\\Assets\\Editor\\GameValidation.cs:697 \r\n  at GameValidation.ValidateFilipinoLayout () [0x000a4] in C:\\Users\\johna\\OneDrive\\Documents\\Portfolio\\woodland-tumble\\Assets\\Editor\\GameValidation.cs:72 ",
+    "checks": []
+}

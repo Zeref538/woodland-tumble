@@ -61,6 +61,93 @@ public static class GameValidation
     public static void RunContactsFresh(){GameSetup.PrepareHUD();RunContactsSaved();}
     public static void RunMidtermCombat(){AudioListener.volume=0;GameSetup.PrepareHUD();SessionState.SetBool("Woodland.MidtermCombat",true);Begin(true);}
     public static void RunSaved() => RunDuelSaved();
+    public static void PrepareFilipinoLayout(){GameSetup.PrepareFilipino();ValidateFilipinoLayout();}
+    public static void ValidateFilipinoLayout()
+    {
+        var scene=EditorSceneManager.OpenScene("Assets/Scenes/PasuntokNga.unity");
+        var hud=UnityEngine.Object.FindAnyObjectByType<WoodlandHUD>();hud.LocalizeLabels();Canvas.ForceUpdateCanvases();
+        SessionState.SetString("Woodland.Checks","");
+        try{
+            foreach(var hero in hud.selectionPortraits)Check(hero && hero.sprite,"Saved opening portrait has a sprite before its first Update");
+            foreach(var label in hud.GetComponentsInChildren<UnityEngine.UI.Text>(true).Where(t=>t.name=="Action Caption")){
+                Check(new[]{"SANGGA","SUNTOK","ANGAT","ABOT"}.Contains(label.text),"Compact Filipino action caption: "+label.text);
+                Check(label.preferredWidth<=label.rectTransform.rect.width && label.preferredHeight<=label.rectTransform.rect.height,"Caption fits without stretching: "+label.text);
+            }
+            File.WriteAllText("Documentation/Filipino-v20/LAYOUT.json",JsonUtility.ToJson(new Report{success=true,status="FILIPINO_LAYOUT_PASS",checks=SessionState.GetString("Woodland.Checks","").Split('\n').Where(v=>v.Length>0).ToArray()},true));
+        }catch(Exception error){File.WriteAllText("Documentation/Filipino-v20/LAYOUT.json",JsonUtility.ToJson(new Report{success=false,status=error.ToString(),checks=new string[0]},true));throw;}
+    }
+    public static void RunFilipinoPresentation(){SessionState.SetBool("Woodland.FilipinoPresentation",true);RunFilipino();}
+    public static void RunFilipino(){AudioListener.volume=0;SessionState.SetBool("Woodland.Filipino",true);Begin(true);}
+    static void FilipinoPair(WoodlandGame game,int character,float distance)
+    {
+        PreparePresentationPair(game,character);
+        for(int side=0;side<2;side++){
+            var actor=game.players[side];actor.Body.constraints=RigidbodyConstraints2D.FreezeAll;actor.Body.position=new Vector2((side==0?-1:1)*distance*.5f,actor.Body.position.y);actor.Body.gravityScale=0;
+        }
+        Physics2D.SyncTransforms();
+    }
+    static void CheckFilipinoLabels(WoodlandHUD hud)
+    {
+        hud.Refresh();hud.LocalizeLabels();
+        foreach(var label in hud.GetComponentsInChildren<UnityEngine.UI.Text>(false)){
+            if(label.name=="Developer Credit")continue;
+            Check(!System.Text.RegularExpressions.Regex.IsMatch(label.text,@"\b(PUNCH|KICK|GUARD|SPECIAL|WHIFF|PLAYER|SELECTING|SINGLE PLAYER|LOCAL MULTIPLAYER|RESUME|STAMINA|CHARGING|LOCKED IN|SOUND|SETTINGS|SELECT YOUR|CPU|ARROW KEYS)\b",System.Text.RegularExpressions.RegexOptions.IgnoreCase),"Filipino UI: "+label.name+" = "+label.text.Replace('\n',' '));
+        }
+    }
+    static void TickFilipino()
+    {
+        try{
+            if(Elapsed>12)throw new Exception("Filipino validation timeout");
+            var game=WoodlandGame.Instance;if(!game)return;var a=game.players[0];var b=game.players[1];var hud=game.hud;
+            int stage=SessionState.GetInt("Woodland.Stage",-1),c=SessionState.GetInt("Woodland.FilipinoCharacter",0),test=SessionState.GetInt("Woodland.FilipinoCase",0);
+            if(stage==-1 && Elapsed>.4f){
+                Check(game.punchEdition && game.CharacterNames.SequenceEqual(WoodlandGame.FilipinoNames),"Separate Filipino scene has all eight renamed fighters");
+                var credit=hud.GetComponentsInChildren<UnityEngine.UI.Text>(true).FirstOrDefault(t=>t.name=="Developer Credit");Check(credit && credit.text.Contains("JOHN ANDREI M. MARTINEZ"),"Exact developer credit is present");
+                Check(game.Text("WHIFF")=="BULAG!" && game.Text("CLANG!")=="KALANG!","Comic feedback uses Filipino words");
+                CheckFilipinoLabels(hud);Capture("Documentation/Filipino-v20/Title.png");
+                game.roundDuration=600;game.ChooseMode(false);CheckFilipinoLabels(hud);Capture("Documentation/Filipino-v20/Roster.png");game.ConfirmCharacter();game.ConfirmCharacter();CheckFilipinoLabels(hud);Capture("Documentation/Filipino-v20/Arenas.png");game.StartSelectedMatch();SetStage(0);
+            }else if(stage==0 && game.playing && string.IsNullOrEmpty(game.message)){
+                if(SessionState.GetBool("Woodland.FilipinoPresentation",false)){
+                    CheckFilipinoLabels(hud);Capture("Documentation/Filipino-v20/Match-Layout.png");
+                    hud.OpenMoveGuide();CheckFilipinoLabels(hud);Capture("Documentation/Filipino-v20/Guide.png");hud.CloseMoveGuide();
+                    game.TogglePause();CheckFilipinoLabels(hud);Capture("Documentation/Filipino-v20/Pause.png");
+                    Complete(true,"FILIPINO_PRESENTATION_PASS: initialized portraits and compact action captions");return;
+                }
+                SessionState.SetInt("Woodland.FilipinoCharacter",0);SessionState.SetInt("Woodland.FilipinoCase",0);FilipinoPair(game,0,1.2f);SetStage(1);
+            }else if(stage==1 && SimElapsed>.35f){
+                Check(!a.TryJump() && !b.TryJump(),"Jump API rejects both fighters while idle: "+c+"/"+test);
+                if(test==0){Check(a.animations.kick.All(f=>AssetDatabase.GetAssetPath(f).Contains("/FilipinoUppercuts/")),"Uppercut catalog replaces every kick pose: "+c);Check(a.TryAttack(false),"Grounded uppercut starts: "+c);SetStage(2);}
+                else if(test==1){Check(a.TrySpecial(),"Traveling punch charges: "+c);SetStage(3);}
+                else if(test==2 || test==3){typeof(Scout).GetProperty("HitsRemaining").SetValue(a,1);Check(a.TryUltimate(),"Three-point punch barrage starts: "+c+"/"+test);SetStage(3);}
+                else{typeof(Scout).GetProperty("HitsRemaining").SetValue(a,1);Check(a.TryUltimate(),"Interruptible barrage starts: "+c);SetStage(4);}
+            }else if(stage==2 && SimElapsed>.14f){Check(a.art.sprite && AssetDatabase.GetAssetPath(a.art.sprite).Contains("/FilipinoUppercuts/"),"Native Animator displays the new uppercut: "+c);if(c==2)Capture("Documentation/Filipino-v20/Uppercut.png");SetStage(3);}
+            else if(stage==4 && SimElapsed>.16f){a.Stagger(.3f);Check(!a.UltimateActive,"Barrage interruption clears its active state: "+c);SetStage(3);}
+            else if(stage==3 && SimElapsed>(test==1?2.4f:1.5f)){
+                int expected=test==2?2:test==3 || test==4?5:4;
+                Check(b.HitsRemaining==expected,"Exact punch damage: "+c+"/"+test+", expected="+expected+", actual="+b.HitsRemaining);
+                Check(!a.ActionBusy && !a.UltimateActive,"Attack finishes without stuck action: "+c+"/"+test);
+                if(test==2)Check(!a.TryUltimate(),"Barrage remains limited to once per round: "+c);
+                test++;if(test==5){test=0;c++;}
+                if(c<8){SessionState.SetInt("Woodland.FilipinoCharacter",c);SessionState.SetInt("Woodland.FilipinoCase",test);FilipinoPair(game,c,test==1?10.5f:test==3?6:1.2f);SetStage(1);}
+                else{
+                    FilipinoPair(game,0,6);foreach(var actor in game.players){actor.Body.constraints=RigidbodyConstraints2D.FreezeRotation;actor.Body.gravityScale=1;actor.inputEnabled=true;}
+                    originalInputSettings=InputSystem.settings;validationInputSettings=UnityEngine.Object.Instantiate(originalInputSettings);
+                    validationInputSettings.editorInputBehaviorInPlayMode=InputSettings.EditorInputBehaviorInPlayMode.AllDeviceInputAlwaysGoesToGameView;
+                    validationInputSettings.backgroundBehavior=InputSettings.BackgroundBehavior.IgnoreFocus;InputSystem.settings=validationInputSettings;
+                    disabledPads=Gamepad.all.Where(pad=>pad.enabled).ToArray();foreach(var pad in disabledPads)InputSystem.DisableDevice(pad);
+                    testKeyboard=InputSystem.AddDevice<Keyboard>();testPads[0]=InputSystem.AddDevice<Gamepad>();testPads[1]=InputSystem.AddDevice<Gamepad>();game.RefreshGamepads();
+                    Check(game.GetGamepad(0)==testPads[0] && game.GetGamepad(1)==testPads[1],"Isolated test controllers occupy the intended player slots");
+                    InputSystem.onBeforeUpdate+=DriveTestInput;heldKey=Key.D;SetStage(10);
+                }
+            }else if(stage==10 && SimElapsed>.15f){Check(a.MovementInput>.9f && Mathf.Abs(b.MovementInput)<.01f,"P1 keyboard movement cannot move P2");heldKey=Key.LeftArrow;SetStage(11);}
+            else if(stage==11 && SimElapsed>.15f){Check(b.MovementInput<-.9f && Mathf.Abs(a.MovementInput)<.01f,"P2 keyboard movement cannot move P1");heldKey=Key.W;SessionState.SetFloat("Woodland.FilipinoY",a.Body.position.y);SetStage(12);}
+            else if(stage==12 && SimElapsed>.2f){Check(Mathf.Abs(a.Body.position.y-SessionState.GetFloat("Woodland.FilipinoY",0))<.05f && a.AnimationState!="Jump","Keyboard W cannot jump");heldKey=Key.UpArrow;SetStage(13);}
+            else if(stage==13 && SimElapsed>.2f){Check(b.Grounded && b.AnimationState!="Jump","P2 keyboard up cannot jump");heldKey=Key.None;padStates[0]=new GamepadState{leftStick=new Vector2(.8f,1)};padStates[1]=new GamepadState().WithButton(GamepadButton.DpadLeft).WithButton(GamepadButton.DpadUp);SetStage(14);}
+            else if(stage==14 && SimElapsed>.2f){Check(a.MovementInput>.5f && b.MovementInput<-.65f,"Both controller slots move independently at the same time [p1="+a.MovementInput+", p2="+b.MovementInput+", slot1="+(game.GetGamepad(0)==testPads[0])+", slot2="+(game.GetGamepad(1)==testPads[1])+"]");Check(a.Grounded && b.Grounded && a.AnimationState!="Jump" && b.AnimationState!="Jump","Stick and D-pad up cannot jump");InputSystem.RemoveDevice(testPads[0]);testPads[0]=null;game.RefreshGamepads();heldKey=Key.D;SetStage(15);}
+            else if(stage==15 && SimElapsed>.15f){Check(game.GetGamepad(0)==null && game.GetGamepad(1)==testPads[1],"Hot unplug preserves the other controller slot");Check(a.MovementInput>.9f && b.MovementInput<-.65f,"Keyboard takes over without disturbing the other pad");heldKey=Key.None;testPads[0]=InputSystem.AddDevice<Gamepad>();padStates[0]=new GamepadState();game.RefreshGamepads();Check(game.GetGamepad(0)==testPads[0] && game.GetGamepad(1)==testPads[1],"Replacement gamepad fills the free slot");hud.OpenMoveGuide();CheckFilipinoLabels(hud);Capture("Documentation/Filipino-v20/Guide.png");hud.CloseMoveGuide();game.TogglePause();CheckFilipinoLabels(hud);Capture("Documentation/Filipino-v20/Pause.png");Complete(true,"FILIPINO_PASS: renamed roster, Filipino UI, no jumps, uppercuts, traveling punches, three-point close barrages and isolated hot-swappable inputs");}
+        }catch(Exception error){Complete(false,error.ToString());}
+    }
+
     public static void RunComicCombat(){AudioListener.volume=0;SessionState.SetBool("Woodland.ComicCombat",true);Begin(true);}
     static void PrepareComicCase(WoodlandGame game,int character,int test)
     {
@@ -601,7 +688,7 @@ public static class GameValidation
     static void Begin(bool exit)
     {
         if (EditorApplication.isPlaying) { EditorApplication.isPlaying = false; EditorApplication.delayCall += () => Begin(exit); return; }
-        EditorSceneManager.OpenScene("Assets/Scenes/WoodlandTumble.unity");
+        EditorSceneManager.OpenScene(SessionState.GetBool("Woodland.Filipino",false)?"Assets/Scenes/PasuntokNga.unity":"Assets/Scenes/WoodlandTumble.unity");
         SessionState.SetBool("Woodland.ValidationExit", exit);
         SessionState.SetString("Woodland.Checks", "");
         SessionState.SetBool(Active, true);
@@ -622,6 +709,7 @@ public static class GameValidation
     static void Tick()
     {
         if (!SessionState.GetBool(Active, false) || !EditorApplication.isPlaying) return;
+        if(SessionState.GetBool("Woodland.Filipino",false)){TickFilipino();return;}
         if(SessionState.GetBool("Woodland.ComicCombat",false)){TickComicCombat();return;}
         if(SessionState.GetBool("Woodland.ChargeFeedback",false)){TickChargeFeedback();return;}
         if(SessionState.GetBool("Woodland.Contacts",false)){TickContacts();return;}
@@ -1662,7 +1750,7 @@ public static class GameValidation
             else if(path.EndsWith("move-guide-v8.png"))path="Documentation/Move-guide-v8.1.png";
             else if(!path.EndsWith("Replay-v8.1.png"))return;
         }
-        WoodlandGame.Instance.hud.Refresh();
+        WoodlandGame.Instance.hud.Refresh();WoodlandGame.Instance.hud.LocalizeLabels();
         var camera = Camera.main;
         var canvas = WoodlandGame.Instance.hud.GetComponent<Canvas>();
         var mode = canvas.renderMode;var previousCamera = canvas.worldCamera;float distance = canvas.planeDistance;int order=canvas.sortingOrder;
@@ -1913,8 +2001,10 @@ public static class GameValidation
         bool midterm=SessionState.GetBool("Woodland.MidtermCombat",false);SessionState.SetBool("Woodland.MidtermCombat",false);
         bool contacts=SessionState.GetBool("Woodland.Contacts",false);SessionState.SetBool("Woodland.Contacts",false);
         bool chargeFeedback=SessionState.GetBool("Woodland.ChargeFeedback",false);SessionState.SetBool("Woodland.ChargeFeedback",false);
+        bool filipino=SessionState.GetBool("Woodland.Filipino",false);SessionState.SetBool("Woodland.Filipino",false);
+        bool filipinoPresentation=SessionState.GetBool("Woodland.FilipinoPresentation",false);SessionState.SetBool("Woodland.FilipinoPresentation",false);
         bool comicCombat=SessionState.GetBool("Woodland.ComicCombat",false);SessionState.SetBool("Woodland.ComicCombat",false);
-        File.WriteAllText(comicCombat?"Documentation/COMIC-COMBAT-v19.json":chargeFeedback?"Documentation/CHARGE-FEEDBACK-v18.json":contacts?"Documentation/CONTACTS-v15.json":midterm?"Documentation/MIDTERM-COMBAT-v14.json":counterplay?"Documentation/COUNTERPLAY-v9.json":duel?"Documentation/DUEL-VALIDATION.json":v81?"Documentation/PLAYMODE-VALIDATION-v8.1.json":v8?"Documentation/PLAYMODE-VALIDATION-v8.json":hudOnly?"Documentation/HUD-VALIDATION-v7.1.json":meleeOnly?"Documentation/MELEE-VALIDATION-v8.1.json":"Documentation/PLAYMODE-VALIDATION-v7.json", JsonUtility.ToJson(report, true));
+        File.WriteAllText(filipinoPresentation?"Documentation/Filipino-v20/PRESENTATION.json":filipino?"Documentation/Filipino-v20/VALIDATION.json":comicCombat?"Documentation/COMIC-COMBAT-v19.json":chargeFeedback?"Documentation/CHARGE-FEEDBACK-v18.json":contacts?"Documentation/CONTACTS-v15.json":midterm?"Documentation/MIDTERM-COMBAT-v14.json":counterplay?"Documentation/COUNTERPLAY-v9.json":duel?"Documentation/DUEL-VALIDATION.json":v81?"Documentation/PLAYMODE-VALIDATION-v8.1.json":v8?"Documentation/PLAYMODE-VALIDATION-v8.json":hudOnly?"Documentation/HUD-VALIDATION-v7.1.json":meleeOnly?"Documentation/MELEE-VALIDATION-v8.1.json":"Documentation/PLAYMODE-VALIDATION-v7.json", JsonUtility.ToJson(report, true));
         if (success) Debug.Log(status);else Debug.LogError(status);
         EditorApplication.isPlaying = false;
         if (SessionState.GetBool("Woodland.ValidationExit", false)) EditorApplication.delayCall += () => EditorApplication.Exit(success ? 0 : 1);

@@ -364,8 +364,15 @@ public class WoodlandEffects : MonoBehaviour
         }
         Light(point,tint,.8f+charge*.8f,.13f);
     }
+    Sprite[] fistProjectiles;
     public void RangedProjectile(Vector2 point,float direction,int character,float charge)
     {
+        if(WoodlandGame.PunchEdition){
+            if(fistProjectiles==null){fistProjectiles=new Sprite[8];for(int c=0;c<8;c++)fistProjectiles[c]=Resources.Load<Sprite>("Art/FilipinoPunches/"+WoodlandGame.AssetNames[c]);}
+            var fist=fistProjectiles[Mathf.Clamp(character,0,7)];
+            if(fist){int shot=Emit(fist,point,Vector2.right*direction*1.6f,Color.white,.16f,Vector2.one*.75f,Vector2.one*.75f,0,10);pool[shot].art.flipX=direction<0;}
+            return;
+        }
         Color tint=CharacterTint(character);charge=Mathf.Clamp01(charge);
         float size=.9f+charge*.25f;
         Light(point,tint,1.6f,.15f);
@@ -430,6 +437,7 @@ public class WoodlandEffects : MonoBehaviour
     }
     public void Swipe(Vector2 point, float facing, bool punch,int player=0,int character=-1)
     {
+        if(WoodlandGame.PunchEdition)punch=true;
         PlayCue(0,.38f,punch?1.08f:.95f);
         character=character<0?CharacterForPlayer(player):character;
         var color=CharacterTint(character);

@@ -1,5 +1,15 @@
 # Rune Rumble
 
+## Pasuntok Nga! assignment package
+
+The separate Filipino punch edition is in `Assets/Scenes/PasuntokNga.unity`. Its Windows player is `Build/PasuntokNga/PasuntokNga.exe`, and its portable submission archive is `Build/Submission/Pasuntok-Nga-John-Andrei-M-Martinez.zip`. Extract the complete archive and launch the EXE inside; the runtime files must stay beside it. Build outputs are local and excluded from Git.
+
+This edition disables jumping, replaces kicks with grounded uppercuts, sends traveling fists for ranged punches and uses short-range three-hit punch barrages. Its title credits John Andrei M. Martinez. The original Rune Rumble scene and Windows build remain separate.
+
+The user's selected rules still differ from the exam's strict straight-punch-only requirement. The fantasy environments, hit meters and knockdown behavior also remain rubric exceptions. Software input tests do not establish real controller feel or clean-machine compatibility. See [the Filipino delivery report](Documentation/Filipino-v20/DELIVERY.json).
+
+Rebuild using `GameSetup.PrepareFilipino`, validate using `GameValidation.RunFilipino`, build with `GameSetup.BuildFilipinoWindows`, and package with `python Tools/package_filipino.py`.
+
 A local 2D ring-out fighter for Unity 6000.5.10f1 with eight detailed pixel-art fighters and six grounded arenas. The interface uses illustrated black-ink controls with character-colored ink effects.
 
 ![Main menu](Documentation/RuneRumble-Title.png)

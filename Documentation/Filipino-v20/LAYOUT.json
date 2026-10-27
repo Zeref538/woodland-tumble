@@ -1,0 +1,24 @@
+{
+    "success": true,
+    "status": "FILIPINO_LAYOUT_PASS",
+    "checks": [
+        "Saved opening portrait has a sprite before its first Update",
+        "Saved opening portrait has a sprite before its first Update",
+        "Compact Filipino action caption: SANGGA",
+        "Caption fits without stretching: SANGGA",
+        "Compact Filipino action caption: SUNTOK",
+        "Caption fits without stretching: SUNTOK",
+        "Compact Filipino action caption: ANGAT",
+        "Caption fits without stretching: ANGAT",
+        "Compact Filipino action caption: ABOT",
+        "Caption fits without stretching: ABOT",
+        "Compact Filipino action caption: SANGGA",
+        "Caption fits without stretching: SANGGA",
+        "Compact Filipino action caption: SUNTOK",
+        "Caption fits without stretching: SUNTOK",
+        "Compact Filipino action caption: ANGAT",
+        "Caption fits without stretching: ANGAT",
+        "Compact Filipino action caption: ABOT",
+        "Caption fits without stretching: ABOT"
+    ]
+}

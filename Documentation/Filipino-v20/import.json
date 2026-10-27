@@ -1,0 +1,562 @@
+[
+  {
+    "character": "Fern",
+    "frame": 1,
+    "sourcePose": 0,
+    "sharedScale": 0.4860050890585242,
+    "bodyPixels": 191
+  },
+  {
+    "character": "Fern",
+    "frame": 2,
+    "sourcePose": 1,
+    "sharedScale": 0.4860050890585242,
+    "bodyPixels": 172
+  },
+  {
+    "character": "Fern",
+    "frame": 3,
+    "sourcePose": 2,
+    "sharedScale": 0.4860050890585242,
+    "bodyPixels": 188
+  },
+  {
+    "character": "Fern",
+    "frame": 4,
+    "sourcePose": 3,
+    "sharedScale": 0.4860050890585242,
+    "bodyPixels": 213
+  },
+  {
+    "character": "Fern",
+    "frame": 5,
+    "sourcePose": 3,
+    "sharedScale": 0.4860050890585242,
+    "bodyPixels": 213
+  },
+  {
+    "character": "Fern",
+    "frame": 6,
+    "sourcePose": 4,
+    "sharedScale": 0.4860050890585242,
+    "bodyPixels": 191
+  },
+  {
+    "character": "Fern",
+    "frame": 7,
+    "sourcePose": 4,
+    "sharedScale": 0.4860050890585242,
+    "bodyPixels": 191
+  },
+  {
+    "character": "Fern",
+    "frame": 8,
+    "sourcePose": 5,
+    "sharedScale": 0.4860050890585242,
+    "bodyPixels": 193
+  },
+  {
+    "character": "Fern",
+    "frame": 9,
+    "sourcePose": 5,
+    "sharedScale": 0.4860050890585242,
+    "bodyPixels": 193
+  },
+  {
+    "character": "Fern",
+    "frame": 10,
+    "sourcePose": 0,
+    "sharedScale": 0.4860050890585242,
+    "bodyPixels": 191
+  },
+  {
+    "character": "Ember",
+    "frame": 1,
+    "sourcePose": 0,
+    "sharedScale": 0.44835680751173707,
+    "bodyPixels": 191
+  },
+  {
+    "character": "Ember",
+    "frame": 2,
+    "sourcePose": 1,
+    "sharedScale": 0.44835680751173707,
+    "bodyPixels": 173
+  },
+  {
+    "character": "Ember",
+    "frame": 3,
+    "sourcePose": 2,
+    "sharedScale": 0.44835680751173707,
+    "bodyPixels": 191
+  },
+  {
+    "character": "Ember",
+    "frame": 4,
+    "sourcePose": 3,
+    "sharedScale": 0.44835680751173707,
+    "bodyPixels": 209
+  },
+  {
+    "character": "Ember",
+    "frame": 5,
+    "sourcePose": 3,
+    "sharedScale": 0.44835680751173707,
+    "bodyPixels": 209
+  },
+  {
+    "character": "Ember",
+    "frame": 6,
+    "sourcePose": 4,
+    "sharedScale": 0.44835680751173707,
+    "bodyPixels": 185
+  },
+  {
+    "character": "Ember",
+    "frame": 7,
+    "sourcePose": 4,
+    "sharedScale": 0.44835680751173707,
+    "bodyPixels": 185
+  },
+  {
+    "character": "Ember",
+    "frame": 8,
+    "sourcePose": 5,
+    "sharedScale": 0.44835680751173707,
+    "bodyPixels": 187
+  },
+  {
+    "character": "Ember",
+    "frame": 9,
+    "sourcePose": 5,
+    "sharedScale": 0.44835680751173707,
+    "bodyPixels": 187
+  },
+  {
+    "character": "Ember",
+    "frame": 10,
+    "sourcePose": 0,
+    "sharedScale": 0.44835680751173707,
+    "bodyPixels": 191
+  },
+  {
+    "character": "Luna",
+    "frame": 1,
+    "sourcePose": 0,
+    "sharedScale": 0.43507972665148065,
+    "bodyPixels": 191
+  },
+  {
+    "character": "Luna",
+    "frame": 2,
+    "sourcePose": 1,
+    "sharedScale": 0.43507972665148065,
+    "bodyPixels": 165
+  },
+  {
+    "character": "Luna",
+    "frame": 3,
+    "sourcePose": 2,
+    "sharedScale": 0.43507972665148065,
+    "bodyPixels": 181
+  },
+  {
+    "character": "Luna",
+    "frame": 4,
+    "sourcePose": 3,
+    "sharedScale": 0.43507972665148065,
+    "bodyPixels": 200
+  },
+  {
+    "character": "Luna",
+    "frame": 5,
+    "sourcePose": 3,
+    "sharedScale": 0.43507972665148065,
+    "bodyPixels": 200
+  },
+  {
+    "character": "Luna",
+    "frame": 6,
+    "sourcePose": 4,
+    "sharedScale": 0.43507972665148065,
+    "bodyPixels": 188
+  },
+  {
+    "character": "Luna",
+    "frame": 7,
+    "sourcePose": 4,
+    "sharedScale": 0.43507972665148065,
+    "bodyPixels": 188
+  },
+  {
+    "character": "Luna",
+    "frame": 8,
+    "sourcePose": 5,
+    "sharedScale": 0.43507972665148065,
+    "bodyPixels": 188
+  },
+  {
+    "character": "Luna",
+    "frame": 9,
+    "sourcePose": 5,
+    "sharedScale": 0.43507972665148065,
+    "bodyPixels": 188
+  },
+  {
+    "character": "Luna",
+    "frame": 10,
+    "sourcePose": 0,
+    "sharedScale": 0.43507972665148065,
+    "bodyPixels": 191
+  },
+  {
+    "character": "Bram",
+    "frame": 1,
+    "sourcePose": 0,
+    "sharedScale": 0.4847715736040609,
+    "bodyPixels": 191
+  },
+  {
+    "character": "Bram",
+    "frame": 2,
+    "sourcePose": 1,
+    "sharedScale": 0.4847715736040609,
+    "bodyPixels": 171
+  },
+  {
+    "character": "Bram",
+    "frame": 3,
+    "sourcePose": 2,
+    "sharedScale": 0.4847715736040609,
+    "bodyPixels": 180
+  },
+  {
+    "character": "Bram",
+    "frame": 4,
+    "sourcePose": 3,
+    "sharedScale": 0.4847715736040609,
+    "bodyPixels": 210
+  },
+  {
+    "character": "Bram",
+    "frame": 5,
+    "sourcePose": 3,
+    "sharedScale": 0.4847715736040609,
+    "bodyPixels": 210
+  },
+  {
+    "character": "Bram",
+    "frame": 6,
+    "sourcePose": 4,
+    "sharedScale": 0.4847715736040609,
+    "bodyPixels": 187
+  },
+  {
+    "character": "Bram",
+    "frame": 7,
+    "sourcePose": 4,
+    "sharedScale": 0.4847715736040609,
+    "bodyPixels": 187
+  },
+  {
+    "character": "Bram",
+    "frame": 8,
+    "sourcePose": 5,
+    "sharedScale": 0.4847715736040609,
+    "bodyPixels": 191
+  },
+  {
+    "character": "Bram",
+    "frame": 9,
+    "sourcePose": 5,
+    "sharedScale": 0.4847715736040609,
+    "bodyPixels": 191
+  },
+  {
+    "character": "Bram",
+    "frame": 10,
+    "sourcePose": 0,
+    "sharedScale": 0.4847715736040609,
+    "bodyPixels": 191
+  },
+  {
+    "character": "Zephyr",
+    "frame": 1,
+    "sourcePose": 0,
+    "sharedScale": 0.47512437810945274,
+    "bodyPixels": 191
+  },
+  {
+    "character": "Zephyr",
+    "frame": 2,
+    "sourcePose": 1,
+    "sharedScale": 0.47512437810945274,
+    "bodyPixels": 163
+  },
+  {
+    "character": "Zephyr",
+    "frame": 3,
+    "sourcePose": 2,
+    "sharedScale": 0.47512437810945274,
+    "bodyPixels": 187
+  },
+  {
+    "character": "Zephyr",
+    "frame": 4,
+    "sourcePose": 3,
+    "sharedScale": 0.47512437810945274,
+    "bodyPixels": 219
+  },
+  {
+    "character": "Zephyr",
+    "frame": 5,
+    "sourcePose": 3,
+    "sharedScale": 0.47512437810945274,
+    "bodyPixels": 219
+  },
+  {
+    "character": "Zephyr",
+    "frame": 6,
+    "sourcePose": 4,
+    "sharedScale": 0.47512437810945274,
+    "bodyPixels": 180
+  },
+  {
+    "character": "Zephyr",
+    "frame": 7,
+    "sourcePose": 4,
+    "sharedScale": 0.47512437810945274,
+    "bodyPixels": 180
+  },
+  {
+    "character": "Zephyr",
+    "frame": 8,
+    "sourcePose": 5,
+    "sharedScale": 0.47512437810945274,
+    "bodyPixels": 179
+  },
+  {
+    "character": "Zephyr",
+    "frame": 9,
+    "sourcePose": 5,
+    "sharedScale": 0.47512437810945274,
+    "bodyPixels": 179
+  },
+  {
+    "character": "Zephyr",
+    "frame": 10,
+    "sourcePose": 0,
+    "sharedScale": 0.47512437810945274,
+    "bodyPixels": 191
+  },
+  {
+    "character": "Volt",
+    "frame": 1,
+    "sourcePose": 0,
+    "sharedScale": 0.44835680751173707,
+    "bodyPixels": 191
+  },
+  {
+    "character": "Volt",
+    "frame": 2,
+    "sourcePose": 1,
+    "sharedScale": 0.44835680751173707,
+    "bodyPixels": 167
+  },
+  {
+    "character": "Volt",
+    "frame": 3,
+    "sourcePose": 2,
+    "sharedScale": 0.44835680751173707,
+    "bodyPixels": 188
+  },
+  {
+    "character": "Volt",
+    "frame": 4,
+    "sourcePose": 3,
+    "sharedScale": 0.44835680751173707,
+    "bodyPixels": 211
+  },
+  {
+    "character": "Volt",
+    "frame": 5,
+    "sourcePose": 3,
+    "sharedScale": 0.44835680751173707,
+    "bodyPixels": 211
+  },
+  {
+    "character": "Volt",
+    "frame": 6,
+    "sourcePose": 4,
+    "sharedScale": 0.44835680751173707,
+    "bodyPixels": 190
+  },
+  {
+    "character": "Volt",
+    "frame": 7,
+    "sourcePose": 4,
+    "sharedScale": 0.44835680751173707,
+    "bodyPixels": 190
+  },
+  {
+    "character": "Volt",
+    "frame": 8,
+    "sourcePose": 5,
+    "sharedScale": 0.44835680751173707,
+    "bodyPixels": 192
+  },
+  {
+    "character": "Volt",
+    "frame": 9,
+    "sourcePose": 5,
+    "sharedScale": 0.44835680751173707,
+    "bodyPixels": 192
+  },
+  {
+    "character": "Volt",
+    "frame": 10,
+    "sourcePose": 0,
+    "sharedScale": 0.44835680751173707,
+    "bodyPixels": 191
+  },
+  {
+    "character": "Nyx",
+    "frame": 1,
+    "sourcePose": 0,
+    "sharedScale": 0.46472019464720193,
+    "bodyPixels": 191
+  },
+  {
+    "character": "Nyx",
+    "frame": 2,
+    "sourcePose": 1,
+    "sharedScale": 0.46472019464720193,
+    "bodyPixels": 176
+  },
+  {
+    "character": "Nyx",
+    "frame": 3,
+    "sourcePose": 2,
+    "sharedScale": 0.46472019464720193,
+    "bodyPixels": 184
+  },
+  {
+    "character": "Nyx",
+    "frame": 4,
+    "sourcePose": 3,
+    "sharedScale": 0.46472019464720193,
+    "bodyPixels": 202
+  },
+  {
+    "character": "Nyx",
+    "frame": 5,
+    "sourcePose": 3,
+    "sharedScale": 0.46472019464720193,
+    "bodyPixels": 202
+  },
+  {
+    "character": "Nyx",
+    "frame": 6,
+    "sourcePose": 4,
+    "sharedScale": 0.46472019464720193,
+    "bodyPixels": 187
+  },
+  {
+    "character": "Nyx",
+    "frame": 7,
+    "sourcePose": 4,
+    "sharedScale": 0.46472019464720193,
+    "bodyPixels": 187
+  },
+  {
+    "character": "Nyx",
+    "frame": 8,
+    "sourcePose": 5,
+    "sharedScale": 0.46472019464720193,
+    "bodyPixels": 189
+  },
+  {
+    "character": "Nyx",
+    "frame": 9,
+    "sourcePose": 5,
+    "sharedScale": 0.46472019464720193,
+    "bodyPixels": 189
+  },
+  {
+    "character": "Nyx",
+    "frame": 10,
+    "sourcePose": 0,
+    "sharedScale": 0.46472019464720193,
+    "bodyPixels": 191
+  },
+  {
+    "character": "Marin",
+    "frame": 1,
+    "sourcePose": 0,
+    "sharedScale": 0.5255474452554745,
+    "bodyPixels": 216
+  },
+  {
+    "character": "Marin",
+    "frame": 2,
+    "sourcePose": 1,
+    "sharedScale": 0.5255474452554745,
+    "bodyPixels": 197
+  },
+  {
+    "character": "Marin",
+    "frame": 3,
+    "sourcePose": 2,
+    "sharedScale": 0.5255474452554745,
+    "bodyPixels": 215
+  },
+  {
+    "character": "Marin",
+    "frame": 4,
+    "sourcePose": 3,
+    "sharedScale": 0.5255474452554745,
+    "bodyPixels": 239
+  },
+  {
+    "character": "Marin",
+    "frame": 5,
+    "sourcePose": 3,
+    "sharedScale": 0.5255474452554745,
+    "bodyPixels": 239
+  },
+  {
+    "character": "Marin",
+    "frame": 6,
+    "sourcePose": 4,
+    "sharedScale": 0.5255474452554745,
+    "bodyPixels": 209
+  },
+  {
+    "character": "Marin",
+    "frame": 7,
+    "sourcePose": 4,
+    "sharedScale": 0.5255474452554745,
+    "bodyPixels": 209
+  },
+  {
+    "character": "Marin",
+    "frame": 8,
+    "sourcePose": 5,
+    "sharedScale": 0.5255474452554745,
+    "bodyPixels": 214
+  },
+  {
+    "character": "Marin",
+    "frame": 9,
+    "sourcePose": 5,
+    "sharedScale": 0.5255474452554745,
+    "bodyPixels": 214
+  },
+  {
+    "character": "Marin",
+    "frame": 10,
+    "sourcePose": 0,
+    "sharedScale": 0.5255474452554745,
+    "bodyPixels": 216
+  }
+]

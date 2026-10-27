@@ -12,6 +12,8 @@ using System.Linq;
 
 public static class GameSetup
 {
+    static bool punchBuild;
+    const string FilipinoArt="Assets/Art/UI/FilipinoV20/";
     static readonly string[] States = { "Walk", "Jump", "Hurt", "Push", "Punch", "Kick", "Knockout" };
     static Font font,displayFont,subheaderFont,bodyFont;
     static Color cream = new Color(1, .91f, .71f);
@@ -146,6 +148,7 @@ public static class GameSetup
     }
     public static void PrepareHUD()
     {
+        punchBuild=false;
         if(EditorApplication.isPlaying)throw new System.Exception("Stop Play Mode before rebuilding the HUD.");
         var scene=EditorSceneManager.OpenScene("Assets/Scenes/WoodlandTumble.unity");
         var game=Object.FindAnyObjectByType<WoodlandGame>();
@@ -167,6 +170,36 @@ public static class GameSetup
         font=Resources.GetBuiltinResource<Font>("LegacyRuntime.ttf");
         if(game.hud)Object.DestroyImmediate(game.hud.gameObject);
         CreateHUD(game);EditorSceneManager.SaveScene(scene);AssetDatabase.SaveAssets();
+    }
+    public static void PrepareFilipino()
+    {
+        if(EditorApplication.isPlaying)throw new System.Exception("Stop Play Mode before preparing the edition.");
+        var scene=EditorSceneManager.OpenScene("Assets/Scenes/WoodlandTumble.unity");
+        var game=Object.FindAnyObjectByType<WoodlandGame>();punchBuild=true;game.punchEdition=true;
+        AssetDatabase.Refresh(ImportAssetOptions.ForceSynchronousImport);
+        foreach(var file in Directory.GetFiles("Assets/Art/UI/FilipinoV20","*.png"))ImportSprite(file.Replace('\\','/'),100);
+        foreach(var file in Directory.GetFiles("Assets/Art/FilipinoUppercuts","*.png",SearchOption.AllDirectories))ImportSprite(file.Replace('\\','/'),80,new Vector2(.5f,1f/12));
+        foreach(var file in Directory.GetFiles("Assets/Resources/Art/FilipinoPunches","*.png"))ImportSprite(file.Replace('\\','/'),160);
+        game.CharacterNames=(string[])WoodlandGame.FilipinoNames.Clone();
+        game.arenaNames=new[]{"DAUNGAN NG ULING","LAWA NG BUWAN","GUBAT NG BAGA","GUHO SA ULAP","TULAY NG UNOS","BALON NG UGAT"};
+        for(int c=0;c<8;c++){
+            string key=WoodlandGame.AssetNames[c];
+            game.CharacterAnimationSets[c]=MakeAnimations(key);
+            game.CharacterControllers[c]=AssetDatabase.LoadAssetAtPath<RuntimeAnimatorController>("Assets/AnimationsFilipino/"+key+"/"+key+".controller");
+            game.SkillNames[c]="Abot-Suntok";game.SkillDescriptions[c]="Suntok na abot ang malayo. Sukdulan: tatlong malapitang tama ng Ulan ng Suntok.";
+        }
+        foreach(var actor in game.players){actor.displayName=game.CharacterNames[actor.id];actor.animations=game.CharacterAnimationSets[actor.id];actor.animator.runtimeAnimatorController=game.CharacterControllers[actor.id];PrefabUtility.RecordPrefabInstancePropertyModifications(actor);PrefabUtility.RecordPrefabInstancePropertyModifications(actor.animator);}
+        if(game.hud)Object.DestroyImmediate(game.hud.gameObject);
+        CreateHUD(game);game.hud.LocalizeLabels();
+        EditorUtility.SetDirty(game);EditorSceneManager.SaveScene(scene,"Assets/Scenes/PasuntokNga.unity");AssetDatabase.SaveAssets();punchBuild=false;
+    }
+    public static void BuildFilipinoWindows()
+    {
+        string original=PlayerSettings.productName;
+        try{PlayerSettings.productName="Pasuntok Nga!";
+            var report=BuildPipeline.BuildPlayer(new[]{"Assets/Scenes/PasuntokNga.unity"},"Build/PasuntokNga/PasuntokNga.exe",BuildTarget.StandaloneWindows64,BuildOptions.None);
+            if(report.summary.result!=UnityEditor.Build.Reporting.BuildResult.Succeeded)throw new System.Exception("Filipino Windows build failed");
+        }finally{PlayerSettings.productName=original;}
     }
     static void PrepareSelectionArtwork()
     {
@@ -222,7 +255,7 @@ public static class GameSetup
     static void Fit(GameObject go, float width, float height) { var size = go.GetComponent<SpriteRenderer>().sprite.bounds.size;go.transform.localScale = new Vector3(width / size.x, height / size.y, 1); }
     static ScoutAnimations MakeAnimations(string name)
     {
-        string dir = "Assets/AnimationsRework/" + name;Directory.CreateDirectory(dir);AssetDatabase.Refresh();
+        string dir = (punchBuild?"Assets/AnimationsFilipino/":"Assets/AnimationsRework/") + name;Directory.CreateDirectory(dir);AssetDatabase.Refresh();
         string setPath = dir + "/Frames.asset";
         var set = AssetDatabase.LoadAssetAtPath<ScoutAnimations>(setPath);
         if (!set) { set = ScriptableObject.CreateInstance<ScoutAnimations>();AssetDatabase.CreateAsset(set, setPath); }
@@ -230,7 +263,7 @@ public static class GameSetup
         if (!controller) controller = AnimatorController.CreateAnimatorControllerAtPath(dir + "/" + name + ".controller");
         foreach (string state in States) {
             string source=state;
-            var sprites = Enumerable.Range(1, 10).Select(i => SpriteAt("Assets/Art/CharactersRework/" + name + "/" + source + "/" + i.ToString("00") + ".png")).ToArray();
+            var sprites = Enumerable.Range(1, 10).Select(i => SpriteAt((punchBuild && state=="Kick"?"Assets/Art/FilipinoUppercuts/":"Assets/Art/CharactersRework/")+name+"/"+(punchBuild && state=="Kick"?"":source+"/")+i.ToString("00")+".png")).ToArray();
             if (sprites.Any(s => s == null)) throw new System.Exception("Incomplete animation: " + name + "/" + state);
             switch (state) { case "Walk":set.walk = sprites;break;case "Jump":set.jump = sprites;break;case "Hurt":set.hurt = sprites;break;case "Push":set.push = sprites;break;case "Punch":set.punch = sprites;break;case "Kick":set.kick=sprites;break;case "Knockout":set.knockout = sprites;break; }
             float rate = state == "Push" || state == "Punch" ? 36 : state=="Kick" ? 33 : state == "Knockout" ? 30 : state == "Hurt" ? 22 : state == "Jump" ? 12 : 10;
@@ -259,6 +292,7 @@ public static class GameSetup
         set.victory=Enumerable.Range(1,10).Select(i=>SpriteAt("Assets/Art/CharactersRework/"+name+"/Victory/"+i.ToString("00")+".png")).ToArray();
         set.ultimate=Enumerable.Range(1,10).Select(i=>SpriteAt("Assets/Art/CharactersRework/"+name+"/Ultimate/"+i.ToString("00")+".png")).ToArray();
         if(set.dash.Concat(set.backstep).Concat(set.victory).Concat(set.ultimate).Any(sprite=>!sprite))throw new System.Exception("Missing v7 movement, victory or ultimate poses for "+name);
+        if(punchBuild){set.special=set.punch;set.ultimate=set.punch;}
         if(set.special.Any(s=>!s))throw new System.Exception("Missing special frames for "+name);
         if (set.block.Any(s => !s) || set.doubleJump.Any(s => !s)) throw new System.Exception("Missing dedicated combat frames for " + name);
         foreach (string state in new[] { "Downed", "GetUp", "Block", "DoubleJump", "Dash", "Backstep", "Grab", "Charge", "Smash", "Combo2", "Combo3", "Victory", "Ultimate" }) {
@@ -274,7 +308,7 @@ public static class GameSetup
                 : state == "Combo3" ? (fern ? set.push.Reverse().ToArray() : set.punch.Reverse().ToArray())
                 : set.special;
             float rate = state=="Downed"?10:state=="GetUp"?16.667f:state=="Dash"?64:state=="Backstep"?72:state=="Victory"?12:state=="Ultimate"?10:state=="DoubleJump"?22:state=="Smash"?26:state=="Combo2"||state=="Combo3"?35:12;
-            var clip = MakeClip(dir + "/" + state + ".anim", poses, rate, state == "Downed" || state == "Charge" || state=="Victory");
+            var clip = MakeClip(dir + "/" + state + ".anim", poses, rate, state == "Downed" || state == "Charge" || state=="Victory" || (punchBuild && state=="Ultimate"));
             float length = poses.Length / rate;
             // Leaf scout flips; fire scout tucks and kicks. Pivot stays fixed at the feet.
             // Pose artwork already contains the action. Never rotate a whole fighter to fake a strike.
@@ -317,7 +351,7 @@ public static class GameSetup
         header.rectTransform.anchorMin=new Vector2(0,1);header.rectTransform.anchorMax=new Vector2(1,1);header.rectTransform.pivot=new Vector2(.5f,1);header.rectTransform.anchoredPosition=Vector2.zero;header.rectTransform.sizeDelta=new Vector2(0,110);
         font = body;
         var versus=Flat("Versus Emblem",match,new Rect(0,0,144,76),Color.white);
-        versus.sprite=SpriteAt(ArcadeArt+"VersusEmblem.png");versus.preserveAspect=true;
+        versus.sprite=SpriteAt(punchBuild?FilipinoArt+"Laban.png":ArcadeArt+"VersusEmblem.png");versus.preserveAspect=true;
         var vsRect=versus.rectTransform;vsRect.anchorMin=vsRect.anchorMax=new Vector2(.5f,1);vsRect.pivot=new Vector2(.5f,1);vsRect.anchoredPosition=new Vector2(0,-12);
         var timerBacking=Flat("Timer Counter Backing",match,new Rect(0,0,76,32),new Color(.02f,.025f,.055f,.94f));
         var timerBackRect=timerBacking.rectTransform;timerBackRect.anchorMin=timerBackRect.anchorMax=new Vector2(.5f,1);timerBackRect.pivot=new Vector2(.5f,1);timerBackRect.anchoredPosition=new Vector2(0,-96);
@@ -328,12 +362,14 @@ public static class GameSetup
         font=pixel;
         for(int a=0;a<4;a++){hud.playstationIcons[a]=SpriteAt("Assets/Art/UI/PSAction"+a+".png");hud.neutralIcons[a]=SpriteAt("Assets/Art/UI/CPUAction"+a+".png");}
         for(int c=0;c<game.CharacterNames.Length;c++){
-            hud.characterGuardCovers[c]=SpriteAt("Assets/Art/UI/SkillIcons/"+game.CharacterNames[c]+"/Guard.png");
+            hud.characterGuardCovers[c]=SpriteAt("Assets/Art/UI/SkillIcons/"+WoodlandGame.AssetNames[c]+"/Guard.png");
             if(!hud.characterGuardCovers[c])throw new System.Exception("Missing painted guard icon: "+game.CharacterNames[c]);
         }
         string[] actionNames={"Guard","Punch","Kick","Special"};
         for(int character=0;character<game.CharacterNames.Length;character++)for(int action=0;action<4;action++) {
-            var cover=SpriteAt("Assets/Art/UI/SkillIcons/"+game.CharacterNames[character]+"/"+actionNames[action]+".png");
+            var cover=SpriteAt("Assets/Art/UI/SkillIcons/"+WoodlandGame.AssetNames[character]+"/"+actionNames[action]+".png");
+            if(punchBuild && action==2)cover=SpriteAt(FilipinoArt+"Uppercut_"+WoodlandGame.AssetNames[character]+".png");
+            if(punchBuild && action==3)cover=SpriteAt("Assets/Art/UI/SkillIcons/"+WoodlandGame.AssetNames[character]+"/Punch.png");
             if(!cover)throw new System.Exception("Missing character action cover: "+game.CharacterNames[character]+"/"+actionNames[action]);
             hud.characterActionCovers[character*4+action]=cover;
         }
@@ -421,7 +457,7 @@ public static class GameSetup
         var help = new GameObject("F1 Controls Overlay",typeof(RectTransform)).GetComponent<RectTransform>();help.SetParent(root.transform,false);help.anchorMin=help.anchorMax=Vector2.one*.5f;help.pivot=Vector2.one*.5f;help.sizeDelta=new Vector2(1140,636);
         Flat("Guide Surface",help,new Rect(0,0,1140,636),new Color(.013f,.015f,.025f,.98f));
         var guideHeading=Flat("Help Heading",help,new Rect(36,22,500,60),Color.white);guideHeading.sprite=SpriteAt("Assets/Art/UI/InkV14/Button_MOVE_LIST.png");guideHeading.preserveAspect=true;CenterImage(guideHeading);
-        hud.guideTitleArt=game.CharacterNames.Select(name=>SpriteAt("Assets/Art/UI/InkV14/Guide_"+name+".png")).ToArray();
+        hud.guideTitleArt=WoodlandGame.AssetNames.Select(name=>SpriteAt(punchBuild?FilipinoArt+"Name_"+name+".png":"Assets/Art/UI/InkV14/Guide_"+name+".png")).ToArray();
         for(int i=0;i<2;i++){
             float x=36+i*566;
             var card=Flat("Illustrated Move Card",help,new Rect(x-14,96,532,480),Color.white);card.sprite=SpriteAt("Assets/Art/UI/InkV14/GuideFrame.png");
@@ -451,7 +487,7 @@ public static class GameSetup
         bool card=title.Length==0;
         bool setting=name.StartsWith("Toggle") || name=="Cycle Effects";
         string role=setting?"Wide":parent.name=="Stage Select"?"Short":bounds.width/bounds.height>5?"Long":"Menu";
-        var painted=card?null:SpriteAt("Assets/Art/UI/InkV15/Button_"+title.Replace(' ','_')+"_"+role+".png");
+        var painted=card?null:SpriteAt((punchBuild?FilipinoArt:"Assets/Art/UI/InkV15/")+"Button_"+title.Replace(' ','_')+"_"+role+".png");
         if(!card && !painted)throw new System.Exception("Missing illustrated button: "+title);
         var face=Flat(name,parent,bounds,new Color(.11f,.065f,.23f,.98f));face.raycastTarget=true;
         if(painted){
@@ -477,8 +513,9 @@ public static class GameSetup
         var title=MenuLayer("Title Screen",menu);hud.titleMenu=title.gameObject;
         MenuBackdrop("Illustrated Woodland",title,ArcadeArt+"BattleBackdrop.png");
         Flat("Left Reading Field",title,new Rect(0,0,570,720),new Color(.035f,.015f,.10f,.18f));
-        var logo=Flat("Rune Rumble Title",title,new Rect(34,42,330,174),Color.white);logo.sprite=SpriteAt(ArcadeArt+"TitleLogo.png");logo.preserveAspect=true;
-        var slogan=Flat("Illustrated Slogan",title,new Rect(32,274,330,64),Color.white);slogan.sprite=SpriteAt("Assets/Art/UI/InkV14/Slogan.png");slogan.preserveAspect=true;CenterImage(slogan);
+        var logo=Flat("Rune Rumble Title",title,new Rect(34,42,330,174),Color.white);logo.sprite=SpriteAt(punchBuild?FilipinoArt+"Title.png":ArcadeArt+"TitleLogo.png");logo.preserveAspect=true;
+        if(punchBuild)Label("Developer Credit",title,"DEVELOPED BY\nJOHN ANDREI M. MARTINEZ",new Rect(32,218,345,50),17,cream,TextAnchor.MiddleCenter);
+        var slogan=Flat("Illustrated Slogan",title,new Rect(32,274,330,64),Color.white);slogan.sprite=SpriteAt(punchBuild?FilipinoArt+"Slogan.png":"Assets/Art/UI/InkV14/Slogan.png");slogan.preserveAspect=true;CenterImage(slogan);
         hud.modeButtons=new Button[4];
         hud.modeButtons[0]=MenuButton("Single Player",title,new Rect(32,354,330,86),"SINGLE PLAYER","",hud.fernColor);
         hud.modeButtons[1]=MenuButton("Multiplayer",title,new Rect(32,450,330,86),"LOCAL VERSUS","",hud.emberColor);
@@ -494,8 +531,8 @@ public static class GameSetup
         Flat("Roster Header",roster,new Rect(0,0,1280,98),new Color(.015f,.035f,.045f,.9f));
         font=pixel;hud.characterHeading=Label("Choosing Player",roster,"CHOOSE YOUR FIGHTER",new Rect(60,32,1160,42),26,white,TextAnchor.MiddleCenter);font=pixel;
         Label("Roster Subtitle",roster,"RUNE RUMBLE   /   EIGHT RIVALS. ONE VICTOR.",new Rect(300,88,680,28),15,brass,TextAnchor.MiddleCenter);
-        hud.hudPortraits=hud.game.CharacterNames.Select(n=>SpriteAt("Assets/Art/SelectionV10/Portraits/"+n+".png")).ToArray();
-        hud.selectionIdleFrames=hud.game.CharacterNames.SelectMany(n=>Enumerable.Range(1,4).Select(f=>SpriteAt("Assets/Art/SelectionV10/"+n+"/"+f.ToString("00")+".png"))).ToArray();
+        hud.hudPortraits=WoodlandGame.AssetNames.Select(n=>SpriteAt("Assets/Art/SelectionV10/Portraits/"+n+".png")).ToArray();
+        hud.selectionIdleFrames=WoodlandGame.AssetNames.SelectMany(n=>Enumerable.Range(1,4).Select(f=>SpriteAt("Assets/Art/SelectionV10/"+n+"/"+f.ToString("00")+".png"))).ToArray();
         hud.selectionSweeps=new Image[2];hud.selectionPortraits=new Image[2];hud.selectionNames=new Text[2];hud.selectionSkills=new Text[2];hud.selectionStates=new Text[2];
         for(int side=0;side<2;side++) {
             Color accent=side==0?hud.fernColor:hud.emberColor;
@@ -505,6 +542,7 @@ public static class GameSetup
             hud.selectionSweeps[side]=Paint("Fighter Switch Sweep",panel,new Rect(25,150,470,160),new Color(accent.r,accent.g,accent.b,0));
             CenterImage(hud.selectionSweeps[side]);
             hud.selectionPortraits[side]=Flat("Full Fighter Preview",panel,new Rect(0,30,530,430),Color.white);hud.selectionPortraits[side].preserveAspect=true;
+            hud.selectionPortraits[side].sprite=hud.selectionIdleFrames[side*4];
             CenterImage(hud.selectionPortraits[side]);
             Flat("Showcase Name Shade",panel,new Rect(20,450,490,74),new Color(.025f,.018f,.07f,.9f));
             hud.selectionNames[side]=Label("Fighter Name",panel,"",new Rect(24,450,480,48),40,white,TextAnchor.MiddleCenter);
@@ -518,7 +556,8 @@ public static class GameSetup
             FrameSelectionCard(card,identities[j],146,162);
             var portrait=Flat("Scout Portrait",card.transform,new Rect(11,7,124,124),Color.white);portrait.sprite=hud.hudPortraits[j];portrait.preserveAspect=true;CenterImage(portrait);
             Paint("Identity Line",card.transform,new Rect(0,129,146,32),identities[j]);
-            Label("Scout Name",card.transform,hud.game.CharacterNames[j].ToUpper(),new Rect(4,134,138,25),20,new Color(.035f,.02f,.085f),TextAnchor.MiddleCenter);
+            if(punchBuild){var plaque=Flat("Scout Name Plaque",card.transform,new Rect(2,125,142,37),Color.white);plaque.sprite=SpriteAt(FilipinoArt+"Name_"+WoodlandGame.AssetNames[j]+".png");plaque.preserveAspect=true;}
+            else Label("Scout Name",card.transform,hud.game.CharacterNames[j].ToUpper(),new Rect(4,134,138,25),20,new Color(.035f,.02f,.085f),TextAnchor.MiddleCenter);
             Label("P1 Marker",card.transform,"P1",new Rect(4,4,35,23),14,hud.fernColor).gameObject.SetActive(false);
             Label("P2 Marker",card.transform,"P2",new Rect(107,4,35,23),14,hud.emberColor).gameObject.SetActive(false);
         }
@@ -531,11 +570,11 @@ public static class GameSetup
         MenuBackdrop("Rune Hall",maps,ArcadeArt+"BattleBackdrop.png");
         maps.Find("Rune Hall").GetComponent<Image>().color=new Color(.28f,.25f,.35f);
         Flat("Stage Scrim",maps,new Rect(0,0,1280,720),new Color(.04f,.018f,.10f,.38f));
-        var stageHeading=Flat("Stage Heading",maps,new Rect(290,0,700,104),Color.white);stageHeading.sprite=SpriteAt("Assets/Art/UI/InkV14/ArenaHeading.png");stageHeading.preserveAspect=true;CenterImage(stageHeading);
+        var stageHeading=Flat("Stage Heading",maps,new Rect(290,0,700,104),Color.white);stageHeading.sprite=SpriteAt(punchBuild?FilipinoArt+"Button_ARENA_HEADING_Menu.png":"Assets/Art/UI/InkV14/ArenaHeading.png");stageHeading.preserveAspect=true;CenterImage(stageHeading);
         hud.modeText=Label("Match Type",maps,"",new Rect(40,109,1200,25),16,brass,TextAnchor.MiddleCenter);
         hud.mapPreview=null;
         hud.mapButtons=new Button[hud.game.backgrounds.Length];
-        var arenaNamePlaques=Enumerable.Range(0,hud.game.backgrounds.Length).Select(i=>SpriteAt("Assets/Art/UI/InkV14/Arena_"+i+".png")).ToArray();
+        var arenaNamePlaques=Enumerable.Range(0,hud.game.backgrounds.Length).Select(i=>SpriteAt((punchBuild?FilipinoArt:"Assets/Art/UI/InkV14/")+"Arena_"+i+".png")).ToArray();
         for(int j=0;j<hud.mapButtons.Length;j++) {
             var card=MenuButton("Select "+hud.game.arenaNames[j],maps,new Rect(25+j*204,144,210,420),"","",brass);
             card.image.sprite=SpriteAt("Assets/Art/UI/StageMask.png");card.gameObject.AddComponent<Mask>().showMaskGraphic=true;

@@ -1,0 +1,51 @@
+{
+  "verifiedAtUtc": "2026-10-27T15:20:15.407582+00:00",
+  "title": "Pasuntok Nga!",
+  "developer": "John Andrei M. Martinez",
+  "buildResult": "Success",
+  "checks": {
+    "combat": 289,
+    "layout": 18,
+    "presentation": 114,
+    "originalCounterplay": 16,
+    "originalCharge": 64
+  },
+  "totalChecks": 501,
+  "package": {
+    "packagedAtUtc": "2026-10-27T15:16:53.440190+00:00",
+    "archive": "C:\\Users\\johna\\OneDrive\\Documents\\Portfolio\\woodland-tumble\\Build\\Submission\\Pasuntok-Nga-John-Andrei-M-Martinez.zip",
+    "archiveBytes": 211941658,
+    "archiveSha256": "3d5d8055c04896d2064c9dc2707e6758b2d52c507cc528fe6435f67fe926bc9a",
+    "files": 179,
+    "unpackedBytes": 905340491,
+    "archiveCrcPassed": true,
+    "debugFoldersExcluded": true
+  },
+  "native": {
+    "source": "Extracted submission ZIP",
+    "extractedFolder": "C:\\Users\\johna\\OneDrive\\Documents\\Portfolio\\woodland-update-workbench\\submission-check-20261027-231817\\Pasuntok-Nga-John-Andrei-M-Martinez",
+    "sampleSeconds": 18,
+    "aliveAfterSample": true,
+    "verifiedExecutable": true,
+    "workingSetBytes": 1307533312,
+    "scriptDomainInitialized": true,
+    "loggedExceptions": 0,
+    "closedAfterTest": true,
+    "cleanWindowsMachineTested": false
+  },
+  "assemblySha256": "0c4fb7fcd00098da96a10704dc629ee8bfbd57b1416f68a3d991006be8746b15",
+  "sceneSha256": "1d4505b436b6639edaff084024131718a9ea8948ccc89919c7c25b925f7f184f",
+  "savedRoundDurationSeconds": 99,
+  "originalScenePreserved": true,
+  "rubricExceptions": [
+    "Grounded uppercuts and ranged punches differ from straight-punch-only combat.",
+    "Fantasy environments are not a complete Philippine visual retheme.",
+    "Hit meters and timed knockdown remain instead of a dedicated consecutive-punch dizziness state.",
+    "Additional guard, dash and grab actions remain."
+  ],
+  "limitations": [
+    "No clean Windows machine test.",
+    "No physical two-controller feel test.",
+    "The assignment has not been uploaded or submitted."
+  ]
+}

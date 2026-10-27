@@ -233,6 +233,10 @@ public class WoodlandHUD : MonoBehaviour
             if(guideNames[i]){guideNames[i].text=i==1 && game.SoloMode?"CPU":"P"+(i+1);guideNames[i].color=actor.Element;}
             if(guideTitles[i] && actor.CharacterIndex<guideTitleArt.Length)guideTitles[i].sprite=guideTitleArt[actor.CharacterIndex];
             for(int action=0;action<4;action++)if(guideActionImages[i*4+action])guideActionImages[i*4+action].sprite=characterActionCovers[actor.CharacterIndex*4+action];
+            if(game.punchEdition){
+                if(controlsText[i])controlsText[i].text="<b>"+punch+"  SUNTOK</b>   8 lakas\n<b>"+kick+"  SUNTOK-ANGAT</b>   6 lakas\n<b>"+punch+", "+punch+", "+kick+"  MAGKAKASUNOD</b>\nTamang tama muna bago ang kasunod.\n<b>"+guard+"  SANGGA / SALAG</b>\n3 lakas bawat saglit.\n<b>"+skill+"  ABOT-SUNTOK</b>\n14 lakas. May paghahanda bago pakawalan.\n<b>"+ultimate+"  ULAN NG SUNTOK</b>\nTatlong malapitang tama. Minsan bawat laban.\nWalang pagtalon. Kapag nadapa, pindutin ang "+(pad!=null || i==0?"X":"N")+" upang bumangon.";
+                continue;
+            }
             if(controlsText[i])controlsText[i].text=
                 "<b>"+punch+"   PUNCH</b>   8 stamina\n"+
                 "<b>"+kick+"   KICK</b>   6 stamina\n"+
@@ -246,7 +250,17 @@ public class WoodlandHUD : MonoBehaviour
         }
     }
     bool menuChordUsed;
-    void LateUpdate() => Refresh();
+    Text[] filipinoLabels;
+    void LateUpdate(){Refresh();LocalizeLabels();}
+    public void LocalizeLabels(){
+        if(!game || !game.punchEdition)return;
+        if(filipinoLabels==null)filipinoLabels=GetComponentsInChildren<Text>(true);
+        foreach(var label in filipinoLabels)if(label && label.name!="Developer Credit"){
+            string value=game.Text(label.text);
+            if(label.name=="Action Caption")value=value=="SUNTOK-ANGAT"?"ANGAT":value=="ABOT-SUNTOK"?"ABOT":value;
+            label.text=value;
+        }
+    }
     public void Refresh()
     {
         if (!game || game.players == null) return;
@@ -259,7 +273,7 @@ public class WoodlandHUD : MonoBehaviour
             Scout scout = game.players[i];
             var pad=game.GetGamepad(i);
             string style=WoodlandGame.GamepadStyle(pad);
-            if(deviceText[i])deviceText[i].text=i==1 && game.SoloMode?"CPU RIVAL  /  "+scout.displayName.ToUpper():style=="KEYBOARD"?"KEYBOARD  /  "+(i==0?"A D + W":"ARROW KEYS"):style+"  /  PAD "+(i+1);
+            if(deviceText[i])deviceText[i].text=i==1 && game.SoloMode?"CPU RIVAL  /  "+scout.displayName.ToUpper():style=="KEYBOARD"?"KEYBOARD  /  "+(i==0?(game.punchEdition?"A D":"A D + W"):"ARROW KEYS"):style+"  /  PAD "+(i+1);
             RefreshActionControls(i,scout,pad,style);
             if(scout.UltimateActive && !cutinWasActive[i])cutinStarted[i]=Time.unscaledTime;
             float cutinAge=Time.unscaledTime-cutinStarted[i];
@@ -531,6 +545,10 @@ public class WoodlandHUD : MonoBehaviour
     }
     void AnimateFrontEnd()
     {
+        if(game && game.punchEdition && titleMenu && titleMenu.activeSelf){
+            var art=titleMenu.transform.Find("Illustrated Woodland") as RectTransform;
+            if(art){art.localScale=Vector3.one*1.025f;art.anchoredPosition=new Vector2(Mathf.Sin(Time.unscaledTime*.23f)*7,Mathf.Cos(Time.unscaledTime*.17f)*4);}
+        }
         if(game && game.Screen==WoodlandGame.MenuScreen.Characters) {
             int character=game.PendingCharacter,side=game.ChoosingPlayer;
             if(character!=showcaseIdentity || side!=showcasePlayer) {
