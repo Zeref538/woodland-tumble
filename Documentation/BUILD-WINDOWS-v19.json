@@ -1,0 +1,16 @@
+{
+  "buildResult": "Success",
+  "files": 179,
+  "bytes": 946771068,
+  "assemblySha256": "369bb1a1a048fb5ae9fab487e37037ef5113736c08852f7f8a628dbaf13f2719",
+  "sceneSha256": "0fa410d10dde08f1453195a7a8d4a280c9489f49dc5ec4e6192fa212bec9e3a2",
+  "native": {
+    "sampleSeconds": 18,
+    "aliveAfterSample": true,
+    "verifiedExecutable": true,
+    "workingSetBytes": 1292898304,
+    "scriptDomainInitialized": true,
+    "loggedExceptions": 0,
+    "closedAfterTest": true
+  }
+}

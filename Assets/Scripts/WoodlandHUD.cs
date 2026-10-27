@@ -99,6 +99,7 @@ public class WoodlandHUD : MonoBehaviour
     readonly float[] ghostDelay = new float[2];
     readonly float[] punch = new float[2];
     readonly int[] previousCombo = new int[2];
+    readonly int[] previousCue = new int[2];
     readonly float[] comboPop = new float[2];
     readonly float[] rippleLife = new float[8];
     readonly float[] rejectionLife = new float[8];
@@ -306,20 +307,22 @@ public class WoodlandHUD : MonoBehaviour
             if(pushFill[i]) pushFill[i].fillAmount=scout.PushReady;
             if(punchFill[i]) punchFill[i].fillAmount=scout.PunchReady;
             for(int p=0;p<3;p++) if(roundPips[i*3+p]) roundPips[i*3+p].color=game.score[i]>p?accent:new Color(.22f,.29f,.28f);
-            int combo=scout.ComboCount;
-            if(combo>1 && combo!=previousCombo[i]) comboPop[i]=1;
+            int combo=scout.HitCount;
+            if((combo>1 && combo!=previousCombo[i]) || scout.CueSequence!=previousCue[i]) comboPop[i]=1;
+            previousCue[i]=scout.CueSequence;
             previousCombo[i]=combo;
             comboPop[i]=Mathf.MoveTowards(comboPop[i],0,dt*2.6f);
             if(statusText[i]) {
                 string cue=scout.CombatCue;
-                statusText[i].text=cue.Length>0?cue:scout.Downed?"DOWN!  "+scout.KnockdownRemaining.ToString("0.0")+"s":combo>1?combo+" HIT":"";
-                statusText[i].color=new Color(accent.r,accent.g,accent.b,cue.Length>0 || scout.Downed?1:combo>1?Mathf.Clamp01(comboPop[i]*2):0);
+                statusText[i].text=cue.Length>0?(scout.HitCue && combo>1?combo+" HIT COMBO\n":"")+cue:scout.Downed?"DOWN!  "+scout.KnockdownRemaining.ToString("0.0")+"s":combo>1?combo+" HIT COMBO":"";
+                statusText[i].color=new Color(accent.r,accent.g,accent.b,scout.Downed?1:Mathf.Clamp01(comboPop[i]*3));
                 var rect=statusText[i].rectTransform;
+                rect.sizeDelta=new Vector2(340,76);
                 rect.anchorMin=rect.anchorMax=Vector2.one*.5f;
                 if(Camera.main) {
                     Vector2 point=RectTransformUtility.WorldToScreenPoint(Camera.main,scout.transform.position+Vector3.up*2.1f);
                     RectTransformUtility.ScreenPointToLocalPointInRectangle((RectTransform)transform,point,null,out Vector2 local);
-                    rect.anchoredPosition=local;
+                    rect.anchoredPosition=local+Vector2.up*(1-comboPop[i])*18;
                 }
                 rect.localScale=Vector3.one*(1+.18f*comboPop[i]);
             }

@@ -82,12 +82,19 @@ public class Scout : MonoBehaviour
     public bool Charging { get; private set; }
     public int AirJumpsRemaining { get; private set; } = 1;
     public float DashReady => Mathf.Clamp01(1 - (nextDash - Time.time) / dashCooldown);
-    public float Charge => Charging ? Mathf.Clamp01((Time.time - chargeStart) / .85f) : 0;
+    public float Charge => Charging ? Mathf.Clamp01((Time.time - chargeStart) / chargeDuration) : 0;
     public int ComboCount => Time.time <= comboUntil ? comboCount : 0;
     public bool ActionBusy => action != 0 || Downed;
     public bool AttackRecovery { get; private set; }
     public bool AttackStartup => (action==1 || action==2) && !AttackRecovery;
     public string CombatCue => Time.time<cueUntil ? combatCue : "";
+    public int HitCount => Time.time<=hitStreakUntil?hitStreak:0;
+    public int CueSequence { get; private set; }
+    public bool HitCue => CombatCue.Length>0 && hitCue;
+    static readonly string[] hitWords={"POW!","BAM!","WHAM!","KAPOW!","THWACK!","SMACK!","CRACK!","BOOM!","ZAP!","BASH!"};
+    int hitWordIndex,hitStreak;
+    float hitStreakUntil,chargeDuration=.85f;
+    bool hitCue,aerialCharge;
     string combatCue="";
     float cueUntil, blockStunUntil, aiPressureUntil;
     int lastConfirmedAttack;
@@ -175,6 +182,7 @@ public class Scout : MonoBehaviour
         face = id == 0 ? 1 : -1;
         RingOutFalling=false;bodyCollider.enabled=true;art.sortingOrder=standingArtOrder;
         AttackRecovery=false;combatCue="";cueUntil=blockStunUntil=aiPressureUntil=0;lastConfirmedAttack=0;
+        BreakHitStreak();hitWordIndex=0;CueSequence=0;hitCue=aerialCharge=false;chargeDuration=.85f;
         Downed=recovering=false;knockedDownUntil=0;HitsRemaining=HitsToKnockdown;RestoreStandingCollider();
         Health = maxHealth;
         Shield = shieldCapacity; Blocking = Charging = blockHeld = chargeHeld = false;
@@ -661,6 +669,7 @@ public class Scout : MonoBehaviour
         if(Charging && CanAct){CancelSpecialCharge();ShowCombatCue("CANCELLED");return true;}
         if(!CanAct || Blocking || Charging || action!=0 || Time.time<dashUntil)return false;
         if(!SpendStamina(14))return false;
+        aerialCharge=!grounded;chargeDuration=aerialCharge?.28f:.85f;
         Charging=true;chargeStart=Time.time;PlayState("Charge");
         WoodlandEffects.Instance?.ChargeAura(Body.position,SkillIndex,0);
         return true;
@@ -676,22 +685,29 @@ public class Scout : MonoBehaviour
     {
         action = 3; actionAnimation = "Smash"; PlayState(actionAnimation);
         float direction = face;
+        bool airborne=aerialCharge;
         WoodlandEffects.Instance?.Windup(Body.position + Vector2.right * direction * .45f, direction, Element);
-        yield return new WaitForSeconds(.18f);
-        if (CanAct) StartCoroutine(SpecialProjectile(Body.position, direction, SkillIndex));
+        yield return new WaitForSeconds(airborne?.1f:.18f);
+        if (CanAct) {
+            var rival=WoodlandGame.Instance.players[1-id];
+            Vector2 delta=rival.Body.position-Body.position;
+            float slope=airborne?Mathf.Clamp(delta.y/Mathf.Max(1,Mathf.Abs(delta.x)),-.6f,.3f):0;
+            StartCoroutine(SpecialProjectile(Body.position, direction, SkillIndex,slope));
+        }
         yield return new WaitForSeconds(.2f);
         action = 0;
     }
-    IEnumerator SpecialProjectile(Vector2 origin, float direction, int skill)
+    IEnumerator SpecialProjectile(Vector2 origin, float direction, int skill,float slope=0)
     {
         // A fixed path, visible travel and one contact let the rival jump, dodge, guard or parry it.
         var game = WoodlandGame.Instance;
         Scout other = game.players[1 - id];
         for (int pulse = 0; pulse < 24; pulse++) {
             if (!game.playing || KnockedOut) yield break;
-            Vector2 point = origin + Vector2.right * direction * (.6f + pulse * .6f);
+            Vector2 travel=new Vector2(direction,slope);
+            Vector2 point = origin + travel * (.6f + pulse * .6f);
             WoodlandEffects.Instance?.RangedProjectile(point,direction,skill,1);
-            var area=new Bounds(point-Vector2.right*direction*.3f,new Vector3(1.2f,.8f,1));
+            var area=new Bounds(point-travel*.3f,new Vector3(1.2f,.8f,1));
             if (Contact(other,area,direction)) {
                 float power = skill == 0 ? .95f : skill == 1 ? 1.05f : skill == 2 ? .85f : 1.1f;
                 if(skill>=4) {
@@ -811,7 +827,8 @@ public class Scout : MonoBehaviour
     }
     public bool TryAttack(bool punch)
     {
-        if (!CanAct || Blocking || Charging || Time.time < dashUntil) return false;
+        if (!CanAct || Blocking || Time.time < dashUntil) return false;
+        if(Charging){if(Shield<(punch?8:6))return false;CancelSpecialCharge();}
         if (action != 0) {
             // Only a confirmed route can queue the next move. A whiff or block commits to recovery.
             if ((action == 1 || action == 2) && ComboCount>0 && comboCount<3) { bufferedAttack = punch ? 2 : 1; bufferedUntil = Time.time + .4f; }
@@ -837,7 +854,7 @@ public class Scout : MonoBehaviour
         WoodlandEffects.Instance?.Windup(Body.position + new Vector2(direction * .55f, 0), direction, Element);
         // Punch checks pressure quickly. Kick trades slower startup for reach.
         bool groundedAttack = grounded;
-        yield return new WaitForSeconds(groundedAttack ? (punch ? .10f : routeFinisher ? .12f : .20f) : .22f);
+        yield return new WaitForSeconds(groundedAttack ? (punch ? .10f : routeFinisher ? .12f : .20f) : punch?.14f:.20f);
         WoodlandEffects.Instance?.Swipe(Body.position, direction, punch,id,SkillIndex);
         var game = WoodlandGame.Instance;
         Scout other = game.players[1 - id];
@@ -855,7 +872,7 @@ public class Scout : MonoBehaviour
         // A parry can stop this coroutine from inside ReceiveHit.
         if(action==0 || Time.time<hurtUntil){AttackRecovery=false;yield break;}
         AttackRecovery=true;
-        if(!connected){bufferedAttack=0;ShowCombatCue(guarded?"BLOCKED":"WHIFF");}
+        if(!connected){bufferedAttack=0;BreakHitStreak();ShowCombatCue(guarded?"CLANG!":"WHIFF");}
         // A defender gets a turn after blocking. Misses expose the longest opening.
         float recovery=connected?(routeFinisher?.38f:groundedAttack?.18f:.26f):guarded?(punch?.34f:.44f):(punch?.42f:.52f);
         yield return new WaitForSeconds(recovery);
@@ -875,14 +892,16 @@ public class Scout : MonoBehaviour
         }
         float damage = (punch ? attacker.punchDamage : attacker.pushDamage) * power * DamageScale;
         if (ShieldContact(contact??new Bounds(Body.position,Vector3.one*2.4f),direction)) {
+            attacker.BreakHitStreak();
             bool parry = Time.time - shieldStarted <= parryWindow;
             WoodlandEffects.Instance?.GuardImpact(Body.position, face, Element, parry, false,CharacterIndex);
             if (parry) { attacker.Stagger(.4f); Shield = Mathf.Min(shieldCapacity, Shield + 8);ShowCombatCue("PARRY"); }
-            else { ShowCombatCue("BLOCKED");Shield = Mathf.Max(0, Shield - damage * .3f); Body.AddForce(Vector2.right * direction * .35f, ForceMode2D.Impulse);blockStunUntil=Time.time+.055f;nextEnergyRegen=Time.time+.65f; if (Shield <= 0) BreakGuard(); }
+            else { ShowCombatCue("CLANG!");Shield = Mathf.Max(0, Shield - damage * .3f); Body.AddForce(Vector2.right * direction * .35f, ForceMode2D.Impulse);blockStunUntil=Time.time+.055f;nextEnergyRegen=Time.time+.65f; if (Shield <= 0) BreakGuard(); }
             return false;
         }
-        bool punish=AttackRecovery,counter=AttackStartup || Charging;
-        if(punish || counter){attacker.ShowCombatCue(punish?"PUNISH":"COUNTER HIT");WoodlandEffects.Instance?.TacticalImpact(Body.position,direction,punish);}
+        bool punish=AttackRecovery,counter=AttackStartup || Charging || action==3;
+        if(punish || counter)WoodlandEffects.Instance?.TacticalImpact(Body.position,direction,punish);
+        BreakHitStreak();
         if(aiControlled)aiPressureUntil=Time.time+1.1f;
         if(!grounded) { AirHitsTaken++;damage*=Mathf.Pow(.75f,AirHitsTaken); }
         Blocking = Charging = false; comboCount = bufferedAttack = 0; comboUntil = 0;
@@ -905,6 +924,7 @@ public class Scout : MonoBehaviour
         CancelUltimate();
         StopAllCoroutines();
         PlayState("Hurt");
+        attacker.RecordHit(punish?"PUNISH":counter?"COUNTER HIT":"");
         if (HitsRemaining == 0) StartCoroutine(TemporaryKnockdown());
         return true;
     }
@@ -936,11 +956,19 @@ public class Scout : MonoBehaviour
     }
     public void Stagger(float duration)
     {
+        BreakHitStreak();
         pointerGuard=false;CancelSpecialCharge();
         CancelUltimate(); StopAllCoroutines(); action = 0; Blocking = Charging = false; comboCount = bufferedAttack = 0; comboUntil = 0;
         AttackRecovery=false;hurtUntil = Time.time + duration; PlayState("Hurt");
     }
-    void ShowCombatCue(string message){combatCue=message;cueUntil=Time.time+.7f;}
+    void BreakHitStreak(){hitStreak=0;hitStreakUntil=0;}
+    void RecordHit(string context)
+    {
+        hitStreak=HitCount+1;hitStreakUntil=Time.time+.9f;
+        string word=hitWords[hitWordIndex++%hitWords.Length];
+        ShowCombatCue(context.Length>0?context+" / "+word:word,true);
+    }
+    void ShowCombatCue(string message,bool confirmedHit=false){combatCue=message;cueUntil=Time.time+.7f;hitCue=confirmedHit;CueSequence++;}
     void StartRingOut(WoodlandGame game)
     {
         CancelUltimate();CancelSpecialCharge();StopAllCoroutines();ClearRequests();

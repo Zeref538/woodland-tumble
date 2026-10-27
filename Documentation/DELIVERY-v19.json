@@ -1,0 +1,42 @@
+{
+  "verifiedAtUtc": "2026-10-27T09:29:38.528944+00:00",
+  "scope": "Comic hit and combo feedback, aerial primary skills and melee charge interruption",
+  "hitWords": [
+    "POW!",
+    "BAM!",
+    "WHAM!",
+    "KAPOW!",
+    "THWACK!",
+    "SMACK!",
+    "CRACK!",
+    "BOOM!",
+    "ZAP!",
+    "BASH!"
+  ],
+  "guardWord": "CLANG!",
+  "fightersTested": 8,
+  "combatCasesPerFighter": 11,
+  "comicChecks": 333,
+  "counterplayChecks": 16,
+  "chargeFeedbackChecks": 64,
+  "totalChecks": 413,
+  "airChargeSeconds": 0.28,
+  "groundChargeSeconds": 0.85,
+  "aim": "Fixed at release, vertical slope clamped from -0.6 to 0.3. No tracking during flight.",
+  "confirmedStreakWindowSeconds": 0.9,
+  "native": {
+    "sampleSeconds": 18,
+    "aliveAfterSample": true,
+    "verifiedExecutable": true,
+    "workingSetBytes": 1292898304,
+    "scriptDomainInitialized": true,
+    "loggedExceptions": 0,
+    "closedAfterTest": true
+  },
+  "build": "BUILD-WINDOWS-v19.json",
+  "preview": "Comic-Combo-v19.png",
+  "testIsolation": "Combat fixture uses a 600-second test-only round; the saved game stays at 99 seconds.",
+  "limitations": [
+    "Physical two-player/controller feel and balance still need playtesting."
+  ]
+}

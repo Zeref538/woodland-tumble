@@ -61,6 +61,64 @@ public static class GameValidation
     public static void RunContactsFresh(){GameSetup.PrepareHUD();RunContactsSaved();}
     public static void RunMidtermCombat(){AudioListener.volume=0;GameSetup.PrepareHUD();SessionState.SetBool("Woodland.MidtermCombat",true);Begin(true);}
     public static void RunSaved() => RunDuelSaved();
+    public static void RunComicCombat(){AudioListener.volume=0;SessionState.SetBool("Woodland.ComicCombat",true);Begin(true);}
+    static void PrepareComicCase(WoodlandGame game,int character,int test)
+    {
+        PreparePresentationPair(game,character);
+        for(int side=0;side<2;side++){
+            var actor=game.players[side];actor.Body.constraints=RigidbodyConstraints2D.FreezeAll;
+            actor.Body.position=new Vector2((side==0?-1:1)*(test==2 || test>=9?3:.65f),actor.Body.position.y+(test<3?2.5f:0));
+            actor.Body.gravityScale=0;
+        }
+        Physics2D.SyncTransforms();
+    }
+    static void TickComicCombat()
+    {
+        try {
+            if(Elapsed>12)throw new Exception("Comic combat timeout");
+            var game=WoodlandGame.Instance;if(!game)return;var a=game.players[0];var b=game.players[1];
+            int stage=SessionState.GetInt("Woodland.Stage",-1),c=SessionState.GetInt("Woodland.ComicCharacter",0),test=SessionState.GetInt("Woodland.ComicCase",0);
+            if(stage==-1 && Elapsed>.4f){game.roundDuration=600;game.ChooseMode(false);game.ConfirmCharacter();game.ConfirmCharacter();game.StartSelectedMatch();SetStage(0);}
+            else if(stage==0 && game.playing && string.IsNullOrEmpty(game.message)){PrepareComicCase(game,0,3);SessionState.SetInt("Woodland.Word",0);SetStage(1);}
+            else if(stage==1 && SimElapsed>.27f){
+                string[] words={"POW!","BAM!","WHAM!","KAPOW!","THWACK!","SMACK!","CRACK!","BOOM!","ZAP!","BASH!"};
+                int word=SessionState.GetInt("Woodland.Word",0);typeof(Scout).GetProperty("HitsRemaining").SetValue(b,5);
+                Check(b.ReceiveHit(a,1,true),"Confirmed hit for comic word "+word);
+                Check(a.CombatCue==words[word],"Comic hit word "+word+": "+words[word]);
+                game.hud.Refresh();if(word==1){Check(game.hud.statusText[0].text.Contains("2 HIT COMBO"),"Combo count and hit word are visible together");Capture("Documentation/Comic-Combo-v19.png");}
+                word++;SessionState.SetInt("Woodland.Word",word);
+                if(word<10)SetStage(1);else{SessionState.SetInt("Woodland.ComicCharacter",0);SessionState.SetInt("Woodland.ComicCase",0);PrepareComicCase(game,0,0);SetStage(2);}
+            }else if(stage==2 && SimElapsed>.35f){
+                if(test<2){Check(!a.Grounded && !b.Grounded,"Both fighters are airborne for melee: "+c+"/"+test);Check(a.TryAttack(test==0),"Air melee starts: "+c+"/"+test);SetStage(3);}
+                else if(test==2){Check(!a.Grounded && a.TrySpecial(),"Air special starts: "+c);SetStage(4);}
+                else if(test<5){Check(a.TrySpecial() && a.TryAttack(test==3) && !a.Charging,"Own melee cancels charge: "+c+"/"+test);SetStage(3);}
+                else if(test<8){Check(b.TrySpecial(),"Rival charge starts for interruption: "+c+"/"+test);if(test==7){typeof(Scout).GetField("chargeStart",System.Reflection.BindingFlags.NonPublic|System.Reflection.BindingFlags.Instance).SetValue(b,Time.time-1);Check(b.ReleaseSmash() && b.ActionBusy,"Rival special enters pre-projectile startup: "+c);}Check(a.TryAttack(test!=6),"Rival special melee starts: "+c+"/"+test);SetStage(3);}
+                else if(test==8){Check(b.SetPointerGuard(true),"Comic guard raises: "+c);SetStage(6);}
+                else if(test==9){Check(a.TryAttack(true),"Whiff probe starts: "+c);SetStage(7);}
+                else {a.Body.constraints=RigidbodyConstraints2D.FreezeRotation|RigidbodyConstraints2D.FreezePositionX;a.Body.gravityScale=1;Check(a.Grounded && a.TryJump(),"Real jump starts before air special: "+c+", suddenDeath="+game.SuddenDeath+", remaining="+game.RoundTimeRemaining);SetStage(8);}
+            }else if(stage==4 && SimElapsed>.4f){Check(!a.Charging && !a.Grounded,"Air special releases before landing: "+c);SetStage(3);}
+            else if(stage==8 && SimElapsed>.08f){Check(!a.Grounded && a.TrySpecial(),"Special starts during a real jump: "+c);SetStage(9);}
+            else if(stage==9 && SimElapsed>.4f){Check(!a.Charging && !a.Grounded,"Special releases before the real jump lands: "+c);SetStage(3);}
+            else if(stage==6 && SimElapsed>.2f){Check(a.TryAttack(true),"Comic shield contact starts: "+c);SetStage(7);}
+            else if(stage==7 && SimElapsed>.25f){
+                Check(a.CombatCue==(test==8?"CLANG!":"WHIFF"),"Guard or miss has its own comic feedback: "+c+"/"+test);
+                Check(a.HitCount==0,"Whiffs and shield contacts cannot add combo hits: "+c+"/"+test);
+                if(test==8)Check(b.CombatCue=="CLANG!" && b.HitsRemaining==5,"Guard comic feedback is visible on defender without damage: "+c);
+                AdvanceComicCase(game,c,test);
+            }else if(stage==3 && SimElapsed>1.3f){
+                Check(b.HitsRemaining==4,"Air/cancel/interrupt attack connects once: "+c+"/"+test+", hits="+b.HitsRemaining);
+                if(test>=5 && test<8)Check(!b.Charging && !b.ActionBusy && a.HitsRemaining==5,"Interrupted special never emits a delayed projectile: "+c+"/"+test);
+                if(test==2)Check(a.CombatCue.Length>0 || !a.ActionBusy,"Air special finishes without a stuck action: "+c);
+                AdvanceComicCase(game,c,test);
+            }
+        }catch(Exception error){Complete(false,error.ToString());}
+    }
+    static void AdvanceComicCase(WoodlandGame game,int character,int test)
+    {
+        test++;if(test==11){test=0;character++;}
+        if(character==8){Complete(true,"COMIC_COMBAT_PASS: ten hit words, combo display, eight aerial kits and melee special interruptions");return;}
+        SessionState.SetInt("Woodland.ComicCharacter",character);SessionState.SetInt("Woodland.ComicCase",test);PrepareComicCase(game,character,test);SetStage(2);
+    }
     public static void RunChargeFeedback(){AudioListener.volume=0;SessionState.SetBool("Woodland.ChargeFeedback",true);Begin(true);}
     public static void RunIdleChargeFresh(){GameSetup.PrepareHUD();ValidateSpritePlayback();RunChargeFeedback();}
     static void TickChargeFeedback()
@@ -88,12 +146,12 @@ public static class GameValidation
                 a.SetPointerGuard(false);a.Stagger(.1f);SetStage(3);
             }else if(stage==3 && SimElapsed>.3f){
                 Check(a.TrySpecial(),"Ranged shield test starts: "+a.displayName);b.SetPointerGuard(true);SetStage(4);
-            }else if(stage==4 && b.CombatCue=="BLOCKED"){
-                Check(b.HitsRemaining==5 && b.Stamina<100,"Projectile displays BLOCKED without body damage: "+a.displayName);
+            }else if(stage==4 && b.CombatCue=="CLANG!"){
+                Check(b.HitsRemaining==5 && b.Stamina<100,"Projectile displays CLANG! without body damage: "+a.displayName);
                 int c=SessionState.GetInt("Woodland.FeedbackCharacter",0)+1;
                 if(c<8){SessionState.SetInt("Woodland.FeedbackCharacter",c);PrepareMidtermRange(game,c);SetStage(10);}
                 else Complete(true,"CHARGE_FEEDBACK_PASS: eight cancel, guard and projectile block paths");
-            }else if(stage==4 && SimElapsed>3)throw new Exception("No ranged BLOCKED cue: "+a.displayName+", cue="+b.CombatCue+", hits="+b.HitsRemaining);
+            }else if(stage==4 && SimElapsed>3)throw new Exception("No ranged CLANG! cue: "+a.displayName+", cue="+b.CombatCue+", hits="+b.HitsRemaining);
         }catch(Exception error){Complete(false,error.ToString());}
     }
     public static void RunHUD()
@@ -564,6 +622,7 @@ public static class GameValidation
     static void Tick()
     {
         if (!SessionState.GetBool(Active, false) || !EditorApplication.isPlaying) return;
+        if(SessionState.GetBool("Woodland.ComicCombat",false)){TickComicCombat();return;}
         if(SessionState.GetBool("Woodland.ChargeFeedback",false)){TickChargeFeedback();return;}
         if(SessionState.GetBool("Woodland.Contacts",false)){TickContacts();return;}
         if(SessionState.GetBool("Woodland.MidtermCombat",false)){TickMidtermCombat();return;}
@@ -1854,7 +1913,8 @@ public static class GameValidation
         bool midterm=SessionState.GetBool("Woodland.MidtermCombat",false);SessionState.SetBool("Woodland.MidtermCombat",false);
         bool contacts=SessionState.GetBool("Woodland.Contacts",false);SessionState.SetBool("Woodland.Contacts",false);
         bool chargeFeedback=SessionState.GetBool("Woodland.ChargeFeedback",false);SessionState.SetBool("Woodland.ChargeFeedback",false);
-        File.WriteAllText(chargeFeedback?"Documentation/CHARGE-FEEDBACK-v18.json":contacts?"Documentation/CONTACTS-v15.json":midterm?"Documentation/MIDTERM-COMBAT-v14.json":counterplay?"Documentation/COUNTERPLAY-v9.json":duel?"Documentation/DUEL-VALIDATION.json":v81?"Documentation/PLAYMODE-VALIDATION-v8.1.json":v8?"Documentation/PLAYMODE-VALIDATION-v8.json":hudOnly?"Documentation/HUD-VALIDATION-v7.1.json":meleeOnly?"Documentation/MELEE-VALIDATION-v8.1.json":"Documentation/PLAYMODE-VALIDATION-v7.json", JsonUtility.ToJson(report, true));
+        bool comicCombat=SessionState.GetBool("Woodland.ComicCombat",false);SessionState.SetBool("Woodland.ComicCombat",false);
+        File.WriteAllText(comicCombat?"Documentation/COMIC-COMBAT-v19.json":chargeFeedback?"Documentation/CHARGE-FEEDBACK-v18.json":contacts?"Documentation/CONTACTS-v15.json":midterm?"Documentation/MIDTERM-COMBAT-v14.json":counterplay?"Documentation/COUNTERPLAY-v9.json":duel?"Documentation/DUEL-VALIDATION.json":v81?"Documentation/PLAYMODE-VALIDATION-v8.1.json":v8?"Documentation/PLAYMODE-VALIDATION-v8.json":hudOnly?"Documentation/HUD-VALIDATION-v7.1.json":meleeOnly?"Documentation/MELEE-VALIDATION-v8.1.json":"Documentation/PLAYMODE-VALIDATION-v7.json", JsonUtility.ToJson(report, true));
         if (success) Debug.Log(status);else Debug.LogError(status);
         EditorApplication.isPlaying = false;
         if (SessionState.GetBool("Woodland.ValidationExit", false)) EditorApplication.delayCall += () => EditorApplication.Exit(success ? 0 : 1);

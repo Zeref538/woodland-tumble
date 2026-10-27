@@ -1,0 +1,7 @@
+{
+    "success": false,
+    "status": "System.Exception: Comic hit word 0: POW!\r\n  at GameValidation.Check (System.Boolean ok, System.String message) [0x0002e] in C:\\Users\\johna\\OneDrive\\Documents\\Portfolio\\woodland-tumble\\Assets\\Editor\\GameValidation.cs:615 \r\n  at GameValidation.TickComicCombat () [0x0019b] in C:\\Users\\johna\\OneDrive\\Documents\\Portfolio\\woodland-tumble\\Assets\\Editor\\GameValidation.cs:87 ",
+    "checks": [
+        "Confirmed hit for comic word 0"
+    ]
+}

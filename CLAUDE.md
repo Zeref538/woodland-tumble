@@ -11,3 +11,5 @@ The current roster preparation tool uses Assets/Art/CharactersRework/Fern/Walk/0
 PrepareHUD must record edited Scout prefab-instance properties with PrefabUtility.RecordPrefabInstancePropertyModifications. The midterm guard probe found the old serialized 14-per-second drain returning after scene reload despite a code default of 3. Keep the Fern and Ember prefab defaults in step with saved scene overrides.
 
 Reuse existing AnimatorController assets and named states when rebuilding clips. Deleting all eight controllers during the recovery correction changed their GUIDs and left the saved player animators without a controller at boot. Update clips and state motions in place.
+
+Long combat fixtures must set a test-only round duration before starting a match. The v19 suite crossed the normal 99-second limit and its shrinking floor invalidated a later jump check. Keep the production timer unchanged when isolating combat tests.

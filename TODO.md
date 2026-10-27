@@ -1,5 +1,12 @@
 # Rune Rumble: current delivery
 
+## Comic feedback and aerial combat
+
+- [x] Add ten rotating confirmed-hit words, comic guard text and an animated combo popup.
+- [x] Add usable air specials and verify airborne punch and kick contacts.
+- [x] Let punch and kick cancel a charge, and verify opponents can interrupt special startup.
+- [x] Run combat regressions, rebuild Windows and push the verified changes.
+
 ## Idle size and charge feedback
 
 - [x] Match breathing idle artwork to the existing combat body and head size for all eight fighters.
@@ -33,7 +40,7 @@
 - [x] Add a longer knockdown with capped X-tap recovery and an overhead press effect.
 - [x] Regress front/back contacts and all eight recovery animations, inspect screens and rebuild Windows.
 
-Current delivery: 1360 native sprite bindings and eight idle-loop settings checked. Eight breathing idles passed live playback checks. Charge feedback passed 64 checks, contacts passed 92, and Windows passed an 18-second native launch with no logged script exceptions. Evidence: Documentation/DELIVERY-v18.json.
+Current delivery: comic feedback, air attacks and special interruptions passed 413 combat checks across eight fighters. Windows rebuilt and passed an 18-second native launch with no logged script exceptions. Evidence: Documentation/DELIVERY-v19.json.
 
 - [x] Confirm Windows build and verify native startup.
 - [x] Raise the recovery glyph contrast on the dark key face and inspect the corrected prompt.
