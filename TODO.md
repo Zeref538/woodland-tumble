@@ -1,5 +1,11 @@
 # Rune Rumble: current delivery
 
+## Single-file portable executable
+
+- [x] Embed the verified game and launcher into one self-extracting EXE.
+- [x] Launch a lone copy, verify fullscreen and cleanup, then provide the submission file.
+
+
 ## Multi-monitor launch correction
 
 - [x] Select a complete resolution pair from the game window's monitor after initialization.

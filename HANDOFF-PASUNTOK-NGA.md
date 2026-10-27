@@ -2,6 +2,10 @@
 
 Paste the following prompt into a coding-agent chat with access to this workspace.
 
+## Preferred submission: one EXE
+
+The user requested a single portable EXE instead of ZIP distribution. Use `Build/Submission/Pasuntok-Nga-Portable-John-Andrei-M-Martinez.exe`. It embeds the hash-verified Display-Fix ZIP and an automatic temporary launcher. A lone copy launched the game at 1920x1080, ran for 15 seconds with zero script exceptions and removed its temporary runtime after closing. See PORTABLE-EXE.json and PORTABLE-EXE-TEST.json. Rebuild with Tools/package_portable_exe.py. Older ZIP links below are historical.
+
 ## Multi-monitor launch correction
 
 Use the latest `Build/Submission/Pasuntok-Nga-John-Andrei-M-Martinez-Display-Fix.zip`. The prior Updated ZIP could start at 1080x1080 on the connected portrait/landscape setup. Startup now waits a frame and takes both dimensions from the game window's actual monitor. Normal, forced-square and extracted-ZIP launches all reported 1920x1080 with a full viewport and zero script exceptions. See MULTIMONITOR.json and DISPLAY-FIX-NATIVE.json. This supersedes older package links below.

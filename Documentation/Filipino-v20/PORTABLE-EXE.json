@@ -1,0 +1,13 @@
+{
+  "executable": "C:\\Users\\johna\\OneDrive\\Documents\\Portfolio\\woodland-tumble\\Build\\Submission\\Pasuntok-Nga-Portable-John-Andrei-M-Martinez.exe",
+  "bytes": 211128320,
+  "sha256": "f578aa92aa60994cb5892a0f2254e12c8ded7eb9c23349368f3d4d78bbde301e",
+  "embeddedZipSha256": "b599bb776a8f0e51a8bbf2c40126c1d5707176fbc2dc1c5539597b7425b94d4e",
+  "builder": "Windows IExpress",
+  "installationRequired": false,
+  "adminRequired": false,
+  "extraction": "Temporary files, removed after the player exits",
+  "nativeLaunchVerified": true,
+  "verifiedAtUtc": "2026-10-27T19:46:20.110868+00:00",
+  "verification": "PORTABLE-EXE-TEST.json"
+}

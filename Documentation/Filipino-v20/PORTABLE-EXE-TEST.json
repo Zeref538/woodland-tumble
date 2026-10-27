@@ -1,0 +1,14 @@
+{
+  "loneExecutableDirectory": "C:\\Users\\johna\\OneDrive\\Documents\\Portfolio\\woodland-update-workbench\\Portable EXE Test 20261028-034447",
+  "sidecarFilesRequired": false,
+  "filesBeforeLaunch": 1,
+  "gameLaunched": true,
+  "gamePath": "C:\\Users\\johna\\AppData\\Local\\Temp\\IXP000.TMP\\Runtime\\Pasuntok-Nga-John-Andrei-M-Martinez\\PasuntokNga.exe",
+  "aliveAfter15Seconds": true,
+  "displayMode": "DISPLAY_MODE: 1920x1080 / FullScreenWindow / viewport=(x:0.00, y:0.00, width:1.00, height:1.00) / monitor=VP24K1S PRO  1920x1080",
+  "scriptDomainInitialized": true,
+  "loggedExceptions": 0,
+  "wrapperExited": true,
+  "temporaryRuntimeRemoved": true,
+  "remainingFilesInTestDirectory": 1
+}

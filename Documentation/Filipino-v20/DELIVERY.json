@@ -59,5 +59,32 @@
     ],
     "result": "All observed final viewports cover the complete frame.",
     "logs": "MULTIMONITOR.json and DISPLAY-FIX-NATIVE.json"
+  },
+  "preferredSubmission": {
+    "executable": "C:\\Users\\johna\\OneDrive\\Documents\\Portfolio\\woodland-tumble\\Build\\Submission\\Pasuntok-Nga-Portable-John-Andrei-M-Martinez.exe",
+    "bytes": 211128320,
+    "sha256": "f578aa92aa60994cb5892a0f2254e12c8ded7eb9c23349368f3d4d78bbde301e",
+    "embeddedZipSha256": "b599bb776a8f0e51a8bbf2c40126c1d5707176fbc2dc1c5539597b7425b94d4e",
+    "builder": "Windows IExpress",
+    "installationRequired": false,
+    "adminRequired": false,
+    "extraction": "Temporary files, removed after the player exits",
+    "nativeLaunchVerified": true,
+    "verifiedAtUtc": "2026-10-27T19:46:20.110868+00:00",
+    "verification": "PORTABLE-EXE-TEST.json"
+  },
+  "singleFileNativeTest": {
+    "loneExecutableDirectory": "C:\\Users\\johna\\OneDrive\\Documents\\Portfolio\\woodland-update-workbench\\Portable EXE Test 20261028-034447",
+    "sidecarFilesRequired": false,
+    "filesBeforeLaunch": 1,
+    "gameLaunched": true,
+    "gamePath": "C:\\Users\\johna\\AppData\\Local\\Temp\\IXP000.TMP\\Runtime\\Pasuntok-Nga-John-Andrei-M-Martinez\\PasuntokNga.exe",
+    "aliveAfter15Seconds": true,
+    "displayMode": "DISPLAY_MODE: 1920x1080 / FullScreenWindow / viewport=(x:0.00, y:0.00, width:1.00, height:1.00) / monitor=VP24K1S PRO  1920x1080",
+    "scriptDomainInitialized": true,
+    "loggedExceptions": 0,
+    "wrapperExited": true,
+    "temporaryRuntimeRemoved": true,
+    "remainingFilesInTestDirectory": 1
   }
 }
