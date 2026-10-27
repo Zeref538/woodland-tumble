@@ -2,6 +2,10 @@
 
 Paste the following prompt into a coding-agent chat with access to this workspace.
 
+## Latest display correction
+
+Use `Build/Submission/Pasuntok-Nga-John-Andrei-M-Martinez-Updated.zip`. The extracted game reports 1920x1080 borderless fullscreen with a full viewport, and passed an 18-second launch with no exceptions. The ready prompt is now HANDA! [L2 + R2] on PS4. The fresh presentation fixture passed 138 checks covering both sides and PS4/Xbox/keyboard prompts. This replaces the original package referenced below.
+
 ## Submission package completed
 
 The build and archive now exist. Use `Build/Submission/Pasuntok-Nga-John-Andrei-M-Martinez.zip` for portable distribution. The archive passed CRC validation and its extracted EXE passed an 18-second native launch with zero script exceptions. `Documentation/Filipino-v20/DELIVERY.json` records 501 checks across the Filipino and original-game fixtures. The later input and layout checkpoints below supersede the older failures in the original prompt. Remaining rubric exceptions and physical-device/clean-machine limits are recorded in DELIVERY.json. Nothing has been submitted to the assignment system.

@@ -76,6 +76,25 @@ public static class GameValidation
             File.WriteAllText("Documentation/Filipino-v20/LAYOUT.json",JsonUtility.ToJson(new Report{success=true,status="FILIPINO_LAYOUT_PASS",checks=SessionState.GetString("Woodland.Checks","").Split('\n').Where(v=>v.Length>0).ToArray()},true));
         }catch(Exception error){File.WriteAllText("Documentation/Filipino-v20/LAYOUT.json",JsonUtility.ToJson(new Report{success=false,status=error.ToString(),checks=new string[0]},true));throw;}
     }
+    static void CheckUltimatePrompts(WoodlandGame game)
+    {
+        var hud=game.hud;
+        var refresh=typeof(WoodlandHUD).GetMethod("RefreshActionControls",System.Reflection.BindingFlags.Instance|System.Reflection.BindingFlags.NonPublic);
+        foreach(int side in new[]{0,1}){
+            var actor=game.players[side];typeof(Scout).GetProperty("HitsRemaining").SetValue(actor,1);
+            foreach(string layout in new[]{"DualShock4GamepadHID","XInputController","Keyboard"}){
+                Gamepad pad=layout=="Keyboard"?null:InputSystem.AddDevice(layout) as Gamepad;
+                try{
+                    string style=WoodlandGame.GamepadStyle(pad);
+                    refresh.Invoke(hud,new object[]{side,actor,pad,style});hud.LocalizeLabels();Canvas.ForceUpdateCanvases();
+                    var label=hud.ultimateLabels[side];string expected=layout=="DualShock4GamepadHID"?"L2 + R2":layout=="XInputController"?"LT + RT":side==0?"H":"L";
+                    Check(label.text.Contains("["+expected+"]"),"Ultimate binding is present: "+side+"/"+layout);
+                    Check(label.text=="HANDA!  ["+expected+"]","Ultimate ready prompt is short and never repeats the move name: "+side+"/"+layout);
+                    Check(label.preferredWidth<=label.rectTransform.rect.width && label.preferredHeight<=label.rectTransform.rect.height,"Complete ultimate prompt fits: "+side+"/"+layout+" ["+label.text+"]");
+                }finally{if(pad!=null)InputSystem.RemoveDevice(pad);}
+            }
+        }
+    }
     public static void RunFilipinoPresentation(){SessionState.SetBool("Woodland.FilipinoPresentation",true);RunFilipino();}
     public static void RunFilipino(){AudioListener.volume=0;SessionState.SetBool("Woodland.Filipino",true);Begin(true);}
     static void FilipinoPair(WoodlandGame game,int character,float distance)
@@ -108,7 +127,7 @@ public static class GameValidation
                 game.roundDuration=600;game.ChooseMode(false);CheckFilipinoLabels(hud);Capture("Documentation/Filipino-v20/Roster.png");game.ConfirmCharacter();game.ConfirmCharacter();CheckFilipinoLabels(hud);Capture("Documentation/Filipino-v20/Arenas.png");game.StartSelectedMatch();SetStage(0);
             }else if(stage==0 && game.playing && string.IsNullOrEmpty(game.message)){
                 if(SessionState.GetBool("Woodland.FilipinoPresentation",false)){
-                    CheckFilipinoLabels(hud);Capture("Documentation/Filipino-v20/Match-Layout.png");
+                    CheckUltimatePrompts(game);CheckFilipinoLabels(hud);Capture("Documentation/Filipino-v20/Match-Layout.png");
                     hud.OpenMoveGuide();CheckFilipinoLabels(hud);Capture("Documentation/Filipino-v20/Guide.png");hud.CloseMoveGuide();
                     game.TogglePause();CheckFilipinoLabels(hud);Capture("Documentation/Filipino-v20/Pause.png");
                     Complete(true,"FILIPINO_PRESENTATION_PASS: initialized portraits and compact action captions");return;

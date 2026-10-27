@@ -1,5 +1,12 @@
 # Rune Rumble: current delivery
 
+## Fullscreen and ultimate prompt
+
+- [x] Use native borderless fullscreen and verify the native display size.
+- [x] Show the complete PS4 L2 + R2 prompt without duplicated wording.
+- [x] Rebuild and verify a replacement submission archive.
+
+
 ## Filipino punch edition
 
 - [x] Package the portable submission ZIP, validate all 179 entries and launch its extracted EXE for 18 seconds with zero script exceptions.

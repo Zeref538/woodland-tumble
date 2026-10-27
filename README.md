@@ -2,7 +2,7 @@
 
 ## Pasuntok Nga! assignment package
 
-The separate Filipino punch edition is in `Assets/Scenes/PasuntokNga.unity`. Its Windows player is `Build/PasuntokNga/PasuntokNga.exe`, and its portable submission archive is `Build/Submission/Pasuntok-Nga-John-Andrei-M-Martinez.zip`. Extract the complete archive and launch the EXE inside; the runtime files must stay beside it. Build outputs are local and excluded from Git.
+The separate Filipino punch edition is in `Assets/Scenes/PasuntokNga.unity`. Its Windows player is `Build/PasuntokNga/PasuntokNga.exe`, and its portable submission archive is `Build/Submission/Pasuntok-Nga-John-Andrei-M-Martinez-Updated.zip`. Extract the complete archive and launch the EXE inside; the runtime files must stay beside it. Build outputs are local and excluded from Git.
 
 This edition disables jumping, replaces kicks with grounded uppercuts, sends traveling fists for ranged punches and uses short-range three-hit punch barrages. Its title credits John Andrei M. Martinez. The original Rune Rumble scene and Windows build remain separate.
 

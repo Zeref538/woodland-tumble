@@ -477,7 +477,8 @@ public class WoodlandHUD : MonoBehaviour
         }
         if(ultimateLabels[player]){
             string binding=cpu?"CPU":pad==null?(player==0?"H":"L"):ps?"L2 + R2":style=="XBOX"?"LT + RT":"BOTH TRIGGERS";
-            ultimateLabels[player].text=scout.UltimateActive?scout.UltimateName.ToUpper():"ULTIMATE READY: "+scout.UltimateName.ToUpper()+" ["+binding+"]";
+            ultimateLabels[player].text=scout.UltimateActive?scout.UltimateName.ToUpper():
+                game.punchEdition?"HANDA!  ["+binding+"]":"ULTIMATE READY: "+scout.UltimateName.ToUpper()+" ["+binding+"]";
             var color=new Color(1,.86f,.48f);color.a=scout.UltimateActive?1:.86f+Mathf.Sin(Time.unscaledTime*4)*.14f;ultimateLabels[player].color=color;
         }
         if(fighterPortraitRings[player]){var color=ultimate?Color.Lerp(scout.Element,new Color(1,.85f,.4f),.5f+.25f*Mathf.Sin(Time.unscaledTime*4)):scout.Element;color.a=ultimate?.95f:.7f;fighterPortraitRings[player].color=color;}

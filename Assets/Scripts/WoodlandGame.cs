@@ -250,6 +250,7 @@ public class WoodlandGame : MonoBehaviour
         if (hinge != null && hinge.connectedBody == null) hinge.connectedAnchor = plank.transform.TransformPoint(hinge.anchor);
         if(WoodlandEffects.Instance){WoodlandEffects.Instance.cameraShake=PlayerPrefs.GetInt("Woodland.CameraShake",1)==1;WoodlandEffects.Instance.effectIntensity=Mathf.Clamp(PlayerPrefs.GetFloat("Woodland.EffectsQuality",1.35f),.25f,2);}
         ApplyRules();ReturnToMenu();
+        if(punchEdition && !Application.isEditor)SetDisplayMode(true);
     }
     void FreezeMatch()
     {
@@ -395,7 +396,21 @@ public class WoodlandGame : MonoBehaviour
     }
     public void OpenSettings(){FreezeMatch();Screen=MenuScreen.Settings;if(hud)hud.RefreshMenu();}
     public void StepVolume(float delta){if(WoodlandEffects.Instance)WoodlandEffects.Instance.SetVolume(SettingsVolume+delta);}
-    public void ToggleFullscreen(){UnityEngine.Screen.fullScreen=!UnityEngine.Screen.fullScreen;}
+    public void ToggleFullscreen(){SetDisplayMode(!UnityEngine.Screen.fullScreen);}
+    public void SetDisplayMode(bool fullscreen)
+    {
+        var native=UnityEngine.Screen.currentResolution;
+        int width=fullscreen?native.width:Mathf.Min(1280,native.width);
+        int height=fullscreen?native.height:Mathf.Min(720,native.height);
+        UnityEngine.Screen.SetResolution(width,height,fullscreen?FullScreenMode.FullScreenWindow:FullScreenMode.Windowed);
+        StartCoroutine(ReportDisplayMode());
+    }
+    IEnumerator ReportDisplayMode()
+    {
+        yield return new WaitForSecondsRealtime(.5f);
+        UpdateCameraViewport();
+        Debug.Log("DISPLAY_MODE: "+UnityEngine.Screen.width+"x"+UnityEngine.Screen.height+" / "+UnityEngine.Screen.fullScreenMode+" / viewport="+(Camera.main?Camera.main.rect.ToString():"none"));
+    }
     public void ToggleCameraShake(){if(WoodlandEffects.Instance){WoodlandEffects.Instance.cameraShake=!CameraShakeEnabled;PlayerPrefs.SetInt("Woodland.CameraShake",CameraShakeEnabled?1:0);}}
     public void CycleEffectsQuality(){if(WoodlandEffects.Instance){float value=EffectsQualityName=="LOW"?1:EffectsQualityName=="STANDARD"?1.35f:.65f;WoodlandEffects.Instance.effectIntensity=value;PlayerPrefs.SetFloat("Woodland.EffectsQuality",value);}}
     public void RequestExit()

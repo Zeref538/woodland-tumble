@@ -39,7 +39,7 @@ Itulak ang kalaban sa bukas na butas upang manalo sa yugto.
 Tatlong panalong yugto upang magwagi. Mag-isa o dalawahan ang paglalaro.
 '''
     DEST.mkdir(parents=True,exist_ok=True)
-    archive = DEST/(NAME+'.zip')
+    archive = DEST/(NAME+'-Updated.zip')
     files = sorted(p for p in BUILD.rglob('*') if p.is_file() and not any('DoNotShip' in part for part in p.parts))
     with zipfile.ZipFile(archive,'w',zipfile.ZIP_DEFLATED,compresslevel=6) as output:
         for path in files:
