@@ -1,0 +1,42 @@
+{
+  "Fern": {
+    "file": "Fern.png",
+    "sha256": "ac9e2cd73ee9a976bcd4092fa2c9288228c4d9e68be348ba0426e20ea725b8cc",
+    "reference": "Assets/Art/CharactersRework/Fern/Punch/01.png"
+  },
+  "Ember": {
+    "file": "Ember.png",
+    "sha256": "2f97a5d151a51709120d777d9a9573cec0365884fcea3747ea943d0f1903d331",
+    "reference": "Assets/Art/CharactersRework/Ember/Punch/01.png"
+  },
+  "Luna": {
+    "file": "Luna.png",
+    "sha256": "dd1bb4280163f58cf41a104b26558e27965d683ec502005190d9095b8d526521",
+    "reference": "Assets/Art/CharactersRework/Luna/Punch/01.png"
+  },
+  "Bram": {
+    "file": "Bram.png",
+    "sha256": "cddb3447f1812a84d9138ac7554ed87b85dbf81c712e7e5b90a862e2c40c9e28",
+    "reference": "Assets/Art/CharactersRework/Bram/Punch/01.png"
+  },
+  "Zephyr": {
+    "file": "Zephyr.png",
+    "sha256": "5a2ba958208e48d6def6252909dc01bb20e36a4a3365b2125b5a04af5c7ac363",
+    "reference": "Assets/Art/CharactersRework/Zephyr/Punch/01.png"
+  },
+  "Volt": {
+    "file": "Volt.png",
+    "sha256": "9c3fd5a980ed9aa9435414b6e7a66ce1716e1cf316665d657d35fc01c3f2c523",
+    "reference": "Assets/Art/CharactersRework/Volt/Punch/01.png"
+  },
+  "Nyx": {
+    "file": "Nyx.png",
+    "sha256": "94904e2216b06a72886af62531a1c5e5f9256819f86cdee90e859c4642c3824b",
+    "reference": "Assets/Art/CharactersRework/Nyx/Punch/01.png"
+  },
+  "Marin": {
+    "file": "Marin.png",
+    "sha256": "f2bf69897de56f0a9d8191a9a06930655a571074c9183fcf6d63883cb9da84e0",
+    "reference": "Assets/Art/CharactersRework/Marin/Punch/01.png"
+  }
+}

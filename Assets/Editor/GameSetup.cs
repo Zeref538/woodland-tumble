@@ -238,8 +238,9 @@ public static class GameSetup
             var node = NativeState(controller,state);node.motion = clip;
         }
         MakeCombatClips(name, dir, set, controller);
-        var idleSprite=SpriteAt("Assets/Art/CharactersRework/"+name+"/Idle/01.png") ?? set.walk[0];
-        var idleClip = MakeClip(dir + "/Idle.anim", new[] { idleSprite }, 1, true);
+        var idleSprites=Enumerable.Range(1,10).Select(i=>SpriteAt("Assets/Art/CharactersRework/"+name+"/Idle/"+i.ToString("00")+".png")).ToArray();
+        if(idleSprites.Any(sprite=>!sprite))throw new System.Exception("Incomplete breathing idle: "+name);
+        var idleClip = MakeClip(dir + "/Idle.anim", idleSprites, 6.25f, true);
         var idle = NativeState(controller,"Idle");idle.motion = idleClip;controller.layers[0].stateMachine.defaultState = idle;
         EditorUtility.SetDirty(set);EditorUtility.SetDirty(controller);
         return set;

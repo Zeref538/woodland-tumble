@@ -10,7 +10,7 @@ Five confirmed hits knock a fighter down for 4.5 seconds. Tap X (P1 keyboard), N
 
 After 99 seconds, both holes widen and the safe floor shrinks until someone falls. First to three rounds wins. There is no balance mode or online multiplayer.
 
-Punches start quickly. Kicks take longer. A missed or blocked attack leaves recovery time when the rival can punish it. Only confirmed punch, punch, kick earns the finisher; repeated punches, misses and blocked hits cannot build it. Guard faces forward, costs 3 stamina per second, and displays a six-frame elemental shield. Fresh guards can parry, and grabs counter guarding. Ranged specials travel up to 14.4 world units. A moving ink highlight marks a ready ultimate. The CPU responds to sustained pressure and exposed recovery.
+Punches start quickly. Kicks take longer. A missed or blocked attack leaves recovery time when the rival can punish it. Only confirmed punch, punch, kick earns the finisher; repeated punches, misses and blocked hits cannot build it. Guard faces forward, costs 3 stamina per second, and displays a six-frame elemental shield. Fresh guards can parry, and grabs counter guarding. Ranged specials travel up to 14.4 world units and display BLOCKED on shield contact. Press special again or guard before discharge to cancel a charge; its initial stamina cost is still spent. A moving ink highlight marks a ready ultimate. The CPU responds to sustained pressure and exposed recovery.
 
 ## Play
 
@@ -37,7 +37,7 @@ The action circles also accept mouse input. Menu navigation supports arrows, sti
 
 ## Roster and arenas
 
-Fern uses vines, Ember fire, Luna frost, Bram earth, Zephyr wind, Volt lightning, Nyx shadow and Marin tides. Each has its own native sprite catalog, ranged special and last-segment ultimate. Character size comes from one uniform scale and a calibrated foot pivot, never separate horizontal and vertical stretching.
+Fern uses vines, Ember fire, Luna frost, Bram earth, Zephyr wind, Volt lightning, Nyx shadow and Marin tides. Each has its own native sprite catalog, ranged special and last-segment ultimate. Character size comes from one uniform scale and a calibrated foot pivot, never separate horizontal and vertical stretching. Each idle now has six breathing poses in a ten-frame loop. Idle artwork is calibrated against the combat pose's head size and body height, with stationary foot anchors.
 
 Character selection uses detailed pixel-art poses with a four-pose breathing loop and dedicated face portraits. The active fighter appears on the left for either player.
 
@@ -64,6 +64,6 @@ Use Unity batch mode with `-projectPath` pointing to this folder and `-executeMe
 
 Add `-silent-test` for muted verification and `-logFile` for a log. Use `-quit` with Prepare and BuildWindows. The validation methods close Unity themselves after writing their JSON reports.
 
-All 1,288 character sprite frames were visually reviewed and checked against their native animation clips. Current saved-scene verification passed 686 checks, contact checks passed 92, and counterplay passed 16. The midterm combat fixture passed 38 checks, including all eight projectiles against targets 10.5 world units away, both ranged ultimates, Volt's four-unit rush, guard stamina and knockdown movement. See [current delivery evidence](Documentation/DELIVERY-v17.json) and [TODO.md](TODO.md). These checks do not replace a physical two-player/controller playtest. Historical reports describe earlier art and rules. The design and import calibrations live in [DESIGN.md](DESIGN.md) and [art direction](Documentation/ART-DIRECTION.md).
+Current verification covers 1,360 native sprite bindings plus eight idle-loop settings. All eight fighters advance their breathing idle in Play Mode. The charge and ranged-block fixture passed 64 checks, and the saved-scene contact fixture passed 92. See [current delivery evidence](Documentation/DELIVERY-v18.json) and [TODO.md](TODO.md). Previous scene, counterplay and range fixtures are retained as historical reports. These checks do not replace a physical two-player/controller playtest. The design and import calibrations live in [DESIGN.md](DESIGN.md) and [art direction](Documentation/ART-DIRECTION.md).
 
 The original Rumble Display, Rumble Signal and Rumble Read typefaces cover headers, subheaders/numbers and body text. Their editable vector source is Tools/create_rumble_fonts.py.

@@ -1,0 +1,7 @@
+{
+    "success": false,
+    "status": "System.Exception: Second special press cancels without spending again: Fern\r\n  at GameValidation.Check (System.Boolean ok, System.String message) [0x0002e] in C:\\Users\\johna\\OneDrive\\Documents\\Portfolio\\woodland-tumble\\Assets\\Editor\\GameValidation.cs:553 \r\n  at GameValidation.TickChargeFeedback () [0x000ef] in C:\\Users\\johna\\OneDrive\\Documents\\Portfolio\\woodland-tumble\\Assets\\Editor\\GameValidation.cs:76 ",
+    "checks": [
+        "Charge starts: Fern"
+    ]
+}

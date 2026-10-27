@@ -1,0 +1,722 @@
+[
+  {
+    "character": "Fern",
+    "frame": 1,
+    "sourcePose": 0,
+    "scale": 0.46942800788954636,
+    "combatHeadPixels": 119,
+    "idleHeadPixels": 116,
+    "bodyHeight": 187
+  },
+  {
+    "character": "Fern",
+    "frame": 2,
+    "sourcePose": 1,
+    "scale": 0.46942800788954636,
+    "combatHeadPixels": 119,
+    "idleHeadPixels": 117,
+    "bodyHeight": 188
+  },
+  {
+    "character": "Fern",
+    "frame": 3,
+    "sourcePose": 2,
+    "scale": 0.46942800788954636,
+    "combatHeadPixels": 119,
+    "idleHeadPixels": 119,
+    "bodyHeight": 189
+  },
+  {
+    "character": "Fern",
+    "frame": 4,
+    "sourcePose": 3,
+    "scale": 0.46942800788954636,
+    "combatHeadPixels": 119,
+    "idleHeadPixels": 121,
+    "bodyHeight": 191
+  },
+  {
+    "character": "Fern",
+    "frame": 5,
+    "sourcePose": 4,
+    "scale": 0.46942800788954636,
+    "combatHeadPixels": 119,
+    "idleHeadPixels": 120,
+    "bodyHeight": 188
+  },
+  {
+    "character": "Fern",
+    "frame": 6,
+    "sourcePose": 5,
+    "scale": 0.46942800788954636,
+    "combatHeadPixels": 119,
+    "idleHeadPixels": 119,
+    "bodyHeight": 187
+  },
+  {
+    "character": "Fern",
+    "frame": 7,
+    "sourcePose": 4,
+    "scale": 0.46942800788954636,
+    "combatHeadPixels": 119,
+    "idleHeadPixels": 120,
+    "bodyHeight": 188
+  },
+  {
+    "character": "Fern",
+    "frame": 8,
+    "sourcePose": 3,
+    "scale": 0.46942800788954636,
+    "combatHeadPixels": 119,
+    "idleHeadPixels": 121,
+    "bodyHeight": 191
+  },
+  {
+    "character": "Fern",
+    "frame": 9,
+    "sourcePose": 2,
+    "scale": 0.46942800788954636,
+    "combatHeadPixels": 119,
+    "idleHeadPixels": 119,
+    "bodyHeight": 189
+  },
+  {
+    "character": "Fern",
+    "frame": 10,
+    "sourcePose": 1,
+    "scale": 0.46942800788954636,
+    "combatHeadPixels": 119,
+    "idleHeadPixels": 117,
+    "bodyHeight": 188
+  },
+  {
+    "character": "Ember",
+    "frame": 1,
+    "sourcePose": 0,
+    "scale": 0.4769038701622971,
+    "combatHeadPixels": 119,
+    "idleHeadPixels": 110,
+    "bodyHeight": 191
+  },
+  {
+    "character": "Ember",
+    "frame": 2,
+    "sourcePose": 1,
+    "scale": 0.4769038701622971,
+    "combatHeadPixels": 119,
+    "idleHeadPixels": 111,
+    "bodyHeight": 191
+  },
+  {
+    "character": "Ember",
+    "frame": 3,
+    "sourcePose": 2,
+    "scale": 0.4769038701622971,
+    "combatHeadPixels": 119,
+    "idleHeadPixels": 110,
+    "bodyHeight": 191
+  },
+  {
+    "character": "Ember",
+    "frame": 4,
+    "sourcePose": 3,
+    "scale": 0.4769038701622971,
+    "combatHeadPixels": 119,
+    "idleHeadPixels": 113,
+    "bodyHeight": 191
+  },
+  {
+    "character": "Ember",
+    "frame": 5,
+    "sourcePose": 4,
+    "scale": 0.4769038701622971,
+    "combatHeadPixels": 119,
+    "idleHeadPixels": 112,
+    "bodyHeight": 190
+  },
+  {
+    "character": "Ember",
+    "frame": 6,
+    "sourcePose": 5,
+    "scale": 0.4769038701622971,
+    "combatHeadPixels": 119,
+    "idleHeadPixels": 110,
+    "bodyHeight": 191
+  },
+  {
+    "character": "Ember",
+    "frame": 7,
+    "sourcePose": 4,
+    "scale": 0.4769038701622971,
+    "combatHeadPixels": 119,
+    "idleHeadPixels": 112,
+    "bodyHeight": 190
+  },
+  {
+    "character": "Ember",
+    "frame": 8,
+    "sourcePose": 3,
+    "scale": 0.4769038701622971,
+    "combatHeadPixels": 119,
+    "idleHeadPixels": 113,
+    "bodyHeight": 191
+  },
+  {
+    "character": "Ember",
+    "frame": 9,
+    "sourcePose": 2,
+    "scale": 0.4769038701622971,
+    "combatHeadPixels": 119,
+    "idleHeadPixels": 110,
+    "bodyHeight": 191
+  },
+  {
+    "character": "Ember",
+    "frame": 10,
+    "sourcePose": 1,
+    "scale": 0.4769038701622971,
+    "combatHeadPixels": 119,
+    "idleHeadPixels": 111,
+    "bodyHeight": 191
+  },
+  {
+    "character": "Luna",
+    "frame": 1,
+    "sourcePose": 0,
+    "scale": 0.45454545454545453,
+    "combatHeadPixels": 110,
+    "idleHeadPixels": 108,
+    "bodyHeight": 184
+  },
+  {
+    "character": "Luna",
+    "frame": 2,
+    "sourcePose": 1,
+    "scale": 0.45454545454545453,
+    "combatHeadPixels": 110,
+    "idleHeadPixels": 110,
+    "bodyHeight": 185
+  },
+  {
+    "character": "Luna",
+    "frame": 3,
+    "sourcePose": 2,
+    "scale": 0.45454545454545453,
+    "combatHeadPixels": 110,
+    "idleHeadPixels": 110,
+    "bodyHeight": 187
+  },
+  {
+    "character": "Luna",
+    "frame": 4,
+    "sourcePose": 3,
+    "scale": 0.45454545454545453,
+    "combatHeadPixels": 110,
+    "idleHeadPixels": 110,
+    "bodyHeight": 186
+  },
+  {
+    "character": "Luna",
+    "frame": 5,
+    "sourcePose": 4,
+    "scale": 0.45454545454545453,
+    "combatHeadPixels": 110,
+    "idleHeadPixels": 110,
+    "bodyHeight": 185
+  },
+  {
+    "character": "Luna",
+    "frame": 6,
+    "sourcePose": 5,
+    "scale": 0.45454545454545453,
+    "combatHeadPixels": 110,
+    "idleHeadPixels": 109,
+    "bodyHeight": 185
+  },
+  {
+    "character": "Luna",
+    "frame": 7,
+    "sourcePose": 4,
+    "scale": 0.45454545454545453,
+    "combatHeadPixels": 110,
+    "idleHeadPixels": 110,
+    "bodyHeight": 185
+  },
+  {
+    "character": "Luna",
+    "frame": 8,
+    "sourcePose": 3,
+    "scale": 0.45454545454545453,
+    "combatHeadPixels": 110,
+    "idleHeadPixels": 110,
+    "bodyHeight": 186
+  },
+  {
+    "character": "Luna",
+    "frame": 9,
+    "sourcePose": 2,
+    "scale": 0.45454545454545453,
+    "combatHeadPixels": 110,
+    "idleHeadPixels": 110,
+    "bodyHeight": 187
+  },
+  {
+    "character": "Luna",
+    "frame": 10,
+    "sourcePose": 1,
+    "scale": 0.45454545454545453,
+    "combatHeadPixels": 110,
+    "idleHeadPixels": 110,
+    "bodyHeight": 185
+  },
+  {
+    "character": "Bram",
+    "frame": 1,
+    "sourcePose": 0,
+    "scale": 0.4981684981684982,
+    "combatHeadPixels": 136,
+    "idleHeadPixels": 128,
+    "bodyHeight": 188
+  },
+  {
+    "character": "Bram",
+    "frame": 2,
+    "sourcePose": 1,
+    "scale": 0.4981684981684982,
+    "combatHeadPixels": 136,
+    "idleHeadPixels": 136,
+    "bodyHeight": 190
+  },
+  {
+    "character": "Bram",
+    "frame": 3,
+    "sourcePose": 2,
+    "scale": 0.4981684981684982,
+    "combatHeadPixels": 136,
+    "idleHeadPixels": 133,
+    "bodyHeight": 195
+  },
+  {
+    "character": "Bram",
+    "frame": 4,
+    "sourcePose": 3,
+    "scale": 0.4981684981684982,
+    "combatHeadPixels": 136,
+    "idleHeadPixels": 135,
+    "bodyHeight": 196
+  },
+  {
+    "character": "Bram",
+    "frame": 5,
+    "sourcePose": 4,
+    "scale": 0.4981684981684982,
+    "combatHeadPixels": 136,
+    "idleHeadPixels": 136,
+    "bodyHeight": 190
+  },
+  {
+    "character": "Bram",
+    "frame": 6,
+    "sourcePose": 5,
+    "scale": 0.4981684981684982,
+    "combatHeadPixels": 136,
+    "idleHeadPixels": 135,
+    "bodyHeight": 190
+  },
+  {
+    "character": "Bram",
+    "frame": 7,
+    "sourcePose": 4,
+    "scale": 0.4981684981684982,
+    "combatHeadPixels": 136,
+    "idleHeadPixels": 136,
+    "bodyHeight": 190
+  },
+  {
+    "character": "Bram",
+    "frame": 8,
+    "sourcePose": 3,
+    "scale": 0.4981684981684982,
+    "combatHeadPixels": 136,
+    "idleHeadPixels": 135,
+    "bodyHeight": 196
+  },
+  {
+    "character": "Bram",
+    "frame": 9,
+    "sourcePose": 2,
+    "scale": 0.4981684981684982,
+    "combatHeadPixels": 136,
+    "idleHeadPixels": 133,
+    "bodyHeight": 195
+  },
+  {
+    "character": "Bram",
+    "frame": 10,
+    "sourcePose": 1,
+    "scale": 0.4981684981684982,
+    "combatHeadPixels": 136,
+    "idleHeadPixels": 136,
+    "bodyHeight": 190
+  },
+  {
+    "character": "Zephyr",
+    "frame": 1,
+    "sourcePose": 0,
+    "scale": 0.44941176470588234,
+    "combatHeadPixels": 156,
+    "idleHeadPixels": 144,
+    "bodyHeight": 189
+  },
+  {
+    "character": "Zephyr",
+    "frame": 2,
+    "sourcePose": 1,
+    "scale": 0.44941176470588234,
+    "combatHeadPixels": 156,
+    "idleHeadPixels": 146,
+    "bodyHeight": 192
+  },
+  {
+    "character": "Zephyr",
+    "frame": 3,
+    "sourcePose": 2,
+    "scale": 0.44941176470588234,
+    "combatHeadPixels": 156,
+    "idleHeadPixels": 150,
+    "bodyHeight": 193
+  },
+  {
+    "character": "Zephyr",
+    "frame": 4,
+    "sourcePose": 3,
+    "scale": 0.44941176470588234,
+    "combatHeadPixels": 156,
+    "idleHeadPixels": 151,
+    "bodyHeight": 192
+  },
+  {
+    "character": "Zephyr",
+    "frame": 5,
+    "sourcePose": 4,
+    "scale": 0.44941176470588234,
+    "combatHeadPixels": 156,
+    "idleHeadPixels": 145,
+    "bodyHeight": 190
+  },
+  {
+    "character": "Zephyr",
+    "frame": 6,
+    "sourcePose": 5,
+    "scale": 0.44941176470588234,
+    "combatHeadPixels": 156,
+    "idleHeadPixels": 143,
+    "bodyHeight": 187
+  },
+  {
+    "character": "Zephyr",
+    "frame": 7,
+    "sourcePose": 4,
+    "scale": 0.44941176470588234,
+    "combatHeadPixels": 156,
+    "idleHeadPixels": 145,
+    "bodyHeight": 190
+  },
+  {
+    "character": "Zephyr",
+    "frame": 8,
+    "sourcePose": 3,
+    "scale": 0.44941176470588234,
+    "combatHeadPixels": 156,
+    "idleHeadPixels": 151,
+    "bodyHeight": 192
+  },
+  {
+    "character": "Zephyr",
+    "frame": 9,
+    "sourcePose": 2,
+    "scale": 0.44941176470588234,
+    "combatHeadPixels": 156,
+    "idleHeadPixels": 150,
+    "bodyHeight": 193
+  },
+  {
+    "character": "Zephyr",
+    "frame": 10,
+    "sourcePose": 1,
+    "scale": 0.44941176470588234,
+    "combatHeadPixels": 156,
+    "idleHeadPixels": 146,
+    "bodyHeight": 192
+  },
+  {
+    "character": "Volt",
+    "frame": 1,
+    "sourcePose": 0,
+    "scale": 0.4598698481561822,
+    "combatHeadPixels": 106,
+    "idleHeadPixels": 103,
+    "bodyHeight": 184
+  },
+  {
+    "character": "Volt",
+    "frame": 2,
+    "sourcePose": 1,
+    "scale": 0.4598698481561822,
+    "combatHeadPixels": 106,
+    "idleHeadPixels": 104,
+    "bodyHeight": 186
+  },
+  {
+    "character": "Volt",
+    "frame": 3,
+    "sourcePose": 2,
+    "scale": 0.4598698481561822,
+    "combatHeadPixels": 106,
+    "idleHeadPixels": 106,
+    "bodyHeight": 192
+  },
+  {
+    "character": "Volt",
+    "frame": 4,
+    "sourcePose": 3,
+    "scale": 0.4598698481561822,
+    "combatHeadPixels": 106,
+    "idleHeadPixels": 107,
+    "bodyHeight": 191
+  },
+  {
+    "character": "Volt",
+    "frame": 5,
+    "sourcePose": 4,
+    "scale": 0.4598698481561822,
+    "combatHeadPixels": 106,
+    "idleHeadPixels": 106,
+    "bodyHeight": 189
+  },
+  {
+    "character": "Volt",
+    "frame": 6,
+    "sourcePose": 5,
+    "scale": 0.4598698481561822,
+    "combatHeadPixels": 106,
+    "idleHeadPixels": 106,
+    "bodyHeight": 188
+  },
+  {
+    "character": "Volt",
+    "frame": 7,
+    "sourcePose": 4,
+    "scale": 0.4598698481561822,
+    "combatHeadPixels": 106,
+    "idleHeadPixels": 106,
+    "bodyHeight": 189
+  },
+  {
+    "character": "Volt",
+    "frame": 8,
+    "sourcePose": 3,
+    "scale": 0.4598698481561822,
+    "combatHeadPixels": 106,
+    "idleHeadPixels": 107,
+    "bodyHeight": 191
+  },
+  {
+    "character": "Volt",
+    "frame": 9,
+    "sourcePose": 2,
+    "scale": 0.4598698481561822,
+    "combatHeadPixels": 106,
+    "idleHeadPixels": 106,
+    "bodyHeight": 192
+  },
+  {
+    "character": "Volt",
+    "frame": 10,
+    "sourcePose": 1,
+    "scale": 0.4598698481561822,
+    "combatHeadPixels": 106,
+    "idleHeadPixels": 104,
+    "bodyHeight": 186
+  },
+  {
+    "character": "Nyx",
+    "frame": 1,
+    "sourcePose": 0,
+    "scale": 0.47334754797441364,
+    "combatHeadPixels": 111,
+    "idleHeadPixels": 109,
+    "bodyHeight": 188
+  },
+  {
+    "character": "Nyx",
+    "frame": 2,
+    "sourcePose": 1,
+    "scale": 0.47334754797441364,
+    "combatHeadPixels": 111,
+    "idleHeadPixels": 109,
+    "bodyHeight": 188
+  },
+  {
+    "character": "Nyx",
+    "frame": 3,
+    "sourcePose": 2,
+    "scale": 0.47334754797441364,
+    "combatHeadPixels": 111,
+    "idleHeadPixels": 111,
+    "bodyHeight": 190
+  },
+  {
+    "character": "Nyx",
+    "frame": 4,
+    "sourcePose": 3,
+    "scale": 0.47334754797441364,
+    "combatHeadPixels": 111,
+    "idleHeadPixels": 112,
+    "bodyHeight": 188
+  },
+  {
+    "character": "Nyx",
+    "frame": 5,
+    "sourcePose": 4,
+    "scale": 0.47334754797441364,
+    "combatHeadPixels": 111,
+    "idleHeadPixels": 111,
+    "bodyHeight": 189
+  },
+  {
+    "character": "Nyx",
+    "frame": 6,
+    "sourcePose": 5,
+    "scale": 0.47334754797441364,
+    "combatHeadPixels": 111,
+    "idleHeadPixels": 111,
+    "bodyHeight": 189
+  },
+  {
+    "character": "Nyx",
+    "frame": 7,
+    "sourcePose": 4,
+    "scale": 0.47334754797441364,
+    "combatHeadPixels": 111,
+    "idleHeadPixels": 111,
+    "bodyHeight": 189
+  },
+  {
+    "character": "Nyx",
+    "frame": 8,
+    "sourcePose": 3,
+    "scale": 0.47334754797441364,
+    "combatHeadPixels": 111,
+    "idleHeadPixels": 112,
+    "bodyHeight": 188
+  },
+  {
+    "character": "Nyx",
+    "frame": 9,
+    "sourcePose": 2,
+    "scale": 0.47334754797441364,
+    "combatHeadPixels": 111,
+    "idleHeadPixels": 111,
+    "bodyHeight": 190
+  },
+  {
+    "character": "Nyx",
+    "frame": 10,
+    "sourcePose": 1,
+    "scale": 0.47334754797441364,
+    "combatHeadPixels": 111,
+    "idleHeadPixels": 109,
+    "bodyHeight": 188
+  },
+  {
+    "character": "Marin",
+    "frame": 1,
+    "sourcePose": 0,
+    "scale": 0.5236363636363637,
+    "combatHeadPixels": 149,
+    "idleHeadPixels": 142,
+    "bodyHeight": 214
+  },
+  {
+    "character": "Marin",
+    "frame": 2,
+    "sourcePose": 1,
+    "scale": 0.5236363636363637,
+    "combatHeadPixels": 149,
+    "idleHeadPixels": 141,
+    "bodyHeight": 217
+  },
+  {
+    "character": "Marin",
+    "frame": 3,
+    "sourcePose": 2,
+    "scale": 0.5236363636363637,
+    "combatHeadPixels": 149,
+    "idleHeadPixels": 141,
+    "bodyHeight": 217
+  },
+  {
+    "character": "Marin",
+    "frame": 4,
+    "sourcePose": 3,
+    "scale": 0.5236363636363637,
+    "combatHeadPixels": 149,
+    "idleHeadPixels": 142,
+    "bodyHeight": 219
+  },
+  {
+    "character": "Marin",
+    "frame": 5,
+    "sourcePose": 4,
+    "scale": 0.5236363636363637,
+    "combatHeadPixels": 149,
+    "idleHeadPixels": 142,
+    "bodyHeight": 215
+  },
+  {
+    "character": "Marin",
+    "frame": 6,
+    "sourcePose": 5,
+    "scale": 0.5236363636363637,
+    "combatHeadPixels": 149,
+    "idleHeadPixels": 143,
+    "bodyHeight": 214
+  },
+  {
+    "character": "Marin",
+    "frame": 7,
+    "sourcePose": 4,
+    "scale": 0.5236363636363637,
+    "combatHeadPixels": 149,
+    "idleHeadPixels": 142,
+    "bodyHeight": 215
+  },
+  {
+    "character": "Marin",
+    "frame": 8,
+    "sourcePose": 3,
+    "scale": 0.5236363636363637,
+    "combatHeadPixels": 149,
+    "idleHeadPixels": 142,
+    "bodyHeight": 219
+  },
+  {
+    "character": "Marin",
+    "frame": 9,
+    "sourcePose": 2,
+    "scale": 0.5236363636363637,
+    "combatHeadPixels": 149,
+    "idleHeadPixels": 141,
+    "bodyHeight": 217
+  },
+  {
+    "character": "Marin",
+    "frame": 10,
+    "sourcePose": 1,
+    "scale": 0.5236363636363637,
+    "combatHeadPixels": 149,
+    "idleHeadPixels": 141,
+    "bodyHeight": 217
+  }
+]

@@ -1,5 +1,12 @@
 # Rune Rumble: current delivery
 
+## Idle size and charge feedback
+
+- [x] Match breathing idle artwork to the existing combat body and head size for all eight fighters.
+- [x] Show BLOCKED when a ranged attack contacts the front shield.
+- [x] Allow a second special press or guard to cancel a charge before release.
+- [x] Verify cancelled charges cannot fire later, inspect idle loops and rebuild Windows.
+
 ## Full animation proportion audit
 
 - [x] Inventory every active animation frame and create fixed-scale comparison sheets for all eight fighters.
@@ -26,7 +33,7 @@
 - [x] Add a longer knockdown with capped X-tap recovery and an overhead press effect.
 - [x] Regress front/back contacts and all eight recovery animations, inspect screens and rebuild Windows.
 
-Current delivery: all 1288 sprite frames reviewed and their native clip bindings checked. Windows passed an 18-second native startup sample with no logged script exceptions. Evidence: Documentation/DELIVERY-v17.json.
+Current delivery: 1360 native sprite bindings and eight idle-loop settings checked. Eight breathing idles passed live playback checks. Charge feedback passed 64 checks, contacts passed 92, and Windows passed an 18-second native launch with no logged script exceptions. Evidence: Documentation/DELIVERY-v18.json.
 
 - [x] Confirm Windows build and verify native startup.
 - [x] Raise the recovery glyph contrast on the dark key face and inspect the corrected prompt.

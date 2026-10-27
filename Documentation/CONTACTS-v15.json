@@ -29,7 +29,7 @@
         "Recovery setup hit 2",
         "Recovery setup hit 3",
         "Recovery setup hit 4",
-        "Untapped knockdown lasts 4.5 seconds [a=True, b=True, remaining=4.045359, duration=4.5]",
+        "Untapped knockdown lasts 4.5 seconds [a=True, b=True, remaining=4.035275, duration=4.5]",
         "Holding X produces one recovery press, not automatic mashing",
         "Circular recovery prompt shows the assigned input and recovery progress",
         "Tapping wakes earlier while the untouched rival remains down",

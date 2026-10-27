@@ -40,17 +40,18 @@ public static class GameValidation
             foreach(int character in Enumerable.Range(0,game.CharacterNames.Length))foreach(string state in states){
                 string name=game.CharacterNames[character];
                 var clip=AssetDatabase.LoadAssetAtPath<AnimationClip>("Assets/AnimationsRework/"+name+"/"+(state=="Special"?"Smash":state)+".anim");
-                var frames=state=="Idle"?new[]{AssetDatabase.LoadAssetAtPath<Sprite>("Assets/Art/CharactersRework/"+name+"/Idle/01.png")}:game.CharacterAnimationSets[character].Get(state);
-                if(!clip || frames.Length!=(state=="Idle"?1:10))throw new Exception("Incomplete native clip: "+name+"/"+state);
+                var frames=state=="Idle"?Enumerable.Range(1,10).Select(i=>AssetDatabase.LoadAssetAtPath<Sprite>("Assets/Art/CharactersRework/"+name+"/Idle/"+i.ToString("00")+".png")).ToArray():game.CharacterAnimationSets[character].Get(state);
+                if(!clip || frames.Length!=10)throw new Exception("Incomplete native clip: "+name+"/"+state);
+                if(state=="Idle")Check(clip.isLooping && frames.Distinct().Count()==10 && Mathf.Approximately(clip.frameRate,6.25f),"Ten-frame breathing idle loops at 6.25 fps: "+name);
                 for(int frame=0;frame<frames.Length;frame++){
                     clip.SampleAnimation(renderer.gameObject,(frame+.25f)/clip.frameRate);
                     Check(renderer.sprite==frames[frame],"Native sprite playback: "+name+" / "+state+" / "+(frame+1));
                 }
             }
             var report=new Report{success=true,status="SPRITE_PLAYBACK_PASS: every active character frame matches its native clip",checks=SessionState.GetString("Woodland.Checks","").Split('\n').Where(s=>s.Length>0).ToArray()};
-            File.WriteAllText("Documentation/SPRITE-PLAYBACK-v17.json",JsonUtility.ToJson(report,true));Debug.Log(report.status+" / "+report.checks.Length);
+            File.WriteAllText("Documentation/SPRITE-PLAYBACK-v18.json",JsonUtility.ToJson(report,true));Debug.Log(report.status+" / "+report.checks.Length);
         } catch(Exception error){
-            File.WriteAllText("Documentation/SPRITE-PLAYBACK-v17.json",JsonUtility.ToJson(new Report{success=false,status=error.ToString(),checks=new string[0]},true));throw;
+            File.WriteAllText("Documentation/SPRITE-PLAYBACK-v18.json",JsonUtility.ToJson(new Report{success=false,status=error.ToString(),checks=new string[0]},true));throw;
         } finally {renderer.sprite=original;}
     }
     public static void RunDuelFresh(){GameSetup.PrepareHUD();RunDuelSaved();}
@@ -60,6 +61,41 @@ public static class GameValidation
     public static void RunContactsFresh(){GameSetup.PrepareHUD();RunContactsSaved();}
     public static void RunMidtermCombat(){AudioListener.volume=0;GameSetup.PrepareHUD();SessionState.SetBool("Woodland.MidtermCombat",true);Begin(true);}
     public static void RunSaved() => RunDuelSaved();
+    public static void RunChargeFeedback(){AudioListener.volume=0;SessionState.SetBool("Woodland.ChargeFeedback",true);Begin(true);}
+    public static void RunIdleChargeFresh(){GameSetup.PrepareHUD();ValidateSpritePlayback();RunChargeFeedback();}
+    static void TickChargeFeedback()
+    {
+        try {
+            if(Elapsed>12)throw new Exception("Charge feedback timeout");
+            var game=WoodlandGame.Instance;if(!game)return;var a=game.players[0];var b=game.players[1];
+            int stage=SessionState.GetInt("Woodland.Stage",-1);
+            if(stage==-1 && Elapsed>.4f){game.ChooseMode(false);game.ConfirmCharacter();game.ConfirmCharacter();game.StartSelectedMatch();SetStage(0);}
+            else if(stage==0 && game.playing && string.IsNullOrEmpty(game.message)){
+                SessionState.SetInt("Woodland.FeedbackCharacter",0);PrepareMidtermRange(game,0);SetStage(10);
+            }else if(stage==10 && SimElapsed>.4f){
+                Check(a.AnimationState=="Idle" && AssetDatabase.GetAssetPath(a.art.sprite).Contains("/Idle/"),"Native Animator displays the breathing idle: "+a.displayName);
+                SessionState.SetString("Woodland.IdleFrame",AssetDatabase.GetAssetPath(a.art.sprite));SetStage(11);
+            }else if(stage==11 && SimElapsed>.4f){
+                Check(a.AnimationState=="Idle" && AssetDatabase.GetAssetPath(a.art.sprite)!=SessionState.GetString("Woodland.IdleFrame",""),"Idle advances while stationary: "+a.displayName);SetStage(1);
+            }else if(stage==1 && SimElapsed>.4f){
+                Check(a.TrySpecial() && a.Charging,"Charge starts: "+a.displayName);
+                float energy=a.Stamina;
+                Check(a.TrySpecial() && !a.Charging && Mathf.Approximately(a.Stamina,energy),"Second special press cancels without spending again: "+a.displayName);
+                SetStage(2);
+            }else if(stage==2 && SimElapsed>2.5f){
+                Check(b.HitsRemaining==5 && !a.ActionBusy,"Cancelled charge never fires later: "+a.displayName);
+                Check(a.TrySpecial() && a.SetPointerGuard(true) && a.Blocking && !a.Charging,"Guard cancels charge and raises shield: "+a.displayName);
+                a.SetPointerGuard(false);a.Stagger(.1f);SetStage(3);
+            }else if(stage==3 && SimElapsed>.3f){
+                Check(a.TrySpecial(),"Ranged shield test starts: "+a.displayName);b.SetPointerGuard(true);SetStage(4);
+            }else if(stage==4 && b.CombatCue=="BLOCKED"){
+                Check(b.HitsRemaining==5 && b.Stamina<100,"Projectile displays BLOCKED without body damage: "+a.displayName);
+                int c=SessionState.GetInt("Woodland.FeedbackCharacter",0)+1;
+                if(c<8){SessionState.SetInt("Woodland.FeedbackCharacter",c);PrepareMidtermRange(game,c);SetStage(10);}
+                else Complete(true,"CHARGE_FEEDBACK_PASS: eight cancel, guard and projectile block paths");
+            }else if(stage==4 && SimElapsed>3)throw new Exception("No ranged BLOCKED cue: "+a.displayName+", cue="+b.CombatCue+", hits="+b.HitsRemaining);
+        }catch(Exception error){Complete(false,error.ToString());}
+    }
     public static void RunHUD()
     {
         AudioListener.volume=0;
@@ -528,6 +564,7 @@ public static class GameValidation
     static void Tick()
     {
         if (!SessionState.GetBool(Active, false) || !EditorApplication.isPlaying) return;
+        if(SessionState.GetBool("Woodland.ChargeFeedback",false)){TickChargeFeedback();return;}
         if(SessionState.GetBool("Woodland.Contacts",false)){TickContacts();return;}
         if(SessionState.GetBool("Woodland.MidtermCombat",false)){TickMidtermCombat();return;}
         if(SessionState.GetBool("Woodland.Counterplay",false)){TickCounterplay();return;}
@@ -1747,7 +1784,7 @@ public static class GameValidation
             }else if(stage==9){
                 int c=SessionState.GetInt("Woodland.V8Character",0);PrepareSpecialCase(game,c,4);game.CharacterChoices[0]=c;game.CharacterChoices[1]=c==0?1:0;PositionSpecialPair(game,4,.85f);hud.Refresh();
                 Check(a.TrySpecial() && a.Charging && a.AnimationState=="Charge","Character "+c+": Triangle starts a visible charge");Check(Mathf.Approximately(a.Stamina,86),"Character "+c+": charge spends fourteen stamina exactly once");
-                Check(!a.TrySpecial() && !a.ReleaseSmash(),"Character "+c+": charging cannot be spammed or fired early");Check(a.SpecialCooldownRemaining==0,"Character "+c+": no ranged cooldown timer");SetStage(10);
+                Check(!a.ReleaseSmash(),"Character "+c+": charging cannot be fired early");Check(a.SpecialCooldownRemaining==0,"Character "+c+": no ranged cooldown timer");SetStage(10);
             }else if(stage==10 && SimElapsed>.3f){
                 int c=SessionState.GetInt("Woodland.V8Character",0);Check(a.Charging && a.Charge>0 && a.Charge<1 && b.Health==100,"Character "+c+": charge is readable before any projectile damage");hud.Refresh();Check(hud.specialCooldownText[0].text.Contains("CHARGE"),"Character "+c+": HUD displays charge progress instead of cooldown");Capture("Documentation/charge-"+c+"-v8.png");
                 if(c==0){game.TogglePause();SessionState.SetFloat("Woodland.V8FrozenCharge",a.Charge);}SetStage(11);
@@ -1816,7 +1853,8 @@ public static class GameValidation
         bool counterplay=SessionState.GetBool("Woodland.Counterplay",false);SessionState.SetBool("Woodland.Counterplay",false);
         bool midterm=SessionState.GetBool("Woodland.MidtermCombat",false);SessionState.SetBool("Woodland.MidtermCombat",false);
         bool contacts=SessionState.GetBool("Woodland.Contacts",false);SessionState.SetBool("Woodland.Contacts",false);
-        File.WriteAllText(contacts?"Documentation/CONTACTS-v15.json":midterm?"Documentation/MIDTERM-COMBAT-v14.json":counterplay?"Documentation/COUNTERPLAY-v9.json":duel?"Documentation/DUEL-VALIDATION.json":v81?"Documentation/PLAYMODE-VALIDATION-v8.1.json":v8?"Documentation/PLAYMODE-VALIDATION-v8.json":hudOnly?"Documentation/HUD-VALIDATION-v7.1.json":meleeOnly?"Documentation/MELEE-VALIDATION-v8.1.json":"Documentation/PLAYMODE-VALIDATION-v7.json", JsonUtility.ToJson(report, true));
+        bool chargeFeedback=SessionState.GetBool("Woodland.ChargeFeedback",false);SessionState.SetBool("Woodland.ChargeFeedback",false);
+        File.WriteAllText(chargeFeedback?"Documentation/CHARGE-FEEDBACK-v18.json":contacts?"Documentation/CONTACTS-v15.json":midterm?"Documentation/MIDTERM-COMBAT-v14.json":counterplay?"Documentation/COUNTERPLAY-v9.json":duel?"Documentation/DUEL-VALIDATION.json":v81?"Documentation/PLAYMODE-VALIDATION-v8.1.json":v8?"Documentation/PLAYMODE-VALIDATION-v8.json":hudOnly?"Documentation/HUD-VALIDATION-v7.1.json":meleeOnly?"Documentation/MELEE-VALIDATION-v8.1.json":"Documentation/PLAYMODE-VALIDATION-v7.json", JsonUtility.ToJson(report, true));
         if (success) Debug.Log(status);else Debug.LogError(status);
         EditorApplication.isPlaying = false;
         if (SessionState.GetBool("Woodland.ValidationExit", false)) EditorApplication.delayCall += () => EditorApplication.Exit(success ? 0 : 1);

@@ -636,6 +636,7 @@ public class Scout : MonoBehaviour
     }
     public bool SetBlock(bool held)
     {
+        if(held && Charging && CanAct)CancelSpecialCharge();
         bool allowed = held && (CanAct || (Blocking && Time.time<blockStunUntil && WoodlandGame.Instance.playing && !WoodlandGame.Instance.Paused)) && action == 0 && !Charging && Time.time >= dashUntil && Time.time >= shieldBrokenUntil && Shield > 0 && (Blocking || Shield >= 20);
         if (allowed && !Blocking) { shieldStarted = Time.time >= nextParry ? Time.time : -10; nextParry = Time.time + .45f; }
         Blocking = allowed;
@@ -648,7 +649,7 @@ public class Scout : MonoBehaviour
         WoodlandEffects.Instance?.GuardImpact(Body.position, face, Element, false, true,CharacterIndex);
     }
     public bool BeginSmash() => TrySpecial();
-    public void CancelSpecialCharge(){Charging=false;chargeHeld=false;chargePressed=chargeReleased=false;}
+    public void CancelSpecialCharge(){Charging=false;chargeHeld=false;chargePressed=chargeReleased=false;if(action==0)PlayState("Idle");}
     public bool ReleaseSmash()
     {
         if(!Charging || Charge<1)return false;
@@ -657,6 +658,7 @@ public class Scout : MonoBehaviour
     }
     public bool TrySpecial()
     {
+        if(Charging && CanAct){CancelSpecialCharge();ShowCombatCue("CANCELLED");return true;}
         if(!CanAct || Blocking || Charging || action!=0 || Time.time<dashUntil)return false;
         if(!SpendStamina(14))return false;
         Charging=true;chargeStart=Time.time;PlayState("Charge");
@@ -665,6 +667,7 @@ public class Scout : MonoBehaviour
     }
     public bool SetPointerGuard(bool held)
     {
+        if(held && Charging && CanAct)CancelSpecialCharge();
         pointerGuard=held && CanAct && !Charging && action==0 && Time.time>=dashUntil;
         if(!held)return SetBlock(blockHeld);
         return SetBlock(pointerGuard);
@@ -875,7 +878,7 @@ public class Scout : MonoBehaviour
             bool parry = Time.time - shieldStarted <= parryWindow;
             WoodlandEffects.Instance?.GuardImpact(Body.position, face, Element, parry, false,CharacterIndex);
             if (parry) { attacker.Stagger(.4f); Shield = Mathf.Min(shieldCapacity, Shield + 8);ShowCombatCue("PARRY"); }
-            else { Shield = Mathf.Max(0, Shield - damage * .3f); Body.AddForce(Vector2.right * direction * .35f, ForceMode2D.Impulse);blockStunUntil=Time.time+.055f;nextEnergyRegen=Time.time+.65f; if (Shield <= 0) BreakGuard(); }
+            else { ShowCombatCue("BLOCKED");Shield = Mathf.Max(0, Shield - damage * .3f); Body.AddForce(Vector2.right * direction * .35f, ForceMode2D.Impulse);blockStunUntil=Time.time+.055f;nextEnergyRegen=Time.time+.65f; if (Shield <= 0) BreakGuard(); }
             return false;
         }
         bool punish=AttackRecovery,counter=AttackStartup || Charging;

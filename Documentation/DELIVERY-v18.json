@@ -1,0 +1,28 @@
+{
+  "verifiedAtUtc": "2026-10-27T08:57:29.513547+00:00",
+  "scope": "Combat-scale breathing idles, cancellable special charges and ranged shield feedback",
+  "characters": 8,
+  "runtimeSpriteFrames": 1360,
+  "newIdleFrames": 80,
+  "idleSourcePosesPerFighter": 6,
+  "idleKeysPerFighter": 10,
+  "idleFramesPerSecond": 6.25,
+  "maximumIdleHeadRegionWidthDifferenceFromCombatReference": 0.08333333333333337,
+  "playbackChecks": 1368,
+  "chargeFeedbackChecks": 64,
+  "contactChecks": 92,
+  "native": {
+    "sampleSeconds": 18,
+    "aliveAfterSample": true,
+    "verifiedExecutable": true,
+    "workingSetBytes": 1293029376,
+    "scriptDomainInitialized": true,
+    "loggedExceptions": 0,
+    "closedAfterTest": true
+  },
+  "build": "BUILD-WINDOWS-v18.json",
+  "review": "Idle-v18/Runtime-Review.png",
+  "limitations": [
+    "Physical two-player/controller feel is not verified. Head-region width is a calibration proxy, not proof that every action silhouette is identical."
+  ]
+}
