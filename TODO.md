@@ -1,5 +1,15 @@
 # Rune Rumble: current delivery
 
+## Midterm rubric audit
+
+- [x] Re-run the saved scene suite: 686 checks passed on the current commit.
+- [x] Launch the relocated Windows folder for 18 seconds without script exceptions.
+- [x] Record rubric failures and submission dependencies in Documentation/MIDTERM-RUBRIC-AUDIT.md.
+- [ ] Choose whether to prepare a separate strict exam edition. No gameplay changes made during this audit.
+- [ ] Confirm the exact full developer name for the required title credit if preparing the exam edition.
+- [ ] Verify simultaneous physical controllers, unplug/reconnect and clean-machine startup before submission.
+
+
 ## Comic feedback and aerial combat
 
 - [x] Add ten rotating confirmed-hit words, comic guard text and an animated combo popup.

@@ -1,0 +1,38 @@
+{
+  "auditedAtUtc": "2026-10-27T10:06:22.073855+00:00",
+  "auditedCommit": "07dfa1b49ab0d42ecaae95ece8131138382cd199",
+  "verdict": "NOT_EXAM_COMPLIANT",
+  "freshSceneChecks": 686,
+  "assemblyMatchesLatestVerifiedBuild": true,
+  "relocatedPortableLaunch": {
+    "relocatedFolder": "C:\\Users\\johna\\OneDrive\\Documents\\Portfolio\\woodland-update-workbench\\midterm-relocation-audit-20261027-175918",
+    "sampleSeconds": 18,
+    "aliveAfterSample": true,
+    "verifiedExecutable": true,
+    "scriptDomainInitialized": true,
+    "loggedExceptions": 0,
+    "bundledPlayerDll": true,
+    "bundledMono": true,
+    "bundledGameData": true,
+    "cleanWindowsMachineTested": false
+  },
+  "productionCodeChanged": false,
+  "grading": "No numeric grade assigned. This is a requirements audit, not an instructor mark.",
+  "blockingGaps": [
+    "Required developer credit missing",
+    "English interface instead of pure Tagalog",
+    "Fantasy roster and environments do not establish a cohesive Philippine theme",
+    "Title background remains static after its entrance transition",
+    "Character confirmation leads to another arena selection screen",
+    "Jump, kick, guard, dash, grab and special inputs remain active",
+    "Punch reaction uses variable physics impulse instead of one fixed backward step",
+    "Any five confirmed attacks cause knockdown; no fifth-consecutive-straight-punch dizziness state",
+    "Visible hit-square and stamina meters remain"
+  ],
+  "needsHumanVerification": [
+    "Exact full developer name",
+    "Audible selection effects with normal sound settings",
+    "Two physical controllers, isolated simultaneous input, unplug and reconnect on the submission build",
+    "Launch on a clean Windows machine without Unity installed"
+  ]
+}
